@@ -86,126 +86,22 @@
       }
     }
     </script>
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6CNLJJJ8WQ', {
-        page_title: 'Andy Squire - AI Healthcare Innovation',
-        custom_map: {
-          'custom_parameter_1': 'healthcare_ai',
-          'custom_parameter_2': 'patient_advocacy'
-        }
-      });
-      
-      // Enhanced ecommerce and engagement tracking
-      gtag('config', 'G-6CNLJJJ8WQ', {
-        send_page_view: true,
-        anonymize_ip: true,
-        allow_google_signals: true,
-        allow_ad_personalization_signals: false
-      });
-      
-      // Custom events for engagement tracking
-      function trackEngagement(action, section) {
-        gtag('event', action, {
-          event_category: 'engagement',
-          event_label: section,
-          custom_parameter_1: 'healthcare_ai'
-        });
-      }
-      
-      // Track button clicks
-      function trackButtonClick(buttonName) {
-        gtag('event', 'click', {
-          event_category: 'button',
-          event_label: buttonName,
-          custom_parameter_1: 'healthcare_ai'
-        });
-      }
-      
-      // Track section views
-      function trackSectionView(sectionName) {
-        gtag('event', 'view_item', {
-          event_category: 'section_view',
-          event_label: sectionName,
-          custom_parameter_1: 'healthcare_ai'
-        });
-      }
-    </script>
-
-    <!-- Google Ads Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-290924137"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-290924137');
-      
-      // Function to track conversions
-      function trackConversion(conversionLabel, value = null) {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/' + conversionLabel,
-          'value': value,
-          'currency': 'CHF'
-        });
-      }
-      
-      // Track MyHealthStory purchases
-      function trackMyHealthStoryPurchase() {
-        trackConversion('MyHealthStory_Purchase', 9.00);
-        gtag('event', 'purchase', {
-          transaction_id: 'MHS_' + Date.now(),
-          value: 9.00,
-          currency: 'CHF',
-          items: [{
-            item_id: 'myhealthstory_pdf',
-            item_name: 'MyHealthStory PDF Form',
-            category: 'Digital Health Tools',
-            quantity: 1,
-            price: 9.00
-          }]
-        });
-      }
-      
-      // Track consultation inquiries
-      function trackConsultationInquiry() {
-        trackConversion('Consultation_Inquiry');
-        gtag('event', 'generate_lead', {
-          event_category: 'consultation',
-          event_label: 'healthcare_ai_inquiry'
-        });
-      }
-      
-      // Track LinkedIn profile visits
-      function trackLinkedInClick() {
-        gtag('event', 'click', {
-          event_category: 'external_link',
-          event_label: 'linkedin_profile',
-          custom_parameter_1: 'networking'
-        });
-      }
-    </script>
-    <script type="module" crossorigin src="assets/index-dpa4rxpb.js"></script>
-    <link rel="stylesheet" crossorigin href="assets/index-c2-vxgj6.css">
 	  
-      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fba8d3d8883b4b95a90c0084bd1c5706'>
-      </script>
-	  <!-- End Cloudflare Web Analytics -->
-      <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-   <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-
-    gtag('config', 'G-6CNLJJJ8WQ');
-    </script>
-	  
+<script type="module" crossorigin src="assets/index-dpa4rxpb.js"></script>
+<link rel="stylesheet" crossorigin href="assets/index-c2-vxgj6.css">
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fba8d3d8883b4b95a90c0084bd1c5706"}'></script>
+<!-- End Cloudflare Web Analytics -->	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6CNLJJJ8WQ');
+</script>  
   </head>
+	
   <body>
     <div id="root"></div>
     <script>
