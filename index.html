@@ -109,15 +109,22 @@
   }
 </script>
 
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
-  </head>
-	
-  <body>
-    <div id="root"></div>
-    <script>
-// MyHealthStory Section Update Script
-function updateMyHealthStorySection() {
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
+
+  <!-- Load the main website assets -->
+  <script type="module" crossorigin src="./assets/index-dpa4rxpb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BdJqJLNJ.css">
+
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <!-- MyHealthStory Section Update Script -->
+  <script>
+    function updateMyHealthStorySection() {
   // Wait for the page to load completely
   if (document.readyState !== 'complete') {
     setTimeout(updateMyHealthStorySection, 100);
