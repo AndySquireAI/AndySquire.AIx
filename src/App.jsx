@@ -140,20 +140,12 @@ function App() {
             
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
-                  <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <div className="w-32 h-32 bg-white/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl font-bold">AS</span>
-                      </div>
-                      <div className="bg-white/90 text-gray-800 p-4 rounded-lg">
-                        <h3 className="font-bold text-lg mb-2">ANDY SQUIRE</h3>
-                        <p className="text-sm">Healthcare Innovation Strategist</p>
-                        <p className="text-sm">2x Cancer Survivor</p>
-                        <p className="text-sm">Patient Advocate</p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 shadow-2xl">
+                  <img 
+                    src="/andy-squire-cv.png" 
+                    alt="Andy Squire CV - Founder & CEO, Humanoid Healthcare"
+                    className="w-full max-w-md h-auto rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
             </div>
