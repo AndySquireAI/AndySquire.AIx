@@ -167,7 +167,7 @@ function createAudienceCTASection() {
                         <li>Organized health information</li>
                         <li>Support cancer research</li>
                     </ul>
-                    <button class="cta-button" onclick="exploreMyHealthStory()">Download MyHealthStory</button>
+                    <button class="cta-button" onclick="exploreMyHealthStory()">Explore MyHealthStory</button>
                 </div>
             </div>
         </div>
@@ -245,21 +245,57 @@ Best regards`);
 }
 
 function exploreMyHealthStory() {
-    // Smooth scroll to MyHealthStory section
-    const myHealthStorySection = document.querySelector('h2:contains("MyHealthStory"), [class*="health-story"], [class*="myhealthstory"]') || 
-                                 document.querySelector('h2');
+    // Look for MyHealthStory section by various methods
+    let targetElement = null;
     
-    if (myHealthStorySection) {
-        myHealthStorySection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    } else {
-        // Fallback: scroll to MyHealthStory section
+    // Method 1: Look for headings containing "MyHealthStory"
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    for (const heading of headings) {
+        if (heading.textContent.includes('MyHealthStory') || 
+            heading.textContent.includes('#MyHealthStory')) {
+            targetElement = heading;
+            break;
+        }
+    }
+    
+    // Method 2: Look for elements with MyHealthStory in text content
+    if (!targetElement) {
+        const allElements = document.querySelectorAll('*');
+        for (const element of allElements) {
+            if (element.textContent && 
+                element.textContent.includes('MyHealthStory PDF Forms') ||
+                element.textContent.includes('Empowering patients with a clear health summary')) {
+                targetElement = element;
+                break;
+            }
+        }
+    }
+    
+    // Method 3: Look for navigation button
+    if (!targetElement) {
+        const navButtons = document.querySelectorAll('button, a');
+        for (const button of navButtons) {
+            if (button.textContent.includes('MyHealthStory')) {
+                // Click the navigation button instead
+                button.click();
+                return;
+            }
+        }
+    }
+    
+    // Method 4: Fallback - scroll to a reasonable position (around 60% down the page)
+    if (!targetElement) {
         window.scrollTo({
             top: document.body.scrollHeight * 0.6,
             behavior: 'smooth'
         });
+        return;
     }
+    
+    // Scroll to the found element
+    targetElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
 
