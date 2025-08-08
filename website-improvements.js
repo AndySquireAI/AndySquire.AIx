@@ -108,7 +108,197 @@
         console.log('Duplicate sections removal completed');
     }
     
-    // Create interactive Insight Deck to consolidate all personal stories
+    // Restructure website with new section layout
+    function restructureWebsiteLayout() {
+        console.log('Starting website restructure...');
+        
+        // Remove existing structure that might conflict
+        const existingResearchSection = document.querySelector('.research-innovation-section');
+        const existingMyHealthSection = document.querySelector('.myhealthstory-section');
+        if (existingResearchSection) existingResearchSection.remove();
+        if (existingMyHealthSection) existingMyHealthSection.remove();
+        
+        // Find the main content area or body to insert new sections
+        const mainContent = document.querySelector('main') || document.body;
+        
+        // Create About Section (concise overview)
+        const aboutSection = document.createElement('section');
+        aboutSection.className = 'about-section section-padding';
+        aboutSection.innerHTML = `
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">About AndySquire.AI</h2>
+                    <p class="section-subtitle">Transforming healthcare through AI innovation and patient-centered design</p>
+                </div>
+                
+                <div class="about-pillars">
+                    <div class="pillar-item">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e88e5" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Healthcare Ecosystem Architecture</h3>
+                        <p>Comprehensive business model framework with triple-win value creation for patients, healthcare providers, and robotics manufacturers.</p>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e88e5" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6m0 6v6"/>
+                                <path d="m21 12-6 0m-6 0-6 0"/>
+                            </svg>
+                        </div>
+                        <h3>Humanoid Healthcare Vision</h3>
+                        <p>Strategic framework for $1 trillion AI humanoid healthcare market with focus on aging populations and chronic care.</p>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>MyHealthStory Initiative</h3>
+                        <p>Patient empowerment tool designed from lived cancer experience to improve communication with medical teams.</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Create Research & Innovation Section
+        const researchSection = document.createElement('section');
+        researchSection.className = 'research-innovation-section section-padding';
+        researchSection.innerHTML = `
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Research & Innovation</h2>
+                    <p class="section-subtitle">Pioneering a new architecture & business models for integrated home healthcare within a near-future AI-humanoid ecosystem.</p>
+                </div>
+                
+                <div class="research-cards-grid">
+                    <div class="research-detail-card">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e88e5" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Healthcare Ecosystem Architecture</h3>
+                        <p class="card-description">Comprehensive business model framework with triple-win value creation for patients, healthcare providers, and robotics manufacturers.</p>
+                        <ul class="feature-list">
+                            <li>Data-driven business model (DDBM)</li>
+                            <li>High-level business architecture</li>
+                            <li>IT architecture integration</li>
+                            <li>Stakeholder value propositions</li>
+                        </ul>
+                        <button class="learn-more-btn" onclick="window.location.href='mailto:andy@andysquire.ai?subject=Healthcare Ecosystem Architecture Inquiry'">
+                            Learn More
+                        </button>
+                    </div>
+                    
+                    <div class="research-detail-card">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1e88e5" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6m0 6v6"/>
+                                <path d="m21 12-6 0m-6 0-6 0"/>
+                            </svg>
+                        </div>
+                        <h3>Humanoid Healthcare Vision</h3>
+                        <p class="card-description">Strategic framework for $1 trillion AI humanoid healthcare market with focus on aging populations and chronic care.</p>
+                        <ul class="feature-list">
+                            <li>Market analysis & opportunity</li>
+                            <li>Regulatory compliance (SaMD)</li>
+                            <li>Triple-win value creation</li>
+                            <li>Implementation roadmap</li>
+                        </ul>
+                        <button class="learn-more-btn" onclick="window.location.href='mailto:andy@andysquire.ai?subject=Humanoid Healthcare Vision Inquiry'">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Create MyHealthStory Section (separate and distinct)
+        const myHealthStorySection = document.createElement('section');
+        myHealthStorySection.className = 'myhealthstory-section section-padding';
+        myHealthStorySection.innerHTML = `
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">MyHealthStory</h2>
+                    <p class="section-subtitle">Empowering patients through better healthcare communication</p>
+                </div>
+                
+                <div class="myhealthstory-card">
+                    <div class="card-header">
+                        <div class="card-icon large">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e53e3e" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <div class="card-meta">
+                            <h3>MyHealthStory Initiative</h3>
+                            <p class="card-tagline">Born from lived cancer experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <p class="card-description">Patient empowerment tool designed from lived cancer experience to improve communication with medical teams.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">📄</span>
+                                <span>One-page health summary</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📝</span>
+                                <span>Form-fillable PDF template</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔒</span>
+                                <span>Privacy & consent management</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">❤️</span>
+                                <span>Royal Marsden Cancer Charity support</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="primary-cta-btn" onclick="scrollToMyHealthStory()">
+                                Download MyHealthStory
+                            </button>
+                            <p class="charity-note">50% of proceeds support Royal Marsden Cancer Charity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Insert sections in the correct order
+        // Find a good insertion point (after hero/header, before existing content)
+        const heroSection = document.querySelector('section') || document.querySelector('header') || mainContent.firstElementChild;
+        
+        if (heroSection && heroSection.nextSibling) {
+            // Insert after hero section
+            heroSection.parentNode.insertBefore(aboutSection, heroSection.nextSibling);
+            aboutSection.parentNode.insertBefore(researchSection, aboutSection.nextSibling);
+            researchSection.parentNode.insertBefore(myHealthStorySection, researchSection.nextSibling);
+        } else {
+            // Append to main content
+            mainContent.appendChild(aboutSection);
+            mainContent.appendChild(researchSection);
+            mainContent.appendChild(myHealthStorySection);
+        }
+        
+        console.log('Website restructure completed');
+    }
     function createInsightDeck() {
         // Remove any existing individual callouts first
         const existingCallouts = document.querySelectorAll('.founder-insight');
@@ -605,6 +795,7 @@
         // Wait a bit for the page to settle, then apply improvements
         setTimeout(() => {
             removeDuplicateSections(); // Remove duplicates first
+            restructureWebsiteLayout(); // Apply new section structure
             createInsightDeck(); // Replace individual callouts with interactive deck
             replaceCollaborationSection();
             improveVisualHierarchy();
