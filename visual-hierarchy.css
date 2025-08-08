@@ -25,7 +25,7 @@
 
 /* Hero section specific styling */
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.1;
     color: #000000 !important;
@@ -33,11 +33,27 @@
     margin-bottom: 1rem;
 }
 
+/* Mobile responsive hero title */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
 .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 500;
     color: #000000 !important;
     text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Hero description text - make white instead of purple */
+.hero-description {
+    color: #ffffff !important;
+    font-size: 1.125rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
 }
 
@@ -78,18 +94,16 @@
     -webkit-text-fill-color: #000000;
     background-clip: text;
     position: relative;
+    text-decoration: none !important;
 }
 
+/* Remove underline from hashtags */
 .hashtag-highlight::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #000000;
-    opacity: 0.3;
-    border-radius: 1px;
+    display: none;
+}
+
+.hashtag-highlight::after {
+    display: none;
 }
 
 /* Enhanced Typography */
@@ -209,6 +223,12 @@
 
 /* Responsive Typography */
 @media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
     .section-title {
         font-size: 2rem;
         margin-bottom: 1.25rem;
@@ -242,6 +262,12 @@
 }
 
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
     .section-title {
         font-size: 1.75rem;
         margin-bottom: 1rem;
@@ -288,6 +314,58 @@
     
     .hashtag-highlight::before {
         display: none;
+    }
+}
+
+
+
+/* Prevent double bullets in CTA cards */
+.audience-ctas ul,
+.audience-ctas li,
+[class*="card"] ul,
+[class*="card"] li,
+[class*="cta"] ul,
+[class*="cta"] li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    position: static !important;
+}
+
+.audience-ctas li::before,
+[class*="card"] li::before,
+[class*="cta"] li::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure grey text becomes white on dark backgrounds */
+.dark-bg-text,
+.dark-bg-text * {
+    color: #ffffff !important;
+}
+
+/* Override any grey text on dark sections */
+section[style*="background"] p,
+section[style*="background"] span,
+section[style*="background"] div,
+div[style*="background"] p,
+div[style*="background"] span,
+div[style*="background"] div {
+    color: #ffffff !important;
+}
+
+/* Specific fixes for mobile hero title */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.6rem !important;
+        line-height: 1.2 !important;
     }
 }
 

@@ -147,13 +147,19 @@ function applyEnhancedTypography() {
     paragraphs.forEach(p => {
         // Skip if already enhanced or is a button/link
         if (p.classList.contains('enhanced-text') || 
+            p.classList.contains('hero-description') ||
             p.closest('button') || 
             p.closest('a')) return;
         
         const text = p.textContent;
         
-        // Hero description gets large enhanced text
+        // Hero description gets special white styling
         if (text.includes('Translating lived cancer experience') ||
+            text.includes('AI-enabled home rehabilitation')) {
+            p.classList.add('hero-description');
+        }
+        // Hero description gets large enhanced text
+        else if (text.includes('Translating lived cancer experience') ||
             text.includes('AI-enabled home rehabilitation')) {
             p.classList.add('enhanced-text', 'large');
         }
@@ -265,6 +271,7 @@ function applyButtonEnhancements() {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(applyButtonEnhancements, 1200);
     setTimeout(applyDarkBackgroundFixes, 1300);
+    setTimeout(removeDoubleBullets, 1400);
 });
 
 // Apply dark background text fixes
@@ -299,5 +306,87 @@ function applyDarkBackgroundFixes() {
     });
     
     console.log('🌙 Dark background text fixes applied');
+}
+
+// Remove double bullets and fix list styling
+function removeDoubleBullets() {
+    // Find all lists and remove double bullet styling
+    const allLists = document.querySelectorAll('ul, ol');
+    
+    allLists.forEach(list => {
+        // Remove any enhanced-list or bullet-list classes that create double bullets
+        if (list.classList.contains('enhanced-list') || list.classList.contains('bullet-list')) {
+            // Check if this list is creating double bullets
+            const items = list.querySelectorAll('li');
+            items.forEach(item => {
+                // If the item already has a bullet/checkmark in the text, remove our CSS bullets
+                const text = item.textContent.trim();
+                if (text.startsWith('•') || text.startsWith('✓') || text.startsWith('✔')) {
+                    item.style.listStyle = 'none';
+                    item.style.paddingLeft = '0';
+                    if (item.querySelector('::before')) {
+                        item.style.position = 'static';
+                    }
+                }
+            });
+        }
+        
+        // For CTA card lists, ensure they only have small bullets next to text
+        const parentCard = list.closest('[class*="card"], [class*="cta"]');
+        if (parentCard) {
+            list.style.listStyle = 'none';
+            list.style.padding = '0';
+            
+            const items = list.querySelectorAll('li');
+            items.forEach(item => {
+                item.style.listStyle = 'none';
+                item.style.paddingLeft = '0';
+                item.style.position = 'static';
+                
+                // Remove any CSS-generated bullets
+                const beforeStyle = window.getComputedStyle(item, '::before');
+                if (beforeStyle.content && beforeStyle.content !== 'none') {
+                    item.classList.remove('enhanced-list', 'bullet-list');
+                }
+            });
+        }
+    });
+    
+    console.log('🔧 Double bullets removed');
+}
+
+
+            });
+        }
+    });
+    
+    // Specifically target CTA cards and remove double bullets
+    const ctaCards = document.querySelectorAll('[class*="card"], [class*="cta"], .audience-ctas div');
+    ctaCards.forEach(card => {
+        const lists = card.querySelectorAll('ul');
+        lists.forEach(list => {
+            // Remove all CSS-generated bullets for CTA cards
+            list.classList.remove('enhanced-list', 'bullet-list');
+            list.style.listStyle = 'none';
+            list.style.padding = '0';
+            
+            const items = list.querySelectorAll('li');
+            items.forEach(item => {
+                item.style.listStyle = 'none';
+                item.style.paddingLeft = '0';
+                item.style.position = 'static';
+                
+                // Remove CSS pseudo-elements
+                item.classList.remove('enhanced-list', 'bullet-list');
+                
+                // Add inline style to override any CSS bullets
+                item.style.setProperty('list-style', 'none', 'important');
+                item.style.setProperty('padding-left', '0', 'important');
+                item.style.setProperty('position', 'static', 'important');
+            });
+        });
+    });
+    
+    console.log('🔧 Double bullets removed and list consistency applied');
 }
 
