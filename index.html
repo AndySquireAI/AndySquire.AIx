@@ -111,6 +111,49 @@
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
+
+<!-- Enhanced Google Ads Conversion Tracking -->
+<script async>
+  // Enhanced Google Ads conversion tracking for AW-290924137
+  gtag('config', 'AW-290924137');
+  
+  // Enhanced ecommerce tracking for MyHealthStory purchases
+  function trackEnhancedMyHealthStoryPurchase() {
+    gtag('event', 'purchase', {
+      'send_to': 'AW-290924137',
+      'transaction_id': 'MHS_' + Date.now(),
+      'value': 1.0,
+      'currency': 'CHF',
+      'items': [{
+        'item_id': 'myhealthstory_form',
+        'item_name': 'MyHealthStory PDF Form',
+        'category': 'Healthcare Tools',
+        'quantity': 1,
+        'price': 1.0
+      }]
+    });
+  }
+  
+  // Custom event tracking for user interactions
+  function trackCustomEvent(eventName, eventCategory, eventLabel) {
+    gtag('event', eventName, {
+      'event_category': eventCategory,
+      'event_label': eventLabel,
+      'send_to': ['G-6CNLJJJ8WQ', 'AW-290924137']
+    });
+  }
+  
+  // Track insight deck interactions
+  function trackInsightDeckInteraction(action) {
+    trackCustomEvent('insight_deck_interaction', 'engagement', action);
+  }
+  
+  // Track CTA button clicks
+  function trackCTAClick(buttonName) {
+    trackCustomEvent('cta_click', 'conversion', buttonName);
+  }
+</script>
+
 <link rel="stylesheet" href="assets/index-c2-vxgj6.css">
 
 <!-- Interactive Insight Deck Styles and Scripts -->
