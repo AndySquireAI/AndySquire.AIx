@@ -1,0 +1,226 @@
+/* Visual Hierarchy Improvements */
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+    letter-spacing: -0.025em;
+}
+
+.section-title.large {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.section-title.center {
+    text-align: center;
+}
+
+/* Subsection Title Styling */
+.subsection-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    letter-spacing: -0.015em;
+}
+
+.subsection-title.small {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 4rem 0;
+}
+
+.section-padding.large {
+    padding: 6rem 0;
+}
+
+.section-padding.small {
+    padding: 2rem 0;
+}
+
+/* Hashtag Highlighting */
+.hashtag-highlight {
+    color: #3182ce;
+    font-weight: 600;
+    background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.hashtag-highlight::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+    opacity: 0.3;
+    border-radius: 1px;
+}
+
+/* Enhanced Typography */
+.enhanced-text {
+    line-height: 1.7;
+    color: #4a5568;
+    font-size: 1.125rem;
+}
+
+.enhanced-text.large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Improved Spacing */
+.content-spacing > * + * {
+    margin-top: 1.5rem;
+}
+
+.content-spacing.tight > * + * {
+    margin-top: 1rem;
+}
+
+.content-spacing.loose > * + * {
+    margin-top: 2rem;
+}
+
+/* Card Typography Improvements */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    color: #1a202c;
+}
+
+.card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+/* List Improvements */
+.enhanced-list {
+    list-style: none;
+    padding: 0;
+}
+
+.enhanced-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.enhanced-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: 600;
+}
+
+/* Button Typography */
+.enhanced-button {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-title.large {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .section-padding.large {
+        padding: 4rem 0;
+    }
+    
+    .enhanced-text {
+        font-size: 1rem;
+    }
+    
+    .enhanced-text.large {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title.large {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-padding {
+        padding: 2rem 0;
+    }
+    
+    .section-padding.large {
+        padding: 3rem 0;
+    }
+}
+
+/* Focus and Accessibility */
+.hashtag-highlight:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .section-title,
+    .subsection-title {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+    
+    .hashtag-highlight {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+    
+    .hashtag-highlight::before {
+        display: none;
+    }
+}
+
