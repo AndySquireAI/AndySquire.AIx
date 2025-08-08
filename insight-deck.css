@@ -1,0 +1,446 @@
+/* Interactive Insight Deck Styles */
+.insight-deck-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.insight-deck-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.insight-deck-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.insight-deck-subtitle {
+    font-size: 1.25rem;
+    color: #e2e8f0;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insight-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.insight-cards {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    height: 100%;
+}
+
+.insight-card {
+    min-width: 100%;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    position: relative;
+}
+
+.insight-card.founder {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.insight-card.patient {
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.insight-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.insight-avatar.founder {
+    border-color: #667eea;
+}
+
+.insight-avatar.patient {
+    border-color: #f56565;
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.insight-quote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+}
+
+.insight-quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #cbd5e0;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-family: serif;
+}
+
+.insight-quote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #cbd5e0;
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+    font-family: serif;
+}
+
+.insight-attribution {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.insight-attribution.founder {
+    color: #667eea;
+}
+
+.insight-attribution.patient {
+    color: #f56565;
+}
+
+.insight-role {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.carousel-nav:hover {
+    background: #ffffff;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.carousel-nav:active {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-nav.prev {
+    left: -28px;
+}
+
+.carousel-nav.next {
+    right: -28px;
+}
+
+.carousel-nav svg {
+    width: 24px;
+    height: 24px;
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+.carousel-nav:hover svg {
+    color: #667eea;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #ffffff;
+    transform: scale(1.3);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.indicator.active::before {
+    background: #667eea;
+    width: 8px;
+    height: 8px;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.15);
+}
+
+.indicator:hover::before {
+    background: #667eea;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .insight-deck-section {
+        padding: 3rem 0;
+    }
+    
+    .insight-deck-container {
+        padding: 0 1rem;
+    }
+    
+    .insight-deck-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .insight-deck-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+    
+    .insight-carousel {
+        margin: 0 1rem;
+    }
+    
+    .insight-card {
+        padding: 2.5rem 2rem;
+        min-height: 380px;
+    }
+    
+    .insight-quote {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .insight-attribution {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    
+    .insight-role {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Enhanced mobile navigation - larger touch targets */
+    .carousel-nav {
+        width: 48px;
+        height: 48px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .carousel-nav.prev {
+        left: -24px;
+    }
+    
+    .carousel-nav.next {
+        right: -24px;
+    }
+    
+    .carousel-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Enhanced mobile indicators */
+    .carousel-indicators {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    
+    .indicator {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .indicator::before {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .indicator.active::before {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insight-deck-section {
+        padding: 2.5rem 0;
+    }
+    
+    .insight-deck-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+    }
+    
+    .insight-deck-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .insight-carousel {
+        margin: 0 0.5rem;
+    }
+    
+    .insight-card {
+        padding: 2rem 1.5rem;
+        min-height: 350px;
+    }
+    
+    .insight-avatar {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .insight-quote {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+    
+    .insight-attribution {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .insight-role {
+        font-size: 0.875rem;
+    }
+    
+    /* Optimized mobile navigation */
+    .carousel-nav {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .carousel-nav.prev {
+        left: -22px;
+    }
+    
+    .carousel-nav.next {
+        right: -22px;
+    }
+    
+    .carousel-nav svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Auto-advance animation */
+.insight-carousel.auto-advance .insight-cards {
+    animation: none;
+}
+
+/* Pause auto-advance on hover */
+.insight-carousel:hover .insight-cards {
+    animation-play-state: paused;
+}
+
+/* Accessibility */
+.carousel-nav:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.indicator:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .insight-deck-section {
+        background: #f7fafc;
+        color: #000000;
+    }
+    
+    .carousel-nav,
+    .carousel-indicators {
+        display: none;
+    }
+    
+    .insight-cards {
+        display: block;
+    }
+    
+    .insight-card {
+        min-width: auto;
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+        border: 1px solid #e2e8f0;
+    }
+}
