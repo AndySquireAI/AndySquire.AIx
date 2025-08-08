@@ -13,6 +13,101 @@
         }
     }
     
+    // Remove duplicate sections from the website
+    function removeDuplicateSections() {
+        console.log('Starting duplicate section removal...');
+        
+        // Remove duplicate Interactive Insights sections
+        const insightSections = document.querySelectorAll('.insight-deck-section');
+        if (insightSections.length > 1) {
+            console.log(`Found ${insightSections.length} insight deck sections, removing duplicates`);
+            // Keep the first one, remove the rest
+            for (let i = 1; i < insightSections.length; i++) {
+                console.log('Removing duplicate insight deck section:', i);
+                insightSections[i].remove();
+            }
+        }
+        
+        // Remove duplicate audience/stakeholder CTA sections
+        const audienceSections = document.querySelectorAll('.audience-ctas');
+        if (audienceSections.length > 1) {
+            console.log(`Found ${audienceSections.length} audience CTA sections, removing duplicates`);
+            // Keep the first one, remove the rest
+            for (let i = 1; i < audienceSections.length; i++) {
+                console.log('Removing duplicate audience CTA section:', i);
+                audienceSections[i].remove();
+            }
+        }
+        
+        // More comprehensive duplicate detection
+        const allSections = document.querySelectorAll('section');
+        const seenSections = new Map();
+        
+        allSections.forEach((section, index) => {
+            // Create multiple signatures for better duplicate detection
+            const headings = section.querySelectorAll('h1, h2, h3, h4');
+            const headingText = Array.from(headings).map(h => h.textContent.trim()).join('|');
+            
+            // Check for specific duplicate patterns
+            const isDuplicateInsights = headingText.includes('Insights from the Frontline') || 
+                                      section.classList.contains('insight-deck-section');
+            
+            const isDuplicatePartnership = headingText.includes('Partner with the Future') ||
+                                         headingText.includes('Robotics Manufacturers') ||
+                                         headingText.includes('Healthcare Institutions') ||
+                                         section.classList.contains('audience-ctas');
+            
+            if (isDuplicateInsights) {
+                const key = 'insights-section';
+                if (seenSections.has(key)) {
+                    console.log('Removing duplicate insights section:', headingText);
+                    section.remove();
+                } else {
+                    seenSections.set(key, section);
+                }
+            }
+            
+            if (isDuplicatePartnership) {
+                const key = 'partnership-section';
+                if (seenSections.has(key)) {
+                    console.log('Removing duplicate partnership section:', headingText);
+                    section.remove();
+                } else {
+                    seenSections.set(key, section);
+                }
+            }
+        });
+        
+        // Remove any remaining old-style founder insight callouts
+        const founderInsights = document.querySelectorAll('.founder-insight');
+        if (founderInsights.length > 0) {
+            console.log('Removing old founder insight callouts:', founderInsights.length);
+            founderInsights.forEach(insight => insight.remove());
+        }
+        
+        // Also check for any sections that might have been added multiple times by our script
+        setTimeout(() => {
+            // Second pass after a brief delay to catch any dynamically added duplicates
+            const laterInsightSections = document.querySelectorAll('.insight-deck-section');
+            if (laterInsightSections.length > 1) {
+                console.log('Second pass: removing additional insight deck duplicates');
+                for (let i = 1; i < laterInsightSections.length; i++) {
+                    laterInsightSections[i].remove();
+                }
+            }
+            
+            const laterAudienceSections = document.querySelectorAll('.audience-ctas');
+            if (laterAudienceSections.length > 1) {
+                console.log('Second pass: removing additional audience CTA duplicates');
+                for (let i = 1; i < laterAudienceSections.length; i++) {
+                    laterAudienceSections[i].remove();
+                }
+            }
+        }, 1000);
+        
+        console.log('Duplicate sections removal completed');
+    }
+    
     // Create interactive Insight Deck to consolidate all personal stories
     function createInsightDeck() {
         // Remove any existing individual callouts first
@@ -509,6 +604,7 @@
         
         // Wait a bit for the page to settle, then apply improvements
         setTimeout(() => {
+            removeDuplicateSections(); // Remove duplicates first
             createInsightDeck(); // Replace individual callouts with interactive deck
             replaceCollaborationSection();
             improveVisualHierarchy();
