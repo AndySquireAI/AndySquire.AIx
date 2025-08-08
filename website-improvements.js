@@ -13,7 +13,7 @@
         }
     }
     
-    // Add personal story callouts
+    // Add personal story callouts as static, integrated content
     function addPersonalStoryCallouts() {
         // Find sections to add callouts to
         const sections = [
@@ -60,10 +60,10 @@
         });
     }
     
-    // Create callout element
+    // Create callout element - static, no animations
     function createCalloutElement(callout) {
         const calloutDiv = document.createElement('div');
-        calloutDiv.className = 'founder-insight fade-in';
+        calloutDiv.className = 'founder-insight pull-quote'; // Remove fade-in class
         calloutDiv.innerHTML = `
             <div class="insight-content">
                 <img src="assets/andy-headshot-BurDoHN4.jpeg" alt="Andy Squire" class="insight-avatar" onerror="this.style.display='none'">
@@ -111,7 +111,7 @@
                 <p class="subtitle">Join us in revolutionizing patient care through AI and humanoid technology</p>
                 
                 <div class="audience-grid">
-                    <div class="audience-card robotics fade-in">
+                    <div class="audience-card robotics subtle-hover">
                         <h3>🤖 Robotics Manufacturers</h3>
                         <h4>Partner with Us to Build Medical Humanoids</h4>
                         <ul>
@@ -125,7 +125,7 @@
                         </button>
                     </div>
 
-                    <div class="audience-card healthcare fade-in">
+                    <div class="audience-card healthcare subtle-hover">
                         <h3>🏥 Healthcare Institutions</h3>
                         <h4>Transform Patient Care with AI Solutions</h4>
                         <ul>
@@ -139,7 +139,7 @@
                         </button>
                     </div>
 
-                    <div class="audience-card investors fade-in">
+                    <div class="audience-card investors subtle-hover">
                         <h3>💰 Investors & Partners</h3>
                         <h4>Invest in the $1 Trillion Healthcare AI Market</h4>
                         <ul>
@@ -153,7 +153,7 @@
                         </button>
                     </div>
 
-                    <div class="audience-card patients fade-in">
+                    <div class="audience-card patients subtle-hover">
                         <h3>❤️ Patients & Advocates</h3>
                         <h4>Join the <span class="hashtag-highlight">#PatientFirstAI</span> Movement</h4>
                         <ul>
@@ -284,10 +284,10 @@
         }
     }
     
-    // Create research card element
+    // Create research card element - static, no animations
     function createResearchCard(card) {
         const cardDiv = document.createElement('div');
-        cardDiv.className = `research-card ${card.featured ? 'featured' : ''} fade-in`;
+        cardDiv.className = `research-card ${card.featured ? 'featured' : ''} subtle-hover`; // Remove fade-in
         
         let cardContent = `
             <div class="card-icon">${card.icon}</div>
@@ -338,29 +338,6 @@
         }
     };
     
-    // Add animation on scroll
-    function addScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements that should animate
-        setTimeout(() => {
-            const animatedElements = document.querySelectorAll('.founder-insight, .audience-card, .research-card');
-            animatedElements.forEach(el => observer.observe(el));
-        }, 1000);
-    }
-    
     // Initialize all improvements
     function initializeImprovements() {
         console.log('Initializing website improvements...');
@@ -377,7 +354,7 @@
             replaceCollaborationSection();
             improveVisualHierarchy();
             enhanceResearchSection();
-            addScrollAnimations();
+            // Remove scroll animations - content should be immediately visible
             
             console.log('Website improvements applied successfully!');
         }, 2000);

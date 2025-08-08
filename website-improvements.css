@@ -1,15 +1,17 @@
 /* Website Quick Wins Improvements - Andy Squire AIx */
 
-/* Personal Story Callout Styles */
+/* Personal Story Callout Styles - Static Integration */
 .founder-insight {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   border-left: 4px solid #1e88e5;
-  padding: 24px;
-  margin: 32px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  margin: 48px auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
+  max-width: 800px;
+  /* Remove dynamic animations - make it feel like natural page content */
 }
 
 .founder-insight::before {
@@ -18,54 +20,68 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, #1e88e5, #42a5f5);
 }
 
 .founder-insight .insight-content {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 20px;
 }
 
 .founder-insight .insight-avatar {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   border: 3px solid #1e88e5;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .founder-insight blockquote {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.7;
   color: #334155;
   font-style: italic;
   position: relative;
+  font-weight: 400;
 }
 
 .founder-insight blockquote::before {
   content: '"';
-  font-size: 48px;
+  font-size: 56px;
   color: #1e88e5;
   position: absolute;
-  top: -10px;
-  left: -20px;
+  top: -15px;
+  left: -25px;
   font-family: Georgia, serif;
+  opacity: 0.7;
 }
 
 .founder-insight cite {
   display: block;
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 16px;
+  font-size: 15px;
   color: #64748b;
   font-weight: 600;
   font-style: normal;
+  line-height: 1.4;
 }
 
 .founder-insight cite::before {
   content: '— ';
+}
+
+/* Make it feel like a natural pull-quote within content flow */
+.founder-insight.pull-quote {
+  margin: 64px auto;
+  text-align: left;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* Audience-Specific CTA Styles */
@@ -499,31 +515,27 @@
   }
 }
 
-/* Animation Classes */
+/* Animation Classes - Subtle and Professional */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
+  opacity: 1;
+  transform: translateY(0);
+  /* Remove initial hidden state and animation - make content immediately visible */
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Keep very subtle hover animations only */
+.subtle-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.subtle-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Remove slide animations entirely */
 .slide-in-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: slideInLeft 0.6s ease forwards;
-}
-
-@keyframes slideInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Accessibility Improvements */
