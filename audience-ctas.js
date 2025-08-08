@@ -167,7 +167,7 @@ function createAudienceCTASection() {
                         <li>Organized health information</li>
                         <li>Support cancer research</li>
                     </ul>
-                    <button class="cta-button" onclick="exploreMyHealthStory()">Explore MyHealthStory</button>
+                    <button class="cta-button" onclick="contactPatients()">Connect with Andy</button>
                 </div>
             </div>
         </div>
@@ -244,58 +244,22 @@ Best regards`);
     window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
-function exploreMyHealthStory() {
-    // Look for MyHealthStory section by various methods
-    let targetElement = null;
+function contactPatients() {
+    const subject = encodeURIComponent('Connection Request - Patient/Survivor/Caregiver/Advocate');
+    const body = encodeURIComponent(`Dear Andy,
+
+As a fellow Patient/Survivor and/or Caregiver/Advocate, I wanted to connect to discuss how your #PatientFirstAI approach and MyHealthStory initiative could help improve healthcare experiences.
+
+I'm particularly interested in:
+- Learning more about MyHealthStory and how it can improve patient-doctor communication
+- Understanding how your cancer survivor experience translates into better healthcare solutions
+- Exploring ways to support the patient advocacy movement
+- Discussing opportunities to collaborate on patient-centered healthcare innovation
+
+Thank you for letting me know your availability for a conversation.
+
+Best regards`);
     
-    // Method 1: Look for headings containing "MyHealthStory"
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    for (const heading of headings) {
-        if (heading.textContent.includes('MyHealthStory') || 
-            heading.textContent.includes('#MyHealthStory')) {
-            targetElement = heading;
-            break;
-        }
-    }
-    
-    // Method 2: Look for elements with MyHealthStory in text content
-    if (!targetElement) {
-        const allElements = document.querySelectorAll('*');
-        for (const element of allElements) {
-            if (element.textContent && 
-                element.textContent.includes('MyHealthStory PDF Forms') ||
-                element.textContent.includes('Empowering patients with a clear health summary')) {
-                targetElement = element;
-                break;
-            }
-        }
-    }
-    
-    // Method 3: Look for navigation button
-    if (!targetElement) {
-        const navButtons = document.querySelectorAll('button, a');
-        for (const button of navButtons) {
-            if (button.textContent.includes('MyHealthStory')) {
-                // Click the navigation button instead
-                button.click();
-                return;
-            }
-        }
-    }
-    
-    // Method 4: Fallback - scroll to a reasonable position (around 60% down the page)
-    if (!targetElement) {
-        window.scrollTo({
-            top: document.body.scrollHeight * 0.6,
-            behavior: 'smooth'
-        });
-        return;
-    }
-    
-    // Scroll to the found element
-    targetElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-    });
+    window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
