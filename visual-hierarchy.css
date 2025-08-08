@@ -1,0 +1,371 @@
+/* Visual Hierarchy Improvements */
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+    letter-spacing: -0.025em;
+}
+
+.section-title.large {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title.center {
+    text-align: center;
+}
+
+.section-title.left {
+    text-align: left;
+}
+
+/* Hero section specific styling */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000000 !important;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* Mobile responsive hero title */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000 !important;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Hero description text - make white instead of purple */
+.hero-description {
+    color: #ffffff !important;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Subsection Title Styling */
+.subsection-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    letter-spacing: -0.015em;
+}
+
+.subsection-title.small {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 4rem 0;
+}
+
+.section-padding.large {
+    padding: 6rem 0;
+}
+
+.section-padding.small {
+    padding: 2rem 0;
+}
+
+/* Hashtag Highlighting */
+.hashtag-highlight {
+    color: #000000 !important;
+    font-weight: 600;
+    background: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #000000;
+    background-clip: text;
+    position: relative;
+    text-decoration: none !important;
+}
+
+/* Remove underline from hashtags */
+.hashtag-highlight::before {
+    display: none;
+}
+
+.hashtag-highlight::after {
+    display: none;
+}
+
+/* Enhanced Typography */
+.enhanced-text {
+    line-height: 1.7;
+    color: #4a5568;
+    font-size: 1.125rem;
+}
+
+.enhanced-text.large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Improved Spacing */
+.content-spacing > * + * {
+    margin-top: 1.5rem;
+}
+
+.content-spacing.tight > * + * {
+    margin-top: 1rem;
+}
+
+.content-spacing.loose > * + * {
+    margin-top: 2rem;
+}
+
+/* Card Typography Improvements */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    color: #1a202c;
+}
+
+.card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+/* Enhanced List Improvements */
+.enhanced-list {
+    list-style: none;
+    padding: 0;
+}
+
+.enhanced-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.enhanced-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: 600;
+}
+
+/* Bullet point list for consistency */
+.bullet-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* Dark background text improvements */
+.dark-bg-text {
+    color: #ffffff !important;
+}
+
+.dark-bg-text h1,
+.dark-bg-text h2,
+.dark-bg-text h3,
+.dark-bg-text h4,
+.dark-bg-text h5,
+.dark-bg-text h6 {
+    color: #ffffff !important;
+}
+
+.dark-bg-text p {
+    color: #ffffff !important;
+}
+
+.dark-bg-text .enhanced-text {
+    color: #ffffff !important;
+}
+
+/* Button Typography */
+.enhanced-button {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-transform: none;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-title.large {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .section-padding.large {
+        padding: 4rem 0;
+    }
+    
+    .enhanced-text {
+        font-size: 1rem;
+    }
+    
+    .enhanced-text.large {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title.large {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-padding {
+        padding: 2rem 0;
+    }
+    
+    .section-padding.large {
+        padding: 3rem 0;
+    }
+}
+
+/* Focus and Accessibility */
+.hashtag-highlight:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .section-title,
+    .subsection-title {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+    
+    .hashtag-highlight {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+    
+    .hashtag-highlight::before {
+        display: none;
+    }
+}
+
+
+
+/* Prevent double bullets in CTA cards */
+.audience-ctas ul,
+.audience-ctas li,
+[class*="card"] ul,
+[class*="card"] li,
+[class*="cta"] ul,
+[class*="cta"] li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    position: static !important;
+}
+
+.audience-ctas li::before,
+[class*="card"] li::before,
+[class*="cta"] li::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure grey text becomes white on dark backgrounds */
+.dark-bg-text,
+.dark-bg-text * {
+    color: #ffffff !important;
+}
+
+/* Override any grey text on dark sections */
+section[style*="background"] p,
+section[style*="background"] span,
+section[style*="background"] div,
+div[style*="background"] p,
+div[style*="background"] span,
+div[style*="background"] div {
+    color: #ffffff !important;
+}
+
+/* Specific fixes for mobile hero title */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.6rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
