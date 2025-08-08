@@ -35,9 +35,16 @@ function applySectionTitles() {
     headings.forEach(heading => {
         const text = heading.textContent.toLowerCase();
         
-        // Main hero title
+        // Main hero title - apply hero-specific styling
         if (text.includes('founder') && text.includes('ceo')) {
-            heading.classList.add('section-title', 'large', 'center');
+            heading.classList.add('hero-title');
+            // Ensure proper line breaks for hero title
+            if (heading.innerHTML.includes('Humanoid Healthcare')) {
+                heading.innerHTML = heading.innerHTML.replace(
+                    /(Founder & CEO,)\s*(Humanoid Healthcare)/i,
+                    '$1<br>$2'
+                );
+            }
         }
         // Other major section headings
         else if (text.includes('partner with') || 
@@ -176,23 +183,38 @@ function applyListImprovements() {
     lists.forEach(list => {
         // Skip if already enhanced or is a navigation list
         if (list.classList.contains('enhanced-list') || 
+            list.classList.contains('bullet-list') ||
             list.closest('nav') ||
             list.classList.contains('benefits-list')) return;
         
         const items = list.querySelectorAll('li');
         if (items.length > 0) {
-            // Check if it's a feature/benefit list
-            const hasFeatureText = Array.from(items).some(item => {
-                const text = item.textContent.toLowerCase();
-                return text.includes('partnership') || 
-                       text.includes('market') || 
-                       text.includes('patient') ||
-                       text.includes('communication') ||
-                       text.includes('research');
-            });
+            // Check if it's the Robotics Manufacturers section
+            const parentText = list.closest('div, section')?.textContent.toLowerCase() || '';
+            const isRoboticsSection = parentText.includes('robotics manufacturers') ||
+                                    parentText.includes('multiple revenue streams') ||
+                                    parentText.includes('subscription models');
             
-            if (hasFeatureText) {
-                list.classList.add('enhanced-list');
+            if (isRoboticsSection) {
+                // Use bullet points for Robotics Manufacturers for consistency
+                list.classList.add('bullet-list');
+            } else {
+                // Check if it's a feature/benefit list for other sections
+                const hasFeatureText = Array.from(items).some(item => {
+                    const text = item.textContent.toLowerCase();
+                    return text.includes('partnership') || 
+                           text.includes('market') || 
+                           text.includes('patient') ||
+                           text.includes('communication') ||
+                           text.includes('research') ||
+                           text.includes('enhanced') ||
+                           text.includes('reduced') ||
+                           text.includes('streamlined');
+                });
+                
+                if (hasFeatureText) {
+                    list.classList.add('enhanced-list');
+                }
             }
         }
     });
@@ -242,5 +264,40 @@ function applyButtonEnhancements() {
 // Initialize button enhancements
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(applyButtonEnhancements, 1200);
+    setTimeout(applyDarkBackgroundFixes, 1300);
 });
+
+// Apply dark background text fixes
+function applyDarkBackgroundFixes() {
+    // Find sections with dark backgrounds and apply white text
+    const darkSections = document.querySelectorAll('section, div');
+    
+    darkSections.forEach(section => {
+        const computedStyle = window.getComputedStyle(section);
+        const bgColor = computedStyle.backgroundColor;
+        const bgImage = computedStyle.backgroundImage;
+        
+        // Check if section has dark background
+        const isDarkBg = bgColor.includes('rgb(26, 32, 44)') || // dark navy
+                        bgColor.includes('rgb(45, 55, 72)') ||  // dark grey
+                        bgColor.includes('rgb(23, 25, 35)') ||  // very dark
+                        section.style.backgroundColor?.includes('dark') ||
+                        section.classList.contains('bg-dark') ||
+                        section.classList.contains('dark-bg');
+        
+        if (isDarkBg) {
+            section.classList.add('dark-bg-text');
+            
+            // Also apply to child elements
+            const textElements = section.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div');
+            textElements.forEach(el => {
+                if (!el.closest('button') && !el.closest('a')) {
+                    el.style.color = '#ffffff';
+                }
+            });
+        }
+    });
+    
+    console.log('🌙 Dark background text fixes applied');
+}
 

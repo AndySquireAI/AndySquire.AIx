@@ -11,12 +11,34 @@
 }
 
 .section-title.large {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
 }
 
 .section-title.center {
     text-align: center;
+}
+
+.section-title.left {
+    text-align: left;
+}
+
+/* Hero section specific styling */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000000 !important;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000000 !important;
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 /* Subsection Title Styling */
@@ -49,11 +71,11 @@
 
 /* Hashtag Highlighting */
 .hashtag-highlight {
-    color: #3182ce;
+    color: #000000 !important;
     font-weight: 600;
-    background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+    background: #000000;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: #000000;
     background-clip: text;
     position: relative;
 }
@@ -65,7 +87,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(135deg, #3182ce 0%, #2b77cb 100%);
+    background: #000000;
     opacity: 0.3;
     border-radius: 1px;
 }
@@ -111,7 +133,7 @@
     margin-bottom: 1rem;
 }
 
-/* List Improvements */
+/* Enhanced List Improvements */
 .enhanced-list {
     list-style: none;
     padding: 0;
@@ -131,6 +153,51 @@
     left: 0;
     color: #48bb78;
     font-weight: 600;
+}
+
+/* Bullet point list for consistency */
+.bullet-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+/* Dark background text improvements */
+.dark-bg-text {
+    color: #ffffff !important;
+}
+
+.dark-bg-text h1,
+.dark-bg-text h2,
+.dark-bg-text h3,
+.dark-bg-text h4,
+.dark-bg-text h5,
+.dark-bg-text h6 {
+    color: #ffffff !important;
+}
+
+.dark-bg-text p {
+    color: #ffffff !important;
+}
+
+.dark-bg-text .enhanced-text {
+    color: #ffffff !important;
 }
 
 /* Button Typography */
