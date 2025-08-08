@@ -1,0 +1,332 @@
+/* Interactive Insight Deck Styles */
+.insight-deck-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.insight-deck-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.insight-deck-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.insight-deck-subtitle {
+    font-size: 1.25rem;
+    color: #e2e8f0;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insight-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.insight-cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.insight-card {
+    min-width: 100%;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    position: relative;
+}
+
+.insight-card.founder {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.insight-card.patient {
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.insight-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.insight-avatar.founder {
+    border-color: #667eea;
+}
+
+.insight-avatar.patient {
+    border-color: #f56565;
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.insight-quote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+}
+
+.insight-quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #cbd5e0;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-family: serif;
+}
+
+.insight-quote::after {
+    content: '"';
+    font-size: 3rem;
+    color: #cbd5e0;
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+    font-family: serif;
+}
+
+.insight-attribution {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.insight-attribution.founder {
+    color: #667eea;
+}
+
+.insight-attribution.patient {
+    color: #f56565;
+}
+
+.insight-role {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.carousel-nav:hover {
+    background: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav.prev {
+    left: -25px;
+}
+
+.carousel-nav.next {
+    right: -25px;
+}
+
+.carousel-nav svg {
+    width: 20px;
+    height: 20px;
+    color: #4a5568;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #ffffff;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .insight-deck-section {
+        padding: 3rem 0;
+    }
+    
+    .insight-deck-container {
+        padding: 0 1rem;
+    }
+    
+    .insight-deck-title {
+        font-size: 2rem;
+    }
+    
+    .insight-deck-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+    }
+    
+    .insight-card {
+        padding: 2rem 1.5rem;
+        min-height: 350px;
+    }
+    
+    .insight-quote {
+        font-size: 1.125rem;
+    }
+    
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-nav.prev {
+        left: -20px;
+    }
+    
+    .carousel-nav.next {
+        right: -20px;
+    }
+    
+    .carousel-nav svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insight-deck-title {
+        font-size: 1.75rem;
+    }
+    
+    .insight-card {
+        padding: 1.5rem 1rem;
+        min-height: 320px;
+    }
+    
+    .insight-avatar {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .insight-quote {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .carousel-nav {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-nav.prev {
+        left: -17px;
+    }
+    
+    .carousel-nav.next {
+        right: -17px;
+    }
+}
+
+/* Auto-advance animation */
+.insight-carousel.auto-advance .insight-cards {
+    animation: none;
+}
+
+/* Pause auto-advance on hover */
+.insight-carousel:hover .insight-cards {
+    animation-play-state: paused;
+}
+
+/* Accessibility */
+.carousel-nav:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.indicator:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .insight-deck-section {
+        background: #f7fafc;
+        color: #000000;
+    }
+    
+    .carousel-nav,
+    .carousel-indicators {
+        display: none;
+    }
+    
+    .insight-cards {
+        display: block;
+    }
+    
+    .insight-card {
+        min-width: auto;
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+        border: 1px solid #e2e8f0;
+    }
+}
+
