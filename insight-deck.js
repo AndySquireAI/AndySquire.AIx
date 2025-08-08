@@ -94,13 +94,13 @@ function createInsightDeckSection() {
                     
                     <!-- Navigation Arrows -->
                     <button class="carousel-nav prev" id="prev-btn" aria-label="Previous insight">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15,18 9,12 15,6"></polyline>
                         </svg>
                     </button>
                     <button class="carousel-nav next" id="next-btn" aria-label="Next insight">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9,18 15,12 9,6"></polyline>
                         </svg>
                     </button>
                 </div>
@@ -286,5 +286,84 @@ function enhanceAccessibility() {
 // Initialize accessibility after DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(enhanceAccessibility, 1100);
+});
+
+
+
+// Enhanced mobile experience optimizations
+function enhanceMobileExperience() {
+    const carousel = document.querySelector('.insight-carousel');
+    const navButtons = document.querySelectorAll('.carousel-nav');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (!carousel) return;
+    
+    // Add touch feedback for navigation buttons
+    navButtons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.transform = this.style.transform.replace('scale(1.15)', 'scale(1.05)');
+        });
+        
+        button.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = this.style.transform.replace('scale(1.05)', 'scale(1.15)');
+            }, 150);
+        });
+    });
+    
+    // Add touch feedback for indicators
+    indicators.forEach(indicator => {
+        indicator.addEventListener('touchstart', function() {
+            if (!this.classList.contains('active')) {
+                this.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        indicator.addEventListener('touchend', function() {
+            setTimeout(() => {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'scale(1)';
+                }
+            }, 150);
+        });
+    });
+    
+    // Optimize performance for mobile
+    carousel.style.willChange = 'transform';
+    
+    // Add visual feedback for card transitions on mobile
+    const cards = document.querySelectorAll('.insight-card');
+    cards.forEach(card => {
+        card.style.willChange = 'transform';
+    });
+    
+    console.log('📱 Mobile experience enhancements applied');
+}
+
+// Initialize mobile enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(enhanceMobileExperience, 1200);
+});
+
+// Add performance monitoring for smooth animations
+function optimizePerformance() {
+    const carousel = document.getElementById('insight-cards');
+    if (!carousel) return;
+    
+    // Use transform3d for hardware acceleration
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                carousel.style.transform = carousel.style.transform.replace('translateX', 'translate3d') + ', 0)';
+            }
+        });
+    });
+    
+    observer.observe(carousel);
+}
+
+// Initialize performance optimizations
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(optimizePerformance, 1300);
 });
 

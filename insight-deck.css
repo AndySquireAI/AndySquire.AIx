@@ -144,63 +144,105 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     z-index: 10;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .carousel-nav:hover {
     background: #ffffff;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.carousel-nav:active {
+    transform: translateY(-50%) scale(1.05);
 }
 
 .carousel-nav.prev {
-    left: -25px;
+    left: -28px;
 }
 
 .carousel-nav.next {
-    right: -25px;
+    right: -28px;
 }
 
 .carousel-nav svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+.carousel-nav:hover svg {
+    color: #667eea;
 }
 
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    padding: 0.5rem;
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
     transition: all 0.3s ease;
 }
 
 .indicator.active {
     background: #ffffff;
-    transform: scale(1.2);
+    transform: scale(1.3);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.indicator.active::before {
+    background: #667eea;
+    width: 8px;
+    height: 8px;
 }
 
 .indicator:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.15);
+}
+
+.indicator:hover::before {
+    background: #667eea;
 }
 
 /* Mobile Responsive */
@@ -215,49 +257,106 @@
     
     .insight-deck-title {
         font-size: 2rem;
+        line-height: 1.2;
     }
     
     .insight-deck-subtitle {
         font-size: 1.125rem;
         margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+    
+    .insight-carousel {
+        margin: 0 1rem;
+    }
+    
+    .insight-card {
+        padding: 2.5rem 2rem;
+        min-height: 380px;
+    }
+    
+    .insight-quote {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .insight-attribution {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    
+    .insight-role {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Enhanced mobile navigation - larger touch targets */
+    .carousel-nav {
+        width: 48px;
+        height: 48px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .carousel-nav.prev {
+        left: -24px;
+    }
+    
+    .carousel-nav.next {
+        right: -24px;
+    }
+    
+    .carousel-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Enhanced mobile indicators */
+    .carousel-indicators {
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+    
+    .indicator {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .indicator::before {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .indicator.active::before {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insight-deck-section {
+        padding: 2.5rem 0;
+    }
+    
+    .insight-deck-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+    }
+    
+    .insight-deck-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .insight-carousel {
+        margin: 0 0.5rem;
     }
     
     .insight-card {
         padding: 2rem 1.5rem;
         min-height: 350px;
-    }
-    
-    .insight-quote {
-        font-size: 1.125rem;
-    }
-    
-    .carousel-nav {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .carousel-nav.prev {
-        left: -20px;
-    }
-    
-    .carousel-nav.next {
-        right: -20px;
-    }
-    
-    .carousel-nav svg {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .insight-deck-title {
-        font-size: 1.75rem;
-    }
-    
-    .insight-card {
-        padding: 1.5rem 1rem;
-        min-height: 320px;
     }
     
     .insight-avatar {
@@ -268,20 +367,36 @@
     
     .insight-quote {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
     }
     
+    .insight-attribution {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .insight-role {
+        font-size: 0.875rem;
+    }
+    
+    /* Optimized mobile navigation */
     .carousel-nav {
-        width: 35px;
-        height: 35px;
+        width: 44px;
+        height: 44px;
     }
     
     .carousel-nav.prev {
-        left: -17px;
+        left: -22px;
     }
     
     .carousel-nav.next {
-        right: -17px;
+        right: -22px;
+    }
+    
+    .carousel-nav svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -329,4 +444,3 @@
         border: 1px solid #e2e8f0;
     }
 }
-
