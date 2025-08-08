@@ -177,7 +177,7 @@ function initializeCarousel() {
     
     // Auto-advance functionality
     function startAutoAdvance() {
-        autoAdvanceInterval = setInterval(nextSlide, 5000); // 5 seconds
+        autoAdvanceInterval = setInterval(nextSlide, 8000); // 8 seconds - gives users time to read
     }
     
     function stopAutoAdvance() {
@@ -190,13 +190,13 @@ function initializeCarousel() {
     prevBtn.addEventListener('click', () => {
         prevSlide();
         stopAutoAdvance();
-        setTimeout(startAutoAdvance, 10000); // Restart after 10 seconds
+        setTimeout(startAutoAdvance, 4000); // Restart after 4 seconds minimum
     });
     
     nextBtn.addEventListener('click', () => {
         nextSlide();
         stopAutoAdvance();
-        setTimeout(startAutoAdvance, 10000); // Restart after 10 seconds
+        setTimeout(startAutoAdvance, 4000); // Restart after 4 seconds minimum
     });
     
     // Indicator clicks
@@ -204,7 +204,7 @@ function initializeCarousel() {
         indicator.addEventListener('click', () => {
             goToSlide(index);
             stopAutoAdvance();
-            setTimeout(startAutoAdvance, 10000); // Restart after 10 seconds
+            setTimeout(startAutoAdvance, 4000); // Restart after 4 seconds minimum
         });
     });
     
@@ -213,11 +213,11 @@ function initializeCarousel() {
         if (e.key === 'ArrowLeft') {
             prevSlide();
             stopAutoAdvance();
-            setTimeout(startAutoAdvance, 10000);
+            setTimeout(startAutoAdvance, 4000);
         } else if (e.key === 'ArrowRight') {
             nextSlide();
             stopAutoAdvance();
-            setTimeout(startAutoAdvance, 10000);
+            setTimeout(startAutoAdvance, 4000);
         }
     });
     
@@ -252,7 +252,7 @@ function initializeCarousel() {
                 prevSlide(); // Swipe right - previous slide
             }
             stopAutoAdvance();
-            setTimeout(startAutoAdvance, 10000);
+            setTimeout(startAutoAdvance, 4000);
         }
     }
     
