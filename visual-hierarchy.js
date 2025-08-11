@@ -147,15 +147,18 @@ function applyEnhancedTypography() {
     paragraphs.forEach(p => {
         // Skip if already enhanced or is a button/link
         if (p.classList.contains('enhanced-text') || 
+            p.classList.contains('hero-description') ||
             p.closest('button') || 
             p.closest('a')) return;
         
         const text = p.textContent;
         
-        // Hero description gets large enhanced text
+        // Hero description gets special white styling
         if (text.includes('Translating lived cancer experience') ||
-            text.includes('AI-enabled home rehabilitation')) {
-            p.classList.add('enhanced-text', 'large');
+            text.includes('AI-enabled home rehabilitation') ||
+            text.includes('Translating')) {
+            p.classList.add('hero-description');
+            p.style.color = '#ffffff !important';
         }
         // Other paragraphs get standard enhanced text
         else if (text.length > 50) {
@@ -265,6 +268,7 @@ function applyButtonEnhancements() {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(applyButtonEnhancements, 1200);
     setTimeout(applyDarkBackgroundFixes, 1300);
+    setTimeout(removeDoubleBullets, 1400);
 });
 
 // Apply dark background text fixes
@@ -299,5 +303,84 @@ function applyDarkBackgroundFixes() {
     });
     
     console.log('🌙 Dark background text fixes applied');
+}
+
+// Remove double bullets and fix list styling
+function removeDoubleBullets() {
+    console.log('🔧 Starting double bullet removal...');
+    
+    // Find all lists and remove double bullet styling
+    const allLists = document.querySelectorAll('ul, ol');
+    
+    allLists.forEach(list => {
+        // Remove enhanced-list and bullet-list classes that create CSS bullets
+        list.classList.remove('enhanced-list', 'bullet-list');
+        
+        // Reset list styling
+        list.style.listStyle = 'none';
+        list.style.padding = '0';
+        list.style.margin = '0';
+        
+        const items = list.querySelectorAll('li');
+        items.forEach(item => {
+            // Remove all CSS-generated bullets
+            item.style.listStyle = 'none';
+            item.style.paddingLeft = '0';
+            item.style.position = 'static';
+            item.classList.remove('enhanced-list', 'bullet-list');
+            
+            // Remove any ::before pseudo-elements by overriding
+            const style = document.createElement('style');
+            style.textContent = `
+                li::before { 
+                    display: none !important; 
+                    content: none !important; 
+                }
+            `;
+            if (!document.head.querySelector('style[data-bullet-fix]')) {
+                style.setAttribute('data-bullet-fix', 'true');
+                document.head.appendChild(style);
+            }
+            
+            // Check if text already has bullets and clean up if needed
+            const text = item.textContent.trim();
+            if (text.startsWith('•') || text.startsWith('✓') || text.startsWith('✔')) {
+                // Text already has bullets, ensure no CSS bullets
+                item.style.paddingLeft = '0';
+                item.style.textIndent = '0';
+            } else {
+                // Add small black bullet for consistency
+                if (!text.startsWith('•')) {
+                    item.innerHTML = '• ' + item.innerHTML;
+                }
+            }
+        });
+        
+        // Special handling for CTA cards
+        const parentCard = list.closest('[class*="card"], [class*="cta"], [class*="audience"]');
+        if (parentCard) {
+            items.forEach(item => {
+                const text = item.textContent.trim();
+                // Ensure consistent small black bullets for CTA cards
+                if (!text.startsWith('•')) {
+                    item.innerHTML = '• ' + item.innerHTML;
+                }
+            });
+        }
+    });
+    
+    // Additional cleanup for any remaining double bullets
+    setTimeout(() => {
+        const allListItems = document.querySelectorAll('li');
+        allListItems.forEach(item => {
+            const text = item.textContent;
+            // Remove double bullets like "• •" or "✓ •"
+            if (text.includes('• •') || text.includes('✓ •') || text.includes('✔ •')) {
+                item.innerHTML = item.innerHTML.replace(/[•✓✔]\s*[•✓✔]\s*/, '• ');
+            }
+        });
+    }, 500);
+    
+    console.log('🔧 Double bullets removed and consistency applied');
 }
 

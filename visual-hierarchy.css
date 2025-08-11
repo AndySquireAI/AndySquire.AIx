@@ -25,7 +25,7 @@
 
 /* Hero section specific styling */
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.1;
     color: #000000 !important;
@@ -38,6 +38,14 @@
     font-weight: 500;
     color: #000000 !important;
     text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Hero description text - make white instead of purple */
+.hero-description {
+    color: #ffffff !important;
+    font-size: 1.125rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
 }
 
@@ -78,18 +86,16 @@
     -webkit-text-fill-color: #000000;
     background-clip: text;
     position: relative;
+    text-decoration: none !important;
 }
 
+/* Remove underline from hashtags */
 .hashtag-highlight::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #000000;
-    opacity: 0.3;
-    border-radius: 1px;
+    display: none;
+}
+
+.hashtag-highlight::after {
+    display: none;
 }
 
 /* Enhanced Typography */
@@ -209,6 +215,12 @@
 
 /* Responsive Typography */
 @media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
     .section-title {
         font-size: 2rem;
         margin-bottom: 1.25rem;
@@ -242,6 +254,12 @@
 }
 
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
     .section-title {
         font-size: 1.75rem;
         margin-bottom: 1rem;
