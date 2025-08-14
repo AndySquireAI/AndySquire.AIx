@@ -250,6 +250,60 @@ function updateMyHealthStorySection() {
   myHealthStorySection.className = "section-padding bg-gray-50";
   
   console.log('MyHealthStory section updated successfully!');
+  
+  // Now that the containers exist, render the PayPal buttons
+  renderPayPalButtons();
+}
+
+// NEW PAYPAL RENDERING FUNCTION
+function renderPayPalButtons() {
+  // Render the PayPal button for the "Current Plan"
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '9.00',
+            currency_code: 'GBP'
+          },
+          description: 'MyHealthStory Current Plan'
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        window.location.href = 'https://andysquire.ai/success';
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal Current Plan Error:', err);
+    }
+  }).render('#paypal-button-current-plan');
+
+  // Render the PayPal button for the "Complete Plan"
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '12.00',
+            currency_code: 'GBP'
+          },
+          description: 'MyHealthStory Complete Plan'
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        window.location.href = 'https://andysquire.ai/success';
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal Complete Plan Error:', err);
+    }
+  }).render('#paypal-button-complete-plan');
+  
+  console.log('PayPal buttons rendered successfully!');
 }
 
 // Start the update process
