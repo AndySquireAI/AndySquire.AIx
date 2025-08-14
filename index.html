@@ -99,8 +99,8 @@
 
 <!-- The incorrect event snippet that was here should now be GONE -->
 
-<!-- PayPal Smart Payment Buttons SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=GBP&intent=capture"></script>
+<!-- PayPal Smart Payment Buttons SDK - COMMENTED OUT UNTIL CLIENT ID IS OBTAINED -->
+<!-- <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=GBP&intent=capture"></script> -->
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
@@ -253,8 +253,14 @@ function updateMyHealthStorySection() {
             <div class="text-sm text-gray-500 mt-2">One-time purchase • Instant download</div>
           </div>
           
-          <!-- PayPal Smart Payment Button -->
-          <div id="paypal-button-current-plan" class="w-full"></div>
+          <!-- Purchase Button - TEMPORARY: Working PayPal Button -->
+          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Current Plan&amount=9.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Buy Current Plan Now
+          </button>
+          
+          <!-- PayPal Smart Payment Button - READY FOR WHEN CLIENT ID IS OBTAINED -->
+          <!-- <div id="paypal-button-current-plan" class="w-full"></div> -->
         </div>
 
         <!-- Complete Plan Card -->
@@ -318,8 +324,14 @@ function updateMyHealthStorySection() {
             <div class="text-sm text-gray-500 mt-2">One-time purchase • Instant download</div>
           </div>
           
-          <!-- PayPal Smart Payment Button -->
-          <div id="paypal-button-complete-plan" class="w-full"></div>
+          <!-- Purchase Button - TEMPORARY: Working PayPal Button -->
+          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Complete Plan&amount=12.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
+                  class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Buy Complete Plan Now
+          </button>
+          
+          <!-- PayPal Smart Payment Button - READY FOR WHEN CLIENT ID IS OBTAINED -->
+          <!-- <div id="paypal-button-complete-plan" class="w-full"></div> -->
         </div>
       </div>
 
@@ -2891,9 +2903,16 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 
 		</script>
 		
-		<!-- PayPal Smart Payment Buttons JavaScript -->
+		<!-- PayPal Smart Payment Buttons JavaScript - COMMENTED OUT UNTIL CLIENT ID IS OBTAINED -->
+		<!--
 		<script>
 		// PayPal Smart Payment Buttons Configuration
+		
+		// INSTRUCTIONS: 
+		// 1. Get your PayPal Client ID from https://developer.paypal.com/
+		// 2. Replace YOUR_CLIENT_ID in the SDK script above
+		// 3. Uncomment this entire script block
+		// 4. Comment out the temporary buttons above
 		
 		// Current Plan Button (£9)
 		paypal.Buttons({
@@ -2957,6 +2976,7 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 			}
 		}).render('#paypal-button-complete-plan');
 		</script>
+		-->
 		
 		<script type="module" src="assets/index-dpa4rxpb.js"></script><link rel="stylesheet" href="audience-ctas.css"><script src="audience-ctas.js"></script><link rel="stylesheet" href="visual-hierarchy.css"><script src="visual-hierarchy.js"></script><script
 		defer
