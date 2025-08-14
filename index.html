@@ -161,7 +161,7 @@
 <script src="insight-deck.js"></script>
 
 <!-- PayPal Smart Payment Buttons SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP&intent=capture&enable-funding=venmo,paylater"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
   </head>
 	
   <body>
@@ -428,7 +428,11 @@ function renderPayPalButtons() {
               currency_code: 'GBP'
             },
             description: 'MyHealthStory Current Plan'
-          }]
+          }],
+          application_context: {
+            shipping_preference: 'NO_SHIPPING',
+            user_action: 'PAY_NOW'
+          }
         });
       },
       onApprove: function(data, actions) {
@@ -465,7 +469,11 @@ function renderPayPalButtons() {
               currency_code: 'GBP'
             },
             description: 'MyHealthStory Complete Plan'
-          }]
+          }],
+          application_context: {
+            shipping_preference: 'NO_SHIPPING',
+            user_action: 'PAY_NOW'
+          }
         });
       },
       onApprove: function(data, actions) {
