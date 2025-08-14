@@ -159,6 +159,9 @@
 <!-- Interactive Insight Deck Styles and Scripts -->
 <link rel="stylesheet" href="insight-deck.css">
 <script src="insight-deck.js"></script>
+
+<!-- PayPal Smart Payment Buttons SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP&intent=capture&enable-funding=venmo,paylater"></script>
   </head>
 	
   <body>
@@ -261,10 +264,7 @@ function updateMyHealthStorySection() {
           </div>
           
           <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Current Plan&amount=9.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Buy Current Plan Now
-          </button>
+          <div id="paypal-button-current-plan"></div>
         </div>
 
         <!-- Complete Plan Card -->
@@ -329,10 +329,7 @@ function updateMyHealthStorySection() {
           </div>
           
           <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Complete Plan&amount=12.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
-                  class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Buy Complete Plan Now
-          </button>
+          <div id="paypal-button-complete-plan"></div>
         </div>
       </div>
 
@@ -411,6 +408,90 @@ function updateMyHealthStorySection() {
   myHealthStorySection.className = "section-padding bg-gray-50";
   
   console.log('MyHealthStory section updated successfully!');
+  
+  // Render PayPal buttons after content is updated
+  setTimeout(renderPayPalButtons, 100);
+}
+
+// Function to render PayPal Smart Payment Buttons
+function renderPayPalButtons() {
+  console.log('Rendering PayPal Smart Payment Buttons...');
+  
+  // Current Plan Button
+  if (document.getElementById('paypal-button-current-plan')) {
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '9.00',
+              currency_code: 'GBP'
+            },
+            description: 'MyHealthStory Current Plan'
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          // Track conversion
+          trackMyHealthStoryPurchase();
+          trackEnhancedMyHealthStoryPurchase();
+          
+          // Redirect to success page
+          window.location.href = 'https://andysquire.ai/success.html';
+        });
+      },
+      onError: function(err) {
+        console.error('PayPal Current Plan Error:', err);
+        alert('Payment failed. Please try again.');
+      },
+      style: {
+        layout: 'vertical',
+        color: 'blue',
+        shape: 'rect',
+        label: 'paypal'
+      }
+    }).render('#paypal-button-current-plan');
+  }
+  
+  // Complete Plan Button
+  if (document.getElementById('paypal-button-complete-plan')) {
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '12.00',
+              currency_code: 'GBP'
+            },
+            description: 'MyHealthStory Complete Plan'
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          // Track conversion
+          trackMyHealthStoryPurchase();
+          trackEnhancedMyHealthStoryPurchase();
+          
+          // Redirect to success page
+          window.location.href = 'https://andysquire.ai/success.html';
+        });
+      },
+      onError: function(err) {
+        console.error('PayPal Complete Plan Error:', err);
+        alert('Payment failed. Please try again.');
+      },
+      style: {
+        layout: 'vertical',
+        color: 'blue',
+        shape: 'rect',
+        label: 'paypal'
+      }
+    }).render('#paypal-button-complete-plan');
+  }
+  
+  console.log('PayPal Smart Payment Buttons rendered successfully!');
 }
 
 // Start the update process when DOM is ready
