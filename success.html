@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thank You for Your Purchase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase - Andy Squire</title>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
@@ -14,10 +15,46 @@
       gtag('config', 'AW-17214175569');
     </script>
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+    </style>
 </head>
-<body>
-    <h1>Thank You!</h1>
-    <p>Your purchase is complete. Your download will be sent to your email shortly.</p>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full text-center">
+        <!-- Success Icon -->
+        <div class="mb-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Thank You Message -->
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Thank You!</h1>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            Your purchase is complete. Your MyHealthStory download will be sent to your email shortly.
+        </p>
+        
+        <!-- Additional Info -->
+        <div class="bg-blue-50 rounded-lg p-4 mb-6">
+            <p class="text-blue-800 text-sm">
+                <strong>What's next?</strong><br>
+                Check your email for the download link and instructions. If you don't see it within a few minutes, please check your spam folder.
+            </p>
+        </div>
+        
+        <!-- Return Button -->
+        <a href="https://andysquire.ai" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Return to Homepage
+        </a>
+    </div>
     
     <!-- Event snippet for MyHealthStory purchase conversion page -->
     <script>
