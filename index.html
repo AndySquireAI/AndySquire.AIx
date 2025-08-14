@@ -102,6 +102,9 @@
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
 
+<!-- PayPal Smart Payment Buttons SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP"></script>
+
 <!-- Enhanced Google Ads Conversion Tracking -->
 <script async>
   // Enhanced Google Ads conversion tracking for AW-290924137
@@ -250,11 +253,8 @@ function updateMyHealthStorySection() {
             <div class="text-sm text-gray-500 mt-2">One-time purchase • Instant download</div>
           </div>
           
-          <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Current Plan&amount=9.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Buy Current Plan Now
-          </button>
+          <!-- PayPal Smart Payment Button -->
+          <div id="paypal-button-current-plan" class="w-full"></div>
         </div>
 
         <!-- Complete Plan Card -->
@@ -318,11 +318,8 @@ function updateMyHealthStorySection() {
             <div class="text-sm text-gray-500 mt-2">One-time purchase • Instant download</div>
           </div>
           
-          <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Complete Plan&amount=12.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
-                  class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Buy Complete Plan Now
-          </button>
+          <!-- PayPal Smart Payment Button -->
+          <div id="paypal-button-complete-plan" class="w-full"></div>
         </div>
       </div>
 
@@ -2892,7 +2889,62 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 			</style>
 			${e()}`}handleSetDialogRef(e){e instanceof gi&&(this.dialogRef=e)}}customElements.define("lit-textarea",us);customElements.define("lit-popup",hi);customElements.define("lit-dialog",gi);customElements.define("manus-content-root",Hm);customElements.define("make-with-manus",jm);customElements.define("footer-btn",Dm);E1();Dd(()=>{new MutationObserver(()=>{document.querySelector("manus-content-root")||document.body.appendChild(document.createElement("manus-content-root"))}).observe(document.body,{childList:!0,subtree:!0})});
 
-		</script><script type="module" src="assets/index-dpa4rxpb.js"></script><link rel="stylesheet" href="audience-ctas.css"><script src="audience-ctas.js"></script><link rel="stylesheet" href="visual-hierarchy.css"><script src="visual-hierarchy.js"></script><script
+		</script>
+
+<!-- PayPal Smart Payment Buttons JavaScript -->
+<script>
+  // Current Plan Button (£9)
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '9.00',
+            currency_code: 'GBP'
+          },
+          description: 'MyHealthStory Current Plan'
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        // This is the key line - redirect to success page for conversion tracking
+        window.location.href = 'https://andysquire.ai/success';
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal error:', err);
+      alert('An error occurred during the transaction. Please try again.');
+    }
+  }).render('#paypal-button-current-plan');
+
+  // Complete Plan Button (£12)
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '12.00',
+            currency_code: 'GBP'
+          },
+          description: 'MyHealthStory Complete Plan'
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        // This is the key line - redirect to success page for conversion tracking
+        window.location.href = 'https://andysquire.ai/success';
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal error:', err);
+      alert('An error occurred during the transaction. Please try again.');
+    }
+  }).render('#paypal-button-complete-plan');
+</script>
+
+<script type="module" src="assets/index-dpa4rxpb.js"></script><link rel="stylesheet" href="audience-ctas.css"><script src="audience-ctas.js"></script><link rel="stylesheet" href="visual-hierarchy.css"><script src="visual-hierarchy.js"></script><script
 		defer
 		data-domain="manus.space"
 		src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
