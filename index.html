@@ -103,7 +103,7 @@
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
 
 <!-- PayPal Smart Payment Buttons SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AeTkqdASYx4LjswfUGKgT1kPcH3NYnqDtndEjhv_9Jl0tx7fnLizKnklZ8YwA2uxx2nYE3KY4izgazcS&currency=GBP&intent=capture&enable-funding=venmo,paylater"></script>
 
 <!-- Enhanced Google Ads Conversion Tracking -->
 <script async>
@@ -2915,6 +2915,15 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
     onError: function(err) {
       console.error('PayPal error:', err);
       alert('An error occurred during the transaction. Please try again.');
+    },
+    onCancel: function(data) {
+      console.log('PayPal payment cancelled:', data);
+    },
+    style: {
+      layout: 'vertical',
+      color: 'blue',
+      shape: 'rect',
+      label: 'paypal'
     }
   }).render('#paypal-button-current-plan');
 
@@ -2940,6 +2949,15 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
     onError: function(err) {
       console.error('PayPal error:', err);
       alert('An error occurred during the transaction. Please try again.');
+    },
+    onCancel: function(data) {
+      console.log('PayPal payment cancelled:', data);
+    },
+    style: {
+      layout: 'vertical',
+      color: 'blue',
+      shape: 'rect',
+      label: 'paypal'
     }
   }).render('#paypal-button-complete-plan');
 </script>
