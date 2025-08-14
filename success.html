@@ -83,12 +83,16 @@
         <h1>Payment Successful!</h1>
         <p>Thank you for purchasing MyHealthStory. Your payment has been processed successfully.</p>
         
-        <div class="download-info">
+        <div class="download-info" id="download-section">
             <h3>📄 Download Your PDF Form</h3>
-            <p>Click the button below to download your MyHealthStory PDF form immediately:</p>
-            <a href="/myhealthstory-fillable-form.pdf" download="MyHealthStory-Form.pdf" class="btn" style="margin: 1rem 0; display: inline-block;">
-                📥 Download MyHealthStory PDF
-            </a>
+            <p id="download-description">Click the button below to download your MyHealthStory PDF form immediately:</p>
+            <div id="download-buttons">
+                <!-- Download buttons will be populated by JavaScript -->
+            </div>
+            <div id="download-confirmation" style="display: none; margin-top: 1rem; padding: 1rem; background: #10B981; color: white; border-radius: 8px;">
+                <strong>✅ Download Started!</strong><br>
+                Your PDF should be downloading now. If it doesn't start automatically, try the download button again.
+            </div>
         </div>
         
         <div class="download-info">
@@ -141,6 +145,54 @@
                 'price': 1.0
             }]
         });
+        
+        // Plan-specific download logic
+        function setupDownloads() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const plan = urlParams.get('plan') || 'current'; // Default to current plan
+            const downloadButtons = document.getElementById('download-buttons');
+            const downloadDescription = document.getElementById('download-description');
+            
+            let pdfUrl, fileName, planName, planDescription;
+            
+            if (plan === 'complete' || plan === '12') {
+                // Complete Plan (£12)
+                pdfUrl = '/myhealthstory-complete-plan.pdf';
+                fileName = 'MyHealthStory-Complete-Plan.pdf';
+                planName = 'Complete Plan (2-page)';
+                planDescription = 'Your comprehensive 2-page MyHealthStory form with advanced care planning:';
+            } else {
+                // Current Plan (£9)
+                pdfUrl = '/myhealthstory-current-plan.pdf';
+                fileName = 'MyHealthStory-Current-Plan.pdf';
+                planName = 'Current Plan (1-page)';
+                planDescription = 'Your focused 1-page MyHealthStory form for immediate health needs:';
+            }
+            
+            downloadDescription.textContent = planDescription;
+            
+            downloadButtons.innerHTML = `
+                <a href="${pdfUrl}" download="${fileName}" class="btn" style="margin: 1rem 0; display: inline-block;" onclick="showDownloadConfirmation()">
+                    📥 Download ${planName}
+                </a>
+            `;
+        }
+        
+        function showDownloadConfirmation() {
+            const confirmation = document.getElementById('download-confirmation');
+            confirmation.style.display = 'block';
+            
+            // Keep the confirmation visible and don't hide the page
+            setTimeout(() => {
+                confirmation.innerHTML = `
+                    <strong>✅ Download Complete!</strong><br>
+                    Your MyHealthStory PDF has been downloaded. You can download it again anytime by clicking the button above.
+                `;
+            }, 3000);
+        }
+        
+        // Initialize downloads when page loads
+        document.addEventListener('DOMContentLoaded', setupDownloads);
     </script>
 </body>
 </html>
