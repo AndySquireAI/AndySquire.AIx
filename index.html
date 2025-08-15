@@ -3007,5 +3007,61 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
     			domain: window.location.host
   			}
 			})
+		</script>
+
+		<!-- Google Ads Conversion Tracking for Ecosystem PDF Download -->
+		<script>
+			// Function to track the Ecosystem PDF download
+			function trackPdfDownload() {
+				gtag('event', 'conversion', {
+					'send_to': 'YOUR_UNIQUE_EVENT_SNIPPET_ID_HERE'
+				});
+			}
+
+			// Add a listener to the PDF download button
+			document.addEventListener('DOMContentLoaded', function() {
+				// Function to find and add listener to the download button
+				function addDownloadListener() {
+					// Look for the download button by text content
+					const downloadButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && (
+							btn.textContent.includes('Download the Architectural Blueprint') ||
+							btn.textContent.includes('Download Full PDF') ||
+							btn.textContent.includes('Download') && btn.textContent.includes('PDF')
+						)
+					);
+
+					downloadButtons.forEach(button => {
+						// Give it a unique ID if it doesn't have one
+						if (!button.id) {
+							button.id = 'download-ecosystem-pdf-button';
+						}
+						
+						// Add click event listener
+						button.addEventListener('click', trackPdfDownload);
+					});
+				}
+
+				// Try to add listener immediately
+				addDownloadListener();
+
+				// Also try after a delay in case content is loaded dynamically
+				setTimeout(addDownloadListener, 1000);
+				setTimeout(addDownloadListener, 3000);
+
+				// Use MutationObserver to catch dynamically added content
+				const observer = new MutationObserver(function(mutations) {
+					mutations.forEach(function(mutation) {
+						if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+							addDownloadListener();
+						}
+					});
+				});
+
+				observer.observe(document.body, {
+					childList: true,
+					subtree: true
+				});
+			});
 		</script></body>
 </html>
