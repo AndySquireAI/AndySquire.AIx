@@ -3007,5 +3007,86 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
     			domain: window.location.host
   			}
 			})
+		</script>
+
+		<!-- Google Ads Conversion Tracking for Email and LinkedIn Buttons -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Listener for the Email Link
+				const emailLink = document.getElementById('contact-email-link');
+				if (emailLink) {
+					emailLink.addEventListener('click', function() {
+						gtag('event', 'conversion', {
+							'send_to': 'AW-17214175569/UNIQUE_ID_FOR_EMAIL_CLICK'
+						});
+					});
+				}
+
+				// Listener for the LinkedIn Button
+				const linkedinButton = document.getElementById('explore-collaboration-button');
+				if (linkedinButton) {
+					linkedinButton.addEventListener('click', function() {
+						gtag('event', 'conversion', {
+							'send_to': 'AW-17214175569/UNIQUE_ID_FOR_LINKEDIN_CLICK'
+						});
+					});
+				}
+
+				// Alternative approach: Find buttons by text content and add IDs
+				function addTrackingToButtons() {
+					// Find email link
+					const emailLinks = Array.from(document.querySelectorAll('a')).filter(link => 
+						link.href && link.href.includes('andy@andysquire.ai')
+					);
+					
+					emailLinks.forEach(link => {
+						if (!link.id) {
+							link.id = 'contact-email-link';
+						}
+						link.addEventListener('click', function() {
+							gtag('event', 'conversion', {
+								'send_to': 'AW-17214175569/UNIQUE_ID_FOR_EMAIL_CLICK'
+							});
+						});
+					});
+
+					// Find collaboration button
+					const collaborationButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('Explore a Collaboration')
+					);
+					
+					collaborationButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'explore-collaboration-button';
+						}
+						button.addEventListener('click', function() {
+							gtag('event', 'conversion', {
+								'send_to': 'AW-17214175569/UNIQUE_ID_FOR_LINKEDIN_CLICK'
+							});
+						});
+					});
+				}
+
+				// Try to add tracking immediately
+				addTrackingToButtons();
+
+				// Also try after a delay in case content is loaded dynamically
+				setTimeout(addTrackingToButtons, 1000);
+				setTimeout(addTrackingToButtons, 3000);
+
+				// Use MutationObserver to catch dynamically added content
+				const observer = new MutationObserver(function(mutations) {
+					mutations.forEach(function(mutation) {
+						if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+							addTrackingToButtons();
+						}
+					});
+				});
+
+				observer.observe(document.body, {
+					childList: true,
+					subtree: true
+				});
+			});
 		</script></body>
 </html>
