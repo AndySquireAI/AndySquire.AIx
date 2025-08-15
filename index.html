@@ -3063,5 +3063,74 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 					subtree: true
 				});
 			});
+
+			// Google Ads Conversion Tracking for Email and LinkedIn Buttons
+			document.addEventListener('DOMContentLoaded', function() {
+				// Function to add tracking to email and collaboration buttons
+				function addEmailLinkedInTracking() {
+					// Find email link
+					const emailLinks = Array.from(document.querySelectorAll('a')).filter(link => 
+						link.href && link.href.includes('andy@andysquire.ai')
+					);
+					
+					emailLinks.forEach(link => {
+						if (!link.id) {
+							link.id = 'contact-email-link';
+						}
+						// Remove existing listeners to avoid duplicates
+						link.removeEventListener('click', emailClickHandler);
+						link.addEventListener('click', emailClickHandler);
+					});
+
+					// Find collaboration button
+					const collaborationButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('Explore a Collaboration')
+					);
+					
+					collaborationButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'explore-collaboration-button';
+						}
+						// Remove existing listeners to avoid duplicates
+						button.removeEventListener('click', linkedinClickHandler);
+						button.addEventListener('click', linkedinClickHandler);
+					});
+				}
+
+				// Email click handler
+				function emailClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/UNIQUE_ID_FOR_EMAIL_CLICK'
+					});
+				}
+
+				// LinkedIn click handler
+				function linkedinClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/UNIQUE_ID_FOR_LINKEDIN_CLICK'
+					});
+				}
+
+				// Try to add tracking immediately
+				addEmailLinkedInTracking();
+
+				// Also try after a delay in case content is loaded dynamically
+				setTimeout(addEmailLinkedInTracking, 1000);
+				setTimeout(addEmailLinkedInTracking, 3000);
+
+				// Use MutationObserver to catch dynamically added content
+				const emailLinkedInObserver = new MutationObserver(function(mutations) {
+					mutations.forEach(function(mutation) {
+						if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+							addEmailLinkedInTracking();
+						}
+					});
+				});
+
+				emailLinkedInObserver.observe(document.body, {
+					childList: true,
+					subtree: true
+				});
+			});
 		</script></body>
 </html>
