@@ -3132,5 +3132,113 @@ Not an official Manus doc nor endorsed by Manus. Content may contain inaccuracie
 					subtree: true
 				});
 			});
+
+			// Google Ads Conversion Tracking for Contact Section Buttons
+			document.addEventListener('DOMContentLoaded', function() {
+				// Function to add tracking to contact section buttons
+				function addContactSectionTracking() {
+					// Find and track Robotics contact button (Explore Partnership)
+					const roboticsButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('Explore Partnership')
+					);
+					
+					roboticsButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'contact-robotics';
+						}
+						// Remove existing listeners to avoid duplicates
+						button.removeEventListener('click', roboticsClickHandler);
+						button.addEventListener('click', roboticsClickHandler);
+					});
+
+					// Find and track Healthcare contact button (Schedule Consultation)
+					const healthcareButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('Schedule Consultation')
+					);
+					
+					healthcareButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'contact-healthcare';
+						}
+						// Remove existing listeners to avoid duplicates
+						button.removeEventListener('click', healthcareClickHandler);
+						button.addEventListener('click', healthcareClickHandler);
+					});
+
+					// Find and track Investors contact button (View Investment Deck)
+					const investorsButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('View Investment Deck')
+					);
+					
+					investorsButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'contact-investors';
+						}
+						// Remove existing listeners to avoid duplicates
+						button.removeEventListener('click', investorsClickHandler);
+						button.addEventListener('click', investorsClickHandler);
+					});
+
+					// Find and track Patients contact button (Connect with Andy)
+					const patientsButtons = Array.from(document.querySelectorAll('a, button')).filter(btn => 
+						btn.textContent && btn.textContent.includes('Connect with Andy')
+					);
+					
+					patientsButtons.forEach(button => {
+						if (!button.id) {
+							button.id = 'contact-patients';
+						}
+						// Remove existing listeners to avoid duplicates
+						button.removeEventListener('click', patientsClickHandler);
+						button.addEventListener('click', patientsClickHandler);
+					});
+				}
+
+				// Contact button click handlers
+				function roboticsClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/ID_FOR_ROBOTICS'
+					});
+				}
+
+				function healthcareClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/ID_FOR_HEALTHCARE'
+					});
+				}
+
+				function investorsClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/ID_FOR_INVESTORS'
+					});
+				}
+
+				function patientsClickHandler() {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-17214175569/ID_FOR_PATIENTS'
+					});
+				}
+
+				// Try to add tracking immediately
+				addContactSectionTracking();
+
+				// Also try after a delay in case content is loaded dynamically
+				setTimeout(addContactSectionTracking, 1000);
+				setTimeout(addContactSectionTracking, 3000);
+
+				// Use MutationObserver to catch dynamically added content
+				const contactSectionObserver = new MutationObserver(function(mutations) {
+					mutations.forEach(function(mutation) {
+						if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+							addContactSectionTracking();
+						}
+					});
+				});
+
+				contactSectionObserver.observe(document.body, {
+					childList: true,
+					subtree: true
+				});
+			});
 		</script></body>
 </html>
