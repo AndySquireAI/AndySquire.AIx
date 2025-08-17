@@ -124,8 +124,8 @@ body {
 /* === MOBILE RESPONSIVE === */
 @media (max-width: 768px) {
   .patient-centric-header {
-    padding: 20px 0;
-    min-height: 80px;
+    padding: 25px 0;
+    min-height: 90px;
   }
   
   .patient-nav {
@@ -166,12 +166,12 @@ body {
   body::before {
     font-size: 10px;
     padding: 6px 12px;
-    top: 95px;
+    top: 105px;
     right: 5px;
   }
   
   body {
-    padding-top: 95px !important;
+    padding-top: 105px !important;
   }
 }
 
