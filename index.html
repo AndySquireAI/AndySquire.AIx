@@ -174,127 +174,96 @@
 
 <!-- Phase 2: Patient-Centric Header & Navigation JavaScript -->
 <script>
-// Phase 2: Embedded Navigation - Guaranteed to Execute on Netlify
-console.log('🚀 Phase 2: Embedded Navigation Starting...');
-
-// Wait for DOM to be ready
-function initNavigation() {
-    console.log('🧭 Initializing embedded navigation...');
+// Simple navigation functions - guaranteed to work on Netlify
+function scrollToSection(section) {
+    console.log('🎯 Navigation clicked:', section);
     
+    // Update active states
     const navItems = document.querySelectorAll('.nav-item');
-    console.log('Found navigation items:', navItems.length);
+    navItems.forEach(item => item.classList.remove('active'));
+    event.target.classList.add('active');
     
-    if (navItems.length === 0) {
-        console.log('❌ No navigation items found, retrying in 500ms...');
-        setTimeout(initNavigation, 500);
-        return;
+    // Close mobile menu
+    const mobileNav = document.getElementById('patientNav');
+    const mobileToggle = document.getElementById('mobileNavToggle');
+    if (mobileNav && mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        if (mobileToggle) mobileToggle.textContent = '☰';
     }
     
-    // Add click handlers to each navigation item
-    navItems.forEach((item, index) => {
-        console.log('Setting up navigation item:', index + 1, item.textContent);
-        
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const navText = this.textContent.toLowerCase().trim();
-            console.log('🎯 Navigation clicked:', navText);
-            
-            // Update active state
-            navItems.forEach(nav => nav.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Close mobile menu if open
-            const mobileNav = document.getElementById('patientNav');
-            const mobileToggle = document.getElementById('mobileNavToggle');
-            if (mobileNav && mobileNav.classList.contains('active')) {
-                mobileNav.classList.remove('active');
-                if (mobileToggle) mobileToggle.textContent = '☰';
-            }
-            
-            // Handle navigation
-            let scrollPosition = 0;
-            
-            if (navText.includes('about')) {
-                // Scroll to bottom for About
-                scrollPosition = Math.max(0, document.body.scrollHeight - window.innerHeight);
-                console.log('📍 About: Scrolling to bottom');
-            } else if (navText.includes('myhealthcanvas')) {
-                // Scroll to patient section or top
-                const patientElement = document.querySelector('[class*="patient"]') || 
-                                     Array.from(document.querySelectorAll('*')).find(el => 
-                                         el.textContent.toLowerCase().includes('patient'));
-                if (patientElement) {
-                    scrollPosition = Math.max(0, patientElement.offsetTop - 105);
-                    console.log('📍 MyHealthCanvas: Found patient element');
-                } else {
-                    scrollPosition = 0;
-                    console.log('📍 MyHealthCanvas: Scrolling to top');
-                }
-            } else if (navText.includes('consulting')) {
-                // Scroll to healthcare institutions
-                const consultingElement = Array.from(document.querySelectorAll('*')).find(el => 
-                    el.textContent.toLowerCase().includes('healthcare institutions'));
-                if (consultingElement) {
-                    scrollPosition = Math.max(0, consultingElement.offsetTop - 105);
-                    console.log('📍 Consulting: Found healthcare institutions');
-                } else {
-                    scrollPosition = 200;
-                    console.log('📍 Consulting: Scrolling to partnership area');
-                }
-            } else if (navText.includes('humanoid')) {
-                // Scroll to robotics manufacturers
-                const roboticsElement = Array.from(document.querySelectorAll('*')).find(el => 
-                    el.textContent.toLowerCase().includes('robotics manufacturers'));
-                if (roboticsElement) {
-                    scrollPosition = Math.max(0, roboticsElement.offsetTop - 105);
-                    console.log('📍 Humanoid Healthcare: Found robotics manufacturers');
-                } else {
-                    scrollPosition = 200;
-                    console.log('📍 Humanoid Healthcare: Scrolling to partnership area');
-                }
-            }
-            
-            // Perform the scroll
-            window.scrollTo({
-                top: scrollPosition,
-                behavior: 'smooth'
-            });
-            
-            console.log('✅ Scrolled to position:', scrollPosition);
-        });
+    let scrollPosition = 0;
+    
+    if (section === 'about') {
+        // Scroll to bottom
+        scrollPosition = Math.max(0, document.body.scrollHeight - window.innerHeight);
+        console.log('📍 About: Scrolling to bottom');
+    } else if (section === 'patient') {
+        // Scroll to patient section
+        const patientElement = document.querySelector('[class*="patient"]') || 
+                             Array.from(document.querySelectorAll('*')).find(el => 
+                                 el.textContent && el.textContent.toLowerCase().includes('patient'));
+        if (patientElement) {
+            scrollPosition = Math.max(0, patientElement.offsetTop - 105);
+            console.log('📍 MyHealthCanvas: Found patient element');
+        } else {
+            scrollPosition = Math.max(0, document.body.scrollHeight - window.innerHeight - 200);
+            console.log('📍 MyHealthCanvas: Scrolling near bottom');
+        }
+    } else if (section === 'consulting') {
+        // Scroll to healthcare institutions
+        const consultingElement = Array.from(document.querySelectorAll('*')).find(el => 
+            el.textContent && el.textContent.toLowerCase().includes('healthcare institutions'));
+        if (consultingElement) {
+            scrollPosition = Math.max(0, consultingElement.offsetTop - 105);
+            console.log('📍 Consulting: Found healthcare institutions');
+        } else {
+            scrollPosition = 300;
+            console.log('📍 Consulting: Scrolling to partnership area');
+        }
+    } else if (section === 'humanoid') {
+        // Scroll to robotics manufacturers
+        const roboticsElement = Array.from(document.querySelectorAll('*')).find(el => 
+            el.textContent && el.textContent.toLowerCase().includes('robotics manufacturers'));
+        if (roboticsElement) {
+            scrollPosition = Math.max(0, roboticsElement.offsetTop - 105);
+            console.log('📍 Humanoid Healthcare: Found robotics manufacturers');
+        } else {
+            scrollPosition = 200;
+            console.log('📍 Humanoid Healthcare: Scrolling to top partnership');
+        }
+    }
+    
+    // Perform scroll
+    window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
     });
     
-    // Setup mobile menu toggle
+    console.log('✅ Scrolled to position:', scrollPosition);
+}
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('patientNav');
     const mobileToggle = document.getElementById('mobileNavToggle');
-    const patientNav = document.getElementById('patientNav');
     
-    if (mobileToggle && patientNav) {
-        mobileToggle.addEventListener('click', function() {
-            patientNav.classList.toggle('active');
-            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
-            console.log('📱 Mobile menu toggled');
-        });
+    if (mobileNav && mobileToggle) {
+        mobileNav.classList.toggle('active');
+        mobileToggle.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
+        console.log('📱 Mobile menu toggled');
+    }
+}
+
+// Setup mobile toggle when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.getElementById('mobileNavToggle');
+    if (mobileToggle) {
+        mobileToggle.onclick = toggleMobileMenu;
         console.log('✅ Mobile menu setup complete');
     }
-    
-    console.log('✅ Embedded navigation setup complete!');
-}
+});
 
-// Initialize immediately and with delays
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavigation);
-} else {
-    initNavigation();
-}
-
-// Also try after delays to ensure React content is loaded
-setTimeout(initNavigation, 100);
-setTimeout(initNavigation, 500);
-setTimeout(initNavigation, 1000);
-setTimeout(initNavigation, 2000);
-
-console.log('🎯 Phase 2: Embedded Navigation Script Loaded');
+console.log('🎯 Phase 2: Simple Navigation Functions Loaded');
 </script>
 
 <!-- PayPal Smart Payment Buttons SDK -->
@@ -311,10 +280,10 @@ console.log('🎯 Phase 2: Embedded Navigation Script Loaded');
         </a>
         
         <nav class="patient-nav" id="patientNav">
-          <a href="#patient-tools" class="nav-item priority">🎯 MyHealthCanvas</a>
-          <a href="#consulting" class="nav-item">Consulting</a>
-          <a href="#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
-          <a href="#about" class="nav-item">About</a>
+          <a href="#patient-tools" class="nav-item priority" onclick="scrollToSection('patient'); return false;">🎯 MyHealthCanvas</a>
+          <a href="#consulting" class="nav-item" onclick="scrollToSection('consulting'); return false;">Consulting</a>
+          <a href="#humanoid-healthcare" class="nav-item" onclick="scrollToSection('humanoid'); return false;">Humanoid Healthcare</a>
+          <a href="#about" class="nav-item" onclick="scrollToSection('about'); return false;">About</a>
         </nav>
         
         <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
