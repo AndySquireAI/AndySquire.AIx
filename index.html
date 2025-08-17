@@ -93,204 +93,462 @@
     }
     </script>
 	  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6CNLJJJ8WQ');
-  gtag('config', 'AW-17214175569');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+    </script>
 
-	  <!-- Event snippet for Submit lead form (2) conversion page -->
-<script>
-  // Function to track MyHealthStory purchase conversion
-  function trackMyHealthStoryPurchase() {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
-      'value': 1.0,
-      'currency': 'CHF'
-    });
-  }
-</script>
+    <!-- Event snippet for Submit lead form (2) conversion page -->
+    <script>
+      // Function to track MyHealthStory purchase conversion
+      function trackMyHealthStoryPurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': 1.0,
+          'currency': 'CHF'
+        });
+      }
+    </script>
 
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8b5c8e8b5c8e8b5c8e8b5c8e8b5c8e8"}'></script>
 
-<!-- Enhanced Google Ads Conversion Tracking -->
-<script async>
-  // Enhanced Google Ads conversion tracking for AW-290924137
-  gtag('config', 'AW-290924137');
-  
-  // Enhanced ecommerce tracking for MyHealthStory purchases
-  function trackEnhancedMyHealthStoryPurchase() {
-    gtag('event', 'purchase', {
-      'send_to': 'AW-290924137',
-      'transaction_id': 'MHS_' + Date.now(),
-      'value': 1.0,
-      'currency': 'CHF',
-      'items': [{
-        'item_id': 'myhealthstory_form',
-        'item_name': 'MyHealthStory PDF Form',
-        'category': 'Healthcare Tools',
-        'quantity': 1,
-        'price': 1.0
-      }]
-    });
-  }
-  
-  // Custom event tracking for user interactions
-  function trackCustomEvent(eventName, eventCategory, eventLabel) {
-    gtag('event', eventName, {
-      'event_category': eventCategory,
-      'event_label': eventLabel,
-      'send_to': ['G-6CNLJJJ8WQ', 'AW-290924137']
-    });
-  }
-  
-  // Track insight deck interactions
-  function trackInsightDeckInteraction(action) {
-    trackCustomEvent('insight_deck_interaction', 'engagement', action);
-  }
-  
-  // Track CTA button clicks
-  function trackCTAClick(buttonName) {
-    trackCustomEvent('cta_click', 'conversion', buttonName);
-  }
-</script>
+    <!-- Enhanced Google Ads Conversion Tracking -->
+    <script async>
+      // Enhanced Google Ads conversion tracking for AW-290924137
+      gtag('config', 'AW-290924137');
+      
+      // Enhanced ecommerce tracking for MyHealthStory purchases
+      function trackEnhancedMyHealthStoryPurchase() {
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHS_' + Date.now(),
+          'value': 1.0,
+          'currency': 'CHF',
+          'items': [{
+            'item_id': 'myhealthstory_form',
+            'item_name': 'MyHealthStory PDF Form',
+            'category': 'Healthcare Tools',
+            'quantity': 1,
+            'price': 1.0
+          }]
+        });
+      }
+      
+      // Custom event tracking for user interactions
+      function trackCustomEvent(eventName, eventCategory, eventLabel) {
+        gtag('event', eventName, {
+          'event_category': eventCategory,
+          'event_label': eventLabel,
+          'send_to': ['G-6CNLJJJ8WQ', 'AW-290924137']
+        });
+      }
+      
+      // Track insight deck interactions
+      function trackInsightDeckInteraction(action) {
+        trackCustomEvent('insight_deck_interaction', 'engagement', action);
+      }
+      
+      // Track CTA button clicks
+      function trackCTAClick(buttonName) {
+        trackCustomEvent('cta_click', 'conversion', buttonName);
+      }
+    </script>
 
-<link rel="stylesheet" href="assets/index-c2-vxgj6.css">
+    <!-- Phase 2: Patient-Centric Header & Navigation -->
+    <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
 
-<!-- Phase 1: Safe Content Cleanup - CSS Only -->
-<link rel="stylesheet" href="safe-content-cleanup.css">
+    <!-- PayPal Smart Payment Buttons SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AYp6m7r81oS6Tj-j6uxb3oCOp2nkd4SVgzc4Uoau9nrHTywPMy1uZ9sOmi6UHS1P12YY4wwPt3_YPmIj&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
 
-<!-- Phase 2: Patient-Centric Header & Navigation -->
-<link rel="stylesheet" href="phase2-header-navigation-fixed.css">
+    <style>
+      /* Homepage Design Styles - Based on User's Mockup */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<!-- Interactive Insight Deck Styles and Scripts -->
-<link rel="stylesheet" href="insight-deck.css">
-<script src="insight-deck.js"></script>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: white;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #155e75 100%);
+        min-height: 100vh;
+        padding-top: 100px; /* Account for fixed header */
+      }
 
-<!-- Phase 2: Patient-Centric Header & Navigation JavaScript -->
-<script>
-// Simple navigation functions - guaranteed to work on Netlify
-function scrollToSection(section) {
-    console.log('🎯 Navigation clicked:', section);
-    
-    // Update active states
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => item.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    // Close mobile menu
-    const mobileNav = document.getElementById('patientNav');
-    const mobileToggle = document.getElementById('mobileNavToggle');
-    if (mobileNav && mobileNav.classList.contains('active')) {
-        mobileNav.classList.remove('active');
-        if (mobileToggle) mobileToggle.textContent = '☰';
-    }
-    
-    let scrollPosition = 0;
-    
-    if (section === 'about') {
-        // Scroll to bottom
-        scrollPosition = Math.max(0, document.body.scrollHeight - window.innerHeight);
-        console.log('📍 About: Scrolling to bottom');
-    } else if (section === 'patient') {
-        // Scroll to patient section
-        const patientElement = document.querySelector('[class*="patient"]') || 
-                             Array.from(document.querySelectorAll('*')).find(el => 
-                                 el.textContent && el.textContent.toLowerCase().includes('patient'));
-        if (patientElement) {
-            scrollPosition = Math.max(0, patientElement.offsetTop - 105);
-            console.log('📍 MyHealthCanvas: Found patient element');
-        } else {
-            scrollPosition = Math.max(0, document.body.scrollHeight - window.innerHeight - 200);
-            console.log('📍 MyHealthCanvas: Scrolling near bottom');
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 60px 0;
+        margin-bottom: 40px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      /* Section Styles */
+      .section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        gap: 40px;
+        padding: 40px 0;
+      }
+
+      .section:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .section-image {
+        flex: 0 0 300px;
+        height: 200px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      }
+
+      .section-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .section-content {
+        flex: 1;
+      }
+
+      .section h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      }
+
+      .section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      /* CTA Button Styles */
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        color: #1f2937;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      }
+
+      .cta-button.secondary {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      .cta-button.secondary:hover {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+      }
+
+      /* Humanoid Healthcare Special Layout */
+      .humanoid-downloads {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .download-item {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+      }
+
+      .download-preview {
+        width: 100%;
+        height: 120px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        border: 2px dashed rgba(255,255,255,0.3);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding-top: 120px;
         }
-    } else if (section === 'consulting') {
-        // Scroll to healthcare institutions
-        const consultingElement = Array.from(document.querySelectorAll('*')).find(el => 
-            el.textContent && el.textContent.toLowerCase().includes('healthcare institutions'));
-        if (consultingElement) {
-            scrollPosition = Math.max(0, consultingElement.offsetTop - 105);
-            console.log('📍 Consulting: Found healthcare institutions');
-        } else {
-            scrollPosition = 300;
-            console.log('📍 Consulting: Scrolling to partnership area');
+
+        .hero h1 {
+          font-size: 2rem;
         }
-    } else if (section === 'humanoid') {
-        // Scroll to robotics manufacturers
-        const roboticsElement = Array.from(document.querySelectorAll('*')).find(el => 
-            el.textContent && el.textContent.toLowerCase().includes('robotics manufacturers'));
-        if (roboticsElement) {
-            scrollPosition = Math.max(0, roboticsElement.offsetTop - 105);
-            console.log('📍 Humanoid Healthcare: Found robotics manufacturers');
-        } else {
-            scrollPosition = 200;
-            console.log('📍 Humanoid Healthcare: Scrolling to top partnership');
+
+        .hero p {
+          font-size: 1rem;
         }
-    }
-    
-    // Perform scroll
-    window.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth'
-    });
-    
-    console.log('✅ Scrolled to position:', scrollPosition);
-}
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const mobileNav = document.getElementById('patientNav');
-    const mobileToggle = document.getElementById('mobileNavToggle');
-    
-    if (mobileNav && mobileToggle) {
-        mobileNav.classList.toggle('active');
-        mobileToggle.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
-        console.log('📱 Mobile menu toggled');
-    }
-}
+        .section {
+          flex-direction: column !important;
+          text-align: center;
+          gap: 20px;
+        }
 
-// Setup mobile toggle when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.getElementById('mobileNavToggle');
-    if (mobileToggle) {
-        mobileToggle.onclick = toggleMobileMenu;
-        console.log('✅ Mobile menu setup complete');
-    }
-});
+        .section-image {
+          flex: none;
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+        }
 
-console.log('🎯 Phase 2: Simple Navigation Functions Loaded');
-</script>
+        .section h2 {
+          font-size: 2rem;
+        }
 
-<!-- PayPal Smart Payment Buttons SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=AYp6m7r81oS6Tj-j6uxb3oCOp2nkd4SVgzc4Uoau9nrHTywPMy1uZ9sOmi6UHS1P12YY4wwPt3_YPmIj&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
+        .cta-buttons {
+          justify-content: center;
+        }
+
+        .humanoid-downloads {
+          flex-direction: column;
+        }
+      }
+
+      /* Phase Indicator */
+      .phase-indicator {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: rgba(16, 185, 129, 0.9);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        scroll-margin-top: 100px;
+      }
+    </style>
   </head>
 	
   <body>
     <!-- Phase 2: Patient-Centric Header & Navigation -->
     <header class="patient-centric-header">
       <div class="header-container">
-        <a href="#" class="patient-centric-logo">
+        <a href="#home" class="patient-centric-logo">
           ❤️ PATIENT-CENTRIC CARE
           <div class="patient-centric-tagline">AndySquire.AI</div>
         </a>
         
         <nav class="patient-nav" id="patientNav">
-          <a href="#patient-tools" class="nav-item priority" onclick="scrollToSection('patient'); return false;">🎯 MyHealthCanvas</a>
-          <a href="#consulting" class="nav-item" onclick="scrollToSection('consulting'); return false;">Consulting</a>
-          <a href="#humanoid-healthcare" class="nav-item" onclick="scrollToSection('humanoid'); return false;">Humanoid Healthcare</a>
-          <a href="#about" class="nav-item" onclick="scrollToSection('about'); return false;">About</a>
+          <a href="#home" class="nav-item">Home</a>
+          <a href="#myhealthcanvas" class="nav-item priority">🎯 Forms</a>
+          <a href="#consulting" class="nav-item">Consulting</a>
+          <a href="#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
+          <a href="#collaboration" class="nav-item">Collaboration</a>
+          <a href="#about" class="nav-item">About</a>
         </nav>
         
         <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
       </div>
     </header>
-    
-    <div id="root"></div>
+
+    <!-- Phase Indicator -->
+    <div class="phase-indicator">
+      Phase 3: Homepage Design Active
+    </div>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <h1>Empowering Patients & Transforming Healthcare</h1>
+        <p>Create, share and manage your personal health story with ease, and collaborate on the next generation of AI-driven care.</p>
+      </section>
+
+      <!-- Forms #MyHealthCanvas Section -->
+      <section id="myhealthcanvas" class="section">
+        <div class="section-image">
+          <img src="/upload/IMG_3245.png" alt="Patient and healthcare provider discussing health information" />
+        </div>
+        <div class="section-content">
+          <h2>Forms #MyHealthCanvas</h2>
+          <p>Download and complete our MyHealthCanvas forms to communicate your health story effectively. Choose between our Current Plan and Complete Plan options.</p>
+          <div class="cta-buttons">
+            <a href="#" class="cta-button" onclick="trackCTAClick('Download Current Plan')">Download Current Plan PDF Form</a>
+            <a href="#" class="cta-button secondary" onclick="trackCTAClick('Download Complete Plan')">Download Complete Plan PDF Form</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consulting Section -->
+      <section id="consulting" class="section">
+        <div class="section-image">
+          <img src="/upload/IMG_3246.png" alt="Andy Squire consulting with healthcare leaders" />
+        </div>
+        <div class="section-content">
+          <h2>Consulting</h2>
+          <p>Partner with Andy Squire to design patient-first AI solutions that improve outcomes and operational efficiency.</p>
+          <div class="cta-buttons">
+            <a href="#" class="cta-button" onclick="trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Humanoid Healthcare Section -->
+      <section id="humanoid-healthcare" class="section">
+        <div class="section-image">
+          <img src="/upload/IMG_3247.png" alt="Humanoid healthcare technology and innovation" />
+        </div>
+        <div class="section-content">
+          <h2>Humanoid Healthcare</h2>
+          <p>Claim your share of the $1 Trillion Home Humanoid Opportunity and Download the Triple Win Value Ecosystem Architecture Blueprint.</p>
+          
+          <div class="humanoid-downloads">
+            <div class="download-item">
+              <div class="download-preview">
+                Pitch to Manufacturers Preview
+              </div>
+              <a href="#" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+            </div>
+            <div class="download-item">
+              <div class="download-preview">
+                Ecosystem Architecture Blueprint Preview
+              </div>
+              <a href="#" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaboration Section -->
+      <section id="collaboration" class="section">
+        <div class="section-image">
+          <img src="/upload/IMG_3248.png" alt="Collaboration in healthcare technology development" />
+        </div>
+        <div class="section-content">
+          <h2>Collaboration</h2>
+          <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
+          <div class="cta-buttons">
+            <a href="#" class="cta-button" onclick="trackCTAClick('Contact Us')">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="section-image">
+          <img src="/upload/IMG_3249.png" alt="Andy Squire AI logo and branding" />
+        </div>
+        <div class="section-content">
+          <h2>About</h2>
+          <p>Based in Basel, Switzerland, Andy Squire is a healthcare innovator and two time cancer survivor / patient advocate with over 20 years of experience in service design and MedTech. Andy helps teams build ethical, patient-centred solutions that bridge empathy and AI.</p>
+          <div class="cta-buttons">
+            <a href="#" class="cta-button" onclick="trackCTAClick('Learn More About Andy')">Learn More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Hash Navigation Script -->
+    <script>
+      // Simple mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobileNavToggle');
+        const patientNav = document.getElementById('patientNav');
+        
+        if (mobileToggle && patientNav) {
+          mobileToggle.addEventListener('click', function() {
+            patientNav.classList.toggle('active');
+            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
+          });
+        }
+
+        // Update active navigation state
+        function updateActiveNavigation() {
+          const sections = document.querySelectorAll('section[id]');
+          const navLinks = document.querySelectorAll('.nav-item');
+          
+          let current = '';
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (window.pageYOffset >= sectionTop) {
+              current = section.getAttribute('id');
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+              link.classList.add('active');
+            }
+          });
+        }
+
+        // Update active navigation on scroll
+        window.addEventListener('scroll', updateActiveNavigation);
+        updateActiveNavigation(); // Initial call
+
+        console.log('🎯 Homepage Design: Navigation ready!');
+      });
+    </script>
+  </body>
+</html>
     <script>
 // MyHealthStory Section Update Script
 function updateMyHealthStorySection() {
