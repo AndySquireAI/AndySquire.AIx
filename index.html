@@ -173,13 +173,32 @@
 <script src="insight-deck.js"></script>
 
 <!-- Phase 2: Patient-Centric Header & Navigation JavaScript -->
-<script src="phase2-header-navigation.js"></script>
+<script src="phase2-navigation-inline.js"></script>
 
 <!-- PayPal Smart Payment Buttons SDK -->
 <script src="https://www.paypal.com/sdk/js?client-id=AYp6m7r81oS6Tj-j6uxb3oCOp2nkd4SVgzc4Uoau9nrHTywPMy1uZ9sOmi6UHS1P12YY4wwPt3_YPmIj&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
   </head>
 	
   <body>
+    <!-- Phase 2: Patient-Centric Header & Navigation -->
+    <header class="patient-centric-header">
+      <div class="header-container">
+        <a href="#" class="patient-centric-logo">
+          ❤️ PATIENT-CENTRIC CARE
+          <div class="patient-centric-tagline">AndySquire.AI</div>
+        </a>
+        
+        <nav class="patient-nav" id="patientNav">
+          <a href="#patient-tools" class="nav-item priority">🎯 MyHealthCanvas</a>
+          <a href="#consulting" class="nav-item">Consulting</a>
+          <a href="#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
+          <a href="#about" class="nav-item">About</a>
+        </nav>
+        
+        <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+      </div>
+    </header>
+    
     <div id="root"></div>
     <script>
 // MyHealthStory Section Update Script
