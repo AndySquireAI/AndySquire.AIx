@@ -86,33 +86,108 @@
         
         navItems.forEach(item => {
             item.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
+                e.preventDefault();
                 
-                // Only handle anchor links
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    
-                    const targetId = href.substring(1);
-                    let targetElement = document.getElementById(targetId);
-                    
-                    // If target doesn't exist, try to find it by content or create anchor
-                    if (!targetElement) {
-                        targetElement = findOrCreateAnchor(targetId);
-                    }
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        console.log(`📍 Scrolled to: ${targetId}`);
-                    }
-                }
+                // Update active state
+                updateActiveNavItem(this);
+                
+                // Get target from data-target attribute or href
+                const targetId = this.getAttribute('data-target') || 
+                                (this.getAttribute('href') && this.getAttribute('href').substring(1));
+                
+                console.log(`🧭 Navigation clicked: ${targetId}`);
+                
+                // Handle navigation
+                handleNavigation(targetId);
             });
         });
         
         console.log('✅ Smooth scrolling initialized');
+    }
+    
+    function updateActiveNavItem(clickedItem) {
+        // Remove active class from all nav items
+        const allNavItems = document.querySelectorAll('.nav-item');
+        allNavItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Add active class to clicked item
+        clickedItem.classList.add('active');
+        
+        console.log(`✅ Active nav item updated: ${clickedItem.textContent}`);
+    }
+    
+    function handleNavigation(targetId) {
+        let targetElement = null;
+        
+        // Direct mapping to existing content sections
+        switch(targetId) {
+            case 'patient-tools':
+                // Look for patient/advocate content first
+                targetElement = findSectionByKeywords(['patient', 'advocate']) ||
+                               document.querySelector('[class*="patient"]') ||
+                               document.body.firstElementChild;
+                break;
+                
+            case 'consulting':
+                // Look for partnership/consulting content
+                targetElement = findSectionByKeywords(['partnership', 'healthcare institutions', 'schedule consultation']) ||
+                               document.querySelector('h2') || // First major heading
+                               document.body.children[1];
+                break;
+                
+            case 'humanoid-healthcare':
+                // Look for robotics/humanoid content
+                targetElement = findSectionByKeywords(['robotics manufacturers', 'humanoid', 'ai healthcare']) ||
+                               document.querySelector('h2') || // First major heading
+                               document.body.children[1];
+                break;
+                
+            case 'about':
+                // Look for about section
+                targetElement = findSectionByKeywords(['about andy squire', 'founder', 'exploring new frontiers']) ||
+                               document.querySelector('h2:contains("About")') ||
+                               [...document.querySelectorAll('h1, h2, h3')].find(h => h.textContent.toLowerCase().includes('about')) ||
+                               document.body.lastElementChild;
+                break;
+                
+            default:
+                console.log(`❌ Unknown navigation target: ${targetId}`);
+                return;
+        }
+        
+        if (targetElement) {
+            // Smooth scroll to target
+            const headerHeight = 105; // Account for fixed header
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: Math.max(0, targetPosition),
+                behavior: 'smooth'
+            });
+            
+            console.log(`✅ Scrolled to: ${targetId} -> ${targetElement.tagName} "${targetElement.textContent.substring(0, 50)}..."`);
+        } else {
+            console.log(`❌ Target element not found for: ${targetId}`);
+        }
+    }
+    
+    function findSectionByKeywords(keywords) {
+        const allElements = document.querySelectorAll('section, div, h1, h2, h3, h4, p, [class*="section"], [class*="partner"]');
+        
+        for (let element of allElements) {
+            const text = element.textContent.toLowerCase();
+            const className = element.className.toLowerCase();
+            
+            for (let keyword of keywords) {
+                if (text.includes(keyword.toLowerCase()) || className.includes(keyword.toLowerCase())) {
+                    return element;
+                }
+            }
+        }
+        
+        return null;
     }
     
     function findOrCreateAnchor(targetId) {
