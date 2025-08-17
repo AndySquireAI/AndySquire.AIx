@@ -118,28 +118,42 @@
     function findOrCreateAnchor(targetId) {
         let targetElement = null;
         
-        // Map navigation targets to content sections
+        // Map navigation targets to content sections with better matching
         const sectionMappings = {
-            'patient-tools': ['myhealthstory', 'patient', 'advocate', 'canvas'],
-            'consulting': ['consultation', 'consulting', 'partnership'],
-            'humanoid-healthcare': ['humanoid', 'healthcare', 'robot', 'ai'],
-            'about': ['about', 'andy', 'squire', 'founder']
+            'patient-tools': {
+                keywords: ['myhealthstory', 'patient', 'advocate', 'canvas', 'form'],
+                fallback: 'top'
+            },
+            'consulting': {
+                keywords: ['consultation', 'consulting', 'partnership', 'schedule', 'institutions'],
+                fallback: 'partnership'
+            },
+            'humanoid-healthcare': {
+                keywords: ['humanoid', 'healthcare', 'robot', 'ai', 'manufacturer', 'robotics'],
+                fallback: 'partnership'
+            },
+            'about': {
+                keywords: ['about', 'andy', 'squire', 'founder', 'experience', 'vision'],
+                fallback: 'bottom'
+            }
         };
         
-        const searchTerms = sectionMappings[targetId] || [targetId];
+        const mapping = sectionMappings[targetId];
+        if (!mapping) return null;
         
-        // Search for existing sections by text content
-        const allSections = document.querySelectorAll('section, div, h1, h2, h3');
+        // Search for existing sections by text content and class names
+        const allSections = document.querySelectorAll('section, div[class*="section"], h1, h2, h3, [class*="partner"], [class*="about"]');
         
         for (let section of allSections) {
             const text = section.textContent.toLowerCase();
+            const className = section.className.toLowerCase();
             
-            for (let term of searchTerms) {
-                if (text.includes(term.toLowerCase())) {
+            for (let keyword of mapping.keywords) {
+                if (text.includes(keyword) || className.includes(keyword)) {
                     // Add ID to found section
                     section.id = targetId;
                     targetElement = section;
-                    console.log(`📍 Found and anchored section: ${targetId}`);
+                    console.log(`📍 Found and anchored section: ${targetId} -> ${section.tagName}`);
                     break;
                 }
             }
@@ -147,32 +161,40 @@
             if (targetElement) break;
         }
         
-        // If still not found, create a placeholder anchor
+        // If still not found, create anchor at strategic locations
         if (!targetElement) {
             targetElement = document.createElement('div');
             targetElement.id = targetId;
             targetElement.style.height = '1px';
             targetElement.style.visibility = 'hidden';
             
-            // Insert at appropriate location based on target
-            const insertLocation = getInsertLocation(targetId);
+            const insertLocation = getInsertLocation(targetId, mapping.fallback);
             if (insertLocation) {
                 insertLocation.parentNode.insertBefore(targetElement, insertLocation);
-                console.log(`📍 Created placeholder anchor: ${targetId}`);
+                console.log(`📍 Created anchor: ${targetId} at ${mapping.fallback}`);
             }
         }
         
         return targetElement;
     }
     
-    function getInsertLocation(targetId) {
+    function getInsertLocation(targetId, fallback) {
         // Define where to insert anchors based on the patient-centric structure
         const insertMappings = {
             'patient-tools': document.body.firstElementChild,
             'consulting': document.querySelector('[class*="partner"]') || document.body.children[1],
-            'humanoid-healthcare': document.querySelector('[class*="humanoid"]') || document.body.children[2],
+            'humanoid-healthcare': document.querySelector('[class*="partner"]') || document.body.children[1],
             'about': document.querySelector('[class*="about"]') || document.body.lastElementChild
         };
+        
+        // Fallback strategies
+        if (fallback === 'top') {
+            return document.body.firstElementChild;
+        } else if (fallback === 'bottom') {
+            return document.body.lastElementChild;
+        } else if (fallback === 'partnership') {
+            return document.querySelector('[class*="partner"]') || document.body.children[1];
+        }
         
         return insertMappings[targetId] || document.body.firstElementChild;
     }
