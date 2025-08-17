@@ -1,0 +1,87 @@
+/* Phase 1: Content Cleanup CSS */
+/* Hide sections that won't be in the new patient-centric design */
+
+/* Hide excessive personal branding sections */
+.professional-network,
+.linkedin-network,
+.professional-recommendations,
+[class*="professional-network"],
+[class*="linkedin-network"] {
+  display: none !important;
+}
+
+/* Reduce prominence of Andy-focused testimonials */
+[data-testimonial*="andy"],
+[class*="testimonial"] .andy-quote {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Hide detailed bio sections temporarily */
+.detailed-bio,
+.cv-section,
+[class*="detailed-bio"] {
+  display: none !important;
+}
+
+/* Add comments for sections to be restructured */
+.about-section::before {
+  content: "PHASE 1: This section will be moved to bottom in later phases";
+  display: block;
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 8px;
+  font-size: 12px;
+  border-left: 4px solid #F59E0B;
+  margin-bottom: 16px;
+}
+
+/* Highlight MyHealthStory section as priority */
+[class*="myhealthstory"],
+[id*="myhealthstory"],
+.myhealthstory-section {
+  border: 2px solid #10B981 !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1) !important;
+}
+
+.myhealthstory-section::before {
+  content: "PRIORITY: This section will be moved to top in new design";
+  display: block;
+  background: #D1FAE5;
+  color: #065F46;
+  padding: 8px;
+  font-size: 12px;
+  border-left: 4px solid #10B981;
+  margin-bottom: 16px;
+}
+
+/* Style cleanup indicators */
+.phase1-cleanup-indicator {
+  background: #EFF6FF;
+  color: #1E40AF;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  margin: 4px 0;
+  display: inline-block;
+}
+
+/* Hide sections that are too Andy-focused */
+.founder-ceo-section,
+.personal-story-section,
+[class*="founder-ceo"] {
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+
+.founder-ceo-section::before {
+  content: "PHASE 1: Personal branding will be reduced in new patient-centric design";
+  display: block;
+  background: #FEF2F2;
+  color: #991B1B;
+  padding: 8px;
+  font-size: 12px;
+  border-left: 4px solid #EF4444;
+  margin-bottom: 16px;
+}
+
