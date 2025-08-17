@@ -85,17 +85,12 @@ div:has([href*="myhealthstory"]) {
   border-radius: 4px;
 }
 
-/* Add restructuring indicator to testimonials */
-[class*="testimonial"]::before {
-  content: "🔄 Testimonials will be reordered to prioritize patient stories";
-  display: block;
-  background: #E0E7FF;
-  color: #3730A3;
-  padding: 6px 12px;
-  margin-bottom: 12px;
-  border-left: 4px solid #6366F1;
-  font-size: 12px;
-  border-radius: 4px;
+/* Testimonials preserved - both Andy's quotes and others are valuable */
+[class*="testimonial"] {
+  /* All testimonials remain visible and functional */
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
 }
 
 /* === PARTNERSHIP SECTION ENHANCEMENT === */

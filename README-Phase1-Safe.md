@@ -37,7 +37,7 @@ Safely reduce Andy-focused content and highlight patient-centric elements using 
 
 ### **3. Section Indicators:**
 - **About sections** get yellow indicators: "📝 This section will be moved to bottom"
-- **Testimonials** get blue indicators: "🔄 Testimonials will be reordered"
+- **All testimonials preserved** - Both Andy's quotes and patient testimonials remain visible
 - **Professional content** reduced with opacity and grayscale effects
 
 ## 🔧 **Technical Implementation**
