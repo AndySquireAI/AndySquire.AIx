@@ -361,21 +361,6 @@
         }
       }
 
-      /* Phase Indicator */
-      .phase-indicator {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background: rgba(16, 185, 129, 0.9);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      }
-
       /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
@@ -388,17 +373,16 @@
   </head>
 	
   <body>
-    <!-- Phase 2: Patient-Centric Header & Navigation -->
     <header class="patient-centric-header">
       <div class="header-container">
         <a href="#home" class="patient-centric-logo">
-          ❤️ PATIENT-CENTRIC CARE
+          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"> PATIENT-CENTRIC CARE
           <div class="patient-centric-tagline">AndySquire.AI</div>
         </a>
         
         <nav class="patient-nav" id="patientNav">
           <a href="#home" class="nav-item">Home</a>
-          <a href="#myhealthcanvas" class="nav-item priority">🎯 Forms</a>
+          <a href="#myhealthcanvas" class="nav-item priority">Forms</a>
           <a href="#consulting" class="nav-item">Consulting</a>
           <a href="#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
           <a href="#collaboration" class="nav-item">Collaboration</a>
@@ -408,11 +392,6 @@
         <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
       </div>
     </header>
-
-    <!-- Phase Indicator -->
-    <div class="phase-indicator">
-      Phase 3: Homepage Design Active
-    </div>
 
     <main class="container">
       <!-- Hero Section -->

@@ -75,7 +75,6 @@
     <!-- PayPal Smart Payment Buttons SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AYp6m7r81oS6Tj-j6uxb3oCOp2nkd4SVgzc4Uoau9nrHTywPMy1uZ9sOmi6UHS1P12YY4wwPt3_YPmIj&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
 
-    <!-- Phase 2: Patient-Centric Header & Navigation -->
     <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
 
     <style>
@@ -404,21 +403,6 @@
         }
       }
 
-      /* Phase Indicator */
-      .phase-indicator {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background: rgba(16, 185, 129, 0.9);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      }
-
       /* Back to Home Link */
       .back-link {
         display: inline-flex;
@@ -443,17 +427,16 @@
   </head>
 	
   <body>
-    <!-- Phase 2: Patient-Centric Header & Navigation -->
     <header class="patient-centric-header">
       <div class="header-container">
         <a href="index.html" class="patient-centric-logo">
-          <img src="patient-centric-icon.jpeg" alt="Patient-Centric Care" style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;" /> PATIENT-CENTRIC CARE
+          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;" /> PATIENT-CENTRIC CARE
           <div class="patient-centric-tagline">AndySquire.AI</div>
         </a>
         
         <nav class="patient-nav" id="patientNav">
           <a href="index.html#home" class="nav-item">Home</a>
-          <a href="myhealthcanvas.html" class="nav-item priority active">🎯 Forms</a>
+          <a href="myhealthcanvas.html" class="nav-item priority active">Forms</a>
           <a href="index.html#consulting" class="nav-item">Consulting</a>
           <a href="index.html#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
           <a href="index.html#collaboration" class="nav-item">Collaboration</a>
@@ -462,11 +445,6 @@
         <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
       </div>
     </header>
-
-    <!-- Phase Indicator -->
-    <div class="phase-indicator">
-      MyHealthCanvas Purchase Page
-    </div>
 
     <!-- Page Header -->
     <section class="page-header">
