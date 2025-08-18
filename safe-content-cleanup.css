@@ -102,13 +102,15 @@ h2:contains("Partner with the Future") {
   padding-bottom: 8px !important;
 }
 
-/* Highlight patient-focused partnership card */
-[class*="patient"]:not([class*="myhealthstory"]) {
+/* Highlight patient-focused partnership card - only in partnership section */
+.partnership-section [class*="patient"]:not([class*="myhealthstory"]),
+section:has([class*="partner"]) [class*="patient"]:not([class*="myhealthstory"]) {
   border: 2px solid #EF4444 !important;
   background: rgba(239, 68, 68, 0.05) !important;
 }
 
-[class*="patient"]:not([class*="myhealthstory"])::before {
+.partnership-section [class*="patient"]:not([class*="myhealthstory"])::before,
+section:has([class*="partner"]) [class*="patient"]:not([class*="myhealthstory"])::before {
   content: "❤️ PATIENT-FOCUSED";
   position: absolute;
   top: -10px;

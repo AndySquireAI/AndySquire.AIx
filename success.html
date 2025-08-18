@@ -1,199 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Successful - Andy Squire</title>
+  <head>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .success-container {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            max-width: 500px;
-            margin: 2rem;
-        }
-        .success-icon {
-            font-size: 4rem;
-            color: #10B981;
-            margin-bottom: 1rem;
-        }
-        h1 {
-            color: #1F2937;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: #6B7280;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-        .download-info {
-            background: #F3F4F6;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .download-info h3 {
-            color: #374151;
-            margin-bottom: 0.5rem;
-        }
-        .download-info p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        .btn {
-            display: inline-block;
-            background: #3B82F6;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #2563EB;
-        }
-        .contact-info {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #E5E7EB;
-            font-size: 0.9rem;
-            color: #6B7280;
-        }
-    </style>
-</head>
-<body>
-    <div class="success-container">
-        <div class="success-icon">✅</div>
-        <h1>Payment Successful!</h1>
-        <p>Thank you for purchasing MyHealthStory. Your payment has been processed successfully.</p>
-        
-        <div class="download-info" id="download-section">
-            <h3>📄 Download Your PDF Form</h3>
-            <p id="download-description">Click the button below to download your MyHealthStory PDF form immediately:</p>
-            <div id="download-buttons">
-                <!-- Download buttons will be populated by JavaScript -->
-            </div>
-            <div id="download-confirmation" style="display: none; margin-top: 1rem; padding: 1rem; background: #10B981; color: white; border-radius: 8px;">
-                <strong>✅ Download Started!</strong><br>
-                Your PDF should be downloading now. If it doesn't start automatically, try the download button again.
-            </div>
-        </div>
-        
-        <div class="download-info">
-            <h3>🔒 Your Privacy</h3>
-            <p>This is a downloadable PDF form that you save locally to your device. We never see, store, or have access to your personal health data.</p>
-        </div>
-        
-        <div class="download-info">
-            <h3>💡 How to Use</h3>
-            <p>1. Download the PDF to your device<br>
-            2. Open with any PDF reader (Adobe, Preview, etc.)<br>
-            3. Fill in your health information<br>
-            4. Save and share with your healthcare team</p>
-        </div>
-        
-        <a href="/" class="btn">Return to Website</a>
-        
-        <div class="contact-info">
-            <p>Questions? Contact Andy at <strong>andy@andysquire.ai</strong></p>
-        </div>
-    </div>
-
-    <!-- Google Analytics Conversion Tracking -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Purchase Successful — MyHealthCanvas</title>
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6CNLJJJ8WQ');
-        gtag('config', 'AW-17214175569');
-        
-        // Track the successful purchase
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
-            'value': 1.0,
-            'currency': 'GBP'
-        });
-        
-        // Enhanced ecommerce tracking
-        gtag('event', 'purchase', {
-            'send_to': 'AW-290924137',
-            'transaction_id': 'MHS_' + Date.now(),
-            'value': 1.0,
-            'currency': 'GBP',
-            'items': [{
-                'item_id': 'myhealthstory_form',
-                'item_name': 'MyHealthStory PDF Form',
-                'category': 'Healthcare Tools',
-                'quantity': 1,
-                'price': 1.0
-            }]
-        });
-        
-        // Plan-specific download logic
-        function setupDownloads() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const plan = urlParams.get('plan') || 'current'; // Default to current plan
-            const downloadButtons = document.getElementById('download-buttons');
-            const downloadDescription = document.getElementById('download-description');
-            
-            let pdfUrl, fileName, planName, planDescription;
-            
-            if (plan === 'complete' || plan === '12') {
-                // Complete Plan (£12)
-                pdfUrl = '/myhealthstory-complete-plan.pdf';
-                fileName = 'MyHealthStory-Complete-Plan.pdf';
-                planName = 'Complete Plan (2-page)';
-                planDescription = 'Your comprehensive 2-page MyHealthStory form with advanced care planning:';
-            } else {
-                // Current Plan (£9)
-                pdfUrl = '/myhealthstory-current-plan.pdf';
-                fileName = 'MyHealthStory-Current-Plan.pdf';
-                planName = 'Current Plan (1-page)';
-                planDescription = 'Your focused 1-page MyHealthStory form for immediate health needs:';
-            }
-            
-            downloadDescription.textContent = planDescription;
-            
-            downloadButtons.innerHTML = `
-                <a href="${pdfUrl}" download="${fileName}" class="btn" style="margin: 1rem 0; display: inline-block;" onclick="showDownloadConfirmation()">
-                    📥 Download ${planName}
-                </a>
-            `;
-        }
-        
-        function showDownloadConfirmation() {
-            const confirmation = document.getElementById('download-confirmation');
-            confirmation.style.display = 'block';
-            
-            // Keep the confirmation visible and don't hide the page
-            setTimeout(() => {
-                confirmation.innerHTML = `
-                    <strong>✅ Download Complete!</strong><br>
-                    Your MyHealthStory PDF has been downloaded. You can download it again anytime by clicking the button above.
-                `;
-            }, 3000);
-        }
-        
-        // Initialize downloads when page loads
-        document.addEventListener('DOMContentLoaded', setupDownloads);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
     </script>
-</body>
+
+    <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #155e75 100%);
+        min-height: 100vh;
+        padding-top: 100px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .success-card {
+        background: white;
+        border-radius: 16px;
+        padding: 60px 40px;
+        margin: 60px 0;
+        text-align: center;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      }
+
+      .success-icon {
+        font-size: 4rem;
+        color: #10b981;
+        margin-bottom: 24px;
+      }
+
+      .success-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .success-subtitle {
+        font-size: 1.2rem;
+        color: #6b7280;
+        margin-bottom: 40px;
+      }
+
+      .download-section {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px 0;
+      }
+
+      .download-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .download-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 16px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      }
+
+      .next-steps {
+        text-align: left;
+        margin: 32px 0;
+      }
+
+      .next-steps h3 {
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .step-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        padding: 12px;
+        background: #f9fafb;
+        border-radius: 8px;
+      }
+
+      .step-number {
+        background: #10b981;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .charity-info {
+        background: #1f2937;
+        color: white;
+        padding: 24px;
+        border-radius: 12px;
+        margin: 32px 0;
+      }
+
+      .charity-info h3 {
+        color: #34d399;
+        margin-bottom: 12px;
+      }
+
+      .home-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .home-button:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #0e7490 0%, #155e75 100%);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding-top: 120px;
+        }
+
+        .success-card {
+          padding: 40px 24px;
+          margin: 40px 0;
+        }
+
+        .success-title {
+          font-size: 2rem;
+        }
+
+        .download-section {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+	
+  <body>
+    <!-- Phase 2: Patient-Centric Header & Navigation -->
+    <header class="patient-centric-header">
+      <div class="header-container">
+        <a href="index.html" class="patient-centric-logo">
+          ❤️ PATIENT-CENTRIC CARE
+          <div class="patient-centric-tagline">AndySquire.AI</div>
+        </a>
+        
+        <nav class="patient-nav" id="patientNav">
+          <a href="index.html#home" class="nav-item">Home</a>
+          <a href="myhealthcanvas.html" class="nav-item priority">🎯 Forms</a>
+          <a href="index.html#consulting" class="nav-item">Consulting</a>
+          <a href="index.html#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
+          <a href="index.html#collaboration" class="nav-item">Collaboration</a>
+        </nav>
+        
+        <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="success-card">
+        <div class="success-icon">✅</div>
+        <h1 class="success-title">Payment Successful!</h1>
+        <p class="success-subtitle">Thank you for your purchase. Your MyHealthCanvas forms are ready for download.</p>
+
+        <div class="download-section">
+          <h2 class="download-title">Download Your Forms</h2>
+          <div id="download-links">
+            <!-- Download links will be populated by JavaScript based on plan -->
+          </div>
+        </div>
+
+        <div class="next-steps">
+          <h3>Next Steps:</h3>
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div>
+              <strong>Download your PDF forms</strong> using the buttons above. Save them to a secure location on your device.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div>
+              <strong>Open with Adobe Acrobat Reader</strong> (free) and use the "Fill & Sign" feature to complete your forms.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div>
+              <strong>Share with your healthcare team</strong> to improve communication and ensure everyone is on the same page.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div>
+              <strong>Update regularly</strong> to keep your health information current and relevant.
+            </div>
+          </div>
+        </div>
+
+        <div class="charity-info">
+          <h3>🎗️ Supporting Cancer Research</h3>
+          <p>50% of your purchase has been allocated to Cancer Research UK (or ACS for US purchases), directly funding world-class cancer research and patient support programs. Thank you for supporting this vital cause!</p>
+        </div>
+
+        <a href="index.html" class="home-button">Return to Home</a>
+      </div>
+    </main>
+
+    <script>
+      // Track the successful purchase
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': 1.0,
+          'currency': 'GBP'
+      });
+      
+      // Enhanced ecommerce tracking
+      gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHS_' + Date.now(),
+          'value': 1.0,
+          'currency': 'GBP',
+          'items': [{
+              'item_id': 'myhealthcanvas_form',
+              'item_name': 'MyHealthCanvas PDF Form',
+              'category': 'Healthcare Tools',
+              'quantity': 1,
+              'price': 1.0
+          }]
+      });
+
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan');
+      const customerName = urlParams.get('name');
+
+      // Update page content based on plan
+      document.addEventListener('DOMContentLoaded', function() {
+        const downloadLinksContainer = document.getElementById('download-links');
+        
+        if (plan === 'current') {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your <strong>MyHealthCanvas Current Plan</strong> is ready:</p>
+            <a href="upload/MyHealthCanvasCURRENTx.pdf" class="download-button" download="MyHealthCanvas-Current-Plan.pdf">
+              📄 Download Current Plan PDF
+            </a>
+          `;
+        } else if (plan === 'complete') {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your <strong>MyHealthCanvas Complete Plan</strong> is ready:</p>
+            <a href="upload/MyHealthCanvasCOMPLETEx.pdf" class="download-button" download="MyHealthCanvas-Complete-Plan.pdf">
+              📄 Download Complete Plan PDF
+            </a>
+          `;
+        } else {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your MyHealthCanvas forms are ready:</p>
+            <a href="upload/MyHealthCanvasCURRENTx.pdf" class="download-button" download="MyHealthCanvas-Current-Plan.pdf">
+              📄 Download Current Plan PDF
+            </a>
+            <a href="upload/MyHealthCanvasCOMPLETEx.pdf" class="download-button" download="MyHealthCanvas-Complete-Plan.pdf">
+              📄 Download Complete Plan PDF
+            </a>
+          `;
+        }
+
+        // Personalize greeting if name is available
+        if (customerName) {
+          const subtitle = document.querySelector('.success-subtitle');
+          subtitle.textContent = `Thank you ${customerName} for your purchase. Your MyHealthCanvas forms are ready for download.`;
+        }
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileNavToggle');
+        const patientNav = document.getElementById('patientNav');
+        
+        if (mobileToggle && patientNav) {
+          mobileToggle.addEventListener('click', function() {
+            patientNav.classList.toggle('active');
+            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
+          });
+        }
+
+        console.log('✅ Success page loaded for plan:', plan);
+      });
+    </script>
+  </body>
 </html>
 
