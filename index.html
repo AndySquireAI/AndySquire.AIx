@@ -310,7 +310,7 @@
 
       .download-preview {
         width: 100%;
-        height: 120px;
+        height: 200px;
         background: rgba(255,255,255,0.1);
         border-radius: 8px;
         margin-bottom: 10px;
@@ -319,6 +319,95 @@
         justify-content: center;
         font-size: 0.9rem;
         border: 2px dashed rgba(255,255,255,0.3);
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Professional Document Previews */
+      .pitch-preview {
+        background: transparent;
+        border: none;
+        height: 250px;
+        perspective: 1000px;
+      }
+
+      .pitch-document {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        transform: rotate(-3deg);
+        transition: transform 0.3s ease;
+      }
+
+      .pitch-document:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+
+      .blueprint-preview {
+        background: transparent;
+        border: none;
+        height: 250px;
+        perspective: 1000px;
+      }
+
+      .blueprint-stack {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blueprint-page {
+        position: absolute;
+        width: 80%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .blueprint-page.page-1 {
+        z-index: 4;
+        transform: translateX(0px) translateY(0px);
+      }
+
+      .blueprint-page.page-2 {
+        z-index: 3;
+        transform: translateX(8px) translateY(4px) scale(0.95);
+        opacity: 0.9;
+      }
+
+      .blueprint-page.page-3 {
+        z-index: 2;
+        transform: translateX(16px) translateY(8px) scale(0.9);
+        opacity: 0.8;
+      }
+
+      .blueprint-page.page-4 {
+        z-index: 1;
+        transform: translateX(24px) translateY(12px) scale(0.85);
+        opacity: 0.7;
+      }
+
+      .blueprint-stack:hover .blueprint-page.page-1 {
+        transform: translateX(-5px) translateY(-5px) scale(1.02);
+      }
+
+      .blueprint-stack:hover .blueprint-page.page-2 {
+        transform: translateX(12px) translateY(2px) scale(0.97);
+      }
+
+      .blueprint-stack:hover .blueprint-page.page-3 {
+        transform: translateX(20px) translateY(6px) scale(0.92);
+      }
+
+      .blueprint-stack:hover .blueprint-page.page-4 {
+        transform: translateX(28px) translateY(10px) scale(0.87);
       }
 
       /* Mobile Responsive */
@@ -459,16 +548,21 @@
           
           <div class="humanoid-downloads">
             <div class="download-item">
-              <div class="download-preview">
-                Pitch to Manufacturers Preview
+              <div class="download-preview pitch-preview">
+                <img src="pitch-to-manufacturers.jpeg" alt="Pitch to Manufacturers Document" class="pitch-document" />
               </div>
-              <a href="#" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+              <a href="pitch-to-manufacturers.jpeg" download="Pitch-to-Manufacturers.pdf" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
             </div>
             <div class="download-item">
-              <div class="download-preview">
-                Ecosystem Architecture Blueprint Preview
+              <div class="download-preview blueprint-preview">
+                <div class="blueprint-stack">
+                  <img src="blueprint-page4.png" alt="" class="blueprint-page page-4" />
+                  <img src="blueprint-page3.png" alt="" class="blueprint-page page-3" />
+                  <img src="blueprint-page2.png" alt="" class="blueprint-page page-2" />
+                  <img src="blueprint-cover.webp" alt="Ecosystem Architecture Blueprint Cover" class="blueprint-page page-1" />
+                </div>
               </div>
-              <a href="#" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
             </div>
           </div>
         </div>
