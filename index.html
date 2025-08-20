@@ -44,7 +44,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
             min-height: 100vh;
         }
 
@@ -184,6 +184,10 @@
         .section-image {
             flex: 1;
             max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
         }
 
         .section-image img {
@@ -191,6 +195,8 @@
             height: auto;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            object-fit: cover;
+            max-height: 300px;
         }
 
         /* CTA Buttons */
@@ -246,6 +252,12 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transform: rotate(-2deg);
             transition: transform 0.3s ease;
+            background: #f5f5f5;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
         }
 
         .download-preview:hover {
@@ -253,9 +265,11 @@
         }
 
         .download-preview img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             display: block;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
         /* Mobile Responsive */
