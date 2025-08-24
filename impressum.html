@@ -10,10 +10,51 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         line-height: 1.6;
         color: #333;
-        background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        background: linear-gradient(135deg, #20B2AA 0%, #008B8B 100%);
         min-height: 100vh;
         margin: 0;
         padding: 0;
+      }
+
+      .simple-header {
+        background: #20B2AA;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .back-button {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        background: rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: rgba(255,255,255,0.3);
+        transform: translateX(-3px);
+      }
+
+      .page-title {
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
       }
 
       .impressum-container {
@@ -207,63 +248,143 @@
           font-size: 2rem;
         }
 
+        /* Professional Footer */
         .professional-footer {
-          padding: 40px 0 20px 0;
-          margin-top: 60px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
         }
 
         .footer-content {
-          flex-direction: column;
-          text-align: center;
-          gap: 30px;
-          margin-bottom: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
         .footer-logo {
-          flex: none;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer-logo .logo-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 0.5rem auto;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .footer-logo .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .footer-logo .logo-text {
+            color: #20B2AA;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .footer-contact {
-          flex-direction: column;
-          gap: 30px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .contact-item {
-          justify-content: center;
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .email-icon {
+            background: #3498db;
+        }
+
+        .location-icon {
+            background: #9b59b6;
+        }
+
+        .contact-info h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-info p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         .footer-copyright {
-          font-size: 0.9rem;
-          padding-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 1rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 2rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
       }
     </style>
 </head>
 
 <body>
-    <header class="patient-centric-header">
+    <header class="simple-header">
       <div class="header-container">
-        <a href="index.html" class="patient-centric-logo">
-          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"> PATIENT-CENTRIC CARE
-          <div class="patient-centric-tagline">AndySquire.AI</div>
+        <a href="index.html" class="back-button">
+          ← Back to Homepage
         </a>
-
-        <nav class="patient-centric-nav" id="patientNav">
-          <a href="index.html#home" class="nav-item">Home</a>
-          <a href="index.html#myhealthcanvas" class="nav-item">Forms</a>
-          <a href="index.html#consulting" class="nav-item">Consulting</a>
-          <a href="index.html#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
-          <a href="index.html#collaboration" class="nav-item">Collaboration</a>
-          <a href="index.html#about" class="nav-item">About</a>
-        </nav>
-
-        <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+        <div class="page-title">
+          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"> 
+          PATIENT-CENTRIC CARE AndySquire.AI
+        </div>
       </div>
     </header>
 
     <div class="impressum-container">
-        <a href="index.html" class="back-link">Back to Homepage</a>
-        
         <div class="impressum-header">
             <h1 class="impressum-title">Impressum</h1>
             <p class="impressum-subtitle">Legal Notice & Information</p>
@@ -324,68 +445,41 @@
 
     <!-- Professional Footer -->
     <footer class="professional-footer">
-      <div class="footer-container">
         <div class="footer-content">
-          <!-- Logo Section -->
-          <div class="footer-logo">
-            <div class="footer-logo-box">
-              <div class="footer-logo-text">
-                <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 20px; height: 20px;">
-                AndySquire.AI
-              </div>
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <img src="andysquire-official-logo.png" alt="AndySquire.AI">
+                </div>
+                <div class="logo-text">AndySquire.AI</div>
             </div>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="footer-contact">
-            <!-- Email -->
-            <div class="contact-item">
-              <div class="contact-icon email">
-                ✉
-              </div>
-              <div class="contact-info">
-                <h3>Email</h3>
-                <p><a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a></p>
-              </div>
+            
+            <div class="footer-contact">
+                <div class="contact-icon email-icon">✉</div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p><a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a></p>
+                </div>
             </div>
-
-            <!-- Location -->
-            <div class="contact-item">
-              <div class="contact-icon location">
-                📍
-              </div>
-              <div class="contact-info">
-                <h3>Location</h3>
-                <p>Basel, Switzerland</p>
-              </div>
+            
+            <div class="footer-contact">
+                <div class="contact-icon location-icon">📍</div>
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>Basel, Switzerland</p>
+                </div>
             </div>
-          </div>
         </div>
-
-        <!-- Copyright -->
+        
         <div class="footer-copyright">
-          © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
-          <br><br>
-          <a href="impressum.html" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Impressum</a> | 
-          <a href="mailto:andy@andysquire.ai" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Contact</a>
+            © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="mailto:andy@andysquire.ai">Contact</a>
+            </div>
         </div>
-      </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      document.addEventListener('DOMContentLoaded', function() {
-        const mobileToggle = document.getElementById('mobileNavToggle');
-        const patientNav = document.getElementById('patientNav');
-        
-        if (mobileToggle && patientNav) {
-          mobileToggle.addEventListener('click', function() {
-            patientNav.classList.toggle('active');
-            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
-          });
-        }
-      });
-    </script>
+
 </body>
 </html>
 
