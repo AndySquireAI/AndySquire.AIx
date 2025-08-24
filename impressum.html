@@ -367,6 +367,18 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .footer-contact {
+                justify-content: center;
+            }
+        }
       }
     </style>
 </head>
@@ -448,7 +460,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <div class="logo-icon">
-                    <img src="andysquire-official-logo.png" alt="AndySquire.AI">
+                    <img src="andysquire-exact-logo.png" alt="AndySquire.AI">
                 </div>
                 <div class="logo-text">AndySquire.AI</div>
             </div>
