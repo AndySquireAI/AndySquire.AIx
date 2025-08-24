@@ -260,11 +260,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
             align-items: center;
-            justify-items: center;
         }
 
         .footer-contact {
@@ -339,7 +338,7 @@
 
         @media (max-width: 768px) {
             .footer-content {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 text-align: center;
                 gap: 2rem;
             }
