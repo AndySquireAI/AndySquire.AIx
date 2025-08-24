@@ -300,6 +300,10 @@
         gap: 20px;
         margin-top: 20px;
         flex-wrap: wrap;
+        justify-content: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .download-item {
@@ -310,7 +314,7 @@
 
       .download-preview {
         width: 100%;
-        height: 120px;
+        height: 200px;
         background: rgba(255,255,255,0.1);
         border-radius: 8px;
         margin-bottom: 10px;
@@ -319,6 +323,51 @@
         justify-content: center;
         font-size: 0.9rem;
         border: 2px dashed rgba(255,255,255,0.3);
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Professional Document Previews */
+      .pitch-preview {
+        background: transparent;
+        border: none;
+        height: 250px;
+        perspective: 1000px;
+      }
+
+      .pitch-document {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        transform: rotate(-3deg);
+        transition: transform 0.3s ease;
+      }
+
+      .pitch-document:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+
+      .blueprint-preview {
+        background: transparent;
+        border: none;
+        height: 250px;
+        perspective: 1000px;
+      }
+
+      .blueprint-document {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        transform: rotate(3deg);
+        transition: transform 0.3s ease;
+      }
+
+      .blueprint-document:hover {
+        transform: rotate(0deg) scale(1.05);
       }
 
       /* Mobile Responsive */
@@ -361,6 +410,21 @@
         }
       }
 
+      /* Phase Indicator */
+      .phase-indicator {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: rgba(16, 185, 129, 0.9);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      }
+
       /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
@@ -369,165 +433,24 @@
       section {
         scroll-margin-top: 100px;
       }
-
-      /* Professional Footer */
-      .professional-footer {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        color: white;
-        padding: 60px 0 30px 0;
-        margin-top: 80px;
-      }
-
-      .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .footer-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-        margin-bottom: 40px;
-      }
-
-      .footer-logo {
-        flex: 0 0 200px;
-      }
-
-      .footer-logo-box {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-
-      .footer-logo-text {
-        color: #0891b2;
-        font-weight: bold;
-        font-size: 1.1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .footer-contact {
-        display: flex;
-        gap: 60px;
-        flex: 1;
-        justify-content: center;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .contact-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        color: white;
-      }
-
-      .contact-icon.email {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-      }
-
-      .contact-icon.location {
-        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-      }
-
-      .contact-info h3 {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: 4px;
-        color: white;
-      }
-
-      .contact-info p {
-        font-size: 1.1rem;
-        color: #94a3b8;
-        margin: 0;
-      }
-
-      .contact-info a {
-        color: #60a5fa;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      .contact-info a:hover {
-        color: #93c5fd;
-      }
-
-      .footer-copyright {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        color: #94a3b8;
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      /* Mobile Responsive Footer */
-      @media (max-width: 768px) {
-        .professional-footer {
-          padding: 40px 0 20px 0;
-          margin-top: 60px;
-        }
-
-        .footer-content {
-          flex-direction: column;
-          text-align: center;
-          gap: 30px;
-          margin-bottom: 30px;
-        }
-
-        .footer-logo {
-          flex: none;
-        }
-
-        .footer-contact {
-          flex-direction: column;
-          gap: 30px;
-        }
-
-        .contact-item {
-          justify-content: center;
-        }
-
-        .footer-copyright {
-          font-size: 0.9rem;
-          padding-top: 20px;
-        }
-      }
     </style>
   </head>
 	
   <body>
+    <!-- Phase 2: Patient-Centric Header & Navigation -->
     <header class="patient-centric-header">
       <div class="header-container">
-        <a href="#home" class="patient-centric-logo">
-          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"> PATIENT-CENTRIC CARE
+        <a href="index.html" class="patient-centric-logo">
+          <img src="patient-centric-icon.jpeg" alt="Patient-Centric Care" style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;" /> PATIENT-CENTRIC CARE
           <div class="patient-centric-tagline">AndySquire.AI</div>
         </a>
         
         <nav class="patient-nav" id="patientNav">
           <a href="#home" class="nav-item">Home</a>
-          <a href="#myhealthcanvas" class="nav-item priority">Forms</a>
+          <a href="#myhealthcanvas" class="nav-item">Forms</a>
           <a href="#consulting" class="nav-item">Consulting</a>
           <a href="#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
           <a href="#collaboration" class="nav-item">Collaboration</a>
-          <a href="#about" class="nav-item">About</a>
         </nav>
         
         <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
@@ -544,14 +467,13 @@
       <!-- Forms #MyHealthCanvas Section -->
       <section id="myhealthcanvas" class="section">
         <div class="section-image">
-          <img src="/upload/IMG_3245.png" alt="Patient and healthcare provider discussing health information" />
+          <img src="patient-doctor-myhealthcanvas.png" alt="Patient showing MyHealthCanvas on phone to healthcare provider" />
         </div>
         <div class="section-content">
           <h2>Forms #MyHealthCanvas</h2>
           <p>Download and complete our MyHealthCanvas forms to communicate your health story effectively. Choose between our Current Plan and Complete Plan options.</p>
           <div class="cta-buttons">
-            <a href="#" class="cta-button" onclick="trackCTAClick('Download Current Plan')">Download Current Plan PDF Form</a>
-            <a href="#" class="cta-button secondary" onclick="trackCTAClick('Download Complete Plan')">Download Complete Plan PDF Form</a>
+            <button class="cta-button" onclick="trackCTAClick('Download MyHealthCanvas'); window.open('./myhealthcanvas.html', '_self');">Download MyHealthCanvas</button>
           </div>
         </div>
       </section>
@@ -559,13 +481,13 @@
       <!-- Consulting Section -->
       <section id="consulting" class="section">
         <div class="section-image">
-          <img src="/upload/IMG_3246.png" alt="Andy Squire consulting with healthcare leaders" />
+          <img src="upload/AndyAIPhoto.jpg" alt="Andy Squire - Healthcare Innovation Consultant" />
         </div>
         <div class="section-content">
           <h2>Consulting</h2>
           <p>Partner with Andy Squire to design patient-first AI solutions that improve outcomes and operational efficiency.</p>
           <div class="cta-buttons">
-            <a href="#" class="cta-button" onclick="trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
+            <a href="mailto:andy@andysquire.ai?subject=Strategy Call Request&body=Hi Andy,%0D%0A%0D%0AI'm interested in discussing a strategy call for patient-first AI solutions.%0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0ABest regards," class="cta-button" onclick="trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
           </div>
         </div>
       </section>
@@ -573,7 +495,7 @@
       <!-- Humanoid Healthcare Section -->
       <section id="humanoid-healthcare" class="section">
         <div class="section-image">
-          <img src="/upload/IMG_3247.png" alt="Humanoid healthcare technology and innovation" />
+          <img src="humanoid-ecosystem-straight.jpg" alt="Humanoid healthcare technology and innovation" />
         </div>
         <div class="section-content">
           <h2>Humanoid Healthcare</h2>
@@ -581,16 +503,16 @@
           
           <div class="humanoid-downloads">
             <div class="download-item">
-              <div class="download-preview">
-                Pitch to Manufacturers Preview
+              <div class="download-preview pitch-preview">
+                <img src="pitch-to-manufacturers.jpeg" alt="Pitch to Manufacturers Document" class="pitch-document" />
               </div>
-              <a href="#" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
             </div>
             <div class="download-item">
-              <div class="download-preview">
-                Ecosystem Architecture Blueprint Preview
+              <div class="download-preview blueprint-preview">
+                <img src="blueprint-preview-tilted.png" alt="Ecosystem Architecture Blueprint" class="blueprint-document" />
               </div>
-              <a href="#" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
             </div>
           </div>
         </div>
@@ -599,85 +521,27 @@
       <!-- Collaboration Section -->
       <section id="collaboration" class="section">
         <div class="section-image">
-          <img src="/upload/IMG_3248.png" alt="Collaboration in healthcare technology development" />
+          <img src="andy-humanoid-collaboration.jpg" alt="Andy Squire with Humanoid Healthcare Robot - Collaboration in healthcare technology" />
         </div>
         <div class="section-content">
           <h2>Collaboration</h2>
           <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
+          <p><strong>Are you - Robotics Manufacturer, Healthcare Institute, Investor, Patient or Advocate?</strong></p>
           <div class="cta-buttons">
-            <a href="#" class="cta-button" onclick="trackCTAClick('Contact Us')">Contact Us</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="section-image">
-          <img src="/upload/IMG_3249.png" alt="Andy Squire AI logo and branding" />
-        </div>
-        <div class="section-content">
-          <h2>About</h2>
-          <p>Based in Basel, Switzerland, Andy Squire is a healthcare innovator and two time cancer survivor / patient advocate with over 20 years of experience in service design and MedTech. Andy helps teams build ethical, patient-centred solutions that bridge empathy and AI.</p>
-          <div class="cta-buttons">
-            <a href="#" class="cta-button" onclick="trackCTAClick('Learn More About Andy')">Learn More</a>
+            <a href="mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry&body=Hi Andy,%0D%0A%0D%0AI'm interested in discussing collaboration opportunities in humanoid healthcare technology.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards," class="cta-button" onclick="trackCTAClick('Contact Us - Collaboration')">Contact Us</a>
+            <a href="https://www.linkedin.com/in/andysquire99/" target="_blank" class="cta-button secondary" onclick="trackCTAClick('Connect on LinkedIn')">Connect on LinkedIn</a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Professional Footer -->
-    <footer class="professional-footer">
-      <div class="footer-container">
-        <div class="footer-content">
-          <!-- Logo Section -->
-          <div class="footer-logo">
-            <div class="footer-logo-box">
-              <div class="footer-logo-text">
-                <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 20px; height: 20px;">
-                AndySquire.AI
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="footer-contact">
-            <!-- Email -->
-            <div class="contact-item">
-              <div class="contact-icon email">
-                ✉
-              </div>
-              <div class="contact-info">
-                <h3>Email</h3>
-                <p><a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a></p>
-              </div>
-            </div>
-
-            <!-- Location -->
-            <div class="contact-item">
-              <div class="contact-icon location">
-                📍
-              </div>
-              <div class="contact-info">
-                <h3>Location</h3>
-                <p>Basel, Switzerland</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-copyright">
-          © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
-        </div>
-      </div>
-    </footer>
-
     <!-- Hash Navigation Script -->
     <script>
-      // Simple mobile menu toggle
+      // Simple mobile menu toggle with auto-close
       document.addEventListener('DOMContentLoaded', function() {
         const mobileToggle = document.getElementById('mobileNavToggle');
         const patientNav = document.getElementById('patientNav');
+        const navLinks = document.querySelectorAll('.nav-item');
         
         if (mobileToggle && patientNav) {
           mobileToggle.addEventListener('click', function() {
@@ -686,10 +550,19 @@
           });
         }
 
+        // Auto-close mobile menu when navigation link is clicked
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            if (patientNav.classList.contains('active')) {
+              patientNav.classList.remove('active');
+              mobileToggle.textContent = '☰';
+            }
+          });
+        });
+
         // Update active navigation state
         function updateActiveNavigation() {
           const sections = document.querySelectorAll('section[id]');
-          const navLinks = document.querySelectorAll('.nav-item');
           
           let current = '';
           sections.forEach(section => {
@@ -711,7 +584,7 @@
         window.addEventListener('scroll', updateActiveNavigation);
         updateActiveNavigation(); // Initial call
 
-        console.log('🎯 Homepage Design: Navigation ready!');
+        console.log('🎯 Homepage Design: Navigation ready with auto-close!');
       });
     </script>
   </body>
