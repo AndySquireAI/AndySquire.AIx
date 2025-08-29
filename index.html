@@ -109,12 +109,32 @@
         });
       }
 
-      // Desktop Mailto Compatibility Functions
+      // Desktop Mailto Compatibility Functions - Robust Cross-Browser Solution
       function openMailtoConsulting(event) {
         event.preventDefault();
         trackConsultationBooking();
         trackCTAClick('Book Strategy Call');
-        window.location.href = 'mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry';
+        
+        const mailtoUrl = 'mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry';
+        
+        // Try multiple approaches for maximum compatibility
+        try {
+          // Method 1: Create temporary anchor and click it
+          const tempLink = document.createElement('a');
+          tempLink.href = mailtoUrl;
+          tempLink.style.display = 'none';
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          document.body.removeChild(tempLink);
+        } catch (e) {
+          try {
+            // Method 2: Use window.open
+            window.open(mailtoUrl, '_self');
+          } catch (e2) {
+            // Method 3: Fallback to window.location
+            window.location.href = mailtoUrl;
+          }
+        }
         return false;
       }
 
@@ -122,7 +142,27 @@
         event.preventDefault();
         trackContactFormSubmission();
         trackCTAClick('Contact Us - Collaboration');
-        window.location.href = 'mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry';
+        
+        const mailtoUrl = 'mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry';
+        
+        // Try multiple approaches for maximum compatibility
+        try {
+          // Method 1: Create temporary anchor and click it
+          const tempLink = document.createElement('a');
+          tempLink.href = mailtoUrl;
+          tempLink.style.display = 'none';
+          document.body.appendChild(tempLink);
+          tempLink.click();
+          document.body.removeChild(tempLink);
+        } catch (e) {
+          try {
+            // Method 2: Use window.open
+            window.open(mailtoUrl, '_self');
+          } catch (e2) {
+            // Method 3: Fallback to window.location
+            window.location.href = mailtoUrl;
+          }
+        }
         return false;
       }
     </script>
