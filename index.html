@@ -108,6 +108,118 @@
           'value': 1
         });
       }
+
+      // Device Detection and Hybrid Mailto Solution
+      function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+               (navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform));
+      }
+
+      function copyToClipboard(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text);
+        } else {
+          // Fallback for older browsers
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          textArea.style.position = "fixed";
+          textArea.style.left = "-999999px";
+          textArea.style.top = "-999999px";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          return new Promise((res, rej) => {
+            document.execCommand('copy') ? res() : rej();
+            textArea.remove();
+          });
+        }
+      }
+
+      function showNotification(message) {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: #20B2AA;
+          color: white;
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-weight: bold;
+          z-index: 10000;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+          animation: slideIn 0.3s ease-out;
+        `;
+        
+        // Add animation keyframes if not already added
+        if (!document.querySelector('#notification-styles')) {
+          const style = document.createElement('style');
+          style.id = 'notification-styles';
+          style.textContent = `
+            @keyframes slideIn {
+              from { transform: translateX(100%); opacity: 0; }
+              to { transform: translateX(0); opacity: 1; }
+            }
+          `;
+          document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(notification);
+        
+        // Remove notification after 3 seconds
+        setTimeout(() => {
+          notification.style.animation = 'slideIn 0.3s ease-out reverse';
+          setTimeout(() => notification.remove(), 300);
+        }, 3000);
+      }
+
+      function openMailtoConsulting(event) {
+        event.preventDefault();
+        trackConsultationBooking();
+        trackCTAClick('Book Strategy Call');
+        
+        const email = 'andy@andysquire.ai';
+        const subject = 'Healthcare AI Consulting Inquiry';
+        
+        if (isMobileDevice()) {
+          // Mobile: Use direct mailto (works perfectly)
+          const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+          window.location.href = mailtoUrl;
+        } else {
+          // Desktop: Copy email and show instructions
+          copyToClipboard(email).then(() => {
+            showNotification(`📧 Email copied! Paste ${email} in your email client with subject: "${subject}"`);
+          }).catch(() => {
+            showNotification(`📧 Please email: ${email} with subject: "${subject}"`);
+          });
+        }
+        return false;
+      }
+
+      function openMailtoCollaboration(event) {
+        event.preventDefault();
+        trackContactFormSubmission();
+        trackCTAClick('Contact Us - Collaboration');
+        
+        const email = 'andy@andysquire.ai';
+        const subject = 'Humanoid Healthcare Collaboration Inquiry';
+        
+        if (isMobileDevice()) {
+          // Mobile: Use direct mailto (works perfectly)
+          const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+          window.location.href = mailtoUrl;
+        } else {
+          // Desktop: Copy email and show instructions
+          copyToClipboard(email).then(() => {
+            showNotification(`📧 Email copied! Paste ${email} in your email client with subject: "${subject}"`);
+          }).catch(() => {
+            showNotification(`📧 Please email: ${email} with subject: "${subject}"`);
+          });
+        }
+        return false;
+      }
     </script>
 
     <style>
@@ -612,7 +724,7 @@
         <div class="section-content">
           <h2>Consulting</h2>
           <p>Partner with Andy Squire to design patient-first AI solutions that improve outcomes and operational efficiency.</p>
-          <a href="mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry" class="cta-button" onclick="trackConsultationBooking(); trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
+          <a href="#" class="cta-button" onclick="openMailtoConsulting(event)">Book a Strategy Call</a>
         </div>
       </section>
 
@@ -652,7 +764,7 @@
           <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
           <p><strong>Are you - Robotics Manufacturer, Healthcare Institute, Investor, Patient or Advocate?</strong></p>
           <div class="cta-buttons">
-            <a href="mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry" class="cta-button" onclick="trackContactFormSubmission(); trackCTAClick('Contact Us - Collaboration')">Contact Us</a>
+            <a href="#" class="cta-button" onclick="openMailtoCollaboration(event)">Contact Us</a>
             <a href="https://www.linkedin.com/in/andysquire99/" target="_blank" class="cta-button secondary" onclick="trackCTAClick('Connect on LinkedIn')">Connect on LinkedIn</a>
           </div>
         </div>
