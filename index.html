@@ -24,13 +24,90 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="patient-centric-care-logo-large.png">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      
+      // Google Analytics
+      gtag('config', 'G-6CNLJJJ8WQ');
+      
+      // Google Ads Account 1
+      gtag('config', 'AW-17214175569');
+      
+      // Google Ads Account 2  
+      gtag('config', 'AW-290924137');
+    </script>
+
+    <!-- Conversion Tracking Functions -->
+    <script>
+      // MyHealthCanvas Purchase Tracking
+      function trackMyHealthCanvasPurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': 10.50,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_' + Date.now()
+        });
+      }
+
+      // Enhanced MyHealthCanvas Purchase Tracking
+      function trackEnhancedMyHealthCanvasPurchase() {
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHC_ENH_' + Date.now(),
+          'value': 10.50,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_FORMS',
+            'item_name': 'MyHealthCanvas Forms',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 10.50
+          }]
+        });
+      }
+
+      // Consultation Booking Tracking
+      function trackConsultationBooking() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137',
+          'value': 50.00,
+          'currency': 'GBP',
+          'transaction_id': 'CONSULT_' + Date.now()
+        });
+      }
+
+      // Blueprint Download Tracking
+      function trackBlueprintDownload() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137',
+          'value': 25.00,
+          'currency': 'GBP',
+          'transaction_id': 'BLUEPRINT_' + Date.now()
+        });
+      }
+
+      // Contact Form Submission Tracking
+      function trackContactFormSubmission() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137',
+          'value': 15.00,
+          'currency': 'GBP',
+          'transaction_id': 'CONTACT_' + Date.now()
+        });
+      }
+
+      // Generic CTA Click Tracking
+      function trackCTAClick(ctaType) {
+        gtag('event', 'click', {
+          'event_category': 'CTA',
+          'event_label': ctaType,
+          'value': 1
+        });
+      }
     </script>
 
     <style>
@@ -520,7 +597,7 @@
         <div class="section-content">
           <h2>Forms #MyHealthCanvas</h2>
           <p>Download and complete our MyHealthCanvas forms to communicate your health story effectively. Choose between our Current Plan and Complete Plan options.</p>
-          <a href="myhealthcanvas.html" class="cta-button" onclick="trackCTAClick('Purchase MyHealthCanvas')">Purchase MyHealthCanvas</a>
+          <a href="myhealthcanvas.html" class="cta-button" onclick="trackMyHealthCanvasPurchase(); trackEnhancedMyHealthCanvasPurchase(); trackCTAClick('Purchase MyHealthCanvas')">Purchase MyHealthCanvas</a>
         </div>
         <div class="section-image">
           <img src="patient-doctor-myhealthcanvas.png" alt="Patient and doctor using MyHealthCanvas forms for better healthcare communication">
@@ -535,7 +612,7 @@
         <div class="section-content">
           <h2>Consulting</h2>
           <p>Partner with Andy Squire to design patient-first AI solutions that improve outcomes and operational efficiency.</p>
-          <a href="mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry&body=Hi Andy,%0D%0A%0D%0AI'm interested in discussing how we can work together to develop patient-first AI solutions for our healthcare organization.%0D%0A%0D%0APlease let me know your availability.%0D%0A%0D%0ABest regards," class="cta-button" onclick="trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
+          <a href="mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry" class="cta-button" onclick="trackConsultationBooking(); trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
         </div>
       </section>
 
@@ -553,13 +630,13 @@
               <div class="download-preview pitch-preview">
                 <img src="pitch-to-manufacturers.jpeg" alt="Pitch to Manufacturers Document" class="pitch-document">
               </div>
-              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackBlueprintDownload(); trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
             </div>
             <div class="download-item">
               <div class="download-preview blueprint-preview">
                 <img src="blueprint-preview-tilted.png" alt="Ecosystem Architecture Blueprint" class="blueprint-document">
               </div>
-              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
             </div>
           </div>
         </div>
@@ -575,7 +652,7 @@
           <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
           <p><strong>Are you - Robotics Manufacturer, Healthcare Institute, Investor, Patient or Advocate?</strong></p>
           <div class="cta-buttons">
-            <a href="mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry&body=Hi Andy,%0D%0A%0D%0AI'm interested in discussing collaboration opportunities in humanoid healthcare technology.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0ABest regards," class="cta-button" onclick="trackCTAClick('Contact Us - Collaboration')">Contact Us</a>
+            <a href="mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry" class="cta-button" onclick="trackContactFormSubmission(); trackCTAClick('Contact Us - Collaboration')">Contact Us</a>
             <a href="https://www.linkedin.com/in/andysquire99/" target="_blank" class="cta-button secondary" onclick="trackCTAClick('Connect on LinkedIn')">Connect on LinkedIn</a>
           </div>
         </div>

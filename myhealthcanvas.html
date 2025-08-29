@@ -33,40 +33,42 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      
+      // Google Analytics
       gtag('config', 'G-6CNLJJJ8WQ');
+      
+      // Google Ads Account 1
       gtag('config', 'AW-17214175569');
+      
+      // Google Ads Account 2
+      gtag('config', 'AW-290924137');
     </script>
 
-    <!-- Event snippet for Submit lead form (2) conversion page -->
+    <!-- Conversion Tracking Functions -->
     <script>
-      // Function to track MyHealthCanvas purchase conversion
+      // MyHealthCanvas Purchase Tracking (Updated Values)
       function trackMyHealthCanvasPurchase() {
         gtag('event', 'conversion', {
           'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
-          'value': 1.0,
-          'currency': 'CHF'
+          'value': 10.50,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_' + Date.now()
         });
       }
-    </script>
 
-    <!-- Enhanced Google Ads Conversion Tracking -->
-    <script async>
-      // Enhanced Google Ads conversion tracking for AW-290924137
-      gtag('config', 'AW-290924137');
-      
-      // Enhanced ecommerce tracking for MyHealthCanvas purchases
+      // Enhanced MyHealthCanvas Purchase Tracking
       function trackEnhancedMyHealthCanvasPurchase() {
         gtag('event', 'purchase', {
           'send_to': 'AW-290924137',
-          'transaction_id': 'MHS_' + Date.now(),
-          'value': 1.0,
-          'currency': 'CHF',
+          'transaction_id': 'MHC_ENH_' + Date.now(),
+          'value': 10.50,
+          'currency': 'GBP',
           'items': [{
-            'item_id': 'myhealthcanvas_form',
-            'item_name': 'MyHealthCanvas PDF Form',
-            'category': 'Healthcare Tools',
+            'item_id': 'MHC_FORMS',
+            'item_name': 'MyHealthCanvas Forms',
+            'category': 'Healthcare Forms',
             'quantity': 1,
-            'price': 1.0
+            'price': 10.50
           }]
         });
       }

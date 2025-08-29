@@ -14,8 +14,38 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      
+      // Google Analytics
       gtag('config', 'G-6CNLJJJ8WQ');
+      
+      // Google Ads Account 1
       gtag('config', 'AW-17214175569');
+      
+      // Google Ads Account 2
+      gtag('config', 'AW-290924137');
+
+      // Fire conversion tracking on page load
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+        'value': 10.50,
+        'currency': 'GBP',
+        'transaction_id': 'MHC_SUCCESS_' + Date.now()
+      });
+
+      // Enhanced ecommerce conversion tracking
+      gtag('event', 'purchase', {
+        'send_to': 'AW-290924137',
+        'transaction_id': 'MHC_ENH_SUCCESS_' + Date.now(),
+        'value': 10.50,
+        'currency': 'GBP',
+        'items': [{
+          'item_id': 'MHC_FORMS',
+          'item_name': 'MyHealthCanvas Forms',
+          'category': 'Healthcare Forms',
+          'quantity': 1,
+          'price': 10.50
+        }]
+      });
     </script>
 
     <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
