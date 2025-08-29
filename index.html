@@ -108,6 +108,23 @@
           'value': 1
         });
       }
+
+      // Desktop Mailto Compatibility Functions
+      function openMailtoConsulting(event) {
+        event.preventDefault();
+        trackConsultationBooking();
+        trackCTAClick('Book Strategy Call');
+        window.location.href = 'mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry';
+        return false;
+      }
+
+      function openMailtoCollaboration(event) {
+        event.preventDefault();
+        trackContactFormSubmission();
+        trackCTAClick('Contact Us - Collaboration');
+        window.location.href = 'mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry';
+        return false;
+      }
     </script>
 
     <style>
@@ -612,7 +629,7 @@
         <div class="section-content">
           <h2>Consulting</h2>
           <p>Partner with Andy Squire to design patient-first AI solutions that improve outcomes and operational efficiency.</p>
-          <a href="mailto:andy@andysquire.ai?subject=Healthcare AI Consulting Inquiry" class="cta-button" onclick="trackConsultationBooking(); trackCTAClick('Book Strategy Call')">Book a Strategy Call</a>
+          <a href="#" class="cta-button" onclick="openMailtoConsulting(event)">Book a Strategy Call</a>
         </div>
       </section>
 
@@ -652,7 +669,7 @@
           <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
           <p><strong>Are you - Robotics Manufacturer, Healthcare Institute, Investor, Patient or Advocate?</strong></p>
           <div class="cta-buttons">
-            <a href="mailto:andy@andysquire.ai?subject=Humanoid Healthcare Collaboration Inquiry" class="cta-button" onclick="trackContactFormSubmission(); trackCTAClick('Contact Us - Collaboration')">Contact Us</a>
+            <a href="#" class="cta-button" onclick="openMailtoCollaboration(event)">Contact Us</a>
             <a href="https://www.linkedin.com/in/andysquire99/" target="_blank" class="cta-button secondary" onclick="trackCTAClick('Connect on LinkedIn')">Connect on LinkedIn</a>
           </div>
         </div>
