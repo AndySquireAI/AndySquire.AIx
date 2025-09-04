@@ -423,6 +423,15 @@
             box-shadow: 0 6px 20px rgba(76,175,80,0.4);
         }
 
+        .cta-button.regulatory {
+            background: linear-gradient(135deg, #2F4F4F 0%, #1C3A3A 100%);
+            box-shadow: 0 4px 15px rgba(47,79,79,0.3);
+        }
+
+        .cta-button.regulatory:hover {
+            box-shadow: 0 6px 20px rgba(47,79,79,0.4);
+        }
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -749,6 +758,12 @@
                 <img src="blueprint-preview-tilted.png" alt="Ecosystem Architecture Blueprint" class="blueprint-document">
               </div>
               <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+            </div>
+            <div class="download-item">
+              <div class="download-preview regulatory-preview">
+                <img src="andy-humanoid-collaboration.jpg" alt="Regulatory Hurdles & Possible Pathway Forward" class="regulatory-document">
+              </div>
+              <a href="assets/RegulatoryHurdlesforHH-Final2.pdf" download="Regulatory-Hurdles-Humanoid-Healthcare.pdf" class="cta-button regulatory" onclick="trackBlueprintDownload(); trackCTAClick('Download Regulatory Hurdles')">Regulatory Hurdles & Possible Pathway Forward</a>
             </div>
           </div>
         </div>
