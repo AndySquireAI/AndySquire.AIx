@@ -46,31 +46,73 @@
 
     <!-- Conversion Tracking Functions -->
     <script>
-      // MyHealthCanvas Purchase Tracking (Updated Values)
+      // MyHealthCanvas Current Plan (£9) Purchase Tracking
+      function trackMyHealthCanvasCurrentPurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': 9.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_CURRENT_' + Date.now()
+        });
+        console.log('MyHealthCanvas Current Plan purchase tracked');
+      }
+
+      // MyHealthCanvas Complete Plan (£12) Purchase Tracking
+      function trackMyHealthCanvasCompletePurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/xyz789',  // Different conversion ID for complete plan
+          'value': 12.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_COMPLETE_' + Date.now()
+        });
+        console.log('MyHealthCanvas Complete Plan purchase tracked');
+      }
+
+      // Generic MyHealthCanvas Purchase Tracking (fallback)
       function trackMyHealthCanvasPurchase() {
         gtag('event', 'conversion', {
           'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
           'value': 10.50,
           'currency': 'GBP',
-          'transaction_id': 'MHC_' + Date.now()
+          'transaction_id': 'MHC_GENERIC_' + Date.now()
         });
+        console.log('MyHealthCanvas generic purchase tracked');
       }
 
-      // Enhanced MyHealthCanvas Purchase Tracking
-      function trackEnhancedMyHealthCanvasPurchase() {
+      // Enhanced MyHealthCanvas Current Plan Tracking
+      function trackEnhancedMyHealthCanvasCurrentPurchase() {
         gtag('event', 'purchase', {
           'send_to': 'AW-290924137',
-          'transaction_id': 'MHC_ENH_' + Date.now(),
-          'value': 10.50,
+          'transaction_id': 'MHC_ENH_CURRENT_' + Date.now(),
+          'value': 9.00,
           'currency': 'GBP',
           'items': [{
-            'item_id': 'MHC_FORMS',
-            'item_name': 'MyHealthCanvas Forms',
+            'item_id': 'MHC_CURRENT',
+            'item_name': 'MyHealthCanvas Current Plan',
             'category': 'Healthcare Forms',
             'quantity': 1,
-            'price': 10.50
+            'price': 9.00
           }]
         });
+        console.log('Enhanced MyHealthCanvas Current Plan purchase tracked');
+      }
+
+      // Enhanced MyHealthCanvas Complete Plan Tracking
+      function trackEnhancedMyHealthCanvasCompletePurchase() {
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHC_ENH_COMPLETE_' + Date.now(),
+          'value': 12.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_COMPLETE',
+            'item_name': 'MyHealthCanvas Complete Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 12.00
+          }]
+        });
+        console.log('Enhanced MyHealthCanvas Complete Plan purchase tracked');
       }
     </script>
 
@@ -828,9 +870,9 @@
             },
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
-                // Track conversion
-                trackMyHealthCanvasPurchase();
-                trackEnhancedMyHealthCanvasPurchase();
+                // Track conversion with specific functions for Current Plan
+                trackMyHealthCanvasCurrentPurchase();
+                trackEnhancedMyHealthCanvasCurrentPurchase();
                 
                 // Redirect to success page
                 window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
@@ -870,9 +912,9 @@
             },
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
-                // Track conversion
-                trackMyHealthCanvasPurchase();
-                trackEnhancedMyHealthCanvasPurchase();
+                // Track conversion with specific functions for Complete Plan
+                trackMyHealthCanvasCompletePurchase();
+                trackEnhancedMyHealthCanvasCompletePurchase();
                 
                 // Redirect to success page
                 window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
