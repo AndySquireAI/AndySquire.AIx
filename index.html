@@ -80,14 +80,48 @@
         });
       }
 
-      // Blueprint Download Tracking
+      // Ecosystem Blueprint Download Tracking
+      function trackEcosystemBlueprintDownload() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/abc123',  // Specific conversion ID for ecosystem blueprint
+          'value': 25.00,
+          'currency': 'GBP',
+          'transaction_id': 'ECOSYSTEM_BLUEPRINT_' + Date.now()
+        });
+        console.log('Ecosystem Blueprint download tracked');
+      }
+
+      // Humanoid Healthcare Pitch Download Tracking
+      function trackHumanoidPitchDownload() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/def456',  // Specific conversion ID for pitch download
+          'value': 20.00,
+          'currency': 'GBP',
+          'transaction_id': 'HUMANOID_PITCH_' + Date.now()
+        });
+        console.log('Humanoid Healthcare Pitch download tracked');
+      }
+
+      // Regulatory Document Download Tracking
+      function trackRegulatoryDownload() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/ghi789',  // Specific conversion ID for regulatory document
+          'value': 30.00,
+          'currency': 'GBP',
+          'transaction_id': 'REGULATORY_SEPT2025_' + Date.now()
+        });
+        console.log('Regulatory document download tracked');
+      }
+
+      // Generic Blueprint Download (fallback for compatibility)
       function trackBlueprintDownload() {
         gtag('event', 'conversion', {
           'send_to': 'AW-290924137',
           'value': 25.00,
           'currency': 'GBP',
-          'transaction_id': 'BLUEPRINT_SEPT2025_' + Date.now()
+          'transaction_id': 'BLUEPRINT_GENERIC_' + Date.now()
         });
+        console.log('Generic blueprint download tracked');
       }
 
       // Contact Form Submission Tracking
@@ -776,19 +810,19 @@
               <div class="download-preview pitch-preview">
                 <img src="pitch-to-manufacturers.jpeg" alt="Pitch to Manufacturers Document" class="pitch-document">
               </div>
-              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackBlueprintDownload(); trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackHumanoidPitchDownload(); trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
             </div>
             <div class="download-item">
               <div class="download-preview blueprint-preview">
                 <img src="blueprint-preview-tilted.png" alt="Ecosystem Architecture Blueprint" class="blueprint-document">
               </div>
-              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackEcosystemBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
             </div>
             <div class="download-item">
               <div class="download-preview regulatory-preview">
                 <img src="regulatory-hurdles-preview-tilted.png" alt="Regulatory Hurdles & Possible Pathway Forward - Updated Sept'25" class="regulatory-document">
               </div>
-              <a href="assets/RegulatoryHurdlesforHH-Final2.pdf" download="Regulatory-Hurdles-Humanoid-Healthcare.pdf" class="cta-button regulatory" onclick="trackBlueprintDownload(); trackCTAClick('Download Regulatory Hurdles - Updated Sept 2025')">Regulatory Hurdles & Possible Pathway Forward</a>
+              <a href="assets/RegulatoryHurdlesforHH-Final2.pdf" download="Regulatory-Hurdles-Humanoid-Healthcare.pdf" class="cta-button regulatory" onclick="trackRegulatoryDownload(); trackCTAClick('Download Regulatory Hurdles - Updated Sept 2025')">Regulatory Hurdles & Possible Pathway Forward</a>
             </div>
           </div>
         </div>
