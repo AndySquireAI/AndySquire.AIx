@@ -256,6 +256,9 @@
       }
     </script>
 
+    <!-- Mobile-First Grid CSS for Humanoid Healthcare Section -->
+    <link rel="stylesheet" href="mobile-first-grid.css">
+
     <style>
         * {
             margin: 0;
@@ -796,33 +799,79 @@
         </div>
       </section>
 
-      <!-- Humanoid Healthcare Section -->
+      <!-- Humanoid Healthcare Section - Mobile-First 2x3 Grid -->
       <section id="humanoid-healthcare" class="section">
         <div class="section-image">
-          <img src="humanoid-ecosystem-straight.jpg" alt="Humanoid healthcare technology and innovation">
+          <img src="humanoid-healthcare-header.png" alt="Humanoid healthcare technology and innovation">
         </div>
         <div class="section-content">
-          <h2>Humanoid Healthcare</h2>
-          <p>Seize the $1 Trillion Humanoid Healthcare Opportunity by proactively mitigating the urgent SaMD (Software as a Medical Device) patient safety and legal liability risks, ensuring that new advanced general-purpose Home Humanoid systems are never misused as unregulated caregivers</p>
+          <h2>Seize the $1 Trillion Opportunity</h2>
+          <p class="section-subtitle">New Investor Gateway: Watch Investor Pitch Video</p>
+          <p>Download the Investors Deck & Regulatory Pathway Doc</p>
           
-          <div class="humanoid-downloads">
-            <div class="download-item">
-              <div class="download-preview pitch-preview">
-                <img src="pitch-to-manufacturers.jpeg" alt="Pitch to Manufacturers Document" class="pitch-document">
-              </div>
-              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="cta-button" onclick="trackHumanoidPitchDownload(); trackCTAClick('Download Pitch to Manufacturers')">Download Pitch to Manufacturers</a>
+          <!-- Mobile-First 2x3 Grid -->
+          <div class="investor-grid">
+            <!-- Row 1 -->
+            <div class="grid-item primary-cta">
+              <div class="grid-icon">🎥</div>
+              <h3>Watch Investor Pitch Video</h3>
+              <p>See the complete investment opportunity</p>
+              <a href="#" class="grid-button primary" onclick="trackCTAClick('Watch Investor Pitch Video')">
+                <span>Watch Now</span>
+                <span class="arrow">→</span>
+              </a>
             </div>
-            <div class="download-item">
-              <div class="download-preview blueprint-preview">
-                <img src="blueprint-preview-tilted.png" alt="Ecosystem Architecture Blueprint" class="blueprint-document">
-              </div>
-              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="cta-button secondary" onclick="trackEcosystemBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">Download Ecosystem Architecture Blueprint</a>
+            
+            <div class="grid-item">
+              <div class="grid-icon">📊</div>
+              <h3>Download the Investors Deck</h3>
+              <p>Complete presentation with market data</p>
+              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackCTAClick('Download Investors Deck')">
+                <span>Download</span>
+                <span class="download-icon">⬇</span>
+              </a>
             </div>
-            <div class="download-item">
-              <div class="download-preview regulatory-preview">
-                <img src="regulatory-hurdles-preview-tilted.png" alt="Regulatory Hurdles & Possible Pathway Forward - Updated Sept'25" class="regulatory-document">
-              </div>
-              <a href="assets/RegulatoryHurdlesforHH-Final2.pdf" download="Regulatory-Hurdles-Humanoid-Healthcare.pdf" class="cta-button regulatory" onclick="trackRegulatoryDownload(); trackCTAClick('Download Regulatory Hurdles - Updated Sept 2025')">Regulatory Hurdles & Possible Pathway Forward</a>
+            
+            <!-- Row 2 -->
+            <div class="grid-item">
+              <div class="grid-icon">🤝</div>
+              <h3>Partnering with Robotics Manufacturers</h3>
+              <p>Partnership opportunities and pitch</p>
+              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="grid-button" onclick="trackHumanoidPitchDownload(); trackCTAClick('Download Pitch to Manufacturers')">
+                <span>Download</span>
+                <span class="download-icon">⬇</span>
+              </a>
+            </div>
+            
+            <div class="grid-item">
+              <div class="grid-icon">🏗️</div>
+              <h3>Download the Blueprint</h3>
+              <p>Ecosystem architecture overview</p>
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="grid-button" onclick="trackEcosystemBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">
+                <span>Download</span>
+                <span class="download-icon">⬇</span>
+              </a>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="grid-item">
+              <div class="grid-icon">⚖️</div>
+              <h3>Regulatory Path Forwards</h3>
+              <p>Updated regulatory pathway document</p>
+              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Sept2025.pdf" class="grid-button" onclick="trackRegulatoryDownload(); trackCTAClick('Download Regulatory Path Forwards')">
+                <span>Download</span>
+                <span class="download-icon">⬇</span>
+              </a>
+            </div>
+            
+            <div class="grid-item">
+              <div class="grid-icon">🔧</div>
+              <h3>SaMD Features Infographic</h3>
+              <p>Software as Medical Device overview</p>
+              <a href="SaMDFeaturesInfographic.pdf" download="SaMD-Features-Infographic.pdf" class="grid-button" onclick="trackCTAClick('Download SaMD Features Infographic')">
+                <span>Download</span>
+                <span class="download-icon">⬇</span>
+              </a>
             </div>
           </div>
         </div>
