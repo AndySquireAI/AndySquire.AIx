@@ -127,69 +127,9 @@
 /* Section Header Updates */
 #humanoid-healthcare .section-content h2 {
   font-size: 2rem;
-  color: white;
+  color: #2f5975;
   margin-bottom: 0.5rem;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  position: relative;
-  z-index: 2;
-}
-
-/* Header Section with Background Image */
-#humanoid-healthcare .section-content {
-  position: relative;
-}
-
-.section-header {
-  background-image: linear-gradient(rgba(47, 89, 117, 0.8), rgba(6, 178, 164, 0.8)), url('humanoid-healthcare-header.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.section-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(47, 89, 117, 0.7) 0%, rgba(6, 178, 164, 0.7) 100%);
-  z-index: 1;
-}
-
-.section-header h2,
-.section-header .section-subtitle,
-.section-header p {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.section-header .section-subtitle {
-  font-size: 1.4rem;
-  color: #fd981b;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  margin-bottom: 0;
 }
 
 .section-subtitle {
