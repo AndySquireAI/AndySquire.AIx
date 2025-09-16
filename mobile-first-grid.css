@@ -51,16 +51,41 @@
 .grid-item.primary-cta h3,
 .grid-item.primary-cta p {
   color: white;
-}
-
-/* Grid Icons */
+/* Premium Icon Styling */
 .grid-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
 }
 
-/* Grid Content */
+/* Specific icon backgrounds */
+.grid-item:nth-child(1) .grid-icon {
+  background-image: url('icon-video-pitch.png');
+}
+
+.grid-item:nth-child(2) .grid-icon {
+  background-image: url('icon-investor-deck.png');
+}
+
+.grid-item:nth-child(3) .grid-icon {
+  background-image: url('icon-partnership.png');
+}
+
+.grid-item:nth-child(4) .grid-icon {
+  background-image: url('icon-blueprint.png');
+}
+
+.grid-item:nth-child(5) .grid-icon {
+  background-image: url('icon-regulatory.png');
+}
+
+.grid-item:nth-child(6) .grid-icon {
+  background-image: url('icon-samd.png');
+}/* Grid Content */
 .grid-item h3 {
   font-size: 1.25rem;
   font-weight: 600;
