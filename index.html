@@ -144,11 +144,91 @@
         });
       }
 
-      // Generic CTA Click Tracking
+      // Enhanced GA4 Event Tracking for Investor Actions
+      
+      // File Download Tracking (GA4 Standard Event)
+      function trackFileDownload(fileName, fileType, buttonName) {
+        // GA4 file_download event
+        gtag('event', 'file_download', {
+          'file_name': fileName,
+          'file_extension': fileType,
+          'link_text': buttonName,
+          'event_category': 'Investor_Content',
+          'event_label': fileName,
+          'value': getFileValue(fileName)
+        });
+        
+        console.log('File download tracked:', fileName);
+      }
+      
+      // Video Interaction Tracking
+      function trackVideoClick(videoTitle, videoUrl) {
+        // GA4 video_start event (when user clicks to watch)
+        gtag('event', 'video_start', {
+          'video_title': videoTitle,
+          'video_url': videoUrl,
+          'event_category': 'Investor_Content',
+          'event_label': 'Watch Investor Pitch Video',
+          'value': 15
+        });
+        
+        console.log('Video click tracked:', videoTitle);
+      }
+      
+      // Video Completion Tracking (to be called from YouTube API)
+      function trackVideoComplete(videoTitle, watchPercentage) {
+        // GA4 video_complete event
+        gtag('event', 'video_complete', {
+          'video_title': videoTitle,
+          'video_percent': watchPercentage,
+          'event_category': 'Investor_Content',
+          'event_label': 'Investor Pitch Video Complete',
+          'value': 20
+        });
+        
+        console.log('Video completion tracked:', videoTitle, watchPercentage + '%');
+      }
+      
+      // Assign values to different file types for conversion optimization
+      function getFileValue(fileName) {
+        const fileValues = {
+          'InvestorDeck-HumanoidHealthcare.pdf': 25,
+          'HumanoidHealthcarePITCHx.pdf': 20,
+          'HumanoidHealthcareEcosystemBlueprint.pdf': 22,
+          'UpdatedSept25HumanoidRegulatoryPathway.pdf': 30,
+          'SaMDFeaturesInfographic.pdf': 18
+        };
+        return fileValues[fileName] || 15;
+      }
+      
+      // SaMD Features Infographic Download Tracking (was missing)
+      function trackSaMDFeaturesDownload() {
+        // Google Ads conversion
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/samd123',  // You'll need to create this conversion ID
+          'value': 18.00,
+          'currency': 'GBP',
+          'transaction_id': 'SAMD_FEATURES_' + Date.now()
+        });
+        
+        // GA4 file_download event
+        trackFileDownload('SaMDFeaturesInfographic.pdf', 'pdf', 'Download SaMD Features Infographic');
+        
+        console.log('SaMD Features Infographic download tracked');
+      }
+      
+      // Enhanced CTA Click Tracking (backward compatibility)
       function trackCTAClick(ctaType) {
         gtag('event', 'click', {
           'event_category': 'CTA',
           'event_label': ctaType,
+          'value': 1
+        });
+        
+        // Also track as custom event for better analysis
+        gtag('event', 'cta_interaction', {
+          'cta_name': ctaType,
+          'event_category': 'User_Engagement',
           'value': 1
         });
       }
@@ -828,7 +908,7 @@
               <img src="icon-video-pitch.png" alt="Watch Video" class="grid-icon-img">
               <h3>Watch Investor Pitch Video: The Full Opportunity</h3>
               <!-- Updated: Watch Now button now links to YouTube video - PatientCentricCare.AI channel -->
-              <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" class="grid-button primary" onclick="trackCTAClick('Watch Investor Pitch Video')">
+              <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" class="grid-button primary" onclick="trackVideoClick('Humanoid Healthcare Investor Pitch', 'https://www.youtube.com/watch?v=RkQcJDRVj-o'); trackCTAClick('Watch Investor Pitch Video')">
                 <span>Watch Now</span>
                 <span class="arrow">→</span>
               </a>
@@ -837,7 +917,7 @@
             <div class="grid-item">
               <img src="icon-investor-deck.png" alt="Investor Deck" class="grid-icon-img">
               <h3>Download Investor Deck: Market & Financials</h3>
-              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackCTAClick('Download Investors Deck')">
+              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackFileDownload('InvestorDeck-HumanoidHealthcare.pdf', 'pdf', 'Download Investor Deck'); trackCTAClick('Download Investors Deck')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -847,7 +927,7 @@
             <div class="grid-item">
               <img src="icon-partnership.png" alt="Partnership" class="grid-icon-img">
               <h3>Partnership Opportunities: Robotics Manufacturers</h3>
-              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="grid-button" onclick="trackHumanoidPitchDownload(); trackCTAClick('Download Pitch to Manufacturers')">
+              <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="grid-button" onclick="trackHumanoidPitchDownload(); trackFileDownload('HumanoidHealthcarePITCHx.pdf', 'pdf', 'Download Pitch to Manufacturers'); trackCTAClick('Download Pitch to Manufacturers')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -856,7 +936,7 @@
             <div class="grid-item">
               <img src="icon-blueprint.png" alt="Blueprint" class="grid-icon-img">
               <h3>Ecosystem Architecture Blueprint</h3>
-              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="grid-button" onclick="trackEcosystemBlueprintDownload(); trackCTAClick('Download Ecosystem Architecture')">
+              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="grid-button" onclick="trackEcosystemBlueprintDownload(); trackFileDownload('HumanoidHealthcareEcosystemBlueprint.pdf', 'pdf', 'Download Ecosystem Architecture'); trackCTAClick('Download Ecosystem Architecture')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -866,7 +946,7 @@
             <div class="grid-item">
               <img src="icon-regulatory.png" alt="Regulatory" class="grid-icon-img">
               <h3>Regulatory Path Forwards</h3>
-              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Sept2025.pdf" class="grid-button" onclick="trackRegulatoryDownload(); trackCTAClick('Download Regulatory Path Forwards')">
+              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Sept2025.pdf" class="grid-button" onclick="trackRegulatoryDownload(); trackFileDownload('UpdatedSept25HumanoidRegulatoryPathway.pdf', 'pdf', 'Download Regulatory Path Forwards'); trackCTAClick('Download Regulatory Path Forwards')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -875,7 +955,7 @@
             <div class="grid-item">
               <img src="icon-samd.png" alt="SaMD Features" class="grid-icon-img">
               <h3>SaMD Features Infographic</h3>
-              <a href="SaMDFeaturesInfographic.pdf" download="SaMD-Features-Infographic.pdf" class="grid-button" onclick="trackCTAClick('Download SaMD Features Infographic')">
+              <a href="SaMDFeaturesInfographic.pdf" download="SaMD-Features-Infographic.pdf" class="grid-button" onclick="trackSaMDFeaturesDownload(); trackFileDownload('SaMDFeaturesInfographic.pdf', 'pdf', 'Download SaMD Features Infographic'); trackCTAClick('Download SaMD Features Infographic')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -1000,6 +1080,9 @@
         console.log('CTA Clicked:', buttonName);
       }
     </script>
+
+    <!-- YouTube Video Tracking Script -->
+    <script src="youtube-tracking.js"></script>
 
     <!-- LinkedIn Insight Tag -->
     <script type="text/javascript">
