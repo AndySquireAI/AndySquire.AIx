@@ -201,17 +201,58 @@
         return fileValues[fileName] || 15;
       }
       
-      // SaMD Features Infographic Download Tracking (was missing)
-      function trackSaMDFeaturesDownload() {
-        // Google Ads conversion
+      // NEW GOOGLE ADS CONVERSION TRACKING FUNCTIONS (September 2025)
+      
+      // 1. Watch Full Investor Video Conversion (NEW)
+      function trackWatchInvestorVideo() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/samd123',  // You'll need to create this conversion ID
-          'value': 18.00,
-          'currency': 'GBP',
-          'transaction_id': 'SAMD_FEATURES_' + Date.now()
+          'send_to': 'AW-290924137/watch_video_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'value': 50.00,
+          'currency': 'CHF',
+          'transaction_id': 'WATCH_INVESTOR_VIDEO_' + Date.now()
         });
+        console.log('Watch full investor video conversion tracked');
+      }
+      
+      // 2. Download Investor Deck Conversion (NEW)
+      function trackDownloadInvestorDeck() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/download_deck_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'value': 75.00,
+          'currency': 'CHF',
+          'transaction_id': 'DOWNLOAD_INVESTOR_DECK_' + Date.now()
+        });
+        console.log('Download investor deck conversion tracked');
+      }
+      
+      // 3. Download Regulatory Plan Conversion (NEW)
+      function trackDownloadRegulatoryPlan() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/download_regulatory_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'value': 60.00,
+          'currency': 'CHF',
+          'transaction_id': 'DOWNLOAD_REGULATORY_PLAN_' + Date.now()
+        });
+        console.log('Download regulatory plan conversion tracked');
+      }
+      
+      // 4. Download SaMD Feature Infographic Conversion (NEW)
+      function trackDownloadSaMDInfographic() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/download_samd_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'value': 40.00,
+          'currency': 'CHF',
+          'transaction_id': 'DOWNLOAD_SAMD_INFOGRAPHIC_' + Date.now()
+        });
+        console.log('Download SaMD infographic conversion tracked');
+      }
+
+      // SaMD Features Infographic Download Tracking (UPDATED - now calls new conversion function)
+      function trackSaMDFeaturesDownload() {
+        // NEW Google Ads conversion tracking
+        trackDownloadSaMDInfographic();
         
-        // GA4 file_download event
+        // GA4 file_download event (existing)
         trackFileDownload('SaMDFeaturesInfographic.pdf', 'pdf', 'Download SaMD Features Infographic');
         
         console.log('SaMD Features Infographic download tracked');
@@ -908,7 +949,7 @@
               <img src="icon-video-pitch.png" alt="Watch Video" class="grid-icon-img">
               <h3>Watch Investor Pitch Video: The Full Opportunity</h3>
               <!-- Updated: Watch Now button now links to YouTube video - PatientCentricCare.AI channel -->
-              <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" class="grid-button primary" onclick="trackVideoClick('Humanoid Healthcare Investor Pitch', 'https://www.youtube.com/watch?v=RkQcJDRVj-o'); trackCTAClick('Watch Investor Pitch Video')">
+              <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" class="grid-button primary" onclick="trackWatchInvestorVideo(); trackVideoClick('Humanoid Healthcare Investor Pitch', 'https://www.youtube.com/watch?v=RkQcJDRVj-o'); trackCTAClick('Watch Investor Pitch Video')"
                 <span>Watch Now</span>
                 <span class="arrow">→</span>
               </a>
@@ -917,7 +958,7 @@
             <div class="grid-item">
               <img src="icon-investor-deck.png" alt="Investor Deck" class="grid-icon-img">
               <h3>Download Investor Deck: Market & Financials</h3>
-              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackFileDownload('InvestorDeck-HumanoidHealthcare.pdf', 'pdf', 'Download Investor Deck'); trackCTAClick('Download Investors Deck')">
+              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackDownloadInvestorDeck(); trackFileDownload('InvestorDeck-HumanoidHealthcare.pdf', 'pdf', 'Download Investor Deck'); trackCTAClick('Download Investors Deck')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -946,7 +987,7 @@
             <div class="grid-item">
               <img src="icon-regulatory.png" alt="Regulatory" class="grid-icon-img">
               <h3>Regulatory Path Forwards</h3>
-              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Sept2025.pdf" class="grid-button" onclick="trackRegulatoryDownload(); trackFileDownload('UpdatedSept25HumanoidRegulatoryPathway.pdf', 'pdf', 'Download Regulatory Path Forwards'); trackCTAClick('Download Regulatory Path Forwards')">
+              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Sept2025.pdf" class="grid-button" onclick="trackDownloadRegulatoryPlan(); trackRegulatoryDownload(); trackFileDownload('UpdatedSept25HumanoidRegulatoryPathway.pdf', 'pdf', 'Download Regulatory Path Forwards'); trackCTAClick('Download Regulatory Path Forwards')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
