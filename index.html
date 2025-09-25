@@ -202,11 +202,12 @@
       }
       
       // NEW GOOGLE ADS CONVERSION TRACKING FUNCTIONS (September 2025)
+      // Updated with correct Google Ads account: AW-17214175569
       
       // 1. Watch Full Investor Video Conversion (NEW)
       function trackWatchInvestorVideo() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/watch_video_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'send_to': 'AW-17214175569/WatchInvestorVideoConv',  // Correct account ID - needs actual conversion ID
           'value': 50.00,
           'currency': 'CHF',
           'transaction_id': 'WATCH_INVESTOR_VIDEO_' + Date.now()
@@ -217,7 +218,7 @@
       // 2. Download Investor Deck Conversion (NEW)
       function trackDownloadInvestorDeck() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/download_deck_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'send_to': 'AW-17214175569/DownloadInvestorDeckConv',  // Correct account ID - needs actual conversion ID
           'value': 75.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_INVESTOR_DECK_' + Date.now()
@@ -228,7 +229,7 @@
       // 3. Download Regulatory Plan Conversion (NEW)
       function trackDownloadRegulatoryPlan() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/download_regulatory_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'send_to': 'AW-17214175569/DownloadRegulatoryConv',  // Correct account ID - needs actual conversion ID
           'value': 60.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_REGULATORY_PLAN_' + Date.now()
@@ -239,7 +240,7 @@
       // 4. Download SaMD Feature Infographic Conversion (NEW)
       function trackDownloadSaMDInfographic() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/download_samd_conversion_id',  // Replace with actual conversion ID from Google Ads
+          'send_to': 'AW-17214175569/DownloadSaMDInfographicConv',  // Correct account ID - needs actual conversion ID
           'value': 40.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_SAMD_INFOGRAPHIC_' + Date.now()
