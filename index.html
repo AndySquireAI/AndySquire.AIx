@@ -255,6 +255,39 @@
         
         console.log('SaMD Features Infographic download tracked');
       }
+
+      // 5. MyHealthCanvas Purchase Conversion (PRIORITY #1)
+      function trackMyHealthCanvasPurchase(purchaseValue = 10.5) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': purchaseValue,
+          'currency': 'CHF',
+          'transaction_id': 'MYHEALTHCANVAS_PURCHASE_' + Date.now()
+        });
+        console.log('MyHealthCanvas purchase conversion tracked with value:', purchaseValue);
+      }
+      
+      // 6. Download Ecosystem Blueprint Conversion
+      function trackDownloadEcosystemBlueprint() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/Qxs0CLnH9IYbENHyrZBA',
+          'value': 50.00,
+          'currency': 'CHF',
+          'transaction_id': 'DOWNLOAD_ECOSYSTEM_BLUEPRINT_' + Date.now()
+        });
+        console.log('Download Ecosystem Blueprint conversion tracked');
+      }
+      
+      // 7. Download Partnership Opportunities Conversion
+      function trackDownloadPartnershipOpportunities() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/MqWsCKvHtJEbENHyrZBA',
+          'value': 40.00,
+          'currency': 'CHF',
+          'transaction_id': 'DOWNLOAD_PARTNERSHIP_OPPORTUNITIES_' + Date.now()
+        });
+        console.log('Download Partnership Opportunities conversion tracked');
+      }
       
       // Enhanced CTA Click Tracking (backward compatibility)
       function trackCTAClick(ctaType) {
