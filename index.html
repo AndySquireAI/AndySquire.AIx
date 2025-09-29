@@ -44,10 +44,7 @@
       // Google Analytics
       gtag('config', 'G-6CNLJJJ8WQ');
       
-      // Google Ads Account 1
-      gtag('config', 'AW-17214175569');
-      
-      // Google Ads Account 2  
+      // Google Ads Account (Correct Account ID)
       gtag('config', 'AW-290924137');
     </script>
 
@@ -56,7 +53,7 @@
       // MyHealthCanvas Purchase Tracking
       function trackMyHealthCanvasPurchase() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'send_to': 'AW-290924137/PLACEHOLDER_MHC_PURCHASE',
           'value': 10.50,
           'currency': 'GBP',
           'transaction_id': 'MHC_' + Date.now()
@@ -201,13 +198,13 @@
         return fileValues[fileName] || 15;
       }
       
-      // NEW GOOGLE ADS CONVERSION TRACKING FUNCTIONS (September 2025)
-      // Updated with correct Google Ads account: AW-17214175569
+      // GOOGLE ADS CONVERSION TRACKING FUNCTIONS (September 2025)
+      // Updated with correct Google Ads account: AW-290924137
       
-      // 1. Watch Full Investor Video Conversion (NEW)
+      // 1. Watch Full Investor Video Conversion
       function trackWatchInvestorVideo() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/RenOCPOlx6EbENHyrzBA',  // ACTUAL CONVERSION ID
+          'send_to': 'AW-290924137/WATCH_INVESTOR_VIDEO',  // TO BE UPDATED WITH REAL CONVERSION ID
           'value': 50.00,
           'currency': 'CHF',
           'transaction_id': 'WATCH_INVESTOR_VIDEO_' + Date.now()
@@ -215,10 +212,10 @@
         console.log('Watch full investor video conversion tracked');
       }
       
-      // 2. Download Investor Deck Conversion (NEW)
+      // 2. Download Investor Deck Conversion
       function trackDownloadInvestorDeck() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/GHJjCPalx6EbENHyrzBA',  // ACTUAL CONVERSION ID
+          'send_to': 'AW-290924137/DOWNLOAD_INVESTOR_DECK',  // TO BE UPDATED WITH REAL CONVERSION ID
           'value': 75.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_INVESTOR_DECK_' + Date.now()
@@ -226,10 +223,10 @@
         console.log('Download investor deck conversion tracked');
       }
       
-      // 3. Download Regulatory Plan Conversion (NEW)
+      // 3. Download Regulatory Plan Conversion
       function trackDownloadRegulatoryPlan() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/gjZLCPmlx6EbENHyrzBA',  // ACTUAL CONVERSION ID
+          'send_to': 'AW-290924137/DOWNLOAD_REGULATORY_PLAN',  // TO BE UPDATED WITH REAL CONVERSION ID
           'value': 60.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_REGULATORY_PLAN_' + Date.now()
@@ -237,10 +234,10 @@
         console.log('Download regulatory plan conversion tracked');
       }
       
-      // 4. Download SaMD Feature Infographic Conversion (NEW)
+      // 4. Download SaMD Feature Infographic Conversion
       function trackDownloadSaMDInfographic() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/Z0RhCPylx6EbENHyrzBA',  // ACTUAL CONVERSION ID
+          'send_to': 'AW-290924137/DOWNLOAD_SAMD_INFOGRAPHIC',  // TO BE UPDATED WITH REAL CONVERSION ID
           'value': 40.00,
           'currency': 'CHF',
           'transaction_id': 'DOWNLOAD_SAMD_INFOGRAPHIC_' + Date.now()
