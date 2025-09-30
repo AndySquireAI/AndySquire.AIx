@@ -871,11 +871,16 @@
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
                 // Track conversion with specific functions for Current Plan
-                trackMyHealthCanvasCurrentPurchase();
-                trackEnhancedMyHealthCanvasCurrentPurchase();
+                // Add small delay to ensure gtag is ready
+                setTimeout(function() {
+                  trackMyHealthCanvasCurrentPurchase();
+                  trackEnhancedMyHealthCanvasCurrentPurchase();
+                }, 100);
                 
-                // Redirect to success page
-                window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
+                // Redirect to success page after a longer delay to ensure tracking fires
+                setTimeout(function() {
+                  window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 500);
               });
             },
             onError: function(err) {
@@ -913,11 +918,16 @@
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
                 // Track conversion with specific functions for Complete Plan
-                trackMyHealthCanvasCompletePurchase();
-                trackEnhancedMyHealthCanvasCompletePurchase();
+                // Add small delay to ensure gtag is ready
+                setTimeout(function() {
+                  trackMyHealthCanvasCompletePurchase();
+                  trackEnhancedMyHealthCanvasCompletePurchase();
+                }, 100);
                 
-                // Redirect to success page
-                window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
+                // Redirect to success page after a longer delay to ensure tracking fires
+                setTimeout(function() {
+                  window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 500);
               });
             },
             onError: function(err) {
