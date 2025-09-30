@@ -256,15 +256,26 @@
         console.log('SaMD Features Infographic download tracked');
       }
 
-      // 5. MyHealthCanvas Purchase Conversion (PRIORITY #1)
-      function trackMyHealthCanvasPurchase(purchaseValue = 10.5) {
+      // 5a. MyHealthCanvas Starter Kit Purchase (£9) - PRIORITY #1
+      function trackMyHealthCanvasStarterKitPurchase() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
-          'value': purchaseValue,
-          'currency': 'CHF',
-          'transaction_id': 'MYHEALTHCANVAS_PURCHASE_' + Date.now()
+          'send_to': 'AW-17214175569/DBeJCJPqvqQbENHyrZBA',
+          'value': 9.0,
+          'currency': 'GBP',
+          'transaction_id': 'MYHEALTHCANVAS_STARTER_' + Date.now()
         });
-        console.log('MyHealthCanvas purchase conversion tracked with value:', purchaseValue);
+        console.log('MyHealthCanvas Starter Kit purchase conversion tracked (£9)');
+      }
+      
+      // 5b. MyHealthCanvas Complete Plan Purchase (£12) - PRIORITY #1
+      function trackMyHealthCanvasCompletePurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/86auCO79yKQbENHyrZBA',
+          'value': 12.0,
+          'currency': 'GBP',
+          'transaction_id': 'MYHEALTHCANVAS_COMPLETE_' + Date.now()
+        });
+        console.log('MyHealthCanvas Complete Plan purchase conversion tracked (£12)');
       }
       
       // 6. Download Ecosystem Blueprint Conversion
