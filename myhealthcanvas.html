@@ -1,4 +1,4 @@
-#<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -635,13 +635,12 @@
     <section class="page-header">
       <div class="container">
         <h1>Prepare Better Questions for your Doctors</h1>
-        <p>Always with you. Never lose or forget. Choose the plan that's right for you.</p>
+        <p>Professional PDF forms that help you organize symptoms, medications, and concerns so you never forget important health details during appointments. Choose the plan that's right for you.</p>
         
         <!-- Social Proof -->
         <div style="text-align: center; margin: 20px 0; color: white; font-size: 0.95rem; font-weight: 500;">
           🎯 <strong>Take back control of your health narrative & share it with confidence</strong><br><br>
-          ⭐ <strong>Recommended by healthcare professionals</strong><br><br>
-          • 💬 <strong>Support Cancer Research UK</strong>
+          ⭐ <strong>Recommended by healthcare professionals</strong> • 💬 <strong>Support Cancer Research UK</strong>
         </div>
         
         <!-- Form Preview Image -->
@@ -660,9 +659,9 @@
         
         <!-- Current Plan Card -->
         <div class="plan-card">
-          <h2 class="plan-title current">'Current' ONE-Page Communication Form</h2>
+          <h2 class="plan-title current">Doctor Communication Starter Kit</h2>
           <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 8px;">Perfect for Your Next Appointment</p>
-          <p class="plan-description">Never forget important questions again. ONE-page PDF Form to organize your health data & communicate clearly for better care</p>
+          <p class="plan-description">Never forget important symptoms or questions again. This professional PDF helps you organize your health information so you can communicate clearly with your medical team and get better care.</p>
           
           <div class="plan-feature current">✔ Use "Fill & Sign" in free Adobe Acrobat Reader</div>
           
@@ -696,7 +695,7 @@
               • <strong>Instant Download</strong> - Ready to use in 2 Minutes<br>
               • <strong>Works on Phone, Tablet, or Computer</strong><br>
               &nbsp;&nbsp;(use free Adobe Acrobat Reader - Fill & Sign)<br>
-              • <strong>Professional Format Doctors Appreciate</strong><br>
+              • <strong>Professional Format Doctors Love</strong><br>
               • <strong>One-Time Purchase</strong> - Yours Forever
             </div>
           </div>
@@ -706,14 +705,14 @@
 
         <!-- Complete Plan Card -->
         <div class="plan-card featured">
-          <h2 class="plan-title complete">'Complete' TWO-Page Communication Form</h2>
+          <h2 class="plan-title complete">Complete Health Story Communication Plan</h2>
           <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 8px;">For Comprehensive Health Management</p>
-          <p class="plan-description">Your TWO-page health story for more detailed communication INCLUDING advanced care planning & legacy</p>
+          <p class="plan-description">Everything you need for comprehensive health management. Includes all Doctor Communication Kit features PLUS advanced care planning and legacy documentation.</p>
           
           <div class="plan-feature complete">✔ Use "Fill & Sign" button for easy mobile completion</div>
           
           <div class="features-list">
-            <div style="color: #8b5cf6; font-weight: bold; margin-bottom: 12px;">Everything in Communication Starter Kit, PLUS:</div>
+            <div style="color: #8b5cf6; font-weight: bold; margin-bottom: 12px;">Everything in Doctor Communication Kit, PLUS:</div>
             <div class="feature-item">
               <span class="feature-bullet">✓</span>
               <div><strong>Advance care planning</strong> documentation</div>
@@ -871,17 +870,20 @@
             },
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
-                // Track conversion with specific functions for Current Plan
-                // Add small delay to ensure gtag is ready
+                console.log('✅ Payment captured successfully for Current Plan:', details);
+                
+                // Track conversion with longer delay to ensure gtag is ready
                 setTimeout(function() {
+                  console.log('🎯 Firing conversion tracking for Current Plan...');
                   trackMyHealthCanvasCurrentPurchase();
                   trackEnhancedMyHealthCanvasCurrentPurchase();
-                }, 100);
-                
-                // Redirect to success page after a longer delay to ensure tracking fires
-                setTimeout(function() {
-                  window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
                 }, 500);
+                
+                // Redirect to success page after 2 seconds to ensure tracking completes
+                setTimeout(function() {
+                  console.log('✅ Redirecting to success page...');
+                  window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 2000);
               });
             },
             onError: function(err) {
@@ -918,17 +920,20 @@
             },
             onApprove: function(data, actions) {
               return actions.order.capture().then(function(details) {
-                // Track conversion with specific functions for Complete Plan
-                // Add small delay to ensure gtag is ready
+                console.log('✅ Payment captured successfully for Complete Plan:', details);
+                
+                // Track conversion with longer delay to ensure gtag is ready
                 setTimeout(function() {
+                  console.log('🎯 Firing conversion tracking for Complete Plan...');
                   trackMyHealthCanvasCompletePurchase();
                   trackEnhancedMyHealthCanvasCompletePurchase();
-                }, 100);
-                
-                // Redirect to success page after a longer delay to ensure tracking fires
-                setTimeout(function() {
-                  window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
                 }, 500);
+                
+                // Redirect to success page after 2 seconds to ensure tracking completes
+                setTimeout(function() {
+                  console.log('✅ Redirecting to success page...');
+                  window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 2000);
               });
             },
             onError: function(err) {
