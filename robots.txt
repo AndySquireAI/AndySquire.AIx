@@ -1,0 +1,35 @@
+# robots.txt for andysquire.ai
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /blog/*.html
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.andysquire.ai/sitemap.xml
+
+# Allow AI crawlers for Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
