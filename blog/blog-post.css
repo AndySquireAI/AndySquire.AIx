@@ -379,53 +379,83 @@ body {
 .social-share {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 2px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
+    text-align: center;
 }
 
 .share-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+    color: var(--text-light);
 }
 
 .share-buttons {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
-    width: 100%;
-    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .share-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
     border: none;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    border-radius: 50%;
     text-decoration: none;
     color: white;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .share-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.share-btn:active {
+    transform: translateY(-1px);
 }
 
 .share-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    fill: white;
 }
 
+/* Tooltip on hover */
+.share-btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.share-btn:hover::after {
+    opacity: 1;
+}
+
+/* Brand Colors */
 .share-btn.whatsapp {
     background: #25D366;
 }
@@ -447,7 +477,7 @@ body {
 }
 
 .share-btn.twitter:hover {
-    background: #333333;
+    background: #1a1a1a;
 }
 
 .share-btn.facebook {
@@ -475,21 +505,18 @@ body {
 }
 
 @media (max-width: 768px) {
-    .social-share {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
     .share-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.875rem;
     }
     
     .share-btn {
-        width: 100%;
-        max-width: 100%;
-        justify-content: center;
-        box-sizing: border-box;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .share-btn svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
