@@ -404,7 +404,6 @@
         }
         return false;
       }
-
       function openMailtoCollaboration(event) {
         event.preventDefault();
         trackContactFormSubmission();
@@ -425,7 +424,28 @@
             showNotification(`📧 Please email: ${email} with subject: "${subject}"`);
           });
         }
-        return false;
+      }
+
+      function openMailtoNewsletter(event) {
+        event.preventDefault();
+        trackCTAClick('Subscribe to Newsletter');
+        
+        const email = 'andy@andysquire.ai';
+        const subject = 'Newsletter Subscription Request';
+        const body = 'Hi Andy,%0D%0A%0D%0AI would like to subscribe to your newsletter for updates on AI automation, healthcare innovation, and emerging technologies.%0D%0A%0D%0AName:%0D%0AEmail:%0D%0AInterests: [Patients / Business / Partners]%0D%0A%0D%0AThank you!';
+        
+        if (isMobileDevice()) {
+          // Mobile: Use direct mailto (works perfectly)
+          const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+          window.location.href = mailtoUrl;
+        } else {
+          // Desktop: Copy email and show instructions
+          copyToClipboard(email).then(() => {
+            showNotification(`📧 Email copied! Paste ${email} in your email client with subject: "${subject}"`);
+          }).catch(() => {
+            showNotification(`📧 Please email: ${email} with subject: "${subject}"`);
+          });
+        }
       }
     </script>
 
@@ -1420,6 +1440,22 @@
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="section">
+        <div class="section-content">
+          <h2>Blog</h2>
+          <p>Insights on AI automation, healthcare innovation, and emerging technologies. Explore practical guides, industry analysis, and breakthrough solutions transforming patient care and business operations.</p>
+          <p><strong>Discover AI Tools | Healthcare Robotics | Business Automation</strong></p>
+          <div class="cta-buttons">
+            <a href="blog.html" class="cta-button" onclick="trackCTAClick('Explore Blog')">Explore Blog</a>
+            <a href="#" class="cta-button secondary" onclick="openMailtoNewsletter(event); trackCTAClick('Subscribe to Newsletter')">Subscribe to Newsletter</a>
+          </div>
+        </div>
+        <div class="section-image">
+          <img src="blog_tile_image.png" alt="Andy Squire - AI and Healthcare Technology Thought Leadership" style="border-radius: 15px; margin: 0 auto; display: block;">
         </div>
       </section>
 
