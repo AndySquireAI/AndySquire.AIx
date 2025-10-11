@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,37 +19,180 @@
             border-bottom: 1px solid #ddd;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
-        .blog-post {
+        
+        /* Search and Filter Section */
+        .search-filter-section {
             background: #fff;
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .blog-post h2 {
-            color: #1e3a8a;
+        
+        .search-box {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 1rem;
         }
-        .blog-post a {
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid #1e3a8a;
+            background: #fff;
+            color: #1e3a8a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover {
+            background: #1e3a8a;
+            color: #fff;
+        }
+        
+        .filter-btn.active {
+            background: #1e3a8a;
+            color: #fff;
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card.hidden {
+            display: none;
+        }
+        
+        .blog-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: #ff6b35;
+            color: #fff;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-category.patients {
+            background: #10b981;
+        }
+        
+        .blog-category.business {
+            background: #3b82f6;
+        }
+        
+        .blog-category.partners {
+            background: #8b5cf6;
+        }
+        
+        .blog-card h2 {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+        
+        .blog-card a {
             text-decoration: none;
-            color: #1e3a8a;
+            color: inherit;
         }
-        .blog-post-meta {
+        
+        .blog-meta {
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
-        .cta-button {
+        
+        .blog-excerpt {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .read-more-btn {
             display: inline-block;
             background: #ff6b35;
             color: #fff;
-            padding: 0.8rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .read-more-btn:hover {
+            background: #e55a28;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            background: #fff;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .no-results.show {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+            }
+            
+            .filter-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -69,8 +211,8 @@
                 <a href="/#myhealthcanvas" class="nav-item">Forms</a>
                 <a href="/#consulting" class="nav-item">AI Agency</a>
                 <a href="/#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
-                <a href="/#collaboration" class="nav-item">Collaboration</a>
                 <a href="/blog/" class="nav-item active">Blog</a>
+                <a href="/#collaboration" class="nav-item">Collaboration</a>
             </nav>
             <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
         </div>
@@ -78,18 +220,170 @@
 
     <div class="container">
         <h1>Blog</h1>
-        <div class="blog-post">
-            <div class="blog-post-meta">October 8, 2025</div>
-            <h2><a href="/blog/how-small-businesses-save-50k-with-ai-agents.html">How Small Businesses Can Save $50,000+ Per Year with AI Agent Co-Workers</a></h2>
-            <p>Discover how custom AI agents can automate key business functions, saving you over $50,000 annually while boosting productivity and sales. This guide breaks down real-world cost comparisons, specific use cases, and a clear ROI calculation.</p>
-            <a href="/blog/how-small-businesses-save-50k-with-ai-agents.html" class="cta-button">Read More</a>
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Insights on AI automation, healthcare innovation, and emerging technologies. Explore practical guides, industry analysis, and breakthrough solutions transforming patient care and business operations.</p>
+        
+        <!-- Search and Filter Section -->
+        <div class="search-filter-section">
+            <input type="text" id="searchBox" class="search-box" placeholder="🔍 Search articles by keyword...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Articles</button>
+                <button class="filter-btn" data-category="patients">🏥 Patient Resources</button>
+                <button class="filter-btn" data-category="business">💼 Business Automation</button>
+                <button class="filter-btn" data-category="partners">🤝 Healthcare Innovation</button>
+            </div>
         </div>
+        
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blogGrid">
+            <!-- Blog Card 1 -->
+            <div class="blog-card" data-category="patients partners" data-keywords="robotic exoskeletons paralysis rehabilitation walking spinal cord injury stroke recovery medical devices mobility">
+                <img src="/blog/thumbnails/medical-robots-surgery-rehabilitation.png" alt="Robotic Exoskeletons" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category patients">Patient Resources</span>
+                    <h2><a href="/blog/blog-post-robotic-exoskeletons.html">Robotic Exoskeletons: The Complete Guide to Walking Again</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 12 min read</div>
+                    <p class="blog-excerpt">Discover how robotic exoskeletons are helping paralyzed patients walk again. This comprehensive guide covers the latest technology, real patient success stories, and how you might benefit from this revolutionary innovation.</p>
+                    <a href="/blog/blog-post-robotic-exoskeletons.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 2 -->
+            <div class="blog-card" data-category="business" data-keywords="ai tools small business automation roi cost savings productivity chatgpt zapier customer service">
+                <img src="/blog/thumbnails/ai-automation-mistakes-business.png" alt="AI Tools for Small Business" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/blog-post-ai-tools-small-business.html">10 AI Tools That Save Small Businesses $50K+ Per Year</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 15 min read</div>
+                    <p class="blog-excerpt">After analyzing 127 small businesses, we found the average savings was $67,340 per year. Discover the exact 10 AI tools that deliver the highest ROI, with real cost comparisons and implementation guides.</p>
+                    <a href="/blog/blog-post-ai-tools-small-business.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 3 -->
+            <div class="blog-card" data-category="partners" data-keywords="humanoid robots healthcare market analysis investment roi hospital automation medical robotics venture capital">
+                <img src="/blog/thumbnails/healthcare-robotics-investment-roi.png" alt="Humanoid Healthcare Robots" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category partners">Healthcare Innovation</span>
+                    <h2><a href="/blog/blog-post-humanoid-healthcare-robots.html">The Rise of Humanoid Healthcare Robots: 2025 Market Analysis</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 18 min read</div>
+                    <p class="blog-excerpt">The global healthcare robotics market is projected to reach $45 billion by 2030. This analysis breaks down the market landscape, key growth drivers, investment trends, and the ROI of integrating humanoid robots into clinical workflows.</p>
+                    <a href="/blog/blog-post-humanoid-healthcare-robots.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 4 -->
+            <div class="blog-card" data-category="patients partners" data-keywords="medical robots surgery rehabilitation da vinci moxi paro cyberknife hospital automation">
+                <img src="/blog/thumbnails/medical-robots-surgery-rehabilitation.png" alt="Medical Robots" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category patients">Patient Resources</span>
+                    <h2><a href="/blog/blog-post-curated-medical-robots.html">7 Amazing Medical Robots Changing Healthcare</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 5 min read</div>
+                    <p class="blog-excerpt">From performing complex surgeries with superhuman precision to providing companionship to the elderly, medical robots are transforming healthcare. Discover 7 incredible robots making a real difference in patients' lives.</p>
+                    <a href="/blog/blog-post-curated-medical-robots.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 5 -->
+            <div class="blog-card" data-category="business" data-keywords="ai automation mistakes small business roi errors pitfalls avoid cost savings implementation">
+                <img src="/blog/thumbnails/ai-automation-mistakes-business.png" alt="AI Automation Mistakes" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/blog-post-curated-ai-automation-mistakes.html">5 AI Automation Mistakes That Cost Small Businesses Thousands</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 4 min read</div>
+                    <p class="blog-excerpt">AI automation can be a game-changer, but costly mistakes are common. This curated summary highlights the top 5 pitfalls to avoid, ensuring you get the maximum return on your AI investment.</p>
+                    <a href="/blog/blog-post-curated-ai-automation-mistakes.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 6 -->
+            <div class="blog-card" data-category="patients" data-keywords="ai mental health apps depression anxiety chatbot therapy woebot wysa headspace calm">
+                <img src="/blog/thumbnails/ai-customer-service-agents-business.png" alt="AI Mental Health Apps" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category patients">Patient Resources</span>
+                    <h2><a href="/blog/blog-post-curated-ai-mental-health-apps.html">AI-Powered Mental Health Apps: A Look at the Evidence</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 5 min read</div>
+                    <p class="blog-excerpt">AI-powered mental health apps are becoming increasingly popular. But do they really work? We've curated insights from leading sources to help you understand the potential and pitfalls of this emerging technology.</p>
+                    <a href="/blog/blog-post-curated-ai-mental-health-apps.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 7 -->
+            <div class="blog-card" data-category="patients" data-keywords="wearable health tech smartwatch apple watch oura ring cgm continuous glucose monitor fitness tracker">
+                <img src="/blog/thumbnails/doctor-appointment-preparation-checklist.png" alt="Wearable Health Tech" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category patients">Patient Resources</span>
+                    <h2><a href="/blog/blog-post-curated-wearable-health-tech.html">Wearable Health Tech in 2025: What's Worth Your Money?</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 6 min read</div>
+                    <p class="blog-excerpt">The wearable technology market is flooded with devices. Which ones are genuinely useful medical tools, and which are just expensive gadgets? We've curated the latest insights from experts to help you decide.</p>
+                    <a href="/blog/blog-post-curated-wearable-health-tech.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 8 -->
+            <div class="blog-card" data-category="business" data-keywords="ai restaurants automation ordering kitchen robots inventory management pos toast">
+                <img src="/blog/thumbnails/ai-customer-service-agents-business.png" alt="AI for Restaurants" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/blog-post-curated-ai-for-restaurants.html">How AI is Transforming the Restaurant Industry in 2025</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 5 min read</div>
+                    <p class="blog-excerpt">From automated ordering to personalized marketing, AI is revolutionizing the restaurant industry. Explore the key ways AI is helping restaurants increase efficiency, reduce costs, and enhance customer experience.</p>
+                    <a href="/blog/blog-post-curated-ai-for-restaurants.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 9 -->
+            <div class="blog-card" data-category="business" data-keywords="ecommerce automation ai shopify bigcommerce chatbot product recommendations email marketing fraud detection">
+                <img src="/blog/thumbnails/ai-customer-service-agents-business.png" alt="E-commerce Automation" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/blog-post-curated-ai-ecommerce-automation.html">5 E-commerce Automation Tools That Boost Sales</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 5 min read</div>
+                    <p class="blog-excerpt">For e-commerce businesses, automation is key to scaling efficiently. This curated guide highlights five types of AI-powered tools that can automate critical tasks, freeing up your time while driving sales.</p>
+                    <a href="/blog/blog-post-curated-ai-ecommerce-automation.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Blog Card 10 -->
+            <div class="blog-card" data-category="patients" data-keywords="second medical opinion diagnosis cancer treatment doctor specialist patient rights healthcare">
+                <img src="/blog/thumbnails/doctor-appointment-preparation-checklist.png" alt="Second Medical Opinion" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category patients">Patient Resources</span>
+                    <h2><a href="/blog/blog-post-curated-second-medical-opinion.html">How to Get a Second Medical Opinion (And When You Should)</a></h2>
+                    <div class="blog-meta">October 11, 2025 • 4 min read</div>
+                    <p class="blog-excerpt">Navigating a serious medical diagnosis can be overwhelming. One of the most empowering steps you can take is to seek a second opinion. This curated guide explains when and how to get one.</p>
+                    <a href="/blog/blog-post-curated-second-medical-opinion.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Original Blog Card 11 -->
+            <div class="blog-card" data-category="business" data-keywords="ai agents small business automation cost savings roi customer service sales productivity">
+                <img src="/blog/thumbnails/ai-automation-mistakes-business.png" alt="AI Agent Co-Workers" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/how-small-businesses-save-50k-with-ai-agents.html">How Small Businesses Can Save $50,000+ Per Year with AI Agent Co-Workers</a></h2>
+                    <div class="blog-meta">October 8, 2025 • 10 min read</div>
+                    <p class="blog-excerpt">Discover how custom AI agents can automate key business functions, saving you over $50,000 annually while boosting productivity and sales. This guide breaks down real-world cost comparisons, specific use cases, and a clear ROI calculation.</p>
+                    <a href="/blog/how-small-businesses-save-50k-with-ai-agents.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
 
-        <div class="blog-post">
-            <div class="blog-post-meta">October 8, 2025</div>
-            <h2><a href="/blog/the-complete-guide-to-ai-seo.html">The Complete Guide to AI SEO: How to Appear in ChatGPT Search Results</a></h2>
-            <p>Learn what AI SEO (Generative Engine Optimization) is, how it works, and the exact steps you need to take to get your business recommended by AI chatbots like ChatGPT, Perplexity, and Google's AI Overviews. This comprehensive guide covers everything from content strategy to technical implementation.</p>
-            <a href="/blog/the-complete-guide-to-ai-seo.html" class="cta-button">Read More</a>
+            <!-- Original Blog Card 12 -->
+            <div class="blog-card" data-category="business" data-keywords="ai seo generative engine optimization chatgpt search perplexity google ai overviews content strategy">
+                <img src="/blog/thumbnails/ai-customer-service-agents-business.png" alt="AI SEO Guide" class="blog-thumbnail">
+                <div class="blog-content">
+                    <span class="blog-category business">Business Automation</span>
+                    <h2><a href="/blog/the-complete-guide-to-ai-seo.html">The Complete Guide to AI SEO: How to Appear in ChatGPT Search Results</a></h2>
+                    <div class="blog-meta">October 8, 2025 • 12 min read</div>
+                    <p class="blog-excerpt">Learn what AI SEO (Generative Engine Optimization) is, how it works, and the exact steps you need to take to get your business recommended by AI chatbots like ChatGPT, Perplexity, and Google's AI Overviews.</p>
+                    <a href="/blog/the-complete-guide-to-ai-seo.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults">
+            <h2>No articles found</h2>
+            <p>Try adjusting your search or filter criteria.</p>
         </div>
     </div>
 
@@ -108,6 +402,63 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Search and Filter Functionality
+        const searchBox = document.getElementById('searchBox');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const noResults = document.getElementById('noResults');
+        
+        let currentCategory = 'all';
+        let currentSearch = '';
+        
+        // Filter by category
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                filterCards();
+            });
+        });
+        
+        // Search by keyword
+        searchBox.addEventListener('input', (e) => {
+            currentSearch = e.target.value.toLowerCase();
+            filterCards();
+        });
+        
+        function filterCards() {
+            let visibleCount = 0;
+            
+            blogCards.forEach(card => {
+                const categories = card.dataset.category.split(' ');
+                const keywords = card.dataset.keywords.toLowerCase();
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                
+                const matchesCategory = currentCategory === 'all' || categories.includes(currentCategory);
+                const matchesSearch = currentSearch === '' || 
+                                     keywords.includes(currentSearch) || 
+                                     title.includes(currentSearch) ||
+                                     excerpt.includes(currentSearch);
+                
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            
+            if (visibleCount === 0) {
+                noResults.classList.add('show');
+            } else {
+                noResults.classList.remove('show');
+            }
+        }
+    </script>
 </body>
 </html>
 
