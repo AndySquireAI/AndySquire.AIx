@@ -26,11 +26,11 @@
     <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3&t=1726517400">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3&t=1726517400">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3&t=1726517400">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3&t=1726517400">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=3&t=1726517400">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=4&t=1760310617">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=4&t=1760310617">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4&t=1760310617">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4&t=1760310617">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png?v=4&t=1760310617">
     <meta name="msapplication-TileColor" content="#1e3a8a">
     <meta name="theme-color" content="#1e3a8a">
     
@@ -590,18 +590,34 @@
         /* Golden Label Styling */
         .golden-label {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 10px;
+            left: 10px;
             background: #FDB515;
             color: #000;
-            padding: 8px 16px;
+            padding: 4px 8px;
             font-weight: bold;
-            font-size: 0.9rem;
-            border: 2px solid #000;
-            border-radius: 4px;
+            font-size: 0.65rem;
+            border: 1.5px solid #000;
+            border-radius: 3px;
             z-index: 10;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+            max-width: 140px;
+        }
+
+        /* Desktop: Larger labels */
+        @media (min-width: 768px) {
+            .golden-label {
+                top: 20px;
+                left: 20px;
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                border: 2px solid #000;
+                border-radius: 4px;
+                letter-spacing: 0.5px;
+                max-width: none;
+            }
         }
 
         .section:nth-child(even) {
@@ -1204,7 +1220,7 @@
           <img src="patient-doctor-myhealthcanvas.png" alt="Patient and doctor using MyHealthCanvas forms for better healthcare communication">
         </div>
         <div class="section-content">
-          <h2>Prepare Better Questions for Your Doctor<br><span style="font-size: 0.8em; color: #FF8C00;">#MyHealthCanvas<br>Professional PDF Forms</span></h2>
+          <h2>Prepare Better Questions for Your Doctor<br><span style="font-size: 0.8em; color: #E67E22;">#MyHealthCanvas<br>Professional PDF Forms</span></h2>
           <p>Patients - Take back control; Create update & share your personal health story to communicate effectively with your medical team and get better care.</p>
           
           <div style="margin: 1.5rem 0;">
@@ -1239,7 +1255,7 @@
         </div>
         <div class="section-content">
           <h2>AI Automation Agency</h2>
-          <h3 style="color: #ff6b35; margin-top: 0.5rem; font-size: 1.3rem;">Custom AI Agent CoWorkers<br>That Save Your Business<br>90% per Human<br>Employee per year</h3>
+          <h3 style="color: #E67E22; margin-top: 0.5rem; font-size: 1.3rem;">Custom AI Agent CoWorkers<br>That Save Your Business<br>90% per Human<br>Employee per year</h3>
 
           <div class="value-props" style="margin: 2rem 0;">
             <div style="margin-bottom: 1rem;">
@@ -1391,7 +1407,7 @@
         </div>
         <div class="section-content">
           <h1 class="section-main-title">Humanoid Healthcare</h1>
-          <h2>Seize the $1 Trillion Opportunity</h2>
+          <h2 style="color: #E67E22;">Seize the $1 Trillion Opportunity</h2>
           
           <!-- Story Section -->
           <div class="humanoid-story">
