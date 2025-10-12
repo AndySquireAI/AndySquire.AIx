@@ -584,6 +584,24 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
+            position: relative;
+        }
+
+        /* Golden Label Styling */
+        .golden-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #FDB515;
+            color: #000;
+            padding: 8px 16px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: 2px solid #000;
+            border-radius: 4px;
+            z-index: 10;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .section:nth-child(even) {
@@ -1181,6 +1199,7 @@
 
       <!-- Forms Section -->
       <section id="myhealthcanvas" class="section">
+        <div class="golden-label">FOR PATIENTS</div>
         <div class="section-image">
           <img src="patient-doctor-myhealthcanvas.png" alt="Patient and doctor using MyHealthCanvas forms for better healthcare communication">
         </div>
@@ -1214,6 +1233,7 @@
 
       <!-- Consulting Section - AI Automation Agency -->
       <section id="consulting" class="section">
+        <div class="golden-label">FOR INDEPENDENT BUSINESS CUSTOMERS</div>
         <div class="section-image">
           <img src="AndyAIPhoto.jpg" alt="Andy Squire - AI Automation Consultant & AI SEO Specialist">
         </div>
@@ -1350,10 +1370,6 @@
               <textarea id="biggest-task" name="biggest-task" rows="3" required placeholder="e.g., Customer service emails, data entry, social media management..." style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; resize: vertical; box-sizing: border-box;"></textarea>
             </div>
 
-            <button type="submit" class="cta-button" style="width: 100%; text-align: center; cursor: pointer; border: none; font-size: 1.1rem;">
-              Join Waitlist
-            </button>
-
             <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
               I'll reach out when I'm accepting new clients. In the meantime, you'll receive free AI automation tips.
             </p>
@@ -1369,6 +1385,7 @@
 
       <!-- Humanoid Healthcare Section - Mobile-First 2x3 Grid -->
       <section id="humanoid-healthcare" class="section">
+        <div class="golden-label">FOR BUSINESS PARTNERS</div>
         <div class="section-image">
           <img src="HumanoidHealthcare.png" alt="Humanoid healthcare technology and innovation">
         </div>
@@ -1454,12 +1471,11 @@
           </div>
         </div>
       </section>
-
-      <!-- Blog Section -->
+      <!-- eLibrary Section -->
       <section id="elibrary" class="section">
+        <div class="golden-label">FOR ALL USERS</div>
         <div class="section-content">
-          <h2>eLibrary</h2>
-          <p>Insights on AI automation, healthcare innovation, and emerging technologies. Explore practical guides, industry analysis, and breakthrough solutions transforming patient care and business operations.</p>
+          <h2>eLibrary</h2>        <p>Insights on AI automation, healthcare innovation, and emerging technologies. Explore practical guides, industry analysis, and breakthrough solutions transforming patient care and business operations.</p>
           <p><strong>Discover AI Tools | Healthcare Robotics | Business Automation</strong></p>
           <div class="cta-buttons">
             <a href="blog.html" class="cta-button" onclick="trackCTAClick('Explore eLibrary')">Explore eLibrary</a>
@@ -1473,6 +1489,7 @@
 
       <!-- Collaboration Section -->
       <section id="collaboration" class="section">
+        <div class="golden-label">FOR ALL USERS</div>
         <div class="section-image">
       <img src="andy-humanoid-collaboration.png" alt="Andy Squire with a humanoid robot - Collaboration in healthcare technology" style="border-radius: 15px; margin: 0 auto; display: block;">
         </div>
