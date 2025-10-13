@@ -23,6 +23,13 @@
 
   <!-- Blog Articles -->
   <url>
+    <loc>https://www.andysquire.ai/blog/blog-post-openai-ai-companion.html</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.andysquire.ai/blog/blog-post-robotic_exoskeletons.html</loc>
     <lastmod>2025-10-12</lastmod>
     <changefreq>monthly</changefreq>
