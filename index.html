@@ -1339,8 +1339,6 @@
               I'm currently advancing my AI expertise through Oxford's rigorous "AI Programme". Please register any interest for a <strong>custom Agent workforce</strong> in the contact form, as I have limited capacity.
             </p>
           </div>
-
-          <a href="#waitlist-form" class="cta-button" onclick="scrollToWaitlist(event); return false;">Join the Waitlist</a>
         </div>
       </section>
 
@@ -1384,6 +1382,12 @@
             <div style="margin-bottom: 1.5rem;">
               <label for="biggest-task" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">What's your biggest time-consuming task? *</label>
               <textarea id="biggest-task" name="biggest-task" rows="3" required placeholder="e.g., Customer service emails, data entry, social media management..." style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; resize: vertical; box-sizing: border-box;"></textarea>
+            </div>
+
+            <div style="text-align: center;">
+              <button type="submit" class="cta-button" style="border: none; cursor: pointer; font-size: 1rem;">
+                Join the Waitlist
+              </button>
             </div>
 
             <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
@@ -1680,8 +1684,8 @@
               'value': formData.industry
             });
 
-            // Send email notification to Andy
-            const subject = encodeURIComponent('New Waitlist Signup - AI Automation Agency');
+            // Send email notification to Andy via mailto
+            const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
             const body = encodeURIComponent(
               'New waitlist signup:\n\n' +
               'Business Name: ' + formData.businessName + '\n' +
@@ -1689,15 +1693,25 @@
               'Industry: ' + formData.industry + '\n' +
               'Email: ' + formData.email + '\n' +
               'Biggest Task: ' + formData.biggestTask + '\n' +
-              'Timestamp: ' + formData.timestamp
+              'Timestamp: ' + formData.timestamp + '\n\n' +
+              '---\n' +
+              'Submitted from: https://www.andysquire.ai'
             );
             
-            // Open mailto (this will open the user's email client)
-            window.location.href = 'mailto:andy@andysquire.ai?subject=' + subject + '&body=' + body;
-
-            // Show confirmation message
-            document.getElementById('waitlist-signup-form').style.display = 'none';
-            document.getElementById('waitlist-confirmation').style.display = 'block';
+            // Create mailto link
+            const mailtoLink = 'mailto:andy@patientcentriccare.ai?subject=' + subject + '&body=' + body;
+            
+            // Open mailto in a new window/tab to avoid navigation
+            window.open(mailtoLink, '_blank');
+            
+            // Show confirmation message immediately
+            setTimeout(function() {
+              document.getElementById('waitlist-signup-form').style.display = 'none';
+              document.getElementById('waitlist-confirmation').style.display = 'block';
+              
+              // Scroll to confirmation
+              document.getElementById('waitlist-confirmation').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
           });
         }
       });
