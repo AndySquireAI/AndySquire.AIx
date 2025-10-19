@@ -1684,6 +1684,15 @@
               'value': formData.industry
             });
 
+            // Track Google Ads conversion - Join AI Automation Waitlist
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17214175569/aY9qCN_M668bENHyrZBA',
+              'value': 30.00,
+              'currency': 'GBP',
+              'transaction_id': 'WAITLIST_' + Date.now()
+            });
+            console.log('Google Ads waitlist conversion tracked');
+
             // Send email notification to Andy via mailto
             const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
             const body = encodeURIComponent(
