@@ -1684,6 +1684,16 @@
               'value': formData.industry
             });
 
+            // Track Google Ads conversion for waitlist signup
+            // Note: Replace 'AW-XXXXXXXXXX/YYYYYYYYYY' with your actual conversion ID from Google Ads
+            // To get this: Google Ads > Goals > Conversions > Summary > Create conversion action
+            gtag('event', 'conversion', {
+              'send_to': 'AW-290924137/WAITLIST_CONVERSION_ID',  // Replace WAITLIST_CONVERSION_ID with actual ID
+              'value': 50.0,
+              'currency': 'CHF',
+              'transaction_id': 'WAITLIST_' + formData.timestamp
+            });
+
             // Send email notification to Andy via mailto
             const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
             const body = encodeURIComponent(
