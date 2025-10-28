@@ -44,8 +44,11 @@
       // Google Analytics
       gtag('config', 'G-6CNLJJJ8WQ');
       
-      // Google Ads Account (Correct Account ID)
+      // Google Ads Account (Primary)
       gtag('config', 'AW-290924137');
+      
+      // Google Ads Account (Secondary - for Agent Guide conversions)
+      gtag('config', 'AW-17214175569');
     </script>
 
     <!-- Conversion Tracking Functions -->
@@ -248,7 +251,7 @@
       // 5. Download AI Agent Guide Conversion
       function trackDownloadAgentGuide() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-290924137/AGENT_GUIDE_CONVERSION',  // TO BE UPDATED WITH REAL CONVERSION ID
+          'send_to': 'AW-17214175569/1EpcCN751rUbENHyrZBA',
           'value': 35.00,
           'currency': 'GBP',
           'transaction_id': 'DOWNLOAD_AGENT_GUIDE_' + Date.now()
