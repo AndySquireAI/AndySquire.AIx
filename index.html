@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PatientCentricCare.AI — $3M Seed Funding | Humanoid Healthcare SaMD Solutions | Andy Squire</title>
     <meta name="description" content="PatientCentricCare.AI: $3M seed funding opportunity in humanoid healthcare. SaMD (Software as Medical Device) solutions for compliant AI rehabilitation robotics. Led by Andy Squire, targeting FDA/EMA approval in the trillion-dollar healthcare market.">
-    <meta name="keywords" content="PatientCentricCare.AI, humanoid healthcare, SaMD, Software as Medical Device, $3M seed funding, angel investment, venture capital, medical robotics, rehabilitation robotics, healthcare startup, AI in healthcare, FDA EMA approval, digital health investment, biotech investment, Andy Squire, healthcare investors, venture capital Switzerland, angel investors Europe, medical AI, transforming healthcare, patient safety, regulatory pathway, seed round, startup investment, health tech, future of medicine, robot healthcare, disruptive tech, impact investing, MedTech, patient-centric care, healthcare innovation">
+    <meta name="keywords" content="PatientCentricCare.AI, humanoid healthcare, SaMD, Software as Medical Device, $3M seed funding, angel investment, venture capital, medical robotics, rehabilitation robotics, healthcare startup, AI in healthcare, FDA EMA approval, digital health investment, biotech investment, Andy Squire, healthcare investors, venture capital Switzerland, angel investors Europe, medical AI, transforming healthcare, patient safety, regulatory pathway, seed round, startup investment, health tech, future of medicine, robot healthcare, disruptive tech, impact investing, MedTech, patient-centric care, healthcare innovation, AI agents, master AI agents, AI automation, prompt engineering, AI agent guide, AI consulting, business automation, AI implementation">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -243,6 +243,28 @@
           'transaction_id': 'DOWNLOAD_SAMD_INFOGRAPHIC_' + Date.now()
         });
         console.log('Download SaMD infographic conversion tracked');
+      }
+      
+      // 5. Download AI Agent Guide Conversion
+      function trackDownloadAgentGuide() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-290924137/AGENT_GUIDE_CONVERSION',  // TO BE UPDATED WITH REAL CONVERSION ID
+          'value': 35.00,
+          'currency': 'GBP',
+          'transaction_id': 'DOWNLOAD_AGENT_GUIDE_' + Date.now()
+        });
+        
+        // GA4 file_download event
+        gtag('event', 'file_download', {
+          'file_name': 'AndySquire_AI_Master_Prompt_October_22_2025.pdf',
+          'file_extension': 'pdf',
+          'link_text': 'Download Agent Guide',
+          'event_category': 'AI_Automation_Content',
+          'event_label': 'Master AI Agents Guide',
+          'value': 35
+        });
+        
+        console.log('AI Agent Guide download conversion tracked');
       }
 
       // SaMD Features Infographic Download Tracking (UPDATED - now calls new conversion function)
@@ -1349,6 +1371,16 @@
           <p style="text-align: center; margin-bottom: 2rem;">
             Be the first to know when I'm accepting new clients. Get exclusive AI automation tips while you wait.
           </p>
+          
+          <!-- Download Agent Guide CTA Button -->
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <a href="AndySquire_AI_Master_Prompt_October_22_2025.pdf" 
+               download="AndySquire_AI_Master_Prompt_October_22_2025.pdf"
+               onclick="trackDownloadAgentGuide();"
+               style="display: inline-block; background: linear-gradient(135deg, #ff9966 0%, #ff7733 100%); color: white; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 8px 20px rgba(255, 119, 51, 0.3); transition: all 0.3s ease; border: none;">
+              Download Agent Guide
+            </a>
+          </div>
 
           <form id="waitlist-signup-form" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
             <div style="margin-bottom: 1.5rem;">
