@@ -24,28 +24,77 @@
       // Google Ads Account 2
       gtag('config', 'AW-290924137');
 
-      // Fire conversion tracking on page load
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
-        'value': 10.50,
-        'currency': 'GBP',
-        'transaction_id': 'MHC_SUCCESS_' + Date.now()
-      });
-
-      // Enhanced ecommerce conversion tracking
-      gtag('event', 'purchase', {
-        'send_to': 'AW-290924137',
-        'transaction_id': 'MHC_ENH_SUCCESS_' + Date.now(),
-        'value': 10.50,
-        'currency': 'GBP',
-        'items': [{
-          'item_id': 'MHC_FORMS',
-          'item_name': 'MyHealthCanvas Forms',
-          'category': 'Healthcare Forms',
-          'quantity': 1,
-          'price': 10.50
-        }]
-      });
+      // Dynamic conversion tracking based on plan
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan');
+      
+      if (plan === 'current') {
+        // Current Plan (£9) conversion tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/DBeJCJPqvqQbENHyrZBA',
+          'value': 9.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_CURRENT_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHC_ENH_CURRENT_SUCCESS_' + Date.now(),
+          'value': 9.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_CURRENT',
+            'item_name': 'MyHealthCanvas Current Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 9.00
+          }]
+        });
+      } else if (plan === 'complete') {
+        // Complete Plan (£12) conversion tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/86auCO79yKQbENHyrZBA',
+          'value': 12.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_COMPLETE_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHC_ENH_COMPLETE_SUCCESS_' + Date.now(),
+          'value': 12.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_COMPLETE',
+            'item_name': 'MyHealthCanvas Complete Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 12.00
+          }]
+        });
+      } else {
+        // Fallback generic tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'value': 10.50,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_GENERIC_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-290924137',
+          'transaction_id': 'MHC_ENH_GENERIC_SUCCESS_' + Date.now(),
+          'value': 10.50,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_FORMS',
+            'item_name': 'MyHealthCanvas Forms',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 10.50
+          }]
+        });
+      }
     </script>
 
     <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
