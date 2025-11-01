@@ -1,0 +1,183 @@
+/* === PHASE 2: PATIENT-CENTRIC HEADER & NAVIGATION === */
+
+/* === FIXED HEADER === */
+.patient-centric-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  min-height: 70px;
+  animation: slideInFromTop 0.8s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === BRANDING === */
+.patient-centric-logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.patient-centric-tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 2px;
+  font-weight: normal;
+}
+
+/* === PATIENT-FIRST NAVIGATION === */
+.patient-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transform: translateY(-1px);
+}
+
+.nav-item.priority {
+  background: rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+}
+
+.nav-item.priority:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+.nav-item.priority.active {
+  background: rgba(16, 185, 129, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.7);
+}
+
+.nav-item .icon {
+  margin-right: 6px;
+}
+
+/* === MOBILE NAVIGATION === */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.mobile-nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === BODY PADDING FOR FIXED HEADER === */
+body {
+  padding-top: 90px !important;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  .patient-centric-header {
+    padding: 25px 0;
+    min-height: 90px;
+  }
+  
+  .patient-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  .patient-nav.active {
+    display: flex;
+  }
+  
+  .mobile-nav-toggle {
+    display: block;
+  }
+  
+  .patient-centric-logo {
+    font-size: 18px;
+  }
+  
+  .patient-centric-tagline {
+    font-size: 11px;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
+  
+  body {
+    padding-top: 105px !important;
+  }
+}
+
+/* === SMOOTH SCROLLING === */
+html {
+  scroll-behavior: smooth;
+}
+

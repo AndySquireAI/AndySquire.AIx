@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - AndySquire.AI</title>
+    <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #20B2AA 0%, #008B8B 100%);
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .simple-header {
+        background: #20B2AA;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .back-button {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        background: rgba(255,255,255,0.2);
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: rgba(255,255,255,0.3);
+        transform: translateX(-3px);
+      }
+
+      .page-title {
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .impressum-container {
+        max-width: 800px;
+        margin: 120px auto 60px auto;
+        padding: 40px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+
+      .impressum-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .impressum-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0891b2;
+        margin-bottom: 8px;
+      }
+
+      .impressum-subtitle {
+        color: #6b7280;
+        font-size: 1.1rem;
+      }
+
+      .impressum-section {
+        margin-bottom: 32px;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .section-content {
+        color: #4b5563;
+        line-height: 1.8;
+      }
+
+      .contact-info {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #0891b2;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #0891b2;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: #0e7490;
+      }
+
+      .back-link::before {
+        content: "←";
+        margin-right: 8px;
+        font-size: 1.2rem;
+      }
+
+      /* Professional Footer */
+      .professional-footer {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 60px 0 30px 0;
+        margin-top: 80px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        flex: 0 0 200px;
+      }
+
+      .footer-logo-box {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .footer-logo-text {
+        color: #0891b2;
+        font-weight: bold;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .footer-contact {
+        display: flex;
+        gap: 60px;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .contact-icon.email {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      }
+
+      .contact-icon.location {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+
+      .contact-info h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 4px;
+        color: white;
+      }
+
+      .contact-info p {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin: 0;
+      }
+
+      .contact-info a {
+        color: #60a5fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #93c5fd;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .impressum-container {
+          margin: 100px 20px 40px 20px;
+          padding: 24px;
+        }
+
+        .impressum-title {
+          font-size: 2rem;
+        }
+
+        /* Professional Footer */
+        .professional-footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .email-icon {
+            background: #3498db;
+        }
+
+        .location-icon {
+            background: #9b59b6;
+        }
+
+        .contact-info h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-info p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 1rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 2rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .footer-contact {
+                justify-content: center;
+            }
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <header class="simple-header">
+      <div class="header-container">
+        <a href="index.html" class="back-button">
+          ← Back to Homepage
+        </a>
+        <div class="page-title">
+          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"> 
+          PATIENT-CENTRIC CARE AndySquire.AI
+        </div>
+      </div>
+    </header>
+
+    <div class="impressum-container">
+        <div class="impressum-header">
+            <h1 class="impressum-title">Impressum</h1>
+            <p class="impressum-subtitle">Legal Notice & Information</p>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Information according to Swiss Law</h2>
+            <div class="section-content contact-info">
+                <strong>AndySquire.AI</strong><br>
+                Andy Squire<br>
+                Basel, Switzerland<br><br>
+                
+                <strong>Contact:</strong><br>
+                Email: <a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a><br>
+                Website: <a href="https://www.andysquire.ai">www.andysquire.ai</a>
+            </div>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Purpose of the Website</h2>
+            <div class="section-content">
+                This website provides information about patient-centric healthcare solutions, AI-enabled medical technologies, and humanoid healthcare innovations. We offer consulting services and digital health tools including MyHealthCanvas forms for patient empowerment.
+            </div>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Disclaimer</h2>
+            <div class="section-content">
+                <strong>Content Liability:</strong> The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness, or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages.<br><br>
+                
+                <strong>Link Liability:</strong> Our offer includes links to external third-party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents.<br><br>
+                
+                <strong>Copyright:</strong> The content and works on these pages created by the site operators are subject to Swiss copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.
+            </div>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Data Protection</h2>
+            <div class="section-content">
+                We take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy. The use of our website is generally possible without providing personal data. If personal data is collected on our pages, this is always done on a voluntary basis, as far as possible.
+            </div>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Medical Disclaimer</h2>
+            <div class="section-content">
+                <strong>Important:</strong> The information provided on this website is for educational and informational purposes only and is not intended as medical advice. Always consult with qualified healthcare professionals for medical decisions. Our tools and services are designed to support patient empowerment and healthcare communication but do not replace professional medical consultation, diagnosis, or treatment.
+            </div>
+        </div>
+
+        <div class="impressum-section">
+            <h2 class="section-title">Swiss Regulatory Compliance</h2>
+            <div class="section-content">
+                This website and its services comply with applicable Swiss laws and regulations. For healthcare-related services, we adhere to Swiss Federal Act on Data Protection (FADP) and relevant healthcare regulations. Any disputes shall be subject to Swiss jurisdiction.
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="professional-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <div class="contact-icon email-icon">✉</div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p><a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-icon location-icon">📍</div>
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>Basel, Switzerland</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
+        </div>
+    </footer>
+
+
+</body>
+</html>
+

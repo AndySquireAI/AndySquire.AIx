@@ -1,0 +1,299 @@
+/* Mobile-First 2x3 Grid Styles for Humanoid Healthcare Section */
+
+/* Mobile First - Single Column Stack */
+.investor-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.grid-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.grid-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #06b2a4;
+}
+
+/* Primary CTA (Watch Video) - Special Styling */
+.grid-item.primary-cta {
+  background: linear-gradient(135deg, #06b2a4 0%, #2f5975 100%);
+  color: white;
+  border: 3px solid #fd981b;
+  position: relative;
+}
+
+.grid-item.primary-cta::after {
+  content: "👈 START HERE";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fd981b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  transform: rotate(15deg);
+}
+
+.grid-item.primary-cta h3,
+.grid-item.primary-cta p {
+  color: white;
+/* Premium Icon Styling */
+.grid-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 12px;
+}
+
+/* Specific icon backgrounds */
+.grid-item:nth-child(1) .grid-icon {
+  background-image: url('icon-video-pitch.png');
+}
+
+.grid-item:nth-child(2) .grid-icon {
+  background-image: url('icon-investor-deck.png');
+}
+
+.grid-item:nth-child(3) .grid-icon {
+  background-image: url('icon-partnership.png');
+}
+
+.grid-item:nth-child(4) .grid-icon {
+  background-image: url('icon-blueprint.png');
+}
+
+.grid-item:nth-child(5) .grid-icon {
+  background-image: url('icon-regulatory.png');
+}
+
+.grid-item:nth-child(6) .grid-icon {
+  background-image: url('icon-samd.png');
+}/* Grid Content */
+.grid-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2f5975;
+  line-height: 1.3;
+}
+
+.grid-item p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+/* Grid Buttons - Touch Friendly */
+.grid-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #06b2a4;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-height: 48px; /* Touch target minimum */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid-button:hover {
+  background: #048a7f;
+  transform: translateY(-1px);
+}
+
+.grid-button.primary {
+  background: #fd981b;
+  font-size: 1.1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.grid-button.primary:hover {
+  background: #e8860f;
+}
+
+/* Button Icons */
+.arrow, .download-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.grid-button:hover .arrow {
+  transform: translateX(3px);
+}
+
+.grid-button:hover .download-icon {
+  transform: translateY(2px);
+}
+
+/* Section Header Updates */
+#humanoid-healthcare .section-content h2 {
+  font-size: 2rem;
+  color: #2f5975;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #fd981b;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem !important;
+}
+
+#humanoid-healthcare .section-content > p:last-of-type {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Tablet Styles - 2 Columns */
+@media (min-width: 768px) {
+  .investor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+  
+  .grid-item {
+    padding: 2rem;
+  }
+  
+  .grid-icon {
+    font-size: 3rem;
+  }
+  
+  .grid-item h3 {
+    font-size: 1.4rem;
+  }
+  
+  .grid-item p {
+    font-size: 1rem;
+  }
+  
+  #humanoid-healthcare .section-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* Desktop Styles - 2x3 Grid */
+@media (min-width: 1024px) {
+  .investor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+  }
+  
+  .grid-item {
+    padding: 2.5rem;
+  }
+  
+  .grid-icon {
+    font-size: 3.5rem;
+  }
+  
+  .grid-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .grid-button {
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .grid-button.primary {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  #humanoid-healthcare .section-content h2 {
+    font-size: 3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Large Desktop - Maintain proportions */
+@media (min-width: 1200px) {
+  .investor-grid {
+    max-width: 1200px;
+    gap: 3rem;
+  }
+  
+  .grid-item {
+    padding: 3rem;
+  }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .grid-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+  
+  .grid-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* Focus States for Accessibility */
+.grid-button:focus {
+  outline: 3px solid #fd981b;
+  outline-offset: 2px;
+}
+
+/* Animation for Grid Items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-item {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.grid-item:nth-child(1) { animation-delay: 0.1s; }
+.grid-item:nth-child(2) { animation-delay: 0.2s; }
+.grid-item:nth-child(3) { animation-delay: 0.3s; }
+.grid-item:nth-child(4) { animation-delay: 0.4s; }
+.grid-item:nth-child(5) { animation-delay: 0.5s; }
+.grid-item:nth-child(6) { animation-delay: 0.6s; }
+
