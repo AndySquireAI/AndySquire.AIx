@@ -1721,6 +1721,15 @@
               'value': formData.industry
             });
 
+            // Track GA4 event - Agent Waitlist Form Submission
+            gtag('event', 'agent_waitlist_submit', {
+              'business_name': formData.businessName,
+              'industry': formData.industry,
+              'has_website': formData.website ? 'yes' : 'no',
+              'form_location': 'homepage_waitlist_section'
+            });
+            console.log('GA4 agent_waitlist_submit event tracked');
+
             // Track Google Ads conversion - Join AI Automation Waitlist
             gtag('event', 'conversion', {
               'send_to': 'AW-17214175569/aY9qCN_M668bENHyrZBA',
