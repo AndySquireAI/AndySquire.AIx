@@ -1385,7 +1385,9 @@
             </a>
           </div>
 
-          <form id="waitlist-signup-form" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <form id="waitlist-signup-form" name="waitlist-signup-form" method="POST" data-netlify="true" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <!-- Hidden input for Netlify Forms -->
+            <input type="hidden" name="form-name" value="waitlist-signup-form" />
             <div style="margin-bottom: 1.5rem;">
               <label for="business-name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Business Name *</label>
               <input type="text" id="business-name" name="business-name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; box-sizing: border-box;">
@@ -1739,34 +1741,74 @@
             });
             console.log('Google Ads waitlist conversion tracked');
 
-            // Send email notification to Andy via mailto
-            const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
-            const body = encodeURIComponent(
-              'New waitlist signup:\n\n' +
-              'Business Name: ' + formData.businessName + '\n' +
-              'Website: ' + formData.website + '\n' +
-              'Industry: ' + formData.industry + '\n' +
-              'Email: ' + formData.email + '\n' +
-              'Biggest Task: ' + formData.biggestTask + '\n' +
-              'Timestamp: ' + formData.timestamp + '\n\n' +
-              '---\n' +
-              'Submitted from: https://www.andysquire.ai'
-            );
+            // PRIMARY: Submit to Netlify Forms
+            const myForm = e.target;
+            const netlifyFormData = new FormData(myForm);
             
-            // Create mailto link
-            const mailtoLink = 'mailto:andy@patientcentriccare.ai?subject=' + subject + '&body=' + body;
-            
-            // Open mailto in a new window/tab to avoid navigation
-            window.open(mailtoLink, '_blank');
-            
-            // Show confirmation message immediately
-            setTimeout(function() {
-              document.getElementById('waitlist-signup-form').style.display = 'none';
-              document.getElementById('waitlist-confirmation').style.display = 'block';
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(netlifyFormData).toString()
+            })
+            .then(() => {
+              console.log('✅ Netlify form submitted successfully');
               
-              // Scroll to confirmation
-              document.getElementById('waitlist-confirmation').scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 500);
+              // BACKUP: Send email notification to Andy via mailto
+              const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
+              const body = encodeURIComponent(
+                'New waitlist signup:\n\n' +
+                'Business Name: ' + formData.businessName + '\n' +
+                'Website: ' + formData.website + '\n' +
+                'Industry: ' + formData.industry + '\n' +
+                'Email: ' + formData.email + '\n' +
+                'Biggest Task: ' + formData.biggestTask + '\n' +
+                'Timestamp: ' + formData.timestamp + '\n\n' +
+                '---\n' +
+                'Submitted from: https://www.andysquire.ai'
+              );
+              
+              // Create mailto link
+              const mailtoLink = 'mailto:andy@patientcentriccare.ai?subject=' + subject + '&body=' + body;
+              
+              // Open mailto in a new window/tab as backup
+              window.open(mailtoLink, '_blank');
+              
+              // Show confirmation message
+              setTimeout(function() {
+                document.getElementById('waitlist-signup-form').style.display = 'none';
+                document.getElementById('waitlist-confirmation').style.display = 'block';
+                
+                // Scroll to confirmation
+                document.getElementById('waitlist-confirmation').scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 500);
+            })
+            .catch(error => {
+              console.error('❌ Netlify form submission failed:', error);
+              
+              // FALLBACK: Still trigger mailto if Netlify fails
+              const subject = encodeURIComponent('🚀 New Waitlist Signup - AI Automation Agency');
+              const body = encodeURIComponent(
+                'New waitlist signup:\n\n' +
+                'Business Name: ' + formData.businessName + '\n' +
+                'Website: ' + formData.website + '\n' +
+                'Industry: ' + formData.industry + '\n' +
+                'Email: ' + formData.email + '\n' +
+                'Biggest Task: ' + formData.biggestTask + '\n' +
+                'Timestamp: ' + formData.timestamp + '\n\n' +
+                '---\n' +
+                'Submitted from: https://www.andysquire.ai'
+              );
+              
+              const mailtoLink = 'mailto:andy@patientcentriccare.ai?subject=' + subject + '&body=' + body;
+              window.open(mailtoLink, '_blank');
+              
+              // Show confirmation message even if Netlify failed
+              setTimeout(function() {
+                document.getElementById('waitlist-signup-form').style.display = 'none';
+                document.getElementById('waitlist-confirmation').style.display = 'block';
+                document.getElementById('waitlist-confirmation').scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 500);
+            });
           });
         }
       });
