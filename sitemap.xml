@@ -156,5 +156,27 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- AI Summit Articles -->
+  <url>
+    <loc>https://www.andysquire.ai/blog/blog-post-85-percent-cliff.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.andysquire.ai/blog/blog-post-frontier-firms.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.andysquire.ai/blog/blog-post-trust-algorithm.html</loc>
+    <lastmod>2025-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
 
