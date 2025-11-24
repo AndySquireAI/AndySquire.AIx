@@ -113,7 +113,8 @@
         }
         
         input[type="password"],
-        input[type="email"] {
+        input[type="email"],
+        input[type="text"] {
             width: 100%;
             padding: 14px 18px;
             border: 2px solid #e2e8f0;
@@ -121,10 +122,12 @@
             font-size: 16px;
             transition: all 0.3s ease;
             background: #f8fafc;
+            box-sizing: border-box;
         }
         
         input[type="password"]:focus,
-        input[type="email"]:focus {
+        input[type="email"]:focus,
+        input[type="text"]:focus {
             outline: none;
             border-color: #1e3a8a;
             background: white;
@@ -521,8 +524,8 @@
                     <div class="card-icon">🗺️</div>
                     <h2>Regulatory Roadmap (US-First)</h2>
                     <p>Detailed timeline and milestones for FDA Q-Submission and Class II SaMD certification. Our path to market compliance and commercialization.</p>
-                    <a href="#" onclick="showNotifyModal('roadmap', 'Regulatory Roadmap (US-First)'); return false;" class="card-link">
-                        View Roadmap <span class="coming-soon">Coming Soon</span>
+                    <a href="investors/US-First-Regulatory-Roadmap.pdf" target="_blank" onclick="trackInvestorAction('download_roadmap');" class="card-link">
+                        View Roadmap
                     </a>
                 </div>
                 
@@ -717,6 +720,11 @@
             
             const formData = new FormData(this);
             
+            // Ensure form-name is included (required by Netlify)
+            if (!formData.has('form-name')) {
+                formData.append('form-name', 'investor-notify');
+            }
+            
             try {
                 const response = await fetch('/', {
                     method: 'POST',
@@ -724,7 +732,8 @@
                     body: new URLSearchParams(formData).toString()
                 });
                 
-                if (response.ok) {
+                // Netlify returns 200 for successful form submission
+                if (response.ok || response.status === 200) {
                     // Show success message
                     document.getElementById('notifyForm').classList.add('hidden');
                     document.getElementById('notifySuccess').classList.remove('hidden');
@@ -735,6 +744,7 @@
                     // Close modal after 2 seconds
                     setTimeout(closeNotifyModal, 2000);
                 } else {
+                    console.error('Form submission failed:', response.status, response.statusText);
                     alert('There was an error. Please try again.');
                 }
             } catch (error) {
