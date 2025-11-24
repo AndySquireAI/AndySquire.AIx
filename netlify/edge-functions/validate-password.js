@@ -12,7 +12,7 @@ export default async (request, context) => {
 
   try {
     const { password } = await request.json();
-    const correctPassword = Deno.env.get('INVESTOR_PASS') || 'CHANGE_ME_IN_NETLIFY';
+    const correctPassword = Deno.env.get('INVESTOR_PASS') || 'demo2025';
 
     // Validate password
     const isValid = password === correctPassword;
