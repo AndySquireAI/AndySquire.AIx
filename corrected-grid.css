@@ -105,8 +105,8 @@
 
 /* Icon Styling - All icons same size */
 .grid-icon-img {
-  width: 220px;
-  height: 220px;
+  width: 320px;
+  height: 320px;
   margin: 0 auto 1.5rem auto;
   display: block;
   border-radius: 12px;
@@ -115,13 +115,13 @@
 
 /* Specific adjustments for consistent sizing */
 .grid-item:nth-child(2) .grid-icon-img {
-  width: 230px;
-  height: 230px;
+  width: 330px;
+  height: 330px;
 }
 
 .grid-item:nth-child(6) .grid-icon-img {
-  width: 240px;
-  height: 240px;
+  width: 340px;
+  height: 340px;
 }
 
 /* Grid Content */
