@@ -105,8 +105,8 @@
 
 /* Icon Styling - All icons same size */
 .grid-icon-img {
-  width: 320px;
-  height: 320px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 1.5rem auto;
   display: block;
   border-radius: 12px;
@@ -115,13 +115,19 @@
 
 /* Specific adjustments for consistent sizing */
 .grid-item:nth-child(2) .grid-icon-img {
-  width: 330px;
-  height: 330px;
+  width: 110px;
+  height: 110px;
 }
 
 .grid-item:nth-child(6) .grid-icon-img {
-  width: 340px;
-  height: 340px;
+  width: 120px;
+  height: 120px;
+}
+
+/* Deep Dive icon - larger for visual impact */
+.grid-item:nth-child(7) .grid-icon-img {
+  width: 300px;
+  height: 300px;
 }
 
 /* Grid Content */
