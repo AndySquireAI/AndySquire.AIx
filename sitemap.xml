@@ -185,5 +185,27 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Investor Resources -->
+  <url>
+    <loc>https://www.andysquire.ai/investors/The-1-Trillion-Thesis.pdf</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.andysquire.ai/InvestorDeck-HumanoidHealthcare.pdf</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.andysquire.ai/investors/</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
 
