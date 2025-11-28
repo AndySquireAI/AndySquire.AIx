@@ -126,8 +126,8 @@
 
 /* Deep Dive icon - larger for visual impact */
 .grid-item:nth-child(7) .grid-icon-img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 /* Grid Content */
