@@ -124,6 +124,12 @@
   height: 120px;
 }
 
+/* Deep Dive icon - larger for visual impact */
+.grid-item:nth-child(7) .grid-icon-img {
+  width: 400px;
+  height: 400px;
+}
+
 /* Grid Content */
 .grid-item h3 {
   font-size: 1.25rem;
