@@ -254,9 +254,9 @@
             background: white;
             border-radius: 16px;
             padding: 36px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #E2E8F0;
             position: relative;
             overflow: hidden;
         }
@@ -278,9 +278,21 @@
         }
         
         .dashboard-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-            border-color: #cbd5e1;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #fea821;
+        }
+        
+        /* CARD HEADER GRADIENT */
+        .card-header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: linear-gradient(180deg, rgba(54, 153, 148, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 16px 16px 0 0;
+            pointer-events: none;
         }
         
         /* CARD NUMBER BADGE */
@@ -507,6 +519,7 @@
             <div class="dashboard-grid">
                 <!-- Card 01: THE STRATEGY -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">01</div>
                     <div class="card-icon-wrapper">
                         <!-- Chess Piece Icon (Duotone: Teal + Slate) -->
@@ -539,6 +552,7 @@
                 
                 <!-- Card 02: THE FINANCIALS -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">02</div>
                     <div class="card-icon-wrapper">
                         <!-- Bar Chart Icon (Duotone: Teal + Slate) -->
@@ -572,6 +586,7 @@
                 
                 <!-- Card 03: THE TECHNOLOGY -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">03</div>
                     <div class="card-icon-wrapper">
                         <!-- Cloud Shield Icon (Duotone: Teal + Slate) -->
@@ -604,6 +619,7 @@
                 
                 <!-- Card 04: THE REGULATORY MAP -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">04</div>
                     <div class="card-icon-wrapper">
                         <!-- Government Building Icon (Duotone: Teal + Slate) -->
@@ -639,6 +655,7 @@
                 
                 <!-- Card 05: THE TEAM -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">05</div>
                     <div class="card-icon-wrapper">
                         <!-- User Badge Icon (Duotone: Teal + Slate) -->
@@ -664,6 +681,7 @@
                 
                 <!-- Card 06: NEXT STEPS -->
                 <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
                     <div class="card-number">06</div>
                     <div class="card-icon-wrapper">
                         <!-- Handshake Icon (Duotone: Teal + Slate) -->
