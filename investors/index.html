@@ -696,14 +696,22 @@
                     <div class="card-header-bg"></div>
                     <div class="card-number">06</div>
                     <div class="card-icon-wrapper">
-                        <!-- Shoe Sole Footsteps Icon (Duotone: Teal + Slate) -->
+                        <!-- Realistic Shoe Sole Footsteps (Duotone: Teal + Slate) -->
                         <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Left footprint (lighter teal) - heel + toe -->
-                            <ellipse cx="18" cy="28" rx="4.5" ry="6.5" fill="#369994" opacity="0.85"/>
-                            <ellipse cx="18" cy="18" rx="3" ry="3.5" fill="#369994" opacity="0.85"/>
-                            <!-- Right footprint (darker slate) - heel + toe, positioned forward and right -->
-                            <ellipse cx="38" cy="42" rx="5" ry="7" fill="#007699"/>
-                            <ellipse cx="38" cy="32" rx="3.5" ry="4" fill="#007699"/>
+                            <!-- Left footprint (lighter teal) - angled left -->
+                            <g transform="rotate(-15 18 24)">
+                                <!-- Sole (larger oval) -->
+                                <ellipse cx="18" cy="28" rx="5" ry="8" fill="#369994" opacity="0.9"/>
+                                <!-- Heel (smaller rounded shape) -->
+                                <ellipse cx="18" cy="18" rx="3.5" ry="3" fill="#369994" opacity="0.9"/>
+                            </g>
+                            <!-- Right footprint (darker slate) - angled right, positioned forward -->
+                            <g transform="rotate(15 40 38)">
+                                <!-- Sole (larger oval) -->
+                                <ellipse cx="40" cy="42" rx="5.5" ry="9" fill="#007699"/>
+                                <!-- Heel (smaller rounded shape) -->
+                                <ellipse cx="40" cy="31" rx="4" ry="3.5" fill="#007699"/>
+                            </g>
                         </svg>
                     </div>
                     <h2>Next Steps</h2>
