@@ -1,0 +1,195 @@
+/* FEAT-004: Investor-Focused Sections 1-3 Styles */
+
+/* Investor Section Container */
+.investor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Investor Section Styling */
+.investor-section {
+    padding: 4rem 2rem;
+}
+
+.investor-content-card {
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #3498DB;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Investor Typography */
+.investor-h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.investor-h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2C3E50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.investor-h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #E67E22;
+    margin-bottom: 1.5rem;
+}
+
+.investor-subtitle {
+    font-size: 1.5rem;
+    color: #E8F4F8;
+    text-align: center;
+    margin: 0 auto 2.5rem auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+.investor-p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.investor-p strong {
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+/* Investor Hero Section */
+.investor-hero {
+    background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+    color: white;
+    padding: 5rem 2rem 4rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Video Container */
+.investor-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 3rem auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.investor-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 15px;
+}
+
+/* CTA Button */
+.investor-cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.investor-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+}
+
+/* Risk List */
+.investor-risk-list {
+    margin: 2rem 0;
+}
+
+.investor-risk-item {
+    background: #FFF4E6;
+    border-left: 4px solid #E67E22;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.investor-risk-item h4 {
+    color: #E67E22;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.investor-risk-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .investor-h1 {
+        font-size: 2.2rem;
+    }
+    
+    .investor-h2 {
+        font-size: 1.8rem;
+    }
+    
+    .investor-h3 {
+        font-size: 1.5rem;
+    }
+    
+    .investor-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .investor-p {
+        font-size: 1rem;
+    }
+    
+    .investor-content-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .investor-section {
+        padding: 3rem 1rem;
+    }
+    
+    .investor-cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .investor-h1 {
+        font-size: 1.8rem;
+    }
+    
+    .investor-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .investor-content-card {
+        padding: 1.5rem 1rem;
+    }
+}
