@@ -408,3 +408,333 @@
         padding: 1.5rem;
     }
 }
+
+
+/* ========================================
+   GLOBAL GRADIENT BACKGROUND
+   ======================================== */
+body {
+    background: linear-gradient(135deg, #475569 0%, #1e3a8a 50%, #3498DB 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ========================================
+   SECTION 7: TRACTION - PARTNERSHIPS
+   ======================================== */
+.investor-partnership-box {
+    background: white;
+    border: 2px solid #3498DB;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.investor-partnership-box.hms-box {
+    border-color: #C41E3A;
+    background: linear-gradient(to right, #FFF 0%, #FFF5F5 100%);
+}
+
+.partnership-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.partnership-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.partnership-header h3 {
+    color: #2C3E50;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.partnership-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.partnership-item {
+    color: #5D6D7E;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.partnership-item::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #3498DB;
+    font-weight: bold;
+}
+
+.partnership-item strong {
+    color: #2C3E50;
+}
+
+.investor-value-box {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.investor-value-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.investor-value-item {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.value-icon {
+    background: #4CAF50;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   SECTION 8: BUSINESS MODEL
+   ======================================== */
+.investor-revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.revenue-stream-card {
+    background: white;
+    border: 2px solid #3498DB;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.revenue-stream-card:hover {
+    transform: translateY(-5px);
+}
+
+.revenue-stream-card.highlight {
+    border-color: #E67E22;
+    background: linear-gradient(to bottom, #FFF 0%, #FFF4E6 100%);
+}
+
+.stream-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.revenue-stream-card.highlight .stream-number {
+    background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+}
+
+.revenue-stream-card h3 {
+    color: #2C3E50;
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.revenue-stream-card p {
+    color: #5D6D7E;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.stream-metrics {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.metric-unit {
+    font-size: 0.85rem;
+    color: #7F8C8D;
+    margin-top: 0.25rem;
+}
+
+.investor-projections-box {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.projections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.projection-item {
+    text-align: center;
+}
+
+.projection-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 0.5rem;
+}
+
+.projection-label {
+    font-size: 1rem;
+    color: #5D6D7E;
+    line-height: 1.4;
+}
+
+/* ========================================
+   SECTION 9: WHY WE WIN
+   ======================================== */
+.investor-compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.compliance-badge {
+    background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.compliance-badge:hover {
+    transform: scale(1.05);
+}
+
+.compliance-badge span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.investor-competitive-box {
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
+    border: 2px solid #E67E22;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.competitive-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.competitive-list li {
+    color: #5D6D7E;
+    line-height: 1.8;
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.competitive-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #E67E22;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.competitive-list li strong {
+    color: #2C3E50;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN FOR SECTIONS 7-9
+   ======================================== */
+@media (max-width: 768px) {
+    .investor-revenue-streams {
+        grid-template-columns: 1fr;
+    }
+    
+    .investor-compliance-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projections-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stream-metrics {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .partnership-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
