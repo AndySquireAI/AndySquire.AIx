@@ -149,7 +149,7 @@
 > - **Pharmaceutical Industry:** Insights, Digital CX, Patient First Platform - Business & IT
 > - **Digital Health:** Patient-centric software design and deployment
 > - **AI Service Design:** Automation workflows and intelligent systems
-> - **HRI:** Human Robot Interface Engineer
+> - **HRI:** Human-Robot Interaction Engineer
 > - **Patient Advocacy:** Cancer survivor bringing lived experience to healthcare innovation
 >
 > **Specializations:**
