@@ -193,3 +193,218 @@
         padding: 1.5rem 1rem;
     }
 }
+
+
+/* SECTIONS 4-6: Additional Styles */
+
+/* Differentiator List (Section 4) */
+.investor-differentiator-list {
+    margin: 2rem 0;
+}
+
+.investor-differentiator-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: #F0F8FF;
+    border-left: 4px solid #3498DB;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.differentiator-number {
+    background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.differentiator-content h4 {
+    color: #2C3E50;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.differentiator-content p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* Integration Box */
+.investor-integration-box {
+    background: linear-gradient(135deg, #E8F4F8 0%, #D4EAF0 100%);
+    border: 2px solid #3498DB;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.investor-integration-box h4 {
+    color: #2C3E50;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.investor-integration-box p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+/* Moat Box (Section 5) */
+.investor-moat-box {
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%);
+    border: 2px solid #E67E22;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.investor-moat-box h4 {
+    color: #E67E22;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.investor-moat-box p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+/* Table Styling (Section 6) */
+.investor-table-container {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.investor-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.investor-table thead {
+    background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+    color: white;
+}
+
+.investor-table th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.investor-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.investor-table tbody tr:hover {
+    background: #F8F9FA;
+}
+
+.investor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Why List (Section 6) */
+.investor-why-list {
+    margin: 2rem 0;
+}
+
+.investor-why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.investor-why-item:last-child {
+    border-bottom: none;
+}
+
+.why-icon {
+    background: #27AE60;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.investor-why-item div {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Timeline Box (Section 6) */
+.investor-timeline-box {
+    background: linear-gradient(135deg, #E8F8F5 0%, #D4EFDF 100%);
+    border: 2px solid #27AE60;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.investor-timeline-box h4 {
+    color: #27AE60;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.investor-timeline-box p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.investor-timeline-box p:last-child {
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments for Sections 4-6 */
+@media (max-width: 768px) {
+    .investor-differentiator-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .differentiator-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .investor-table th,
+    .investor-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .investor-integration-box,
+    .investor-moat-box,
+    .investor-timeline-box {
+        padding: 1.5rem;
+    }
+}
