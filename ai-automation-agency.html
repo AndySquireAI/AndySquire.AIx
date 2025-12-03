@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Agency | Andy Squire - Custom AI Agent Co-Workers</title>
+    <meta name="description" content="Custom AI agent co-workers for small businesses. Save 90% per employee per year with 24/7 AI automation and AI SEO services from Andy Squire.">
+    <meta name="keywords" content="AI Automation, AI Agents, AI SEO, Custom AI Solutions, AI Co-Workers, Business Automation, Andy Squire">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Link to main stylesheet -->
+    <link rel="stylesheet" href="investor-sections.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: linear-gradient(135deg, #475569 0%, #1e3a8a 50%, #3498DB 100%);
+            background-attachment: fixed;
+        }
+        
+        /* Header Navigation */
+        header {
+            background: linear-gradient(135deg, #475569 0%, #1e3a8a 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #3498DB;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 2px solid #3498DB;
+        }
+        
+        .golden-label {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1e3a8a;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #E67E22;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: #1e3a8a;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 2rem auto;
+            display: block;
+            border: 4px solid #3498DB;
+        }
+        
+        .value-props {
+            margin: 2rem 0;
+        }
+        
+        .value-props div {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .value-props div::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3498DB;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .video-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .services-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h4 {
+            color: #1e3a8a;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        
+        .service-card p {
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .pricing-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .pricing-box p {
+            margin: 0;
+            font-size: 1rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2C3E50 0%, #1e3a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 0.5rem 0;
+        }
+        
+        .footer-content a {
+            color: #3498DB;
+            text-decoration: none;
+        }
+        
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AndySquire.AI</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="investors/">Investor Portal</a></li>
+                <li><a href="#elibrary">eLibrary</a></li>
+                <li><a href="myhealthcanvas.html">MyHealthCanvas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <div class="golden-label">FOR INDEPENDENT BUSINESS CUSTOMERS</div>
+            
+            <img src="AndyAIPhoto.jpg" alt="Andy Squire - AI Automation Consultant & AI SEO Specialist" class="hero-image">
+            
+            <h1>AI Automation Agency</h1>
+            <h2>Custom AI Agent Co-Workers<br>That Save Your Business<br>90% per Human Employee per year</h2>
+
+            <div class="value-props">
+                <div>
+                    <strong>24/7 Availability</strong> - AI agents work around the clock without breaks
+                </div>
+                <div>
+                    <strong>Scalable Solutions</strong> - Grow your AI workforce as your business expands
+                </div>
+                <div>
+                    <strong>Proven ROI</strong> - Small investment, big returns in improved workflows & sales
+                </div>
+                <div>
+                    <strong>Specialized Expertise</strong> - Founder, Andy Squire: 35 yrs Pharma Business (Insights, Digital CX) & IT, & 2x Cancer Survivor & #PatientFirstAI Advocate
+                </div>
+            </div>
+
+            <!-- AI Agent Video Demo -->
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/5_CTHc4rRyE" 
+                        title="A Day in My Office with AI Agent Co-Workers" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Our Services Section -->
+            <h3>Our Services</h3>
+            
+            <div class="services-grid">
+                <!-- Service 1: AI SEO -->
+                <div class="service-card">
+                    <h4>AI SEO & Brand Presence Makeover</h4>
+                    <p>Optimize your online presence to appear in ChatGPT, Perplexity, and other AI search results</p>
+                </div>
+
+                <!-- Service 2: Custom AI Agents -->
+                <div class="service-card">
+                    <h4>Custom AI Agent Co-Workers</h4>
+                    <p>Bespoke AI agents to manage client pain points and generate revenue cost-effectively</p>
+                </div>
+
+                <!-- Service 3: Personal Assistant -->
+                <div class="service-card">
+                    <h4>Personal Assistant / Work Coach Agents</h4>
+                    <p>AI-powered personal assistants and work coaches to boost productivity</p>
+                </div>
+
+                <!-- Service 4: Copilot Integration -->
+                <div class="service-card">
+                    <h4>Copilot Integration</h4>
+                    <p>Seamless AI copilot integration across your business ecosystem</p>
+                </div>
+            </div>
+
+            <div class="pricing-box">
+                <p>Custom AI automation solutions - pricing discussed upon request</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="mailto:andy@patientcentriccare.ai?subject=AI%20Automation%20Inquiry" class="cta-button">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Andy Squire</strong> - AI Automation & Patient-First Innovation</p>
+            <p>Email: <a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
+            <p>Location: Basel, Switzerland</p>
+            <p style="margin-top: 2rem;">© 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions.</p>
+        </div>
+    </footer>
+</body>
+</html>
