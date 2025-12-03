@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety OS | PatientCentricCare.AI</title>
+    <meta name="description" content="The regulatory bridge for humanoid healthcare. 7 compliance standards create a defensible moat in the $1T market.">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fbbf24;
+        }
+        
+        /* Content */
+        .content {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .content-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid #0d9488;
+            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .content-card h2 {
+            color: #0f172a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .content-card h3 {
+            color: #E67E22;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+        
+        .content-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Compliance Grid */
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .compliance-badge {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            color: #2C3E50;
+            font-size: 1.1rem;
+        }
+        
+        .compliance-badge span {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #5D6D7E;
+            margin-top: 0.5rem;
+        }
+        
+        /* Competitive Box */
+        .competitive-box {
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
+            border: 2px solid #E67E22;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .competitive-box h3 {
+            color: #E67E22;
+            margin-top: 0;
+        }
+        
+        .competitive-box ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        .competitive-box li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Integration Box */
+        .integration-box {
+            background: #f0f9ff;
+            border: 2px solid #3498DB;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .integration-box h4 {
+            color: #2C3E50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .integration-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin: 1.5rem 0;
+        }
+        
+        .integration-box p {
+            font-size: 1rem;
+            color: #5D6D7E;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #2196F3;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .highlight-box p {
+            font-size: 1.3rem;
+            color: #0f172a;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/investors/">Investor Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Safety OS: The Regulatory Bridge</h1>
+        <p>Regulation is not a barrier — it's our moat.</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-card">
+            <h2>Why We Win: 7 Compliance Standards = Defensible Moat</h2>
+            
+            <p>Our technical moat is built on <strong>regulatory-grade compliance</strong> that takes years to replicate. While hardware companies race to build humanoid robots, we're building the only FDA-compliant software that makes them safe for healthcare.</p>
+            
+            <h3>Compliance Pillars:</h3>
+            
+            <div class="compliance-grid">
+                <div class="compliance-badge">✓ ISO 13485<br><span>Medical device quality management</span></div>
+                <div class="compliance-badge">✓ IEC 62304<br><span>Medical device software lifecycle</span></div>
+                <div class="compliance-badge">✓ FHIR Standards<br><span>EHR interoperability</span></div>
+                <div class="compliance-badge">✓ FDA 21 CFR Part 11<br><span>Electronic records & signatures</span></div>
+                <div class="compliance-badge">✓ HIPAA/HITECH<br><span>Patient data privacy & security</span></div>
+                <div class="compliance-badge">✓ Cybersecurity<br><span>IEC 81001-5-1 health software</span></div>
+                <div class="compliance-badge">✓ Clinical Risk<br><span>ISO 14971 risk analysis</span></div>
+            </div>
+            
+            <div class="competitive-box">
+                <h3>Why Competitors Can't Catch Up:</h3>
+                <ul>
+                    <li><strong>Hardware companies</strong> lack regulatory software expertise</li>
+                    <li><strong>Software companies</strong> lack medical device experience</li>
+                    <li>Building this patient-centric compliance stack takes <strong>3-5 years</strong> and <strong>$10M+</strong></li>
+                    <li>We're already <strong>2 years ahead</strong> with HMS/JHU validation</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Our advantage:</strong> By the time competitors start, we'll already be the established standard.</p>
+            </div>
+        </div>
+        
+        <div class="content-card">
+            <h2>Technical Architecture</h2>
+            
+            <h3>Physician-in-the-Loop (AIITL) Framework</h3>
+            <p>At the core of our Safety OS is the <strong>Physician-in-the-Loop (AIITL) framework</strong>—a governance model that makes the human clinician the pilot, not just the brake. Unlike fully autonomous systems that pose unacceptable liability risks, our architecture ensures that <strong>all critical care decisions require physician approval</strong> before execution.</p>
+            
+            <div class="integration-box">
+                <h4>🔗 EHR Integration & HIPAA Compliance</h4>
+                <p>Secure, Hybrid Healthcare Ecosystem Architecture (HHEA) hosted in the EHR Provider cloud (e.g., Epic, Cerner, Allscripts) ensures real-time patient data access with HIPAA compliance and full audit trails.</p>
+                
+                <img src="HumanoidHealthcareInAction.png" alt="Humanoid Healthcare Robot in Clinical Setting">
+                
+                <img src="HumanoidHealthcareEcosystem.png" alt="Scalable IT Architecture for Patient-centric Care with EHR Integration">
+                <p>Enterprise Architecture: TOGAF-based Hybrid Healthcare Ecosystem Architecture (HHEA) with HIPAA/GDPR compliance</p>
+            </div>
+            
+            <h3>Modular Platform Design</h3>
+            <p>Our modular software design allows robotics manufacturers like <strong>Unitree</strong> and <strong>Boston Dynamics</strong> to plug our Safety OS into their hardware platforms, creating a scalable ecosystem where we become the de facto standard for compliant humanoid healthcare.</p>
+            
+            <div class="highlight-box">
+                <p>With a projected <strong>49x ROI</strong> and <strong>$279M NPV</strong>, this capital-efficient model positions us to capture significant value in the emerging <strong>$1 Trillion humanoid healthcare market</strong>.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/investors/InvestorDeck3.1_USAdvantage.pdf" class="cta-button">Download Investor Deck</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PatientCentricCare.AI | Building the Safety OS for Humanoid Healthcare</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Partnering with Harvard Medical School</p>
+    </footer>
+</body>
+</html>
