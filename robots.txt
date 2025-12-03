@@ -3,6 +3,8 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /blog/*.html
+Allow: /investors/
+Allow: /*.pdf$
 
 # Disallow admin or private areas (if any)
 Disallow: /admin/

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatientCentricCare.AI — $3M Seed Funding | Humanoid Healthcare SaMD Solutions | Andy Squire</title>
-    <meta name="description" content="PatientCentricCare.AI: $3M seed funding opportunity in humanoid healthcare. SaMD (Software as Medical Device) solutions for compliant AI rehabilitation robotics. Led by Andy Squire, targeting FDA/EMA approval in the trillion-dollar healthcare market.">
-    <meta name="keywords" content="PatientCentricCare.AI, humanoid healthcare, SaMD, Software as Medical Device, $3M seed funding, angel investment, venture capital, medical robotics, rehabilitation robotics, healthcare startup, AI in healthcare, FDA EMA approval, digital health investment, biotech investment, Andy Squire, healthcare investors, venture capital Switzerland, angel investors Europe, medical AI, transforming healthcare, patient safety, regulatory pathway, seed round, startup investment, health tech, future of medicine, robot healthcare, disruptive tech, impact investing, MedTech, patient-centric care, healthcare innovation, AI agents, master AI agents, AI automation, prompt engineering, AI agent guide, AI consulting, business automation, AI implementation">
+    <title>PatientCentricCare.AI | The Safety OS for Humanoid Healthcare</title>
+    <meta name="description" content="Partnering with Harvard Medical School to build the regulatory bridge for the $1 Trillion robotic caregiver market. Our US-First FDA SaMD strategy ensures safety, compliance, and EHR integration for humanoid robotics.">
+    <meta name="keywords" content="Humanoid Robotics, Healthcare AI, FDA SaMD, Patient Safety, Unitree, Boston Dynamics, EHR Integration, Medical Alley, PatientCentricCare.AI, robotic caregivers, medical robotics, rehabilitation robotics, healthcare compliance, regulatory pathway, Andy Squire, Safety OS, humanoid healthcare, AI in healthcare">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -412,7 +412,7 @@
         trackConsultationBooking();
         trackCTAClick('Book Strategy Call');
         
-        const email = 'andy@andysquire.ai';
+        const email = 'Andy@PatientCentricCare.AI';
         const subject = 'Healthcare AI Consulting Inquiry';
         
         if (isMobileDevice()) {
@@ -434,7 +434,7 @@
         trackContactFormSubmission();
         trackCTAClick('Contact Us - Collaboration');
         
-        const email = 'andy@andysquire.ai';
+        const email = 'Andy@PatientCentricCare.AI';
         const subject = 'Humanoid Healthcare Collaboration Inquiry';
         
         if (isMobileDevice()) {
@@ -455,7 +455,7 @@
         event.preventDefault();
         trackCTAClick('Subscribe to Newsletter');
         
-        const email = 'andy@andysquire.ai';
+        const email = 'Andy@PatientCentricCare.AI';
         const subject = 'Newsletter Subscription Request';
         const body = 'Hi Andy,%0D%0A%0D%0AI would like to subscribe to your newsletter for updates on AI automation, healthcare innovation, and emerging technologies.%0D%0A%0D%0AName:%0D%0AEmail:%0D%0AInterests: [Patients / Business / Partners]%0D%0A%0D%0AThank you!';
         
@@ -476,6 +476,9 @@
 
     <!-- Corrected Mobile-First Grid CSS for Humanoid Healthcare Section -->
     <link rel="stylesheet" href="corrected-grid.css">
+    
+    <!-- FEAT-004: Investor Sections CSS -->
+    <link rel="stylesheet" href="investor-sections.css">
 
     <style>
         * {
@@ -775,10 +778,10 @@
         .humanoid-story {
             margin: 2rem 0;
             padding: 2rem;
-            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            background: white;
             border-radius: 15px;
-            border-left: 4px solid #FF9800;
-            box-shadow: 0 5px 15px rgba(255,152,0,0.1);
+            border: 2px solid #3498DB;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
         }
 
         .humanoid-story h3 {
@@ -1074,7 +1077,7 @@
           "name": "Oxford University",
           "sameAs": "https://www.ox.ac.uk/"
         },
-        "email": "andy@andysquire.ai",
+        "email": "Andy@PatientCentricCare.AI",
         "knowsAbout": [
           "Artificial Intelligence",
           "AI Automation",
@@ -1207,6 +1210,69 @@
       ]
     }
     </script>
+
+    <!-- JSON-LD Schema Markup for SEO & AI Readiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PatientCentricCare.AI",
+      "alternateName": "PCC.AI",
+      "url": "https://www.andysquire.ai",
+      "logo": "https://www.andysquire.ai/og-image-optimized.png",
+      "description": "A regulatory compliance and safety software platform for humanoid healthcare robotics.",
+      "founder": {
+        "@type": "Person",
+        "name": "Andy Squire",
+        "jobTitle": "Founder & CEO",
+        "email": "Andy@PatientCentricCare.AI"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/andy-squire/",
+        "https://www.youtube.com/@PatientCentricCareAI"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "Humanoid Robotics",
+        "Healthcare AI",
+        "FDA SaMD Compliance",
+        "Patient Safety",
+        "EHR Integration",
+        "Medical Robotics Regulation"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PatientCentricCare Safety OS",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Cross-platform",
+      "description": "The Safety OS for humanoid healthcare robots. Ensures FDA/EMA compliance, patient safety, and EHR integration for robotic caregivers.",
+      "offers": {
+        "@type": "Offer",
+        "price": "6000000",
+        "priceCurrency": "USD",
+        "description": "Seed funding opportunity for dual-track US/EU pilots"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI"
+      },
+      "featureList": [
+        "FDA SaMD Compliance",
+        "Physician-in-the-Loop (AIITL) Framework",
+        "EHR Integration",
+        "Patient Safety Monitoring",
+        "Regulatory Pathway Acceleration"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -1230,16 +1296,416 @@
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h1>Empowering Patients & Transforming Healthcare</h1>
-        <div style="text-align: center; margin: 30px 0;">
-          <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI" style="max-width: 400px; width: 80%; height: auto;">
-        </div>
+      
+      <!-- NEW INVESTOR-FOCUSED SECTIONS (FEAT-004) -->
+      
+      <!-- SECTION 1: HERO -->
+      <section class="investor-hero" id="investor-hero">
+          <div class="investor-container">
+              <h1 class="investor-h1">Building the Safety OS™ for the $1 Trillion Humanoid Healthcare Market</h1>
+              <div style="text-align: center; margin: 2rem auto;">
+                  <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI" style="max-width: 300px; width: 60%; height: auto;">
+              </div>
+              <p class="investor-subtitle">The first regulatory-grade software platform that will make humanoid robots safe, compliant, and commercially viable for patient care.</p>
+              
+              <!-- Investor Pitch Video -->
+              <div class="investor-video-container">
+                  <iframe 
+                      src="https://www.youtube.com/embed/WwxU1KrYACk" 
+                      title="PatientCentricCare.AI Investor Pitch - The $1 Trillion Opportunity"
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowfullscreen>
+                  </iframe>
+              </div>
+              
+              <a href="/investors/" class="investor-cta-button">Enter Investor Data Room</a>
+          </div>
       </section>
-
-      <!-- Forms Section -->
-      <section id="myhealthcanvas" class="section">
+      
+      <!-- SECTION 2: URGENCY -->
+      <section id="urgency" class="investor-section">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">A Global Crisis Meets a Market Inflection Point</h2>
+              
+              <p class="investor-p">The world faces an unprecedented caregiver crisis. By 2050, <strong>1.6 billion people over 65</strong> will need daily care, but there aren't enough human caregivers to meet demand. Healthcare systems are collapsing under the weight of chronic staffing shortages, burnout, and rising costs.</p>
+              
+              <p class="investor-p">Meanwhile, <strong>affordable humanoid robots</strong> from companies like Unitree and Boston Dynamics are entering the market at <strong>under $6,000 to $50,000+</strong>—finally making robotic caregivers economically viable for hospitals, nursing homes, and home care.</p>
+              
+              <p class="investor-p"><strong>But there's a critical problem: No one has solved the safety and regulatory challenge.</strong></p>
+          </div>
+      </section>
+      
+      <!-- SECTION 3: RISK -->
+      <section id="risk" class="investor-section" style="background: #f8f9fa;">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">Affordable Home Robots Are About to Be Misused</h2>
+              
+              <p class="investor-p">Without regulatory-grade safety controls, the humanoid healthcare market faces a <strong>ticking liability time bomb</strong>:</p>
+              
+              <div class="investor-risk-list">
+                  <div class="investor-risk-item">
+                      <h4>1. Patient Safety Risk</h4>
+                      <p>Autonomous robots making critical care decisions without physician oversight could harm vulnerable patients</p>
+                  </div>
+                  
+                  <div class="investor-risk-item">
+                      <h4>2. Regulatory Non-Compliance</h4>
+                      <p>Off-label use of general-purpose robots for medical tasks violates FDA regulations</p>
+                  </div>
+                  
+                  <div class="investor-risk-item">
+                      <h4>3. Liability Exposure</h4>
+                      <p>Hospitals and care facilities face massive lawsuits if robots cause patient harm</p>
+                  </div>
+                  
+                  <div class="investor-risk-item">
+                      <h4>4. Market Paralysis</h4>
+                      <p>Without clear compliance pathways, institutional buyers won't adopt—stalling the entire $1T market</p>
+                  </div>
+              </div>
+              
+              <p style="text-align: center; font-size: 1.3rem; color: #E67E22; font-weight: 600; margin-top: 2rem;">
+                  The industry needs a regulatory bridge. That's where we come in.
+              </p>
+          </div>
+      </section>
+      
+      <!-- SECTION 4: SOLUTION -->
+      <section id="solution" class="investor-section">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">We Build the Regulatory-Grade Software 'Brain' (SaMD plug-in)</h2>
+              
+              <p class="investor-p">PatientCentricCare.AI is the <strong>Safety OS™</strong>—a software-as-a-medical-device (SaMD) platform that transforms general-purpose humanoid robots into FDA-compliant medical devices.</p>
+              
+              <h3 class="investor-h3">Three Core Differentiators:</h3>
+              
+              <div class="investor-differentiator-list">
+                  <div class="investor-differentiator-item">
+                      <div class="differentiator-number">1</div>
+                      <div class="differentiator-content">
+                          <h4>SaMD Classification</h4>
+                          <p>We're software, not hardware—enabling faster regulatory approval and scalable deployment</p>
+                      </div>
+                  </div>
+                  
+                  <div class="investor-differentiator-item">
+                      <div class="differentiator-number">2</div>
+                      <div class="differentiator-content">
+                          <h4>Physician-in-the-Loop (AIITL)</h4>
+                          <p>All critical care decisions require physician approval before execution, eliminating autonomous liability risk</p>
+                      </div>
+                  </div>
+                  
+                  <div class="investor-differentiator-item">
+                      <div class="differentiator-number">3</div>
+                      <div class="differentiator-content">
+                          <h4>Hardware-Agnostic</h4>
+                          <p>Our Safety OS plugs into any humanoid platform (Unitree, Boston Dynamics, etc.), making us the universal standard</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="investor-integration-box">
+                  <h4>🔗 Integration</h4>
+                  <p>Seamless EHR connectivity (Epic, Cerner, Allscripts) ensures real-time patient data access with HIPAA compliance and full audit trails.</p>
+              </div>
+          </div>
+      </section>
+      
+      <!-- SECTION 5: WHY NOW -->
+      <section id="why-now" class="investor-section" style="background: #f8f9fa;">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">The Regulatory Moat That Unlocks the $1T Healthcare Segment</h2>
+              
+              <p class="investor-p" style="text-align: center; font-size: 1.4rem; color: #E67E22; font-weight: 600; margin-bottom: 2rem;">
+                  <strong>Regulation isn't our barrier—it's our moat.</strong>
+              </p>
+              
+              <p class="investor-p">Think of the <strong>Humanoid Healthcare</strong> market as a <strong>massive reservoir of demand</strong> held back by a regulatory dam. Hardware companies can build robots, but they can't open the <strong>sluice gate</strong> to institutional <strong>healthcare</strong> buyers (hospitals, nursing homes, insurers) without FDA-compliant safety controls.</p>
+              
+              <p class="investor-p" style="text-align: center; font-size: 1.5rem; color: #2C3E50; font-weight: 600; margin: 2rem 0;">
+                  We are the sluice gate.
+              </p>
+              
+              <p class="investor-p">By solving the regulatory challenge first, we become the <strong>mandatory software layer</strong> that every humanoid healthcare platform must license. This creates a defensible moat that hardware competitors cannot replicate—they build robots, we make them legally deployable.</p>
+              
+              <div class="investor-moat-box">
+                  <h4>🏆 First-Mover Advantage</h4>
+                  <p>Once we establish the compliance standard, we become the de facto platform for the entire industry.</p>
+              </div>
+          </div>
+      </section>
+      
+      <!-- SECTION 6: GO-TO-MARKET -->
+      <section id="go-to-market" class="investor-section">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">Dual-Track SaMD Pilots ($6M US + EU)</h2>
+              
+              <p class="investor-p">We are raising <strong>$6M in seed funding</strong> to execute parallel regulatory pilots in the world's two largest healthcare markets:</p>
+              
+              <div class="investor-table-container">
+                  <table class="investor-table">
+                      <thead>
+                          <tr>
+                              <th>Allocation</th>
+                              <th>Region</th>
+                              <th>Strategic Focus</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td><strong>$3M</strong></td>
+                              <td><strong>United States</strong></td>
+                              <td>FDA SaMD approval via Medical Alley (Minnesota) partnerships and leveraging the Harvard Medical School Network</td>
+                          </tr>
+                          <tr>
+                              <td><strong>$3M</strong></td>
+                              <td><strong>European Union</strong></td>
+                              <td>CE Mark certification and pilot deployments in aging-population markets</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              
+              <h3 class="investor-h3">Why Dual-Track?</h3>
+              
+              <div class="investor-why-list">
+                  <div class="investor-why-item">
+                      <span class="why-icon">✓</span>
+                      <div>
+                          <strong>De-risks regulatory uncertainty:</strong> Success in either market validates our approach
+                      </div>
+                  </div>
+                  <div class="investor-why-item">
+                      <span class="why-icon">✓</span>
+                      <div>
+                          <strong>First-mover advantage:</strong> Parallel execution captures both markets before competitors
+                      </div>
+                  </div>
+                  <div class="investor-why-item">
+                      <span class="why-icon">✓</span>
+                      <div>
+                          <strong>Defensible moat:</strong> Dual regulatory approvals create massive barriers to entry
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="investor-timeline-box">
+                  <h4>⏱️ Timeline</h4>
+                  <p><strong>18-24 months</strong> to first pilot deployments and Pre-FDA Pilot & Research Partnership Fees (NRE) plus SaaS / Integration services.</p>
+                  <p style="margin-top: 1rem;"><strong>Expect first commercial launch of SaMD certified Humanoid Healthcare by 2031 (US).</strong></p>
+              </div>
+          </div>
+      </section>
+      
+      <!-- SECTION 7: TRACTION -->
+      <section id="traction" class="investor-section" style="background: #f8f9fa;">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">Academic & Clinical Partnerships</h2>
+              
+              <p class="investor-p">Our regulatory approach has attracted validation from <strong>top-tier academic medical institutions</strong>:</p>
+              
+              <!-- HMS Partnership -->
+              <div class="investor-partnership-box hms-box">
+                  <div class="partnership-header">
+                      <img src="hms-logo.png" alt="Harvard Medical School" class="partnership-logo">
+                      <h3>Harvard Medical School (HMS) Partnership</h3>
+                  </div>
+                  <div class="partnership-details">
+                      <div class="partnership-item">
+                          <strong>Status:</strong> Immediate placement offered (December 2025)
+                      </div>
+                      <div class="partnership-item">
+                          <strong>Focus:</strong> Commercial innovation track for regulatory strategy refinement
+                      </div>
+                      <div class="partnership-item">
+                          <strong>Value:</strong> Access to HMS clinical network, regulatory expertise, and pilot site identification
+                      </div>
+                      <div class="partnership-item">
+                          <strong>Why HMS:</strong> Selected over Johns Hopkins due to Humanoid Healthcare's current priorities for commercialisation / Seed Funding
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- JHU Partnership -->
+              <div class="investor-partnership-box jhu-box">
+                  <div class="partnership-header">
+                      <h3>Johns Hopkins University (JHU)</h3>
+                  </div>
+                  <div class="partnership-details">
+                      <div class="partnership-item">
+                          <strong>Status:</strong> Positive feedback in Dec'25 about Humanoid Healthcare & PatientFirstAI, focus would be on US Clinical Trial setup, potentially after HMS
+                      </div>
+                      <div class="partnership-item">
+                          <strong>Focus:</strong> Patient safety frameworks and EHR integration best practices
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Investor Value -->
+              <div class="investor-value-box">
+                  <h3 class="investor-h3">What This Means for Investors:</h3>
+                  <div class="investor-value-list">
+                      <div class="investor-value-item">
+                          <span class="value-icon">✓</span>
+                          <div>
+                              <strong>De-risked execution:</strong> Top medical institutions validate our regulatory pathway
+                          </div>
+                      </div>
+                      <div class="investor-value-item">
+                          <span class="value-icon">✓</span>
+                          <div>
+                              <strong>Credibility:</strong> HMS/JHU backing opens doors with FDA reviewers and institutional buyers
+                          </div>
+                      </div>
+                      <div class="investor-value-item">
+                          <span class="value-icon">✓</span>
+                          <div>
+                              <strong>Talent pipeline:</strong> Access to clinical advisors and pilot partners
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <!-- SECTION 8: BUSINESS MODEL -->
+      <section id="business-model" class="investor-section">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">A Multi-Layer Monetization Engine</h2>
+              
+              <p class="investor-p">Our business model captures value at three levels:</p>
+              
+              <!-- Revenue Streams -->
+              <div class="investor-revenue-streams">
+                  <!-- Stream 1: NRE -->
+                  <div class="revenue-stream-card">
+                      <div class="stream-number">1</div>
+                      <h3>Non-Recurring Engineering (NRE) Fees</h3>
+                      <p>Custom integration for robotics manufacturers (Unitree, Boston Dynamics, etc.)</p>
+                      <div class="stream-metrics">
+                          <div class="metric">
+                              <div class="metric-label">Revenue</div>
+                              <div class="metric-value">$500K-$2M</div>
+                              <div class="metric-unit">per hardware partner</div>
+                          </div>
+                          <div class="metric">
+                              <div class="metric-label">Margin</div>
+                              <div class="metric-value">70%+</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Stream 2: Core License -->
+                  <div class="revenue-stream-card highlight">
+                      <div class="stream-number">2</div>
+                      <h3>Core Safety OS License</h3>
+                      <p>Per-robot annual subscription for FDA-compliant software</p>
+                      <div class="stream-metrics">
+                          <div class="metric">
+                              <div class="metric-label">Pricing</div>
+                              <div class="metric-value">$15K-$25K</div>
+                              <div class="metric-unit">per robot per year</div>
+                          </div>
+                          <div class="metric">
+                              <div class="metric-label">Margin</div>
+                              <div class="metric-value">90%+</div>
+                              <div class="metric-unit">(pure software)</div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Stream 3: App Store -->
+                  <div class="revenue-stream-card">
+                      <div class="stream-number">3</div>
+                      <h3>App Store Ecosystem (Upside)</h3>
+                      <p>Third-party developers build specialized care modules (physical therapy, medication management, etc.)</p>
+                      <div class="stream-metrics">
+                          <div class="metric">
+                              <div class="metric-label">Revenue Share</div>
+                              <div class="metric-value">30%</div>
+                              <div class="metric-unit">of app sales</div>
+                          </div>
+                          <div class="metric">
+                              <div class="metric-label">Margin</div>
+                              <div class="metric-value">95%+</div>
+                              <div class="metric-unit">(platform fee)</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Financial Projections -->
+              <div class="investor-projections-box">
+                  <h3 class="investor-h3">Financial Projections:</h3>
+                  <div class="projections-grid">
+                      <div class="projection-item">
+                          <div class="projection-value">49x</div>
+                          <div class="projection-label">ROI on $6M seed investment</div>
+                      </div>
+                      <div class="projection-item">
+                          <div class="projection-value">$279M</div>
+                          <div class="projection-label">NPV over 10 years</div>
+                      </div>
+                      <div class="projection-item">
+                          <div class="projection-value">85%+</div>
+                          <div class="projection-label">Gross margins at scale</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <p class="investor-p" style="text-align: center; font-size: 1.3rem; color: #E67E22; font-weight: 600; margin-top: 2rem;">
+                  <strong>Why This Works:</strong> We're not building hardware—we're licensing the mandatory software layer that every humanoid healthcare platform needs.
+              </p>
+          </div>
+      </section>
+      
+      <!-- SECTION 9: WHY WE WIN -->
+      <section id="why-we-win" class="investor-section" style="background: #f8f9fa;">
+          <div class="investor-content-card">
+              <h2 class="investor-h2">Why We Win: The Regulatory Moat</h2>
+              
+              <p class="investor-p" style="text-align: center; font-size: 1.4rem; color: #E67E22; font-weight: 600; margin-bottom: 2rem;">
+                  <strong>Regulation is not a barrier — it's our moat.</strong>
+              </p>
+              
+              <p class="investor-p">Our technical moat is built on <strong>regulatory-grade compliance</strong> that takes years to replicate:</p>
+              
+              <h3 class="investor-h3">Compliance Pillars:</h3>
+              
+              <div class="investor-compliance-grid">
+                  <div class="compliance-badge">✓ ISO 13485<br><span>Medical device quality management</span></div>
+                  <div class="compliance-badge">✓ IEC 62304<br><span>Medical device software lifecycle</span></div>
+                  <div class="compliance-badge">✓ FHIR Standards<br><span>EHR interoperability</span></div>
+                  <div class="compliance-badge">✓ FDA 21 CFR Part 11<br><span>Electronic records & signatures</span></div>
+                  <div class="compliance-badge">✓ HIPAA/HITECH<br><span>Patient data privacy & security</span></div>
+                  <div class="compliance-badge">✓ Cybersecurity<br><span>IEC 81001-5-1 health software</span></div>
+                  <div class="compliance-badge">✓ Clinical Risk<br><span>ISO 14971 risk analysis</span></div>
+              </div>
+              
+              <div class="investor-competitive-box">
+                  <h3 class="investor-h3">Why Competitors Can't Catch Up:</h3>
+                  <ul class="competitive-list">
+                      <li>Hardware companies lack regulatory software expertise</li>
+                      <li>Software companies lack medical device experience</li>
+                      <li>Building this compliance stack takes <strong>3-5 years</strong> and <strong>$10M+</strong></li>
+                      <li>We're already 2 years ahead with HMS/JHU validation</li>
+                  </ul>
+              </div>
+              
+              <p class="investor-p" style="text-align: center; font-size: 1.3rem; color: #2C3E50; font-weight: 600; margin-top: 2rem;">
+                  <strong>Our advantage:</strong> By the time competitors start, we'll already be the established standard.
+              </p>
+          </div>
+      </section>
+      
+      <!-- END NEW INVESTOR SECTIONS -->
+      
+      <!-- HIDDEN SECTIONS (Available via menu) -->
+      
+      <!-- MyHealthCanvas Section (Hidden from main flow) -->
+      <section id="myhealthcanvas" class="section" style="display: none;">
         <div class="golden-label">FOR PATIENTS</div>
         <div class="section-image">
           <img src="patient-doctor-myhealthcanvas.png" alt="Patient and doctor using MyHealthCanvas forms for better healthcare communication">
@@ -1272,8 +1738,8 @@
         </div>
       </section>
 
-      <!-- Consulting Section - AI Automation Agency -->
-      <section id="consulting" class="section">
+      <!-- Consulting Section - AI Automation Agency (Hidden from main flow) -->
+      <section id="consulting" class="section" style="display: none;">
         <div class="golden-label">FOR INDEPENDENT BUSINESS CUSTOMERS</div>
         <div class="section-image">
           <img src="AndyAIPhoto.jpg" alt="Andy Squire - AI Automation Consultant & AI SEO Specialist">
@@ -1351,28 +1817,22 @@
               </div>
             </div>
 
-            <p style="margin: 1.5rem 0 0 0; font-style: italic; color: #666; text-align: center;">
-              Custom AI automation solutions - pricing discussed on consultation
-            </p>
           </div>
 
-          <div style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
-            <p style="margin: 0 0 1rem 0; font-weight: bold; color: #1e3a8a;">
-              🎓 Completing Oxford University AI Certification
-            </p>
-            <p style="margin: 0; font-size: 0.95rem;">
-              I'm currently advancing my AI expertise through Oxford's rigorous "AI Programme". Please register any interest for a <strong>custom Agent workforce</strong> in the contact form, as I have limited capacity.
+          <div style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); padding: 1.5rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
+            <p style="margin: 0; font-size: 1rem; color: #1e3a8a;">
+              Custom AI automation solutions - pricing discussed upon request
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Waitlist Form Section -->
-      <section id="waitlist-form" class="section" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);">
+      <!-- Waitlist Form Section (Hidden) -->
+      <section id="waitlist-form" class="section" style="display: none; background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);">
         <div class="section-content" style="max-width: 600px; margin: 0 auto;">
           <h2 style="text-align: center;">Join the AI Automation Waitlist</h2>
           <p style="text-align: center; margin-bottom: 2rem;">
-            Be the first to know when I'm accepting new clients. Get exclusive AI automation tips while you wait.
+            Get exclusive AI automation tips while you wait.
           </p>
           
           <!-- Download Agent Guide CTA Button -->
@@ -1424,10 +1884,6 @@
                 Join the Waitlist
               </button>
             </div>
-
-            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-              I'll reach out when I'm accepting new clients. In the meantime, you'll receive free AI automation tips.
-            </p>
           </form>
 
           <div id="waitlist-confirmation" style="display: none; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
@@ -1438,37 +1894,56 @@
         </div>
       </section>
 
-      <!-- Humanoid Healthcare Section - Mobile-First 2x3 Grid -->
-      <section id="humanoid-healthcare" class="section">
+      <!-- Humanoid Healthcare Section - Mobile-First 2x3 Grid (Hidden - replaced by investor sections) -->
+      <section id="humanoid-healthcare" class="section" style="display: none;">
         <div class="golden-label">FOR BUSINESS PARTNERS</div>
         <div class="section-image">
-          <img src="HumanoidHealthcare.png" alt="Humanoid healthcare technology and innovation">
+          <img src="HumanoidHealthcare.png" alt="Humanoid robot providing safe patient care with FDA SaMD compliance - PatientCentricCare Safety OS">
         </div>
         <div class="section-content">
-          <h1 class="section-main-title">Humanoid Healthcare</h1>
-          <h2 style="color: #E67E22;">Seize the $1 Trillion Opportunity</h2>
+          <h2 class="section-main-title">Humanoid Healthcare</h2>
+          <h3 style="color: #E67E22; font-size: 1.8rem; margin-top: 0.5rem;">Seize the $1 Trillion Opportunity</h3>
           
           <!-- Story Section -->
           <div class="humanoid-story">
-            <h3>The Missing Piece of the Humanoid Revolution</h3>
-            <p>We face a global caregiver crisis. Humanoid robots can help, but only if they are safe & legally compliant. Without a certified software "brain," they pose a major legal & safety risk if used 'off-label' as Caregivers with Patients.</p>
-            <p>Our fast-track blueprint helps cut through the 7+ year regulatory delay. We are raising $3M for a 24-month pilot to accelerate the market's first compliant SaMD Humanoid software brain, securing a first-mover advantage in a multi-trillion dollar industry.</p>
-            <p><strong>This is your opportunity to be leaders in the foundational infrastructure that will power the future of healthcare, evolving to predictive alerts & prevention/ wellness. </strong></p>
+            <h4 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #2C3E50;">The Missing Piece of the Humanoid Revolution</h4>
+            
+            <!-- Investor Pitch Video -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+              <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 15px;"
+                src="https://www.youtube.com/embed/WwxU1KrYACk?rel=0&modestbranding=1" 
+                title="Seize the $1 Trillion Opportunity - Andy Squire Investor Pitch"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
           
-          <!-- Healthcare Ecosystem Diagram -->
-          <div class="ecosystem-diagram">
-            <img src="healthcare-ecosystem-diagram.png" alt="Healthcare Ecosystem: Robotics Manufacturers, EHR Provider Cloud, and Medical Teams working together for enhanced patient care" class="ecosystem-image">
+          <!-- Traction Stats Banner -->
+          <div style="background: #FFF4E6; padding: 1.5rem; border-radius: 15px; margin: 2rem 0; text-align: center; border-left: 5px solid #E67E22; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem; color: #2C3E50;">🚀 Proven Market Interest</h3>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1rem;">
+              <div>
+                <div style="font-size: 2rem; font-weight: bold; color: #E67E22;">10,000+</div>
+                <div style="font-size: 0.9rem; color: #5D6D7E;">Monthly Website Visitors</div>
+              </div>
+              <div>
+                <div style="font-size: 2rem; font-weight: bold; color: #E67E22;">70%</div>
+                <div style="font-size: 0.9rem; color: #5D6D7E;">US Interest</div>
+              </div>
+            </div>
           </div>
           
-          <p class="section-subtitle">New Investor Gateway: Watch Investor Pitch Video</p>
+          <p class="section-subtitle">Explore Our Vision</p>
           
-          <!-- Mobile-First 2x3 Grid -->
+          <!-- Mobile-First Grid - PUBLIC ITEMS ONLY -->
           <div class="investor-grid">
             <!-- Row 1 -->
             <div class="grid-item primary-cta">
               <div class="start-here-badge">START HERE</div>
-              <img src="icon-video-pitch.png" alt="Watch Video" class="grid-icon-img">
+              <img src="icon-video-pitch.png" alt="Watch investor pitch video - PatientCentricCare.AI $1 Trillion opportunity" class="grid-icon-img">
               <h3>Watch Investor Pitch Video: The Full Opportunity</h3>
               <!-- Updated: Watch Now button now links to YouTube video - PatientCentricCare.AI channel -->
               <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" class="grid-button primary" onclick="trackWatchInvestorVideo(); trackVideoClick('Humanoid Healthcare Investor Pitch', 'https://www.youtube.com/watch?v=RkQcJDRVj-o'); trackCTAClick('Watch Investor Pitch Video')"
@@ -1478,10 +1953,9 @@
             </div>
             
             <div class="grid-item">
-              <span class="new-badge">NEW</span>
-              <img src="icon-investor-deck.png" alt="Investor Deck" class="grid-icon-img">
-              <h3>Download Investor Deck: Market & Financials</h3>
-              <a href="InvestorDeck-HumanoidHealthcare.pdf" download="InvestorDeck-HumanoidHealthcare.pdf" class="grid-button" onclick="trackDownloadInvestorDeck(); trackFileDownload('InvestorDeck-HumanoidHealthcare.pdf', 'pdf', 'Download Investor Deck'); trackCTAClick('Download Investors Deck')">
+              <img src="icon-samd.png" alt="FDA SaMD Software as Medical Device features for humanoid healthcare robots" class="grid-icon-img">
+              <h3>SaMD Features Infographic</h3>
+              <a href="SaMDFeaturesInfographic.pdf" download="SaMD-Features-Infographic.pdf" class="grid-button" onclick="trackSaMDFeaturesDownload(); trackFileDownload('SaMDFeaturesInfographic.pdf', 'pdf', 'Download SaMD Features Infographic'); trackCTAClick('Download SaMD Features Infographic')">
                 <span>Download</span>
                 <span class="download-icon">⬇</span>
               </a>
@@ -1490,7 +1964,7 @@
             
             <!-- Row 2 -->
             <div class="grid-item">
-              <img src="icon-partnership.png" alt="Partnership" class="grid-icon-img">
+              <img src="icon-partnership.png" alt="Strategic partnerships in humanoid healthcare robotics and medical AI" class="grid-icon-img">
               <h3>Partnership Opportunities: Robotics Manufacturers</h3>
               <a href="HumanoidHealthcarePITCHx.pdf" download="Humanoid-Healthcare-Pitch.pdf" class="grid-button" onclick="trackDownloadPartnershipOpportunities(); trackFileDownload('HumanoidHealthcarePITCHx.pdf', 'pdf', 'Download Pitch to Manufacturers'); trackCTAClick('Download Pitch to Manufacturers')">
                 <span>Download</span>
@@ -1498,57 +1972,43 @@
               </a>
             </div>
             
-            <div class="grid-item">
-              <img src="icon-blueprint.png" alt="Blueprint" class="grid-icon-img">
-              <h3>Ecosystem Architecture Blueprint</h3>
-              <a href="HumanoidHealthcareEcosystemBlueprint.pdf" download="Ecosystem-Architecture-Blueprint.pdf" class="grid-button" onclick="trackDownloadEcosystemBlueprint(); trackFileDownload('HumanoidHealthcareEcosystemBlueprint.pdf', 'pdf', 'Download Ecosystem Architecture'); trackCTAClick('Download Ecosystem Architecture')">
-                <span>Download</span>
-                <span class="download-icon">⬇</span>
-              </a>
-            </div>
-            
-            <!-- Row 3 -->
-            <div class="grid-item">
-              <div class="badge-updated">UPDATED</div>
-              <img src="icon-regulatory.png" alt="Regulatory" class="grid-icon-img">
-              <h3>Regulatory Path Forwards</h3>
-              <a href="UpdatedSept25HumanoidRegulatoryPathway.pdf" download="Regulatory-Pathway-Oct2025.pdf" class="grid-button" onclick="trackDownloadRegulatoryPlan(); trackRegulatoryDownload(); trackFileDownload('UpdatedSept25HumanoidRegulatoryPathway.pdf', 'pdf', 'Download Regulatory Path Forwards'); trackCTAClick('Download Regulatory Path Forwards')">
-                <span>Download</span>
-                <span class="download-icon">⬇</span>
-              </a>
-            </div>
-            
-            <div class="grid-item">
-              <img src="icon-samd.png" alt="SaMD Features" class="grid-icon-img">
-              <h3>SaMD Features Infographic</h3>
-              <a href="SaMDFeaturesInfographic.pdf" download="SaMD-Features-Infographic.pdf" class="grid-button" onclick="trackSaMDFeaturesDownload(); trackFileDownload('SaMDFeaturesInfographic.pdf', 'pdf', 'Download SaMD Features Infographic'); trackCTAClick('Download SaMD Features Infographic')">
-                <span>Download</span>
-                <span class="download-icon">⬇</span>
-              </a>
-            </div>
+            <!-- REMOVED: Blueprint and Regulatory moved to Investor Portal -->
           </div>
           
-          <!-- Deep Dive Investor Portal - Enhanced Design -->
-          <div style="margin-top: 3rem;">
-            <div class="grid-item" style="max-width: 500px; margin: 0 auto; position: relative;">
-              <!-- US Flag Badge (discreet, top-right corner) -->
-              <div style="position: absolute; top: 15px; right: 15px; width: 32px; height: 32px; border-radius: 50%; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <img src="https://flagcdn.com/w40/us.png" alt="US" style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Architecture Diagram Teaser -->
+          <div class="ecosystem-diagram" style="margin: 3rem 0; text-align: center;">
+            <img src="EHR-Architecture-Clean.jpg" alt="Scalable IT Architecture for Patient-centric Care - Enterprise-grade TOGAF Principles" class="ecosystem-image" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+          </div>
+          
+          <!-- PRIMARY CTA: Investor Portal - ENHANCED -->
+          <div style="margin-top: 4rem; text-align: center;">
+            <div style="background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); max-width: 600px; margin: 0 auto; position: relative; border: 3px solid #E67E22;">
+              <!-- Dual-Track Flags: US + EU (prominent, top-right corner) -->
+              <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 10px;">
+                <!-- US Flag -->
+                <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                  <img src="https://flagcdn.com/w80/us.png" alt="US" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <!-- EU Flag -->
+                <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                  <img src="https://flagcdn.com/w80/eu.png" alt="EU" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
               </div>
               
-              <img src="icon-deep-dive.png" alt="Deep Dive" class="grid-icon-img">
-              <h3>Deep Dive into US-First Market</h3>
+              <img src="icon-deep-dive.png" alt="Deep dive into humanoid healthcare technology and regulatory compliance" style="width: 120px; height: 120px; margin: 0 auto 1.5rem; display: block;">
+              <h2 style="color: #E67E22; font-size: 2rem; margin-bottom: 1rem;">Investor Deep Dive</h2>
+              <h3 style="color: #333; font-size: 1.3rem; margin-bottom: 1.5rem;">Access Data Room For More Details</h3>
+              <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">Full investor deck, financial models, architecture blueprints, regulatory roadmap, and founder profile — all behind secure access.</p>
               
-              <a href="/investors" class="grid-button primary" onclick="trackCTAClick('Investor Portal'); gtag('event', 'investor_portal_click', {'event_category': 'Navigation', 'event_label': 'Homepage to Portal'});" style="background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; font-weight: 600; font-size: 1.1rem;">
-                <span>Enter Investor Portal</span>
-                <span class="arrow">→</span>
+              <a href="/investors" class="grid-button primary" onclick="trackCTAClick('Investor Portal'); gtag('event', 'investor_portal_click', {'event_category': 'Navigation', 'event_label': 'Homepage to Portal'});" style="background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; font-weight: 700; font-size: 1.3rem; padding: 1.2rem 3rem; border-radius: 50px; display: inline-block; text-decoration: none; box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4); transition: all 0.3s ease; border: none;">
+                <span>🚀 ENTER INVESTOR DATA ROOM</span>
+                <span class="arrow" style="margin-left: 0.5rem;">→</span>
               </a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- eLibrary Section -->
-      <section id="elibrary" class="section">
+      </section>      <!-- E-Library Section (Hidden) -->
+      <section id="elibrary" class="section" style="display: none;">
         <div class="golden-label">FOR ALL USERS</div>
         <div class="section-content">
           <h2>eLibrary</h2>        <p>Insights on AI automation, healthcare innovation, and emerging technologies. Explore practical guides, industry analysis, and breakthrough solutions transforming patient care and business operations.</p>
@@ -1564,7 +2024,7 @@
         </div>
       </section>
 
-      <!-- Collaboration Section -->
+      <!-- Collaboration Section (Visible - shows partnerships) -->
       <section id="collaboration" class="section">
         <div class="golden-label">FOR ALL USERS</div>
         <div class="section-image">
@@ -1572,16 +2032,102 @@
         </div>
         <div class="section-content">
           <h2>Collaboration</h2>
-          <p>We're seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
-          <p><strong>Are you - Robotics Hardware / Software Manufacturer, Healthcare Institute, Investor, Patient or Advocate?</strong></p>
+          
+          <!-- Harvard Medical School Partnership Badge -->
+          <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #E67E22; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="font-size: 1.15rem; color: #2C3E50; margin-bottom: 1.5rem; line-height: 1.6;">
+              <strong>Humanoid Healthcare is partnering with Harvard Medical School on their 'AI in Healthcare' program.</strong>
+            </p>
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <img src="harvard-medical-school-logo.png" alt="Harvard Medical School Partnership" style="max-width: 400px; width: 80%; height: auto;">
+            </div>
+          </div>
+          
+          <p>We're also seeking partners to co-develop compliant assistive humanoid healthcare software technologies that integrate AI, augmented Agents with Sensor-EHR data system.</p>
+          <p><strong>Are you - Robotics Hardware / Software Manufacturer, Healthcare Research Institute, Investor, Patient or Advocate?</strong></p>
           <div class="cta-buttons">
             <a href="#" class="cta-button" onclick="openMailtoCollaboration(event)">Contact Us</a>
             <a href="https://www.linkedin.com/in/andysquire99/" target="_blank" class="cta-button secondary" onclick="trackCTAClick('Connect on LinkedIn')">Connect on LinkedIn</a>
           </div>
         </div>
       </section>
+
+      <!-- Mission & Technology Section (SEO Content Expansion) -->
+      <section class="mission-technology-section" style="padding: 4rem 2rem; margin: 3rem 0 0 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <div style="background: white; padding: 3rem; border-radius: 20px; border: 2px solid #3498DB; box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1); line-height: 1.8; color: #4a5568;">
+            <h2 style="color: #2C3E50; font-size: 2.5rem; text-align: center; margin-bottom: 1rem; margin-top: 0; font-weight: 700;">Our Mission & Technology</h2>
+            <h3 style="color: #E67E22; font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 600;">The Quadruple Win: Patients, Providers, Payers & Society</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+              PatientCentricCare.AI delivers a <strong>Quadruple Win</strong> across the healthcare ecosystem. For <strong>patients</strong>, we enable safer, more personalized care through humanoid robots that provide 24/7 monitoring and assistance while maintaining human oversight. For <strong>providers</strong>, our Safety OS reduces liability risk and streamlines EHR integration, allowing clinicians to focus on high-value care decisions. For <strong>payers</strong>, we demonstrate measurable ROI through reduced hospital readmissions and improved chronic disease management. For <strong>society</strong>, we address the global caregiver crisis by scaling compassionate care to underserved populations while creating high-skilled jobs in the medical robotics sector.
+            </p>
+            
+            <h3 style="color: #E67E22; font-size: 1.8rem; margin-bottom: 1.5rem; margin-top: 2.5rem; font-weight: 600;">US-First Strategy: Accelerating Market Entry</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+              Our <strong>US-First FDA SaMD strategy</strong> leverages America's streamlined regulatory pathway to achieve faster market entry than the EU's fragmented approval process. By targeting <strong>Medical Alley</strong> in Minnesota—home to Mayo Clinic, Medtronic, and 1,000+ medical device companies—we gain access to world-class clinical validation partners and regulatory expertise. Our dual-track approach allocates <strong>$3M for US pilots</strong> and <strong>$3M for EU pilots</strong>, securing first-mover advantage in the world's two largest healthcare economies. This parallel path validation de-risks our go-to-market strategy while building a defensible regulatory moat that competitors will struggle to replicate.
+            </p>
+            
+            <h3 style="color: #E67E22; font-size: 1.8rem; margin-bottom: 1.5rem; margin-top: 2.5rem; font-weight: 600;">Technical Architecture: Physician-in-the-Loop (AIITL)</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+              At the core of our Safety OS is the <strong>Physician-in-the-Loop (AIITL) framework</strong>—a governance model that makes the human clinician the pilot, not just the brake. Unlike fully autonomous systems that pose unacceptable liability risks, our architecture ensures that <strong>all critical care decisions require physician approval</strong> before execution. The system integrates seamlessly with existing <strong>EHR platforms</strong> (Epic, Cerner, Allscripts) to provide real-time patient data to humanoid robots while maintaining HIPAA compliance and audit trails. Our modular software design allows robotics manufacturers like <strong>Unitree</strong> and <strong>Boston Dynamics</strong> to plug our Safety OS into their hardware platforms, creating a scalable ecosystem where we become the de facto standard for compliant humanoid healthcare. With a projected <strong>49x ROI</strong> and <strong>$279M NPV</strong>, this capital-efficient model positions us to capture significant value in the emerging <strong>$1 Trillion humanoid healthcare market</strong>.
+            </p>
+            
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #E67E22;">
+              <p style="font-size: 1.2rem; color: #2C3E50; font-weight: 600; margin-bottom: 1.5rem;">
+                Join us in building the regulatory bridge that will power the future of safe, compliant, human-centric healthcare.
+              </p>
+              <a href="mailto:Andy@PatientCentricCare.AI" class="cta-button" style="display: inline-block; background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(230, 126, 34, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(230, 126, 34, 0.3)'">
+                Contact Founder
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+      <!-- MINIMAL FOOTER CARDS: Other Ventures -->
+      <section id="other-ventures" style="background: #f8f9fa; padding: 3rem 2rem;">
+          <div style="max-width: 1200px; margin: 0 auto;">
+              <h2 style="text-align: center; font-size: 2rem; color: #2C3E50; margin-bottom: 2rem;">Founder's Other Ventures</h2>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                  
+                  <!-- MyHealthCanvas Card -->
+                  <div style="background: white; border: 2px solid #3498DB; border-radius: 15px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                      <div style="text-align: center; margin-bottom: 1rem;">
+                          <img src="patient-doctor-myhealthcanvas.png" alt="MyHealthCanvas" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                      </div>
+                      <h3 style="color: #2C3E50; font-size: 1.3rem; margin-bottom: 0.75rem; text-align: center;">MyHealthCanvas</h3>
+                      <p style="color: #5D6D7E; font-size: 0.95rem; line-height: 1.6; text-align: center; margin-bottom: 1.5rem;">
+                          Professional PDF forms helping patients prepare better questions for doctors and communicate effectively with their medical team.
+                      </p>
+                      <div style="text-align: center;">
+                          <a href="myhealthcanvas.html" style="display: inline-block; background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                              Learn More
+                          </a>
+                      </div>
+                  </div>
+                  
+                  <!-- AI Automation Agency Card -->
+                  <div style="background: white; border: 2px solid #3498DB; border-radius: 15px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                      <div style="text-align: center; margin-bottom: 1rem;">
+                          <img src="AndyAIPhoto.jpg" alt="AI Automation Agency" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+                      </div>
+                      <h3 style="color: #2C3E50; font-size: 1.3rem; margin-bottom: 0.75rem; text-align: center;">AI Automation Agency</h3>
+                      <p style="color: #5D6D7E; font-size: 0.95rem; line-height: 1.6; text-align: center; margin-bottom: 1.5rem;">
+                          Custom AI agent co-workers for small businesses. Save 90% per employee per year with 24/7 AI automation and AI SEO services.
+                      </p>
+                      <div style="text-align: center;">
+                          <a href="#consulting" style="display: inline-block; background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                              Learn More
+                          </a>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
+    
     <!-- Professional Footer -->
     <footer class="professional-footer">
         <div class="footer-content">
@@ -1595,7 +2141,7 @@
                 <div class="contact-icon email-icon">✉</div>
                 <div class="contact-info">
                     <h3>Email</h3>
-                    <p><a href="mailto:andy@andysquire.ai">andy@andysquire.ai</a></p>
+                    <p><a href="mailto:Andy@PatientCentricCare.AI">Andy@PatientCentricCare.AI</a></p>
                 </div>
             </div>
             
@@ -1612,7 +2158,7 @@
             <p>© 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.</p>
             <div class="footer-links">
                 <a href="impressum.html">Impressum</a>
-                <a href="mailto:andy@andysquire.ai">Contact</a>
+                <a href="mailto:Andy@PatientCentricCare.AI">Contact</a>
             </div>
         </div>
     </footer>
