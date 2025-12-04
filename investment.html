@@ -342,7 +342,12 @@
     <nav>
         <div class="nav-container">
             <a href="/" class="logo">PatientCentricCare.AI</a>
-            <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="/">Home</a></li>
                 <li><a href="/mission.html">Mission</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
@@ -506,5 +511,25 @@
         <p>&copy; 2025 PatientCentricCare.AI | Building the Safety OS for Humanoid Healthcare</p>
         <p style="margin-top: 0.5rem; opacity: 0.8;">Partnering with Harvard Medical School</p>
     </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
