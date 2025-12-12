@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safety OS: 7 Compliance Standards | PatientCentricCare.AI</title>
-    <meta name="description" content="Our Safety OS creates a defensible regulatory moat with 7 compliance standards: FDA SaMD, HIPAA, GDPR, ISO 13485, IEC 62304, MDR, and Physician-in-the-Loop architecture.">
+    <title>Safety OS: Clinical Governance for Safe AI Support | PatientCentricCare.AI</title>
+    <meta name="description" content="Safety OS is the regulatory-grade governance framework that ensures supervised AI assistance can operate safely, predictably, and ethically in real-world home care environments.">
+    <meta name="keywords" content="Safety OS, Clinical Governance, AI Healthcare, Physician-in-the-Loop, AIITL, Patient Safety, Healthcare AI Governance">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andysquire.ai/safety-os.html">
-    <meta property="og:title" content="Safety OS: 7 Compliance Standards | PatientCentricCare.AI">
-    <meta property="og:description" content="Defensible regulatory moat with 7 compliance standards and Physician-in-the-Loop architecture.">
-    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png">
+    <meta property="og:title" content="Safety OS: Clinical Governance for Safe AI Support">
+    <meta property="og:description" content="The governance framework that makes supervised AI assistance safe, predictable, and ethical in home care.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.andysquire.ai/safety-os.html">
-    <meta property="twitter:title" content="Safety OS: 7 Compliance Standards | PatientCentricCare.AI">
-    <meta property="twitter:description" content="Defensible regulatory moat with 7 compliance standards and Physician-in-the-Loop architecture.">
-    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png">
+    <meta property="twitter:title" content="Safety OS: Clinical Governance for Safe AI Support">
+    <meta property="twitter:description" content="The governance framework that makes supervised AI assistance safe, predictable, and ethical in home care.">
+    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
 
-    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
     
     <style>
         * {
@@ -32,9 +46,9 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #2c3e50;
-            background: #f8f9fa;
+            background: #ffffff;
         }
         
         /* Navigation */
@@ -53,7 +67,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .logo {
@@ -80,6 +93,7 @@
         .nav-links a:hover {
             color: #60a5fa;
         }
+        
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -94,195 +108,194 @@
             background: white;
             margin: 3px 0;
             transition: 0.3s;
-            border-radius: 3px;
         }
         
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
         }
         
-        .hero h1 {
+        .page-header h1 {
             font-size: 3rem;
-            font-weight: 800;
             margin-bottom: 1rem;
+            font-weight: 800;
         }
         
-        .hero p {
-            font-size: 1.3rem;
-            font-weight: 600;
+        .page-header .tagline {
+            font-size: 1.5rem;
             color: #fbbf24;
+            font-style: italic;
+            margin-top: 1rem;
         }
         
-        /* Content */
-        .content {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 0 2rem;
+        /* Content Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
         
-        .content-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            border: 2px solid #0d9488;
-            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.1);
-            margin-bottom: 3rem;
-        }
-        
-        .content-card h2 {
-            color: #0f172a;
-            font-size: 2rem;
+        h2 {
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
+            color: #0f172a;
             font-weight: 700;
         }
         
-        .content-card h3 {
-            color: #E67E22;
+        h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
             margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0d9488;
             font-weight: 600;
         }
         
-        .content-card p {
-            font-size: 1.1rem;
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
+        }
+        
+        .intro-text {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: #1e3a5f;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .definition-box {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .definition-box p {
+            margin-bottom: 0;
+            font-size: 1.15rem;
+        }
+        
+        /* Bullets */
+        .bullets {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .bullets li {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
             line-height: 1.8;
         }
         
-        /* Compliance Grid */
-        .compliance-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+        .bullets li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
         
-        .compliance-badge {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-            border: 2px solid #4CAF50;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            font-weight: 600;
-            color: #2C3E50;
-            font-size: 1.1rem;
-        }
-        
-        .compliance-badge span {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #5D6D7E;
-            margin-top: 0.5rem;
-        }
-        
-        /* Competitive Box */
-        .competitive-box {
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
-            border: 2px solid #E67E22;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .competitive-box h3 {
-            color: #E67E22;
-            margin-top: 0;
-        }
-        
-        .competitive-box ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-        
-        .competitive-box li {
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        /* Integration Box */
-        .integration-box {
-            background: #f0f9ff;
-            border: 2px solid #3498DB;
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .integration-box h4 {
-            color: #2C3E50;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .integration-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            margin: 1.5rem 0;
-        }
-        
-        .integration-box p {
-            font-size: 1rem;
-            color: #5D6D7E;
-            margin-top: 0.5rem;
-            font-style: italic;
+        .bullets li strong {
+            color: #0f172a;
         }
         
         /* Highlight Box */
         .highlight-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 5px solid #2196F3;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
             padding: 1.5rem;
-            border-radius: 10px;
             margin: 2rem 0;
-            text-align: center;
+            border-radius: 8px;
         }
         
         .highlight-box p {
-            font-size: 1.3rem;
-            color: #0f172a;
-            font-weight: 600;
-            margin: 0;
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            font-style: italic;
         }
         
-        /* CTA Button */
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid #0d9488;
+        }
+        
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .benefit-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-card li {
+            font-size: 1.05rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .benefit-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            background: #f59e0b;
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
         .cta-button:hover {
+            background: #d97706;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
         
         /* Footer */
@@ -291,10 +304,14 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 4rem;
         }
         
-        /* Mobile */
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
@@ -335,46 +352,31 @@
             .nav-container {
                 flex-wrap: nowrap;
             }
-
-            .hero h1 {
+            
+            .page-header h1 {
                 font-size: 2rem;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            .page-header .tagline {
+                font-size: 1.2rem;
             }
             
-            .content-card {
-                padding: 2rem 1.5rem;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .compliance-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                gap: 1rem;
             }
         }
     </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6CNLJJJ8WQ');
-      gtag('config', 'AW-17214175569');
-      gtag('config', 'AW-290924137');
-    </script>
-
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">PatientCentricCare.AI</a>            <div class="hamburger" id="hamburger">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -391,104 +393,156 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Safety OS: The Regulatory Bridge</h1>
-        <p>Regulation is not a barrier — it's our moat.</p>
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Safety OS: Clinical Governance for Safe AI Support</h1>
+        <p class="tagline">Empowering Independence. Preserving Dignity.</p>
+    </div>
+
+    <!-- Definition -->
+    <section>
+        <div class="definition-box">
+            <p>
+                <strong>Safety OS</strong> is the regulatory-grade governance and behavioral control framework that ensures supervised AI assistance can operate safely, predictably, and ethically in real-world home care environments. It anchors every action with clear clinical boundaries, human oversight, and transparent accountability — making it possible to extend care capacity without compromising patient safety.
+            </p>
+        </div>
     </section>
 
-    <!-- Content -->
-    <div class="content">
-        <div class="content-card">
-            <h2>Why We Win: 7 Compliance Standards = Defensible Moat</h2>
-            
-            <p>Our technical moat is built on <strong>regulatory-grade compliance</strong> that takes years to replicate. While hardware companies race to build humanoid robots, we're building the only FDA-compliant software that makes them safe for healthcare.</p>
-            
-            <h3>Compliance Pillars:</h3>
-            
-            <div class="compliance-grid">
-                <div class="compliance-badge">✓ ISO 13485<br><span>Medical device quality management</span></div>
-                <div class="compliance-badge">✓ IEC 62304<br><span>Medical device software lifecycle</span></div>
-                <div class="compliance-badge">✓ FHIR Standards<br><span>EHR interoperability</span></div>
-                <div class="compliance-badge">✓ FDA 21 CFR Part 11<br><span>Electronic records & signatures</span></div>
-                <div class="compliance-badge">✓ HIPAA/HITECH<br><span>Patient data privacy & security</span></div>
-                <div class="compliance-badge">✓ Cybersecurity<br><span>IEC 81001-5-1 health software</span></div>
-                <div class="compliance-badge">✓ Clinical Risk<br><span>ISO 14971 risk analysis</span></div>
-            </div>
-            
-            <div class="competitive-box">
-                <h3>Why Competitors Can't Catch Up:</h3>
-                <ul>
-                    <li><strong>Hardware companies</strong> lack regulatory software expertise</li>
-                    <li><strong>Software companies</strong> lack medical device experience</li>
-                    <li>Building this patient-centric compliance stack takes <strong>3-5 years</strong> and <strong>$10M+</strong></li>
-                    <li>We're already <strong>2 years ahead</strong> with HMS/JHU validation</li>
-                </ul>
-            </div>
-            
-            <div class="highlight-box">
-                <p><strong>Our advantage:</strong> By the time competitors start, we'll already be the established standard.</p>
-            </div>
+    <!-- Why Safety OS Matters -->
+    <section>
+        <h2>Why Safety OS Matters</h2>
+        <p>
+            As AI-driven support systems become more capable, the critical question is not <em>can they act autonomously?</em> but <strong>can they act safely, within clinically defined limits, and under human supervision?</strong>
+        </p>
+        <p>
+            Safety OS answers this by providing the governance layer that makes supervised AI support trustworthy for patients, families, and clinicians alike.
+        </p>
+        <p>
+            This aligns with broad industry awareness that AI in healthcare requires robust governance to mitigate risks such as unsafe recommendations, privacy vulnerabilities, bias, or decision-making outside clinical context. Strong governance is central to responsible AI adoption in care settings.
+        </p>
+    </section>
+
+    <!-- Core Principles -->
+    <section>
+        <h2>Core Principles of Safety OS</h2>
+        <ul class="bullets">
+            <li><strong>Physician-in-the-Loop Supervision (AIITL):</strong> All critical decisions are overseen by clinicians or trained caregivers. Safety OS positions clinicians as pilots, not passengers — ensuring human judgment remains central to care actions.</li>
+            <li><strong>Clinical Boundaries & Protocol Mapping:</strong> Every behavior supported by Safety OS is mapped to defined clinical protocols. This prevents unsupervised, speculative, or unintended AI actions.</li>
+            <li><strong>Transparency & Auditability:</strong> All interactions, alerts, and escalations are logged with clear, timestamped records. This supports clinical review, quality assurance, and regulatory reporting.</li>
+            <li><strong>Risk Detection & Fail-Safe Controls:</strong> Safety OS includes real-time monitoring for deviations, anomalies, and potential safety hazards. When risk thresholds are reached, the system safely transitions to a supervised or human-only state.</li>
+            <li><strong>Privacy-First Data Handling:</strong> Patient and caregiver data flows are minimized, encrypted, and managed according to rigorous privacy standards such as HIPAA. Explicit consent and transparency guide all data use.</li>
+        </ul>
+    </section>
+
+    <!-- Foundations -->
+    <section>
+        <h2>Foundations of Safety OS</h2>
+        <h3>Governance That Aligns With Healthcare Standards</h3>
+        <p>
+            Safety OS governance is rooted in healthcare quality, risk, and interoperability principles. It is designed to align with established frameworks that govern medical software, patient safety, and clinician oversight.
+        </p>
+        <p><strong>Key compliance foundations include:</strong></p>
+        <ul class="bullets">
+            <li>Quality management systems consistent with medical device standards</li>
+            <li>Lifecycle controls for software development and validation</li>
+            <li>Secure, interoperable data integration with health record systems</li>
+        </ul>
+        <p>
+            These frameworks help ensure Safety OS is built for real-world clinical acceptance.
+        </p>
+    </section>
+
+    <!-- How Safety OS Works -->
+    <section>
+        <h2>How Safety OS Works in Practice</h2>
+        
+        <h3>AIITL — Active Clinical Oversight</h3>
+        <p>
+            Safety OS uses a model in which clinicians are active pilots in the care process:
+        </p>
+        <ul class="bullets">
+            <li>Clinician review and approval are required for sensitive support decisions.</li>
+            <li>Alerts and escalations route directly to care teams when needed.</li>
+            <li>Behavioral boundaries prevent unvalidated actions until reviewed.</li>
+        </ul>
+        <p>
+            This approach mitigates liability risk and preserves clinical authority.
+        </p>
+        
+        <div class="highlight-box">
+            <p>
+                <strong>Note:</strong> Many healthcare AI governance frameworks emphasize that AI should enhance, not replace, human judgment. Safety OS embodies this principle.
+            </p>
         </div>
         
-        <div class="content-card">
-            <h2>Technical Architecture</h2>
-            
-            <h3>Physician-in-the-Loop (AIITL) Framework</h3>
-            <p>At the core of our Safety OS is the <strong>Physician-in-the-Loop (AIITL) framework</strong>—a governance model that makes the human clinician the pilot, not just the brake. Unlike fully autonomous systems that pose unacceptable liability risks, our architecture ensures that <strong>all critical care decisions require physician approval</strong> before execution.</p>
-            
-            <div class="integration-box">
-                <h4>🔗 EHR Integration & HIPAA Compliance</h4>
-                <p>Secure, Hybrid Healthcare Ecosystem Architecture (HHEA) hosted in the EHR Provider cloud (e.g., Epic, Cerner, Allscripts) ensures real-time patient data access with HIPAA compliance and full audit trails.</p>
-                
-                <img src="HHCPicture.jpg" alt="Humanoid Robot, Doctor, and Patient in Healthcare Setting" style="width: 100%; max-width: 800px; margin: 1.5rem auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                
-                <img src="HumanoidHealthcareEcosystem.png" alt="Scalable IT Architecture for Patient-centric Care with EHR Integration">
-                <p>Enterprise Architecture: TOGAF-based Hybrid Healthcare Ecosystem Architecture (HHEA) with HIPAA/GDPR compliance</p>
+        <h3>Integration With Clinical Systems</h3>
+        <p>
+            Safety OS is designed to integrate with existing care infrastructure, including:
+        </p>
+        <ul class="bullets">
+            <li><strong>Electronic Health Records (EHR):</strong> Secure, compliant access to patient data, real-time context for alerts and decisions.</li>
+            <li><strong>Care Team Workflows:</strong> Supervised responses, audit trails and escalation reports.</li>
+        </ul>
+        <p>
+            This means Safety OS complements clinician workflows rather than disrupts them.
+        </p>
+    </section>
+
+    <!-- Benefits -->
+    <section>
+        <h2>Benefits Across the Care Ecosystem</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>For Patients & Families</h4>
+                <ul>
+                    <li>Predictable and transparent support</li>
+                    <li>Safety with dignity</li>
+                    <li>Consistent escalation paths to human caregivers</li>
+                </ul>
             </div>
-            
-            <div style="text-align: center; margin: 2.5rem 0;">
-                <img src="HITLvsAIITL.png" alt="HITL vs AIITL: Human as Passenger vs Human as Pilot" style="width: 100%; max-width: 900px; margin: 0 auto; display: block; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <p style="margin-top: 1rem; font-size: 1rem; color: #5D6D7E; font-style: italic;"><strong>Key Difference:</strong> HITL makes humans passive observers; AIITL makes them active pilots with full control over AI execution.</p>
+            <div class="benefit-card">
+                <h4>For Clinicians & Care Teams</h4>
+                <ul>
+                    <li>Continuous visibility into support activities</li>
+                    <li>Risk markers and trend insights</li>
+                    <li>Enhanced capacity without unsafe autonomy</li>
+                </ul>
             </div>
-            
-            <h3>Modular Platform Design</h3>
-            <p>Our modular software design allows robotics manufacturers like <strong>Unitree</strong> and <strong>Boston Dynamics</strong> to plug our Safety OS into their hardware platforms, creating a scalable ecosystem where we become the de facto standard for compliant humanoid healthcare.</p>
-            
-            <div class="highlight-box">
-                <p>With a projected <strong>49x ROI</strong> and <strong>$279M NPV</strong>, this capital-efficient model positions us to capture significant value in the emerging <strong>$1 Trillion humanoid healthcare market</strong>.</p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="investors/InvestorDeck3.2_USAdvantage.pdf" class="cta-button">Download Investor Deck</a>
+            <div class="benefit-card">
+                <h4>For Health Systems & Sponsors</h4>
+                <ul>
+                    <li>Governance-aligned innovation pathway</li>
+                    <li>Documented audit trails for compliance</li>
+                    <li>Scalable model built on supervised action and oversight</li>
+                </ul>
             </div>
         </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Learn More or Partner With Us</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 2.5rem;">
+            We welcome dialogue with clinicians, health systems, and institutions committed to safe, transparent AI support systems. Contact us to explore collaboration or request detailed governance documentation.
+        </p>
+        <a href="/investors/" class="cta-button">REQUEST GOVERNANCE DOCUMENTATION →</a>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 PatientCentricCare.AI | Building the Safety OS for Humanoid Healthcare</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Partnering with Harvard Medical School</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living. Empowering Independence. Preserving Dignity.</p>
+        <p>&copy; 2025 PatientCentricCare.AI</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Safe Humanoid Support for Independent Living at Home | Partnering with Harvard Medical School</p>
     </footer>
-
+    
     <!-- Mobile Menu Script -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
         
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
