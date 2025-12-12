@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traction: Harvard Medical School Partnership | PatientCentricCare.AI</title>
-    <meta name="description" content="Validated by Harvard Medical School partnership. Medical Alley ecosystem access. Strategic partnerships driving humanoid healthcare adoption.">
+    <title>Traction & Momentum | PatientCentricCare.AI</title>
+    <meta name="description" content="Building PatientCentricCare.AI through disciplined, evidence-driven approach with clinical collaborators and research partners.">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andysquire.ai/traction.html">
-    <meta property="og:title" content="Traction: Harvard Medical School Partnership | PatientCentricCare.AI">
-    <meta property="og:description" content="Validated by Harvard Medical School. Medical Alley ecosystem access. Strategic partnerships.">
+    <meta property="og:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="og:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
     <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.andysquire.ai/traction.html">
-    <meta property="twitter:title" content="Traction: Harvard Medical School Partnership | PatientCentricCare.AI">
-    <meta property="twitter:description" content="Validated by Harvard Medical School. Medical Alley ecosystem access. Strategic partnerships.">
+    <meta property="twitter:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="twitter:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
     <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png">
-
-    
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
     
     <style>
         * {
@@ -29,331 +25,236 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            background: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        
+
+        /* Navigation */
         nav {
             background: #0f172a;
-            padding: 1rem 2rem;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
-        .nav-container {
+
+        nav .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
-        
-        .logo {
-            color: white;
-            font-size: 1.3rem;
+
+        nav .logo {
+            font-size: 1.5rem;
             font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
         }
-        
-        .nav-links {
+
+        nav ul {
+            list-style: none;
             display: flex;
             gap: 2rem;
-            list-style: none;
-            flex-wrap: wrap;
         }
-        
-        .nav-links a {
-            color: white;
+
+        nav ul li a {
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
-        .nav-links a:hover {
-            color: #60a5fa;
-        }
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 3px;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+
+        nav ul li a:hover {
+            color: #0d9488;
         }
 
-        
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
         }
-        
+
         .hero h1 {
             font-size: 3rem;
-            font-weight: 800;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
-        
+
         .hero p {
             font-size: 1.3rem;
-            font-weight: 600;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #e2e8f0;
         }
-        
-        .content {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 0 2rem;
+
+        .hero-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            margin-top: 1.5rem;
         }
-        
-        .content-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            border: 2px solid #0d9488;
-            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.1);
-            margin-bottom: 3rem;
+
+        /* Main Content */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
-        
-        .content-card h2 {
-            color: #0f172a;
+
+        section h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            font-weight: 700;
+            color: #0f172a;
+            border-bottom: 3px solid #0d9488;
+            padding-bottom: 0.5rem;
         }
-        
-        .content-card p {
-            font-size: 1.1rem;
+
+        section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #1e3a5f;
+        }
+
+        section p {
             margin-bottom: 1.5rem;
+            font-size: 1.1rem;
             line-height: 1.8;
         }
-        
-        .partnership-box {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-            border: 3px solid #4CAF50;
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2rem 0;
+
+        .bullets {
+            list-style: none;
+            margin: 1.5rem 0;
         }
-        
-        .partnership-header {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+
+        .bullets li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            font-size: 1.05rem;
         }
-        
-        .partnership-logo {
-            width: 120px;
-            height: auto;
+
+        .bullets li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
         }
-        
-        .partnership-header h3 {
-            color: #2C3E50;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0;
-        }
-        
-        .partnership-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .partnership-item {
-            background: white;
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
             padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #4CAF50;
+            margin: 2rem 0;
+            border-radius: 4px;
         }
-        
-        .partnership-item strong {
-            color: #2C3E50;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 0.5rem;
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 1.05rem;
         }
-        
-        .value-box {
-            background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
-            border: 2px solid #E67E22;
-            border-radius: 15px;
-            padding: 2rem;
+
+        /* Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
-        
-        .value-box h3 {
-            color: #E67E22;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
+
+        .pillar-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
         }
-        
-        .value-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+
+        .pillar-card h4 {
+            color: #0d9488;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
-        
-        .value-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .value-icon {
-            color: #4CAF50;
-            font-size: 1.5rem;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-        
-        .value-item strong {
-            color: #2C3E50;
-        }
-        
+
+        /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            background: #0d9488;
             color: white;
             padding: 1rem 2.5rem;
-            border-radius: 50px;
             text-decoration: none;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+            margin-top: 2rem;
         }
-        
+
         .cta-button:hover {
+            background: #0f766e;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
         }
-        
+
+        /* Footer */
         footer {
             background: #0f172a;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             margin-top: 4rem;
         }
-        
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #0f172a;
-                flex-direction: column;
-                padding: 1rem 2rem;
-                gap: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            .nav-links.active {
-                max-height: 500px;
-            }
-            
-            .nav-links li {
-                padding: 0.8rem 0;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-            
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
-            
-            nav {
-                position: relative;
-            }
-            
-            .nav-container {
-                flex-wrap: nowrap;
-            }
 
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
-            
-            .content-card {
-                padding: 2rem 1.5rem;
+
+            .hero p {
+                font-size: 1.1rem;
             }
-            
-            .partnership-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .partnership-details {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
+
+            nav ul {
+                flex-wrap: wrap;
                 gap: 1rem;
+                justify-content: center;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
             }
         }
     </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6CNLJJJ8WQ');
-      gtag('config', 'AW-17214175569');
-      gtag('config', 'AW-290924137');
-    </script>
-
 </head>
 <body>
+    <!-- NAVIGATION -->
     <nav>
-        <div class="nav-container">
-            <a href="/" class="logo">PatientCentricCare.AI</a>            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/">Home</a></li>
+        <div class="container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/mission.html">Mission</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
                 <li><a href="/investment.html">Investment</a></li>
@@ -364,124 +265,200 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
-        <h1>Traction & Partnerships</h1>
-        <p>Validated by World-Class Institutions</p>
+        <h1>Traction & Momentum</h1>
+        <p>
+            We are building PatientCentricCare.AI through a disciplined, evidence-driven approach supported by clinical collaborators, research partners, and early institutional engagement. Our traction reflects progress across four pillars: governance, evidence generation, clinical alignment, and strategic partnerships.
+        </p>
     </section>
 
-    <div class="content">
-        <div class="content-card">
-            <h2>Strategic Partnerships</h2>
-            
-            <div class="partnership-box">
-                <div class="partnership-header">
-                    <img src="HMS-Logo.png" alt="Harvard Medical School" class="partnership-logo">
-                    <h3>Harvard Medical School (HMS) Partnership</h3>
-                </div>
-                <div class="partnership-details">
-                    <div class="partnership-item">
-                        <strong>Status:</strong> Immediate placement offered (December 2025)
-                    </div>
-                    <div class="partnership-item">
-                        <strong>Focus:</strong> Commercial innovation track for regulatory strategy refinement
-                    </div>
-                    <div class="partnership-item">
-                        <strong>Value:</strong> Access to HMS clinical network, regulatory expertise, and pilot site identification
-                    </div>
-                    <div class="partnership-item">
-                        <strong>Why HMS:</strong> Selected over Johns Hopkins University due to Humanoid Healthcare's current priorities for commercialization / Seed Funding
-                    </div>
-                </div>
+    <!-- Four Pillars Overview -->
+    <section>
+        <h2>Four Pillars of Progress</h2>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h4>Governance</h4>
+                <p>Safety OS framework development</p>
             </div>
-            
-            <div class="value-box">
-                <h3>What This Means for Investors:</h3>
-                <div class="value-list">
-                    <div class="value-item">
-                        <span class="value-icon">✓</span>
-                        <div>
-                            <strong>De-risked execution:</strong> Top medical institutions validate our regulatory pathway
-                        </div>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-icon">✓</span>
-                        <div>
-                            <strong>Credibility:</strong> HMS backing opens doors with FDA reviewers and institutional buyers
-                        </div>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-icon">✓</span>
-                        <div>
-                            <strong>Talent pipeline:</strong> Access to clinical advisors and pilot partners
-                        </div>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-icon">✓</span>
-                        <div>
-                            <strong>Network effects:</strong> HMS connection accelerates partnerships with Medical Alley ecosystem (Mayo Clinic, Medtronic)
-                        </div>
-                    </div>
-                </div>
+            <div class="pillar-card">
+                <h4>Evidence Generation</h4>
+                <p>Ethical insight collection</p>
+            </div>
+            <div class="pillar-card">
+                <h4>Clinical Alignment</h4>
+                <p>Collaboration with care professionals</p>
+            </div>
+            <div class="pillar-card">
+                <h4>Strategic Partnerships</h4>
+                <p>Health system engagement</p>
             </div>
         </div>
+    </section>
+
+    <!-- 1. Clinical & Research Collaboration -->
+    <section>
+        <h2>1. Clinical & Research Collaboration</h2>
+        <p>
+            We are actively developing Safety OS and supervised-support models in collaboration with clinicians, care professionals, and researchers working across:
+        </p>
+        <ul class="bullets">
+            <li>Aging and cognitive decline</li>
+            <li>Rehabilitation pathways</li>
+            <li>Chronic-care management</li>
+            <li>Safety and oversight frameworks</li>
+        </ul>
+        <p>
+            These collaborations provide:
+        </p>
+        <ul class="bullets">
+            <li>Real-world insight into patient needs</li>
+            <li>Input on clinical protocols and boundaries</li>
+            <li>Early validation of support use-cases</li>
+            <li>Continuous refinement of Safety OS governance</li>
+        </ul>
+    </section>
+
+    <!-- 2. Regulatory Alignment & Safety Frameworks -->
+    <section>
+        <h2>2. Regulatory Alignment & Safety Frameworks</h2>
+        <p>
+            We are establishing the foundations for Safety OS as a regulatory-grade governance layer for supervised AI support. Current traction includes:
+        </p>
+        <ul class="bullets">
+            <li>Protocol and workflow mapping with clinical advisors</li>
+            <li>Safety boundary modeling</li>
+            <li>Preliminary governance architecture development</li>
+            <li>Alignment with emerging AI regulatory expectations</li>
+            <li>Quality and risk-management foundations consistent with SaMD design principles</li>
+        </ul>
+    </section>
+
+    <!-- 3. Evidence Generation Pathway -->
+    <section>
+        <h2>3. Evidence Generation Pathway</h2>
+        <p>
+            We are building an ethical, consent-based environment for gathering geriatric and chronic-care insights that inform:
+        </p>
+        <ul class="bullets">
+            <li>Safety boundaries</li>
+            <li>Risk detection models</li>
+            <li>Clinician oversight expectations</li>
+            <li>Support routines and escalation rules</li>
+        </ul>
+        <p>
+            This early evidence base will support:
+        </p>
+        <ul class="bullets">
+            <li>Pilot design</li>
+            <li>Outcome measurement</li>
+            <li>Protocol refinement</li>
+            <li>Future publication opportunities</li>
+        </ul>
+    </section>
+
+    <!-- 4. Strategic Engagement & Early Partnerships -->
+    <section>
+        <h2>4. Strategic Engagement & Early Partnerships</h2>
+        <p>
+            We are in active discussions with health systems, research institutions, and strategic sponsors who are evaluating collaboration opportunities aligned with:
+        </p>
+        <ul class="bullets">
+            <li>Supervised AI support in the home</li>
+            <li>Safety OS governance integration</li>
+            <li>Chronic-care continuity models</li>
+            <li>Early cognitive-support routines</li>
+            <li>Reduction of caregiver burden</li>
+        </ul>
+        <p>
+            These engagements form the basis for upcoming supervised pilots and co-designed research programs.
+        </p>
+    </section>
+
+    <!-- 5. Technology Development & Platform Architecture -->
+    <section>
+        <h2>5. Technology Development & Platform Architecture</h2>
+        <p>
+            The Safety OS platform is progressing through staged development milestones:
+        </p>
+        <ul class="bullets">
+            <li>Behavior-governance engine</li>
+            <li>Supervision and escalation controls</li>
+            <li>Protocol and intent-mapping</li>
+            <li>Privacy-first data handling</li>
+            <li>Clinical context integration models</li>
+        </ul>
+    </section>
+
+    <!-- 6. Advisory & Domain Expertise Network -->
+    <section>
+        <h2>6. Advisory & Domain Expertise Network</h2>
+        <p>
+            Our advisory ecosystem spans:
+        </p>
+        <ul class="bullets">
+            <li>Clinical leaders in geriatrics, cognition, and chronic care</li>
+            <li>AI governance and safety experts</li>
+            <li>Healthcare operations and workflow architects</li>
+            <li>Regulatory and quality specialists</li>
+        </ul>
+    </section>
+
+    <!-- 7. Public Mission, Media, & Thought Leadership -->
+    <section>
+        <h2>7. Public Mission, Media, & Thought Leadership</h2>
+        <p>
+            PatientCentricCare.AI is increasingly recognized for its stance on responsible AI for home independence, with visibility across:
+        </p>
+        <ul class="bullets">
+            <li>Patient-centered AI governance</li>
+            <li>Ethical design principles</li>
+            <li>The future of supervised humanoid care</li>
+            <li>Healthcare system sustainability</li>
+        </ul>
+    </section>
+
+    <!-- 8. What's Next -->
+    <section>
+        <h2>8. What's Next</h2>
+        <p>
+            Upcoming milestones include:
+        </p>
+        <ul class="bullets">
+            <li>Formalizing supervised support pilot frameworks</li>
+            <li>Advancing Safety OS supervision and boundary modules</li>
+            <li>Expanding clinical research collaborations</li>
+            <li>Preparing regulatory documentation foundations</li>
+            <li>Initiating early insight-gathering activities</li>
+            <li>Progressing toward demonstrable outcome metrics</li>
+        </ul>
         
-        <div class="content-card">
-            <h2>Market Validation</h2>
-            
-            <p>Our dual-track approach targeting <strong>Medical Alley</strong> in Minnesota provides access to:</p>
-            
-            <div class="partnership-details">
-                <div class="partnership-item">
-                    <strong>Mayo Clinic</strong>
-                    World-class clinical validation partner for pilot programs
-                </div>
-                <div class="partnership-item">
-                    <strong>Medtronic</strong>
-                    Medical device regulatory expertise and manufacturing insights
-                </div>
-                <div class="partnership-item">
-                    <strong>1,000+ MedTech Companies</strong>
-                    Dense ecosystem of medical device innovation and talent
-                </div>
-                <div class="partnership-item">
-                    <strong>FDA Expertise</strong>
-                    Streamlined regulatory pathway for faster market entry
-                </div>
-            </div>
-            
-            <p style="margin-top: 2rem; text-align: center; font-size: 1.2rem; color: #2C3E50; font-weight: 600;">
-                This strategic positioning gives us <strong>first-mover advantage</strong> in establishing the regulatory standard for humanoid healthcare.
+        <div class="highlight-box">
+            <p>
+                <strong>Our traction is grounded in responsibility, evidence, and clinical alignment — not speculative autonomy.</strong>
             </p>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="investors/InvestorDeck3.2_USAdvantage.pdf" class="cta-button">Download Investor Deck</a>
-            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Closing -->
+    <section style="text-align: center;">
+        <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;">
+            We are building a safe, scalable future for AI-supported independence at home — co-designed with clinicians, guided by evidence, and grounded in dignity.
+        </p>
+        <p class="hero-tagline" style="font-size: 1.5rem;">
+            Empowering Independence. Preserving Dignity.
+        </p>
+        <a href="/investment.html" class="cta-button">Learn About Partnership Opportunities →</a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 PatientCentricCare.AI | Building the Safety OS for Humanoid Healthcare</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Partnering with Harvard Medical School</p>
+        <p><strong>PatientCentricCare.AI</strong></p>
+        <p>Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
+        <p class="footer-tagline">Empowering Independence. Preserving Dignity.</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #94a3b8;">
+            © 2024 PatientCentricCare.AI. All rights reserved.
+        </p>
     </footer>
-
-    <!-- Mobile Menu Script -->
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
-    </script>
 </body>
 </html>
