@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission: The Quadruple Win | PatientCentricCare.AI</title>
-    <meta name="description" content="Our mission: Deliver the Quadruple Win for Patients, Providers, Payers & Society. US-First FDA SaMD strategy with Physician-in-the-Loop architecture.">
+    <title>Mission — Empowering Independent Lives with Safe, Ethical AI | PatientCentricCare.AI</title>
+    <meta name="description" content="Our mission is to extend the capacity of care ecosystems by engineering AI systems that support independent living in the home, under rigorous clinical governance and continuous human oversight.">
+    <meta name="keywords" content="Healthcare AI Mission, Patient Safety, Clinical Governance, Ethical AI, Home Care Technology, Andy Squire">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andysquire.ai/mission.html">
-    <meta property="og:title" content="Mission: The Quadruple Win | PatientCentricCare.AI">
-    <meta property="og:description" content="Delivering the Quadruple Win for Patients, Providers, Payers & Society through compliant humanoid healthcare.">
-    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png">
+    <meta property="og:title" content="Mission — Empowering Independent Lives with Safe, Ethical AI">
+    <meta property="og:description" content="Our mission is to extend the capacity of care ecosystems by engineering AI systems that support independent living in the home.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.andysquire.ai/mission.html">
-    <meta property="twitter:title" content="Mission: The Quadruple Win | PatientCentricCare.AI">
-    <meta property="twitter:description" content="Delivering the Quadruple Win for Patients, Providers, Payers & Society through compliant humanoid healthcare.">
-    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png">
-    
+    <meta property="twitter:title" content="Mission — Empowering Independent Lives with Safe, Ethical AI">
+    <meta property="twitter:description" content="Our mission is to extend the capacity of care ecosystems by engineering AI systems that support independent living in the home.">
+    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
     
     <style>
         * {
@@ -31,9 +46,9 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
+            line-height: 1.6;
             color: #2c3e50;
-            background: #f8f9fa;
+            background: #ffffff;
         }
         
         /* Navigation */
@@ -52,7 +67,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .logo {
@@ -79,6 +93,7 @@
         .nav-links a:hover {
             color: #60a5fa;
         }
+        
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -93,107 +108,186 @@
             background: white;
             margin: 3px 0;
             transition: 0.3s;
-            border-radius: 3px;
         }
         
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
         }
         
-        .hero h1 {
+        .page-header h1 {
             font-size: 3rem;
+            margin-bottom: 1rem;
             font-weight: 800;
-            margin-bottom: 1rem;
         }
         
-        /* Content */
-        .content {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 0 2rem;
+        .page-header .tagline {
+            font-size: 1.5rem;
+            color: #fbbf24;
+            font-style: italic;
+            margin-top: 1rem;
         }
         
-        .mission-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            border: 2px solid #0d9488;
-            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.1);
-            margin-bottom: 3rem;
+        /* Content Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
         
-        .mission-card h2 {
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
             color: #0f172a;
-            font-size: 2rem;
-            margin-bottom: 1rem;
             font-weight: 700;
         }
         
-        .mission-card h3 {
-            color: #E67E22;
-            font-size: 1.8rem;
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0d9488;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
-            margin-top: 2.5rem;
+        }
+        
+        .intro-text {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: #1e3a5f;
+            margin-bottom: 2rem;
+        }
+        
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .principle-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #0d9488;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .principle-card h4 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 0.8rem;
             font-weight: 600;
         }
         
-        .mission-card h3:first-of-type {
-            margin-top: 0;
+        .principle-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #475569;
+            margin-bottom: 0;
         }
         
-        .mission-card p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+        /* Bullets */
+        .bullets {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .bullets li {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
             line-height: 1.8;
         }
         
-        .cta-section {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #E67E22;
+        .bullets li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
         
-        .cta-section p {
-            font-size: 1.2rem;
-            color: #0f172a;
-            font-weight: 600;
+        /* Promise Cards */
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .promise-card {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .promise-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .promise-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .promise-card p {
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
             margin-bottom: 1.5rem;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            background: #f59e0b;
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
         .cta-button:hover {
+            background: #d97706;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
         }
         
         /* Footer */
@@ -202,10 +296,14 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 4rem;
         }
         
-        /* Mobile */
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
@@ -246,46 +344,35 @@
             .nav-container {
                 flex-wrap: nowrap;
             }
-
-            .hero h1 {
+            
+            .page-header h1 {
                 font-size: 2rem;
             }
             
-            .mission-card {
-                padding: 2rem 1.5rem;
+            .page-header .tagline {
+                font-size: 1.2rem;
             }
             
-            .mission-card h2 {
-                font-size: 1.6rem;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .mission-card h3 {
-                font-size: 1.4rem;
+            .principles-grid {
+                grid-template-columns: 1fr;
             }
             
-            .nav-links {
-                gap: 1rem;
+            .promise-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6CNLJJJ8WQ');
-      gtag('config', 'AW-17214175569');
-      gtag('config', 'AW-290924137');
-    </script>
-
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">PatientCentricCare.AI</a>            <div class="hamburger" id="hamburger">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -302,63 +389,119 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Our Mission & Technology</h1>
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Our Mission</h1>
+        <p class="tagline">Empowering Independence. Preserving Dignity.</p>
+    </div>
+
+    <!-- Core Mission Statement -->
+    <section>
+        <p class="intro-text">
+            At Andy Squire | PatientCentricCare.AI, our mission is to extend the capacity of care ecosystems by engineering AI systems that support independent living in the home, under rigorous clinical governance and continuous human oversight.
+        </p>
+        <p class="intro-text">
+            <strong>Empowering Independence. Preserving Dignity.</strong>
+        </p>
+        <p>
+            We believe that technology should amplify human care, not attempt to replace it. Our work focuses on building frameworks, evidence standards, and governance models that ensure AI-enabled support systems enhance safety and quality of life — especially for older adults and individuals living with chronic or cognitive conditions.
+        </p>
     </section>
 
-    <!-- Content -->
-    <div class="content">
-        <div class="mission-card">
-            <h2>Our Mission & Technology</h2>
-            
-            <h3>The Quadruple Win: Patients, Providers, Payers & Society</h3>
-            <p>
-                PatientCentricCare.AI delivers a <strong>Quadruple Win</strong> across the healthcare ecosystem. For <strong>patients</strong>, we enable safer, more personalized care through humanoid robots that provide 24/7 monitoring and assistance while maintaining human oversight. For <strong>providers</strong>, our Safety OS reduces liability risk and streamlines EHR integration, allowing clinicians to focus on high-value care decisions. For <strong>payers</strong>, we demonstrate measurable ROI through reduced hospital readmissions and improved chronic disease management. For <strong>society</strong>, we address the global caregiver crisis by scaling compassionate care to underserved populations while creating high-skilled jobs in the medical robotics sector.
-            </p>
-            
-            <h3>US-First Strategy: Accelerating Market Entry</h3>
-            <p>
-                Our <strong>US-First FDA SaMD strategy</strong> leverages America's streamlined regulatory pathway to achieve faster market entry than the EU's fragmented approval process. By targeting <strong>Medical Alley</strong> in Minnesota—home to Mayo Clinic, Medtronic, and 1,000+ medical device companies—we gain access to world-class clinical validation partners and regulatory expertise. Our dual-track approach allocates <strong>$3M for US pilots</strong> and <strong>$3M for EU pilots</strong>, securing first-mover advantage in the world's two largest healthcare economies. This parallel path validation de-risks our go-to-market strategy while building a defensible regulatory moat that competitors will struggle to replicate.
-            </p>
-            
-            <h3>Technical Architecture: Physician-in-the-Loop (AIITL)</h3>
-            <p>
-                At the core of our Safety OS is the <strong>Physician-in-the-Loop (AIITL) framework</strong>—a governance model that makes the human clinician the pilot, not just the brake. Unlike fully autonomous systems that pose unacceptable liability risks, our architecture ensures that <strong>all critical care decisions require physician approval</strong> before execution. The system integrates seamlessly with existing <strong>EHR platforms</strong> (Epic, Cerner, Allscripts) to provide real-time patient data to humanoid robots while maintaining HIPAA compliance and audit trails. Our modular software design allows robotics manufacturers like <strong>Unitree</strong> and <strong>Boston Dynamics</strong> to plug our Safety OS into their hardware platforms, creating a scalable ecosystem where we become the de facto standard for compliant humanoid healthcare. With a projected <strong>49x ROI</strong> and <strong>$279M NPV</strong>, this capital-efficient model positions us to capture significant value in the emerging <strong>$1 Trillion humanoid healthcare market</strong>.
-            </p>
-            
-            <div class="cta-section">
-                <p>Join us in building the regulatory bridge that will power the future of safe, compliant, human-centric healthcare.</p>
-                <a href="mailto:Andy@PatientCentricCare.AI" class="cta-button">Contact Founder</a>
+    <!-- Core Principles -->
+    <section>
+        <h2>Our Core Principles</h2>
+        <div class="principles-grid">
+            <div class="principle-card">
+                <h4>Human-Centered Safety</h4>
+                <p>Every AI action must be predictable, bounded, and supervised. Patient safety is non-negotiable.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Clinical Integration and Evidence</h4>
+                <p>We validate capabilities through rigorous testing and align with clinical workflows and standards.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Ethical Transparency</h4>
+                <p>Patients and families must understand how systems work, what they do, and how to maintain control.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Privacy-First by Design</h4>
+                <p>Health data is sacred. We build systems that protect privacy at every layer.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Collaborative Ecosystems</h4>
+                <p>We partner with clinicians, caregivers, researchers, and regulators to build solutions together.</p>
             </div>
         </div>
+    </section>
+
+    <!-- What We Are Building -->
+    <section>
+        <h2>What We Are Building</h2>
+        <p>
+            <strong>Safety OS</strong> is the clinical governance layer that makes AI-enabled home support systems safe, transparent, and accountable. It is the foundation for responsible humanoid caregiving.
+        </p>
+        
+        <h3>Safety OS provides:</h3>
+        <ul class="bullets">
+            <li><strong>Clinician-supervised decision workflows</strong> — Physicians remain in control, guiding AI actions through approved protocols.</li>
+            <li><strong>Transparent audit trails</strong> — Every action is logged, reviewable, and explainable.</li>
+            <li><strong>EHR integration</strong> — Seamless connection with existing health records and care coordination systems.</li>
+            <li><strong>Scalable governance</strong> — Designed to support millions of households while maintaining clinical oversight.</li>
+        </ul>
+        
+        <p style="margin-top: 2rem;">
+            Safety OS is not a product. It is a framework, a standard, and a commitment to building AI systems that earn trust through evidence, transparency, and clinical accountability.
+        </p>
+    </section>
+
+    <!-- Our Promise -->
+    <section>
+        <h2>Our Promise</h2>
+        <div class="promise-grid">
+            <div class="promise-card">
+                <h4>Safe</h4>
+                <p>Every capability is validated, bounded, and supervised.</p>
+            </div>
+            <div class="promise-card">
+                <h4>Ethical</h4>
+                <p>Transparency, consent, and human oversight are built in.</p>
+            </div>
+            <div class="promise-card">
+                <h4>Evidenced</h4>
+                <p>We prove safety and efficacy before expanding capabilities.</p>
+            </div>
+            <div class="promise-card">
+                <h4>Collaborative</h4>
+                <p>We build with clinicians, caregivers, and patients—not for them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner CTA -->
+    <div class="cta-section">
+        <h2>Partner With Us</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 2.5rem;">
+            We are engaging with clinicians, health systems, sponsors, and research organizations to shape the future of safe humanoid caregiving. Current collaboration areas include early-phase research protocols, clinical governance design, and pilot development for supervised home assistance.
+        </p>
+        <a href="/investors/" class="cta-button">REQUEST A SPONSOR BRIEF →</a>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 PatientCentricCare.AI | Building the Safety OS for Humanoid Healthcare</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Partnering with Harvard Medical School</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living. Empowering Independence. Preserving Dignity.</p>
+        <p>&copy; 2025 PatientCentricCare.AI</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Safe Humanoid Support for Independent Living at Home | Partnering with Harvard Medical School</p>
     </footer>
-
+    
     <!-- Mobile Menu Script -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
         
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
-<- High priority for investment page ( 0.95 Force rebuild 1764920443 -->
