@@ -76,6 +76,35 @@
             color: #0d9488;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
@@ -236,10 +265,30 @@
                 font-size: 1.1rem;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
             nav ul {
-                flex-wrap: wrap;
-                gap: 1rem;
-                justify-content: center;
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background-color: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                padding: 1rem 0;
             }
 
             section {
@@ -253,7 +302,12 @@
     <nav>
         <div class="container">
             <a href="/" class="logo">PatientCentricCare.AI</a>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navLinks">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/mission.html">Mission</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
@@ -460,5 +514,23 @@
             © 2024 PatientCentricCare.AI. All rights reserved.
         </p>
     </footer>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
