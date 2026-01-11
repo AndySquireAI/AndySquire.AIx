@@ -23,9 +23,30 @@
 
   <url>
     <loc>https://www.andysquire.ai/safety-os.html</loc>
-    <lastmod>2025-12-04</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Physician-as-Pilot Governance Framework -->
+  <url>
+    <loc>https://www.andysquire.ai/physician-as-pilot.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.andysquire.ai/physician-as-pilot-diagram-v2.png</image:loc>
+      <image:title>Physician-as-Pilot Governance Framework</image:title>
+      <image:caption>Governance framework showing clinician authority over AI systems in healthcare</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Physician-as-Pilot White Paper -->
+  <url>
+    <loc>https://www.andysquire.ai/physician-as-pilot-white-paper.pdf</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
