@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physician-as-Pilot - AI Governance Framework | PatientCentricCare.AI</title>
-    <meta name="description" content="Physician-as-Pilot is a governance framework for AI-mediated care in which clinicians retain ultimate authority, situational awareness, and override control, while AI systems function as copilots - supporting, not replacing, human judgment.">
+    <meta name="description" content="Physician-as-Pilot defines a governance framework where clinicians retain authority in AI care, addressing accountability and oversight gaps in healthcare AI.">
     <meta name="keywords" content="Physician-as-Pilot, AIITL, AI in the Loop, Healthcare AI Governance, Clinical Authority, AI Safety, Andy Squire">
     
     <!-- Open Graph / Facebook -->
@@ -450,13 +450,28 @@
 
     <!-- Page Header -->
     <div class="page-header">
-        <h1>Physician-as-Pilot</h1>
+        <h1>Physician-as-Pilot: A Governance Framework for Safe, Clinician-Led AI</h1>
         
     </div>
 
+    <!-- Anchor Links -->
+    <section style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="principles-grid" style="gap: 0.5rem;">
+            <a href="#definition" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Definition</div></a>
+            <a href="#why" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Why It Was Developed</div></a>
+            <a href="#what-it-is-not" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">What It Is Not</div></a>
+            <a href="#core-commitments" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Core Commitments</div></a>
+            <a href="#core-principles" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Core Principles</div></a>
+            <a href="#relationship-to-safety-os" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Relationship to Safety OS</div></a>
+            <a href="#formal-description" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Formal Description</div></a>
+            <a href="#authorship" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Authorship</div></a>
+        </div>
+    </section>
+
     <!-- Definition Section -->
     <section>
-        <h2>Definition</h2>
+        <h2 id="definition">Definition</h2>
+        <p>In modern AI-mediated care, ambiguous decision authority creates safety and liability risks.</p>
         <div class="definition-box">
             <p><strong>Physician-as-Pilot</strong> is a governance framework for AI-mediated care in which clinicians retain ultimate authority, situational awareness, and override control, while AI systems function as copilots - supporting, not replacing, human judgment.</p>
         </div>
@@ -465,37 +480,39 @@
 
     <!-- Why This Framework Exists -->
     <section>
-        <h2>Why This Framework Was Developed</h2>
-        <p>As AI systems move into unsupervised and semi-supervised care environments, existing “human-in-the-loop” models fail to specify who is accountable when automation acts. Physician-as-Pilot was developed to close that governance gap by formalizing clinical authority, override control, and escalation responsibility across the AI lifecycle. This anchors the framework to a problem, not an ideology.</p>
+        <h2 id="why">Why This Framework Was Developed</h2>
+        <p>As AI systems move into unsupervised and semi-supervised care environments, existing “human-in-the-loop” models fail to specify who is accountable when automation acts. Physician-as-Pilot was developed to close that governance gap by formalizing clinical authority, override control, and escalation responsibility across the AI lifecycle. This anchors the framework to a problem, not an ideology.</p><p>Regulators and standard-setting bodies increasingly emphasize explicit human accountability, not implied oversight.</p>
     </section>
 
     <!-- What It Is Not -->
     <section>
-        <h2>What Physician-as-Pilot Is Not</h2>
+        <h2 id="what-it-is-not">What Physician-as-Pilot Is Not</h2>
         <ul class="why-list">
             <li>Not a branding term for “human-in-the-loop”</li>
             <li>Not a delegation of medical decision-making to AI</li>
             <li>Not a replacement for clinical judgment</li>
             <li>Not a claim of diagnostic or therapeutic autonomy</li>
+            <li>Not a clinical protocol or guideline</li>
         </ul>
     </section>
 
     <!-- Core Governance Commitments -->
     <section>
-        <h2>Core Governance Commitments</h2>
+        <h2 id="core-commitments">Core Governance Commitments</h2>
         <p>Physician-as-Pilot requires that:</p>
         <ol class="why-list" style="list-style: decimal; padding-left: 2rem;">
             <li>A licensed clinician retains final authority over all AI-mediated actions.</li>
             <li>AI systems operate only within predefined, auditable boundaries.</li>
-            <li>Override and disengagement mechanisms are always available to human operators.</li>
-            <li>Escalation pathways for issue resolution are explicit and enforced.</li>
-            <li>Accountability for system outcomes is attributable, reviewable, and documented.</li>
+            <li>Override and disengagement mechanisms are always available.</li>
+            <li>Issue escalation pathways are explicit and enforced.</li>
+            <li>Accountability for outcomes is attributable, reviewable, and documented.</li>
         </ol>
     </section>
 
     <!-- Core Principles -->
     <section>
-        <h2>Core Principles</h2>
+        <h2 id="core-principles">Core Principles</h2>
+        <p>The following principles ensure that the commitments above are operationally visible and enforceable:</p>
         <div class="principles-grid">
             <div class="principle-card">
                 <h4>Human authority is explicit, not implied</h4>
@@ -519,15 +536,9 @@
 
     <!-- Relationship to Safety OS -->
     <section>
-        <h2>Relationship to Safety OS</h2>
+        <h2 id="relationship-to-safety-os">Relationship to Safety OS</h2>
         <p><strong>Safety OS</strong> is the systems architecture that operationalizes the Physician-as-Pilot governance framework.</p>
-        <p>While Physician-as-Pilot defines <em>who</em> is accountable and <em>why</em>, Safety OS defines <em>how</em> that accountability is enforced through:</p>
-        <ul class="why-list">
-            <li>Consent state management</li>
-            <li>Escalation logic and pathways</li>
-            <li>Oversight boundaries and audit trails</li>
-            <li>Real-world evidence capture</li>
-        </ul>
+        <p>Safety OS implements Physician-as-Pilot by embedding consent states, escalation logic, oversight boundaries, audit trails, and real-world evidence capture into operational workflows.</p>
         <div class="safety-os-link">
             <h3>Explore Safety OS</h3>
             <p>See how the Physician-as-Pilot framework is operationalized in practice.</p>
@@ -537,21 +548,21 @@
 
     <!-- Link to Preprint -->
     <section>
-        <h2>Formal Description</h2>
+        <h2 id="formal-description">Formal Description</h2>
         <div class="preprint-box">
             <h4>Academic White Paper</h4>
             <p>This framework is formally described in: <em>"The Physician-as-Pilot Framework: A Governance Architecture for AI-Mediated Home Care"</em></p>
             <p style="margin-top: 1rem;"><a href="/physician-as-pilot-white-paper.pdf" target="_blank" style="display: inline-block; background: #1e40af; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600;">Download White Paper (PDF) →</a></p>
         </div>
-        <p>The preprint establishes intellectual priority and provides a citable reference for policy discussions, regulatory submissions, and academic work.</p>
+        <p>This framework aligns with emerging best practices in healthcare AI governance, which emphasize accountability, traceability, and clinician oversight.</p>
     </section>
 
     <!-- Authorship -->
     <section>
-        <h2>Authorship and Stewardship</h2>
+        <h2 id="authorship">Authorship and Stewardship</h2>
         <div class="authorship">
             <p><strong>Developed by Andrew Jonathan Squire</strong> under the Patient-Centric Care initiative.</p>
-            <p>The Physician-as-Pilot (AIITL) governance framework, including the Safety OS architecture and regulatory pathway design, represents original intellectual contribution to healthcare AI governance.</p>
+            <p>The Physician-as-Pilot (AIITL) governance framework, together with its associated Safety OS architecture and regulatory pathway design, represents original intellectual contribution to healthcare AI governance.</p>
         </div>
         
     </section>
@@ -567,7 +578,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
-        <p>Physician-as-Pilot™ and Safety OS™ are proprietary frameworks of PatientCentricCare.AI</p>
+        <p>Physician-as-Pilot™ and Safety OS™ are proprietary governance frameworks of PatientCentricCare.AI.</p>
     </footer>
 
     <script>
