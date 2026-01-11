@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physician-as-Pilot - AI Governance Framework | PatientCentricCare.AI</title>
+    <meta name="description" content="Physician-as-Pilot is a governance framework for AI-mediated care in which clinicians retain ultimate authority, situational awareness, and override control, while AI systems function as copilots - supporting, not replacing, human judgment.">
+    <meta name="keywords" content="Physician-as-Pilot, AIITL, AI in the Loop, Healthcare AI Governance, Clinical Authority, AI Safety, Andy Squire">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/physician-as-pilot.html">
+    <meta property="og:title" content="Physician-as-Pilot - AI Governance Framework">
+    <meta property="og:description" content="A governance framework for AI-mediated care in which clinicians retain ultimate authority while AI systems function as copilots.">
+    <meta property="og:image" content="https://www.andysquire.ai/physician-as-pilot.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.patientcentriccare.ai/physician-as-pilot.html">
+    <meta property="twitter:title" content="Physician-as-Pilot - AI Governance Framework">
+    <meta property="twitter:description" content="A governance framework for AI-mediated care in which clinicians retain ultimate authority while AI systems function as copilots.">
+    <meta property="twitter:image" content="https://www.andysquire.ai/physician-as-pilot.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .page-header .tagline {
+            font-size: 1.3rem;
+            color: #93c5fd;
+            font-style: italic;
+            margin-top: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+        
+        p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Definition Box */
+        .definition-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 5px solid #1e40af;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .definition-box p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #1e3a5f;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .principle-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .principle-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .principle-card h4 {
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+        
+        .principle-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 0;
+        }
+        
+        /* Why List */
+        .why-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .why-list li {
+            font-size: 1.1rem;
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.7;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .why-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .why-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Safety OS Link Box */
+        .safety-os-link {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .safety-os-link h3 {
+            color: #93c5fd;
+            margin-top: 0;
+        }
+        
+        .safety-os-link p {
+            color: #e2e8f0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .safety-os-link a {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .safety-os-link a:hover {
+            background: #2563eb;
+        }
+        
+        /* Preprint Box */
+        .preprint-box {
+            background: #fefce8;
+            border: 2px solid #fbbf24;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .preprint-box h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .preprint-box p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: #78350f;
+        }
+        
+        .preprint-box a {
+            color: #1e40af;
+            font-weight: 600;
+        }
+        
+        /* Authorship */
+        .authorship {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-size: 1rem;
+        }
+        
+        .authorship p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .authorship strong {
+            color: #0f172a;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                max-height: 500px;
+            }
+            
+            .nav-links li {
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .page-header {
+                padding: 3rem 1.5rem;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 2rem 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/investors/">Investor Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Physician-as-Pilot</h1>
+        <p class="tagline">A governance framework for AI-mediated care where clinicians retain ultimate authority</p>
+    </div>
+
+    <!-- Definition Section -->
+    <section>
+        <h2>1. Definition</h2>
+        <div class="definition-box">
+            <p><strong>Physician-as-Pilot</strong> is a governance framework for AI-mediated care in which clinicians retain ultimate authority, situational awareness, and override control, while AI systems function as copilots - supporting, not replacing, human judgment.</p>
+        </div>
+        <p>This framework draws from aviation safety culture, where the pilot-in-command maintains final authority regardless of autopilot capabilities. In healthcare, the physician (or designated clinician) holds equivalent authority over AI-assisted decisions.</p>
+    </section>
+
+    <!-- Why This Framework Exists -->
+    <section>
+        <h2>2. Why This Framework Exists</h2>
+        <ul class="why-list">
+            <li><strong>Automation bias</strong> - Clinicians may over-rely on AI recommendations without critical evaluation</li>
+            <li><strong>Liability ambiguity</strong> - Current systems blur the line between AI suggestion and clinical decision</li>
+            <li><strong>Regulatory distrust of black-box autonomy</strong> - Regulators require clear accountability chains</li>
+            <li><strong>Lessons from aviation, not Silicon Valley</strong> - Healthcare needs proven safety culture, not move-fast-and-break-things</li>
+        </ul>
+        <p>This is where we quietly establish credibility: by naming the problems that others ignore.</p>
+    </section>
+
+    <!-- Core Principles -->
+    <section>
+        <h2>3. Core Principles</h2>
+        <div class="principles-grid">
+            <div class="principle-card">
+                <h4>Human authority is explicit, not implied</h4>
+                <p>The clinician's role as final decision-maker is architecturally enforced, not assumed.</p>
+            </div>
+            <div class="principle-card">
+                <h4>AI recommendations must be inspectable</h4>
+                <p>Every AI output includes reasoning that can be reviewed, questioned, and overridden.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Override is a feature, not a failure</h4>
+                <p>The system is designed expecting clinician intervention, not treating it as an exception.</p>
+            </div>
+            <div class="principle-card">
+                <h4>Responsibility cannot be delegated to software</h4>
+                <p>Accountability remains with humans. AI is a tool, never a decision-maker.</p>
+            </div>
+        </div>
+        <p>These principles become future citations. They define what responsible AI in healthcare looks like.</p>
+    </section>
+
+    <!-- Relationship to Safety OS -->
+    <section>
+        <h2>4. Relationship to Safety OS</h2>
+        <p><strong>Safety OS</strong> is the systems architecture that operationalizes the Physician-as-Pilot governance framework.</p>
+        <p>While Physician-as-Pilot defines <em>who</em> is accountable and <em>why</em>, Safety OS defines <em>how</em> that accountability is enforced through:</p>
+        <ul class="why-list">
+            <li>Consent state management</li>
+            <li>Escalation logic and pathways</li>
+            <li>Oversight boundaries and audit trails</li>
+            <li>Real-world evidence capture</li>
+        </ul>
+        <div class="safety-os-link">
+            <h3>Explore Safety OS</h3>
+            <p>See how the Physician-as-Pilot framework is operationalized in practice.</p>
+            <a href="/safety-os.html">View Safety OS Architecture →</a>
+        </div>
+    </section>
+
+    <!-- Link to Preprint -->
+    <section>
+        <h2>5. Formal Description</h2>
+        <div class="preprint-box">
+            <h4>Academic Preprint</h4>
+            <p>This framework is formally described in: <em>"The Physician-as-Pilot Framework: A Governance Architecture for AI-Mediated Home Care"</em> - available on medRxiv/arXiv (link to be added upon publication).</p>
+        </div>
+        <p>The preprint establishes intellectual priority and provides a citable reference for policy discussions, regulatory submissions, and academic work.</p>
+    </section>
+
+    <!-- Authorship -->
+    <section>
+        <h2>6. Authorship and Stewardship</h2>
+        <div class="authorship">
+            <p><strong>Developed by Andrew Jonathan Squire</strong> under the Patient-Centric Care initiative.</p>
+            <p>The Physician-as-Pilot (AIITL) governance framework, including the Safety OS architecture and regulatory pathway design, represents original intellectual contribution to healthcare AI governance.</p>
+        </div>
+        <p>Not ego. Provenance. This establishes clear intellectual ownership for future trademark filings, policy citations, standards participation, and licensing conversations.</p>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Values don't get cited. Frameworks do.</h2>
+        <p style="color: #94a3b8; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Physician-as-Pilot is more defensible than "patient-centric care" because it's a mechanism, not a value statement.</p>
+        <a href="/safety-os.html" class="cta-button">See How It's Implemented →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
+        <p>Physician-as-Pilot and Safety OS are trademarks of PatientCentricCare.AI</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
