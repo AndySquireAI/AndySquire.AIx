@@ -463,6 +463,7 @@
             <a href="#core-commitments" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Core Commitments</div></a>
             <a href="#core-principles" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Core Principles</div></a>
             <a href="#relationship-to-safety-os" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Relationship to Safety OS</div></a>
+            <a href="#reference-implementation" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Reference Implementation</div></a>
             <a href="#formal-description" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Formal Description</div></a>
             <a href="#authorship" style="text-decoration: none;"><div class="principle-card" style="text-align: center;">Authorship</div></a>
         </div>
@@ -549,6 +550,21 @@
             <h3>Explore Safety OS</h3>
             <p>See how the Physician-as-Pilot framework is operationalized in practice.</p>
             <a href="/safety-os.html">View Safety OS Architecture →</a>
+        </div>
+    </section>
+
+    <!-- Reference Implementation -->
+    <section>
+        <h2 id="reference-implementation">Reference Implementation (Illustrative)</h2>
+        <p>The Physician-as-Pilot framework is <strong>implementation-agnostic</strong>. Below is one representative architecture demonstrating how authority, consent, escalation, and logging can be enforced in practice without granting autonomous clinical agency.</p>
+        
+        <div style="margin: 2.5rem 0; text-align: center;">
+            <img src="/home-companion-architecture.png" alt="Home Companion Architecture - Governed Safety Companion showing layered control from User Interaction through Agent Orchestrator, Intent Router, Reasoning Engine to Human Handoff" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <p style="font-size: 0.95rem; color: #64748b; margin-top: 1rem; font-style: italic;">Figure: Home Companion reference architecture (Phase I) — showing layered governance from user interaction to human handoff.</p>
+        </div>
+        
+        <div class="definition-box" style="background: #fef3c7; border-left-color: #d97706;">
+            <p style="font-size: 1.05rem; color: #92400e;"><strong>Physician-as-Pilot is a governance pattern, not a product claim.</strong> It specifies authority, accountability, and override mechanics independent of model choice, UI modality, or deployment environment.</p>
         </div>
     </section>
 
