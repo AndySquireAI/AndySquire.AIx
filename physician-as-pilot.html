@@ -566,13 +566,13 @@
                 <!-- Phase 2 -->
                 <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid #3b82f6;">
                     <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Phase 2 • SaMD-Ready</div>
-                    <h3 style="margin: 0.5rem 0; color: #1e293b; font-size: 1.1rem;">Digital Biomarkers (RWE)</h3>
+                    <h3 style="margin: 0.5rem 0; color: #1e293b; font-size: 1.1rem;">Physician-Governed Escalation</h3>
                     <ul style="margin: 0; padding-left: 1.2rem; color: #475569; font-size: 0.9rem;">
-                        <li>Linguistic Trend Analysis</li>
-                        <li>Physician-Governed Review</li>
+                        <li>Clinician-Supervised Review</li>
+                        <li>Explicit Accountability</li>
                         <li>Audit-Ready Data</li>
                     </ul>
-                    <div style="margin-top: 1rem; padding: 0.5rem; background: #eff6ff; border-radius: 6px; font-size: 0.8rem; color: #1e40af;"><strong>KPI:</strong> Real-World Evidence</div>
+                    <div style="margin-top: 1rem; padding: 0.5rem; background: #eff6ff; border-radius: 6px; font-size: 0.8rem; color: #1e40af;"><strong>KPI:</strong> Escalation Accuracy</div>
                 </div>
                 <!-- Phase 3 -->
                 <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid #8b5cf6;">
@@ -695,13 +695,15 @@
             <a href="/safety-os.html">Learn more about Safety OS →</a>
         </div>
         
-        <!-- How Safety OS Prevents Unsafe Actions -->
+        <!-- How Safety OS Prevents Unsafe Output -->
         <div style="margin-top: 2rem;">
-            <h4 style="margin-bottom: 0.75rem;">How Safety OS Prevents Unsafe Actions</h4>
+            <h4 style="margin-bottom: 0.75rem;">How Safety OS Prevents Unsafe Output</h4>
             <ul class="why-list">
-                <li><strong>LLMs generate language only</strong>—they cannot execute actions.</li>
-                <li><strong>Intent routing blocks clinical instructions</strong> and redirects them to human escalation.</li>
-                <li><strong>Escalations are rule-based and logged</strong>, not model-generated.</li>
+                <li><strong>Intent whitelisting:</strong> Only predefined allowable intents are processed.</li>
+                <li><strong>Hard refusal rules:</strong> Clinical advice requests are blocked, not redirected.</li>
+                <li><strong>Consent gate:</strong> No escalation or action occurs without explicit user approval.</li>
+                <li><strong>Deterministic routing:</strong> No autonomous decision-making; all paths are rule-defined.</li>
+                <li><strong>Immutable audit logs:</strong> Every interaction is logged for compliance review.</li>
             </ul>
         </div>
     </section>
@@ -746,7 +748,7 @@
 
     <!-- Phase Boundaries & Regulatory Posture -->
     <section>
-        <h2 id="phase-boundaries">Phase Boundaries & Real-World Evidence (RWE)</h2>
+        <h2 id="phase-boundaries">Phase Boundaries & Regulatory Posture</h2>
         <div class="definition-box" style="background: #f0fdf4; border-left-color: #16a34a;">
             <ul style="margin: 0; padding-left: 1.2rem;">
                 <li><strong>Phase 1:</strong> Non-medical, observational, no clinical decisions, Caregiver-in-the-Loop</li>
@@ -759,13 +761,29 @@
         <div style="margin-top: 1.5rem;">
             <h4 style="margin-bottom: 0.75rem;">Phase 1 Outcomes (Non-Clinical)</h4>
             <ul class="why-list" style="margin-bottom: 1rem;">
-                <li>Medication adherence lift (Days on Therapy)</li>
-                <li>Escalation accuracy and timeliness</li>
-                <li>Consent capture and audit completeness</li>
-                <li>User-reported comfort, clarity, and confidence (QoL)</li>
-                <li>Engagement continuity</li>
+                <li>Engagement continuity (voluntary interactions over time)</li>
+                <li>Escalation efficacy (correct routing to caregiver or clinician upon explicit request)</li>
+                <li>Consent compliance (no action without user approval)</li>
+                <li>Medication routine support (acknowledgment of reminders, not adherence claims)</li>
+                <li>Caregiver response latency</li>
+                <li>User-reported quality of life signals (explicit self-statements only)</li>
             </ul>
-            <p style="font-style: italic; color: #6b7280;"><strong>Phase 1 metrics are designed to establish trust, safety, and data integrity—not clinical inference.</strong></p>
+            <div class="definition-box" style="background: #fef2f2; border-left-color: #dc2626; margin-top: 1rem;">
+                <p style="margin: 0; font-size: 0.95rem; color: #991b1b;"><strong>No diagnostic inference or cognitive assessment is performed in Phase 1.</strong></p>
+            </div>
+        </div>
+        
+        <!-- Future Phases (Under Regulatory Pathways) -->
+        <div style="margin-top: 2.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
+            <h4 style="margin-top: 0; margin-bottom: 1rem; color: #475569;">Future Phases (Under Regulatory Pathways)</h4>
+            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1rem;">The following capabilities are under development for Phase 2 and Phase 3, subject to regulatory clearance:</p>
+            <ul style="margin: 0; padding-left: 1.2rem; color: #64748b; font-size: 0.95rem;">
+                <li>Digital biomarkers and linguistic trend analysis</li>
+                <li>Cognitive monitoring and early detection signals</li>
+                <li>Clinical outcome measurement and reporting</li>
+                <li>Real-world evidence (RWE) generation</li>
+            </ul>
+            <p style="margin-top: 1rem; margin-bottom: 0; font-size: 0.9rem; color: #94a3b8; font-style: italic;"><strong>Details available under NDA.</strong> Contact us for sponsor briefing materials.</p>
         </div>
     </section>
 
