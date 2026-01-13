@@ -6,7 +6,18 @@ Allow: /blog/*.html
 Allow: /investors/
 Allow: /*.pdf$
 
-# Disallow admin or private areas (if any)
+# Disallow archive and backup files to prevent duplicate content issues
+Disallow: /archive/
+Disallow: /*-backup.html
+Disallow: /*-backup-*.html
+Disallow: /index-before-overhaul.html
+Disallow: /index-live-working.html
+Disallow: /index-new-sections-1-3.html
+Disallow: /index-new.html
+Disallow: /index-streamlined.html
+Disallow: /index-verbose-backup.html
+Disallow: /live_index.html
+Disallow: /updated_index.html
 Disallow: /admin/
 Disallow: /*.json$
 
@@ -34,4 +45,3 @@ Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
-

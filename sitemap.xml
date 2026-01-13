@@ -8,30 +8,15 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.andysquire.ai/</loc>
-    <lastmod>2025-12-04</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- New Investor Pages -->
-  <url>
-    <loc>https://www.andysquire.ai/mission.html</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/safety-os.html</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
   </url>
 
   <!-- Physician-as-Pilot Governance Framework -->
   <url>
     <loc>https://www.andysquire.ai/physician-as-pilot.html</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -41,228 +26,98 @@
     </image:image>
   </url>
 
-  <!-- Physician-as-Pilot White Paper -->
+  <!-- Safety OS Implementation -->
   <url>
-    <loc>https://www.andysquire.ai/physician-as-pilot-white-paper.pdf</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/investment.html</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://www.andysquire.ai/safety-os.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
+  <!-- MyHealthCanvas -->
   <url>
-    <loc>https://www.andysquire.ai/traction.html</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://www.andysquire.ai/myhealthcanvas.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
 
+  <!-- Mission & Vision -->
   <url>
-    <loc>https://www.andysquire.ai/team.html</loc>
-    <lastmod>2025-12-04</lastmod>
+    <loc>https://www.andysquire.ai/mission.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+
+  <!-- Traction & Progress -->
+  <url>
+    <loc>https://www.andysquire.ai/traction.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Investment Opportunity -->
+  <url>
+    <loc>https://www.andysquire.ai/investment.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Team -->
+  <url>
+    <loc>https://www.andysquire.ai/team.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <!-- eLibrary Index -->
   <url>
     <loc>https://www.andysquire.ai/blog/</loc>
-    <lastmod>2025-10-12</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-deepfake-dilemma.html</loc>
-    <lastmod>2025-10-22</lastmod>
+    <loc>https://www.andysquire.ai/blog/blog-post-new-governance-aiitl-vs-hitl.html</loc>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-openai-ai-companion.html</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-robotic_exoskeletons.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-ai_tools_small_business.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-humanoid_healthcare_robots.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_medical_robots.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_ai_automation_mistakes.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_ai_mental_health_apps.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_wearable_health_tech.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_ai_for_restaurants.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_ai_ecommerce_automation.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-curated_second_medical_opinion.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.andysquire.ai/blog/how-small-businesses-save-50k-with-ai-agents.html</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.andysquire.ai/blog/the-complete-guide-to-ai-seo.html</loc>
-    <lastmod>2025-10-08</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- NEW Articles -->
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-ai_clinical_assistants.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-ai_alzheimers_digital_therapeutics.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-robot_workforce_revolution.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-ai_agent_700_jobs.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-pharma_digital_revolution.html</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Summit Articles -->
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-new-governance-aiitl-vs-hitl.html</loc>
-    <lastmod>2025-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-85-percent-cliff.html</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-frontier-firms.html</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-trust-algorithm.html</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
 
   <!-- Investor Resources -->
   <url>
-    <loc>https://www.andysquire.ai/investors/The-1-Trillion-Thesis.pdf</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.andysquire.ai/InvestorDeck-HumanoidHealthcare.pdf</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://www.andysquire.ai/investors/</loc>
-    <lastmod>2025-11-28</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://www.andysquire.ai/impressum.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
-
