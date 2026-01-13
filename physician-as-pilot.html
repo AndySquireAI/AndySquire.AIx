@@ -83,6 +83,12 @@
             margin-bottom: 1rem;
             line-height: 1.3;
             color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .regulatory-proof-header h2:before {
+            display: none;
         }
 
         .regulatory-proof-header p {
@@ -331,6 +337,66 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-size: 0.9rem;
+        }
+
+        /* Collapsible Section Styles */
+        .collapsible-section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .collapsible-section summary {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 1.1rem;
+            list-style: none;
+            border-bottom: 1px solid transparent;
+            transition: background 0.2s ease;
+        }
+
+        .collapsible-section summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .collapsible-section summary:hover {
+            background: #f1f5f9;
+        }
+
+        .collapsible-section[open] summary {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .collapsible-section summary:after {
+            content: "+";
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #22c55e;
+            transition: transform 0.2s ease;
+        }
+
+        .collapsible-section[open] summary:after {
+            content: "-";
+        }
+
+        .collapsible-content {
+            padding: 1.5rem;
+        }
+
+        .collapsible-section .checklist-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .collapsible-section .checklist-group:last-child {
+            margin-bottom: 0;
         }
 
         .checklist-group ul {
@@ -773,199 +839,216 @@
         </section>
 
         <!-- Explicit Functional Boundaries -->
-        <section>
-            <h2>Explicit Functional Boundaries</h2>
-            <div class="checklist-group">
-                <h3>Capabilities Allowed in Phase 1</h3>
-                <ul>
-                    <li>Conversational companionship</li>
-                    <li>Social engagement and emotional presence</li>
-                    <li>Reminders (non-medical)</li>
-                    <li>Check-ins without interpretation or assessment</li>
-                    <li>User-initiated requests for human contact</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Explicit Functional Boundaries</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Capabilities Allowed in Phase 1</h3>
+                    <ul>
+                        <li>Conversational companionship</li>
+                        <li>Social engagement and emotional presence</li>
+                        <li>Reminders (non-medical)</li>
+                        <li>Check-ins without interpretation or assessment</li>
+                        <li>User-initiated requests for human contact</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Architecturally Impossible in Phase 1</h3>
+                    <ul>
+                        <li>Diagnosis or differential diagnosis</li>
+                        <li>Clinical assessment or triage</li>
+                        <li>Risk scoring or health inference</li>
+                        <li>Cognitive or disease detection</li>
+                        <li>Treatment recommendation</li>
+                        <li>Autonomous escalation</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Capabilities Explicitly Prohibited</h3>
-                <ul>
-                    <li>Diagnosis or differential diagnosis</li>
-                    <li>Clinical assessment or triage</li>
-                    <li>Risk scoring or health inference</li>
-                    <li>Cognitive or disease detection</li>
-                    <li>Treatment recommendation</li>
-                    <li>Autonomous escalation</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Decision Authority & Control -->
-        <section>
-            <h2>Decision Authority & Control</h2>
-            <div class="checklist-group">
-                <h3>No Autonomous Decision-Making</h3>
-                <ul>
-                    <li>AI does not decide, recommend, or prioritize clinical action</li>
-                    <li>AI does not determine urgency or severity</li>
-                    <li>AI does not act without explicit user instruction</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Decision Authority & Control</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>No Autonomous Decision-Making</h3>
+                    <ul>
+                        <li>AI does not decide, recommend, or prioritize clinical action</li>
+                        <li>AI does not determine urgency or severity</li>
+                        <li>AI does not act without explicit user instruction</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Human Authority is Architecturally Enforced</h3>
+                    <ul>
+                        <li>All real-world actions are executed by humans</li>
+                        <li>AI cannot bypass caregivers, clinicians, or consent gates</li>
+                        <li>Responsibility remains fully with human actors</li>
+                    </ul>
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 1rem; font-style: italic;">This prevents silent scope creep from observational support into unregulated clinical action.</p>
             </div>
-            <div class="checklist-group">
-                <h3>Human Authority is Architecturally Enforced</h3>
-                <ul>
-                    <li>All real-world actions are executed by humans</li>
-                    <li>AI cannot bypass caregivers, clinicians, or consent gates</li>
-                    <li>Responsibility remains fully with human actors</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Escalation & Consent Model -->
-        <section>
-            <h2>Escalation & Consent Model</h2>
-            <div class="checklist-group">
-                <h3>Escalation is User-Initiated Only</h3>
-                <ul>
-                    <li>No system-initiated escalation</li>
-                    <li>No inferred distress triggers</li>
-                    <li>No background monitoring or alerting</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Escalation & Consent Model</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Escalation is User-Initiated Only</h3>
+                    <ul>
+                        <li>No system-initiated escalation</li>
+                        <li>No inferred distress triggers</li>
+                        <li>No background monitoring or alerting</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Consent is Explicit and Transactional</h3>
+                    <ul>
+                        <li>Each escalation requires affirmative user confirmation</li>
+                        <li>Consent is captured per action, not assumed</li>
+                        <li>Consent state is logged immutably</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Escalation Pathways</h3>
+                    <ul>
+                        <li>User → AI → Human caregiver / doctor's office</li>
+                        <li>AI does not interpret, filter, or prioritize escalation content</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Consent is Explicit and Transactional</h3>
-                <ul>
-                    <li>Each escalation requires affirmative user confirmation</li>
-                    <li>Consent is captured per action, not assumed</li>
-                    <li>Consent state is logged immutably</li>
-                </ul>
-            </div>
-            <div class="checklist-group">
-                <h3>Escalation Pathways</h3>
-                <ul>
-                    <li>User → AI → Human caregiver / doctor's office</li>
-                    <li>AI does not interpret, filter, or prioritize escalation content</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Data Classification & Use -->
-        <section>
-            <h2>Data Classification & Use</h2>
-            <div class="checklist-group">
-                <h3>Data is Strictly Non-Clinical</h3>
-                <ul>
-                    <li>No biometric data</li>
-                    <li>No physiological data</li>
-                    <li>No diagnostic or assessment data</li>
-                    <li>No clinical annotations</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Data Classification & Use</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Data is Strictly Non-Clinical</h3>
+                    <ul>
+                        <li>No biometric data</li>
+                        <li>No physiological data</li>
+                        <li>No diagnostic or assessment data</li>
+                        <li>No clinical annotations</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Permitted Data Use</h3>
+                    <ul>
+                        <li>Interaction metadata</li>
+                        <li>Engagement timestamps</li>
+                        <li>Consent records</li>
+                        <li>Behavioral persistence indicators (non-clinical)</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Explicit Exclusions</h3>
+                    <ul>
+                        <li>No health outcome measurement</li>
+                        <li>No cognitive scoring</li>
+                        <li>No disease progression tracking</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Permitted Data Use</h3>
-                <ul>
-                    <li>Interaction metadata</li>
-                    <li>Engagement timestamps</li>
-                    <li>Consent records</li>
-                    <li>Behavioral persistence indicators (non-clinical)</li>
-                </ul>
-            </div>
-            <div class="checklist-group">
-                <h3>Explicit Exclusions</h3>
-                <ul>
-                    <li>No health outcome measurement</li>
-                    <li>No cognitive scoring</li>
-                    <li>No disease progression tracking</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Auditability & Evidence -->
-        <section>
-            <h2>Auditability & Evidence</h2>
-            <div class="checklist-group">
-                <h3>Immutable Audit Logging</h3>
-                <ul>
-                    <li>All interactions logged</li>
-                    <li>All consent events recorded</li>
-                    <li>All escalations timestamped</li>
-                    <li>Logs are tamper-resistant</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Auditability & Evidence</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Immutable Audit Logging</h3>
+                    <ul>
+                        <li>All interactions logged</li>
+                        <li>All consent events recorded</li>
+                        <li>All escalations timestamped</li>
+                        <li>Logs are tamper-resistant</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Audit Readiness</h3>
+                    <ul>
+                        <li>Logs available for regulatory, sponsor, or compliance review</li>
+                        <li>Human actions traceable to individuals</li>
+                        <li>System behavior reproducible and inspectable</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Audit Readiness</h3>
-                <ul>
-                    <li>Logs available for regulatory, sponsor, or compliance review</li>
-                    <li>Human actions traceable to individuals</li>
-                    <li>System behavior reproducible and inspectable</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Safety Architecture -->
-        <section>
-            <h2>Safety Architecture (Safety OS)</h2>
-            <div class="checklist-group">
-                <h3>Deterministic System Behavior</h3>
-                <ul>
-                    <li>Rule-defined routing only</li>
-                    <li>No probabilistic clinical output</li>
-                    <li>No hidden decision layers</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Safety Architecture (Safety OS)</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Deterministic System Behavior</h3>
+                    <ul>
+                        <li>Rule-defined routing only</li>
+                        <li>No probabilistic clinical output</li>
+                        <li>No hidden decision layers</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Hard Constraints Enforced</h3>
+                    <ul>
+                        <li>Clinical intent requests are refused, not redirected</li>
+                        <li>Boundary violations are blocked at system level</li>
+                        <li>No model override of governance rules</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Hard Constraints Enforced</h3>
-                <ul>
-                    <li>Clinical intent requests are refused, not redirected</li>
-                    <li>Boundary violations are blocked at system level</li>
-                    <li>No model override of governance rules</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Regulatory Scope Confirmation -->
-        <section>
-            <h2>Regulatory Scope Confirmation</h2>
-            <div class="checklist-group">
-                <h3>Phase 1 Classification</h3>
-                <ul>
-                    <li>Non-medical</li>
-                    <li>Non-clinical</li>
-                    <li>Non-SaMD</li>
-                    <li>Not subject to MDR, FDA SaMD, or clinical trial regulation</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Regulatory Scope Confirmation</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Phase 1 Classification</h3>
+                    <ul>
+                        <li>Non-medical</li>
+                        <li>Non-clinical</li>
+                        <li>Non-SaMD</li>
+                        <li>Not subject to MDR, FDA SaMD, or clinical trial regulation</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Future Capability Separation</h3>
+                    <ul>
+                        <li>Phase 1 cannot transition into Phase 2 or 3 functionality</li>
+                        <li>Capability expansion requires:</li>
+                        <li style="margin-left: 1rem;">New governance approval</li>
+                        <li style="margin-left: 1rem;">New regulatory pathway</li>
+                        <li style="margin-left: 1rem;">Physician-as-Pilot activation</li>
+                        <li style="margin-left: 1rem;">Jurisdiction-specific clearance</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Future Capability Separation</h3>
-                <ul>
-                    <li>Phase 1 cannot transition into Phase 2 or 3 functionality</li>
-                    <li>Capability expansion requires:</li>
-                    <li style="margin-left: 1rem;">New governance approval</li>
-                    <li style="margin-left: 1rem;">New regulatory pathway</li>
-                    <li style="margin-left: 1rem;">Physician-as-Pilot activation</li>
-                    <li style="margin-left: 1rem;">Jurisdiction-specific clearance</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Accountability Statement -->
-        <section>
-            <h2>Accountability Statement</h2>
-            <div class="checklist-group">
-                <h3>Accountability Model</h3>
-                <ul>
-                    <li>Humans remain accountable at all times</li>
-                    <li>AI acts solely as a constrained interface</li>
-                    <li>Responsibility cannot be delegated to software</li>
-                </ul>
+        <details class="collapsible-section">
+            <summary>Accountability Statement</summary>
+            <div class="collapsible-content">
+                <div class="checklist-group">
+                    <h3>Accountability Model</h3>
+                    <ul>
+                        <li>Humans remain accountable at all times</li>
+                        <li>AI acts solely as a constrained interface</li>
+                        <li>Responsibility cannot be delegated to software</li>
+                    </ul>
+                </div>
+                <div class="checklist-group">
+                    <h3>Governance Enforcement</h3>
+                    <ul>
+                        <li>Physician-as-Pilot defines accountability</li>
+                        <li>Safety OS enforces it technically</li>
+                        <li>No reliance on trust, intent, or policy alone</li>
+                    </ul>
+                </div>
             </div>
-            <div class="checklist-group">
-                <h3>Governance Enforcement</h3>
-                <ul>
-                    <li>Physician-as-Pilot defines accountability</li>
-                    <li>Safety OS enforces it technically</li>
-                    <li>No reliance on trust, intent, or policy alone</li>
-                </ul>
-            </div>
-        </section>
+        </details>
 
         <!-- Deployment Summary -->
         <section>
