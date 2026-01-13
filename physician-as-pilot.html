@@ -133,44 +133,47 @@
         .regulatory-snapshot {
             position: sticky;
             top: 60px;
-            background: #f0f9ff;
-            border: 1px solid #cbd5e1;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1rem;
-            margin: 2rem 1rem;
+            padding: 0.875rem;
+            margin: 1.5rem 1rem;
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
             z-index: 99;
         }
 
         .regulatory-snapshot h3 {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            color: #0c4a6e;
-            margin-bottom: 1rem;
+            color: #475569;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .regulatory-snapshot ul {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.75rem;
         }
 
         .regulatory-snapshot li {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            font-size: 0.8rem;
+            gap: 0.5rem;
+            font-size: 0.75rem;
             color: #64748b;
+            font-weight: 400;
         }
 
         .regulatory-snapshot li:before {
             content: "✔";
             color: #22c55e;
-            font-weight: 700;
+            font-weight: 600;
             flex-shrink: 0;
         }
 
@@ -891,7 +894,7 @@
             </div>
             <div class="proof-item">
                 <div class="proof-item-label">Control</div>
-                <div class="proof-item-value">Human-in-the-Loop, Deterministic</div>
+                <div class="proof-item-value">Human-Executed Authority, Deterministic</div>
             </div>
             <div class="proof-item">
                 <div class="proof-item-label">Evidence</div>
@@ -921,13 +924,30 @@
     <!-- Visual Flow Diagram -->
     <div class="flow-diagram" style="text-align: center; margin: 2rem 0;">
         <img src="/physician-as-pilot-diagram-v2.png" alt="Physician Governed Execution Flow" style="max-width: 100%; height: auto; max-height: 600px; border-radius: 8px;">
-        <div class="flow-diagram-microcopy" style="margin-top: 1rem; font-size: 0.9rem; color: #64748b; font-style: italic;">AI may assist with context, but never initiates clinical action.</div>
+        
+        <!-- Regulatory Boundary Microcopy -->
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; font-size: 0.85rem; color: #475569;">
+            <div style="text-align: center; max-width: 200px;">
+                <strong style="color: #0f172a;">User Request</strong>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(only logs and explicit consent)</div>
+            </div>
+            <div style="text-align: center; max-width: 200px;">
+                <strong style="color: #0f172a;">Human Review & Authority</strong>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(human makes decisions; AI cannot override)</div>
+            </div>
+            <div style="text-align: center; max-width: 200px;">
+                <strong style="color: #0f172a;">Human Action</strong>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(execution only via user/clinician intent)</div>
+            </div>
+        </div>
+        
+        <div class="flow-diagram-microcopy" style="margin-top: 1.25rem; font-size: 0.9rem; color: #334155; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">AI may assist with context, but never initiates clinical action<br>and cannot override human authority or escalate automatically.</div>
     </div>
 
     <!-- Three-Card Summary -->
     <div class="three-card-summary">
         <div class="summary-card">
-            <h3>Enables (Phase 1)</h3>
+            <h3>Permitted Activity (Phase 1)</h3>
             <ul>
                 <li>Conversational engagement</li>
                 <li>Non-medical reminders</li>
@@ -936,7 +956,7 @@
             </ul>
         </div>
         <div class="summary-card">
-            <h3>Does Not Perform</h3>
+            <h3>Prohibited Functionality (Phase 1)</h3>
             <ul>
                 <li>Diagnosis or triage</li>
                 <li>Risk scoring or health inference</li>
@@ -945,12 +965,12 @@
             </ul>
         </div>
         <div class="summary-card">
-            <h3>Responsibility</h3>
+            <h3>Human Authority & Control</h3>
             <ul>
-                <li>Humans remain accountable</li>
-                <li>Consent gates are enforced</li>
-                <li>Actions require explicit instruction</li>
-                <li>All activity is logged and reviewable</li>
+                <li>Human decisions required for all actions</li>
+                <li>Consent enforced at every escalation</li>
+                <li>Consent state logged immutably</li>
+                <li>AI cannot initiate clinical action nor override boundaries</li>
             </ul>
         </div>
     </div>
@@ -959,7 +979,7 @@
     <main>
         <!-- Scroll-Based Checkpoint -->
         <div style="text-align: center; padding: 2rem; margin: 2rem 0; background-color: #f8fafc; border-left: 4px solid #22c55e; border-radius: 4px;">
-            <p style="font-size: 0.95rem; color: #334155; font-style: italic;"><strong>Checkpoint:</strong> If you've read this far, you understand the core idea. Everything below documents how it is enforced.</p>
+            <p style="font-size: 0.95rem; color: #334155; font-style: italic;"><strong>Checkpoint:</strong> You have understood the core safeguards and architectural constraints. The sections below document how these constraints are enforced.</p>
         </div>
 
         <!-- Phase 1 Definition Section -->
@@ -1009,7 +1029,7 @@
             <p style="font-size: 0.95rem; color: #475569; margin: 1.5rem 0;"><strong>Critical Boundary:</strong> This phase makes no health or diagnostic claims and does not infer condition or status.</p>
 
             <div class="micro-roadmap">
-                <h4>Next Phases (High-Level)</h4>
+                <h4>Future Regulatory Pathways</h4>
                 <ul>
                     <li><strong>Phase 2:</strong> Clinician-supervised analytical support (requires regulatory clearance)</li>
                     <li><strong>Phase 3:</strong> Regulated clinical AI modules (SaMD/multi-jurisdiction)</li>
@@ -1017,6 +1037,42 @@
                 <p style="font-size: 0.85rem; color: #78350f; margin-top: 1rem; font-style: italic;">No detail here - just orientation. This tells readers Phase 1 is not the whole story, reducing bounce.</p>
             </div>
         </section>
+
+        <!-- Regulatory Enforcement Architecture (NEW - Collapsed by Default) -->
+        <details class="collapsible-section">
+            <summary>Regulatory Enforcement Architecture</summary>
+            <div class="collapsible-content">
+                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1.5rem;">Phase 1 defines architectural controls that enforce governance constraints without reliance on intent alone.</p>
+                
+                <div class="checklist-group">
+                    <h3>Mode-Locked Behavior</h3>
+                    <ul>
+                        <li>System behavior is constrained by phase definitions. Any request that implies clinical interpretation or action must be refused or routed for explicit human authorization.</li>
+                    </ul>
+                </div>
+                
+                <div class="checklist-group">
+                    <h3>Escalation Triggers</h3>
+                    <ul>
+                        <li>No system-initiated alerts. Escalation occurs only on affirmative user/clinician instruction with explicit consent. Boundary condition violations are blocked at the system level.</li>
+                    </ul>
+                </div>
+                
+                <div class="checklist-group">
+                    <h3>Immutable Audit Trail</h3>
+                    <ul>
+                        <li>All interactions, consent events, and escalations are logged with timestamps and context. Logs support traceability for regulatory review, compliance analysis, or post-event attribution.</li>
+                    </ul>
+                </div>
+                
+                <div class="checklist-group">
+                    <h3>Deterministic Behavior</h3>
+                    <ul>
+                        <li>The system routes only by predefined rules. No probabilistic clinical output, hidden decision layers, or adaptive clinical parameters are permitted under Phase 1.</li>
+                    </ul>
+                </div>
+            </div>
+        </details>
 
         <!-- Intended Use Declaration -->
         <section>
@@ -1028,12 +1084,14 @@
                     <li>No medical purpose is claimed, implied, or enabled</li>
                     <li>No health status, disease state, or cognitive condition is assessed or inferred</li>
                 </ul>
+                <p style="font-size: 0.95rem; color: #334155; margin-top: 1rem; font-weight: 500;">This system enforces governance constraints at the software architecture level - no clinical interpretation, risk inference, or diagnostic inference is permitted by design.</p>
             </div>
             <div class="checklist-group">
                 <h3>Regulatory Posture</h3>
                 <ul>
                     <li><strong>✔ Outside SaMD / MDR / FDA medical device classification</strong></li>
                 </ul>
+                <p style="font-size: 0.9rem; color: #475569; margin-top: 1rem;">The framework is compatible with predetermined change control plans, enforcing that any governance or boundary updates must be explicitly authorized and documented prior to deployment.</p>
             </div>
         </section>
 
@@ -1057,7 +1115,7 @@
                     </ul>
                 </div>
                 <div class="checklist-group">
-                    <h3>Outside Phase 1 Scope</h3>
+                    <h3>Prohibited Functionality (Architecturally Prevented)</h3>
                     <ul>
                         <li>Diagnosis or differential diagnosis</li>
                         <li>Clinical assessment or triage</li>
@@ -1083,11 +1141,12 @@
                     </ul>
                 </div>
                 <div class="checklist-group">
-                    <h3>Human Authority is Architecturally Enforced</h3>
+                    <h3>Human-Executed Authority (Architecturally Enforced)</h3>
                     <ul>
                         <li>All real-world actions are executed by humans</li>
                         <li>AI cannot bypass caregivers, clinicians, or consent gates</li>
                         <li>Responsibility remains fully with human actors</li>
+                        <li>No autonomous execution pathways exist in the system architecture</li>
                     </ul>
                 </div>
                 <p style="font-size: 0.85rem; color: #64748b; margin-top: 1rem; font-style: italic;">This prevents silent scope creep from observational support into unregulated clinical action.</p>
@@ -1216,6 +1275,7 @@
                         <li>Non-SaMD</li>
                         <li>Not subject to MDR, FDA SaMD, or clinical trial regulation</li>
                     </ul>
+                    <p style="font-size: 0.9rem; color: #334155; margin-top: 1rem; font-weight: 500;">Phase 1 does not meet the definition of Software as a Medical Device (SaMD) under FDA, EU MDR, or IMDRF guidance. No clinical claims, diagnostic outputs, or treatment recommendations are made or enabled.</p>
                 </div>
                 <div class="checklist-group">
                     <h3>Future Capability Separation</h3>
@@ -1312,7 +1372,7 @@
                     <ul>
                         <li>No clinical interpretation</li>
                         <li>No health assessment</li>
-                        <li>Human-in-the-loop escalation</li>
+                        <li>Human-executed authority for all escalations</li>
                         <li>Immutable audit logging</li>
                         <li>Deployable immediately</li>
                     </ul>
@@ -1349,8 +1409,10 @@
         </div>
 
         <!-- Soft Exit CTA -->
-        <div style="text-align: center; padding: 2rem; margin: 2rem 0; background-color: #f0f9ff; border-radius: 4px;">
-            <p style="font-size: 0.95rem; color: #334155;">If this framework is useful, the full governance rationale and IP context are documented in the <a href="https://www.medrxiv.org/" target="_blank" style="color: #0284c7; text-decoration: underline;">medRxiv preprint</a>.</p>
+        <div style="text-align: center; padding: 2rem; margin: 2rem 0; background-color: #f0f9ff; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1rem;">The full governance rationale, IP context, and regulatory positioning are documented in the peer-reviewed preprint.</p>
+            <a href="https://www.medrxiv.org/content/10.1101/2024.12.17.24319193v1" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #0284c7; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">View medRxiv Preprint →</a>
+            <p style="font-size: 0.8rem; color: #64748b; margin-top: 1rem;">Physician-as-Pilot: A Governance Framework for AI-Mediated Home Care</p>
         </div>
 
         <!-- CTA Section -->
