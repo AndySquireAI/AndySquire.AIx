@@ -1,8 +1,33 @@
-# Phase 1 Deployment Protocol: Non-Medical Companion
+# Phase 1 Deployment Protocol — Non-Medical, Non-SaMD
 
-**Version:** 1.0
+**Version:** 1.1
 **Date:** January 13, 2026
 **Status:** Final
+
+---
+
+## Regulatory Position Statement
+
+This protocol defines a **strictly non-medical AI companion deployment** designed to operate outside clinical regulation while maintaining full auditability, consent enforcement, and human accountability.
+
+**Phase 1 explicitly does NOT perform:**
+- Diagnosis
+- Assessment or scoring
+- Clinical interpretation
+- Autonomous escalation
+
+This document exists to allow sponsors, healthcare organizations, and regulatory advisors to verify — in writing — where the system's authority ends.
+
+---
+
+## Phase 1 Capability Boundary (At a Glance)
+
+| **Permitted** | **Explicitly Forbidden** |
+| :--- | :--- |
+| Social companionship and conversation | Medical advice or reassurance |
+| User-set reminders (acknowledgement only) | Symptom interpretation or assessment |
+| Logging engagement and user-declared sentiment | Cognitive or clinical scoring |
+| User-initiated escalation with explicit consent | Autonomous clinical or emergency escalation |
 
 ---
 
@@ -12,7 +37,7 @@ This document outlines the operational protocol, governance boundaries, and safe
 
 This protocol is designed for review by pharmaceutical sponsors, healthcare providers, and regulatory advisors to demonstrate the strictly non-medical scope and robust safety architecture of the initial deployment.
 
-> **Governing Principle:** Phase 1 is designed for **social support and data logging only**. It does not perform any diagnostic, assessment, or clinical decision-making functions. Every interaction is governed by the **Caregiver-in-the-Loop** and **Physician-as-Pilot** doctrines.
+> **Governing Principle:** Phase 1 is designed for **social support and data logging only**. It does not perform any diagnostic, assessment, or clinical decision-making functions. Every interaction is governed by the **Caregiver-in-the-Loop** doctrine.
 
 ## 2. Core Operational Boundaries
 
@@ -52,7 +77,9 @@ The escalation pathway is a pre-configured, deterministic route. The system does
 
 ## 4. Audit Logging for Real-World Evidence (RWE)
 
-Every interaction is logged for compliance review and the generation of non-clinical Real-World Evidence (RWE). This data is crucial for demonstrating the value of companionship in improving a senior's quality of life and adherence.
+Every Phase 1 interaction is logged to generate **non-clinical Real-World Evidence (RWE)** relevant to medication adherence behavior, engagement continuity, and caregiver responsiveness — without making health, cognitive, or disease claims.
+
+This evidence is designed to support **Patient Support Programs (PSPs)** and adherence initiatives while remaining outside SaMD scope.
 
 **Logged Metrics (Phase 1):**
 
@@ -62,11 +89,18 @@ Every interaction is logged for compliance review and the generation of non-clin
 *   **Caregiver Escalation Response Time:** Latency between system notification and caregiver response.
 *   **User-Reported Quality of Life Signals:** Explicit, self-declared statements of well-being (e.g., *"I feel good today"*).
 
+**No inferred health states, scores, or clinical trends are generated in Phase 1.**
+
 ## 5. Governance & Disclaimer
 
 *   **Zero Clinical Authority:** The Companion has no clinical authority. It is a tool for social support and a data conduit to designated human supervisors.
 *   **Caregiver-in-the-Loop:** A human is always responsible. The AI never acts alone in any situation involving a potential health concern.
-*   **Physician-as-Pilot:** While the physician is not involved in Phase 1's real-time operation, they define the governance framework that allows the system to operate safely and scale into future clinical phases.
+
+### Physician-as-Pilot in Phase 1
+
+Physicians do not participate in real-time Phase 1 operations. Their role is limited to defining the governance constraints that prevent clinical behavior and enable safe progression to later regulated phases.
+
+**Phase 1 execution remains caregiver-supervised and non-medical at all times.**
 
 ---
 
