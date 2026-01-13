@@ -470,6 +470,160 @@
             margin-top: 1rem;
         }
 
+        .roadmap-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid #f97316;
+        }
+
+        .roadmap-section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .roadmap-section h2:before {
+            content: "🗺️";
+            font-size: 1.5rem;
+        }
+
+        .roadmap-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .roadmap-visual:before {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 16.67%;
+            right: 16.67%;
+            height: 2px;
+            background: linear-gradient(90deg, #f97316 0%, #f97316 50%, transparent 50%, transparent 100%);
+            z-index: 0;
+        }
+
+        .phase-node {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .phase-node-circle {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .phase-node-circle.phase-1 {
+            background: #22c55e;
+            border: 3px solid #16a34a;
+        }
+
+        .phase-node-circle.phase-2 {
+            background: #f97316;
+            border: 3px solid #ea580c;
+        }
+
+        .phase-node-circle.phase-3 {
+            background: #0284c7;
+            border: 3px solid #0369a1;
+        }
+
+        .phase-node-label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-node-status {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .phase-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-top: 4px solid #22c55e;
+        }
+
+        .phase-card.phase-2 {
+            border-top-color: #f97316;
+        }
+
+        .phase-card.phase-3 {
+            border-top-color: #0284c7;
+        }
+
+        .phase-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .phase-card li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .phase-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .phase-card.phase-2 li:before {
+            color: #f97316;
+        }
+
+        .phase-card.phase-3 li:before {
+            color: #0284c7;
+        }
+
         @media (max-width: 768px) {
             .regulatory-proof-header h2 {
                 font-size: 1.4rem;
@@ -494,6 +648,18 @@
 
             .icon-row {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roadmap-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .roadmap-visual:before {
+                display: none;
+            }
+
+            .phase-cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -828,6 +994,76 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Governance Pathway Roadmap Section -->
+        <div class="roadmap-section">
+            <h2>Governance Pathway - Three Phases of Accountability and Control</h2>
+            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 2rem;">Phase 1 is the foundation. Phases 2 and 3 represent future regulatory pathways, each requiring separate governance approval, clinical validation, and jurisdiction-specific clearance.</p>
+            
+            <!-- 3-Phase Roadmap Visual -->
+            <div class="roadmap-visual">
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-1">1</div>
+                    <div class="phase-node-label">Phase 1</div>
+                    <div class="phase-node-status">Current - Non-Clinical</div>
+                </div>
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-2">2</div>
+                    <div class="phase-node-label">Phase 2</div>
+                    <div class="phase-node-status">Future - Analytical Support</div>
+                </div>
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-3">3</div>
+                    <div class="phase-node-label">Phase 3</div>
+                    <div class="phase-node-status">Future - Clinical AI</div>
+                </div>
+            </div>
+
+            <!-- Phase Detail Cards -->
+            <div class="phase-cards">
+                <!-- Phase 1 Card -->
+                <div class="phase-card">
+                    <h3>Phase 1: Non-Clinical Companion</h3>
+                    <p><strong>Scope:</strong> Social engagement, reminders, user-initiated escalation.</p>
+                    <p><strong>Regulatory Status:</strong> Outside SaMD / MDR scope.</p>
+                    <ul>
+                        <li>No clinical interpretation</li>
+                        <li>No health assessment</li>
+                        <li>Human-in-the-loop escalation</li>
+                        <li>Immutable audit logging</li>
+                        <li>Deployable immediately</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 Card -->
+                <div class="phase-card phase-2">
+                    <h3>Phase 2: Clinician-Supervised Analytics</h3>
+                    <p><strong>Scope:</strong> Analytical support under physician supervision.</p>
+                    <p><strong>Regulatory Status:</strong> Requires jurisdictional clearance.</p>
+                    <ul>
+                        <li>Clinician-reviewed insights</li>
+                        <li>Physician-as-Pilot governance</li>
+                        <li>Behavioral analytics (non-diagnostic)</li>
+                        <li>Enhanced audit trails</li>
+                        <li>Jurisdiction-specific approval required</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 Card -->
+                <div class="phase-card phase-3">
+                    <h3>Phase 3: Regulated Clinical AI</h3>
+                    <p><strong>Scope:</strong> Full clinical decision support with SaMD compliance.</p>
+                    <p><strong>Regulatory Status:</strong> Full regulatory pathway (SaMD / MDR).</p>
+                    <ul>
+                        <li>Clinical validation studies</li>
+                        <li>Multi-jurisdiction compliance</li>
+                        <li>Risk management framework</li>
+                        <li>Post-market surveillance</li>
+                        <li>Physician-led clinical deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- CTA Section -->
         <div class="cta-section">
