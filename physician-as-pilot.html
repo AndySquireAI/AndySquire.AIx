@@ -602,6 +602,33 @@
             <!-- Definition -->
             <p style="font-size: 1.05rem; color: #1e293b; line-height: 1.7; margin-bottom: 1.5rem;">In Phase 1, the AI provides <strong>non-medical social support only</strong>. It does not assess health, cognition, or disease. All concerns are escalated to a human caregiver or physician with explicit user consent.</p>
             
+            <!-- RWE Data Ribbon -->
+            <div style="margin-bottom: 2rem;">
+                <h4 style="margin: 0 0 0.75rem 0; color: #166534; font-size: 1rem; text-align: center; text-transform: uppercase; letter-spacing: 0.05em;">Phase 1 RWE: Logged Variables</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+                    <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.5rem; border-right: 1px solid #f1f5f9;">
+                        <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Engagement</div>
+                        <div style="font-size: 0.85rem; color: #1e293b; font-weight: 600;">Continuity</div>
+                    </div>
+                    <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.5rem; border-right: 1px solid #f1f5f9;">
+                        <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Escalation</div>
+                        <div style="font-size: 0.85rem; color: #1e293b; font-weight: 600;">Accuracy</div>
+                    </div>
+                    <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.5rem; border-right: 1px solid #f1f5f9;">
+                        <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Explicit</div>
+                        <div style="font-size: 0.85rem; color: #1e293b; font-weight: 600;">Consent Rate</div>
+                    </div>
+                    <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.5rem; border-right: 1px solid #f1f5f9;">
+                        <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Caregiver</div>
+                        <div style="font-size: 0.85rem; color: #1e293b; font-weight: 600;">Response Time</div>
+                    </div>
+                    <div style="flex: 1; min-width: 120px; text-align: center; padding: 0.5rem;">
+                        <div style="font-size: 0.7rem; color: #64748b; font-weight: 700; text-transform: uppercase;">User-Reported</div>
+                        <div style="font-size: 0.85rem; color: #1e293b; font-weight: 600;">QoL Signals</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- ONE Interaction Example -->
             <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
                 <div style="background: #f8fafc; border-radius: 8px; padding: 1rem; border: 1px solid #e2e8f0;">
@@ -630,14 +657,31 @@
                 <p style="margin: 1rem 0 0 0; font-size: 0.85rem; color: #64748b; text-align: center;">Phase 1 — Social support only · Zero clinical authority · Logged for real-world evidence</p>
             </div>
             
-            <!-- What It Will NOT Do -->
-            <div style="background: #fef2f2; border-radius: 12px; padding: 1.25rem; border: 1px solid #fecaca;">
-                <h4 style="margin: 0 0 0.75rem 0; color: #991b1b; font-size: 1rem;">What It Will NOT Do</h4>
-                <ul style="margin: 0; padding-left: 1.2rem; color: #7f1d1d; font-size: 0.95rem;">
-                    <li>Diagnose</li>
-                    <li>Decide clinically</li>
-                    <li>Act without explicit consent</li>
-                </ul>
+            <!-- Boundaries & Logic Row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- What It Will NOT Do -->
+                <div style="background: #fef2f2; border-radius: 12px; padding: 1.25rem; border: 1px solid #fecaca;">
+                    <h4 style="margin: 0 0 0.75rem 0; color: #991b1b; font-size: 1rem;">What It Will NOT Do</h4>
+                    <ul style="margin: 0; padding-left: 1.2rem; color: #7f1d1d; font-size: 0.9rem;">
+                        <li>Diagnose</li>
+                        <li>Decide clinically</li>
+                        <li>Act without explicit consent</li>
+                    </ul>
+                </div>
+                
+                <!-- How It Works: Consent Gate -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0;">
+                    <h4 style="margin: 0 0 0.75rem 0; color: #1e293b; font-size: 1rem;">How It Works: Consent Gate</h4>
+                    <div style="font-size: 0.8rem; line-height: 1.4; color: #475569;">
+                        <div style="background: #fff; padding: 0.5rem; border-radius: 6px; border: 1px dashed #cbd5e1; margin-bottom: 0.5rem;">
+                            "I understand you'd like to speak with [Caregiver]. I can connect you. Is that okay?"
+                        </div>
+                        <div style="display: flex; justify-content: space-between; text-align: center;">
+                            <div style="flex: 1; color: #16a34a; font-weight: 700;">YES →<br><span style="font-weight: 400; font-size: 0.7rem;">Escalation</span></div>
+                            <div style="flex: 1; color: #dc2626; font-weight: 700;">NO →<br><span style="font-weight: 400; font-size: 0.7rem;">Abort</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Phase 1 Protocol CTA -->
@@ -877,7 +921,13 @@
 
     <!-- Footer -->
     <footer>
-        <p style="margin-bottom: 0.5rem;">🛡️ Designed for data sovereignty and controlled clinical escalation.</p>
+        <p style="margin-bottom: 0.75rem;">🛡️ Designed for data sovereignty and controlled clinical escalation.</p>
+        
+        <!-- Privacy & Sovereignty Statement -->
+        <div style="max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 0.85rem; color: #94a3b8; line-height: 1.6; border-top: 1px solid #334155; padding-top: 1rem;">
+            <p><strong>Privacy & Sovereignty Statement:</strong> Phase 1 data is strictly non-clinical and suitable for Patient Support Programs (PSPs) and adherence operations only. All engagement evidence is logged to support behavioral persistence without making health, cognitive, or disease claims, ensuring deployment remains outside SaMD scope.</p>
+        </div>
+
         <p>&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
         <p>"Physician-as-Pilot™" and "Safety OS™" are proprietary governance frameworks of PatientCentricCare.AI.</p>
     </footer>
