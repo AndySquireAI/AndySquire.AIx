@@ -198,6 +198,127 @@
             color: #22c55e;
         }
 
+        .phase-definition {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #0284c7;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .phase-definition h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+        }
+
+        .phase-definition p {
+            font-size: 1rem;
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .phase-definition p strong {
+            color: #0284c7;
+            font-weight: 700;
+        }
+
+        .icon-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .icon-item {
+            text-align: center;
+        }
+
+        .icon-item-symbol {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-item-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .functional-summary {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .functional-summary h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+        }
+
+        .functional-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .functional-summary li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #475569;
+        }
+
+        .functional-summary li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .micro-roadmap {
+            background: #fef3c7;
+            border-left: 4px solid #f97316;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .micro-roadmap h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .micro-roadmap ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .micro-roadmap li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #78350f;
+            font-weight: 500;
+        }
+
+        .micro-roadmap li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f97316;
+            font-weight: 700;
+        }
+
         .checklist-group {
             margin-bottom: 2rem;
         }
@@ -370,6 +491,10 @@
             .regulatory-snapshot ul {
                 grid-template-columns: 1fr;
             }
+
+            .icon-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -416,7 +541,58 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Section 1: Intended Use Declaration -->
+        <!-- Phase 1 Definition Section -->
+        <div class="phase-definition">
+            <h3>Phase 1 - Non-Clinical Companion (Cloud Desktop Agent)</h3>
+            <p><strong>One-Sentence Definition:</strong> Phase 1 is a cloud-based desktop Companion Agent for seniors that provides social engagement, reminders, and user-initiated caregiver escalation - with zero clinical interpretation or health assessment.</p>
+            
+            <div class="icon-row">
+                <div class="icon-item">
+                    <div class="icon-item-symbol">☁️</div>
+                    <div class="icon-item-label">Cloud Companion</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">💬</div>
+                    <div class="icon-item-label">Social & Reminders</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">🤝</div>
+                    <div class="icon-item-label">Human Escalation</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">✓</div>
+                    <div class="icon-item-label">Non-Medical</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Phase 1 Actually Does -->
+        <section>
+            <h2>What Phase 1 Actually Does</h2>
+            
+            <div class="functional-summary">
+                <h4>Phase 1 Companion Capabilities</h4>
+                <ul>
+                    <li>Engages seniors in two-way conversation (non-clinical)</li>
+                    <li>Provides reminders (e.g., schedule, events)</li>
+                    <li>Logs user engagement and consent state</li>
+                    <li>Escalates only on explicit user request to a human caregiver</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #475569; margin: 1.5rem 0;"><strong>Critical Boundary:</strong> This phase makes no health or diagnostic claims and does not infer condition or status.</p>
+
+            <div class="micro-roadmap">
+                <h4>Next Phases (High-Level)</h4>
+                <ul>
+                    <li><strong>Phase 2:</strong> Clinician-supervised analytical support (requires regulatory clearance)</li>
+                    <li><strong>Phase 3:</strong> Regulated clinical AI modules (SaMD/multi-jurisdiction)</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: #78350f; margin-top: 1rem; font-style: italic;">No detail here - just orientation. This tells readers Phase 1 is not the whole story, reducing bounce.</p>
+            </div>
+        </section>
+
+        <!-- Intended Use Declaration -->
         <section>
             <h2>Intended Use Declaration</h2>
             <div class="checklist-group">
@@ -435,7 +611,7 @@
             </div>
         </section>
 
-        <!-- Section 2: Explicit Functional Boundaries -->
+        <!-- Explicit Functional Boundaries -->
         <section>
             <h2>Explicit Functional Boundaries</h2>
             <div class="checklist-group">
@@ -461,7 +637,7 @@
             </div>
         </section>
 
-        <!-- Section 3: Decision Authority & Control -->
+        <!-- Decision Authority & Control -->
         <section>
             <h2>Decision Authority & Control</h2>
             <div class="checklist-group">
@@ -482,7 +658,7 @@
             </div>
         </section>
 
-        <!-- Section 4: Escalation & Consent Model -->
+        <!-- Escalation & Consent Model -->
         <section>
             <h2>Escalation & Consent Model</h2>
             <div class="checklist-group">
@@ -510,7 +686,7 @@
             </div>
         </section>
 
-        <!-- Section 5: Data Classification & Use -->
+        <!-- Data Classification & Use -->
         <section>
             <h2>Data Classification & Use</h2>
             <div class="checklist-group">
@@ -541,7 +717,7 @@
             </div>
         </section>
 
-        <!-- Section 6: Auditability & Evidence -->
+        <!-- Auditability & Evidence -->
         <section>
             <h2>Auditability & Evidence</h2>
             <div class="checklist-group">
@@ -563,7 +739,7 @@
             </div>
         </section>
 
-        <!-- Section 7: Safety Architecture -->
+        <!-- Safety Architecture -->
         <section>
             <h2>Safety Architecture (Safety OS)</h2>
             <div class="checklist-group">
@@ -584,7 +760,7 @@
             </div>
         </section>
 
-        <!-- Section 8: Regulatory Scope Confirmation -->
+        <!-- Regulatory Scope Confirmation -->
         <section>
             <h2>Regulatory Scope Confirmation</h2>
             <div class="checklist-group">
@@ -609,7 +785,7 @@
             </div>
         </section>
 
-        <!-- Section 9: Accountability Statement -->
+        <!-- Accountability Statement -->
         <section>
             <h2>Accountability Statement</h2>
             <div class="checklist-group">
@@ -630,13 +806,13 @@
             </div>
         </section>
 
-        <!-- Section 10: Deployment Summary -->
+        <!-- Deployment Summary -->
         <section>
             <h2>Deployment Summary</h2>
             <p style="font-size: 1.1rem; font-weight: 700; color: #166534; margin-top: 1rem;">Phase 1 is a non-clinical, consent-gated, human-executed AI companion system with immutable auditability, designed to operate entirely outside medical device regulation.</p>
         </section>
 
-        <!-- Section 11: Regulator Actions -->
+        <!-- Regulator Actions -->
         <section>
             <h2>Regulator Actions</h2>
             <div class="checklist-group">
