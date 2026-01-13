@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traction & Momentum | PatientCentricCare.AI</title>
+    <meta name="description" content="Building PatientCentricCare.AI through disciplined, evidence-driven approach with clinical collaborators and research partners.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.andysquire.ai/traction.html">
+    <meta property="og:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="og:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.andysquire.ai/traction.html">
+    <meta property="twitter:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="twitter:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
+    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0d9488;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #e2e8f0;
+        }
+
+        .hero-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            margin-top: 1.5rem;
+        }
+
+        /* Main Content */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            border-left: 6px solid #0d9488;
+            padding-left: 1.5rem;
+            padding-bottom: 0.5rem;
+            background: linear-gradient(90deg, rgba(13,148,136,0.05) 0%, rgba(255,255,255,0) 100%);
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 8px;
+        }
+
+        section h2::before {
+            content: attr(data-section-number);
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #1e3a5f;
+        }
+
+        section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .bullets {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .bullets li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .bullets li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+            border-left: 6px solid #0d9488;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #0d9488 50%, transparent 100%);
+            margin: 4rem 0;
+            opacity: 0.3;
+        }*/
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pillar-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .pillar-card h4 {
+            color: #0d9488;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            background: #0f766e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background-color: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                padding: 1rem 0;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/investors/">Investor Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Traction & Momentum</h1>
+        <p>
+            We are building PatientCentricCare.AI through a disciplined, evidence-driven approach supported by clinical collaborators, research partners, and early institutional engagement. Our traction reflects progress across four pillars: governance, evidence generation, clinical alignment, and strategic partnerships.
+        </p>
+    </div>
+
+    <!-- Four Pillars Overview -->
+    <section>
+        <h2>Four Pillars of Progress</h2>
+        
+        <!-- Greek Temple Diagram -->
+        <div style="margin: 3rem 0; text-align: center;">
+            <img src="traction-pillars-diagram.png" alt="Four Pillars of Progress: Evidence-Driven Development Framework" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </section>
+
+    <!-- Clinical Collaboration -->
+    <section>
+        <h2 data-section-number="1">✓ Clinical Advisors Engaged</h2>
+        <p style="font-size: 1.15rem;">Collaborating with clinicians across aging, rehabilitation, and chronic care.</p>
+    </section>
+
+    <!-- Governance Architecture -->
+    <section>
+        <h2 data-section-number="2">✓ Governance Architecture Defined</h2>
+        <p style="font-size: 1.15rem;">Safety OS governance layer established with regulatory-grade foundations.</p>
+    </section>
+
+    <!-- Evidence Framework -->
+    <section>
+        <h2 data-section-number="3">✓ Evidence Framework Established</h2>
+        <p style="font-size: 1.15rem;">Ethical, consent-based environment for gathering geriatric and chronic-care insights.</p>
+    </section>
+
+    <!-- Strategic Partnerships -->
+    <section>
+        <h2 data-section-number="4">✓ Strategic Partnerships Active</h2>
+        <p style="font-size: 1.15rem;">Discussions with health systems, research institutions, and strategic sponsors.</p>
+    </section>
+
+    <!-- Platform Development -->
+    <section>
+        <h2 data-section-number="5">✓ Platform Architecture In Progress</h2>
+        <p style="font-size: 1.15rem;">Safety OS behavior-governance engine and supervision controls under development.</p>
+    </section>
+
+    <!-- Advisory Network -->
+    <section>
+        <h2 data-section-number="6">✓ Advisory Network Assembled</h2>
+        <p style="font-size: 1.15rem;">Clinical leaders, AI governance experts, and regulatory specialists engaged.</p>
+    </section>
+
+    <!-- Thought Leadership -->
+    <section>
+        <h2 data-section-number="7">✓ Thought Leadership Established</h2>
+        <p style="font-size: 1.15rem;">Recognized for responsible AI governance and ethical design principles.</p>
+    </section>
+
+    <!-- What's Next -->
+    <section>
+        <h2 data-section-number="8">What's Next</h2>
+        <ul class="bullets">
+            <li>Supervised support pilot frameworks</li>
+            <li>Safety OS supervision modules</li>
+            <li>Clinical research expansion</li>
+            <li>Regulatory documentation</li>
+        </ul>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align: center;">
+        <p class="hero-tagline" style="font-size: 1.5rem; margin-bottom: 2rem;">
+            Empowering Independence. Preserving Dignity.
+        </p>
+        <a href="/investment.html" class="cta-button">PARTNERSHIP OPPORTUNITIES →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
+        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
+        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p style="margin-bottom: 1.5rem;"><a href="/impressum.html" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
+    </footer>
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

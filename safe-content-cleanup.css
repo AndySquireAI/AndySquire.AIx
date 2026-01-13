@@ -1,0 +1,205 @@
+/* Phase 1: Safe Content Cleanup - CSS Only Approach */
+/* This file uses only standard CSS to reduce Andy-focused content */
+/* No JavaScript DOM manipulation to avoid breaking React */
+
+/* === VISUAL INDICATORS === */
+/* Add phase indicator in top right corner */
+body::before {
+  content: "🧹 Phase 1: Content Cleanup Active";
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #EFF6FF;
+  color: #1E40AF;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* === CONTENT PRIORITIZATION === */
+/* Highlight MyHealthStory sections as priority */
+[class*="myhealthstory"],
+[id*="myhealthstory"],
+[class*="health-story"],
+section:has([href*="myhealthstory"]),
+div:has([href*="myhealthstory"]) {
+  border: 3px solid #10B981 !important;
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.1) !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  background: rgba(16, 185, 129, 0.02) !important;
+}
+
+/* Add priority badge to MyHealthStory sections */
+[class*="myhealthstory"]::before,
+[id*="myhealthstory"]::before {
+  content: "🎯 PRIORITY: Patient Tools";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #10B981;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* === CONTENT REDUCTION === */
+/* Reduce prominence of excessive personal branding */
+.professional-network,
+.linkedin-network,
+.professional-recommendations,
+[class*="professional-network"],
+[class*="linkedin-network"],
+[class*="professional-recommendations"] {
+  opacity: 0.3 !important;
+  filter: grayscale(50%) !important;
+  transform: scale(0.95) !important;
+}
+
+/* Hide detailed CV-style content */
+.cv-section,
+.experience-details,
+[class*="professional-experience"],
+.work-history,
+[class*="cv-section"] {
+  display: none !important;
+}
+
+/* === SECTION INDICATORS === */
+/* Add indicators for sections being restructured */
+[class*="about"]::after {
+  content: "📝 This section will be moved to bottom in new design";
+  display: block;
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 8px 16px;
+  margin-top: 16px;
+  border-left: 4px solid #F59E0B;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Testimonials preserved - both Andy's quotes and others are valuable */
+[class*="testimonial"] {
+  /* All testimonials remain visible and functional */
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* === PARTNERSHIP SECTION ENHANCEMENT === */
+/* Since this section is already patient-focused, enhance it */
+[class*="partner"] h2,
+h2:contains("Partner with the Future") {
+  color: #059669 !important;
+  border-bottom: 3px solid #10B981 !important;
+  padding-bottom: 8px !important;
+}
+
+/* Highlight patient-focused partnership card - only in partnership section */
+.partnership-section [class*="patient"]:not([class*="myhealthstory"]),
+section:has([class*="partner"]) [class*="patient"]:not([class*="myhealthstory"]) {
+  border: 2px solid #EF4444 !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+.partnership-section [class*="patient"]:not([class*="myhealthstory"])::before,
+section:has([class*="partner"]) [class*="patient"]:not([class*="myhealthstory"])::before {
+  content: "❤️ PATIENT-FOCUSED";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #EF4444;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* === PRESERVE FUNCTIONALITY === */
+/* Ensure PayPal buttons and functionality remain untouched */
+[class*="paypal"],
+[id*="paypal"],
+.payment-button,
+[class*="payment"],
+[data-paypal],
+button[class*="paypal"] {
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Preserve all interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  body::before {
+    font-size: 10px;
+    padding: 6px 12px;
+    top: 5px;
+    right: 5px;
+  }
+  
+  [class*="myhealthstory"]::before {
+    font-size: 10px;
+    padding: 2px 8px;
+    top: -12px;
+    left: 10px;
+  }
+  
+  [class*="about"]::after {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* === ACCESSIBILITY === */
+/* Maintain focus indicators */
+*:focus {
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure content is still readable */
+* {
+  line-height: inherit !important;
+}
+
+/* === SUBTLE IMPROVEMENTS === */
+/* Add subtle patient-centric styling */
+h1, h2, h3 {
+  position: relative;
+}
+
+/* Add patient-centric accent to main headings */
+h1::after, h2::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #10B981, #3B82F6);
+  border-radius: 1px;
+}
+
+/* End of Safe Content Cleanup CSS */
+
