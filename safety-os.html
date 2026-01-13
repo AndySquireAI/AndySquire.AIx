@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety OS™ | Systems Architecture for Physician-as-Pilot Governance | PatientCentricCare.AI</title>
+    <meta name="description" content="Safety OS is the systems architecture that implements Physician-as-Pilot governance through deterministic control, state management, consent tracking, and auditability for safe healthcare AI.">
+    <meta name="keywords" content="Safety OS, Physician-as-Pilot, AI governance architecture, healthcare AI safety, SaMD governance, clinical AI constraints, consent tracking, audit trails, escalation logic, Andy Squire, PatientCentricCare">
+    <meta name="author" content="Andy Squire, PatientCentricCare.AI">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.andysquire.ai/safety-os.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.andysquire.ai/safety-os.html">
+    <meta property="og:title" content="Safety OS™ | Systems Architecture for AI Governance">
+    <meta property="og:description" content="The systems architecture that implements Physician-as-Pilot governance through deterministic control, consent tracking, constraints enforcement, and auditability.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Andy Squire">
+    <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+    <meta property="article:modified_time" content="2026-01-11T00:00:00Z">
+    <meta property="article:section" content="Healthcare AI Architecture">
+    <meta property="article:tag" content="AI Architecture">
+    <meta property="article:tag" content="Healthcare AI">
+    <meta property="article:tag" content="Safety Systems">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AndySquireAI">
+    <meta name="twitter:creator" content="@AndySquireAI">
+    <meta name="twitter:url" content="https://www.andysquire.ai/safety-os.html">
+    <meta name="twitter:title" content="Safety OS™ | Systems Architecture for AI Governance">
+    <meta name="twitter:description" content="The systems architecture that implements Physician-as-Pilot governance through deterministic control, consent tracking, and auditability.">
+    <meta name="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
+    <meta name="twitter:image:alt" content="Safety OS architecture for healthcare AI governance">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Safety OS: Systems Architecture for Physician-as-Pilot Governance",
+      "description": "Safety OS is the systems architecture that implements Physician-as-Pilot governance through deterministic control, state management, consent tracking, and auditability.",
+      "image": "https://www.andysquire.ai/og-image-optimized.png",
+      "author": {
+        "@type": "Person",
+        "name": "Andy Squire",
+        "url": "https://www.andysquire.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.andysquire.ai/favicon-32x32.png"
+        }
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-01-11",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.andysquire.ai/safety-os.html"
+      },
+      "keywords": ["Safety OS", "AI architecture", "healthcare AI", "governance implementation", "consent tracking", "audit trails"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andysquire.ai/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Safety OS",
+        "item": "https://www.andysquire.ai/safety-os.html"
+      }]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .page-header .tagline {
+            font-size: 1.5rem;
+            color: #fbbf24;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        /* Content Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0d9488;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .intro-text {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: #1e3a5f;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .definition-box {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .definition-box p {
+            margin-bottom: 0;
+            font-size: 1.15rem;
+        }
+        
+        /* Bullets */
+        .bullets {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .bullets li {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .bullets li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .bullets li strong {
+            color: #0f172a;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid #0d9488;
+        }
+        
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .benefit-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-card li {
+            font-size: 1.05rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .benefit-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                max-height: 500px;
+            }
+            
+            .nav-links li {
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            nav {
+                position: relative;
+            }
+            
+            .nav-container {
+                flex-wrap: nowrap;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header .tagline {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/investors/">Investor Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Safety OS: Clinical Governance for Safe AI Support</h1>
+        <p class="tagline">Empowering Independence. Preserving Dignity.</p>
+    </div>
+
+    <!-- Definition -->
+    <section>
+        <div class="definition-box">
+            <p>
+                <strong>Safety OS</strong> is the regulatory-grade governance and behavioral control framework that ensures supervised AI assistance can operate safely, predictably, and ethically in real-world home care environments. It anchors every action with clear clinical boundaries, human oversight, and transparent accountability — making it possible to extend care capacity without compromising patient safety.
+            </p>
+        </div>
+        <p style="font-size: 1.1rem; color: #475569; margin-top: 1.5rem; font-style: italic;">
+            Safety OS is designed to operationalize the <a href="/physician-as-pilot.html" style="color: #1e40af; font-weight: 600;">Physician-as-Pilot governance framework</a>.
+        </p>
+    </section>
+
+    <!-- Why Safety OS Matters -->
+    <section>
+        <h2>Why Safety OS Matters</h2>
+        <p style="font-size: 1.2rem;">
+            The governance layer that makes supervised AI support trustworthy for patients, families, and clinicians.
+        </p>
+    </section>
+
+    <!-- Core Principles -->
+    <section>
+        <h2>Core Principles</h2>
+        <ul class="bullets">
+            <li><strong>Physician-in-the-Loop (AIITL):</strong> Clinicians are pilots, not passengers.</li>
+            <li><strong>Clinical Boundaries:</strong> Every behavior maps to defined protocols.</li>
+            <li><strong>Transparency:</strong> All actions logged with timestamped audit trails.</li>
+            <li><strong>Risk Detection:</strong> Real-time monitoring with fail-safe controls.</li>
+            <li><strong>Privacy-First:</strong> HIPAA-compliant data handling with explicit consent.</li>
+        </ul>
+    </section>
+
+    <!-- Foundations -->
+    <section>
+        <h2>Governance Foundations</h2>
+        <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">Rooted in healthcare quality, risk management, and interoperability standards.</p>
+    </section>
+
+    <!-- How Safety OS Works -->
+    <section>
+        <h2>How Safety OS Works in Practice</h2>
+        
+        <p style="font-size: 1.15rem; margin-bottom: 1.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+            The Safety OS is a regulatory-grade governance layer designed to ensure that all AI-mediated actions in home and humanoid care systems remain policy-constrained, auditable, and under explicit human oversight (Physician-as-Pilot). The system does not replace clinicians and does not perform autonomous medical decision-making.
+        </p>
+        
+        <!-- Safety OS Architecture Diagram -->
+        <div style="max-width: 1000px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <img src="safety-os-architecture.png" alt="Physician-as-Pilot Safety OS for Agentic Medical Systems - Embedded Governance, Policy Enforcement, Regulatory Traceability" style="width: 100%; height: auto; display: block;">
+            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin-top: 1rem; font-style: italic;">References to FDA/EU MDR indicate the regulatory frameworks considered; they do not imply approval, clearance, or endorsement.</p>
+        </div>
+        
+        <h3>Clinical Integration</h3>
+        <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">
+            Integrates with EHR systems and care team workflows. Complements existing processes.
+        </p>
+        
+        <!-- Healthcare Ecosystem Architecture Diagram -->
+        <div style="max-width: 1000px; margin: 2.5rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <img src="healthcare-ecosystem.png" alt="Scalable IT Architecture for Patient-centric Care - TOGAF Enterprise Architecture" style="width: 100%; height: auto; display: block;">
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section>
+        <h2>Benefits Across the Care Ecosystem</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h4>For Patients & Families</h4>
+                <ul>
+                    <li>Predictable and transparent support</li>
+                    <li>Safety with dignity</li>
+                    <li>Consistent escalation paths to human caregivers</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h4>For Clinicians & Care Teams</h4>
+                <ul>
+                    <li>Continuous visibility into support activities</li>
+                    <li>Risk markers and trend insights</li>
+                    <li>Enhanced capacity without unsafe autonomy</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h4>For Health Systems & Sponsors</h4>
+                <ul>
+                    <li>Governance-aligned innovation pathway</li>
+                    <li>Documented audit trails for compliance</li>
+                    <li>Scalable model built on supervised action and oversight</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Partner With Us</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2.5rem;">
+            Dialogue with clinicians, health systems, and research institutions committed to safe AI support.
+        </p>
+        <a href="/investors/" class="cta-button">REQUEST GOVERNANCE DOCUMENTATION →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
+        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
+        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p style="margin-bottom: 1.5rem;"><a href="/impressum.html" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
+        <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">Physician-as-Pilot™ and Safety OS™ are proprietary frameworks of PatientCentricCare.AI</p>
+    </footer>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

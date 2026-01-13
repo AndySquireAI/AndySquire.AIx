@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1 Regulatory Checklist | Non-Clinical AI Deployment | PatientCentricCare.AI</title>
+    <meta name="description" content="Phase 1 Regulatory Checklist: Verify that Physician-as-Pilot Phase 1 operates entirely outside clinical, diagnostic, and SaMD regulatory scope with enforceable technical and governance controls.">
+    <meta name="keywords" content="Phase 1, regulatory checklist, non-clinical AI, SaMD scope, governance framework, AI accountability, human-in-the-loop, audit logging">
+    <meta name="author" content="Andy Squire, PatientCentricCare.AI">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.andysquire.ai/physician-as-pilot.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.andysquire.ai/physician-as-pilot.html">
+    <meta property="og:title" content="Phase 1 Regulatory Checklist | Non-Clinical AI Deployment">
+    <meta property="og:description" content="Regulatory verification checklist for Phase 1 non-clinical AI deployment with enforced human accountability.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Andy Squire">
+    <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+    <meta property="article:modified_time" content="2026-01-13T00:00:00Z">
+    <meta property="article:section" content="Healthcare AI Governance">
+    <meta property="article:tag" content="AI Governance">
+    <meta property="article:tag" content="Healthcare AI">
+    <meta property="article:tag" content="Regulatory Compliance">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #22c55e;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .regulatory-proof-header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #22c55e;
+        }
+
+        .regulatory-proof-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            color: white;
+        }
+
+        .regulatory-proof-header p {
+            font-size: 1rem;
+            color: #f97316;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proof-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .proof-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .proof-item-label {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .proof-item-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #22c55e;
+        }
+
+        .regulatory-snapshot {
+            position: sticky;
+            top: 60px;
+            background: white;
+            border: 2px solid #22c55e;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 1rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+            z-index: 99;
+        }
+
+        .regulatory-snapshot h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+        }
+
+        .regulatory-snapshot ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .regulatory-snapshot li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .regulatory-snapshot li:before {
+            content: "✔";
+            color: #22c55e;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #22c55e;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        section h2:before {
+            content: "☑";
+            font-size: 1.5rem;
+            color: #22c55e;
+        }
+
+        .phase-definition {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #0284c7;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .phase-definition h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+        }
+
+        .phase-definition p {
+            font-size: 1rem;
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .phase-definition p strong {
+            color: #0284c7;
+            font-weight: 700;
+        }
+
+        .icon-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem 0;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .icon-item {
+            text-align: center;
+        }
+
+        .icon-item-symbol {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-item-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .functional-summary {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .functional-summary h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+        }
+
+        .functional-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .functional-summary li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #475569;
+        }
+
+        .functional-summary li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .micro-roadmap {
+            background: #fef3c7;
+            border-left: 4px solid #f97316;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .micro-roadmap h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .micro-roadmap ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .micro-roadmap li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #78350f;
+            font-weight: 500;
+        }
+
+        .micro-roadmap li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f97316;
+            font-weight: 700;
+        }
+
+        .checklist-group {
+            margin-bottom: 2rem;
+        }
+
+        .checklist-group h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+        }
+
+        .checklist-group ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist-group li {
+            padding: 0.75rem 0 0.75rem 1.75rem;
+            position: relative;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .checklist-group li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .boundary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #f8fafc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .boundary-table th {
+            background: #0f172a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .boundary-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .boundary-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .boundary-table tr:nth-child(even) td {
+            background: white;
+        }
+
+        .boundary-table .label {
+            font-weight: 700;
+            color: #0f172a;
+            width: 25%;
+        }
+
+        .boundary-table .content {
+            color: #475569;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2:before {
+            display: none;
+        }
+
+        .cta-section p {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #16a34a;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-statement {
+            max-width: 600px;
+            margin: 1.5rem auto;
+            font-size: 0.85rem;
+            color: #f97316;
+            line-height: 1.6;
+            border-top: 1px solid #334155;
+            padding-top: 1rem;
+        }
+
+        .footer-statement p {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        .roadmap-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid #f97316;
+        }
+
+        .roadmap-section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .roadmap-section h2:before {
+            content: "🗺️";
+            font-size: 1.5rem;
+        }
+
+        .roadmap-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .roadmap-visual:before {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 16.67%;
+            right: 16.67%;
+            height: 2px;
+            background: linear-gradient(90deg, #f97316 0%, #f97316 50%, transparent 50%, transparent 100%);
+            z-index: 0;
+        }
+
+        .phase-node {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .phase-node-circle {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .phase-node-circle.phase-1 {
+            background: #22c55e;
+            border: 3px solid #16a34a;
+        }
+
+        .phase-node-circle.phase-2 {
+            background: #f97316;
+            border: 3px solid #ea580c;
+        }
+
+        .phase-node-circle.phase-3 {
+            background: #0284c7;
+            border: 3px solid #0369a1;
+        }
+
+        .phase-node-label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-node-status {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .phase-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-top: 4px solid #22c55e;
+        }
+
+        .phase-card.phase-2 {
+            border-top-color: #f97316;
+        }
+
+        .phase-card.phase-3 {
+            border-top-color: #0284c7;
+        }
+
+        .phase-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .phase-card li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .phase-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .phase-card.phase-2 li:before {
+            color: #f97316;
+        }
+
+        .phase-card.phase-3 li:before {
+            color: #0284c7;
+        }
+
+        @media (max-width: 768px) {
+            .regulatory-proof-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .regulatory-snapshot {
+                position: static;
+                margin: 1rem 0;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .proof-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .regulatory-snapshot ul {
+                grid-template-columns: 1fr;
+            }
+
+            .icon-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roadmap-visual {
+                grid-template-columns: 1fr;
+            }
+
+            .roadmap-visual:before {
+                display: none;
+            }
+
+            .phase-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>PatientCentricCare.AI</h1>
+            <a href="/">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Regulatory Proof Header -->
+    <section class="regulatory-proof-header">
+        <h2>A Non-Clinical AI System With Enforced Human Accountability</h2>
+        <p>Phase 1 deployment operates outside SaMD scope via consent-gated, human-executed escalation and immutable audit logging.</p>
+        <div class="proof-bar">
+            <div class="proof-item">
+                <div class="proof-item-label">Scope</div>
+                <div class="proof-item-value">Non-Clinical / Non-SaMD</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-item-label">Control</div>
+                <div class="proof-item-value">Human-in-the-Loop, Deterministic</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-item-label">Evidence</div>
+                <div class="proof-item-value">Immutable Logs, Consent Records</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Snapshot (Sticky) -->
+    <div class="regulatory-snapshot">
+        <h3>Regulatory Snapshot (30-Second Review)</h3>
+        <ul>
+            <li>No diagnostic, prognostic, or treatment functions</li>
+            <li>No autonomous clinical decisions</li>
+            <li>All escalation requires explicit user consent</li>
+            <li>All actions executed by humans</li>
+            <li>All interactions logged and auditable</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Phase 1 Definition Section -->
+        <div class="phase-definition">
+            <h3>Phase 1 - Non-Clinical Companion (Cloud Desktop Agent)</h3>
+            <p><strong>One-Sentence Definition:</strong> Phase 1 is a cloud-based desktop Companion Agent for seniors that provides social engagement, reminders, and user-initiated caregiver escalation - with zero clinical interpretation or health assessment.</p>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="/home-companion-device.png" alt="Home Companion Device - Tabletop Companion Agent for Seniors" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            </div>
+            
+            <div class="icon-row">
+                <div class="icon-item">
+                    <div class="icon-item-symbol">☁️</div>
+                    <div class="icon-item-label">Cloud Companion</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">💬</div>
+                    <div class="icon-item-label">Social & Reminders</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">🤝</div>
+                    <div class="icon-item-label">Human Escalation</div>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-item-symbol">✓</div>
+                    <div class="icon-item-label">Non-Medical</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Phase 1 Actually Does -->
+        <section>
+            <h2>What Phase 1 Actually Does</h2>
+            
+            <div class="functional-summary">
+                <h4>Phase 1 Companion Capabilities</h4>
+                <ul>
+                    <li>Engages seniors in two-way conversation (non-clinical)</li>
+                    <li>Provides reminders (e.g., schedule, events)</li>
+                    <li>Logs user engagement and consent state</li>
+                    <li>Escalates only on explicit user request to a human caregiver</li>
+                </ul>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #475569; margin: 1.5rem 0;"><strong>Critical Boundary:</strong> This phase makes no health or diagnostic claims and does not infer condition or status.</p>
+
+            <div class="micro-roadmap">
+                <h4>Next Phases (High-Level)</h4>
+                <ul>
+                    <li><strong>Phase 2:</strong> Clinician-supervised analytical support (requires regulatory clearance)</li>
+                    <li><strong>Phase 3:</strong> Regulated clinical AI modules (SaMD/multi-jurisdiction)</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: #78350f; margin-top: 1rem; font-style: italic;">No detail here - just orientation. This tells readers Phase 1 is not the whole story, reducing bounce.</p>
+            </div>
+        </section>
+
+        <!-- Intended Use Declaration -->
+        <section>
+            <h2>Intended Use Declaration</h2>
+            <div class="checklist-group">
+                <h3>Declared Non-Clinical Intended Use</h3>
+                <ul>
+                    <li>Phase 1 is designed exclusively for non-clinical social support and engagement</li>
+                    <li>No medical purpose is claimed, implied, or enabled</li>
+                    <li>No health status, disease state, or cognitive condition is assessed or inferred</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Regulatory Posture</h3>
+                <ul>
+                    <li><strong>✔ Outside SaMD / MDR / FDA medical device classification</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Explicit Functional Boundaries -->
+        <section>
+            <h2>Explicit Functional Boundaries</h2>
+            <div class="checklist-group">
+                <h3>Capabilities Allowed in Phase 1</h3>
+                <ul>
+                    <li>Conversational companionship</li>
+                    <li>Social engagement and emotional presence</li>
+                    <li>Reminders (non-medical)</li>
+                    <li>Check-ins without interpretation or assessment</li>
+                    <li>User-initiated requests for human contact</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Capabilities Explicitly Prohibited</h3>
+                <ul>
+                    <li>Diagnosis or differential diagnosis</li>
+                    <li>Clinical assessment or triage</li>
+                    <li>Risk scoring or health inference</li>
+                    <li>Cognitive or disease detection</li>
+                    <li>Treatment recommendation</li>
+                    <li>Autonomous escalation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Decision Authority & Control -->
+        <section>
+            <h2>Decision Authority & Control</h2>
+            <div class="checklist-group">
+                <h3>No Autonomous Decision-Making</h3>
+                <ul>
+                    <li>AI does not decide, recommend, or prioritize clinical action</li>
+                    <li>AI does not determine urgency or severity</li>
+                    <li>AI does not act without explicit user instruction</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Human Authority is Architecturally Enforced</h3>
+                <ul>
+                    <li>All real-world actions are executed by humans</li>
+                    <li>AI cannot bypass caregivers, clinicians, or consent gates</li>
+                    <li>Responsibility remains fully with human actors</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Escalation & Consent Model -->
+        <section>
+            <h2>Escalation & Consent Model</h2>
+            <div class="checklist-group">
+                <h3>Escalation is User-Initiated Only</h3>
+                <ul>
+                    <li>No system-initiated escalation</li>
+                    <li>No inferred distress triggers</li>
+                    <li>No background monitoring or alerting</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Consent is Explicit and Transactional</h3>
+                <ul>
+                    <li>Each escalation requires affirmative user confirmation</li>
+                    <li>Consent is captured per action, not assumed</li>
+                    <li>Consent state is logged immutably</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Escalation Pathways</h3>
+                <ul>
+                    <li>User → AI → Human caregiver / doctor's office</li>
+                    <li>AI does not interpret, filter, or prioritize escalation content</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Data Classification & Use -->
+        <section>
+            <h2>Data Classification & Use</h2>
+            <div class="checklist-group">
+                <h3>Data is Strictly Non-Clinical</h3>
+                <ul>
+                    <li>No biometric data</li>
+                    <li>No physiological data</li>
+                    <li>No diagnostic or assessment data</li>
+                    <li>No clinical annotations</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Permitted Data Use</h3>
+                <ul>
+                    <li>Interaction metadata</li>
+                    <li>Engagement timestamps</li>
+                    <li>Consent records</li>
+                    <li>Behavioral persistence indicators (non-clinical)</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Explicit Exclusions</h3>
+                <ul>
+                    <li>No health outcome measurement</li>
+                    <li>No cognitive scoring</li>
+                    <li>No disease progression tracking</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Auditability & Evidence -->
+        <section>
+            <h2>Auditability & Evidence</h2>
+            <div class="checklist-group">
+                <h3>Immutable Audit Logging</h3>
+                <ul>
+                    <li>All interactions logged</li>
+                    <li>All consent events recorded</li>
+                    <li>All escalations timestamped</li>
+                    <li>Logs are tamper-resistant</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Audit Readiness</h3>
+                <ul>
+                    <li>Logs available for regulatory, sponsor, or compliance review</li>
+                    <li>Human actions traceable to individuals</li>
+                    <li>System behavior reproducible and inspectable</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Safety Architecture -->
+        <section>
+            <h2>Safety Architecture (Safety OS)</h2>
+            <div class="checklist-group">
+                <h3>Deterministic System Behavior</h3>
+                <ul>
+                    <li>Rule-defined routing only</li>
+                    <li>No probabilistic clinical output</li>
+                    <li>No hidden decision layers</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Hard Constraints Enforced</h3>
+                <ul>
+                    <li>Clinical intent requests are refused, not redirected</li>
+                    <li>Boundary violations are blocked at system level</li>
+                    <li>No model override of governance rules</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Regulatory Scope Confirmation -->
+        <section>
+            <h2>Regulatory Scope Confirmation</h2>
+            <div class="checklist-group">
+                <h3>Phase 1 Classification</h3>
+                <ul>
+                    <li>Non-medical</li>
+                    <li>Non-clinical</li>
+                    <li>Non-SaMD</li>
+                    <li>Not subject to MDR, FDA SaMD, or clinical trial regulation</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Future Capability Separation</h3>
+                <ul>
+                    <li>Phase 1 cannot transition into Phase 2 or 3 functionality</li>
+                    <li>Capability expansion requires:</li>
+                    <li style="margin-left: 1rem;">New governance approval</li>
+                    <li style="margin-left: 1rem;">New regulatory pathway</li>
+                    <li style="margin-left: 1rem;">Physician-as-Pilot activation</li>
+                    <li style="margin-left: 1rem;">Jurisdiction-specific clearance</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Accountability Statement -->
+        <section>
+            <h2>Accountability Statement</h2>
+            <div class="checklist-group">
+                <h3>Accountability Model</h3>
+                <ul>
+                    <li>Humans remain accountable at all times</li>
+                    <li>AI acts solely as a constrained interface</li>
+                    <li>Responsibility cannot be delegated to software</li>
+                </ul>
+            </div>
+            <div class="checklist-group">
+                <h3>Governance Enforcement</h3>
+                <ul>
+                    <li>Physician-as-Pilot defines accountability</li>
+                    <li>Safety OS enforces it technically</li>
+                    <li>No reliance on trust, intent, or policy alone</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Deployment Summary -->
+        <section>
+            <h2>Deployment Summary</h2>
+            <p style="font-size: 1.1rem; font-weight: 700; color: #166534; margin-top: 1rem;">Phase 1 is a non-clinical, consent-gated, human-executed AI companion system with immutable auditability, designed to operate entirely outside medical device regulation.</p>
+        </section>
+
+        <!-- Regulator Actions -->
+        <section>
+            <h2>Regulator Actions</h2>
+            <div class="checklist-group">
+                <h3>Ready for Deployment</h3>
+                <ul>
+                    <li><strong>✔ Ready for review without NDA</strong></li>
+                    <li><strong>✔ Suitable for PSPs and adherence operations</strong></li>
+                    <li><strong>✔ Deployable with zero clinical regulatory exposure</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Governance Pathway Roadmap Section -->
+        <div class="roadmap-section">
+            <h2>Governance Pathway - Three Phases of Accountability and Control</h2>
+            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 2rem;">Phase 1 is the foundation. Phases 2 and 3 represent future regulatory pathways, each requiring separate governance approval, clinical validation, and jurisdiction-specific clearance.</p>
+            
+            <!-- 3-Phase Roadmap Visual -->
+            <div class="roadmap-visual">
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-1">1</div>
+                    <div class="phase-node-label">Phase 1</div>
+                    <div class="phase-node-status">Current - Non-Clinical</div>
+                </div>
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-2">2</div>
+                    <div class="phase-node-label">Phase 2</div>
+                    <div class="phase-node-status">Future - Analytical Support</div>
+                </div>
+                <div class="phase-node">
+                    <div class="phase-node-circle phase-3">3</div>
+                    <div class="phase-node-label">Phase 3</div>
+                    <div class="phase-node-status">Future - Clinical AI</div>
+                </div>
+            </div>
+
+            <!-- Phase Detail Cards -->
+            <div class="phase-cards">
+                <!-- Phase 1 Card -->
+                <div class="phase-card">
+                    <h3>Phase 1: Non-Clinical Companion</h3>
+                    <p><strong>Scope:</strong> Social engagement, reminders, user-initiated escalation.</p>
+                    <p><strong>Regulatory Status:</strong> Outside SaMD / MDR scope.</p>
+                    <ul>
+                        <li>No clinical interpretation</li>
+                        <li>No health assessment</li>
+                        <li>Human-in-the-loop escalation</li>
+                        <li>Immutable audit logging</li>
+                        <li>Deployable immediately</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 Card -->
+                <div class="phase-card phase-2">
+                    <h3>Phase 2: Clinician-Supervised Analytics</h3>
+                    <p><strong>Scope:</strong> Analytical support under physician supervision.</p>
+                    <p><strong>Regulatory Status:</strong> Requires jurisdictional clearance.</p>
+                    <ul>
+                        <li>Clinician-reviewed insights</li>
+                        <li>Physician-as-Pilot governance</li>
+                        <li>Behavioral analytics (non-diagnostic)</li>
+                        <li>Enhanced audit trails</li>
+                        <li>Jurisdiction-specific approval required</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 Card -->
+                <div class="phase-card phase-3">
+                    <h3>Phase 3: Regulated Clinical AI</h3>
+                    <p><strong>Scope:</strong> Full clinical decision support with SaMD compliance.</p>
+                    <p><strong>Regulatory Status:</strong> Full regulatory pathway (SaMD / MDR).</p>
+                    <ul>
+                        <li>Clinical validation studies</li>
+                        <li>Multi-jurisdiction compliance</li>
+                        <li>Risk management framework</li>
+                        <li>Post-market surveillance</li>
+                        <li>Physician-led clinical deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Next Step: Download the Phase 1 Protocol</h2>
+            <p>Full boundary specification including system diagrams, consent flow, escalation rules, and audit schema.</p>
+            <a href="/phase-1-protocol.pdf" target="_blank" class="cta-button">Download Phase 1 Non-Medical Safety Protocol →</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>🛡️ Designed for data sovereignty and controlled clinical escalation.</p>
+        
+        <div class="footer-statement">
+            <p><strong>Privacy & Sovereignty Statement:</strong> Phase 1 data is strictly non-clinical and suitable for Patient Support Programs (PSPs) and adherence operations only. All engagement evidence is logged to support behavioral persistence without making health, cognitive, or disease claims, ensuring deployment remains outside SaMD scope.</p>
+            <p class="footer-copyright">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+            <p class="footer-copyright">"Physician-as-Pilot™" and "Safety OS™" are proprietary governance frameworks of PatientCentricCare.AI.</p>
+        </div>
+    </footer>
+</body>
+</html>

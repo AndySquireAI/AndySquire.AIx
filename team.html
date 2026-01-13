@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team: Andy Squire, Founder & CEO | PatientCentricCare.AI</title>
+    <meta name="description" content="Meet Andy Squire: 4 domains of expertise meet healthcare's biggest challenge. 2× cancer survivor building patient-centric AI solutions informed by Harvard Medical School Executive Education.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.andysquire.ai/team.html">
+    <meta property="og:title" content="Team: Andy Squire, Founder & CEO | PatientCentricCare.AI">
+    <meta property="og:description" content="4 domains of expertise meet healthcare's biggest challenge. 2× cancer survivor building patient-centric AI.">
+    <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.andysquire.ai/team.html">
+    <meta property="twitter:title" content="Team: Andy Squire, Founder & CEO | PatientCentricCare.AI">
+    <meta property="twitter:description" content="4 domains of expertise meet healthcare's biggest challenge. 2× cancer survivor building patient-centric AI.">
+    <meta property="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png">
+
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .content {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .content-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid #0d9488;
+            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .content-card h2 {
+            color: #0f172a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .founder-bio {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+        
+        .founder-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .founder-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            background: white;
+            padding: 0;
+        }
+        
+        .founder-name {
+            flex: 1;
+        }
+        
+        .founder-name h3 {
+            color: #2C3E50;
+            font-size: 2rem;
+            margin: 0;
+        }
+        
+        .founder-name p {
+            color: #5D6D7E;
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0 0;
+        }
+        
+        .founder-bio p {
+            color: #5D6D7E;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .expertise-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .expertise-card h4 {
+            color: #2C3E50;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .expertise-card ul {
+            color: #5D6D7E;
+            line-height: 1.8;
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .expertise-card li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .patient-advocate {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .patient-advocate p {
+            color: #2C3E50;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 100%);
+            border-radius: 15px;
+            border: 2px solid #E67E22;
+        }
+        
+        .cta-section h3 {
+            color: #E67E22;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info a {
+            color: #E67E22;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+        
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                max-height: 500px;
+            }
+            
+            .nav-links li {
+                padding: 0.8rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+            
+            nav {
+                position: relative;
+            }
+            
+            .nav-container {
+                flex-wrap: nowrap;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .founder-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
+    
+    <!-- Structured Data: Person (Founder) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Andy Squire",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI"
+      },
+      "url": "https://www.andysquire.ai/team.html",
+      "image": "https://www.andysquire.ai/andy-founder-photo.jpg",
+      "sameAs": [
+        "https://linkedin.com/in/andy-squire"
+      ],
+      "email": "andy@patientcentriccare.ai",
+      "description": "Healthcare entrepreneur combining patient perspective with deep technical CX expertise. 2× cancer survivor building compliant humanoid companions."
+    }
+    </script>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">PatientCentricCare.AI</a>            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/investors/">Investor Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>The Team</h1>
+        <p>4 Domains of Expertise Meet Healthcare's Biggest Challenge</p>
+    </section>
+
+    <div class="content">
+        <div class="content-card">
+            <h2>The Founder</h2>
+            
+            <div class="founder-bio">
+                <div class="founder-header">
+                    <img src="andy-founder-photo.jpg" alt="Andy Squire, Founder & CEO" class="founder-logo">
+                    <div class="founder-name">
+                        <h3>Andy Squire</h3>
+                        <p>Founder & CEO, PatientCentricCare.AI</p>
+                    </div>
+                </div>
+                
+                <p>
+                    Andy combines an <strong>independent patient's perspective</strong> with <strong>deep technical CX healthcare expertise</strong> to build <strong>compliant, compassionate</strong> humanoid companions.
+                </p>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <h4>🏥 AI Healthcare IT</h4>
+                        <ul>
+                            <li>AI Workflow Optimization, AI educated Oxford / INSEAD / Cambridge</li>
+                            <li>EHR Integration & Interoperability</li>
+                            <li>Patient Data Standards (FHIR)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h4>💊 Pharma AI Business Strategy</h4>
+                        <ul>
+                            <li>Insights & CX Design Excellence</li>
+                            <li>End-to-end Patient & HCP Journeys</li>
+                            <li>Understands Patient Painpoints</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h4>📋 Regulatory Compliance</h4>
+                        <ul>
+                            <li>SaMD Risk Management</li>
+                            <li>FDA SaMD & CE Mark Pathways</li>
+                            <li>ISO 13485 & IEC 62304</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="patient-advocate">
+                    <p>
+                        🎗️ <strong>Independent Patient Advocate:</strong> As a 2x cancer survivor, Andy can be trusted to put Patients over Profit.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3>Ready to Join the Mission?</h3>
+            <p>We're building the regulatory bridge that will power the future of safe, compliant, human-centric healthcare.</p>
+            <div class="contact-info">
+                <strong>Andy Squire</strong>, Founder & CEO<br>
+                <a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a> | 
+                <a href="https://linkedin.com/in/andy-squire" target="_blank">LinkedIn</a>
+            </div>
+            <a href="investors/InvestorDeck3.2_USAdvantage.pdf" class="cta-button">Download Investor Deck</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
+        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
+        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p style="margin-bottom: 1.5rem;"><a href="/impressum.html" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
