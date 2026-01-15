@@ -884,8 +884,19 @@
 
     <!-- Regulatory Proof Header -->
     <section class="regulatory-proof-header">
-        <h2>A Non-Clinical AI System With Enforced Human Accountability</h2>
-        <p>Phase 1 deployment operates outside SaMD scope via consent-gated, human-executed escalation and immutable audit logging.</p>
+        <h1>Physician-as-Pilot (Phase I): Governance-First Non-Clinical Home Companion</h1>
+        <p>Safety OS = flight recorder + control plane: consent, authority, escalation, auditability (always on).</p>
+        <div class="proof-bar">
+            <div class="proof-item">
+                <div class="proof-item-value">Bounded autonomy, human authority</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-item-value">Deterministic halt/escalation rules</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-item-value">Immutable audit log for post-incident reconstruction</div>
+            </div>
+        </div>
         <div class="proof-bar">
             <div class="proof-item">
                 <div class="proof-item-label">Scope</div>
@@ -1096,95 +1107,26 @@
             </div>
         </details>
 
-        <!-- Intended Use Declaration -->
-        <section>
-            <h2>Intended Use Declaration</h2>
-            <div class="checklist-group">
-                <h3>Declared Non-Clinical Intended Use</h3>
-                <ul>
-                    <li>Phase 1 is designed exclusively for non-clinical social support and engagement</li>
-                    <li>No medical purpose is claimed, implied, or enabled</li>
-                    <li>No health status, disease state, or cognitive condition is assessed or inferred</li>
-                </ul>
-                <p style="font-size: 0.95rem; color: #334155; margin-top: 1rem; font-weight: 500;">This system enforces governance constraints at the software architecture level - no clinical interpretation, risk inference, or diagnostic inference is permitted by design.</p>
-            </div>
-            <div class="checklist-group">
-                <h3>Regulatory Posture</h3>
-                <ul>
-                    <li><strong>✔ Outside SaMD / MDR / FDA medical device classification</strong></li>
-                </ul>
-                <p style="font-size: 0.9rem; color: #475569; margin-top: 1rem;">The framework is compatible with predetermined change control plans, enforcing that any governance or boundary updates must be explicitly authorized and documented prior to deployment.</p>
-            </div>
-        </section>
 
-        <!-- Regulatory Microcopy -->
-        <div class="regulatory-microcopy">
-            For regulators, reviewers, and system designers, detailed boundaries and enforcement mechanisms are documented below.
-        </div>
 
-        <!-- Explicit Functional Boundaries -->
-        <details class="collapsible-section">
-            <summary>Explicit Functional Boundaries</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Capabilities Allowed in Phase 1</h3>
-                    <ul>
-                        <li>Conversational companionship</li>
-                        <li>Social engagement and emotional presence</li>
-                        <li>Reminders (non-medical)</li>
-                        <li>Check-ins without interpretation or assessment</li>
-                        <li>User-initiated requests for human contact</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Prohibited Functionality (Architecturally Prevented)</h3>
-                    <ul>
-                        <li>Diagnosis or differential diagnosis</li>
-                        <li>Clinical assessment or triage</li>
-                        <li>Risk scoring or health inference</li>
-                        <li>Cognitive or disease detection</li>
-                        <li>Treatment recommendation</li>
-                        <li>Autonomous escalation</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
 
-        <!-- Decision Authority & Control -->
-        <details class="collapsible-section">
-            <summary>Decision Authority & Control</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>No Autonomous Decision-Making</h3>
-                    <ul>
-                        <li>AI does not decide, recommend, or prioritize clinical action</li>
-                        <li>AI does not determine urgency or severity</li>
-                        <li>AI does not act without explicit user instruction</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Human-Executed Authority (Architecturally Enforced)</h3>
-                    <ul>
-                        <li>All real-world actions are executed by humans</li>
-                        <li>AI cannot bypass caregivers, clinicians, or consent gates</li>
-                        <li>Responsibility remains fully with human actors</li>
-                        <li>No autonomous execution pathways exist in the system architecture</li>
-                    </ul>
-                </div>
-                <p style="font-size: 0.85rem; color: #64748b; margin-top: 1rem; font-style: italic;">This prevents silent scope creep from observational support into unregulated clinical action.</p>
-            </div>
-        </details>
+
+
+
+
 
         <!-- Escalation & Consent Model -->
         <details class="collapsible-section">
             <summary>Escalation & Consent Model</summary>
             <div class="collapsible-content">
                 <div class="checklist-group">
-                    <h3>Escalation is User-Initiated Only</h3>
+                    <h3>Allowed (Phase I)</h3>
                     <ul>
-                        <li>No system-initiated escalation</li>
-                        <li>No inferred distress triggers</li>
-                        <li>No background monitoring or alerting</li>
+                        <li>The system may detect “authority ambiguity” or “user distress language” solely to trigger an internal halt + suggestion workflow (e.g., “Would you like to contact a caregiver?”), but it cannot initiate any external outreach without explicit user authorization.</li>
+                    </ul>
+                    <h3>Prohibited (Phase I)</h3>
+                    <ul>
+                        <li>No automatic alerting, triage, prioritization, routing, or contacting clinicians/caregivers.</li>
                     </ul>
                 </div>
                 <div class="checklist-group">
@@ -1205,38 +1147,7 @@
             </div>
         </details>
 
-        <!-- Data Classification & Use -->
-        <details class="collapsible-section">
-            <summary>Data Classification & Use</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Data is Strictly Non-Clinical</h3>
-                    <ul>
-                        <li>No biometric data</li>
-                        <li>No physiological data</li>
-                        <li>No diagnostic or assessment data</li>
-                        <li>No clinical annotations</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Permitted Data Use</h3>
-                    <ul>
-                        <li>Interaction metadata</li>
-                        <li>Engagement timestamps</li>
-                        <li>Consent records</li>
-                        <li>Behavioral persistence indicators (non-clinical)</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Explicit Exclusions</h3>
-                    <ul>
-                        <li>No health outcome measurement</li>
-                        <li>No cognitive scoring</li>
-                        <li>No disease progression tracking</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
+
 
         <!-- Auditability & Evidence -->
         <details class="collapsible-section">
@@ -1263,8 +1174,43 @@
         </details>
 
         <!-- Safety Architecture -->
-        <details class="collapsible-section">
+        <details class="collapsible-section" open>
             <summary>Safety Architecture (Safety OS)</summary>
+            <div class="collapsible-content">
+                <table class="boundary-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Safety OS Control Surfaces (Phase I)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label">Consent state</td>
+                            <td class="content">versioned; scope/duration/revocation</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Authority holder</td>
+                            <td class="content">user/caregiver only</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Permitted actions</td>
+                            <td class="content">conversation, reminders, user-requested contact drafting</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Hard refusals</td>
+                            <td class="content">diagnosis/triage/treatment/medication guidance</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Escalation mode</td>
+                            <td class="content">suggestion only; external action requires explicit “yes”</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Audit artifacts</td>
+                            <td class="content">event log + audit summary + redacted export</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="collapsible-content">
                 <div class="checklist-group">
                     <h3>Deterministic System Behavior</h3>
@@ -1285,75 +1231,30 @@
             </div>
         </details>
 
-        <!-- Regulatory Scope Confirmation -->
-        <details class="collapsible-section">
-            <summary>Regulatory Scope Confirmation</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Phase 1 Classification</h3>
-                    <ul>
-                        <li>Non-medical</li>
-                        <li>Non-clinical</li>
-                        <li>Non-SaMD</li>
-                        <li>Not subject to MDR, FDA SaMD, or clinical trial regulation</li>
-                    </ul>
-                    <p style="font-size: 0.9rem; color: #334155; margin-top: 1rem; font-weight: 500;">Phase 1 does not meet the definition of Software as a Medical Device (SaMD) under FDA, EU MDR, or IMDRF guidance. No clinical claims, diagnostic outputs, or treatment recommendations are made or enabled.</p>
-                </div>
-                <div class="checklist-group">
-                    <h3>Future Capability Separation</h3>
-                    <ul>
-                        <li>Phase 1 cannot transition into Phase 2 or 3 functionality</li>
-                        <li>Capability expansion requires:</li>
-                        <li style="margin-left: 1rem;">New governance approval</li>
-                        <li style="margin-left: 1rem;">New regulatory pathway</li>
-                        <li style="margin-left: 1rem;">Physician-as-Pilot activation</li>
-                        <li style="margin-left: 1rem;">Jurisdiction-specific clearance</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
-
-        <!-- Accountability Statement -->
-        <details class="collapsible-section">
-            <summary>Accountability Statement</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Accountability Model</h3>
-                    <ul>
-                        <li>Humans remain accountable at all times</li>
-                        <li>AI acts solely as a constrained interface</li>
-                        <li>Responsibility cannot be delegated to software</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Governance Enforcement</h3>
-                    <ul>
-                        <li>Physician-as-Pilot defines accountability</li>
-                        <li>Safety OS enforces it technically</li>
-                        <li>No reliance on trust, intent, or policy alone</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
-
-        <!-- Deployment Summary -->
+        <!-- Module 4 Implementation Reality -->
         <section>
-            <h2>Deployment Summary</h2>
-            <p style="font-size: 1.1rem; font-weight: 700; color: #166534; margin-top: 1rem;">Phase 1 is a non-clinical, consent-gated, human-executed AI companion system with immutable auditability, designed to operate entirely outside medical device regulation.</p>
-        </section>
-
-        <!-- Regulator Actions -->
-        <section>
-            <h2>Regulator Actions</h2>
-            <div class="checklist-group">
-                <h3>Ready for Deployment</h3>
+            <h2>Why Governance Must Precede Model Performance</h2>
+            <div class="functional-summary">
                 <ul>
-                    <li><strong>✔ Ready for review without NDA</strong></li>
-                    <li><strong>✔ Suitable for PSPs and adherence operations</strong></li>
-                    <li><strong>✔ Deployable with zero clinical regulatory exposure</strong></li>
+                    <li><strong>Transparency:</strong> what data the system uses and what it never uses in Phase I</li>
+                    <li><strong>Reproducibility:</strong> consistent behavior through fixed rules + exportable audit logs</li>
+                    <li><strong>Generalizability:</strong> governance controls are hardware/model-agnostic; they don’t “break” under dataset shift</li>
+                    <li><strong>Calibration/thresholds:</strong> Phase II introduces physician-defined thresholds (care envelope) rather than arbitrary defaults</li>
                 </ul>
             </div>
         </section>
+
+
+
+        <!-- Phase I -> II Boundary Rule -->
+        <div class="phase-definition" style="border-color: #f97316;">
+            <h3 style="color: #c2410c;">Phase I → Phase II Boundary Rule (Canonical)</h3>
+            <p style="color: #7c2d12;">Phase I ends and Phase II governance is required the moment the system is expected to initiate or prioritize care actions (alerts, structured safety questioning, clinical routing, or protocol-driven escalation) without case-by-case user instruction—because that requires a clinician-signed care envelope.</p>
+        </div>
+
+
+
+
 
         <!-- Governance Pathway Roadmap Section -->
         <div class="roadmap-section">
@@ -1430,19 +1331,20 @@
             </div>
         </div>
 
-        <!-- Soft Exit CTA -->
-        <div style="text-align: center; padding: 2rem; margin: 2rem 0; background-color: #f0f9ff; border-radius: 4px; border: 1px solid #e2e8f0;">
-            <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1rem;">The full governance rationale, IP context, and regulatory positioning are documented in the whitepaper.</p>
-            <a href="/physician-as-pilot-whitepaper.pdf" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #0284c7; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9rem;">View Whitepaper →</a>
-            <p style="font-size: 0.8rem; color: #64748b; margin-top: 1rem;">Physician-as-Pilot: A Governance Framework for AI-Mediated Home Care</p>
+        <!-- Evidence Package Section -->
+        <div class="cta-section">
+            <h2>Evidence Package (Reviewer/Regulator Ready)</h2>
+            <p>These artifacts demonstrate reconstructability and boundary enforcement prior to clinical claims.</p>
+            <div class="proof-bar" style="margin-top: 2rem;">
+                <a href="/governance-roadmap.png" target="_blank" class="cta-button">One-page governance pathway figure (Phase I–III)</a>
+                <a href="/phase-1-protocol.pdf" target="_blank" class="cta-button">Phase I protocol (boundary spec)</a>
+                <a href="/safety-os-audit-sample.pdf" target="_blank" class="cta-button">Redacted sample audit log + audit summary (1 session)</a>
+            </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h2>Next Step: Download the Phase 1 Protocol</h2>
-            <p>Full boundary specification including system diagrams, consent flow, escalation rules, and audit schema.</p>
-            <a href="/phase-1-protocol.pdf" target="_blank" class="cta-button">Download Phase 1 Non-Medical Safety Protocol →</a>
-        </div>
+
+
+
     </main>
 
     <!-- Footer -->
