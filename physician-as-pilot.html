@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase 1 Regulatory Checklist | Non-Clinical AI Deployment | PatientCentricCare.AI</title>
+    <title>Physician-as-Pilot: A Regulatory Position Paper</title>
     <meta name="description" content="Phase 1 Regulatory Checklist: Verify that Physician-as-Pilot Phase 1 operates entirely outside clinical, diagnostic, and SaMD regulatory scope with enforceable technical and governance controls.">
     <meta name="keywords" content="Phase 1, regulatory checklist, non-clinical AI, SaMD scope, governance framework, AI accountability, human-in-the-loop, audit logging">
     <meta name="author" content="Andy Squire, PatientCentricCare.AI">
@@ -883,229 +883,51 @@
     </header>
 
     <!-- Regulatory Proof Header -->
-    <section class="regulatory-proof-header">
-        <h1>Physician-as-Pilot (Phase I): Governance-First Non-Clinical Home Companion</h1>
-        <p>Safety OS = flight recorder + control plane: consent, authority, escalation, auditability (always on).</p>
-        <div class="proof-bar">
-            <div class="proof-item">
-                <div class="proof-item-value">Bounded autonomy, human authority</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-item-value">Deterministic halt/escalation rules</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-item-value">Immutable audit log for post-incident reconstruction</div>
-            </div>
-        </div>
-        <div class="proof-bar">
-            <div class="proof-item">
-                <div class="proof-item-label">Scope</div>
-                <div class="proof-item-value">Non-Clinical / Non-SaMD</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-item-label">Control</div>
-                <div class="proof-item-value">Human-Executed Authority, Deterministic</div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-item-label">Evidence</div>
-                <div class="proof-item-value">Immutable Logs, Consent Records</div>
-            </div>
-        </div>
-    </section>
+        <main>
+        <h1>Physician-as-Pilot: A Regulatory Position Paper</h1>
+        <section class="phase-definition">
+            <h3>Intended Audience</h3>
+            <p>This document is written for:<br>
+            - U.S. FDA reviewers and Software as a Medical Device (SaMD) experts<br>
+            - European Union MDR and UK MHRA regulatory authorities<br>
+            - Clinical AI governance scholars and academic evaluators, including Harvard Medical School capstone tutors and faculty engaged in clinical AI oversight and safety</p>
+            <h3>Purpose</h3>
+            <p>This paper proposes a clear regulatory boundary model for non-clinical AI systems in healthcare. The Physician-as-Pilot model is designed to preserve physician decisional authority, avoid unintended SaMD classification, and enable safe, auditable AI assistance without autonomous clinical action.</p>
+        </section>
 
-    <!-- Regulatory Snapshot (Sticky) -->
-    <div class="regulatory-snapshot">
-        <h3>Regulatory Snapshot (for reviewers)</h3>
-        <ul>
-            <li>No diagnostic, prognostic, or treatment functions</li>
-            <li>No autonomous clinical decisions</li>
-            <li>All escalation requires explicit user consent</li>
-            <li>All actions executed by humans</li>
-            <li>All interactions logged and auditable</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Regulatory Context and Problem Statement</h2>
+            <p>The proliferation of AI in healthcare creates regulatory ambiguity between cognitive assistance and clinical decision-making. This ambiguity can lead to human authority erosion and boundary creep into SaMD without appropriate regulatory oversight. This paper proposes a model to address these challenges by establishing clear, enforceable boundaries for non-clinical AI systems.</p>
+        </section>
 
-    <!-- Hero Value Proposition -->
-    <div class="hero-value-prop">
-        <p>Physician-as-Pilot is a governance framework for AI in care that keeps humans in command - preserving safety, authority, and accountability without autonomous clinical action.</p>
-        <p style="font-size: 0.9rem; color: #64748b; margin-top: 1rem; font-style: italic;">Suggested path: Start with the flow - scan the summary - explore Phase 1 boundaries if needed.</p>
-    </div>
-
-    <!-- Visual Flow Diagram -->
-    <div class="flow-diagram" style="text-align: center; margin: 2rem 0;">
-        <img src="/physician-as-pilot-diagram-v2.png" alt="Physician Governed Execution Flow" style="max-width: 100%; height: auto; max-height: 600px; border-radius: 8px;">
-        
-        <!-- Regulatory Boundary Microcopy -->
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; font-size: 0.85rem; color: #475569;">
-            <div style="text-align: center; max-width: 200px;">
-                <strong style="color: #0f172a;">User Request</strong>
-                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(only logs and explicit consent)</div>
-            </div>
-            <div style="text-align: center; max-width: 200px;">
-                <strong style="color: #0f172a;">Human Review & Authority</strong>
-                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(human makes decisions; AI cannot override)</div>
-            </div>
-            <div style="text-align: center; max-width: 200px;">
-                <strong style="color: #0f172a;">Human Action</strong>
-                <div style="font-size: 0.75rem; color: #64748b; margin-top: 0.25rem;">(execution only via user/clinician intent)</div>
-            </div>
-        </div>
-        
-        <div class="flow-diagram-microcopy" style="margin-top: 1.25rem; font-size: 0.9rem; color: #334155; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">AI may assist with context, but never initiates clinical action<br>and cannot override human authority or escalate automatically.</div>
-    </div>
-
-    <!-- Three-Card Summary -->
-    <div class="three-card-summary">
-        <div class="summary-card">
-            <h3>Permitted Activity (Phase 1)</h3>
+        <section>
+            <h2>Explicit Non-SaMD Boundary Conditions</h2>
+            <p>The Physician-as-Pilot model for non-clinical systems (Phase I) is explicitly constrained to preclude medical device functionality. The system is architecturally prohibited from performing the following functions:</p>
             <ul>
-                <li>Conversational engagement</li>
-                <li>Non-medical reminders</li>
-                <li>Caregiver-in-the-loop support</li>
-                <li>Auditable interaction logs</li>
+                <li>Diagnosis, prognosis, or treatment recommendation.</li>
+                <li>Clinical assessment, triage, or risk scoring.</li>
+                <li>Generation of clinical alerts or time-critical alarms.</li>
             </ul>
-        </div>
-        <div class="summary-card">
-            <h3>Prohibited Functionality (Phase 1)</h3>
-            <ul>
-                <li>Diagnosis or triage</li>
-                <li>Risk scoring or health inference</li>
-                <li>Treatment recommendations</li>
-                <li>Autonomous escalation</li>
-            </ul>
-        </div>
-        <div class="summary-card">
-            <h3>Human Authority & Control</h3>
-            <ul>
-                <li>Human decisions required for all actions</li>
-                <li>Consent enforced at every escalation</li>
-                <li>Consent state logged immutably</li>
-                <li>AI cannot initiate clinical action nor override boundaries</li>
-            </ul>
-        </div>
-    </div>
+            <p>All AI outputs are non-directive, and all clinical interpretation and action remain exclusively human-executed.</p>
+        </section>
+
+    
+
+    
+
+    
+
+    
 
     <!-- Main Content -->
     <main>
-        <!-- Scroll-Based Checkpoint -->
-        <div style="text-align: center; padding: 2rem; margin: 2rem 0; background-color: #f8fafc; border-left: 4px solid #22c55e; border-radius: 4px;">
-            <p style="font-size: 0.95rem; color: #334155; font-style: italic;"><strong>Checkpoint:</strong> You have understood the core safeguards and architectural constraints. The sections below document how these constraints are enforced.</p>
-        </div>
+        
 
-        <!-- Phase 1 Definition Section -->
-        <div class="phase-definition">
-            <h3>Phase 1 - Non-Clinical Companion (Cloud Desktop Agent)</h3>
-            <p><strong>One-Sentence Definition:</strong> Phase 1 is intentionally limited to build trust, safety, and human presence before any clinical ambition.</p>
-            <p>Phase 1 is a cloud-based desktop Companion Agent for seniors that provides social engagement, reminders, and user-initiated caregiver escalation - with zero clinical interpretation or health assessment.</p>
-            
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="/home-companion-device.png" alt="Home Companion Device - Tabletop Companion Agent for Seniors" style="max-width: 100%; height: auto; max-height: 400px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-            </div>
-            
-            <div class="icon-row">
-                <div class="icon-item">
-                    <div class="icon-item-symbol">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-                        </svg>
-                    </div>
-                    <div class="icon-item-label">Cloud Companion</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-item-symbol">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            <circle cx="9" cy="10" r="1" fill="#475569"/>
-                            <circle cx="12" cy="10" r="1" fill="#475569"/>
-                            <circle cx="15" cy="10" r="1" fill="#475569"/>
-                        </svg>
-                    </div>
-                    <div class="icon-item-label">Social & Reminders</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-item-symbol">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <div class="icon-item-label">Human Escalation</div>
-                </div>
-                <div class="icon-item">
-                    <div class="icon-item-symbol">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                            <path d="m9 12 2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <div class="icon-item-label">Non-Medical</div>
-                </div>
-            </div>
-        </div>
+        
 
-        <!-- What Phase 1 Actually Does -->
-        <section>
-            <h2>What Phase 1 Actually Does</h2>
-            
-            <div class="functional-summary">
-                <h4>Phase 1 Companion Capabilities</h4>
-                <ul>
-                    <li>Engages seniors in two-way conversation (non-clinical)</li>
-                    <li>Provides reminders (e.g., schedule, events)</li>
-                    <li>Logs user engagement and consent state</li>
-                    <li>Escalates only on explicit user request to a human caregiver</li>
-                </ul>
-            </div>
+        
 
-            <p style="font-size: 0.95rem; color: #475569; margin: 1.5rem 0;"><strong>Critical Boundary:</strong> This phase makes no health or diagnostic claims and does not infer condition or status.</p>
-
-            <div class="micro-roadmap">
-                <h4>Future Regulatory Pathways</h4>
-                <ul>
-                    <li><strong>Phase 2:</strong> Clinician-supervised analytical support (requires regulatory clearance)</li>
-                    <li><strong>Phase 3:</strong> Regulated clinical AI modules (SaMD/multi-jurisdiction)</li>
-                </ul>
-                <p style="font-size: 0.85rem; color: #78350f; margin-top: 1rem; font-style: italic;">No detail here - just orientation. This tells readers Phase 1 is not the whole story, reducing bounce.</p>
-            </div>
-        </section>
-
-        <!-- Regulatory Enforcement Architecture (NEW - Collapsed by Default) -->
-        <details class="collapsible-section">
-            <summary>Regulatory Enforcement Architecture</summary>
-            <div class="collapsible-content">
-                <p style="font-size: 0.95rem; color: #334155; margin-bottom: 1.5rem;">Phase 1 defines architectural controls that enforce governance constraints without reliance on intent alone.</p>
-                
-                <div class="checklist-group">
-                    <h3>Mode-Locked Behavior</h3>
-                    <ul>
-                        <li>System behavior is constrained by phase definitions. Any request that implies clinical interpretation or action must be refused or routed for explicit human authorization.</li>
-                    </ul>
-                </div>
-                
-                <div class="checklist-group">
-                    <h3>Escalation Triggers</h3>
-                    <ul>
-                        <li>No system-initiated alerts. Escalation occurs only on affirmative user/clinician instruction with explicit consent. Boundary condition violations are blocked at the system level.</li>
-                    </ul>
-                </div>
-                
-                <div class="checklist-group">
-                    <h3>Immutable Audit Trail</h3>
-                    <ul>
-                        <li>All interactions, consent events, and escalations are logged with timestamps and context. Logs support traceability for regulatory review, compliance analysis, or post-event attribution.</li>
-                    </ul>
-                </div>
-                
-                <div class="checklist-group">
-                    <h3>Deterministic Behavior</h3>
-                    <ul>
-                        <li>The system routes only by predefined rules. No probabilistic clinical output, hidden decision layers, or adaptive clinical parameters are permitted under Phase 1.</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
+        
 
 
 
@@ -1256,105 +1078,29 @@
 
 
 
-        <!-- Governance Pathway Roadmap Section -->
-        <div class="roadmap-section">
-            <h2>Governance Pathway - Three Phases of Accountability and Control</h2>
-            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 2rem;">Phase 1 is the foundation. Phases 2 and 3 represent future regulatory pathways, each requiring separate governance approval, clinical validation, and jurisdiction-specific clearance.</p>
-            
-            <!-- 3-Phase Roadmap Visual -->
-            <div class="roadmap-visual">
-                <div class="phase-node">
-                    <div class="phase-node-circle phase-1">1</div>
-                    <div class="phase-node-label">Phase 1</div>
-                    <div class="phase-node-status">Current - Non-Clinical</div>
-                </div>
-                <div class="phase-node">
-                    <div class="phase-node-circle phase-2">2</div>
-                    <div class="phase-node-label">Phase 2</div>
-                    <div class="phase-node-status">Future - Analytical Support</div>
-                </div>
-                <div class="phase-node">
-                    <div class="phase-node-circle phase-3">3</div>
-                    <div class="phase-node-label">Phase 3</div>
-                    <div class="phase-node-status">Future - Clinical AI</div>
-                </div>
-            </div>
-
-            <!-- Illustrative Governance Pathway Image -->
+        <section>
+            <h2>Out-of-Scope and Implementation Considerations</h2>
+            <p>The following illustrative pathway is provided for contextual orientation only. It does not define a product roadmap but rather a sequence of potential future regulatory states, each requiring separate and distinct validation and approval.</p>
             <div style="text-align: center; margin: 2rem 0 3rem 0;">
                 <img src="/governance-roadmap.png" alt="Illustrative Governance Pathway for AI-Mediated Home Care - Three Phases" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
             </div>
+        </section>
 
-            <!-- Phase Detail Cards -->
-            <div class="phase-cards">
-                <!-- Phase 1 Card -->
-                <div class="phase-card">
-                    <h3>Phase 1: Non-Clinical Companion</h3>
-                    <p><strong>Scope:</strong> Social engagement, reminders, user-initiated escalation.</p>
-                    <p><strong>Regulatory Status:</strong> Outside SaMD / MDR scope.</p>
-                    <ul>
-                        <li>No clinical interpretation</li>
-                        <li>No health assessment</li>
-                        <li>Human-executed authority for all escalations</li>
-                        <li>Immutable audit logging</li>
-                        <li>Deployable immediately</li>
-                    </ul>
-                </div>
-
-                <!-- Phase 2 Card -->
-                <div class="phase-card phase-2">
-                    <h3>Phase 2: Clinician-Supervised Analytics</h3>
-                    <p><strong>Scope:</strong> Analytical support under physician supervision.</p>
-                    <p><strong>Regulatory Status:</strong> Requires jurisdictional clearance.</p>
-                    <ul>
-                        <li>Clinician-reviewed insights</li>
-                        <li>Physician-as-Pilot governance</li>
-                        <li>Behavioral analytics (non-diagnostic)</li>
-                        <li>Enhanced audit trails</li>
-                        <li>Jurisdiction-specific approval required</li>
-                    </ul>
-                </div>
-
-                <!-- Phase 3 Card -->
-                <div class="phase-card phase-3">
-                    <h3>Phase 3: Regulated Clinical AI</h3>
-                    <p><strong>Scope:</strong> Full clinical decision support with SaMD compliance.</p>
-                    <p><strong>Regulatory Status:</strong> Full regulatory pathway (SaMD / MDR).</p>
-                    <ul>
-                        <li>Clinical validation studies</li>
-                        <li>Multi-jurisdiction compliance</li>
-                        <li>Risk management framework</li>
-                        <li>Post-market surveillance</li>
-                        <li>Physician-led clinical deployment</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Evidence Package Section -->
-        <div class="cta-section">
-            <h2>Evidence Package (Reviewer/Regulator Ready)</h2>
-            <p>These artifacts demonstrate reconstructability and boundary enforcement prior to clinical claims.</p>
-            <div class="proof-bar" style="margin-top: 2rem;">
-                <a href="/governance-roadmap.png" target="_blank" class="cta-button">One-page governance pathway figure (Phase I–III)</a>
-                <a href="/phase-1-protocol.pdf" target="_blank" class="cta-button">Phase I protocol (boundary spec)</a>
-                <a href="/safety-os-audit-sample.pdf" target="_blank" class="cta-button">Redacted sample audit log + audit summary (1 session)</a>
-            </div>
-        </div>
+                <!-- Discussion and Review -->
+        <section>
+            <h2>Discussion and Review</h2>
+            <p>This regulatory position paper is submitted for critical review and discussion with regulatory bodies and academic partners. Feedback on the proposed boundary model and governance architecture is welcome.</p>
+        </section>
 
 
 
 
     </main>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer>
-        <p>🛡️ Designed for data sovereignty and controlled clinical escalation.</p>
-        
         <div class="footer-statement">
-            <p><strong>Privacy & Sovereignty Statement:</strong> Phase 1 data is strictly non-clinical and suitable for Patient Support Programs (PSPs) and adherence operations only. All engagement evidence is logged to support behavioral persistence without making health, cognitive, or disease claims, ensuring deployment remains outside SaMD scope.</p>
             <p class="footer-copyright">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
-            <p class="footer-copyright">"Physician-as-Pilot™" and "Safety OS™" are proprietary governance frameworks of PatientCentricCare.AI.</p>
         </div>
     </footer>
 </body>
