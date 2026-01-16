@@ -202,33 +202,64 @@
             color: #0d9488;
         }
 
-        /* Hamburger Menu */
+        /* Mobile Menu */
         .hamburger {
             display: none;
             flex-direction: column;
             cursor: pointer;
-            padding: 0.5rem;
+            gap: 4px;
         }
-
+        
         .hamburger span {
             width: 25px;
             height: 3px;
             background: white;
-            margin: 3px 0;
             transition: 0.3s;
-            border-radius: 3px;
         }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
+            /* Mobile dropdown */
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                box-shadow: none;
+                background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem;
+                display: none;
+            }
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
+            .nav-dropdown.active .nav-dropdown-menu {
+                display: block;
+            }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            .nav-dropdown-toggle {
+                display: block;
+                padding: 0.5rem 0;
+            }
         }
 
         /* Hero Section */
@@ -576,7 +607,6 @@
         <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
     </footer>
     <script>
-        // Hamburger menu toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
@@ -594,14 +624,6 @@
                     }
                 });
             }
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('#navLinks a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
         });
     </script>
 </body>
