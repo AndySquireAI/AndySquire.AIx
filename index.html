@@ -241,56 +241,93 @@
             line-height: 1.6;
         }
 
-        .pathway-ctas {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
+        /* CTA HIERARCHY - Primary, Secondary, Tertiary */
+        .cta-hierarchy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .pathway-card {
+        /* PRIMARY CTA - Largest, solid fill, dominant */
+        .cta-primary {
+            display: inline-block;
             background: #E6A23C;
-            padding: 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s;
-            border: none;
-            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.3);
-        }
-
-        .pathway-card:hover {
-            background: #d4911f;
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
-        }
-
-        .pathway-primary {
-            grid-column: 1 / -1;
-            max-width: 500px;
-            margin: 0 auto 1rem auto;
-            background: #E6A23C;
-            border: 2px solid #d4911f;
-        }
-
-        @media (min-width: 768px) {
-            .pathway-primary {
-                grid-column: auto;
-                max-width: none;
-                margin: 0;
-            }
-        }
-
-        .pathway-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
             color: #0f172a;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 1.25rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.4);
         }
 
-        .pathway-card p {
+        .cta-primary:hover {
+            background: #d4911f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.5);
+        }
+
+        /* Secondary row container */
+        .cta-secondary-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* SECONDARY CTA - Outline button, clearly secondary */
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #E6A23C;
             font-size: 1rem;
-            opacity: 0.9;
+            font-weight: 600;
+            padding: 0.875rem 1.75rem;
+            border: 2px solid #E6A23C;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(230, 162, 60, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* TERTIARY CTA - Text button, de-emphasized */
+        .cta-tertiary {
+            display: inline-block;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.875rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .cta-tertiary:hover {
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Mobile stacking */
+        @media (max-width: 600px) {
+            .cta-secondary-row {
+                flex-direction: column;
+                width: 100%;
+            }
+            .cta-secondary, .cta-tertiary {
+                width: 100%;
+                text-align: center;
+            }
         }
         
         .hero-subhead {
@@ -511,19 +548,18 @@
         
         <p class="audience-line">For AI governance leaders, clinical safety officers, CMIOs, and health system executives.</p>
 
-        <div class="pathway-ctas">
-            <a href="/physician-as-pilot.html" class="pathway-card pathway-primary">
-                <h3>Explore the Physician-as-Pilot Model</h3>
-                <p>How clinicians retain control in AI-enabled care</p>
+        <div class="cta-hierarchy">
+            <a href="/physician-as-pilot.html" class="cta-primary">
+                Explore the Physician-as-Pilot Model
             </a>
-            <a href="/safety-os.html" class="pathway-card">
-                <h3>View Safety OS</h3>
-                <p>Governance Framework</p>
-            </a>
-            <a href="/investment.html" class="pathway-card">
-                <h3>For Investors & Partners</h3>
-                <p>Partnership opportunities</p>
-            </a>
+            <div class="cta-secondary-row">
+                <a href="/safety-os.html" class="cta-secondary">
+                    View Safety OS (Governance Framework)
+                </a>
+                <a href="/investment.html" class="cta-tertiary">
+                    Company & Investment
+                </a>
+            </div>
         </div>
     </section>
 
