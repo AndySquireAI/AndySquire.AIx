@@ -476,13 +476,14 @@
 </head>
 <body>
         <!-- NAVIGATION -->
+        <!-- NAVIGATION -->
     <nav>
-        <div class="nav-container">
-            <div class="logo-container">
+        <div class=nav-container>
+            <div class=logo-container>
                 <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
                 <span class="logo-text">PatientCentricCare.AI</span>
             </div>
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -588,7 +589,7 @@
 
     <!-- Mobile Menu Script -->
     <script>
-        function toggleMenu() {
+                function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
@@ -606,13 +607,6 @@
                 });
             }
         });
-            
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
         }
     </script>
 </body>
