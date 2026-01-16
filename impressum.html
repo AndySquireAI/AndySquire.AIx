@@ -127,6 +127,66 @@
         .nav-dropdown-menu a:hover {
             background: rgba(255,255,255,0.1);
         }
+        
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+
+            /* Mobile dropdown */
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                box-shadow: none;
+                background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem;
+                display: none;
+            }
+
+            .nav-dropdown.active .nav-dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown-toggle {
+                display: block;
+                padding: 0.5rem 0;
+            }
+        }
         main {
             max-width: 800px;
             margin: 0 auto;
@@ -420,5 +480,26 @@
             No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.
         </p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
