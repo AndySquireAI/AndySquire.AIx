@@ -75,6 +75,93 @@
             font-weight: 700;
             text-decoration: none;
         }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: #d4911f;
+            color: white;
+        }
+
+        /* Company Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: #0d9488;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s;
+            list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .nav-dropdown-menu li {
+            padding: 0;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0d9488;
+        }
         
         .nav-links {
             display: flex;
