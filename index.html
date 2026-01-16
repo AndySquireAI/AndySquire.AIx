@@ -238,6 +238,7 @@
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0,0,0,0.05);
                 padding: 2rem 0;
+                z-index: 999;
             }
             
             .nav-links.active {
@@ -867,7 +868,12 @@
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+                console.log('Mobile menu toggled. Active:', navLinks.classList.contains('active'));
+            } else {
+                console.error('navLinks element not found');
+            }
         }
 
         // Mobile dropdown toggle
@@ -905,145 +911,9 @@
                 document.body.style.overflow = '';
             }
         });
-    
-    // --- GA4 Event Hygiene (Point 3) ---
-    const sendGa4Event = (eventName, eventParams = {}) => {
-        if (typeof gtag === 'function') {
-            gtag('event', eventName, eventParams);
-        } else if (typeof dataLayer !== 'undefined') {
-            dataLayer.push({
-                'event': eventName,
-                ...eventParams
-            });
-        }
-    };
 
-    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
-    document.addEventListener('DOMContentLoaded', () => {
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                const linkText = link.textContent.trim();
-                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
-                    sendGa4Event('navigation_click', {
-                        link_url: href,
-                        link_text: linkText,
-                        link_location: 'main_nav'
-                    });
-                }
-            });
-        });
 
-        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
-        const contactLinks = document.querySelectorAll('.nav-contact');
-        contactLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sendGa4Event('contact_click', {
-                    contact_type: 'email_link',
-                    location: 'main_nav'
-                });
-            });
-        });
-    });
 
-    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
-    const originalOpenLightbox = window.openLightbox;
-    window.openLightbox = function() {
-        originalOpenLightbox.apply(this, arguments);
-        sendGa4Event('lightbox_open', {
-            diagram_name: 'physician_as_pilot_framework'
-        });
-    };
-
-    // 3.4 Scroll depth (25/50/75%)
-    const scrollThresholds = [25, 50, 75];
-    const scrollTracked = {};
-
-    window.addEventListener('scroll', () => {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollTop = window.scrollY;
-        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
-
-        scrollThresholds.forEach(threshold => {
-            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
-                scrollTracked[threshold] = true;
-                sendGa4Event('scroll_depth', {
-                    percent: threshold
-                });
-            }
-        });
-    });
-
-    
-    // --- GA4 Event Hygiene (Point 3) ---
-    const sendGa4Event = (eventName, eventParams = {}) => {
-        if (typeof gtag === 'function') {
-            gtag('event', eventName, eventParams);
-        } else if (typeof dataLayer !== 'undefined') {
-            dataLayer.push({
-                'event': eventName,
-                ...eventParams
-            });
-        }
-    };
-
-    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
-    document.addEventListener('DOMContentLoaded', () => {
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                const linkText = link.textContent.trim();
-                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
-                    sendGa4Event('navigation_click', {
-                        link_url: href,
-                        link_text: linkText,
-                        link_location: 'main_nav'
-                    });
-                }
-            });
-        });
-
-        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
-        const contactLinks = document.querySelectorAll('.nav-contact');
-        contactLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sendGa4Event('contact_click', {
-                    contact_type: 'email_link',
-                    location: 'main_nav'
-                });
-            });
-        });
-    });
-
-    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
-    const originalOpenLightbox = window.openLightbox;
-    window.openLightbox = function() {
-        originalOpenLightbox.apply(this, arguments);
-        sendGa4Event('lightbox_open', {
-            diagram_name: 'physician_as_pilot_framework'
-        });
-    };
-
-    // 3.4 Scroll depth (25/50/75%)
-    const scrollThresholds = [25, 50, 75];
-    const scrollTracked = {};
-
-    window.addEventListener('scroll', () => {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollTop = window.scrollY;
-        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
-
-        scrollThresholds.forEach(threshold => {
-            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
-                scrollTracked[threshold] = true;
-                sendGa4Event('scroll_depth', {
-                    percent: threshold
-                });
-            }
-        });
-    });
 
     </script>
 </body>
