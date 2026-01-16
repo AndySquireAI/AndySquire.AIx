@@ -76,6 +76,74 @@
             color: #0d9488;
         }
 
+        .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white !important;
+        }
+
+        .nav-contact:hover {
+            background: #d4911f;
+            color: white !important;
+        }
+
+        /* Company Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: #0d9488;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s;
+            list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .nav-dropdown-menu li {
+            padding: 0;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0d9488;
+        }
+
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -340,14 +408,20 @@
                 <span></span>
             </div>
             <ul id="navLinks">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/mission.html">Mission</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
-                <li><a href="/investment.html">Investment</a></li>
-                <li><a href="/traction.html">Traction</a></li>
+                <li><a href="/traction.html">Evidence</a></li>
                 <li><a href="/team.html">Team</a></li>
-                <li><a href="/investors/">Investor Portal</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission.html">Mission</a></li>
+                        <li><a href="/investment.html">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai" class="nav-contact">Contact</a></li>
             </ul>
         </div>
     </nav>
