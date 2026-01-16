@@ -137,6 +137,18 @@
         .nav-links a:hover {
             color: #0d9488;
         }
+
+        .nav-links .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: #d4911f;
+            color: white;
+        }
         
         /* Mobile Menu */
         .hamburger {
@@ -213,19 +225,20 @@
             margin-right: auto;
         }
 
-        .audience-qualifier {
-            margin-bottom: 2.5rem;
+        .audience-line {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
         }
 
-        .audience-qualifier p {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .audience-qualifier ul {
-            display: inline-flex;
-            gap: 1.5rem;
-            list-style: none;
+        .hero-subtext {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+            opacity: 0.9;
+            line-height: 1.6;
         }
 
         .pathway-ctas {
@@ -467,37 +480,33 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
-                <li><a href="/investment.html">Investment</a></li>
+                <li><a href="/traction.html">Evidence</a></li>
                 <li><a href="/team.html">Team</a></li>
+                <li><a href="mailto:andy@patientcentriccare.ai" class="nav-contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>We help healthcare organizations safely deploy AI without undermining clinical authority, safety, or accountability.</h1>
+        <p class="audience-line">For healthcare leaders and clinical innovators seeking safe, governed AI-enabled care solutions.</p>
         
-        <div class="audience-qualifier">
-            <p>Built for:</p>
-            <ul>
-                <li>Physicians and clinical leaders</li>
-                <li>Health system executives</li>
-                <li>AI governance and safety stakeholders</li>
-            </ul>
-        </div>
+        <h1>Enable safe, clinically governed humanoid support that enhances patient independence while preserving dignity.</h1>
+        
+        <p class="hero-subtext">We help healthcare organizations deploy AI without undermining clinical authority, safety, or accountability.</p>
 
         <div class="pathway-ctas">
             <a href="/physician-as-pilot.html" class="pathway-card">
                 <h3>Physician-as-Pilot</h3>
-                <p>How clinicians retain control in AI-enabled care</p>
+                <p>For clinicians & AI governance leads</p>
             </a>
             <a href="/safety-os.html" class="pathway-card">
                 <h3>Safety OS</h3>
-                <p>The governance layer for responsible healthcare AI</p>
+                <p>For technical and risk audiences</p>
             </a>
             <a href="/investment.html" class="pathway-card">
-                <h3>Investment / Company</h3>
-                <p>For investors and partners</p>
+                <h3>Partnership & Investment</h3>
+                <p>For health systems & research partners</p>
             </a>
         </div>
     </section>
