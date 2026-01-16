@@ -40,24 +40,16 @@
             background: #f8fafc;
         }
 
-        header {
+        /* Navigation - EXACT COPY FROM INDEX.HTML */
+        nav {
             background: #0f172a;
-            color: white;
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
-            z-index: 100;
-            border-bottom: 2px solid #22c55e;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        header nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -65,40 +57,40 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
         }
-
+        
         .logo-container img {
             height: 45px;
             width: auto;
         }
-
+        
         .logo-text {
             color: white;
             font-size: 1.3rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-
+        
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: center;
         }
-
+        
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.9rem;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
-
+        
         .nav-links a:hover {
             color: #0d9488;
         }
@@ -123,7 +115,7 @@
         .nav-dropdown-toggle {
             color: white;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: color 0.3s;
         }
@@ -164,14 +156,14 @@
             padding: 0.5rem 1rem;
             color: white;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .nav-dropdown-menu a:hover {
             background: rgba(255,255,255,0.1);
             color: #0d9488;
         }
-
+        
         /* Mobile Menu */
         .hamburger {
             display: none;
@@ -179,19 +171,19 @@
             cursor: pointer;
             gap: 4px;
         }
-
+        
         .hamburger span {
             width: 25px;
             height: 3px;
             background: white;
             transition: 0.3s;
         }
-
+        
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
             }
-
+            
             .nav-links {
                 position: fixed;
                 right: -100%;
@@ -201,13 +193,15 @@
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
                 padding: 2rem 0;
             }
-
+            
             .nav-links.active {
                 right: 0;
             }
 
+            /* Mobile dropdown */
             .nav-dropdown-menu {
                 position: static;
                 opacity: 1;
@@ -409,38 +403,35 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-    <div class="nav-container">
-        <div class="logo-container">
-            <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
-            <span class="logo-text">PatientCentricCare.AI</span>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
+                <li><a href="/safety-os.html">Safety OS</a></li>
+                <li><a href="/traction.html">Evidence</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission.html">Mission</a></li>
+                        <li><a href="/investment.html">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="/">Home</a></li>
-            <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
-            <li><a href="/safety-os.html">Safety OS</a></li>
-            <li><a href="/traction.html">Evidence</a></li>
-            <li><a href="/team.html">Team</a></li>
-            <li class="nav-dropdown">
-                <span class="nav-dropdown-toggle">Company ▾</span>
-                <ul class="nav-dropdown-menu">
-                    <li><a href="/mission.html">Mission</a></li>
-                    <li><a href="/investment.html">Investment</a></li>
-                    <li><a href="/investors/">Investor Portal</a></li>
-                </ul>
-            </li>
-            <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-    </header>
+    </nav>
 
     <!-- Main Content: Regulatory Position Paper First -->
     <main>
