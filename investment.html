@@ -489,9 +489,14 @@
             }
         }
     </style>
+    <link rel="canonical" href="https://www.andysquire.ai/investment">
 </head>
 <body>
     <!-- Navigation -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
     <nav>
         <div class="nav-container">
             <div class="logo-container">
@@ -520,7 +525,11 @@
                 <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
+    <!-- End Canonical navigation -->
+
+    <!-- End Canonical navigation -->
+ 
 
     <!-- Page Header -->
     <div class="page-header">
@@ -607,6 +616,146 @@
                 });
             }
         });
+    
+    // --- GA4 Event Hygiene (Point 3) ---
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        } else if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+    };
+
+    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
+                    sendGa4Event('navigation_click', {
+                        link_url: href,
+                        link_text: linkText,
+                        link_location: 'main_nav'
+                    });
+                }
+            });
+        });
+
+        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
+    const originalOpenLightbox = window.openLightbox;
+    window.openLightbox = function() {
+        originalOpenLightbox.apply(this, arguments);
+        sendGa4Event('lightbox_open', {
+            diagram_name: 'physician_as_pilot_framework'
+        });
+    };
+
+    // 3.4 Scroll depth (25/50/75%)
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold
+                });
+            }
+        });
+    });
+
+    
+    // --- GA4 Event Hygiene (Point 3) ---
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        } else if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+    };
+
+    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
+                    sendGa4Event('navigation_click', {
+                        link_url: href,
+                        link_text: linkText,
+                        link_location: 'main_nav'
+                    });
+                }
+            });
+        });
+
+        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
+    const originalOpenLightbox = window.openLightbox;
+    window.openLightbox = function() {
+        originalOpenLightbox.apply(this, arguments);
+        sendGa4Event('lightbox_open', {
+            diagram_name: 'physician_as_pilot_framework'
+        });
+    };
+
+    // 3.4 Scroll depth (25/50/75%)
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold
+                });
+            }
+        });
+    });
+
     </script>
 </body>
 </html>

@@ -485,9 +485,14 @@
             }
         }
     </style>
+    <link rel="canonical" href="https://www.andysquire.ai/traction">
 </head>
 <body>
     <!-- NAVIGATION -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
     <nav>
         <div class="nav-container">
             <div class="logo-container">
@@ -516,13 +521,17 @@
                 <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
+    <!-- End Canonical navigation -->
+
+    <!-- End Canonical navigation -->
+ 
 
     <!-- HERO -->
     <div class="hero">
-        <h1>Traction & Momentum</h1>
+        <h1>Evidence: Governance & Clinical Alignment</h1>
         <p>
-            We are building PatientCentricCare.AI through a disciplined, evidence-driven approach supported by clinical collaborators, research partners, and early institutional engagement. Our traction reflects progress across four pillars: governance, evidence generation, clinical alignment, and strategic partnerships.
+            A disciplined, evidence-driven approach focused on establishing clear claims, boundaries, and measurable clinical alignment. Our evidence reflects progress across four pillars: governance, evidence generation, clinical alignment, and strategic partnerships.
         </p>
     </div>
 
@@ -581,6 +590,13 @@
     <!-- What's Next -->
     <section>
         <h2 data-section-number="8">What's Next</h2>
+        
+        <div class="highlight-box">
+            <h3>Scope & Limitations</h3>
+            <p><strong>Claims:</strong> The system is designed to provide protocol-driven support for post-acute rehabilitation and home monitoring, focusing on patient safety and compliance.</p>
+            <p><strong>Boundaries:</strong> The system is architecturally prohibited from performing diagnosis, prognosis, treatment recommendations, or any form of autonomous clinical decision-making. All actions are constrained by the Physician-as-Pilot framework.</p>
+            <p><strong>What is Explicitly Not Proven Yet:</strong> Long-term impact on hospital readmission rates and cost-effectiveness in diverse patient populations are areas for future study and validation.</p>
+        </div>
         <ul class="bullets">
             <li>Supervised support pilot frameworks</li>
             <li>Safety OS supervision modules</li>
@@ -647,6 +663,146 @@
                 });
             });
         });
+    
+    // --- GA4 Event Hygiene (Point 3) ---
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        } else if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+    };
+
+    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
+                    sendGa4Event('navigation_click', {
+                        link_url: href,
+                        link_text: linkText,
+                        link_location: 'main_nav'
+                    });
+                }
+            });
+        });
+
+        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
+    const originalOpenLightbox = window.openLightbox;
+    window.openLightbox = function() {
+        originalOpenLightbox.apply(this, arguments);
+        sendGa4Event('lightbox_open', {
+            diagram_name: 'physician_as_pilot_framework'
+        });
+    };
+
+    // 3.4 Scroll depth (25/50/75%)
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold
+                });
+            }
+        });
+    });
+
+    
+    // --- GA4 Event Hygiene (Point 3) ---
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        } else if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+    };
+
+    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
+                    sendGa4Event('navigation_click', {
+                        link_url: href,
+                        link_text: linkText,
+                        link_location: 'main_nav'
+                    });
+                }
+            });
+        });
+
+        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
+    const originalOpenLightbox = window.openLightbox;
+    window.openLightbox = function() {
+        originalOpenLightbox.apply(this, arguments);
+        sendGa4Event('lightbox_open', {
+            diagram_name: 'physician_as_pilot_framework'
+        });
+    };
+
+    // 3.4 Scroll depth (25/50/75%)
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold
+                });
+            }
+        });
+    });
+
     </script>
 
 
