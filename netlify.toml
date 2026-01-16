@@ -42,6 +42,85 @@
   status = 301
   force = true
 
+# URL Canonicalization - redirect .html to clean URLs
+[[redirects]]
+  from = "/physician-as-pilot.html"
+  to = "/physician-as-pilot"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/safety-os.html"
+  to = "/safety-os"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/investment.html"
+  to = "/investment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mission.html"
+  to = "/mission"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/team.html"
+  to = "/team"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/traction.html"
+  to = "/traction"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/impressum.html"
+  to = "/impressum"
+  status = 301
+  force = true
+
+# Clean URL rewrites - serve .html files without extension
+[[redirects]]
+  from = "/physician-as-pilot"
+  to = "/physician-as-pilot.html"
+  status = 200
+
+[[redirects]]
+  from = "/safety-os"
+  to = "/safety-os.html"
+  status = 200
+
+[[redirects]]
+  from = "/investment"
+  to = "/investment.html"
+  status = 200
+
+[[redirects]]
+  from = "/mission"
+  to = "/mission.html"
+  status = 200
+
+[[redirects]]
+  from = "/team"
+  to = "/team.html"
+  status = 200
+
+[[redirects]]
+  from = "/traction"
+  to = "/traction.html"
+  status = 200
+
+[[redirects]]
+  from = "/impressum"
+  to = "/impressum.html"
+  status = 200
+
 # Form handling (if needed for future contact forms)
 [build.processing]
   skip_processing = false
