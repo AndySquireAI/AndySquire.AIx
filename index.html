@@ -225,108 +225,115 @@
             margin-right: auto;
         }
 
-        .audience-line {
-            font-size: 1.1rem;
-            font-weight: 500;
-            opacity: 0.9;
-            margin-bottom: 1rem;
+        /* 3-COLUMN STAKEHOLDER ROUTING GRID */
+        .routing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 2rem auto 0 auto;
+            padding: 0 1rem;
+        }
+
+        .routing-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        /* Primary card - most prominent */
+        .routing-primary {
+            border: 2px solid #E6A23C;
+            background: rgba(230, 162, 60, 0.1);
+        }
+
+        /* Secondary card */
+        .routing-secondary {
+            border: 1px solid rgba(230, 162, 60, 0.5);
+        }
+
+        /* Tertiary card - least prominent */
+        .routing-tertiary {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .routing-who {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #E6A23C;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        .hero-subtext {
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem auto;
-            opacity: 0.9;
-            line-height: 1.6;
+        .routing-purpose {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
         }
 
-        /* CTA HIERARCHY - Primary, Secondary, Tertiary */
-        .cta-hierarchy {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
+        /* CTA Buttons with clear hierarchy */
+        .routing-cta {
+            display: block;
+            text-align: center;
+            padding: 0.875rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
         }
 
-        /* PRIMARY CTA - Largest, solid fill, dominant */
-        .cta-primary {
-            display: inline-block;
+        /* PRIMARY CTA - Solid orange, most prominent */
+        .routing-cta-primary {
             background: #E6A23C;
             color: #0f172a;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 1.25rem 2.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.4);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(230, 162, 60, 0.3);
         }
 
-        .cta-primary:hover {
+        .routing-cta-primary:hover {
             background: #d4911f;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(230, 162, 60, 0.4);
         }
 
-        /* Secondary row container */
-        .cta-secondary-row {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* SECONDARY CTA - Outline button, clearly secondary */
-        .cta-secondary {
-            display: inline-block;
+        /* SECONDARY CTA - Outline orange */
+        .routing-cta-secondary {
             background: transparent;
             color: #E6A23C;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 0.875rem 1.75rem;
             border: 2px solid #E6A23C;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s;
+            font-size: 0.95rem;
         }
 
-        .cta-secondary:hover {
+        .routing-cta-secondary:hover {
             background: rgba(230, 162, 60, 0.15);
             transform: translateY(-2px);
         }
 
-        /* TERTIARY CTA - Text button, de-emphasized */
-        .cta-tertiary {
-            display: inline-block;
+        /* TERTIARY CTA - Muted outline */
+        .routing-cta-tertiary {
             background: transparent;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 0.875rem 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s;
+            font-size: 0.9rem;
         }
 
-        .cta-tertiary:hover {
+        .routing-cta-tertiary:hover {
             color: white;
             border-color: rgba(255, 255, 255, 0.5);
             background: rgba(255, 255, 255, 0.05);
         }
 
-        /* Mobile stacking */
-        @media (max-width: 600px) {
-            .cta-secondary-row {
-                flex-direction: column;
-                width: 100%;
-            }
-            .cta-secondary, .cta-tertiary {
-                width: 100%;
-                text-align: center;
+        /* Mobile: Stack vertically */
+        @media (max-width: 768px) {
+            .routing-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
         
@@ -544,21 +551,27 @@
     <section class="hero">
         <h1>Govern AI in healthcare without compromising clinical authority, safety, or accountability.</h1>
         
-        <p class="hero-subtext">We provide governance frameworks and operational models that ensure AI augments clinical decision-making - without introducing unmanaged risk, opaque automation, or loss of human control.</p>
-        
-        <p class="audience-line">For AI governance leaders, clinical safety officers, CMIOs, and health system executives.</p>
-
-        <div class="cta-hierarchy">
-            <a href="/physician-as-pilot.html" class="cta-primary">
-                Explore the Physician-as-Pilot Model
-            </a>
-            <div class="cta-secondary-row">
-                <a href="/safety-os.html" class="cta-secondary">
-                    View Safety OS (Governance Framework)
-                </a>
-                <a href="/investment.html" class="cta-tertiary">
-                    Company & Investment
-                </a>
+        <!-- 3-COLUMN STAKEHOLDER ROUTING GRID -->
+        <div class="routing-grid">
+            <!-- COLUMN 1: Clinical & Governance Leaders -->
+            <div class="routing-card routing-primary">
+                <p class="routing-who">AI Governance Leaders, CMIOs, Clinical Safety Officers</p>
+                <p class="routing-purpose">Establish clear clinical authority, accountability, and safety boundaries for AI used in care delivery.</p>
+                <a href="/physician-as-pilot.html" class="routing-cta routing-cta-primary">Explore the Physician-as-Pilot Model</a>
+            </div>
+            
+            <!-- COLUMN 2: Risk, Compliance & Architecture -->
+            <div class="routing-card routing-secondary">
+                <p class="routing-who">Risk, Compliance, and AI Oversight Teams</p>
+                <p class="routing-purpose">Understand the governance architecture, constraints, and controls required for responsible AI deployment.</p>
+                <a href="/safety-os.html" class="routing-cta routing-cta-secondary">View Safety OS (Governance Framework)</a>
+            </div>
+            
+            <!-- COLUMN 3: Partners, Sponsors & Strategic Collaborators -->
+            <div class="routing-card routing-tertiary">
+                <p class="routing-who">Health Systems, Research Partners, Strategic Sponsors</p>
+                <p class="routing-purpose">Collaborate on governed pilots, clinical research, and evidence-driven AI programs.</p>
+                <a href="/investment.html" class="routing-cta routing-cta-tertiary">Discuss Partnership & Pilots</a>
             </div>
         </div>
     </section>
