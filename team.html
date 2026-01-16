@@ -247,10 +247,11 @@
         
         .founder-header {
             display: flex;
+            flex-direction: column; /* Stack on mobile/small screens */
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
+            text-align: center;
         }
         
         .founder-logo {
@@ -265,6 +266,7 @@
         
         .founder-name {
             flex: 1;
+            text-align: center;
         }
         
         .founder-name h3 {
@@ -284,6 +286,7 @@
             line-height: 1.8;
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
+            text-align: center; /* Center the main bio text */
         }
         
         .expertise-grid {
@@ -291,6 +294,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
+            justify-content: center; /* Center the grid items */
         }
         
         .expertise-card {
@@ -304,13 +308,16 @@
             color: #2C3E50;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+            text-align: center; /* Center card headings */
         }
         
         .expertise-card ul {
             color: #5D6D7E;
             line-height: 1.8;
             margin: 0;
-            padding-left: 1.5rem;
+            padding-left: 0; /* Remove left padding for list */
+            list-style-position: inside; /* Keep bullets inside */
+            text-align: center; /* Center list items */
         }
         
         .expertise-card li {
