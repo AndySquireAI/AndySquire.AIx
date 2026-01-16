@@ -33,7 +33,6 @@
         }
         
         /* Navigation */
-
         nav {
             background: #0f172a;
             padding: 1rem 2rem;
@@ -158,130 +157,6 @@
         }
         
         /* Mobile Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-        
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            transition: 0.3s;
-        }
-        
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            .nav-links {
-                position: fixed;
-                right: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: #0f172a;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                padding: 2rem 0;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-
-            /* Mobile dropdown */
-            .nav-dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                border: none;
-                box-shadow: none;
-                background: rgba(255,255,255,0.05);
-                margin-top: 0.5rem;
-                display: none;
-            }
-
-            .nav-dropdown.active .nav-dropdown-menu {
-                display: block;
-            }
-
-            .nav-dropdown-toggle {
-                display: block;
-                padding: 0.5rem 0;
-            }
-        }
-        
-        
-
-/* Mobile Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-        
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            transition: 0.3s;
-        }
-        
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            .nav-links {
-                position: fixed;
-                right: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: #0f172a;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                padding: 2rem 0;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-
-            /* Mobile dropdown */
-            .nav-dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                border: none;
-                box-shadow: none;
-                background: rgba(255,255,255,0.05);
-                margin-top: 0.5rem;
-                display: none;
-            }
-
-            .nav-dropdown.active .nav-dropdown-menu {
-                display: block;
-            }
-
-            .nav-dropdown-toggle {
-                display: block;
-                padding: 0.5rem 0;
-            }
-        }
-        
-        
-
-/* Mobile Menu */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -2810,16 +2685,7 @@
             color: white;
             padding: 4rem 2rem;
             text-align: center;
-        }
-        .definition-box {
-            background: #f8fafc;
-            border-left: 4px solid #0d9488;
-            padding: 2rem;
-            border-radius: 0 12px 12px 0;
-            margin: 2rem 0;
-            font-size: 1.2rem;
-        }
-</style>
+        }</style>
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -2853,7 +2719,7 @@
                 <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> 
 
     <!-- HERO -->
     <div class="hero">
