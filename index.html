@@ -266,6 +266,22 @@
             box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
         }
 
+        .pathway-primary {
+            grid-column: 1 / -1;
+            max-width: 500px;
+            margin: 0 auto 1rem auto;
+            background: #E6A23C;
+            border: 2px solid #d4911f;
+        }
+
+        @media (min-width: 768px) {
+            .pathway-primary {
+                grid-column: auto;
+                max-width: none;
+                margin: 0;
+            }
+        }
+
         .pathway-card h3 {
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
@@ -489,24 +505,24 @@
 
     <!-- HERO -->
     <section class="hero">
-        <p class="audience-line">For healthcare leaders and clinical innovators seeking safe, governed AI-enabled care solutions.</p>
+        <h1>Govern AI in healthcare without compromising clinical authority, safety, or accountability.</h1>
         
-        <h1>Enable safe, clinically governed humanoid support that enhances patient independence while preserving dignity.</h1>
+        <p class="hero-subtext">We provide governance frameworks and operational models that ensure AI augments clinical decision-making - without introducing unmanaged risk, opaque automation, or loss of human control.</p>
         
-        <p class="hero-subtext">We help healthcare organizations deploy AI without undermining clinical authority, safety, or accountability.</p>
+        <p class="audience-line">For AI governance leaders, clinical safety officers, CMIOs, and health system executives.</p>
 
         <div class="pathway-ctas">
-            <a href="/physician-as-pilot.html" class="pathway-card">
-                <h3>Physician-as-Pilot</h3>
-                <p>For clinicians & AI governance leads</p>
+            <a href="/physician-as-pilot.html" class="pathway-card pathway-primary">
+                <h3>Explore the Physician-as-Pilot Model</h3>
+                <p>How clinicians retain control in AI-enabled care</p>
             </a>
             <a href="/safety-os.html" class="pathway-card">
-                <h3>Safety OS</h3>
-                <p>For technical and risk audiences</p>
+                <h3>View Safety OS</h3>
+                <p>Governance Framework</p>
             </a>
             <a href="/investment.html" class="pathway-card">
-                <h3>Partnership & Investment</h3>
-                <p>For health systems & research partners</p>
+                <h3>For Investors & Partners</h3>
+                <p>Partnership opportunities</p>
             </a>
         </div>
     </section>
