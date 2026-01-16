@@ -205,9 +205,60 @@
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .audience-qualifier {
+            margin-bottom: 2.5rem;
+        }
+
+        .audience-qualifier p {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .audience-qualifier ul {
+            display: inline-flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .pathway-ctas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pathway-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .pathway-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .pathway-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pathway-card p {
+            font-size: 1rem;
+            opacity: 0.9;
         }
         
         .hero-subhead {
@@ -286,6 +337,26 @@
             font-size: 1.5rem;
             color: #0f172a;
         }
+
+        .credibility-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .credibility-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #0d9488;
+        }
+
+        .credibility-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
         
         .feature-card ul {
             list-style: none;
@@ -345,7 +416,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .hero-subhead {
@@ -353,10 +424,24 @@
             }
             
             section h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-qualifier ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: left;
+            }
+
+            .pathway-ctas {
+                grid-template-columns: 1fr;
+            }
+
+            .credibility-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -377,98 +462,63 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/">Home</a></li>
-                <li><a href="/mission.html">Mission</a></li>
                 <li><a href="/physician-as-pilot.html">Physician-as-Pilot</a></li>
                 <li><a href="/safety-os.html">Safety OS</a></li>
                 <li><a href="/investment.html">Investment</a></li>
-                <li><a href="/traction.html">Traction</a></li>
                 <li><a href="/team.html">Team</a></li>
-                <li><a href="/investors/">Investor Portal</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hms-badge">
-            <img src="HMS-Logo.png" alt="Harvard Medical School">
-            <span>Informed by Harvard Medical School Executive Education (AI in Healthcare)</span>
+        <h1>We help healthcare organizations safely deploy AI without undermining clinical authority, safety, or accountability.</h1>
+        
+        <div class="audience-qualifier">
+            <p>Built for:</p>
+            <ul>
+                <li>Physicians and clinical leaders</li>
+                <li>Health system executives</li>
+                <li>AI governance and safety stakeholders</li>
+            </ul>
         </div>
 
-        
-        <h1>Safe Humanoid Support for Independent Living at Home</h1>
-        
-        <p class="hero-subhead">Clinically governed humanoid assistance for older adults, rehabilitation patients, and people with chronic conditions.</p>
-        
-        <p class="hero-tagline">Empowering Independence. Preserving Dignity.</p>
-        
-        <a href="/investors/" class="cta-button">ENTER INVESTOR DATA ROOM →</a>
+        <div class="pathway-ctas">
+            <a href="/physician-as-pilot.html" class="pathway-card">
+                <h3>Physician-as-Pilot</h3>
+                <p>How clinicians retain control in AI-enabled care</p>
+            </a>
+            <a href="/safety-os.html" class="pathway-card">
+                <h3>Safety OS</h3>
+                <p>The governance layer for responsible healthcare AI</p>
+            </a>
+            <a href="/investment.html" class="pathway-card">
+                <h3>Investment / Company</h3>
+                <p>For investors and partners</p>
+            </a>
+        </div>
     </section>
 
-    <!-- 3-COLUMN FEATURE GRID -->
+    <!-- CREDIBILITY SIGNALS -->
     <section>
-        <h2>The Case for Home Humanoid Care</h2>
-        
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Problem</h3>
-                <ul>
-                    <li>1.6B older adults lack caregivers by 2050</li>
-                    <li>Families overextended</li>
-                    <li>Traditional care models can't scale</li>
-                </ul>
+        <h2>A Governance-First Approach to AI in Healthcare</h2>
+        <div class="credibility-grid">
+            <div class="credibility-card">
+                <h3>Physician-as-Pilot</h3>
+                <p>A regulatory-grade framework that ensures clinicians retain control over AI-enabled care, preventing unintended automation and preserving human authority.</p>
             </div>
-            
-            <div class="feature-card">
-                <h3>Solution</h3>
-                <ul>
-                    <li>Clinically governed humanoid assistance</li>
-                    <li>Supervised, not autonomous</li>
-                    <li>Extends independence safely</li>
-                </ul>
+            <div class="credibility-card">
+                <h3>Safety OS</h3>
+                <p>The core governance layer that enforces clinical boundaries, manages escalation pathways, and provides an immutable audit trail for all AI-assisted actions.</p>
             </div>
-            
-            <div class="feature-card">
-                <h3>Evidence</h3>
-                <ul>
-                    <li>4-phase validation pathway</li>
-                    <li>Clinical protocol development</li>
-                    <li>Regulatory-grade governance</li>
-                </ul>
+            <div class="credibility-card">
+                <h3>Use Case: Post-Acute Rehabilitation</h3>
+                <p>Supporting patients at home with protocol-driven exercise reminders and progress monitoring, without providing clinical feedback or diagnosis.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- PHYSICIAN-AS-PILOT POSTER -->
-    <section style="padding: 3rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-            <img src="assets/physician-as-pilot-aiitl-poster.png" alt="Healthcare doesn't need autonomous AI. It needs the Physician-as-Pilot. AI in the Loop, AIITL." style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.15);">
-            <p style="margin-top: 1.5rem; font-size: 1.1rem; color: #495057; font-style: italic;">The intelligence is modular. The responsibility is designed.</p>
-        </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section>
-        <h2>Evidence-Driven Development</h2>
-        
-        <div style="margin-top: 3rem; margin-bottom: 2rem; text-align: center;">
-            <img src="evidence-driven-pathway.png" alt="Evidence-Driven Pathway: 4-Phase Development Model" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        </div>
-    </section>
-
-    <!-- SAFETY OS -->
-    <section>
-        <h2>Safety OS: The Governance Layer</h2>
-        <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">The foundation that makes humanoid caregiving clinically acceptable.</p>
-        
-        <ul class="bullets">
-            <li>Physician-in-the-Loop (AIITL) governance</li>
-            <li>Regulated behavioral boundaries</li>
-            <li>Risk detection & escalation pathways</li>
-        </ul>
-        
-        <div style="text-align: center; margin-top: 2.5rem;">
-            <a href="/safety-os.html" class="cta-button" style="display: inline-block; background: #0d9488;">Explore Clinical Governance →</a>
+            <div class="credibility-card">
+                <h3>Prohibited Functions</h3>
+                <p>Our systems are architecturally prohibited from performing diagnosis, prognosis, treatment recommendations, or any form of autonomous clinical decision-making.</p>
+            </div>
         </div>
     </section>
 
