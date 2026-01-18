@@ -280,9 +280,31 @@
     <div class="container">
       <h1>Clinical AI Governance: The Physician-as-Pilot Model</h1>
       
+      <!-- Definitions Section -->
+      <div class="definitions-section" style="background: #f8fafc; border-left: 4px solid #0891b2; padding: 24px; margin: 32px 0; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #0d1117; font-size: 1.1rem;">Key Definitions</h3>
+        <p style="margin-bottom: 12px;"><strong>Non-Clinical System / Consumer Health Companion:</strong> A voice interface that does not perform clinical decisions or care recommendations and is limited to education, companionship, and caregiver communication.</p>
+        <p style="margin-bottom: 12px;"><strong>Clinical Authority System:</strong> A governance architecture where a licensed physician holds final clinical decision authority, and AI executes only within boundaries defined by that authority.</p>
+        <p style="margin-bottom: 0;"><strong>Governance Maturity:</strong> The intentional progression of risk controls from non-clinical to clinical authority governance systems.</p>
+      </div>
+      
+      <!-- Regulatory Context Block -->
+      <div class="regulatory-context" style="background: #fef3c7; border-left: 4px solid #d97706; padding: 24px; margin: 24px 0; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #92400e; font-size: 1.1rem;">Regulatory Context (Non-Normative)</h3>
+        <ul style="margin: 0; padding-left: 20px; color: #78350f;">
+          <li style="margin-bottom: 8px;">This framework does not by itself constitute a regulated medical device.</li>
+          <li style="margin-bottom: 8px;">System maturity progression is designed to enable SaMD-ready governance infrastructure.</li>
+          <li style="margin-bottom: 0;">All clinical authority resides with licensed clinicians under this model; the AI itself does not make autonomous clinical decisions.</li>
+        </ul>
+      </div>
+      
       <div class="ecosystem-diagram" style="margin: 32px 0 48px 0; text-align: center;">
         <img src="clinical-ai-governance-ecosystem.png" alt="Clinical AI Governance Ecosystem for Patient-Facing AI" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <p style="font-size: 0.9rem; color: #475569; margin-top: 16px; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;"><strong>Figure 1:</strong> Clinical AI Governance Ecosystem - illustrates risk progression from non-clinical patient support (Phase I) to a Physician-as-Pilot controlled governance architecture (Phase II) with physician-defined boundaries, deterministic escalation, and automated tamper-evident audit trails.</p>
       </div>
+      
+      <!-- Risk Classification Note -->
+      <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">This governance architecture is described independent of specific regulatory risk classifications (e.g., AI devices that diagnose, treat, or influence clinical outcomes). Actual regulatory classification depends on intended use, context of deployment, and applicable standards.</p>
       
       <div class="intro">
         <p style="margin-bottom: 16px;">Clinical AI failures are rarely caused by model performance.</p>
@@ -349,6 +371,7 @@
         <li>Or disengages</li>
       </ul>
       <p>These actions are automatic, logged, and non-negotiable.</p>
+      <p style="background: #f0fdf4; border-left: 3px solid #22c55e; padding: 12px 16px; margin-top: 16px; font-size: 0.95rem; color: #166534;"><strong>Escalation follows predefined and clinically validated thresholds</strong> that trigger human review or clinical action; no escalation happens without predefined criteria and physician oversight.</p>
       
       <h2>Safety OS: Governance as Infrastructure</h2>
       <p>Governance is not policy. It is runtime infrastructure.</p>
@@ -366,7 +389,8 @@
         <li>Incident reconstruction</li>
         <li>Responsibility attribution</li>
       </ul>
-      <p><strong>Safety is designed into the system — not layered on afterward.</strong></p>
+      <p><strong>Safety is designed into the system - not layered on afterward.</strong></p>
+      <p style="background: #f0fdf4; border-left: 3px solid #22c55e; padding: 12px 16px; margin-top: 16px; font-size: 0.95rem; color: #166534;"><strong>Audit trails</strong> include automatically generated logs for system interactions, threshold outcomes, and physician actions to support traceability and safety monitoring.</p>
       
       <h2>Phased Regulatory Pathway</h2>
       <p>The model supports a staged pathway:</p>
@@ -411,6 +435,11 @@
           <span class="topic-tag">Regulatory safety architecture</span>
           <span class="topic-tag">Physician-led AI oversight</span>
         </div>
+      </div>
+      
+      <!-- Standards Alignment Note -->
+      <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; margin-top: 40px; margin-bottom: 40px;">
+        <p style="font-size: 0.9rem; color: #475569; margin: 0; text-align: center;">This governance architecture aligns conceptually with quality management practices, lifecycle risk management, and technical documentation expectations described in modern healthcare AI governance literature.</p>
       </div>
       
       <div class="footer-cta">
