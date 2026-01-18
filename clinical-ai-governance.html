@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Clinical AI Governance | Physician-as-Pilot Framework</title>
+    <meta name="title" content="Clinical AI Governance | Physician-as-Pilot Framework" />
+    <meta name="description" content="A regulator-legible clinical AI governance model defining authority, escalation, and auditability before autonomy." />
+    <meta name="keywords" content="clinical AI governance, physician-as-pilot, AI in the loop, AIITL, healthcare AI safety, regulatory compliance, SaMD, medical device regulation, AI escalation logic, clinical authority, healthcare AI audit" />
+    <meta name="author" content="Andy Squire" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://andysquire.ai/clinical-ai-governance" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://andysquire.ai/clinical-ai-governance" />
+    <meta property="og:title" content="Clinical AI Governance | Physician-as-Pilot Framework" />
+    <meta property="og:description" content="A regulator-legible clinical AI governance model defining authority, escalation, and auditability before autonomy." />
+    <meta property="og:image" content="https://andysquire.ai/assets/andy-headshot-BurDoHN4.jpeg" />
+    <meta property="og:site_name" content="Andy Squire - Clinical AI Governance" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://andysquire.ai/clinical-ai-governance" />
+    <meta property="twitter:title" content="Clinical AI Governance | Physician-as-Pilot Framework" />
+    <meta property="twitter:description" content="A regulator-legible clinical AI governance model defining authority, escalation, and auditability before autonomy." />
+    <meta property="twitter:image" content="https://andysquire.ai/assets/andy-headshot-BurDoHN4.jpeg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Clinical AI Governance: The Physician-as-Pilot Model",
+      "description": "A regulator-legible clinical AI governance model defining authority, escalation, and auditability before autonomy.",
+      "author": {
+        "@type": "Person",
+        "name": "Andy Squire",
+        "jobTitle": "Independent author of the Physician-as-Pilot (AIITL) governance framework",
+        "url": "https://andysquire.ai"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Andy Squire"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://andysquire.ai/clinical-ai-governance"
+      },
+      "about": [
+        "Clinical AI governance",
+        "Regulatory safety architecture",
+        "Physician-led AI oversight"
+      ]
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+    </script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        line-height: 1.7;
+        color: #1a1a1a;
+        background: #ffffff;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 24px;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #0d1117;
+        line-height: 1.2;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        color: #0d1117;
+        border-bottom: 2px solid #0891b2;
+        padding-bottom: 8px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+        color: #374151;
+        font-size: 1.1rem;
+      }
+      
+      .intro {
+        font-size: 1.2rem;
+        color: #1f2937;
+        background: #f8fafc;
+        padding: 32px;
+        border-left: 4px solid #0891b2;
+        margin-bottom: 40px;
+      }
+      
+      ul {
+        margin: 20px 0;
+        padding-left: 24px;
+      }
+      
+      li {
+        margin-bottom: 12px;
+        color: #374151;
+        font-size: 1.05rem;
+      }
+      
+      .cta-section {
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        margin-top: 60px;
+        text-align: center;
+      }
+      
+      .cta-section h2 {
+        color: white;
+        border: none;
+        margin-top: 0;
+      }
+      
+      .cta-button {
+        display: inline-block;
+        background: white;
+        color: #0891b2;
+        padding: 16px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      
+      .author-block {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 32px;
+        margin-top: 60px;
+      }
+      
+      .author-block h3 {
+        font-size: 1.1rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+      }
+      
+      .author-name {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #0d1117;
+        margin-bottom: 8px;
+      }
+      
+      .author-title {
+        color: #64748b;
+        margin-bottom: 16px;
+      }
+      
+      .author-statement {
+        font-style: italic;
+        color: #475569;
+        border-left: 3px solid #0891b2;
+        padding-left: 16px;
+        margin-top: 16px;
+      }
+      
+      .topics-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      
+      .topic-tag {
+        background: #e0f2fe;
+        color: #0369a1;
+        padding: 4px 12px;
+        border-radius: 16px;
+        font-size: 0.9rem;
+      }
+      
+      .footer-cta {
+        text-align: center;
+        padding: 40px;
+        background: #f8fafc;
+        margin-top: 60px;
+        border-radius: 12px;
+      }
+      
+      .footer-cta p {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .nav-link {
+        display: inline-block;
+        color: #0891b2;
+        text-decoration: none;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+      
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+      
+      .example-link {
+        color: #0891b2;
+        text-decoration: none;
+      }
+      
+      .example-link:hover {
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 640px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        .container {
+          padding: 40px 16px;
+        }
+        .intro {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Clinical AI Governance: The Physician-as-Pilot Model</h1>
+      
+      <div class="intro">
+        <p style="margin-bottom: 16px;">Clinical AI failures are rarely caused by model performance.</p>
+        <p style="margin-bottom: 16px;">They are caused by unclear authority, weak escalation logic, and absent auditability.</p>
+        <p style="margin-bottom: 16px;">Most AI safety frameworks focus on what the system can do.<br>Regulators care about <strong>who is accountable</strong> when it does it.</p>
+        <p style="margin-bottom: 16px;">The Physician-as-Pilot governance model defines explicit authority boundaries, deterministic escalation pathways, and regulator-legible audit trails for AI deployed in healthcare and home care contexts.</p>
+        <p style="margin-bottom: 0;">This page explains the model, why existing approaches fail, and how governance must be designed before autonomy.</p>
+      </div>
+      
+      <h2>Why Most Clinical AI Governance Fails Regulators</h2>
+      <p>Current approaches break down because they:</p>
+      <ul>
+        <li>Treat "human-in-the-loop" as a UI feature, not a legal authority model</li>
+        <li>Allow AI systems to influence care without defining escalation thresholds</li>
+        <li>Conflate usability, intelligence, and clinical responsibility</li>
+        <li>Rely on post-hoc monitoring instead of pre-emptive constraints</li>
+      </ul>
+      <p>As a result, many systems unintentionally drift into de facto SaMD behavior without the governance structures required to support it.</p>
+      <p><strong>Regulatory risk emerges not from intent, but from ambiguity.</strong></p>
+      
+      <h2>What "Physician-as-Pilot" Means in Practice</h2>
+      <p>The Physician-as-Pilot model assigns continuous clinical authority to a licensed clinician across all deployment phases.</p>
+      <p>AI systems are constrained to:</p>
+      <ul>
+        <li>Protocol-bound roles</li>
+        <li>Non-autonomous execution</li>
+        <li>Deterministic escalation</li>
+        <li>Human override at all times</li>
+      </ul>
+      <p>The AI may assist, observe, summarize, or coordinate — but it <strong>never holds clinical authority</strong>.</p>
+      <p>Authority is explicit, inspectable, and auditable.</p>
+      
+      <h2>Explicit Non-SaMD Boundaries (Phase I)</h2>
+      <p>In Phase I deployments, AI systems are explicitly prohibited from:</p>
+      <ul>
+        <li>Diagnosis</li>
+        <li>Prognosis</li>
+        <li>Treatment recommendation</li>
+        <li>Autonomous clinical decision-making</li>
+      </ul>
+      <p>Permitted behaviors are:</p>
+      <ul>
+        <li>Conversational support</li>
+        <li>Contextual observation</li>
+        <li>Non-medical reminders</li>
+        <li>Structured check-ins</li>
+      </ul>
+      <p>All interpretation and action remain human-executed. This preserves regulatory clarity while enabling safe early deployment.</p>
+      
+      <h2>Deterministic Escalation and Halt Conditions</h2>
+      <p>Escalation is not discretionary or probabilistic.</p>
+      <p>The model defines pre-registered escalation triggers, including:</p>
+      <ul>
+        <li>Consent state changes</li>
+        <li>Boundary ambiguity</li>
+        <li>Context uncertainty</li>
+        <li>Protocol deviation</li>
+        <li>System fault</li>
+      </ul>
+      <p>When thresholds are crossed:</p>
+      <ul>
+        <li>The system escalates</li>
+        <li>Or halts</li>
+        <li>Or disengages</li>
+      </ul>
+      <p>These actions are automatic, logged, and non-negotiable.</p>
+      
+      <h2>Safety OS: Governance as Infrastructure</h2>
+      <p>Governance is not policy. It is runtime infrastructure.</p>
+      <p>The Safety OS enforces:</p>
+      <ul>
+        <li>Consent state management</li>
+        <li>Authority attribution</li>
+        <li>Escalation logic</li>
+        <li>Immutable audit logs</li>
+      </ul>
+      <p>This enables:</p>
+      <ul>
+        <li>Regulatory review</li>
+        <li>Post-market surveillance</li>
+        <li>Incident reconstruction</li>
+        <li>Responsibility attribution</li>
+      </ul>
+      <p><strong>Safety is designed into the system — not layered on afterward.</strong></p>
+      
+      <h2>Phased Regulatory Pathway</h2>
+      <p>The model supports a staged pathway:</p>
+      <ul>
+        <li><strong>Phase I:</strong> Non-medical, non-SaMD AI with explicit governance constraints</li>
+        <li><strong>Phase II:</strong> Clinician-supervised, care-adjacent AI with SaMD-ready controls</li>
+        <li><strong>Phase III:</strong> Regulated clinical AI subject to jurisdictional approval</li>
+      </ul>
+      <p>Progression depends on governance maturity, not technical capability alone.</p>
+      
+      <h2>Example Implementation: MyHealthCanvas</h2>
+      <p><a href="https://myhealthcanvas.com" class="example-link">MyHealthCanvas</a> demonstrates how the Physician-as-Pilot model can be applied in an AI-mediated home care context.</p>
+      <p>It is an illustrative implementation — not a claim of clinical autonomy or regulatory approval.</p>
+      <p>The governance model applies independently of:</p>
+      <ul>
+        <li>Interface</li>
+        <li>Embodiment</li>
+        <li>Brand</li>
+        <li>Deployment environment</li>
+      </ul>
+      
+      <div class="cta-section">
+        <h2>Regulatory Position Paper</h2>
+        <p>For regulators, reviewers, and academic evaluators, the full framework is documented in the position paper.</p>
+        <p>The paper defines:</p>
+        <ul style="text-align: left; max-width: 400px; margin: 20px auto;">
+          <li>Authority boundaries</li>
+          <li>Escalation sequencing</li>
+          <li>Non-SaMD conditions</li>
+          <li>Auditability requirements</li>
+        </ul>
+        <a href="https://patientcentriccare.ai/physician-as-pilot" class="cta-button">Download Position Paper (PDF)</a>
+      </div>
+      
+      <div class="author-block">
+        <h3>Author & Authority</h3>
+        <p class="author-name">Andy Squire</p>
+        <p class="author-title">Independent author of the Physician-as-Pilot (AIITL) governance framework</p>
+        <p class="author-statement">"This site publishes original analysis on clinical AI governance, regulatory safety architecture, and physician-led AI oversight."</p>
+        <div class="topics-list">
+          <span class="topic-tag">Clinical AI governance</span>
+          <span class="topic-tag">Regulatory safety architecture</span>
+          <span class="topic-tag">Physician-led AI oversight</span>
+        </div>
+      </div>
+      
+      <div class="footer-cta">
+        <p>If you are evaluating, regulating, or building clinical AI systems and need regulator-legible governance, this framework is designed for scrutiny.</p>
+        <a href="/" class="nav-link">← Back to AndySquire.AI</a>
+      </div>
+    </div>
+  </body>
+</html>
