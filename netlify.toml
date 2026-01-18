@@ -85,6 +85,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/clinical-ai-governance.html"
+  to = "/clinical-ai-governance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/myhealthcanvas.html"
+  to = "/myhealthcanvas"
+  status = 301
+  force = true
+
 # Clean URL rewrites - serve .html files without extension
 [[redirects]]
   from = "/physician-as-pilot"
@@ -119,6 +131,16 @@
 [[redirects]]
   from = "/impressum"
   to = "/impressum.html"
+  status = 200
+
+[[redirects]]
+  from = "/clinical-ai-governance"
+  to = "/clinical-ai-governance.html"
+  status = 200
+
+[[redirects]]
+  from = "/myhealthcanvas"
+  to = "/myhealthcanvas.html"
   status = 200
 
 # Form handling (if needed for future contact forms)
