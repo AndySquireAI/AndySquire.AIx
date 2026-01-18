@@ -8,15 +8,28 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.andysquire.ai/</loc>
-    <lastmod>2026-01-13</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Clinical AI Governance - NEW -->
+  <url>
+    <loc>https://www.andysquire.ai/clinical-ai-governance</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.andysquire.ai/clinical-ai-governance-ecosystem.png</image:loc>
+      <image:title>Clinical AI Governance Ecosystem for Patient-Facing AI</image:title>
+      <image:caption>Governance progression from non-clinical to SaMD-ready clinical authority model</image:caption>
+    </image:image>
+  </url>
+
   <!-- Physician-as-Pilot Governance Framework -->
   <url>
-    <loc>https://www.andysquire.ai/physician-as-pilot.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/physician-as-pilot</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -28,48 +41,48 @@
 
   <!-- Safety OS Implementation -->
   <url>
-    <loc>https://www.andysquire.ai/safety-os.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/safety-os</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <!-- MyHealthCanvas -->
   <url>
-    <loc>https://www.andysquire.ai/myhealthcanvas.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/myhealthcanvas</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- Mission & Vision -->
   <url>
-    <loc>https://www.andysquire.ai/mission.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/mission</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Traction & Progress -->
   <url>
-    <loc>https://www.andysquire.ai/traction.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/traction</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Investment Opportunity -->
   <url>
-    <loc>https://www.andysquire.ai/investment.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/investment</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- Team -->
   <url>
-    <loc>https://www.andysquire.ai/team.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/team</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -77,29 +90,29 @@
   <!-- eLibrary Index -->
   <url>
     <loc>https://www.andysquire.ai/blog/</loc>
-    <lastmod>2026-01-13</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-new-governance-aiitl-vs-hitl.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/blog/blog-post-new-governance-aiitl-vs-hitl</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.andysquire.ai/blog/how-small-businesses-save-50k-with-ai-agents.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/blog/how-small-businesses-save-50k-with-ai-agents</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.andysquire.ai/blog/the-complete-guide-to-ai-seo.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/blog/the-complete-guide-to-ai-seo</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -107,15 +120,15 @@
   <!-- Investor Resources -->
   <url>
     <loc>https://www.andysquire.ai/investors/</loc>
-    <lastmod>2026-01-13</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- Legal -->
   <url>
-    <loc>https://www.andysquire.ai/impressum.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.andysquire.ai/impressum</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
