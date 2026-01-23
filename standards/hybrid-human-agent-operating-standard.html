@@ -478,6 +478,72 @@
             opacity: 0.7;
         }
 
+        /* Citation Box - styled like PaP page */
+        .cite-box {
+            background: #fffbeb;
+            border-left: 4px solid #d4911f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .cite-box h4 {
+            color: #92400e;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .cite-box .citation {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #1e293b;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        /* Section Navigation */
+        .section-nav {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-nav a {
+            color: #0284c7;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .section-nav a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .section-nav ul {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+
+        /* Footer neutral text */
+        .footer-neutral {
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 1rem auto;
+        }
+
         /* Skip Link for Accessibility */
         .skip-link {
             position: absolute;
@@ -546,15 +612,30 @@
             <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
         </header>
 
+        <!-- Navigation Anchors -->
+        <nav class="section-nav" aria-label="Page sections">
+            <ul>
+                <li><a href="#why">Why this Standard exists</a></li>
+                <li><a href="#addresses">What this Standard addresses</a></li>
+                <li><a href="#what-is">What this Standard is</a></li>
+                <li><a href="#what-is-not">What this Standard is not</a></li>
+                <li><a href="#principles">Core principles</a></li>
+                <li><a href="#artifacts">Core artifacts</a></li>
+                <li><a href="#audience">Who this Standard is for</a></li>
+                <li><a href="#license">License & use</a></li>
+                <li><a href="#annexes">Sector Annexes</a></li>
+            </ul>
+        </nav>
+
         <!-- Section 1: Why this Standard exists -->
-        <section>
+        <section id="why">
             <h2>Why this Standard exists</h2>
             <p>As autonomous AI systems become embedded in high-stakes environments—healthcare, finance, infrastructure, and beyond—organizations face a critical governance gap. Existing frameworks address either human decision-making or AI capabilities in isolation, but provide no structured method for allocating authority between them.</p>
             <p>This Standard exists to close that gap: to provide a rigorous, auditable, and vendor-neutral framework for defining where human authority ends and agent autonomy begins—and how accountability flows across that boundary.</p>
         </section>
 
         <!-- Section 2: What this Standard addresses -->
-        <section>
+        <section id="addresses">
             <h2>What this Standard addresses</h2>
             <p>The Hybrid Human–Agent Operating Standard addresses the operational and governance challenges that arise when humans and AI agents share decision-making authority. Specifically, it provides:</p>
             <ul>
@@ -566,7 +647,7 @@
         </section>
 
         <!-- Section 3: What this Standard is -->
-        <section>
+        <section id="what-is">
             <h2>What this Standard is</h2>
             <p>This is an <strong>operating standard</strong>—a set of principles, artifacts, and governance structures designed to be adopted, adapted, and implemented by organizations deploying human-agent systems. It is:</p>
             <ul>
@@ -578,7 +659,7 @@
         </section>
 
         <!-- Section 4: What this Standard is not -->
-        <section>
+        <section id="what-is-not">
             <h2>What this Standard is not</h2>
             <p>This Standard does not:</p>
             <ul>
@@ -591,7 +672,7 @@
         </section>
 
         <!-- Section 5: Core principles -->
-        <section>
+        <section id="principles">
             <h2>Core principles</h2>
             <ul>
                 <li><strong>Human authority is explicit:</strong> Authority must be consciously allocated, not assumed or inherited</li>
@@ -603,7 +684,7 @@
         </section>
 
         <!-- Section 6: Core artifacts -->
-        <section>
+        <section id="artifacts">
             <h2>Core artifacts</h2>
             <p>The Standard defines four core artifacts that organizations produce when implementing the framework:</p>
             
@@ -617,7 +698,7 @@
         </section>
 
         <!-- Section 7: Who this Standard is for -->
-        <section>
+        <section id="audience">
             <h2>Who this Standard is for</h2>
             <p>This Standard is designed for:</p>
             <ul>
@@ -630,32 +711,38 @@
         </section>
 
         <!-- Section 8: Neutrality & stewardship -->
-        <section>
+        <section id="stewardship">
             <h2>Neutrality & stewardship</h2>
             <p>This Standard is published and maintained by PatientCentricCare.AI as a public good. It is not tied to any specific product, platform, or commercial offering. The Standard's development is guided by principles of transparency, broad applicability, and continuous improvement based on implementation feedback.</p>
             <p>Organizations are encouraged to contribute feedback, case studies, and sector-specific adaptations to strengthen the Standard over time.</p>
         </section>
 
         <!-- Section 9: License & permitted use -->
-        <section>
+        <section id="license">
             <h2>License & permitted use</h2>
             <div class="license-box">
-                <p>This Standard is released under a permissive open license. Organizations may adopt, adapt, and implement the Standard without fee or prior approval. Attribution is required. Commercial use is permitted. <a href="/standards/license-v1.pdf">View full license text (PDF)</a>.</p>
+                <p>This Standard is published under an open license permitting internal and external use, citation, and reference without fee, provided attribution is maintained. Commercial use, implementation, or certification claims require compliance with the licensing terms. <a href="/standards/license-v1.pdf">View full license text (PDF)</a>.</p>
             </div>
         </section>
 
         <!-- Section 10: Versioning & canonical reference -->
-        <section>
+        <section id="versioning">
             <h2>Versioning & canonical reference</h2>
             <p><span class="version-note">v1.0 — stable</span></p>
             <p>This is the canonical reference for Version 1.0 of the Hybrid Human–Agent Operating Standard. Future versions will be published at this location with clear version numbering and change documentation.</p>
             <p>Canonical URL: <code>https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard</code></p>
         </section>
 
+        <!-- How to cite -->
+        <section class="cite-box">
+            <h4>How to cite</h4>
+            <p class="citation">Squire, A. (2026). Hybrid Human–Agent Operating Standard (v1.0). PatientCentricCare.AI. https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard</p>
+        </section>
+
         <!-- Section 11: Sector Annexes -->
-        <section>
-            <h2>Sector Annexes</h2>
-            <p>Sector-specific annexes provide additional guidance for implementing the Standard in regulated industries:</p>
+        <section id="annexes">
+            <h2>Sector Annexes (Non-Normative)</h2>
+            <p>Additional guidance interpreted for specific domains. These do not change the Standard and do not replace domain-specific regulatory frameworks.</p>
             
             <div class="pdf-links">
                 <h3>Download PDF — Sector Annexes</h3>
@@ -669,9 +756,8 @@
     <!-- Footer -->
     <footer role="contentinfo">
         <p class="footer-brand">PatientCentricCare.AI</p>
-        <p>Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
-        <p class="footer-tagline">Empowering Independence. Preserving Dignity.</p>
-        <p class="footer-disclaimer">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p class="footer-neutral">This Standard is published as an open reference for governance of hybrid human–agent systems worldwide. It is not affiliated with any specific implementation or product.</p>
+        <p class="footer-disclaimer">Organizations adopting this Standard remain responsible for compliance with applicable laws and regulations in their domains and jurisdictions.</p>
         <p class="footer-links">
             <a href="/standards/license-v1.pdf">Full License Text</a>
             <span style="opacity: 0.5;">|</span>
