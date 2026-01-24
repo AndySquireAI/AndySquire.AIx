@@ -103,6 +103,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
 # Clean URL rewrites - serve .html files without extension
 [[redirects]]
   from = "/physician-as-pilot"
@@ -152,6 +158,11 @@
 [[redirects]]
   from = "/standards/hybrid-human-agent-operating-standard"
   to = "/standards/hybrid-human-agent-operating-standard.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
   status = 200
 
 # Form handling (if needed for future contact forms)
