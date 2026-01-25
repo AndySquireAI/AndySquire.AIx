@@ -180,3 +180,9 @@
 [build.processing.html]
   pretty_urls = true
 
+
+# Home Companion page
+[[redirects]]
+  from = "/home-companion"
+  to = "/home-companion.html"
+  status = 200

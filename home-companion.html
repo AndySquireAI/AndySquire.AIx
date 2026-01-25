@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Companion | Governance-First AI Companionship for Seniors | PatientCentricCare.AI</title>
+    <meta name="description" content="Home Companion is a governance-first, non-medical AI companion for seniors aging safely at home. Voice-first design with caregiver-in-the-loop escalation.">
+    <meta name="keywords" content="Home Companion, AI companionship, seniors, aging in place, voice AI, non-medical AI, caregiver support, PatientCentricCare, Andy Squire">
+    <meta name="author" content="Andy Squire, PatientCentricCare.AI">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.andysquire.ai/home-companion">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.andysquire.ai/home-companion">
+    <meta property="og:title" content="Home Companion | Governance-First AI Companionship">
+    <meta property="og:description" content="Non-medical, voice-first AI designed to provide companionship, reassurance, and human escalation for seniors aging at home.">
+    <meta property="og:image" content="https://www.andysquire.ai/images/logo_full_with_taglines.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Andy Squire">
+    <meta property="article:published_time" content="2026-01-25T00:00:00Z">
+    <meta property="article:section" content="Healthcare AI Products">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AndySquireAI">
+    <meta name="twitter:creator" content="@AndySquireAI">
+    <meta name="twitter:url" content="https://www.andysquire.ai/home-companion">
+    <meta name="twitter:title" content="Home Companion | Governance-First AI Companionship">
+    <meta name="twitter:description" content="Non-medical, voice-first AI designed to provide companionship, reassurance, and human escalation for seniors aging at home.">
+    <meta name="twitter:image" content="https://www.andysquire.ai/images/logo_full_with_taglines.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6CNLJJJ8WQ');
+    </script>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        const dropdown = document.querySelector('.nav-dropdown');
+                        if (dropdown) {
+                            dropdown.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Home Companion",
+      "description": "Governance-first, non-medical AI companion for seniors aging safely at home. Voice-first design with caregiver-in-the-loop escalation.",
+      "brand": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI"
+      },
+      "image": "https://www.andysquire.ai/images/logo_full_with_taglines.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.andysquire.ai/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Home Companion",
+        "item": "https://www.andysquire.ai/home-companion"
+      }]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: #d4911f;
+            color: white;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: #0d9488;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s;
+            list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .nav-dropdown-menu li {
+            padding: 0;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0d9488;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section - Dark blue like PCC.AI */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-logo {
+            max-width: 350px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero .value-statement {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #e2e8f0;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background: #5a8f5a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        
+        .cta-primary:hover {
+            background: #4a7f4a;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid #5a8f5a;
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            background: #5a8f5a;
+        }
+        
+        /* Content Sections */
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #5a8f5a;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Two Column Section */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            font-size: 1.1rem;
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #5a8f5a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Definition Box - Sage green accent */
+        .definition-box {
+            background: #f0f7f0;
+            border-left: 4px solid #5a8f5a;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .definition-box p {
+            margin-bottom: 0;
+            font-size: 1.15rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        /* Flight Recorder Section */
+        .flight-recorder {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .flight-recorder h3 {
+            color: #0f172a;
+        }
+        
+        .diagram-placeholder {
+            background: #e2e8f0;
+            border: 2px dashed #94a3b8;
+            padding: 3rem;
+            text-align: center;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            color: #64748b;
+            font-style: italic;
+        }
+        
+        /* Phase Cards */
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 900px) {
+            .phase-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .phase-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-top: 4px solid #5a8f5a;
+        }
+        
+        .phase-card.future {
+            border-top-color: #94a3b8;
+            opacity: 0.85;
+        }
+        
+        .phase-card h4 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .phase-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .phase-card li {
+            font-size: 1rem;
+            padding: 0.4rem 0;
+            color: #475569;
+        }
+        
+        .phase-note {
+            text-align: center;
+            font-style: italic;
+            color: #64748b;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 600px) {
+            .icon-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .icon-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .icon-item .icon {
+            font-size: 2rem;
+            color: #5a8f5a;
+        }
+        
+        .icon-item p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+        
+        /* Downloads Section */
+        .downloads-section {
+            background: #f0f7f0;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .download-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .download-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #0f172a;
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .download-item:hover {
+            background: #5a8f5a;
+            color: white;
+            border-color: #5a8f5a;
+        }
+        
+        .download-item .icon {
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-disclaimer p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #94a3b8;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem;
+            }
+            
+            .nav-dropdown.active .nav-dropdown-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-logo {
+                max-width: 250px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -40px; left: 0; background: #0f172a; color: white; padding: 8px; z-index: 100;">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo-container">
+                <img src="/favicon-32x32.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion" style="color: #5a8f5a;">Home Companion</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="/images/logo_full_with_taglines.png" alt="Home Companion - Independence, dignity, and peace of mind" class="hero-logo">
+            <h1>Home Companion</h1>
+            <p class="subtitle">Governance-first AI companionship for seniors aging safely at home</p>
+            <p class="value-statement">Non-medical, voice-first AI designed to provide companionship, reassurance, and human escalation - never medical advice.</p>
+            <div class="hero-ctas">
+                <a href="/downloads/home-companion-overview.pdf" class="cta-primary" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Overview PDF', value: 10});">Download Overview</a>
+                <a href="#roadmap" class="cta-secondary">View Governance Roadmap</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- What Home Companion Is -->
+        <section>
+            <h2>What Home Companion Is</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Phase 1: Non-Medical AI</h3>
+                    <p>Home Companion is intentionally designed as a Phase 1, non-medical, non-SaMD AI system. It operates with a caregiver-in-the-loop by design, supporting seniors living independently and aging in place.</p>
+                    <p>Every interaction is governed by explicit safety boundaries, ensuring that medical advice is never provided and escalation occurs only with user confirmation.</p>
+                </div>
+                <div>
+                    <ul class="feature-list">
+                        <li>Conversational companionship and reassurance</li>
+                        <li>Explicit refusal of medical advice</li>
+                        <li>User-confirmed escalation only</li>
+                        <li>Multilingual, voice-first interface</li>
+                        <li>Always-on audit logging</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Governance Comes First -->
+        <section>
+            <h2>Why Governance Comes First</h2>
+            <div class="definition-box">
+                <p><strong>Home Companion is intentionally designed outside clinical claims while embedding governance, consent, escalation, and accountability from day one.</strong></p>
+            </div>
+            <ul class="feature-list">
+                <li>Safety boundaries enforced at system level</li>
+                <li>No diagnosis, treatment, or clinical decision-making</li>
+                <li>Designed for post-incident reconstructability</li>
+            </ul>
+        </section>
+
+        <!-- Safety OS Flight Recorder -->
+        <section>
+            <div class="flight-recorder">
+                <h2>Safety OS - "Flight Recorder" Concept</h2>
+                <div class="diagram-placeholder">
+                    Safety OS Flight Recorder (Illustrative)
+                </div>
+                <div class="two-column">
+                    <div>
+                        <ul class="feature-list">
+                            <li>Every interaction logged</li>
+                            <li>Boundary events, refusals, and escalations recorded</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="feature-list">
+                            <li>Immutable, reviewable audit trail</li>
+                            <li>Supports caregiver, clinician, and regulator trust</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phased Roadmap -->
+        <section id="roadmap">
+            <h2>Phased Roadmap</h2>
+            <div class="phase-cards">
+                <div class="phase-card">
+                    <h4>Phase 1 - Home Companion (Today)</h4>
+                    <ul>
+                        <li>Non-medical</li>
+                        <li>Caregiver-in-the-loop</li>
+                        <li>Audit-first deployment</li>
+                    </ul>
+                </div>
+                <div class="phase-card future">
+                    <h4>Phase 2 - SaMD-Ready / Physician-as-Pilot</h4>
+                    <ul>
+                        <li>Governance elevated to clinical-grade</li>
+                        <li>Physician-supervised workflows</li>
+                        <li>No autonomous clinical authority</li>
+                    </ul>
+                </div>
+                <div class="phase-card future">
+                    <h4>Phase 3 - Regulated SaMD / Embodied Care</h4>
+                    <ul>
+                        <li>FDA / EU MDR pathways</li>
+                        <li>Modular SaMD plug-ins</li>
+                        <li>Physical embodiments inherit proven governance</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="phase-note">Capabilities advance only after governance maturity is demonstrated</p>
+        </section>
+
+        <!-- Who It's For -->
+        <section>
+            <h2>Who It's For</h2>
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <span class="icon">👤</span>
+                    <p><strong>Seniors living alone</strong> - seeking companionship and reassurance without complexity</p>
+                </div>
+                <div class="icon-item">
+                    <span class="icon">👨‍👩‍👧</span>
+                    <p><strong>Families and caregivers</strong> - wanting peace of mind with appropriate escalation</p>
+                </div>
+                <div class="icon-item">
+                    <span class="icon">🏥</span>
+                    <p><strong>Health systems</strong> - seeking safe AI entry into the home environment</p>
+                </div>
+                <div class="icon-item">
+                    <span class="icon">📋</span>
+                    <p><strong>Policymakers and regulators</strong> - evaluating responsible AI deployment models</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relationship to PatientCentricCare.AI -->
+        <section>
+            <h2>Relationship to PatientCentricCare.AI</h2>
+            <div class="highlight-box">
+                <p>Home Companion is a Phase 1 product within the PatientCentricCare.AI ecosystem. Safety OS is the shared governance foundation. Physician-as-Pilot is not active in Phase 1. The governance-first architecture spans all phases.</p>
+            </div>
+        </section>
+
+        <!-- Downloads -->
+        <section>
+            <div class="downloads-section">
+                <h2>Downloads and Resources</h2>
+                <div class="download-items">
+                    <a href="/downloads/home-companion-pitch.pdf" class="download-item" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Pitch PDF', value: 15});">
+                        <span class="icon">📄</span>
+                        <span>Home Companion Pitch (PDF)</span>
+                    </a>
+                    <a href="/downloads/governance-safety-os-overview.pdf" class="download-item" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Governance Overview', value: 10});">
+                        <span class="icon">📄</span>
+                        <span>Governance and Safety OS Overview (PDF)</span>
+                    </a>
+                    <a href="/downloads/phased-roadmap.pdf" class="download-item" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Phased Roadmap', value: 5});">
+                        <span class="icon">📄</span>
+                        <span>Phased Roadmap (One-page)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with Disclaimer -->
+    <footer>
+        <div class="footer-disclaimer">
+            <p><strong>Important Notice</strong></p>
+            <p>Home Companion is not a medical device.</p>
+            <p>Does not provide diagnosis or treatment.</p>
+            <p>Escalation occurs only with user confirmation.</p>
+            <p>Governance standards published as open reference.</p>
+        </div>
+        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
+        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
+        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p style="margin-bottom: 1.5rem;"><a href="/impressum" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+        <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">Physician-as-Pilot™ and Safety OS™ are proprietary frameworks of PatientCentricCare.AI</p>
+    </footer>
+    
+    <!-- GA4 Event Tracking -->
+    <script>
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Navigation clicks
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                sendGa4Event('navigation_click', {
+                    link_url: href,
+                    link_text: linkText,
+                    link_location: 'main_nav'
+                });
+            });
+        });
+
+        // Contact button clicks
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // Scroll depth tracking
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold,
+                    page: 'home_companion'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
