@@ -508,6 +508,92 @@
             margin: 0 auto 1rem auto;
         }
 
+        /* Governance vs Execution Boundary Callout */
+        .boundary-callout {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .boundary-callout h3 {
+            color: #92400e;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .boundary-callout p {
+            color: #78350f;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .boundary-callout p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Necessary-but-not-sufficient Statement */
+        .necessary-statement {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            color: #166534;
+            font-size: 0.95rem;
+        }
+
+        /* Playbook Section */
+        .playbook-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .playbook-section h2 {
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .playbook-section ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .playbook-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .playbook-note {
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .playbook-cta {
+            text-align: center;
+        }
+
+        .playbook-button {
+            display: inline-block;
+            background: #E6A23C;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .playbook-button:hover {
+            background: #d4911f;
+            color: white;
+        }
+
         /* Skip Link for Accessibility */
         .skip-link {
             position: absolute;
@@ -576,6 +662,14 @@
             <span class="version-tag">Version 1.0</span>
             <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
         </header>
+
+        <!-- Governance vs Execution Boundary Callout -->
+        <aside class="boundary-callout">
+            <h3>Governance vs Execution Boundary</h3>
+            <p>This Standard defines governance invariants, authority boundaries, and accountability requirements for Hybrid Human-Agent systems.</p>
+            <p>It does not, by itself, define how those requirements are executed in real-world systems.</p>
+            <p>Safe and impactful implementation requires this Standard to be paired with a disciplined execution playbook that governs problem framing, role assignment, validation, deployment, and continuous monitoring.</p>
+        </aside>
 
         <!-- Section 1: Why this Standard exists -->
         <section id="why">
@@ -650,6 +744,7 @@
         <!-- Section 7: Who this Standard is for -->
         <section id="audience">
             <h2>Who this Standard is for</h2>
+            <p class="necessary-statement">Adoption of this Standard is a necessary governance condition, but it is not sufficient on its own to ensure safe, effective, or responsible Hybrid Human-Agent implementation.</p>
             <p>This Standard is designed for:</p>
             <ul>
                 <li><strong>AI Governance Leaders:</strong> Establishing organizational policies for human-agent systems</li>
@@ -698,6 +793,24 @@
                 <h3>Download PDF — Sector Annexes</h3>
                 <a href="/standards/annexes/CX_Sector_Annex_v1.pdf" class="pdf-link" aria-label="Download CX Sector Annex v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards Annexes', 'event_label': 'CX Sector Annex v1', 'document_type': 'sector_annex', 'document_name': 'cx_sector_annex', 'value': 5});">CX Sector Annex v1</a>
                 <a href="/standards/annexes/Healthcare_Sector_Annex_v1.pdf" class="pdf-link" aria-label="Download Healthcare Sector Annex v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards Annexes', 'event_label': 'Healthcare Sector Annex v1', 'document_type': 'sector_annex', 'document_name': 'healthcare_sector_annex', 'value': 15});">Healthcare Sector Annex v1</a>
+            </div>
+        </section>
+
+        <!-- Companion Execution Playbook Section -->
+        <section id="playbook" class="playbook-section">
+            <h2>Companion Execution Playbook</h2>
+            <p>The Hybrid Human-Agent Operating Standard establishes non-negotiable governance and accountability constraints.</p>
+            <p>The <strong>Non-Naive Hybrid Human-AI Execution Playbook</strong> defines the operational practices required to implement those constraints in real systems, including:</p>
+            <ul>
+                <li>Human role design and decision ownership</li>
+                <li>Phase-gated Hybrid Human-AI workflows</li>
+                <li>Validation and testing requirements</li>
+                <li>Controlled deployment patterns</li>
+                <li>Monitoring, escalation, and rollback mechanisms</li>
+            </ul>
+            <p class="playbook-note">The Standard and the Playbook are designed to be used together.</p>
+            <div class="playbook-cta">
+                <a href="/standards/Non-Naive-Hybrid-Human-AI-Execution-Playbook.pdf" class="playbook-button" aria-label="Download the Execution Playbook PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Execution Playbook', 'document_type': 'playbook', 'document_name': 'execution_playbook', 'value': 15});">Download the Execution Playbook (PDF)</a>
             </div>
         </section>
 
