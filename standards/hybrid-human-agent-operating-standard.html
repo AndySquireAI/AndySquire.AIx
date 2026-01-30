@@ -336,22 +336,30 @@
 
         /* Safety OS Hero Section */
         .safety-os-hero {
-            background: linear-gradient(135deg, #0f4c5c 0%, #0d9488 100%);
+            background: #f0fdfa;
+            border: 2px solid #0d9488;
             border-radius: 12px;
             padding: 2.5rem;
             margin-bottom: 2.5rem;
-            color: white;
         }
 
         .safety-os-hero h2 {
             font-size: 1.6rem;
             margin-bottom: 0.5rem;
-            color: white;
+            color: #0f4c5c;
+        }
+
+        .safety-os-hero .gateway-summary {
+            font-size: 1rem;
+            color: #134e4a;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            font-style: italic;
         }
 
         .safety-os-hero .hero-subtitle {
             font-size: 1rem;
-            color: white;
+            color: #134e4a;
             margin-bottom: 1.5rem;
             font-style: italic;
         }
@@ -360,7 +368,7 @@
             font-size: 0.95rem;
             line-height: 1.7;
             margin-bottom: 1.5rem;
-            color: white;
+            color: #134e4a;
         }
 
         .safety-os-hero .hero-cta {
@@ -408,6 +416,15 @@
             width: 100%;
             max-width: 400px;
             cursor: default;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .ecosystem-icon {
+            font-size: 1.1rem;
+            opacity: 0.7;
         }
 
         .ecosystem-box.standard {
@@ -750,6 +767,46 @@
             outline: 2px solid #0284c7;
             outline-offset: 2px;
         }
+
+        /* Related Standards Section */
+        .related-standards {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .related-standards h2 {
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .related-standards ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .related-standards li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .related-standards a {
+            color: #0d9488;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .related-standards a:hover {
+            text-decoration: underline;
+        }
+
+        .related-note {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -801,7 +858,7 @@
         <!-- Safety OS Hero Section -->
         <section class="safety-os-hero">
             <h2>Safety OS - A Governed AI Execution Model</h2>
-            <p class="hero-subtitle">Operationalizing governance invariants into enacted, runtime controls for hybrid human-agent systems</p>
+            <p class="gateway-summary">Safety OS operationalizes this Standard by embedding governance directly into AI runtime controls — making authority boundaries enforceable and system behaviour auditable.</p>
             <p>Where the Operating Standard defines principles and accountability constraints, Safety OS provides the execution model that turns those constraints into enforceable system behavior, auditability, authority boundaries, and risk controls. This model is essential to implement the Standard in real systems - particularly in regulated, high-stakes environments such as healthcare, finance, and critical infrastructure.</p>
             <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="hero-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Execution Model', 'document_type': 'execution_model', 'document_name': 'safety_os_execution_model', 'value': 20});">Download Safety OS Execution Model (PDF)</a>
         </section>
@@ -810,13 +867,13 @@
         <section class="ecosystem-diagram">
             <h3>Standards Ecosystem</h3>
             <div class="ecosystem-flow">
-                <div class="ecosystem-box standard">Hybrid Human-Agent Operating Standard</div>
+                <div class="ecosystem-box standard"><span class="ecosystem-icon">📄</span> Hybrid Human-Agent Operating Standard</div>
                 <span class="ecosystem-label">principles + governance invariants</span>
                 <span class="ecosystem-arrow">↓</span>
-                <div class="ecosystem-box safety-os">Safety OS - A Governed AI Execution Model</div>
+                <div class="ecosystem-box safety-os"><span class="ecosystem-icon">⚙️</span> Safety OS - A Governed AI Execution Model</div>
                 <span class="ecosystem-label">operational constraints + enactable controls (enforced at runtime)</span>
                 <span class="ecosystem-arrow">↓</span>
-                <div class="ecosystem-box playbook">Execution Playbook</div>
+                <div class="ecosystem-box playbook"><span class="ecosystem-icon">☑️</span> Execution Playbook</div>
                 <span class="ecosystem-label">practices + validation + monitoring</span>
             </div>
         </section>
@@ -824,8 +881,8 @@
         <!-- Governance vs Execution Boundary Callout -->
         <aside class="boundary-callout">
             <h3>Governance vs Execution Boundary</h3>
-            <p>This Standard defines governance invariants, authority boundaries, and accountability requirements for Hybrid Human-Agent systems.</p>
-            <p>It does not, by itself, define how those requirements are executed in real-world systems.</p>
+            <p><strong>Principles define the ‘what’ — Safety OS defines the ‘how.’</strong></p>
+            <p>This Standard defines governance invariants, authority boundaries, and accountability requirements for Hybrid Human-Agent systems. It does not, by itself, define how those requirements are executed in real-world systems.</p>
             <p>Safe and impactful implementation requires this Standard to be paired with a disciplined execution playbook that governs problem framing, role assignment, validation, deployment, and continuous monitoring.</p>
             
             <h3>Why This Standard Goes Beyond Traditional Operating Models</h3>
@@ -838,7 +895,7 @@
             <h2>Why this Standard exists</h2>
             <p>As autonomous AI systems become embedded in high-stakes environments - healthcare, finance, infrastructure, and beyond - organizations face a critical governance gap. Existing frameworks address either human decision-making or AI capabilities in isolation, but provide no structured method for allocating authority between them.</p>
             <p>This Standard exists to close that gap: to provide a rigorous, auditable, and vendor-neutral framework for defining where human authority ends and agent autonomy begins - and how accountability flows across that boundary.</p>
-            <p>To support implementation of this Standard, we adopt the <strong>Safety OS - A Governed AI Execution Model</strong>, a governance-first execution architecture that enforces authority, escalation, consent, and auditability at runtime (not just by policy). This model bridges from principles to practical practices required for safe, accountable hybrid human-agent operations.</p>
+            
         </section>
 
         <!-- Section 2: What this Standard addresses -->
@@ -965,8 +1022,7 @@
         <section id="playbook" class="playbook-section">
             <h2>Companion Execution Playbook</h2>
             <p>This Standard is designed to be used with execution artifacts that implement its principles.</p>
-            <p><strong>Safety OS - A Governed AI Execution Model</strong> provides a canonical, phased roadmap for realizing the governance invariants defined here.</p>
-            <p>The <strong>Execution Playbook</strong> expands on that model with detailed workflows, validation practices, and monitoring requirements, including:</p>
+            <p>The <strong>Execution Playbook</strong> provides detailed workflows, validation practices, and monitoring requirements, including:</p>
             <ul>
                 <li>Human role design and decision ownership</li>
                 <li>Phase-gated Hybrid Human-AI workflows</li>
@@ -986,6 +1042,19 @@
             <div class="playbook-cta">
                 <a href="/standards/Non-Naive-Hybrid-Human-AI-Execution-Playbook.pdf" class="playbook-button" aria-label="Download the Execution Playbook PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Execution Playbook', 'document_type': 'playbook', 'document_name': 'execution_playbook', 'value': 15});">Download the Execution Playbook (PDF)</a>
             </div>
+        </section>
+
+        <!-- Related Standards Section -->
+        <section id="related-standards" class="related-standards">
+            <h2>Related Standards & Regulatory Context</h2>
+            <p>This Standard is designed to complement and align with existing regulatory frameworks and international AI governance principles:</p>
+            <ul>
+                <li><a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer">EU AI Act</a> — European Union’s comprehensive AI regulation establishing risk-based requirements for AI systems</li>
+                <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI Risk Management Framework</a> — U.S. National Institute of Standards and Technology guidance for managing AI risks</li>
+                <li><a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener noreferrer">OECD AI Principles</a> — International principles for responsible stewardship of trustworthy AI</li>
+                <li><a href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener noreferrer">ISO/IEC 42001</a> — International standard for AI management systems</li>
+            </ul>
+            <p class="related-note">This Standard does not replace these frameworks but provides operational governance structures that support compliance with their requirements.</p>
         </section>
 
     </main>
