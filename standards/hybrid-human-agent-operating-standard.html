@@ -823,6 +823,38 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        /* Diagram Intro */
+        .diagram-intro {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .diagram-intro p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .diagram-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .diagram-intro .inline-link {
+            color: #0d9488;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #0d9488;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .diagram-intro .inline-link:hover {
+            color: #0f766e;
+            border-color: #0f766e;
+        }
+
         .bridge-text {
             font-size: 1rem;
             color: #334155;
@@ -980,6 +1012,13 @@
             <span class="version-tag">Version 1.0</span>
             <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
         </header>
+
+        <!-- Diagram Intro -->
+        <div class="diagram-intro">
+            <p>This standard is domain-agnostic by design, with healthcare and CX represented as annexed applications of this same governance core.</p>
+            <p>The phases referenced below reflect governance maturity, not product capability or medical intent. Progression occurs only when authority, consent, escalation, and auditability are proven during live system operation.</p>
+            <p>For more details on these specific Phases I, II, III see the <a href="/physician-as-pilot#roadmap" class="inline-link">Illustrative Governance Roadmap</a>.</p>
+        </div>
 
         <!-- Hero Visual -->
         <section class="hero-visual">
