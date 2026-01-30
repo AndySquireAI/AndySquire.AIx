@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hybrid Human–Agent Operating Standard — v1.0</title>
+    <title>Hybrid Human-Agent Operating Standard - v1.0</title>
     <meta name="description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
     <meta name="keywords" content="human-agent operating standard, AI governance, decision authority, autonomy allocation, accountability framework, AI safety, vendor-neutral standard">
     <meta name="author" content="PatientCentricCare.AI">
@@ -13,7 +13,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard">
-    <meta property="og:title" content="Hybrid Human–Agent Operating Standard — v1.0">
+    <meta property="og:title" content="Hybrid Human-Agent Operating Standard - v1.0">
     <meta property="og:description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
     <meta property="og:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
     <meta property="og:site_name" content="PatientCentricCare.AI">
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AndySquireAI">
     <meta name="twitter:url" content="https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard">
-    <meta name="twitter:title" content="Hybrid Human–Agent Operating Standard — v1.0">
+    <meta name="twitter:title" content="Hybrid Human-Agent Operating Standard - v1.0">
     <meta name="twitter:description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
     <meta name="twitter:image" content="https://www.andysquire.ai/og-image-optimized.png?v=2">
 
@@ -51,7 +51,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Hybrid Human–Agent Operating Standard — Version 1.0",
+      "headline": "Hybrid Human-Agent Operating Standard - Version 1.0",
       "description": "A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.",
       "image": "https://www.andysquire.ai/og-image-optimized.png",
       "author": {
@@ -68,7 +68,7 @@
         }
       },
       "datePublished": "2026-01-23",
-      "dateModified": "2026-01-23",
+      "dateModified": "2026-01-30",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard"
@@ -93,7 +93,7 @@
       },{
         "@type": "ListItem",
         "position": 3,
-        "name": "Hybrid Human–Agent Operating Standard",
+        "name": "Hybrid Human-Agent Operating Standard",
         "item": "https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard"
       }]
     }
@@ -305,30 +305,135 @@
 
         /* Header Section */
         .standard-header {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e2e8f0;
         }
 
         .standard-header h1 {
             font-size: 2rem;
-            font-weight: 700;
             color: #0f172a;
             margin-bottom: 0.5rem;
-            line-height: 1.3;
+            line-height: 1.2;
         }
 
         .version-tag {
             display: inline-block;
-            font-size: 0.9rem;
-            color: #64748b;
+            background: #0d9488;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* Safety OS Hero Section */
+        .safety-os-hero {
+            background: linear-gradient(135deg, #0f4c5c 0%, #0d9488 100%);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            color: white;
+        }
+
+        .safety-os-hero h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .safety-os-hero .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .safety-os-hero p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .safety-os-hero .hero-cta {
+            display: inline-block;
+            background: #E6A23C;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .safety-os-hero .hero-cta:hover {
+            background: #d4911f;
+        }
+
+        /* Standards Ecosystem Diagram */
+        .ecosystem-diagram {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .ecosystem-diagram h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
             margin-bottom: 1.5rem;
         }
 
-        .standard-header .lead {
-            font-size: 1.1rem;
-            color: #475569;
-            line-height: 1.7;
+        .ecosystem-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ecosystem-box {
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .ecosystem-box.standard {
+            background: #0f172a;
+            color: white;
+        }
+
+        .ecosystem-box.safety-os {
+            background: #0d9488;
+            color: white;
+        }
+
+        .ecosystem-box.playbook {
+            background: #E6A23C;
+            color: white;
+        }
+
+        .ecosystem-arrow {
+            font-size: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .ecosystem-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-style: italic;
         }
 
         /* Sections */
@@ -337,12 +442,11 @@
         }
 
         section h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.4rem;
             color: #0f172a;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid #0d9488;
         }
 
         section p {
@@ -360,42 +464,49 @@
             color: #334155;
         }
 
+        section li strong {
+            color: #0f172a;
+        }
+
         /* PDF Links */
         .pdf-links {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
+            margin-top: 1.5rem;
         }
 
         .pdf-links h3 {
             font-size: 1rem;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 1rem;
+            color: #475569;
+            margin-bottom: 0.75rem;
         }
 
         .pdf-link {
-            display: block;
-            padding: 0.75rem 1rem;
-            margin-bottom: 0.5rem;
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            color: #0369a1;
+            display: inline-block;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: background 0.3s;
         }
 
         .pdf-link:hover {
-            background: #f0f9ff;
-            border-color: #0284c7;
+            background: #e2e8f0;
         }
 
-        .pdf-link:last-child {
+        /* License Box */
+        .license-box {
+            background: #f8fafc;
+            border-left: 4px solid #0d9488;
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .license-box p {
             margin-bottom: 0;
+            font-size: 0.95rem;
         }
 
         /* Version Note */
@@ -406,62 +517,59 @@
             padding: 0.25rem 0.75rem;
             border-radius: 4px;
             font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* License Box */
-        .license-box {
-            background: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .license-box p {
-            margin: 0;
-            color: #92400e;
-            font-size: 0.95rem;
-        }
-
-        .license-box a {
-            color: #b45309;
             font-weight: 600;
+        }
+
+        /* Citation Box */
+        .cite-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cite-box h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .citation {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            word-break: break-word;
+        }
+
+        .citation-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-style: italic;
         }
 
         /* Footer */
         footer {
             background: #0f172a;
             color: white;
+            padding: 2rem;
             text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            margin-bottom: 1rem;
-        }
-
-        footer a {
-            color: #60a5fa;
-            text-decoration: underline;
         }
 
         .footer-brand {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
-        }
-
-        .footer-tagline {
-            font-size: 1.1rem;
-            color: #fbbf24;
-            font-style: italic;
+            margin-bottom: 0.5rem;
         }
 
         .footer-disclaimer {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             opacity: 0.8;
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto 1rem auto;
         }
 
@@ -470,34 +578,25 @@
         }
 
         .footer-links a {
+            color: #0d9488;
+            text-decoration: none;
             margin: 0 0.5rem;
         }
 
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
         .footer-copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
             font-size: 0.85rem;
-            opacity: 0.7;
-        }
-
-        /* Citation Box - styled like PaP page */
-        .cite-box {
-            background: #fffbeb;
-            border-left: 4px solid #d4911f;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .cite-box h4 {
-            color: #92400e;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .cite-box .citation {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-            color: #1e293b;
-            line-height: 1.6;
             word-break: break-word;
         }
 
@@ -587,11 +686,49 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
+            margin: 0.5rem;
         }
 
         .playbook-button:hover {
             background: #d4911f;
             color: white;
+        }
+
+        /* Safety OS Callout Box */
+        .safety-os-callout {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+            border: 2px solid #0d9488;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .safety-os-callout h4 {
+            color: #0f4c5c;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .safety-os-callout p {
+            color: #134e4a;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .safety-os-callout .callout-cta {
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .safety-os-callout .callout-cta:hover {
+            background: #0f766e;
         }
 
         /* Skip Link for Accessibility */
@@ -658,10 +795,33 @@
     <main id="main-content" role="main">
         <!-- Header -->
         <header class="standard-header">
-            <h1>Hybrid Human–Agent Operating Standard</h1>
+            <h1>Hybrid Human-Agent Operating Standard</h1>
             <span class="version-tag">Version 1.0</span>
             <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
         </header>
+
+        <!-- Safety OS Hero Section -->
+        <section class="safety-os-hero">
+            <h2>Safety OS - A Governed AI Execution Model</h2>
+            <p class="hero-subtitle">Operationalizing governance invariants into enacted, runtime controls for hybrid human-agent systems</p>
+            <p>Where the Operating Standard defines principles and accountability constraints, Safety OS provides the execution model that turns those constraints into enforceable system behavior, auditability, authority boundaries, and risk controls. This model is essential to implement the Standard in real systems - particularly in regulated, high-stakes environments such as healthcare, finance, and critical infrastructure.</p>
+            <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="hero-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Execution Model', 'document_type': 'execution_model', 'document_name': 'safety_os_execution_model', 'value': 20});">Download Safety OS Execution Model (PDF)</a>
+        </section>
+
+        <!-- Standards Ecosystem Diagram -->
+        <section class="ecosystem-diagram">
+            <h3>Standards Ecosystem</h3>
+            <div class="ecosystem-flow">
+                <div class="ecosystem-box standard">Hybrid Human-Agent Operating Standard</div>
+                <span class="ecosystem-label">principles + governance invariants</span>
+                <span class="ecosystem-arrow">↓</span>
+                <div class="ecosystem-box safety-os">Safety OS - A Governed AI Execution Model</div>
+                <span class="ecosystem-label">operational constraints + enactable controls (enforced at runtime)</span>
+                <span class="ecosystem-arrow">↓</span>
+                <div class="ecosystem-box playbook">Execution Playbook</div>
+                <span class="ecosystem-label">practices + validation + monitoring</span>
+            </div>
+        </section>
 
         <!-- Governance vs Execution Boundary Callout -->
         <aside class="boundary-callout">
@@ -672,32 +832,33 @@
             
             <h3>Why This Standard Goes Beyond Traditional Operating Models</h3>
             <p>Most operating models were designed for a world in which cognition and judgment resided exclusively with humans. This Standard assumes that condition no longer holds.</p>
-            <p>By explicitly governing Human–AI mediated decision logic, this Standard defines accountability, authority, and trust boundaries that traditional operating models leave implicit. It is therefore not a replacement for operating model design, but an advanced governance layer required for safe, scalable AI-enabled value creation.</p>
+            <p>By explicitly governing Human-AI mediated decision logic, this Standard defines accountability, authority, and trust boundaries that traditional operating models leave implicit. It is therefore not a replacement for operating model design, but an advanced governance layer required for safe, scalable AI-enabled value creation.</p>
         </aside>
 
         <!-- Section 1: Why this Standard exists -->
         <section id="why">
             <h2>Why this Standard exists</h2>
-            <p>As autonomous AI systems become embedded in high-stakes environments—healthcare, finance, infrastructure, and beyond—organizations face a critical governance gap. Existing frameworks address either human decision-making or AI capabilities in isolation, but provide no structured method for allocating authority between them.</p>
-            <p>This Standard exists to close that gap: to provide a rigorous, auditable, and vendor-neutral framework for defining where human authority ends and agent autonomy begins—and how accountability flows across that boundary.</p>
+            <p>As autonomous AI systems become embedded in high-stakes environments - healthcare, finance, infrastructure, and beyond - organizations face a critical governance gap. Existing frameworks address either human decision-making or AI capabilities in isolation, but provide no structured method for allocating authority between them.</p>
+            <p>This Standard exists to close that gap: to provide a rigorous, auditable, and vendor-neutral framework for defining where human authority ends and agent autonomy begins - and how accountability flows across that boundary.</p>
+            <p>To support implementation of this Standard, we adopt the <strong>Safety OS - A Governed AI Execution Model</strong>, a governance-first execution architecture that enforces authority, escalation, consent, and auditability at runtime (not just by policy). This model bridges from principles to practical practices required for safe, accountable hybrid human-agent operations.</p>
         </section>
 
         <!-- Section 2: What this Standard addresses -->
         <section id="addresses">
             <h2>What this Standard addresses</h2>
-            <p>The Hybrid Human–Agent Operating Standard addresses the operational and governance challenges that arise when humans and AI agents share decision-making authority. Specifically, it provides:</p>
+            <p>The Hybrid Human-Agent Operating Standard addresses the operational and governance challenges that arise when humans and AI agents share decision-making authority. Specifically, it provides:</p>
             <ul>
                 <li>A structured method for inventorying decisions within a system or workflow</li>
                 <li>A framework for allocating autonomy levels to each decision type</li>
                 <li>Clear accountability and escalation pathways when boundaries are crossed</li>
-                <li>Governance infrastructure requirements for auditability and compliance</li>
+                <li>Governance infrastructure requirements for auditability and compliance (operational execution model)</li>
             </ul>
         </section>
 
         <!-- Section 3: What this Standard is -->
         <section id="what-is">
             <h2>What this Standard is</h2>
-            <p>This is an <strong>operating standard</strong>—a set of principles, artifacts, and governance structures designed to be adopted, adapted, and implemented by organizations deploying human-agent systems. It is:</p>
+            <p>This is an <strong>operating standard</strong> - a set of principles, artifacts, and governance structures designed to be adopted, adapted, and implemented by organizations deploying human-agent systems. It is:</p>
             <ul>
                 <li><strong>Vendor-neutral:</strong> Applicable to any AI system, platform, or provider</li>
                 <li><strong>Domain-agnostic:</strong> Core principles apply across healthcare, finance, operations, and other sectors</li>
@@ -727,7 +888,7 @@
                 <li><strong>Autonomy is bounded:</strong> Agent autonomy operates within defined constraints, not open-ended permissions</li>
                 <li><strong>Accountability is traceable:</strong> Every decision must have a clear accountability chain</li>
                 <li><strong>Escalation is deterministic:</strong> Boundary conditions trigger predictable escalation pathways</li>
-                <li><strong>Governance is infrastructure:</strong> Oversight mechanisms are built into system architecture, not bolted on</li>
+                <li><strong>Governance is infrastructure:</strong> Oversight mechanisms are built into system architecture, not bolted on (authority boundaries + auditability)</li>
             </ul>
         </section>
 
@@ -737,7 +898,7 @@
             <p>The Standard defines four core artifacts that organizations produce when implementing the framework:</p>
             
             <div class="pdf-links">
-                <h3>Download PDF — Core Standard</h3>
+                <h3>Download PDF - Core Standard</h3>
                 <a href="/standards/Decision_Inventory_v1.pdf" class="pdf-link" aria-label="Download Decision Inventory v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Decision Inventory v1', 'document_type': 'core_standard', 'document_name': 'decision_inventory', 'value': 10});">Decision Inventory v1</a>
                 <a href="/standards/Autonomy_Allocation_Matrix_v1.pdf" class="pdf-link" aria-label="Download Autonomy Allocation Matrix v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Autonomy Allocation Matrix v1', 'document_type': 'core_standard', 'document_name': 'autonomy_allocation_matrix', 'value': 10});">Autonomy Allocation Matrix v1</a>
                 <a href="/standards/Accountability_and_Escalation_Framework_v1.pdf" class="pdf-link" aria-label="Download Accountability & Escalation Framework v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Accountability and Escalation Framework v1', 'document_type': 'core_standard', 'document_name': 'accountability_escalation_framework', 'value': 10});">Accountability & Escalation Framework v1</a>
@@ -751,7 +912,7 @@
             <p class="necessary-statement">Adoption of this Standard is a necessary governance condition, but it is not sufficient on its own to ensure safe, effective, or responsible Hybrid Human-Agent implementation.</p>
             <p>This Standard is designed for:</p>
             <ul>
-                <li><strong>AI Governance Leaders:</strong> Establishing organizational policies for human-agent systems</li>
+                <li><strong>AI Governance Leaders:</strong> Establishing organizational policies for human-agent systems (enforced at runtime)</li>
                 <li><strong>Product and Engineering Teams:</strong> Building systems with governance requirements embedded</li>
                 <li><strong>Compliance and Risk Officers:</strong> Documenting decision authority for regulatory review</li>
                 <li><strong>Healthcare, Finance, and Critical Infrastructure Operators:</strong> Deploying AI in high-stakes environments</li>
@@ -777,15 +938,17 @@
         <!-- Section 10: Versioning & canonical reference -->
         <section id="versioning">
             <h2>Versioning & canonical reference</h2>
-            <p><span class="version-note">v1.0 — stable</span></p>
-            <p>This is the canonical reference for Version 1.0 of the Hybrid Human–Agent Operating Standard. Future versions will be published at this location with clear version numbering and change documentation.</p>
+            <p><span class="version-note">v1.0 - stable</span></p>
+            <p>This is the canonical reference for Version 1.0 of the Hybrid Human-Agent Operating Standard. Future versions will be published at this location with clear version numbering and change documentation.</p>
             <p>Canonical URL: <code>https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard</code></p>
         </section>
 
         <!-- How to cite -->
         <section class="cite-box">
             <h4>How to cite</h4>
-            <p class="citation">Squire, A. (2026). Hybrid Human–Agent Operating Standard (v1.0). PatientCentricCare.AI. https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard</p>
+            <p class="citation">Squire, A. (2026). Hybrid Human-Agent Operating Standard (v1.0). PatientCentricCare.AI. https://www.andysquire.ai/standards/hybrid-human-agent-operating-standard</p>
+            <p class="citation-note">For the Safety OS execution model:</p>
+            <p class="citation">Squire, A. (2026). Safety OS - A Governed AI Execution Model. PatientCentricCare.AI.</p>
         </section>
 
         <!-- Section 11: Sector Annexes -->
@@ -794,7 +957,7 @@
             <p>Additional guidance interpreted for specific domains. These do not change the Standard and do not replace domain-specific regulatory frameworks.</p>
             
             <div class="pdf-links">
-                <h3>Download PDF — Sector Annexes</h3>
+                <h3>Download PDF - Sector Annexes</h3>
                 <a href="/standards/annexes/CX_Sector_Annex_v1.pdf" class="pdf-link" aria-label="Download CX Sector Annex v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards Annexes', 'event_label': 'CX Sector Annex v1', 'document_type': 'sector_annex', 'document_name': 'cx_sector_annex', 'value': 5});">CX Sector Annex v1</a>
                 <a href="/standards/annexes/Healthcare_Sector_Annex_v1.pdf" class="pdf-link" aria-label="Download Healthcare Sector Annex v1 PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards Annexes', 'event_label': 'Healthcare Sector Annex v1', 'document_type': 'sector_annex', 'document_name': 'healthcare_sector_annex', 'value': 15});">Healthcare Sector Annex v1</a>
             </div>
@@ -803,8 +966,9 @@
         <!-- Companion Execution Playbook Section -->
         <section id="playbook" class="playbook-section">
             <h2>Companion Execution Playbook</h2>
-            <p>The Hybrid Human-Agent Operating Standard establishes non-negotiable governance and accountability constraints.</p>
-            <p>The <strong>Non-Naive Hybrid Human-AI Execution Playbook</strong> defines the operational practices required to implement those constraints in real systems, including:</p>
+            <p>This Standard is designed to be used with execution artifacts that implement its principles.</p>
+            <p><strong>Safety OS - A Governed AI Execution Model</strong> provides a canonical, phased roadmap for realizing the governance invariants defined here.</p>
+            <p>The <strong>Execution Playbook</strong> expands on that model with detailed workflows, validation practices, and monitoring requirements, including:</p>
             <ul>
                 <li>Human role design and decision ownership</li>
                 <li>Phase-gated Hybrid Human-AI workflows</li>
@@ -812,7 +976,15 @@
                 <li>Controlled deployment patterns</li>
                 <li>Monitoring, escalation, and rollback mechanisms</li>
             </ul>
-            <p class="playbook-note">The Standard and the Playbook are designed to be used together.</p>
+            <p class="playbook-note">The Standard, Safety OS, and the Playbook are designed to be used together.</p>
+            
+            <!-- Safety OS Callout -->
+            <div class="safety-os-callout">
+                <h4>Safety OS Execution Model - Document & Visual Reference</h4>
+                <p>Download the Safety OS Execution Model PDF, illustrating the phased governance roadmap that operationalizes the Standard in practice.</p>
+                <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="callout-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Execution Model', 'document_type': 'execution_model', 'document_name': 'safety_os_execution_model', 'value': 20});">Download Safety OS Execution Model (PDF)</a>
+            </div>
+            
             <div class="playbook-cta">
                 <a href="/standards/Non-Naive-Hybrid-Human-AI-Execution-Playbook.pdf" class="playbook-button" aria-label="Download the Execution Playbook PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Execution Playbook', 'document_type': 'playbook', 'document_name': 'execution_playbook', 'value': 15});">Download the Execution Playbook (PDF)</a>
             </div>
@@ -823,7 +995,7 @@
     <!-- Footer -->
     <footer role="contentinfo">
         <p class="footer-brand">PatientCentricCare.AI</p>
-        <p class="footer-neutral">This Standard is published as an open reference for governance of hybrid human–agent systems worldwide. It is not affiliated with any specific implementation or product.</p>
+        <p class="footer-neutral">This Standard is published as an open reference for governance of hybrid human-agent systems worldwide. It is not affiliated with any specific implementation or product.</p>
         <p class="footer-disclaimer">Organizations adopting this Standard remain responsible for compliance with applicable laws and regulations in their domains and jurisdictions.</p>
         <p class="footer-links">
             <a href="/standards/license-v1.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'License v1', 'document_type': 'license', 'document_name': 'license', 'value': 2});">Full License Text</a>
