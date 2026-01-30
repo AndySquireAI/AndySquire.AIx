@@ -807,6 +807,132 @@
             font-style: italic;
             margin-top: 1rem;
         }
+
+        /* Hero Visual Section */
+        .hero-visual {
+            margin: 2rem 0 1.5rem 0;
+            text-align: center;
+        }
+
+        .hero-visual img {
+            max-width: 100%;
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .bridge-text {
+            font-size: 1rem;
+            color: #334155;
+            font-weight: 500;
+            text-align: center;
+            max-width: 800px;
+            margin: 1rem auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        /* Safety OS at a Glance Section */
+        .safety-os-glance {
+            background: #ffffff;
+            border: 2px solid #0d9488;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .safety-os-glance h2 {
+            color: #0f4c5c;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .safety-os-glance ul {
+            margin: 0 0 1.5rem 1.5rem;
+            list-style-type: disc;
+        }
+
+        .safety-os-glance li {
+            color: #134e4a;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .glance-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #E6A23C;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .glance-cta:hover {
+            background: #d4911f;
+            color: white;
+        }
+
+        /* For Architects Section */
+        .architects-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .architects-section h2 {
+            color: #475569;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .architects-section p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .extended-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: #E6A23C;
+            border: 2px solid #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .extended-cta:hover {
+            background: #E6A23C;
+            color: white;
+        }
+
+        /* Thesis statement styling */
+        .thesis-statement {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+        }
     </style>
 </head>
 <body>
@@ -855,12 +981,32 @@
             <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
         </header>
 
+        <!-- Hero Visual -->
+        <section class="hero-visual">
+            <img src="/images/SafetyOS-DesignThinking-to-GovernedAI-v2.png" alt="Safety OS - From Design Thinking to Governed AI Execution: showing the evolution from human-centered design era through the breakpoint with AI to Safety OS governed execution model">
+        </section>
+
+        <!-- Bridge Text -->
+        <p class="bridge-text">Safety OS extends human-centered design into governed AI execution, ensuring accountability scales before autonomy as AI systems move from support to action.</p>
+
+        <!-- Safety OS at a Glance -->
+        <section class="safety-os-glance">
+            <h2>Safety OS at a Glance</h2>
+            <ul>
+                <li>Governance-first execution model for AI agents</li>
+                <li>Enforces consent, authority, escalation, and auditability at runtime</li>
+                <li>Enables safe progression from non-medical AI to regulated clinical systems</li>
+            </ul>
+            <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" class="glance-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Summary', 'document_type': 'summary', 'document_name': 'safety_os_summary', 'value': 25});">
+                <span>↓</span> Download Safety OS Summary (2 pages)
+            </a>
+        </section>
+
         <!-- Safety OS Hero Section -->
         <section class="safety-os-hero">
             <h2>Safety OS - A Governed AI Execution Model</h2>
-            <p class="gateway-summary">Safety OS operationalizes this Standard by embedding governance directly into AI runtime controls — making authority boundaries enforceable and system behaviour auditable.</p>
-            <p>Where the Operating Standard defines principles and accountability constraints, Safety OS provides the execution model that turns those constraints into enforceable system behavior, auditability, authority boundaries, and risk controls. This model is essential to implement the Standard in real systems - particularly in regulated, high-stakes environments such as healthcare, finance, and critical infrastructure.</p>
-            <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="hero-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Execution Model', 'document_type': 'execution_model', 'document_name': 'safety_os_execution_model', 'value': 20});">Download Safety OS Execution Model (PDF)</a>
+            <p>Where the Operating Standard defines principles and accountability constraints, Safety OS provides the execution model that turns those constraints into enforceable system behavior at runtime. This model is essential to implement the Standard in real systems - particularly in regulated, high-stakes environments such as healthcare, finance, and critical infrastructure.</p>
+            <p class="thesis-statement">In Safety OS, capability does not advance unless governance evidence exists.</p>
         </section>
 
         <!-- Standards Ecosystem Diagram -->
@@ -1032,16 +1178,18 @@
             </ul>
             <p class="playbook-note">The Standard, Safety OS, and the Playbook are designed to be used together.</p>
             
-            <!-- Safety OS Callout -->
-            <div class="safety-os-callout">
-                <h4>Safety OS Execution Model - Document & Visual Reference</h4>
-                <p>Download the Safety OS Execution Model PDF, illustrating the phased governance roadmap that operationalizes the Standard in practice.</p>
-                <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="callout-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Execution Model', 'document_type': 'execution_model', 'document_name': 'safety_os_execution_model', 'value': 20});">Download Safety OS Execution Model (PDF)</a>
-            </div>
-            
             <div class="playbook-cta">
                 <a href="/standards/Non-Naive-Hybrid-Human-AI-Execution-Playbook.pdf" class="playbook-button" aria-label="Download the Execution Playbook PDF" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Execution Playbook', 'document_type': 'playbook', 'document_name': 'execution_playbook', 'value': 15});">Download the Execution Playbook (PDF)</a>
             </div>
+        </section>
+
+        <!-- For Architects, Regulators, and Builders Section -->
+        <section id="architects" class="architects-section">
+            <h2>For Architects, Regulators, and Builders</h2>
+            <p>A deeper exploration of Safety OS as a governed AI execution model, including execution layers, governance primitives, and regulator-aligned phase progression.</p>
+            <a href="/assets/SafetyOS-EXTENDEDAGovernedAIExecutionModel-2.pdf" class="extended-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Extended', 'document_type': 'extended', 'document_name': 'safety_os_extended', 'value': 30});">
+                <span>↓</span> Read the Extended Safety OS Model
+            </a>
         </section>
 
         <!-- Related Standards Section -->
