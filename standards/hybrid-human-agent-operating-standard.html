@@ -909,6 +909,27 @@
 
         .glance-cta:hover {
             background: #d4911f;
+        }
+
+        .glance-cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: #0d9488;
+            border: 2px solid #0d9488;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            margin-left: 1rem;
+        }
+
+        .glance-cta-secondary:hover {
+            background: #0d9488;
+            color: white;
             color: white;
         }
 
@@ -1015,9 +1036,8 @@
 
         <!-- Diagram Intro -->
         <div class="diagram-intro">
-            <p>This standard is domain-agnostic by design, with healthcare and CX represented as annexed applications of this same governance core.</p>
-            <p>The phases referenced below reflect governance maturity, not product capability or medical intent. Progression occurs only when authority, consent, escalation, and auditability are proven during live system operation.</p>
-            <p>For more details on these specific Phases I, II, III see the <a href="/physician-as-pilot#roadmap" class="inline-link">Illustrative Governance Roadmap</a>.</p>
+            <p>The phases below represent governance maturity, not product stages. Systems advance only when consent, authority, escalation, and auditability are enforced in live operation.</p>
+            <p>Industry use cases (healthcare, CX) are annexes — not prerequisites. For more details on Phases I, II, III see the <a href="/physician-as-pilot#roadmap" class="inline-link">Illustrative Governance Roadmap</a>.</p>
         </div>
 
         <!-- Hero Visual -->
@@ -1038,6 +1058,9 @@
             </ul>
             <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" class="glance-cta" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Summary', 'document_type': 'summary', 'document_name': 'safety_os_summary', 'value': 25});">
                 <span>↓</span> Download Safety OS Summary (2 pages)
+            </a>
+            <a href="/assets/FromDesignThinkingtoGovernedAIExecution-v3.pdf" class="glance-cta-secondary" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Design Thinking to Governed AI', 'document_type': 'visual_guide', 'document_name': 'design_thinking_governed_ai', 'value': 20});">
+                <span>↓</span> From Design Thinking to Governed AI Execution (Visual Guide)
             </a>
         </section>
 
