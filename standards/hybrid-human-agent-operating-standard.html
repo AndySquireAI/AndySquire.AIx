@@ -253,8 +253,8 @@
         /* Header */
         .standard-header {
             text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid #e2e8f0;
         }
 
@@ -282,12 +282,12 @@
 
         /* Section Styles */
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         section h2 {
             color: #0f172a;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 0.75rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #e2e8f0;
@@ -299,12 +299,189 @@
         }
 
         section ul {
-            margin: 0.75rem 0 0.75rem 1.5rem;
+            margin: 0.5rem 0 0.75rem 1.5rem;
         }
 
         section li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
             color: #475569;
+        }
+
+        /* Executive Summary Section */
+        .exec-summary {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .exec-summary h2 {
+            color: #0f172a;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .exec-summary h3 {
+            color: #0f4c5c;
+            font-size: 1.1rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exec-summary p {
+            font-size: 0.95rem;
+        }
+
+        .exec-summary ul {
+            margin: 0.5rem 0 0.75rem 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .exec-summary li {
+            margin-bottom: 0.25rem;
+        }
+
+        .exec-summary-problem {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .exec-summary-solution {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .exec-summary-solution strong {
+            color: #166534;
+        }
+
+        .exec-summary-before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .exec-before, .exec-after {
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .exec-before {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .exec-after {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .exec-before h4, .exec-after h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exec-before h4 { color: #991b1b; }
+        .exec-after h4 { color: #166534; }
+
+        .exec-before ul, .exec-after ul {
+            margin: 0 0 0 1rem;
+            font-size: 0.85rem;
+        }
+
+        .exec-core-shift {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .exec-core-shift .question-old {
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .exec-core-shift .question-new {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .exec-artifacts {
+            margin: 0.75rem 0;
+        }
+
+        .exec-artifacts ol {
+            margin: 0.5rem 0 0 1.25rem;
+        }
+
+        .exec-artifacts li {
+            margin-bottom: 0.4rem;
+        }
+
+        .exec-artifacts strong {
+            color: #0f4c5c;
+        }
+
+        .exec-enables {
+            background: #f0fdfa;
+            border: 1px solid #99f6e4;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .exec-enables ul {
+            margin: 0.5rem 0 0 1rem;
+        }
+
+        .exec-cta {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .exec-cta a {
+            display: inline-block;
+            background: #0f4c5c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exec-cta a:hover {
+            background: #1a6b7c;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            margin: 2.5rem 0 2rem;
+            padding: 1rem 0;
+            border-top: 3px solid #0f4c5c;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .section-divider h2 {
+            color: #0f4c5c;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Problem Section */
@@ -312,7 +489,7 @@
             background: #fef2f2;
             border: 1px solid #fecaca;
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
 
         .problem-section h2 {
@@ -324,14 +501,14 @@
             background: #f0fdf4;
             border-left: 4px solid #22c55e;
             padding: 0.75rem 1rem;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
             font-weight: 500;
             color: #166534;
         }
 
         /* Hero Visual */
         .hero-visual {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             text-align: center;
         }
 
@@ -346,12 +523,12 @@
         .before-after-details {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
+            gap: 1rem;
+            margin: 1rem 0;
         }
 
         .before-column, .after-column {
-            padding: 1.25rem;
+            padding: 1rem;
             border-radius: 8px;
         }
 
@@ -366,16 +543,16 @@
         }
 
         .before-column h3, .after-column h3 {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
         }
 
         .before-column h3 { color: #991b1b; }
         .after-column h3 { color: #166534; }
 
         .before-column ul, .after-column ul {
-            margin: 0 0 0 1.25rem;
-            font-size: 0.9rem;
+            margin: 0 0 0 1rem;
+            font-size: 0.85rem;
         }
 
         /* Core Shift Section */
@@ -383,7 +560,7 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
 
         .core-shift-section h2 {
@@ -393,29 +570,34 @@
 
         /* Four Artifacts Section */
         .four-artifacts-section {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .artifact {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.25rem;
-            margin: 1rem 0;
+            padding: 1rem;
+            margin: 0.75rem 0;
         }
 
         .artifact h3 {
             color: #0f4c5c;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .artifact p {
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
         }
 
         .artifact ul {
-            margin: 0.5rem 0 0 1.25rem;
+            margin: 0.4rem 0 0 1.25rem;
         }
 
         .artifact li {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* HITL Section */
@@ -424,6 +606,7 @@
             border-left: 4px solid #0d9488;
             padding: 0.75rem 1rem;
             color: #0f4c5c;
+            font-size: 0.95rem;
         }
 
         /* Enables Section */
@@ -431,7 +614,7 @@
             background: #f0fdf4;
             border: 1px solid #bbf7d0;
             border-radius: 8px;
-            padding: 1rem 1rem 1rem 2.5rem;
+            padding: 0.75rem 0.75rem 0.75rem 2rem;
         }
 
         /* PDF Links */
@@ -439,24 +622,24 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.25rem;
+            padding: 1rem;
         }
 
         .pdf-links h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #0f172a;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .pdf-link {
             display: inline-block;
             background: #0f4c5c;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.75rem;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 0.85rem;
-            margin: 0.25rem 0.5rem 0.25rem 0;
+            font-size: 0.8rem;
+            margin: 0.2rem 0.4rem 0.2rem 0;
             transition: background 0.2s;
         }
 
@@ -469,14 +652,14 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
+            padding: 1rem;
+            margin: 1rem 0;
         }
 
         .ecosystem-compact h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #0f172a;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .ecosystem-list {
@@ -486,9 +669,9 @@
         }
 
         .ecosystem-list li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             border-bottom: 1px solid #e2e8f0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .ecosystem-list li:last-child {
@@ -504,25 +687,26 @@
             background: #f0fdfa;
             border: 1px solid #99f6e4;
             border-radius: 8px;
-            padding: 1rem 1.25rem;
-            margin: 1.5rem 0;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
         }
 
         .safety-os-cta p {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             color: #0f4c5c;
+            font-size: 0.9rem;
         }
 
         .safety-os-cta a {
             display: inline-block;
             background: #0d9488;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.75rem;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
         }
 
         .safety-os-cta a:hover {
@@ -537,9 +721,9 @@
         }
 
         .audience-compact li {
-            padding: 0.4rem 0;
+            padding: 0.3rem 0;
             color: #475569;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .audience-compact li::before {
@@ -552,35 +736,35 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
+            padding: 1rem;
+            margin: 1rem 0;
         }
 
         .reference-section h3 {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #0f172a;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .cite-box {
             background: #fffbeb;
             border: 1px solid #fde68a;
             border-radius: 6px;
-            padding: 1rem;
-            margin-top: 1rem;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
         }
 
         .cite-box h4 {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #92400e;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .citation {
             font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #78350f;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .version-note {
@@ -588,31 +772,31 @@
             color: #166534;
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
         /* Principles - Single Line */
         .principles-line {
             background: #f1f5f9;
             border-left: 4px solid #64748b;
-            padding: 0.75rem 1rem;
-            font-size: 0.9rem;
+            padding: 0.6rem 0.75rem;
+            font-size: 0.85rem;
             color: #475569;
         }
 
         /* Downloads Section */
         .downloads-section {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .download-group {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .download-group-title {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #64748b;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -620,8 +804,8 @@
         /* Related Standards */
         .related-standards {
             border-top: 1px solid #e2e8f0;
-            padding-top: 1.5rem;
-            margin-top: 2rem;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .related-standards ul {
@@ -631,12 +815,13 @@
         }
 
         .related-standards li {
-            padding: 0.3rem 0;
+            padding: 0.25rem 0;
         }
 
         .related-standards a {
             color: #0f4c5c;
             text-decoration: none;
+            font-size: 0.9rem;
         }
 
         .related-standards a:hover {
@@ -644,27 +829,27 @@
         }
 
         .related-note {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #64748b;
-            margin-top: 0.5rem;
+            margin-top: 0.4rem;
         }
 
         /* Footer */
         footer {
             background: linear-gradient(135deg, #0f4c5c 0%, #1a6b7c 100%);
             color: white;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem;
             text-align: center;
         }
 
         .footer-brand {
             font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
         }
 
         footer p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: rgba(255,255,255,0.8);
         }
 
@@ -695,7 +880,8 @@
                 display: flex;
             }
 
-            .before-after-details {
+            .before-after-details,
+            .exec-summary-before-after {
                 grid-template-columns: 1fr;
             }
 
@@ -750,6 +936,88 @@
             <span class="version-tag">Version 1.0</span>
             <p class="lead">An operator-first AI-in-the-Loop (AIITL) governance model</p>
         </header>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <section class="exec-summary">
+            <h2>Executive Summary</h2>
+            
+            <h3>The problem</h3>
+            <div class="exec-summary-problem">
+                <p>Organizations deploying AI face a predictable failure mode: AI increases speed and scale, while accountability remains unclear. Oversight relies on committees and after-the-fact reviews. When something goes wrong, escalation is slow and blame is retroactive.</p>
+                <p style="margin-top: 0.5rem;"><strong>This is an operating-model problem, not a tooling problem.</strong></p>
+            </div>
+
+            <h3>The AIITL solution</h3>
+            <div class="exec-summary-solution">
+                <p>AI-in-the-Loop (AIITL) governance ensures that:</p>
+                <ul>
+                    <li>Humans own intent, risk, and escalation</li>
+                    <li>Machines execute, monitor, and enforce controls at runtime</li>
+                </ul>
+                <p style="margin-top: 0.5rem;"><strong>AI operates with autonomy only where decisions are explicitly owned, bounded, and reversible.</strong></p>
+            </div>
+
+            <h3>What actually changes</h3>
+            <div class="exec-summary-before-after">
+                <div class="exec-before">
+                    <h4>Before (human-only)</h4>
+                    <ul>
+                        <li>Manual triage, review, approval</li>
+                        <li>SOPs and peer review as controls</li>
+                        <li>Limited scale, slow turnaround</li>
+                        <li>Oversight after execution</li>
+                    </ul>
+                </div>
+                <div class="exec-after">
+                    <h4>After (hybrid)</h4>
+                    <ul>
+                        <li>AI performs triage, retrieval, drafting</li>
+                        <li>Each decision has explicit autonomy level</li>
+                        <li>Guardrails and alerts run continuously</li>
+                        <li>Humans handle exceptions only</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>The core shift</h3>
+            <div class="exec-core-shift">
+                <p class="question-old">Most AI governance asks: "How autonomous is this system?"</p>
+                <p class="question-new">This Standard asks: "Which decisions exist, who owns them, and how much autonomy is allowed for each?"</p>
+                <p style="margin-top: 0.5rem;">Rules are enforced per decision, not per system. If a decision is not inventoried, owned by a named human, and classified for risk—it is not eligible for AI autonomy.</p>
+            </div>
+
+            <h3>The four artifacts (a closed loop)</h3>
+            <div class="exec-artifacts">
+                <ol>
+                    <li><strong>Decision Inventory</strong> — Defines what decisions exist and who owns the outcome.</li>
+                    <li><strong>Autonomy Allocation Matrix</strong> — Assigns bounded autonomy per decision (human-only → AI-led).</li>
+                    <li><strong>Accountability & Escalation Framework</strong> — Defines ownership, rollback authority, and incident handling before failure.</li>
+                    <li><strong>Governance as Infrastructure</strong> — Encodes policy, monitoring, and intervention into systems at machine speed.</li>
+                </ol>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Together, these form a governance loop, not standalone documents.</p>
+            </div>
+
+            <h3>What this enables</h3>
+            <div class="exec-enables">
+                <ul>
+                    <li>Faster AI deployment without surrendering accountability</li>
+                    <li>Clear ownership before incidents occur</li>
+                    <li>Governance that operates at AI speed</li>
+                    <li>Regulatory-defensible autonomy progression</li>
+                </ul>
+            </div>
+
+            <div class="exec-cta">
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem;">Status: v1.0 (stable) · Open, non-commercial, citeable operating standard</p>
+                <a href="/standards/Decision_Inventory_v1.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Decision Inventory v1'});">↓ Core Standard (PDF)</a>
+                <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Summary'});">↓ Safety OS Summary (2 pages)</a>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="section-divider">
+            <h2>Detailed Model and Implementation</h2>
+        </div>
 
         <!-- The Problem Section -->
         <section id="problem" class="problem-section">
@@ -947,7 +1215,7 @@
         <section class="reference-section">
             <h3>Reference & License</h3>
             <p><span class="version-note">v1.0 - stable</span></p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Published by PatientCentricCare.AI as a public good. Open license permitting use, citation, and reference with attribution. <a href="/standards/license-v1.pdf">View license</a>.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Published by PatientCentricCare.AI as a public good. Open license permitting use, citation, and reference with attribution. <a href="/standards/license-v1.pdf">View license</a>.</p>
             
             <div class="cite-box">
                 <h4>How to cite</h4>
@@ -973,8 +1241,8 @@
     <footer role="contentinfo">
         <p class="footer-brand">PatientCentricCare.AI</p>
         <p>Translating lived cancer experience into AI-enabled healthcare innovation</p>
-        <p style="margin-top: 1rem;"><a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
-        <p style="margin-top: 1rem; font-size: 0.8rem;">© 2026 PatientCentricCare.AI. All rights reserved.</p>
+        <p style="margin-top: 0.75rem;"><a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
+        <p style="margin-top: 0.75rem; font-size: 0.75rem;">© 2026 PatientCentricCare.AI. All rights reserved.</p>
     </footer>
 
     <script>
