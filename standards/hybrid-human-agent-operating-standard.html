@@ -986,6 +986,207 @@
             background: #f0fdf4;
             border-left: 4px solid #22c55e;
         }
+
+        /* Problem Section */
+        .problem-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .problem-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .problem-section ul {
+            margin: 1rem 0 1rem 1.5rem;
+            list-style-type: disc;
+        }
+
+        .problem-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        /* What Changes Section */
+        .what-changes-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .what-changes-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Before/After Details */
+        .before-after-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .before-column, .after-column {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .before-column {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .after-column {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .before-column h3, .after-column h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .before-column ul, .after-column ul {
+            margin: 0 0 1rem 1.25rem;
+            list-style-type: disc;
+        }
+
+        .before-column li, .after-column li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .model-summary {
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            color: #1e293b;
+        }
+
+        /* Core Shift Section */
+        .core-shift-section {
+            margin: 2.5rem 0;
+        }
+
+        .core-shift-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .core-shift-section blockquote {
+            background: #f8fafc;
+            border-left: 4px solid #0d9488;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #334155;
+        }
+
+        .core-shift-section ul {
+            margin: 1rem 0 1rem 1.5rem;
+            list-style-type: disc;
+        }
+
+        .core-shift-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        /* Four Artifacts Section */
+        .four-artifacts-section {
+            margin: 2.5rem 0;
+        }
+
+        .four-artifacts-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .artifact {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .artifact h3 {
+            color: #0f4c5c;
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .artifact ul {
+            margin: 0.75rem 0 0.75rem 1.25rem;
+            list-style-type: disc;
+        }
+
+        .artifact li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .artifact-note {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* HITL Section */
+        .hitl-section {
+            margin: 2.5rem 0;
+        }
+
+        .hitl-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hitl-section ul {
+            margin: 1rem 0 1rem 1.5rem;
+            list-style-type: disc;
+        }
+
+        .hitl-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        /* Enables Section */
+        .enables-section {
+            margin: 2.5rem 0;
+        }
+
+        .enables-section h2 {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .enables-section ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+            list-style-type: disc;
+        }
+
+        .enables-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
     </style>
 </head>
 <body>
@@ -1029,24 +1230,162 @@
     <main id="main-content" role="main">
         <!-- Header -->
         <header class="standard-header">
-            <h1>Hybrid Human-Agent Operating Standard</h1>
+            <h1>Hybrid Human–Agent Operating Standard</h1>
             <span class="version-tag">Version 1.0</span>
-            <p class="lead">A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.</p>
+            <p class="lead">An operator-first AI-in-the-Loop (AIITL) governance model</p>
         </header>
 
-        <!-- Diagram Intro -->
-        <div class="diagram-intro">
-            <p>The phases below represent governance maturity, not product stages. Systems advance only when consent, authority, escalation, and auditability are enforced in live operation.</p>
-            <p>Industry use cases (healthcare, CX) are annexes — not prerequisites. For more details on Phases I, II, III see the <a href="/physician-as-pilot#roadmap" class="inline-link">Illustrative Governance Roadmap</a>.</p>
-        </div>
-
-        <!-- Hero Visual -->
-        <section class="hero-visual">
-            <img src="/images/SafetyOS-DesignThinking-to-GovernedAI-v2.png" alt="Safety OS - From Design Thinking to Governed AI Execution: showing the evolution from human-centered design era through the breakpoint with AI to Safety OS governed execution model">
+        <!-- The Problem Section -->
+        <section id="problem" class="problem-section">
+            <h2>The problem this standard solves</h2>
+            <p>Most organizations are introducing AI inside existing processes that were designed for humans.</p>
+            <p>That creates a predictable failure mode:</p>
+            <ul>
+                <li>AI increases speed and scale</li>
+                <li>Accountability remains ambiguous</li>
+                <li>Oversight relies on committees, reviews, and hope</li>
+                <li>When something goes wrong, escalation is slow and blame is retroactive</li>
+            </ul>
+            <p><strong>This is not a tooling problem. It is an operating-model problem.</strong></p>
+            <p>The Hybrid Human–Agent Operating Standard defines how decisions, not systems, are redesigned so that AI can operate at scale without breaking human accountability, regulatory obligations, or organizational trust.</p>
+            <p class="thesis-statement">This is an AI-in-the-Loop (AIITL) model: humans retain ownership of intent, risk, and escalation, while machines execute, monitor, and enforce controls at runtime.</p>
         </section>
 
-        <!-- Bridge Text -->
-        <p class="bridge-text">Safety OS extends human-centered design into governed AI execution, ensuring accountability scales before autonomy as AI systems move from support to action.</p>
+        <!-- What Changes Section -->
+        <section id="what-changes" class="what-changes-section">
+            <h2>What actually changes when AI is introduced (before vs after)</h2>
+            <p>Below is a real operational example: medical information inquiry handling. The same pattern applies to safety signal triage, claims routing, customer complaints, credit decisions, or content moderation.</p>
+        </section>
+
+        <!-- Before/After Diagram -->
+        <section class="hero-visual">
+            <img src="/images/before-after-hybrid-model.png" alt="Before and After: Human-Only Model vs Hybrid Human-Agent Model (AIITL) - showing the transformation from 2-3 day manual process to 12-24 hour governed AI execution">
+        </section>
+
+        <!-- Before/After Details -->
+        <section id="before-after-details" class="before-after-details">
+            <div class="before-column">
+                <h3>Before: human-only operating model</h3>
+                <ul>
+                    <li>Each inquiry is manually triaged, researched, drafted, reviewed, and approved</li>
+                    <li>Controls rely on SOPs, checklists, and peer review</li>
+                    <li>Throughput is constrained by human capacity</li>
+                    <li>Oversight happens after execution</li>
+                    <li>Typical turnaround: 2–3 days</li>
+                </ul>
+                <p class="model-summary"><strong>Human accountability exists — but speed, scale, and consistency do not.</strong></p>
+            </div>
+            <div class="after-column">
+                <h3>After: hybrid human–agent operating model (AIITL)</h3>
+                <ul>
+                    <li>AI agents perform triage, retrieval, synthesis, and draft responses</li>
+                    <li>Each decision step has an explicit autonomy level</li>
+                    <li>Guardrails, sampling, and alerts operate continuously</li>
+                    <li>Humans review exceptions, samples, and escalations — not every case</li>
+                    <li>Governance is enforced as infrastructure, not meetings</li>
+                    <li>Typical turnaround: hours, not days, with stronger traceability</li>
+                </ul>
+                <p class="model-summary"><strong>Crucially: human accountability does not disappear — it becomes explicit, scoped, and enforceable.</strong></p>
+            </div>
+        </section>
+
+        <p class="thesis-statement" style="margin-top: 1.5rem;">This is not "full automation." It is structured autonomy with guaranteed rollback.</p>
+
+        <!-- Core Shift Section -->
+        <section id="core-shift" class="core-shift-section">
+            <h2>The core shift: autonomy is assigned to decisions, not systems</h2>
+            <p>Most AI governance frameworks ask:</p>
+            <blockquote>"How autonomous is this system?"</blockquote>
+            <p>This standard asks instead:</p>
+            <blockquote>"Which specific decisions exist, who owns them, and how much autonomy is allowed for each?"</blockquote>
+            <p>Every operational decision is:</p>
+            <ul>
+                <li>Explicitly inventoried</li>
+                <li>Assigned a single accountable human owner</li>
+                <li>Given a defined autonomy level (0–4)</li>
+                <li>Monitored for drift, incidents, and policy changes</li>
+                <li>Able to regress instantly when conditions change</li>
+            </ul>
+            <p><strong>If a decision is not inventoried, owned, and classified, it is not eligible for AI autonomy.</strong></p>
+            <p>This is the foundation of AIITL.</p>
+        </section>
+
+        <!-- The Four Artifacts Section -->
+        <section id="four-artifacts" class="four-artifacts-section">
+            <h2>The Hybrid Human–Agent Operating Model (AIITL)</h2>
+            <p>The standard is implemented through four tightly coupled artifacts, designed to operate as a loop — not as standalone documents.</p>
+            
+            <div class="artifact">
+                <h3>1. Decision Inventory</h3>
+                <p>Defines what decisions exist and who owns their outcomes.</p>
+                <ul>
+                    <li>Decisions are classified by impact, frequency, reversibility, and risk</li>
+                    <li>Each decision has a single accountable human owner</li>
+                    <li>Uninventoried or unowned decisions cannot be automated</li>
+                </ul>
+                <p class="artifact-note">This prevents "shadow autonomy" and makes accountability explicit before AI is introduced.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>2. Autonomy Allocation Matrix</h3>
+                <p>Defines who (human or AI) executes each decision, and when.</p>
+                <ul>
+                    <li>Autonomy is assigned per decision, not per system</li>
+                    <li>Five clear levels from human-only execution to high-scale AI execution</li>
+                    <li>Higher autonomy requires stronger evidence and controls — not higher confidence scores</li>
+                    <li>Regression must be as easy as advancement</li>
+                </ul>
+                <p class="artifact-note">Autonomy becomes a controlled operational parameter, not a philosophical debate.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>3. Accountability & Escalation Framework</h3>
+                <p>Defines who absorbs downside when something goes wrong.</p>
+                <ul>
+                    <li>A single accountability chain per decision</li>
+                    <li>Incidents are classified before blame</li>
+                    <li>Explicit rollback authority is defined in advance</li>
+                    <li>Learning feeds back into future autonomy decisions</li>
+                </ul>
+                <p class="artifact-note">This ensures failures trigger correction, not paralysis.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>4. Governance as Infrastructure</h3>
+                <p>Defines how rules are enforced at machine speed.</p>
+                <ul>
+                    <li>Policies are encoded in machine-compatible form</li>
+                    <li>Decisions are observable, auditable, and traceable</li>
+                    <li>Intervention and rollback are automated where possible</li>
+                    <li>Governance shifts from committees to controls</li>
+                </ul>
+                <p class="artifact-note"><strong>If governance cannot be executed by machines, it will be bypassed by machines.</strong></p>
+            </div>
+        </section>
+
+        <!-- HITL/HOTL Compatibility -->
+        <section id="hitl-compatibility" class="hitl-section">
+            <h2>How this fits existing HITL / HOTL models</h2>
+            <p>This standard is compatible with — and extends — existing Human-in-the-Loop (HITL) and Human-on-the-Loop (HOTL) concepts.</p>
+            <p>AIITL makes those models operational by:</p>
+            <ul>
+                <li>Anchoring them to specific decisions</li>
+                <li>Binding them to explicit accountability</li>
+                <li>Enforcing them through infrastructure, not intent</li>
+            </ul>
+        </section>
+
+        <!-- What This Enables -->
+        <section id="enables" class="enables-section">
+            <h2>What this enables</h2>
+            <ul>
+                <li>Faster execution without surrendering accountability</li>
+                <li>Scalable AI adoption that survives regulatory scrutiny</li>
+                <li>Clear ownership before incidents occur</li>
+                <li>Governance that works at AI speed</li>
+            </ul>
+            <p class="thesis-statement">This is not an AI policy. It is an operating standard for hybrid human–agent organizations.</p>
+        </section>
 
         <!-- Safety OS at a Glance -->
         <section class="safety-os-glance">
