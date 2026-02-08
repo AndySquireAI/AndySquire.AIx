@@ -1,0 +1,34 @@
+name: Fix sitemap.xml and robots.txt domain references
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fix-sitemap-robots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix sitemap.xml
+        run: |
+          sed -i 's|https://www.andysquire.ai/|https://www.patientcentriccare.ai/|g' sitemap.xml
+          sed -i 's|https://andysquire.ai/|https://patientcentriccare.ai/|g' sitemap.xml
+
+      - name: Fix robots.txt
+        run: |
+          sed -i 's|https://www.andysquire.ai/|https://www.patientcentriccare.ai/|g' robots.txt
+          sed -i 's|https://andysquire.ai/|https://patientcentriccare.ai/|g' robots.txt
+          sed -i 's|# robots.txt for andysquire.ai|# robots.txt for patientcentriccare.ai|g' robots.txt
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "Fix sitemap.xml and robots.txt - replace andysquire.ai with patientcentriccare.ai"
+          title: "Fix sitemap.xml and robots.txt domain references"
+          body: "Updates remaining andysquire.ai references in sitemap.xml and robots.txt to patientcentriccare.ai"
+          branch: fix-sitemap-robots
+          base: main
