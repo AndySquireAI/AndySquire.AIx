@@ -7,7 +7,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.andysquire.ai/</loc>
+    <loc>https://www.patientcentriccare.ai/</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -15,12 +15,12 @@
 
   <!-- Clinical AI Governance - NEW -->
   <url>
-    <loc>https://www.andysquire.ai/clinical-ai-governance</loc>
+    <loc>https://www.patientcentriccare.ai/clinical-ai-governance</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.andysquire.ai/clinical-ai-governance-ecosystem.png</image:loc>
+      <image:loc>https://www.patientcentriccare.ai/clinical-ai-governance-ecosystem.png</image:loc>
       <image:title>Clinical AI Governance Ecosystem for Patient-Facing AI</image:title>
       <image:caption>Governance progression from non-clinical to SaMD-ready clinical authority model</image:caption>
     </image:image>
@@ -28,12 +28,12 @@
 
   <!-- Physician-as-Pilot Governance Framework -->
   <url>
-    <loc>https://www.andysquire.ai/physician-as-pilot</loc>
+    <loc>https://www.patientcentriccare.ai/physician-as-pilot</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.andysquire.ai/physician-as-pilot-diagram-v2.png</image:loc>
+      <image:loc>https://www.patientcentriccare.ai/physician-as-pilot-diagram-v2.png</image:loc>
       <image:title>Physician-as-Pilot Governance Framework</image:title>
       <image:caption>Governance framework showing clinician authority over AI systems in healthcare</image:caption>
     </image:image>
@@ -41,7 +41,7 @@
 
   <!-- Safety OS Implementation -->
   <url>
-    <loc>https://www.andysquire.ai/safety-os</loc>
+    <loc>https://www.patientcentriccare.ai/safety-os</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -49,7 +49,7 @@
 
   <!-- MyHealthCanvas -->
   <url>
-    <loc>https://www.andysquire.ai/myhealthcanvas</loc>
+    <loc>https://www.patientcentriccare.ai/myhealthcanvas</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -57,7 +57,7 @@
 
   <!-- Mission & Vision -->
   <url>
-    <loc>https://www.andysquire.ai/mission</loc>
+    <loc>https://www.patientcentriccare.ai/mission</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -65,7 +65,7 @@
 
   <!-- Traction & Progress -->
   <url>
-    <loc>https://www.andysquire.ai/traction</loc>
+    <loc>https://www.patientcentriccare.ai/traction</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -73,7 +73,7 @@
 
   <!-- Investment Opportunity -->
   <url>
-    <loc>https://www.andysquire.ai/investment</loc>
+    <loc>https://www.patientcentriccare.ai/investment</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -81,7 +81,7 @@
 
   <!-- Team -->
   <url>
-    <loc>https://www.andysquire.ai/team</loc>
+    <loc>https://www.patientcentriccare.ai/team</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -89,7 +89,7 @@
 
   <!-- eLibrary Index -->
   <url>
-    <loc>https://www.andysquire.ai/blog/</loc>
+    <loc>https://www.patientcentriccare.ai/blog/</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -97,21 +97,21 @@
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://www.andysquire.ai/blog/blog-post-new-governance-aiitl-vs-hitl</loc>
+    <loc>https://www.patientcentriccare.ai/blog/blog-post-new-governance-aiitl-vs-hitl</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.andysquire.ai/blog/how-small-businesses-save-50k-with-ai-agents</loc>
+    <loc>https://www.patientcentriccare.ai/blog/how-small-businesses-save-50k-with-ai-agents</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.andysquire.ai/blog/the-complete-guide-to-ai-seo</loc>
+    <loc>https://www.patientcentriccare.ai/blog/the-complete-guide-to-ai-seo</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -119,7 +119,7 @@
 
   <!-- Investor Resources -->
   <url>
-    <loc>https://www.andysquire.ai/investors/</loc>
+    <loc>https://www.patientcentriccare.ai/investors/</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -127,7 +127,7 @@
 
   <!-- Legal -->
   <url>
-    <loc>https://www.andysquire.ai/impressum</loc>
+    <loc>https://www.patientcentriccare.ai/impressum</loc>
     <lastmod>2026-01-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>

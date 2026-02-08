@@ -1,4 +1,4 @@
-# robots.txt for andysquire.ai
+# robots.txt for patientcentriccare.ai
 User-agent: *
 Allow: /
 Allow: /blog/
@@ -22,7 +22,7 @@ Disallow: /admin/
 Disallow: /*.json$
 
 # Sitemap location
-Sitemap: https://www.andysquire.ai/sitemap.xml
+Sitemap: https://www.patientcentriccare.ai/sitemap.xml
 
 # Allow AI crawlers for Generative Engine Optimization (GEO)
 User-agent: GPTBot
