@@ -205,7 +205,7 @@ Please let me know your availability for an initial discussion.
 
 Best regards`);
     
-    window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:andy@patientcentriccare.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
 function contactHealthcare() {
@@ -223,7 +223,7 @@ Please let me know your availability.
 
 Best regards`);
     
-    window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:andy@patientcentriccare.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
 function contactInvestors() {
@@ -241,7 +241,7 @@ I look forward to discussing this exciting opportunity.
 
 Best regards`);
     
-    window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:andy@patientcentriccare.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
 function contactPatients() {
@@ -260,6 +260,6 @@ Thank you for letting me know your availability for a conversation.
 
 Best regards`);
     
-    window.open(`mailto:andy@andysquire.ai?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:andy@patientcentriccare.ai?subject=${subject}&body=${body}`, '_blank');
 }
 
