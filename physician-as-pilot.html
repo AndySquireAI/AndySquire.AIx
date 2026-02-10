@@ -251,6 +251,26 @@
             text-align: center;
         }
 
+        /* Diagram container */
+        .diagram-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .diagram-container img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Negative list */
+        .negative-list li:before {
+            content: "\2715";
+            color: #dc2626;
+        }
+
         /* Disclaimer */
         .disclaimer {
             font-size: 0.9rem;
@@ -347,118 +367,45 @@
         <p class="subtitle">Governance-First Supervision of SaMD-Ready AI</p>
     </section>
 
-    <!-- INTRO -->
+    <!-- WHY DELEGATION FAILS -->
     <div class="content-section">
         <p>Modern healthcare AI fails not because models are weak, but because authority is unclear.</p>
-        <p><strong>Physician-as-Pilot</strong> is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.</p>
-        <p class="disclaimer">This page describes Phase II of the PatientCentricCare governance framework.</p>
+        <p><strong>Physician-as-Pilot</strong> is the governance architecture that ensures AI systems never exceed human clinical authority - even as they scale toward regulated use.</p>
+        <p>Most AI governance relies on guidelines, training, and post-deployment monitoring. These approaches fail in regulated clinical contexts because they assume compliance rather than enforce it. Physician-as-Pilot enforces authority structurally - before execution, not after harm.</p>
     </div>
 
     <hr class="section-divider">
 
-    <!-- GOVERNANCE FRAMEWORK CONTEXT -->
+    <!-- SAFETY OS DIAGRAM -->
     <div class="content-section">
-        <h2>Governance Framework Context</h2>
-        <p>PatientCentricCare follows a deliberate, phased governance model:</p>
-
-        <div class="phase-card">
-            <h3>Phase I — Non-Medical AI</h3>
-            <p>No clinical inference. Human-in-the-loop support only.</p>
+        <div class="diagram-container">
+            <img src="/safety-os-diagram.png" alt="From Human-in-the-Loop to AIITL Physician Governed Execution - showing Physician (Pilot) at top defining clinical intent and safety boundaries, Safety OS (SaMD Governance Layer) enforcing physician-defined boundaries deterministically, AI/Robotic System executing within constraints, and Patient at Home receiving safe supervised support">
         </div>
-
-        <div class="phase-card active">
-            <h3>Phase II — Physician-as-Pilot (SaMD-Ready)</h3>
-            <p>AI supports clinical workflows under explicit clinician supervision.<br>Escalation-only execution. No autonomous clinical action.</p>
-        </div>
-
-        <div class="phase-card">
-            <h3>Phase III — Regulated Clinical AI (SaMD)</h3>
-            <p>Licensed clinical inference under regulatory approval.</p>
-        </div>
-
-        <p class="invariant-banner">Invariant across all phases: Clinical authority is never delegated to AI.</p>
-    </div>
-
-    <hr class="section-divider">
-
-    <!-- WHAT PHYSICIAN-AS-PILOT MEANS -->
-    <div class="content-section">
-        <h2>What "Physician-as-Pilot" Means</h2>
-        <p>Physician-as-Pilot defines who is allowed to decide, what AI may execute, and how that authority is enforced.</p>
-        <p>Under this model:</p>
-        <ul>
-            <li>AI may observe, support, and escalate</li>
-            <li>AI may <strong>not</strong> diagnose, treat, or decide</li>
-            <li>Clinicians explicitly authorize, override, or block all clinical actions</li>
-            <li>Authority boundaries are defined in advance and enforced at runtime</li>
-        </ul>
-        <p class="emphasis-block">AI acts only within a clinician-defined envelope — never beyond it.</p>
     </div>
 
     <hr class="section-divider">
 
     <!-- HOW IT WORKS -->
     <div class="content-section">
-        <h2>How Physician-as-Pilot Works</h2>
-        <p>Physician-as-Pilot is not a policy document.<br>It is a <strong>runtime governance architecture</strong>.</p>
-        <p>Key characteristics:</p>
-
-        <div class="characteristic-card">
-            <h3>Escalation-only execution</h3>
-            <p>AI may surface signals or workflow suggestions, but cannot act clinically.</p>
-        </div>
-
-        <div class="characteristic-card">
-            <h3>Explicit authority assignment</h3>
-            <p>Every clinical action has a named human owner.</p>
-        </div>
-
-        <div class="characteristic-card">
-            <h3>Revocable permissions</h3>
-            <p>Clinicians can pause, modify, or terminate AI involvement at any time.</p>
-        </div>
-
-        <div class="characteristic-card">
-            <h3>Enforced refusal</h3>
-            <p>Requests outside permitted scope are blocked by design.</p>
-        </div>
-
-        <p style="margin-top: 1.5rem;">This ensures AI capability can expand only after governance maturity is proven.</p>
+        <h2>How It Works</h2>
+        <ul>
+            <li>The <strong>Physician</strong> defines clinical intent, care protocols, and safety boundaries</li>
+            <li><strong>Safety OS</strong> enforces those boundaries deterministically at runtime - no exceptions, no overrides by AI</li>
+            <li>The <strong>AI system</strong> executes tasks strictly within Safety OS constraints - no independent strategy or autonomous intent</li>
+        </ul>
     </div>
 
     <hr class="section-divider">
 
-    <!-- REGULATORY POSITIONING -->
+    <!-- EXPLICIT NEGATIVES -->
     <div class="content-section">
-        <h2>Regulatory Positioning (Phase II)</h2>
-        <p>Phase II systems operating under Physician-as-Pilot:</p>
-        <ul>
-            <li>Do not perform autonomous clinical inference</li>
-            <li>Are not SaMD, but are <strong>SaMD-ready</strong></li>
-            <li>Generate audit-grade evidence required for regulated evaluation</li>
-            <li>Align with FDA / EU MDR expectations for human oversight and traceability</li>
+        <h2>What AI May Not Do Under This Model</h2>
+        <ul class="negative-list">
+            <li>No diagnosis</li>
+            <li>No treatment decisions</li>
+            <li>No autonomous clinical intent</li>
         </ul>
-        <p class="disclaimer">References to regulatory frameworks are descriptive only and do not imply approval, clearance, or endorsement.</p>
-    </div>
-
-    <hr class="section-divider">
-
-    <!-- WHEN IT APPLIES -->
-    <div class="content-section">
-        <h2>When Physician-as-Pilot Applies</h2>
-        <p>Physician-as-Pilot is appropriate when:</p>
-        <ul>
-            <li>AI supports clinician workflows without acting independently</li>
-            <li>Clinical authority must remain explicit and auditable</li>
-            <li>Organizations are preparing for regulated AI pathways</li>
-            <li>Safety, accountability, and escalation must be provable — not promised</li>
-        </ul>
-
-        <!-- CTAs -->
-        <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/standards/hybrid-human-agent-operating-standard" class="cta-button">See the Governance Roadmap</a>
-            <a href="/clinical-ai-governance" class="cta-button cta-outline">Learn About Phased Permissioning</a>
-        </div>
+        <p class="emphasis-block">Clinical authority is never delegated to AI.</p>
     </div>
 
     <!-- FOOTER -->
