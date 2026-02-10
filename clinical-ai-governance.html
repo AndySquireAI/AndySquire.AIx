@@ -311,6 +311,69 @@
             margin-bottom: 0;
         }
 
+        /* Diagram container */
+        .diagram-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .diagram-container img {
+            max-width: 750px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .diagram-caption {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Regulatory table */
+        .reg-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .reg-table th {
+            background: #0f172a;
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .reg-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .reg-table tr:last-child td { border-bottom: none; }
+        .reg-table tr:nth-child(even) { background: #f8fafc; }
+
+        /* Negative list */
+        .negative-list li:before {
+            content: "\2715";
+            color: #dc2626;
+        }
+
+        /* Affirm list */
+        .affirm-list li:before {
+            content: "\2713";
+            color: #0d9488;
+        }
+
         /* Disclaimer */
         .disclaimer {
             font-size: 0.9rem;
@@ -319,7 +382,33 @@
             margin-top: 1rem;
         }
 
-        /* CTA */
+        /* Educational links */
+        .edu-links {
+            margin-top: 2.5rem;
+        }
+
+        .edu-links p {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-links a {
+            color: #0d9488;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .edu-links a:hover {
+            text-decoration: underline;
+        }
+
+        .edu-link-block {
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA
         .cta-button {
             display: inline-block;
             background: #E6A23C;
@@ -407,160 +496,143 @@
         <p class="subtitle">Authority, Boundaries, Enforcement, Auditability</p>
     </section>
 
-    <!-- INTRO -->
+    <!-- INTRO (Point 2) -->
     <div class="content-section">
-        <p>Clinical AI governance is not about model intelligence.</p>
-        <p>It is about who holds authority, how limits are enforced, and whether accountability is provable.</p>
-        <p>This page describes the governance architecture that enables safe progression from non-medical AI to regulated clinical systems — without premature delegation of authority.</p>
+        <p>Clinical AI governance is not about model intelligence - it's about who is authorized to act, when, and under what constraints.</p>
+        <p>This framework defines how execution is governed at runtime, how boundaries are enforced, and how accountability is provable before clinical claims are made.</p>
     </div>
 
     <hr class="section-divider">
 
-    <!-- GOVERNANCE FRAMEWORK CONTEXT -->
+    <!-- PHASE CONTEXT - Short and Referential (Point 3) -->
     <div class="content-section">
-        <h2>Governance Framework Context</h2>
-        <p>PatientCentricCare structures AI deployment through three governance phases:</p>
-
-        <div class="phase-card">
-            <h3>Phase I — Non-Medical AI</h3>
-            <p>No clinical framing or inference.</p>
-        </div>
-
-        <div class="phase-card">
-            <h3>Phase II — SaMD-Ready, Physician-Supervised AI</h3>
-            <p>Escalation-only execution under defined clinical authority.</p>
-        </div>
-
-        <div class="phase-card">
-            <h3>Phase III — Regulated Clinical AI (SaMD)</h3>
-            <p>Licensed inference under regulatory approval.</p>
-        </div>
-
-        <p class="invariant-banner">Invariant: Clinical authority is never delegated to AI — at any phase.</p>
+        <p>Governance applies across all phases of AI deployment - from non-medical to SaMD readiness and regulated clinical AI.</p>
+        <p>For a high-level view of how authority is phased and matured, see the <a href="/standards/hybrid-human-agent-operating-standard" style="color: #0d9488; font-weight: 600;">Governance Roadmap</a>.</p>
     </div>
 
     <hr class="section-divider">
 
-    <!-- GOVERNANCE IS INFRASTRUCTURE -->
+    <!-- CORE PILLARS (Point 4A) -->
     <div class="content-section">
-        <h2>Governance Is Infrastructure, Not Policy</h2>
-        <p>Most AI governance today relies on:</p>
-        <ul>
-            <li>Guidelines</li>
-            <li>Training</li>
-            <li>Monitoring after deployment</li>
-        </ul>
-        <p>These approaches fail in regulated contexts.</p>
-        <p>PatientCentricCare treats governance as <strong>enforced infrastructure</strong>, not documentation.</p>
-        <p class="emphasis-block">Controls are applied before execution, not audited after harm.</p>
-    </div>
-
-    <hr class="section-divider">
-
-    <!-- CORE PILLARS -->
-    <div class="content-section">
-        <h2>Core Pillars of Clinical AI Governance</h2>
+        <h2>Core Pillars of Governance</h2>
 
         <div class="pillar-card">
-            <h3>1. Authority Inventory</h3>
-            <p>Every decision an AI system could influence is:</p>
+            <h3>Authority Inventory</h3>
             <ul>
-                <li>Explicitly defined</li>
-                <li>Assigned to a human authority holder</li>
-                <li>Approved before execution is permitted</li>
+                <li>All clinical decisions that may be influenced by AI are documented</li>
+                <li>Human authority holders are named and revocable</li>
+                <li>Authority is assigned before execution is permitted</li>
             </ul>
-            <p class="pillar-note">No undefined decisions. No implied authority.</p>
         </div>
 
         <div class="pillar-card">
-            <h3>2. Boundaries &amp; Permissioning</h3>
-            <p>AI execution is constrained to explicit authority envelopes.</p>
+            <h3>Boundaries &amp; Permissioning</h3>
             <ul>
                 <li>Permitted actions are defined in advance</li>
                 <li>Anything outside scope is refused by default</li>
                 <li>Expansion requires human re-authorization</li>
             </ul>
-            <p class="pillar-note">This prevents silent scope creep and autonomy leakage.</p>
         </div>
 
         <div class="pillar-card">
-            <h3>3. Enforcement at Runtime</h3>
-            <p>Governance is enforced through a control layer (Safety OS):</p>
+            <h3>Runtime Enforcement</h3>
             <ul>
-                <li>Policy-constrained actions</li>
+                <li>Policy-constrained actions enforced through a governance control layer (Safety OS)</li>
                 <li>Mandatory refusal when boundaries are exceeded</li>
                 <li>Structured escalation to humans</li>
             </ul>
-            <p class="pillar-note">Controls are enforced at runtime, not by post-hoc review.</p>
         </div>
 
         <div class="pillar-card">
-            <h3>4. Auditability &amp; Accountability</h3>
-            <p>All system behavior is continuously logged:</p>
+            <h3>Auditability &amp; Traceability</h3>
             <ul>
-                <li>Actions</li>
-                <li>Refusals</li>
-                <li>Escalations</li>
-                <li>Authority assignments</li>
+                <li>Actions, refusals, escalations, and authority assignments are continuously logged</li>
+                <li>Logs are immutable, time-stamped, and attributable</li>
+                <li>Supports regulatory traceability, incident review, and post-market surveillance</li>
             </ul>
-            <p class="pillar-note">Logs are immutable, time-stamped, and attributable — supporting regulatory traceability, incident review, and post-market surveillance.</p>
         </div>
     </div>
 
     <hr class="section-divider">
 
-    <!-- REGULATORY ALIGNMENT -->
+    <!-- GOVERNANCE SEQUENCING VISUAL (Point 5) -->
     <div class="content-section">
-        <h2>Regulatory Alignment (Without Premature Claims)</h2>
-        <p>The governance architecture supports expectations found in:</p>
-        <ul>
-            <li>FDA SaMD guidance</li>
-            <li>EU MDR (clinical evaluation, PMS, traceability)</li>
-            <li>Quality management and audit requirements</li>
-        </ul>
-        <p class="disclaimer">This alignment does not imply regulatory approval.<br>It ensures systems are structurally prepared for regulated pathways.</p>
+        <div class="diagram-container">
+            <img src="/governance-sequencing.jpeg" alt="Governance Sequencing: How Safety OS Enables SaMD Without Clinical Delegation - showing Phase I Non-Medical AI, Phase II Physician-as-Pilot, Phase III Regulated Clinical AI (SaMD), with authority maturity (not intelligence) arrow and invariant: clinical authority is never delegated to AI">
+        </div>
+        <p class="diagram-caption">Safety OS Governance Architecture. This conceptual diagram illustrates how a governance layer enforces boundaries, constrains actions, and generates immutable audit evidence under continuous human oversight. This is architecture - not a product or clinical claim.</p>
     </div>
 
     <hr class="section-divider">
 
-    <!-- WHAT THIS IS NOT -->
+    <!-- WHAT THIS IS NOT (Point 6) -->
     <div class="content-section">
         <h2>What This Governance Model Is Not</h2>
-        <ul class="not-list">
+        <ul class="negative-list">
             <li>Not autonomous clinical decision-making</li>
-            <li>Not a claim of FDA / MDR approval</li>
-            <li>Not a consumer AI product</li>
-            <li>Not a replacement for licensed clinicians</li>
-        </ul>
-        <ul class="not-list-affirm">
-            <li>It is a control architecture for safe, accountable AI execution.</li>
+            <li>Not a claim of FDA or MDR approval</li>
+            <li>Not standalone software with clinical claims</li>
+            <li>Not diagnostic or therapeutic in any phase before regulated clearance</li>
         </ul>
     </div>
 
     <hr class="section-divider">
 
-    <!-- GOVERNANCE IN PRACTICE -->
+    <!-- REGULATORY ALIGNMENT TABLE (Point 7) -->
     <div class="content-section">
-        <h2>Governance in Practice</h2>
-        <p>In operational terms, this governance model ensures:</p>
+        <h2>Regulatory Alignment</h2>
+        <table class="reg-table">
+            <thead>
+                <tr>
+                    <th>Governance Capability</th>
+                    <th>Regulatory Relevance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Authority Inventory</td>
+                    <td>Clinical evaluation alignment</td>
+                </tr>
+                <tr>
+                    <td>Runtime Enforcement</td>
+                    <td>Supports QMS and traceability</td>
+                </tr>
+                <tr>
+                    <td>Auditability</td>
+                    <td>Post-market surveillance &amp; PMS</td>
+                </tr>
+                <tr>
+                    <td>Permission Constraints</td>
+                    <td>SaMD risk management expectations</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="disclaimer">References to FDA/MDR are descriptive; they do not imply clearance or endorsement.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- IN PRACTICE (Point 9) -->
+    <div class="content-section">
+        <h2>In Practice</h2>
+        <p>This governance model ensures:</p>
         <ul>
-            <li>Named human authority for every clinical action</li>
-            <li>Enforced refusal outside approved scope</li>
-            <li>Continuous audit trails</li>
-            <li>Structured escalation pathways</li>
-            <li>Proven safety behavior before expanded autonomy</li>
+            <li>Named authority for every potential clinical action</li>
+            <li>Boundaries enforced deterministically at execution time</li>
+            <li>Escalation to human authority only</li>
+            <li>Immutable evidence suitable for regulatory review</li>
         </ul>
 
-        <!-- BOTTOM LINE -->
-        <div class="bottom-line">
-            <p><strong>Capability must follow governance — not the other way around.</strong></p>
-            <p>Clinical AI can only scale responsibly when authority is explicit, boundaries are enforced, and accountability is provable.</p>
-        </div>
-
-        <!-- CTAs -->
-        <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/physician-as-pilot" class="cta-button">Understand Physician-as-Pilot</a>
-            <a href="/standards/hybrid-human-agent-operating-standard" class="cta-button cta-outline">See the Governance Roadmap</a>
+        <!-- EDUCATIONAL CTAs (Point 10) -->
+        <div class="edu-links">
+            <div class="edu-link-block">
+                <p>Learn more about how authority is sequenced across deployment phases:</p>
+                <a href="/standards/hybrid-human-agent-operating-standard">→ View the Governance Roadmap</a>
+            </div>
+            <div class="edu-link-block">
+                <p>For technical reference and implementation guidance:</p>
+                <a href="/safety-os">→ Explore Safety OS definitions</a>
+            </div>
         </div>
     </div>
 
