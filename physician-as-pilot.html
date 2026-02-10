@@ -3,44 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physician-as-Pilot: A Regulatory Position Paper</title>
-    <meta name="description" content="Phase 1 Regulatory Checklist: Verify that Physician-as-Pilot Phase 1 operates entirely outside clinical, diagnostic, and SaMD regulatory scope with enforceable technical and governance controls.">
-    <meta name="keywords" content="Phase 1, regulatory checklist, non-clinical AI, SaMD scope, governance framework, AI accountability, human-in-the-loop, audit logging">
-    <meta name="author" content="Andy Squire, PatientCentricCare.AI">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <title>Physician-as-Pilot — Governance-First Supervision of SaMD-Ready AI | PatientCentricCare.AI</title>
+    <meta name="description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
     <link rel="canonical" href="https://www.patientcentriccare.ai/physician-as-pilot">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.patientcentriccare.ai/physician-as-pilot.html">
-    <meta property="og:title" content="Phase 1 Regulatory Checklist | Non-Clinical AI Deployment">
-    <meta property="og:description" content="Regulatory verification checklist for Phase 1 non-clinical AI deployment with enforced human accountability.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/physician-as-pilot">
+    <meta property="og:title" content="Physician-as-Pilot — Governance-First Supervision of SaMD-Ready AI">
+    <meta property="og:description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
     <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
-    <meta property="og:site_name" content="PatientCentricCare.AI">
-    <meta property="og:locale" content="en_US">
-    <meta property="article:author" content="Andy Squire">
-    <meta property="article:published_time" content="2025-01-01T00:00:00Z">
-    <meta property="article:modified_time" content="2026-01-13T00:00:00Z">
-    <meta property="article:section" content="Healthcare AI Governance">
-    <meta property="article:tag" content="AI Governance">
-    <meta property="article:tag" content="Healthcare AI">
-    <meta property="article:tag" content="Regulatory Compliance">
-    
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.patientcentriccare.ai/physician-as-pilot">
+    <meta property="twitter:title" content="Physician-as-Pilot — Governance-First Supervision of SaMD-Ready AI">
+    <meta property="twitter:description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-290924137');
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #1e293b;
-            background: #f8fafc;
+            color: #2c3e50;
+            background: #ffffff;
         }
 
-        /* Navigation - EXACT COPY FROM INDEX.HTML */
+        /* Navigation */
         nav {
             background: #0f172a;
             padding: 1rem 2rem;
@@ -49,7 +55,7 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
+
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -57,360 +63,255 @@
             justify-content: space-between;
             align-items: center;
         }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .logo-container img {
-            height: 45px;
-            width: auto;
-        }
-        
-        .logo-text {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.2rem;
-            align-items: center;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-        
-        .nav-links a:hover {
-            color: #0d9488;
-        }
 
-        .nav-links .nav-contact {
-            background: #E6A23C;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            color: white;
-        }
+        .logo-container { display: flex; align-items: center; gap: 1rem; }
+        .logo-container img { height: 45px; width: auto; }
+        .logo-text { color: white; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
 
-        .nav-links .nav-contact:hover {
-            background: #d4911f;
-            color: white;
-        }
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #0d9488; }
+        .nav-links .nav-contact { background: #E6A23C; padding: 0.5rem 1rem; border-radius: 6px; color: white; }
+        .nav-links .nav-contact:hover { background: #d4911f; color: white; }
 
-        /* Company Dropdown */
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown-toggle {
-            color: white;
-            font-weight: 500;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .nav-dropdown-toggle:hover {
-            color: #0d9488;
-        }
-
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-toggle { color: white; font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: color 0.3s; }
+        .nav-dropdown-toggle:hover { color: #0d9488; }
         .nav-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #0f172a;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 6px;
-            padding: 0.5rem 0;
-            min-width: 160px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.2s;
-            list-style: none;
+            position: absolute; top: 100%; left: 0; background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;
+            padding: 0.5rem 0; min-width: 160px; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: all 0.2s; list-style: none;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(5px); }
+        .nav-dropdown-menu li { padding: 0; }
+        .nav-dropdown-menu a { display: block; padding: 0.5rem 1rem; color: white; text-decoration: none; font-size: 0.9rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.1); color: #0d9488; }
 
-        .nav-dropdown:hover .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(5px);
-        }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: white; transition: 0.3s; }
 
-        .nav-dropdown-menu li {
-            padding: 0;
-        }
-
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .nav-dropdown-menu a:hover {
-            background: rgba(255,255,255,0.1);
-            color: #0d9488;
-        }
-        
-        /* Mobile Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-        
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: white;
-            transition: 0.3s;
-        }
-        
         @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
+            .hamburger { display: flex; }
             .nav-links {
-                position: fixed;
-                right: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: #0f172a;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                padding: 2rem 0;
+                position: fixed; right: -100%; top: 70px; flex-direction: column;
+                background: #0f172a; width: 100%; text-align: center;
+                transition: 0.3s; box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0; z-index: 999;
             }
-            
-            .nav-links.active {
-                right: 0;
-            }
-
-            /* Mobile dropdown */
+            .nav-links.active { right: 0; }
             .nav-dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                border: none;
-                box-shadow: none;
-                background: rgba(255,255,255,0.05);
-                margin-top: 0.5rem;
-                display: none;
+                position: static; opacity: 1; visibility: visible; transform: none;
+                border: none; box-shadow: none; background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem; display: none;
             }
-
-            .nav-dropdown.active .nav-dropdown-menu {
-                display: block;
-            }
-
-            .nav-dropdown-toggle {
-                display: block;
-                padding: 0.5rem 0;
-            }
+            .nav-dropdown.active .nav-dropdown-menu { display: block; }
+            .nav-dropdown-toggle { display: block; padding: 0.5rem 0; }
         }
 
-        main {
-            max-width: 1200px;
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-hero .subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #22c55e;
-        }
-
-        section h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        section h2:before {
-            content: "☑";
-            font-size: 1.5rem;
-            color: #22c55e;
-        }
-
-        .phase-definition {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border: 2px solid #0284c7;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .phase-definition h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #0c4a6e;
-            margin-bottom: 1rem;
-        }
-
-        .phase-definition p {
-            font-size: 1rem;
-            color: #0c4a6e;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .collapsible-section {
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
-        }
-
-        .collapsible-section summary {
-            padding: 1.25rem 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #f8fafc;
-            font-weight: 700;
-            color: #0f172a;
-            font-size: 1.1rem;
-            list-style: none;
-            border-bottom: 1px solid transparent;
-            transition: background 0.2s ease;
-        }
-
-        .collapsible-section summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .collapsible-section summary:hover {
-            background: #f1f5f9;
-        }
-
-        .collapsible-section[open] summary {
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .collapsible-section summary:after {
-            content: "+";
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #22c55e;
-            transition: transform 0.2s ease;
-        }
-
-        .collapsible-section[open] summary:after {
-            content: "-";
-        }
-
-        .collapsible-content {
-            padding: 1.5rem;
-        }
-
-        .checklist-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .checklist-group h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #166534;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-size: 0.9rem;
-        }
-
-        .checklist-group ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .checklist-group li {
-            padding: 0.75rem 0 0.75rem 1.75rem;
-            position: relative;
-            color: #475569;
             line-height: 1.6;
+            opacity: 0.95;
         }
 
-        .checklist-group li:before {
-            content: "•";
+        /* Content */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+
+        .content-section ul li:before {
+            content: "→";
             position: absolute;
             left: 0;
-            color: #22c55e;
-            font-weight: 700;
+            color: #0d9488;
+            font-weight: bold;
         }
 
-        .boundary-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            background: #f8fafc;
+        /* Phase cards */
+        .phase-card {
+            padding: 1.5rem;
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
             border-radius: 8px;
-            overflow: hidden;
+            margin-bottom: 1rem;
         }
 
-        .boundary-table th {
-            background: #0f172a;
-            color: white;
-            padding: 1rem;
-            text-align: left;
+        .phase-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0d9488;
+            font-size: 1.2rem;
+        }
+
+        .phase-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .phase-card.active {
+            border-left: 4px solid #E6A23C;
+            background: #fffbeb;
+        }
+
+        .phase-card.active h3 { color: #b45309; }
+
+        /* Invariant banner */
+        .invariant-banner {
+            margin-top: 1.5rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .boundary-table td {
+            color: #0f172a;
+            text-align: center;
             padding: 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            background: #fef3c7;
+            border-radius: 8px;
         }
 
-        .boundary-table tr:last-child td {
-            border-bottom: none;
+        /* Characteristic cards */
+        .characteristic-card {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-left: 4px solid #0d9488;
+            border-radius: 8px;
+            margin-bottom: 1rem;
         }
 
-        footer {
+        .characteristic-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0f172a;
+            font-size: 1.15rem;
+        }
+
+        .characteristic-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        /* Emphasis block */
+        .emphasis-block {
+            background: #f0fdfa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            color: #0f172a;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* CTA */
+        .cta-button {
+            display: inline-block;
+            background: #E6A23C;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #d4911f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
+        }
+
+        .cta-outline {
+            background: transparent;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+            box-shadow: none;
+        }
+
+        .cta-outline:hover {
             background: #0f172a;
             color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            margin-top: 3rem;
         }
 
-        footer p {
-            margin-bottom: 0.75rem;
+        /* Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 0;
         }
 
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .page-hero .subtitle { font-size: 1.05rem; }
+            .content-section h2 { font-size: 1.6rem; }
+            .content-section { padding: 2rem 1.25rem; }
+        }
     </style>
 </head>
 <body>
-    
-    <!-- Canonical navigation – do not modify without architectural review -->
-    
     <!-- Canonical navigation – do not modify without architectural review -->
     <nav>
         <div class="nav-container">
             <div class="logo-container">
-                <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <img src="/MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
                 <span class="logo-text">PatientCentricCare.AI</span>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
@@ -440,281 +341,145 @@
     </nav>
     <!-- End Canonical navigation -->
 
-    <!-- End Canonical navigation -->
- 
-
-    <!-- Main Content: Regulatory Position Paper First -->
-    <main>
-        <h1>Physician-as-Pilot: A Regulatory Position Paper</h1>
-        
-        <!-- Executive Summary -->
-        <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 24px; margin: 24px 0 32px 0; border-radius: 8px;">
-            <h3 style="margin-top: 0; margin-bottom: 16px; color: #166534; font-size: 1.1rem;">Executive Summary</h3>
-            <p style="margin-bottom: 0; color: #166534; line-height: 1.7;">The Physician-as-Pilot model describes a clinical AI governance architecture in which licensed physicians retain explicit and continuous clinical authority over AI-enabled systems. In this model, AI does not act autonomously or formulate independent clinical intent; instead, it executes tasks strictly within physician-defined protocols, safety boundaries, and escalation rules. Deterministic escalation pathways ensure that predefined thresholds trigger human review or intervention. All system actions are transparently logged to support traceability and auditability. The framework is designed to separate execution from authority, enabling safe clinical deployment while maintaining accountability, oversight, and alignment with established principles of clinical governance and patient safety.</p>
-        </div>
-        
-        <!-- Regulatory Content -->
-        <section class="phase-definition">
-            <h3>Intended Audience</h3>
-            <p>This document is written for:<br>
-            - U.S. FDA reviewers and Software as a Medical Device (SaMD) experts<br>
-            - European Union MDR and UK MHRA regulatory authorities<br>
-            - Clinical AI governance scholars and academic evaluators, including Harvard Medical School capstone tutors and faculty engaged in clinical AI oversight and safety</p>
-            <h3>Purpose</h3>
-            <p>This paper proposes a clear regulatory boundary model for non-clinical AI systems in healthcare. The Physician-as-Pilot model is designed to preserve physician decisional authority, avoid unintended SaMD classification, and enable safe, auditable AI assistance without autonomous clinical action.</p>
-        </section>
-
-        <section>
-            <h2>Regulatory Context and Problem Statement</h2>
-            <p>The proliferation of AI in healthcare creates regulatory ambiguity between cognitive assistance and clinical decision-making. This ambiguity can lead to human authority erosion and boundary creep into SaMD without appropriate regulatory oversight. This paper proposes a model to address these challenges by establishing clear, enforceable boundaries for non-clinical AI systems.</p>
-        </section>
-
-        <section style="background: #f8fafc; border-left: none; padding: 2rem 0;">
-            <h2 style="border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">Regulatory Position Paper (PDF)</h2>
-            <div style="margin-top: 2rem;">
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">Physician-as-Pilot: A Regulatory Position Paper</h3>
-                <p style="color: #475569; margin-bottom: 1rem;">This document presents the full Physician-as-Pilot governance architecture, including explicit non-SaMD boundary conditions, authority and escalation logic, and a phased regulatory pathway for AI-mediated home care.</p>
-                <p style="color: #475569; margin-bottom: 1.5rem;">The paper is written for FDA and EU MDR reviewers and academic clinical AI governance evaluators. It is conceptual and governance-focused and does not propose product capability, commercial readiness, or autonomous clinical action.</p>
-                <a href="/assets/physician-as-pilot-regulatory-position-paper-2.pdf" target="_blank" style="display: block; max-width: 600px; margin: 0 auto 1.5rem auto;">
-                    <img src="/images/3PhaseGovernance.png" alt="Illustrative Governance & Accountability Pathway for AI-Mediated Home Care - Three Phases showing Phase I Non-Medical AI, Phase II Care-Adjacent AI, and Phase III Regulated Clinical AI with Safety OS Flight Recorder" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-                </a>
-                <div style="text-align: center;">
-                    <a href="/assets/physician-as-pilot-regulatory-position-paper-2.pdf" target="_blank" style="font-weight: 600; color: #1d4ed8; text-decoration: none;">Download the full Regulatory Position Paper (PDF)</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Explicit Non-SaMD Boundary Conditions</h2>
-            <p>The Physician-as-Pilot model for non-clinical systems (Phase I) is explicitly constrained to preclude medical device functionality. The system is architecturally prohibited from performing the following functions:</p>
-            <ul>
-                <li>Diagnosis, prognosis, or treatment recommendation.</li>
-                <li>Clinical assessment, triage, or risk scoring.</li>
-                <li>Generation of clinical alerts or time-critical alarms.</li>
-            </ul>
-            <p>All AI outputs are non-directive, and all clinical interpretation and action remain exclusively human-executed.</p>
-        </section>
-
-        <details class="collapsible-section">
-            <summary>Escalation & Consent Model</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Allowed (Phase I)</h3>
-                    <ul>
-                        <li>The system may detect “authority ambiguity” or “user distress language” solely to trigger an internal halt + suggestion workflow (e.g., “Would you like to contact a caregiver?”), but it cannot initiate any external outreach without explicit user authorization.</li>
-                    </ul>
-                    <h3>Prohibited (Phase I)</h3>
-                    <ul>
-                        <li>No automatic alerting, triage, prioritization, routing, or contacting clinicians/caregivers.</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Consent is Explicit and Transactional</h3>
-                    <ul>
-                        <li>Each escalation requires affirmative user confirmation</li>
-                        <li>Consent is captured per action, not assumed</li>
-                        <li>Consent state is logged immutably</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Escalation Pathways</h3>
-                    <ul>
-                        <li>User → AI → Human caregiver / doctor's office</li>
-                        <li>AI does not interpret, filter, or prioritize escalation content</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
-
-        <details class="collapsible-section">
-            <summary>Auditability & Evidence</summary>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Immutable Audit Logging</h3>
-                    <ul>
-                        <li>All interactions logged</li>
-                        <li>All consent events recorded</li>
-                        <li>All escalations timestamped</li>
-                        <li>Logs are tamper-resistant</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Audit Readiness</h3>
-                    <ul>
-                        <li>Logs available for regulatory, sponsor, or compliance review</li>
-                        <li>Human actions traceable to individuals</li>
-                        <li>System behavior reproducible and inspectable</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
-
-        <details class="collapsible-section" open>
-            <summary>Safety Architecture (Safety OS)</summary>
-            <div class="collapsible-content">
-                <table class="boundary-table">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Safety OS Control Surfaces (Phase I)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="label">Consent state</td>
-                            <td class="content">versioned; scope/duration/revocation</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Authority holder</td>
-                            <td class="content">user/caregiver only</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Permitted actions</td>
-                            <td class="content">conversation, reminders, user-requested contact drafting</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Hard refusals</td>
-                            <td class="content">diagnosis/triage/treatment/medication guidance</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Escalation mode</td>
-                            <td class="content">suggestion only; external action requires explicit “yes”</td>
-                        </tr>
-                        <tr>
-                            <td class="label">Audit artifacts</td>
-                            <td class="content">event log + audit summary + redacted export</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="collapsible-content">
-                <div class="checklist-group">
-                    <h3>Deterministic System Behavior</h3>
-                    <ul>
-                        <li>Rule-defined routing only</li>
-                        <li>No probabilistic clinical output</li>
-                        <li>No hidden decision layers</li>
-                    </ul>
-                </div>
-                <div class="checklist-group">
-                    <h3>Hard Constraints Enforced</h3>
-                    <ul>
-                        <li>Clinical intent requests are refused, not redirected</li>
-                        <li>Boundary violations are blocked at system level</li>
-                        <li>No model override of governance rules</li>
-                    </ul>
-                </div>
-            </div>
-        </details>
-
-        <section>
-            <h2>Why Governance Must Precede Model Performance</h2>
-            <div class="functional-summary">
-                <ul>
-                    <li><strong>Transparency:</strong> what data the system uses and what it never uses in Phase I</li>
-                    <li><strong>Reproducibility:</strong> consistent behavior through fixed rules + exportable audit logs</li>
-                    <li><strong>Generalizability:</strong> governance controls are hardware/model-agnostic; they don’t “break” under dataset shift</li>
-                    <li><strong>Calibration/thresholds:</strong> Phase II introduces physician-defined thresholds (care envelope) rather than arbitrary defaults</li>
-                </ul>
-            </div>
-        </section>
-
-        <div class="phase-definition" style="border-color: #f97316;">
-            <h3 style="color: #c2410c;">Phase I → Phase II Boundary Rule (Canonical)</h3>
-            <p style="color: #7c2d12;">Phase I ends and Phase II governance is required the moment the system is expected to initiate or prioritize care actions (alerts, structured safety questioning, clinical routing, or protocol-driven escalation) without case-by-case user instruction—because that requires a clinician-signed care envelope.</p>
-        </div>
-
-        <section>
-            <h2>Discussion and Review</h2>
-            <p>This regulatory position paper is submitted for critical review and discussion with regulatory bodies and academic partners. Feedback on the proposed boundary model and governance architecture is welcome.</p>
-        </section>
-
-        <!-- Divider -->
-        <hr style="margin: 4rem 0; border: none; border-top: 2px solid #e2e8f0;">
-
-        <!-- Commercial & Product Context (Collapsible) -->
-        <details>
-            <summary style="font-size: 1.2rem; font-weight: 700; cursor: pointer;">Expand for Supporting Commercial & Product Context</summary>
-            <div style="padding-top: 2rem;">
-                <section>
-                    <h2>Out-of-Scope and Implementation Considerations</h2>
-                    <p>The following illustrative pathway is provided for contextual orientation only. It does not define a product roadmap but rather a sequence of potential future regulatory states, each requiring separate and distinct validation and approval.</p>
-                    <div id="roadmap" style="text-align: center; margin: 2rem 0 3rem 0;">
-                        <img src="/images/infographic2-additive-ladder-v4.png" alt="Additive Governance View - Permitted vs Prohibited Behaviors by Phase: Phase I Home Companion, Phase II Mobile Companion, Phase III SaMD Plug-In" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-                    </div>
-                </section>
-
-                <div style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 2px solid #f97316; border-radius: 12px; padding: 2.5rem; margin: 2rem 0; text-align: center;">
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a5f; margin-bottom: 1rem;">Ready to Join the Mission?</h3>
-                    <p style="font-size: 1.1rem; color: #334155; margin-bottom: 1.5rem;">We're building the regulatory bridge that will power the future of safe, compliant, human-centric healthcare.</p>
-                    <p style="font-size: 1.1rem; font-weight: 700; color: #1e3a5f; margin-bottom: 0.5rem;">Andy Squire, Founder & CEO</p>
-                    <p style="font-size: 1rem;">
-                        <a href="mailto:andy@patientcentriccare.ai?subject=Physician-as-Pilot%20Inquiry&body=Dear%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%20the%20Physician-as-Pilot%20regulatory%20position%20paper.%0A%0A" style="color: #f97316; font-weight: 600; text-decoration: none;">andy@patientcentriccare.ai</a>
-                        <span style="color: #64748b; margin: 0 0.5rem;">|</span>
-                        <a href="https://linkedin.com/in/andy-squire" target="_blank" style="color: #f97316; font-weight: 600; text-decoration: none;">LinkedIn</a>
-                    </p>
-                </div>
-            </div>
-        </details>
-
-    </main>
-
-    <!-- Evidence Package Section -->
-    <section style="max-width: 1200px; margin: 0 auto 2rem auto; padding: 2rem 1rem;">
-        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b; border-radius: 8px; padding: 2rem;">
-            <h2 style="font-size: 1.4rem; font-weight: 700; color: #92400e; margin-bottom: 1rem; text-align: center;">Evidence Package (Reviewer/Regulator Ready)</h2>
-            <p style="font-size: 1rem; color: #78350f; margin-bottom: 1.5rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">These artifacts demonstrate reconstructability and boundary enforcement prior to clinical claims.</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                <a href="/images/3PhaseGovernance.png" target="_blank" style="display: inline-block; background: #f59e0b; color: white; padding: 0.75rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.3s;">One-page governance pathway figure (Phase I–III)</a>
-                <a href="/assets/physician-as-pilot-regulatory-position-paper-2.pdf" target="_blank" style="display: inline-block; background: #f59e0b; color: white; padding: 0.75rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.3s;">Phase I protocol (boundary spec)</a>
-                <a href="/safety-os-audit-sample.pdf" target="_blank" style="display: inline-block; background: #f59e0b; color: white; padding: 0.75rem 1.25rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.3s;">Redacted sample audit log + audit summary (1 session)</a>
-            </div>
-        </div>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <h1>Physician-as-Pilot</h1>
+        <p class="subtitle">Governance-First Supervision of SaMD-Ready AI</p>
     </section>
 
-    <!-- Related Resources Section -->
-    <section style="max-width: 1200px; margin: 0 auto 2rem auto; padding: 2rem 1rem;">
-        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #0284c7; border-radius: 8px; padding: 2rem; text-align: center;">
-            <h3 style="font-size: 1.3rem; font-weight: 700; color: #0c4a6e; margin-bottom: 1rem;">Related: Clinical AI Governance</h3>
-            <p style="font-size: 1rem; color: #0c4a6e; margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">For a comprehensive overview of the Physician-as-Pilot governance model, including why existing approaches fail and how governance must be designed before autonomy, see our dedicated governance page.</p>
-            <a href="/clinical-ai-governance" style="display: inline-block; background: #0284c7; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s;">View Clinical AI Governance Framework →</a>
-        </div>
-    </section>
+    <!-- INTRO -->
+    <div class="content-section">
+        <p>Modern healthcare AI fails not because models are weak, but because authority is unclear.</p>
+        <p><strong>Physician-as-Pilot</strong> is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.</p>
+        <p class="disclaimer">This page describes Phase II of the PatientCentricCare governance framework.</p>
+    </div>
 
-    <!-- How to Cite -->
-    <section style="max-width: 1200px; margin: 0 auto 2rem auto; padding: 0 1rem;">
-        <div style="background: #fefce8; border-left: 4px solid #ca8a04; padding: 20px; border-radius: 8px;">
-            <h4 style="margin: 0 0 12px 0; color: #854d0e; font-size: 0.95rem;">How to cite</h4>
-            <p style="margin: 0; color: #713f12; font-family: 'Courier New', monospace; font-size: 0.9rem;">Squire, A. (2026). Physician-as-Pilot: A Regulatory Position Paper. PatientCentricCare.AI.</p>
-        </div>
-    </section>
+    <hr class="section-divider">
 
-    <!-- Footer -->
+    <!-- GOVERNANCE FRAMEWORK CONTEXT -->
+    <div class="content-section">
+        <h2>Governance Framework Context</h2>
+        <p>PatientCentricCare follows a deliberate, phased governance model:</p>
+
+        <div class="phase-card">
+            <h3>Phase I — Non-Medical AI</h3>
+            <p>No clinical inference. Human-in-the-loop support only.</p>
+        </div>
+
+        <div class="phase-card active">
+            <h3>Phase II — Physician-as-Pilot (SaMD-Ready)</h3>
+            <p>AI supports clinical workflows under explicit clinician supervision.<br>Escalation-only execution. No autonomous clinical action.</p>
+        </div>
+
+        <div class="phase-card">
+            <h3>Phase III — Regulated Clinical AI (SaMD)</h3>
+            <p>Licensed clinical inference under regulatory approval.</p>
+        </div>
+
+        <p class="invariant-banner">Invariant across all phases: Clinical authority is never delegated to AI.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- WHAT PHYSICIAN-AS-PILOT MEANS -->
+    <div class="content-section">
+        <h2>What "Physician-as-Pilot" Means</h2>
+        <p>Physician-as-Pilot defines who is allowed to decide, what AI may execute, and how that authority is enforced.</p>
+        <p>Under this model:</p>
+        <ul>
+            <li>AI may observe, support, and escalate</li>
+            <li>AI may <strong>not</strong> diagnose, treat, or decide</li>
+            <li>Clinicians explicitly authorize, override, or block all clinical actions</li>
+            <li>Authority boundaries are defined in advance and enforced at runtime</li>
+        </ul>
+        <p class="emphasis-block">AI acts only within a clinician-defined envelope — never beyond it.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- HOW IT WORKS -->
+    <div class="content-section">
+        <h2>How Physician-as-Pilot Works</h2>
+        <p>Physician-as-Pilot is not a policy document.<br>It is a <strong>runtime governance architecture</strong>.</p>
+        <p>Key characteristics:</p>
+
+        <div class="characteristic-card">
+            <h3>Escalation-only execution</h3>
+            <p>AI may surface signals or workflow suggestions, but cannot act clinically.</p>
+        </div>
+
+        <div class="characteristic-card">
+            <h3>Explicit authority assignment</h3>
+            <p>Every clinical action has a named human owner.</p>
+        </div>
+
+        <div class="characteristic-card">
+            <h3>Revocable permissions</h3>
+            <p>Clinicians can pause, modify, or terminate AI involvement at any time.</p>
+        </div>
+
+        <div class="characteristic-card">
+            <h3>Enforced refusal</h3>
+            <p>Requests outside permitted scope are blocked by design.</p>
+        </div>
+
+        <p style="margin-top: 1.5rem;">This ensures AI capability can expand only after governance maturity is proven.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- REGULATORY POSITIONING -->
+    <div class="content-section">
+        <h2>Regulatory Positioning (Phase II)</h2>
+        <p>Phase II systems operating under Physician-as-Pilot:</p>
+        <ul>
+            <li>Do not perform autonomous clinical inference</li>
+            <li>Are not SaMD, but are <strong>SaMD-ready</strong></li>
+            <li>Generate audit-grade evidence required for regulated evaluation</li>
+            <li>Align with FDA / EU MDR expectations for human oversight and traceability</li>
+        </ul>
+        <p class="disclaimer">References to regulatory frameworks are descriptive only and do not imply approval, clearance, or endorsement.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- WHEN IT APPLIES -->
+    <div class="content-section">
+        <h2>When Physician-as-Pilot Applies</h2>
+        <p>Physician-as-Pilot is appropriate when:</p>
+        <ul>
+            <li>AI supports clinician workflows without acting independently</li>
+            <li>Clinical authority must remain explicit and auditable</li>
+            <li>Organizations are preparing for regulated AI pathways</li>
+            <li>Safety, accountability, and escalation must be provable — not promised</li>
+        </ul>
+
+        <!-- CTAs -->
+        <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/standards/hybrid-human-agent-operating-standard" class="cta-button">See the Governance Roadmap</a>
+            <a href="/clinical-ai-governance" class="cta-button cta-outline">Learn About Phased Permissioning</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer style="background: #0f172a; color: white; text-align: center; padding: 3rem 2rem;">
         <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
         <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
         <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
         <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
         <p style="margin-bottom: 1.5rem;"><a href="/impressum" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
-        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
     </footer>
 
-    
-    
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
-            const hamburger = document.querySelector('.hamburger');
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            if (navLinks) { navLinks.classList.toggle('active'); }
         }
 
-        // Mobile dropdown toggle
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
             const dropdown = document.querySelector('.nav-dropdown');
-            const navLinks = document.getElementById('navLinks');
-            const hamburger = document.querySelector('.hamburger');
-
             if (dropdownToggle && dropdown) {
                 dropdownToggle.addEventListener('click', function(e) {
                     if (window.innerWidth <= 768) {
@@ -723,94 +488,7 @@
                     }
                 });
             }
-
-            // Close menu when a link is clicked (mobile only)
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                        // Also close dropdown if open
-                        const dropdown = document.querySelector('.nav-dropdown');
-                        if (dropdown) {
-                            dropdown.classList.remove('active');
-                        }
-                    }
-                });
-            });
         });
-    
-    // --- GA4 Event Hygiene (Point 3) ---
-    const sendGa4Event = (eventName, eventParams = {}) => {
-        if (typeof gtag === 'function') {
-            gtag('event', eventName, eventParams);
-        } else if (typeof dataLayer !== 'undefined') {
-            dataLayer.push({
-                'event': eventName,
-                ...eventParams
-            });
-        }
-    };
-
-    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
-    document.addEventListener('DOMContentLoaded', () => {
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                const linkText = link.textContent.trim();
-                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
-                    sendGa4Event('navigation_click', {
-                        link_url: href,
-                        link_text: linkText,
-                        link_location: 'main_nav'
-                    });
-                }
-            });
-        });
-
-        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
-        const contactLinks = document.querySelectorAll('.nav-contact');
-        contactLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sendGa4Event('contact_click', {
-                    contact_type: 'email_link',
-                    location: 'main_nav'
-                });
-            });
-        });
-    });
-
-    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
-    const originalOpenLightbox = window.openLightbox;
-    window.openLightbox = function() {
-        originalOpenLightbox.apply(this, arguments);
-        sendGa4Event('lightbox_open', {
-            diagram_name: 'physician_as_pilot_framework'
-        });
-    };
-
-    // 3.4 Scroll depth (25/50/75%)
-    const scrollThresholds = [25, 50, 75];
-    const scrollTracked = {};
-
-    window.addEventListener('scroll', () => {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollTop = window.scrollY;
-        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
-
-        scrollThresholds.forEach(threshold => {
-            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
-                scrollTracked[threshold] = true;
-                sendGa4Event('scroll_depth', {
-                    percent: threshold
-                });
-            }
-        });
-    });
-
     </script>
-
-
 </body>
 </html>
