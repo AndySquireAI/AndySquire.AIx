@@ -932,254 +932,207 @@
     <main id="main-content" role="main">
         <!-- Header -->
         <header class="standard-header">
-            <h1>Hybrid Human–Agent Operating Standard</h1>
+            <h1>Hybrid Human&ndash;Agent Operating Standard</h1>
             <span class="version-tag">Version 1.0</span>
-            <p class="lead">An operator-first AI-in-the-Loop (AIITL) governance model</p>
+            <p class="lead">A Governance Specification for Authority, Boundaries, Enforcement, and Auditability</p>
         </header>
 
-        <!-- EXECUTIVE SUMMARY -->
-        <section class="exec-summary">
-            <h2>Executive Summary</h2>
-            
-            <h3>The problem</h3>
-            <div class="exec-summary-problem">
-                <p>Organizations deploying AI face a predictable failure mode: AI increases speed and scale, while accountability remains unclear. Oversight relies on committees and after-the-fact reviews. When something goes wrong, escalation is slow and blame is retroactive.</p>
-                <p style="margin-top: 0.5rem;"><strong>This is an operating-model problem, not a tooling problem.</strong></p>
-            </div>
-
-            <h3>The AIITL solution</h3>
-            <div class="exec-summary-solution">
-                <p>AI-in-the-Loop (AIITL) governance ensures that:</p>
-                <ul>
-                    <li>Humans own intent, risk, and escalation</li>
-                    <li>Machines execute, monitor, and enforce controls at runtime</li>
-                </ul>
-                <p style="margin-top: 0.5rem;"><strong>AI operates with autonomy only where decisions are explicitly owned, bounded, and reversible.</strong></p>
-            </div>
-
-            <h3>What actually changes</h3>
-            <div class="exec-summary-before-after">
-                <div class="exec-before">
-                    <h4>Before (human-only)</h4>
-                    <ul>
-                        <li>Manual triage, review, approval</li>
-                        <li>SOPs and peer review as controls</li>
-                        <li>Limited scale, slow turnaround</li>
-                        <li>Oversight after execution</li>
-                    </ul>
-                </div>
-                <div class="exec-after">
-                    <h4>After (hybrid)</h4>
-                    <ul>
-                        <li>AI performs triage, retrieval, drafting</li>
-                        <li>Each decision has explicit autonomy level</li>
-                        <li>Guardrails and alerts run continuously</li>
-                        <li>Humans handle exceptions only</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>The core shift</h3>
-            <div class="exec-core-shift">
-                <p>AI autonomy is assigned per decision, not per system; unowned decisions are ineligible for automation.</p>
-            </div>
-
-            <h3>The four artifacts (a closed loop)</h3>
-            <div class="exec-artifacts">
-                <ol>
-                    <li><strong>Decision Inventory</strong> — Defines what decisions exist and who owns the outcome.</li>
-                    <li><strong>Autonomy Allocation Matrix</strong> — Assigns bounded autonomy per decision (human-only → AI-led).</li>
-                    <li><strong>Accountability & Escalation Framework</strong> — Defines ownership, rollback authority, and incident handling before failure.</li>
-                    <li><strong>Governance as Infrastructure</strong> — Encodes policy, monitoring, and intervention into systems at machine speed.</li>
-                </ol>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Together, these form a governance loop, not standalone documents.</p>
-            </div>
-
-            <!-- Framework Diagram -->
-            <div style="margin: 2rem 0; text-align: center;">
-                <img src="/images/framework-diagram.png" alt="Hybrid Human-Agent Operating Model - AIITL Governance Framework" style="max-width: 100%; height: auto; border-radius: 8px;">
-            </div>
-
-            <h3>What this enables</h3>
-            <div class="exec-enables">
-                <ul>
-                    <li>Faster AI deployment without surrendering accountability</li>
-                    <li>Clear ownership before incidents occur</li>
-                    <li>Governance that operates at AI speed</li>
-                    <li>Regulatory-defensible autonomy progression</li>
-                </ul>
-            </div>
-
-            <div class="exec-cta">
-                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem;">Status: v1.0 (stable) · Open, non-commercial, citeable operating standard</p>
-                <a href="/standards/Decision_Inventory_v1.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Decision Inventory v1'});">↓ Core Standard (PDF)</a>
-                <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Summary'});">↓ Safety OS Summary (2 pages)</a>
-            </div>
+        <!-- PURPOSE AND SCOPE -->
+        <section>
+            <h2>Purpose and Scope</h2>
+            <p>This Hybrid Human&ndash;Agent Operating Standard defines the governance constructs required to safely deploy AI systems in healthcare and care-adjacent contexts without delegating clinical authority to machines.</p>
+            <p>It specifies how human authority, system boundaries, deterministic enforcement, and auditability must be structured across deployment contexts ranging from non-medical support to regulated clinical AI.</p>
+            <p><em>This document is a reference standard, not a product description, clinical claim, or commercial roadmap.</em></p>
         </section>
 
-        <!-- SECTION DIVIDER -->
-        <div class="section-divider">
-            <h2>Detailed Model and Implementation</h2>
-        </div>
+        <!-- DESIGN PRINCIPLE -->
+        <section>
+            <h2>Design Principle</h2>
+            <p class="thesis-statement">Clinical authority must never be delegated to AI systems.</p>
+            <p>AI systems may execute tasks, surface information, or support coordination, but authority to define clinical intent, approve clinical action, and assume accountability must always reside with a licensed human professional or designated human authority.</p>
+            <p>Failures of healthcare AI typically arise not from insufficient model capability, but from unclear authority boundaries and premature delegation of decision rights. This standard addresses that root cause.</p>
+        </section>
 
-        <!-- The Problem Section -->
-        <section id="problem" class="problem-section">
-            <h2>The problem this standard solves</h2>
-            <p>Organizations introducing AI into existing processes face a predictable failure mode:</p>
+        <!-- WHAT THIS STANDARD DEFINES -->
+        <section>
+            <h2>What This Standard Defines</h2>
+            <p>This operating standard specifies:</p>
             <ul>
-                <li>AI increases speed and scale</li>
-                <li>Accountability remains ambiguous</li>
-                <li>Oversight relies on committees and hope</li>
-                <li>When something goes wrong, escalation is slow and blame is retroactive</li>
+                <li>How authority is assigned, scoped, and revoked</li>
+                <li>How boundaries are enforced deterministically (not probabilistically)</li>
+                <li>How escalation occurs without recommendation or inference</li>
+                <li>How audit artifacts are generated and preserved</li>
+                <li>How governance remains invariant across deployment phases</li>
             </ul>
-            <p><strong>This is an operating-model problem, not a tooling problem.</strong></p>
-            <p class="thesis-statement">AIITL: humans retain ownership of intent, risk, and escalation. Machines execute, monitor, and enforce controls at runtime.</p>
+            <p>It does <strong>not</strong> define:</p>
+            <ul>
+                <li>Product features</li>
+                <li>Commercial packaging</li>
+                <li>Clinical performance claims</li>
+                <li>Regulatory approval or clearance</li>
+            </ul>
         </section>
 
-        <!-- What Changes Section -->
-        <section id="what-changes" class="what-changes-section">
-            <h2>Before vs After: What actually changes</h2>
-            <p>Medical information inquiry handling. Same pattern applies to safety signal triage, claims routing, credit decisions, or content moderation.</p>
+        <!-- Framework Diagram (VISUAL 1 - KEPT) -->
+        <section class="hero-visual">
+            <img src="/images/framework-diagram.png" alt="Hybrid Human-Agent Operating Model - AIITL Governance Framework">
         </section>
 
-        <!-- Before/After Diagram -->
+        <!-- CORE GOVERNANCE CONSTRUCTS -->
+        <section>
+            <h2>Core Governance Constructs</h2>
+
+            <div class="artifact">
+                <h3>Authority Construct</h3>
+                <p>Defines who is authorized to act, under what scope, and for what duration.</p>
+                <p>Authority is:</p>
+                <ul>
+                    <li>Explicitly assigned</li>
+                    <li>Versioned</li>
+                    <li>Revocable</li>
+                    <li>Logged</li>
+                </ul>
+                <p><strong>No authority is implicit, inferred, or assumed by the AI system.</strong></p>
+            </div>
+
+            <div class="artifact">
+                <h3>Boundary Construct</h3>
+                <p>Defines what the system is prohibited from doing, regardless of user request or model output.</p>
+                <p>Boundaries include:</p>
+                <ul>
+                    <li>No diagnosis</li>
+                    <li>No disease-state inference</li>
+                    <li>No treatment recommendation</li>
+                    <li>No medication guidance</li>
+                </ul>
+                <p><strong>Boundary violations result in hard refusals, not redirection.</strong></p>
+            </div>
+
+            <div class="artifact">
+                <h3>Control Construct</h3>
+                <p>Defines how governance is enforced at runtime.</p>
+                <p>Enforcement is:</p>
+                <ul>
+                    <li>Deterministic</li>
+                    <li>Rule-bounded</li>
+                    <li>System-level</li>
+                    <li>Non-overridable by models</li>
+                </ul>
+                <p>Machine learning components may detect signals or patterns, but cannot override governance rules.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>Escalation Construct</h3>
+                <p>Defines how human authority is engaged when thresholds are met.</p>
+                <p>Escalation:</p>
+                <ul>
+                    <li>Notifies or hands off only</li>
+                    <li>Does not include recommendations</li>
+                    <li>Requires explicit human authorization before external action</li>
+                </ul>
+            </div>
+
+            <div class="artifact">
+                <h3>Audit Construct</h3>
+                <p>Defines how system behavior is reconstructed and reviewed.</p>
+                <p>Audit artifacts are:</p>
+                <ul>
+                    <li>Immutable</li>
+                    <li>Time-stamped</li>
+                    <li>Attributable</li>
+                    <li>Institution-owned</li>
+                </ul>
+                <p>They support regulatory review, quality management, and post-market surveillance where applicable.</p>
+            </div>
+        </section>
+
+        <!-- TERMINOLOGY -->
+        <section>
+            <h2>Terminology (Normative)</h2>
+            <ul>
+                <li><strong>Authority Holder:</strong> A named human (user, caregiver, clinician) with explicit decision rights</li>
+                <li><strong>Boundary:</strong> A constraint that cannot be exceeded without revocable human authorization</li>
+                <li><strong>Hard Refusal:</strong> Deterministic rejection of a request outside permitted authority</li>
+                <li><strong>Escalation:</strong> Structured handoff to a designated human authority</li>
+                <li><strong>Audit Artifact:</strong> Immutable log record with actor, event, timestamp, and outcome</li>
+                <li><strong>SaMD:</strong> AI-enabled medical device regulated under FDA / EU MDR definitions; references here are contextual only and do not imply approval or clearance</li>
+            </ul>
+        </section>
+
+        <!-- GOVERNANCE BUILT-INS TABLE -->
+        <section>
+            <h2>Governance Built-Ins (Reference Table)</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+                <thead>
+                    <tr style="background: #f1f5f9;">
+                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Construct</th>
+                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Purpose</th>
+                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Enforcement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Authority Inventory</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defines who may act</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Explicit assignment &amp; revocation</td></tr>
+                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Permission Envelope</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defines allowed actions</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Runtime constraint</td></tr>
+                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Hard Refusals</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Blocks prohibited actions</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">System-level enforcement</td></tr>
+                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Escalation Protocols</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Engages human authority</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defined handoff only</td></tr>
+                    <tr><td style="padding: 0.6rem;">Audit Trails</td><td style="padding: 0.6rem;">Enables reconstruction</td><td style="padding: 0.6rem;">Immutable logging</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Before/After Diagram (VISUAL 2 - KEPT) -->
         <section class="hero-visual">
             <img src="/images/before-after-hybrid-model.png" alt="Before and After: Human-Only Model vs Hybrid Human-Agent Model (AIITL)">
+            <p style="font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.75rem;">Illustrative Governance Matrix: maps permitted and prohibited behaviors under governance constraints across deployment contexts. Does not imply commercial readiness, autonomous clinical action, or regulatory approval.</p>
         </section>
 
-        <!-- Before/After Details -->
-        <section id="before-after-details" class="before-after-details">
-            <div class="before-column">
-                <h3>Before: human-only model</h3>
-                <ul>
-                    <li>Manual triage, research, draft, review, approve</li>
-                    <li>Controls rely on SOPs and peer review</li>
-                    <li>Throughput constrained by human capacity</li>
-                    <li>Oversight happens after execution</li>
-                    <li>Turnaround: 2–3 days</li>
-                </ul>
-            </div>
-            <div class="after-column">
-                <h3>After: hybrid human–agent model</h3>
-                <ul>
-                    <li>AI performs triage, retrieval, synthesis, drafting</li>
-                    <li>Each decision step has explicit autonomy level</li>
-                    <li>Guardrails, sampling, alerts operate continuously</li>
-                    <li>Humans review exceptions and escalations only</li>
-                    <li>Turnaround: hours, with stronger traceability</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Core Shift Section -->
-        <section id="core-shift" class="core-shift-section">
-            <h2>The core shift</h2>
-            <p>Most AI governance asks: <em>"How autonomous is this system?"</em></p>
-            <p>This standard asks: <strong>"Which specific decisions exist, who owns them, and how much autonomy is allowed for each?"</strong></p>
+        <!-- DETERMINISTIC SYSTEM BEHAVIOR -->
+        <section>
+            <h2>Deterministic System Behavior</h2>
+            <p>Systems conforming to this standard must exhibit:</p>
             <ul>
-                <li>Every decision is explicitly inventoried</li>
-                <li>Assigned a single accountable human owner</li>
-                <li>Given a defined autonomy level (0–4)</li>
-                <li>Monitored for drift, incidents, and policy changes</li>
-                <li>Able to regress instantly when conditions change</li>
+                <li>Rule-defined routing only</li>
+                <li>No probabilistic clinical output</li>
+                <li>No hidden decision layers</li>
+                <li>No emergent clinical intent</li>
             </ul>
-            <p><strong>If a decision is not inventoried, owned, and classified, it is not eligible for AI autonomy.</strong></p>
+            <p><strong>AI executes within governance constraints; it does not generate intent.</strong></p>
         </section>
 
-        <!-- The Four Artifacts Section -->
-        <section id="four-artifacts" class="four-artifacts-section">
-            <h2>The Four Artifacts</h2>
-            <p>Implemented as a loop, not standalone documents.</p>
-            
-            <div class="artifact">
-                <h3>1. Decision Inventory</h3>
-                <p>Defines what decisions exist and who owns their outcomes.</p>
-                <ul>
-                    <li>Decisions classified by impact, frequency, reversibility, risk</li>
-                    <li>Each decision has a single accountable human owner</li>
-                    <li>Uninventoried decisions cannot be automated</li>
-                </ul>
-            </div>
-
-            <div class="artifact">
-                <h3>2. Autonomy Allocation Matrix</h3>
-                <p>Defines who (human or AI) executes each decision, and when.</p>
-                <ul>
-                    <li>Autonomy assigned per decision, not per system</li>
-                    <li>Five levels from human-only to high-scale AI execution</li>
-                    <li>Regression must be as easy as advancement</li>
-                </ul>
-            </div>
-
-            <div class="artifact">
-                <h3>3. Accountability & Escalation Framework</h3>
-                <p>Defines who absorbs downside when something goes wrong.</p>
-                <ul>
-                    <li>Single accountability chain per decision</li>
-                    <li>Incidents classified before blame</li>
-                    <li>Explicit rollback authority defined in advance</li>
-                </ul>
-            </div>
-
-            <div class="artifact">
-                <h3>4. Governance as Infrastructure</h3>
-                <p>Defines how rules are enforced at machine speed.</p>
-                <ul>
-                    <li>Policies encoded in machine-compatible form</li>
-                    <li>Decisions observable, auditable, traceable</li>
-                    <li>Intervention and rollback automated where possible</li>
-                </ul>
-                <p style="margin-top: 0.5rem;"><strong>If governance cannot be executed by machines, it will be bypassed by machines.</strong></p>
-            </div>
-        </section>
-
-        <!-- HITL/HOTL Compatibility -->
-        <section id="hitl-compatibility" class="hitl-section">
-            <h2>HITL / HOTL compatibility</h2>
-            <p>AIITL makes existing Human-in-the-Loop and Human-on-the-Loop models operational by anchoring them to specific decisions, binding them to explicit accountability, and enforcing them through infrastructure.</p>
-        </section>
-
-        <!-- What This Enables -->
-        <section id="enables" class="enables-section">
-            <h2>What this enables</h2>
+        <!-- REGULATORY CONTEXT -->
+        <section>
+            <h2>Regulatory Context (Non-Claim)</h2>
+            <p>The governance constructs defined in this standard align with expectations commonly associated with regulated software as a medical device (SaMD), including:</p>
             <ul>
-                <li>Faster execution without surrendering accountability</li>
-                <li>Scalable AI adoption that survives regulatory scrutiny</li>
-                <li>Clear ownership before incidents occur</li>
-                <li>Governance that works at AI speed</li>
+                <li>Traceability</li>
+                <li>Boundary enforcement</li>
+                <li>Human authorization</li>
+                <li>Audit readiness</li>
             </ul>
+            <p><em>References to FDA, EU MDR, or international standards are contextual only and do not imply approval, clearance, certification, or endorsement of any system.</em></p>
         </section>
 
-        <!-- Core Principles - Single Line -->
-        <section id="principles">
-            <h2>Core principles</h2>
-            <p class="principles-line">Explicit authority, bounded autonomy, traceable accountability, deterministic escalation, governance as infrastructure.</p>
-        </section>
-
-        <!-- Standards Ecosystem - Compact -->
-        <section class="ecosystem-compact">
-            <h3>Standards Ecosystem</h3>
-            <ul class="ecosystem-list">
-                <li><strong>Hybrid Human-Agent Operating Standard</strong> — defines principles and governance invariants</li>
-                <li><strong>Safety OS</strong> — enforces those rules at runtime</li>
-                <li><strong>Execution Playbook</strong> — provides validated workflows and monitoring patterns</li>
-            </ul>
-        </section>
-
-        <!-- Safety OS CTA -->
-        <section class="safety-os-cta">
-            <p>Safety OS is the execution model that operationalizes this Standard.</p>
-            <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Safety OS Summary'});">↓ Download Safety OS Summary (2 pages)</a>
-            <a href="/assets/FromDesignThinkingtoGovernedAIExecution-v3.pdf" onclick="gtag('event', 'pdf_download', {'event_category': 'Standards', 'event_label': 'Design Thinking to Governed AI'});">↓ Design Thinking → Governed AI</a>
-        </section>
-
-        <!-- Who this Standard is for - Compact -->
-        <section id="audience" class="audience-compact">
-            <h2>Who this Standard is for</h2>
+        <!-- INVARIANT -->
+        <section>
+            <h2>Invariant Across All Deployments</h2>
+            <p class="thesis-statement">Clinical authority is never delegated to AI.</p>
+            <p>This invariant applies regardless of:</p>
             <ul>
-                <li>AI governance and risk leaders</li>
-                <li>Product, engineering, and platform teams</li>
-                <li>Operators in regulated or high-stakes environments</li>
+                <li>Form factor</li>
+                <li>Deployment environment</li>
+                <li>Level of automation</li>
+                <li>Market context</li>
+            </ul>
+            <p><strong>Governance must be designed before autonomy, not layered on afterward.</strong></p>
+        </section>
+
+        <!-- RELATED FRAMEWORKS -->
+        <section>
+            <h2>Related Frameworks</h2>
+            <ul>
+                <li><a href="/clinical-ai-governance" style="color: #0f4c5c;">Clinical AI Governance Framework</a> &mdash; why governance must precede autonomy</li>
+                <li><a href="/physician-as-pilot" style="color: #0f4c5c;">Physician-as-Pilot Model</a> &mdash; how clinicians retain authority while AI executes</li>
+                <li><a href="/safety-os" style="color: #0f4c5c;">Safety OS Architecture</a> &mdash; how governance is enforced technically</li>
             </ul>
         </section>
 
