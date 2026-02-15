@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hybrid Human-Agent Operating Standard - v1.0</title>
-    <meta name="description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
-    <meta name="keywords" content="human-agent operating standard, AI governance, decision authority, autonomy allocation, accountability framework, AI safety, vendor-neutral standard">
+    <title>Safety OS™ — A Human-Agent Teaming Control Architecture</title>
+    <meta name="description" content="Safety OS™ is a Human-Agent Teaming (HAT) Control Architecture and Authority Standard for scalable, accountable AI deployment in regulated environments.">
+    <meta name="keywords" content="Safety OS, Human-Agent Teaming, Control Plane, Authority Partitioning, Bounded Autonomy, Deterministic Escalation, Regulated AI Governance, AI safety, vendor-neutral standard">
     <meta name="author" content="PatientCentricCare.AI">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard">
@@ -13,23 +13,25 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard">
-    <meta property="og:title" content="Hybrid Human-Agent Operating Standard - v1.0">
-    <meta property="og:description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
+    <meta property="og:title" content="Safety OS™ — A Human-Agent Teaming Control Architecture">
+    <meta property="og:description" content="Safety OS™ is a Human-Agent Teaming (HAT) Control Architecture and Authority Standard for scalable, accountable AI deployment in regulated environments.">
     <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
     <meta property="og:site_name" content="PatientCentricCare.AI">
     <meta property="og:locale" content="en_US">
     <meta property="article:author" content="PatientCentricCare.AI">
     <meta property="article:published_time" content="2026-01-23T00:00:00Z">
+    <meta property="article:modified_time" content="2026-02-15T00:00:00Z">
     <meta property="article:section" content="Standards">
     <meta property="article:tag" content="AI Governance">
     <meta property="article:tag" content="Operating Standards">
+    <meta property="article:tag" content="Human-Agent Teaming">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@AndySquireAI">
     <meta name="twitter:url" content="https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard">
-    <meta name="twitter:title" content="Hybrid Human-Agent Operating Standard - v1.0">
-    <meta name="twitter:description" content="An open operating standard for allocating authority, autonomy, and accountability between humans and AI systems.">
+    <meta name="twitter:title" content="Safety OS™ — A Human-Agent Teaming Control Architecture">
+    <meta name="twitter:description" content="Safety OS™ is a Human-Agent Teaming (HAT) Control Architecture and Authority Standard for scalable, accountable AI deployment in regulated environments.">
     <meta name="twitter:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
 
     <!-- Favicon -->
@@ -51,8 +53,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Hybrid Human-Agent Operating Standard - Version 1.0",
-      "description": "A vendor-neutral operating standard for allocating decision authority between humans and autonomous AI systems.",
+      "headline": "Safety OS™ — A Human-Agent Teaming Control Architecture",
+      "description": "A Human-Agent Teaming (HAT) Control Architecture and Authority Standard for scalable, accountable AI deployment in regulated environments.",
       "image": "https://www.patientcentriccare.ai/og-image-optimized.png",
       "author": {
         "@type": "Organization",
@@ -68,12 +70,12 @@
         }
       },
       "datePublished": "2026-01-23",
-      "dateModified": "2026-02-01",
+      "dateModified": "2026-02-15",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard"
       },
-      "keywords": ["operating standard", "AI governance", "human-agent collaboration", "decision authority", "autonomy allocation"]
+      "keywords": ["Human-Agent Teaming", "Control Plane", "Authority Partitioning", "Bounded Autonomy", "Deterministic Escalation", "Regulated AI Governance"]
     }
     </script>
     <script type="application/ld+json">
@@ -93,7 +95,7 @@
       },{
         "@type": "ListItem",
         "position": 3,
-        "name": "Hybrid Human-Agent Operating Standard",
+        "name": "Safety OS™",
         "item": "https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard"
       }]
     }
@@ -276,8 +278,9 @@
         }
 
         .lead {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #475569;
+            line-height: 1.7;
         }
 
         /* Section Styles */
@@ -307,7 +310,7 @@
             color: #475569;
         }
 
-        /* Executive Summary Section */
+        /* Executive Summary */
         .exec-summary {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -318,185 +321,11 @@
 
         .exec-summary h2 {
             color: #0f172a;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .exec-summary h3 {
-            color: #0f4c5c;
-            font-size: 1.1rem;
-            margin-top: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .exec-summary p {
-            font-size: 0.95rem;
-        }
-
-        .exec-summary ul {
-            margin: 0.5rem 0 0.75rem 1.25rem;
-            font-size: 0.95rem;
-        }
-
-        .exec-summary li {
-            margin-bottom: 0.25rem;
-        }
-
-        .exec-summary-problem {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
-        }
-
-        .exec-summary-solution {
-            background: #f0fdf4;
-            border-left: 4px solid #22c55e;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
-        }
-
-        .exec-summary-solution strong {
-            color: #166534;
-        }
-
-        .exec-summary-before-after {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 0.75rem 0;
-        }
-
-        .exec-before, .exec-after {
-            padding: 0.75rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-        }
-
-        .exec-before {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-        }
-
-        .exec-after {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-        }
-
-        .exec-before h4, .exec-after h4 {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .exec-before h4 { color: #991b1b; }
-        .exec-after h4 { color: #166534; }
-
-        .exec-before ul, .exec-after ul {
-            margin: 0 0 0 1rem;
-            font-size: 0.85rem;
-        }
-
-        .exec-core-shift {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
-        }
-
-        .exec-core-shift .question-old {
-            color: #64748b;
-            font-style: italic;
-        }
-
-        .exec-core-shift .question-new {
-            color: #1e40af;
-            font-weight: 600;
-        }
-
-        .exec-artifacts {
-            margin: 0.75rem 0;
-        }
-
-        .exec-artifacts ol {
-            margin: 0.5rem 0 0 1.25rem;
-        }
-
-        .exec-artifacts li {
-            margin-bottom: 0.4rem;
-        }
-
-        .exec-artifacts strong {
-            color: #0f4c5c;
-        }
-
-        .exec-enables {
-            background: #f0fdfa;
-            border: 1px solid #99f6e4;
-            border-radius: 6px;
-            padding: 0.75rem 1rem;
-            margin: 0.75rem 0;
-        }
-
-        .exec-enables ul {
-            margin: 0.5rem 0 0 1rem;
-        }
-
-        .exec-cta {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .exec-cta a {
-            display: inline-block;
-            background: #0f4c5c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .exec-cta a:hover {
-            background: #1a6b7c;
-        }
-
-        /* Section Divider */
-        .section-divider {
-            margin: 2.5rem 0 2rem;
-            padding: 1rem 0;
-            border-top: 3px solid #0f4c5c;
-            border-bottom: 1px solid #e2e8f0;
-            text-align: center;
-        }
-
-        .section-divider h2 {
-            color: #0f4c5c;
-            font-size: 1.2rem;
-            margin: 0;
-            padding: 0;
-            border: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Problem Section */
-        .problem-section {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: 8px;
-            padding: 1.25rem;
-        }
-
-        .problem-section h2 {
             border-bottom: none;
             padding-bottom: 0;
         }
 
+        /* Thesis Statement */
         .thesis-statement {
             background: #f0fdf4;
             border-left: 4px solid #22c55e;
@@ -519,60 +348,41 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        /* Before/After Details */
-        .before-after-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .before-column, .after-column {
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .before-column {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-        }
-
-        .after-column {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-        }
-
-        .before-column h3, .after-column h3 {
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .before-column h3 { color: #991b1b; }
-        .after-column h3 { color: #166534; }
-
-        .before-column ul, .after-column ul {
-            margin: 0 0 0 1rem;
-            font-size: 0.85rem;
-        }
-
-        /* Core Shift Section */
-        .core-shift-section {
+        /* Principle Cards */
+        .principle-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 1.25rem;
+            padding: 1rem;
+            margin: 0.75rem 0;
         }
 
-        .core-shift-section h2 {
-            border-bottom: none;
-            padding-bottom: 0;
+        .principle-card h3 {
+            color: #0f4c5c;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
         }
 
-        /* Four Artifacts Section */
-        .four-artifacts-section {
-            margin: 1.5rem 0;
+        .principle-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
 
+        .principle-number {
+            display: inline-block;
+            background: #0f4c5c;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        /* Artifact Cards */
         .artifact {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -592,48 +402,130 @@
             margin-bottom: 0.4rem;
         }
 
-        .artifact ul {
-            margin: 0.4rem 0 0 1.25rem;
-        }
-
-        .artifact li {
-            font-size: 0.85rem;
-        }
-
-        /* HITL Section */
-        .hitl-section p {
+        /* Control Plane Section */
+        .control-plane-box {
             background: #f0fdfa;
-            border-left: 4px solid #0d9488;
-            padding: 0.75rem 1rem;
+            border: 2px solid #0d9488;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .control-plane-box h3 {
             color: #0f4c5c;
-            font-size: 0.95rem;
-        }
-
-        /* Enables Section */
-        .enables-section ul {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            border-radius: 8px;
-            padding: 0.75rem 0.75rem 0.75rem 2rem;
-        }
-
-        /* PDF Links */
-        .pdf-links {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        .pdf-links h3 {
-            font-size: 0.95rem;
-            color: #0f172a;
+            font-size: 1.05rem;
             margin-bottom: 0.5rem;
         }
 
-        .pdf-link {
+        .control-plane-box p {
+            font-size: 0.9rem;
+            color: #0f4c5c;
+        }
+
+        .control-plane-box ul {
+            margin: 0.5rem 0 0 1.25rem;
+        }
+
+        .control-plane-box li {
+            font-size: 0.9rem;
+            color: #0f4c5c;
+        }
+
+        /* Governance Layers */
+        .layer-card {
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .layer-public {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .layer-reference {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+        }
+
+        .layer-proprietary {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+        }
+
+        .layer-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .layer-public h3 { color: #166534; }
+        .layer-reference h3 { color: #1e40af; }
+        .layer-proprietary h3 { color: #991b1b; }
+
+        .layer-card p {
+            font-size: 0.9rem;
+        }
+
+        /* Phase Progression */
+        .phase-card {
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.75rem 0;
+        }
+
+        .phase-i {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+        }
+
+        .phase-ii {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .phase-iii {
+            background: #fefce8;
+            border-left: 4px solid #eab308;
+        }
+
+        .phase-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+
+        .phase-card ul {
+            margin: 0.4rem 0 0 1.25rem;
+        }
+
+        .phase-card li {
+            font-size: 0.85rem;
+        }
+
+        /* Compatibility Table */
+        .compat-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .compat-table th {
+            text-align: left;
+            padding: 0.75rem;
+            background: #f1f5f9;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .compat-table td {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Downloads */
+        .download-link {
             display: inline-block;
-            background: #0f4c5c;
+            background: #e87722;
             color: white;
             padding: 0.4rem 0.75rem;
             border-radius: 6px;
@@ -643,90 +535,24 @@
             transition: background 0.2s;
         }
 
-        .pdf-link:hover {
-            background: #1a6b7c;
+        .download-link:hover {
+            background: #cf6a1e;
         }
 
-        /* Standards Ecosystem - Compact */
-        .ecosystem-compact {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .ecosystem-compact h3 {
-            font-size: 0.95rem;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-        }
-
-        .ecosystem-list {
+        /* Audience Section */
+        .audience-list {
             list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        .ecosystem-list li {
-            padding: 0.4rem 0;
-            border-bottom: 1px solid #e2e8f0;
-            font-size: 0.85rem;
-        }
-
-        .ecosystem-list li:last-child {
-            border-bottom: none;
-        }
-
-        .ecosystem-list strong {
-            color: #0f4c5c;
-        }
-
-        /* Safety OS CTA */
-        .safety-os-cta {
-            background: #f0fdfa;
-            border: 1px solid #99f6e4;
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            margin: 1rem 0;
-        }
-
-        .safety-os-cta p {
-            margin-bottom: 0.5rem;
-            color: #0f4c5c;
-            font-size: 0.9rem;
-        }
-
-        .safety-os-cta a {
-            display: inline-block;
-            background: #0d9488;
-            color: white;
-            padding: 0.4rem 0.75rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin-right: 0.4rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .safety-os-cta a:hover {
-            background: #0f766e;
-        }
-
-        /* Audience Section - Compact */
-        .audience-compact ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .audience-compact li {
+        .audience-list li {
             padding: 0.3rem 0;
             color: #475569;
             font-size: 0.9rem;
         }
 
-        .audience-compact li::before {
+        .audience-list li::before {
             content: "→ ";
             color: #0f4c5c;
         }
@@ -775,30 +601,14 @@
             font-size: 0.75rem;
         }
 
-        /* Principles - Single Line */
-        .principles-line {
-            background: #f1f5f9;
-            border-left: 4px solid #64748b;
-            padding: 0.6rem 0.75rem;
-            font-size: 0.85rem;
-            color: #475569;
-        }
-
-        /* Downloads Section */
-        .downloads-section {
-            margin: 1.5rem 0;
-        }
-
-        .download-group {
-            margin-bottom: 0.75rem;
-        }
-
-        .download-group-title {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-bottom: 0.4rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        /* WHO Context */
+        .who-context {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            padding: 0.75rem 1rem;
+            color: #0f4c5c;
+            font-size: 0.95rem;
+            margin: 1rem 0;
         }
 
         /* Related Standards */
@@ -858,6 +668,16 @@
             text-decoration: none;
         }
 
+        /* IP Notice */
+        .ip-notice {
+            background: #1e293b;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            border-top: 1px solid #334155;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -878,11 +698,6 @@
 
             .hamburger {
                 display: flex;
-            }
-
-            .before-after-details,
-            .exec-summary-before-after {
-                grid-template-columns: 1fr;
             }
 
             .standard-header h1 {
@@ -916,7 +731,7 @@
                 <li><a href="/traction">Evidence</a></li>
                 <li><a href="/team">Team</a></li>
                 <li class="nav-dropdown">
-                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <span class="nav-dropdown-toggle">Company &#9662;</span>
                     <ul class="nav-dropdown-menu">
                         <li><a href="/mission">Mission</a></li>
                         <li><a href="/investment">Investment</a></li>
@@ -932,206 +747,253 @@
     <main id="main-content" role="main">
         <!-- Header -->
         <header class="standard-header">
-            <h1>Hybrid Human&ndash;Agent Operating Standard</h1>
-            <span class="version-tag">Version 1.0</span>
-            <p class="lead">A Governance Specification for Authority, Boundaries, Enforcement, and Auditability</p>
+            <h1>Safety OS&trade; &mdash; A Human-Agent Teaming Control Architecture</h1>
+            <span class="version-tag">Version 2.0</span>
+            <p class="lead">Safety OS&trade; is a Human-Agent Teaming (HAT) <strong>Control Architecture and Authority Standard</strong> designed to enable scalable, accountable AI deployment in regulated and high-stakes environments.</p>
         </header>
 
-        <!-- USE CASE SCOPE NOTE -->
-        <section style="background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem; font-size: 0.9rem; color: #475569; font-style: italic;">
-            <p>This standard is a reference model for how governance constructs apply to hybrid human&ndash;AI systems. It is not a product feature list or clinical claim.</p>
+        <!-- Hero Summary -->
+        <section>
+            <p>Safety OS implements a governance-first control plane that separates authority, enforces bounded autonomy, and makes accountability inspectable &mdash; <em>not by accident, but by design</em>.</p>
+            <p>Unlike generic AI governance frameworks, Safety OS operationalizes authority partitioning, deterministic escalation, consent enforcement, and immutable auditability &mdash; enabling AI augmentation to scale safely without surrendering human accountability.</p>
         </section>
 
-        <!-- PURPOSE AND SCOPE -->
-        <section>
-            <h2>Purpose and Scope</h2>
-            <p>This Hybrid Human&ndash;Agent Operating Standard defines the governance constructs required to safely deploy AI systems in healthcare and care-adjacent contexts without delegating clinical authority to machines.</p>
-            <p>It specifies how human authority, system boundaries, deterministic enforcement, and auditability must be structured across deployment contexts ranging from non-medical support to regulated clinical AI, including Software as a Medical Device (SaMD).</p>
-            <p><em>This document is a reference standard, not a product description, clinical claim, or commercial roadmap.</em></p>
-        </section>
-
-        <!-- DESIGN PRINCIPLE -->
-        <section>
-            <h2>Design Principle</h2>
-            <p class="thesis-statement">Clinical authority must never be delegated to AI systems.</p>
-            <p>AI systems may execute tasks, surface information, or support coordination, but authority to define clinical intent, approve clinical action, and assume accountability must always reside with a licensed human professional or designated human authority.</p>
-            <p>Failures of healthcare AI typically arise not from insufficient model capability, but from unclear authority boundaries and premature delegation of decision rights. This standard addresses that root cause.</p>
-        </section>
-
-        <!-- WHAT THIS STANDARD DEFINES -->
-        <section>
-            <h2>What This Standard Defines</h2>
-            <p>This operating standard specifies:</p>
+        <!-- Executive Summary -->
+        <section class="exec-summary">
+            <h2>Executive Summary</h2>
+            <h3 style="font-size: 1rem; color: #991b1b; margin: 0.75rem 0 0.5rem;">The Problem Today</h3>
+            <p>AI deployment increases speed and scale but leaves accountability ambiguous. Existing governance relies on committees and retrospective review &mdash; which fail in real-time, safety-critical contexts.</p>
+            
+            <h3 style="font-size: 1rem; color: #166534; margin: 0.75rem 0 0.5rem;">Safety OS Solves This By</h3>
             <ul>
-                <li>How authority is assigned, scoped, and revoked</li>
-                <li>How boundaries are enforced deterministically (not probabilistically)</li>
-                <li>How escalation occurs without recommendation or inference</li>
-                <li>How audit artifacts are generated and preserved</li>
-                <li>How governance remains invariant across deployment phases</li>
+                <li>Explicitly separating authority from execution</li>
+                <li>Encoding governance invariants into the control plane</li>
+                <li>Ensuring humans retain intent, risk, and escalation ownership</li>
+                <li>Machines execute bounded autonomy with runtime enforcement</li>
+                <li>Embodied agents (voice agents, robots, apps) become extensions of the Safety OS control layer</li>
             </ul>
-            <p>It does <strong>not</strong> define:</p>
+
+            <h3 style="font-size: 1rem; color: #0f4c5c; margin: 0.75rem 0 0.5rem;">Safety OS Enables</h3>
             <ul>
-                <li>Product features</li>
-                <li>Commercial packaging</li>
-                <li>Clinical performance claims</li>
-                <li>Regulatory approval or clearance</li>
+                <li>Scalable AI adoption that survives regulatory scrutiny</li>
+                <li>Clear ownership before incidents occur</li>
+                <li>Traceable, real-time governance at machine speed</li>
+                <li>Auditability and compliance readiness</li>
             </ul>
         </section>
 
-        <!-- Framework Diagram (VISUAL 1 - KEPT) -->
+        <!-- Framework Diagram -->
         <section class="hero-visual">
-            <img src="/images/framework-diagram.png" alt="Hybrid Human-Agent Operating Model - AIITL Governance Framework">
+            <img src="/images/framework-diagram.png" alt="Safety OS — Human-Agent Teaming Control Architecture">
         </section>
 
-        <!-- CORE GOVERNANCE CONSTRUCTS -->
+        <!-- Core Architectural Principles -->
         <section>
-            <h2>Core Governance Constructs</h2>
+            <h2>Core Architectural Principles</h2>
+            <p>Safety OS is grounded in five enforceable invariants:</p>
 
-            <div class="artifact">
-                <h3>Authority Construct</h3>
-                <p>Defines who is authorized to act, under what scope, and for what duration.</p>
-                <p>Authority is:</p>
-                <ul>
-                    <li>Explicitly assigned</li>
-                    <li>Versioned</li>
-                    <li>Revocable</li>
-                    <li>Logged</li>
-                </ul>
-                <p><strong>No authority is implicit, inferred, or assumed by the AI system.</strong></p>
+            <div class="principle-card">
+                <h3><span class="principle-number">1</span> Explicit Authority Partitioning</h3>
+                <p>Humans retain binding authority; agents execute within defined permissions.</p>
             </div>
 
-            <div class="artifact">
-                <h3>Boundary Construct</h3>
-                <p>Defines what the system is prohibited from doing, regardless of user request or model output.</p>
-                <p>Boundaries include:</p>
-                <ul>
-                    <li>No diagnosis</li>
-                    <li>No disease-state inference</li>
-                    <li>No treatment recommendation</li>
-                    <li>No medication guidance</li>
-                </ul>
-                <p><strong>Boundary violations result in hard refusals, not redirection.</strong></p>
+            <div class="principle-card">
+                <h3><span class="principle-number">2</span> Bounded Autonomy</h3>
+                <p>Every capability must have an assigned autonomy level. Unclassified capabilities cannot execute.</p>
             </div>
 
-            <div class="artifact">
-                <h3>Control Construct</h3>
-                <p>Defines how governance is enforced at runtime.</p>
-                <p>Enforcement is:</p>
-                <ul>
-                    <li>Deterministic</li>
-                    <li>Rule-bounded</li>
-                    <li>System-level</li>
-                    <li>Non-overridable by models</li>
-                </ul>
-                <p>Machine learning components may detect signals or patterns, but cannot override governance rules.</p>
+            <div class="principle-card">
+                <h3><span class="principle-number">3</span> Deterministic Escalation</h3>
+                <p>Escalation logic is pre-defined, auditable, and irreversible until resolved.</p>
             </div>
 
-            <div class="artifact">
-                <h3>Escalation Construct</h3>
-                <p>Defines how human authority is engaged when thresholds are met.</p>
-                <p>Escalation:</p>
-                <ul>
-                    <li>Notifies or hands off only</li>
-                    <li>Does not include recommendations</li>
-                    <li>Requires explicit human authorization before external action</li>
-                </ul>
+            <div class="principle-card">
+                <h3><span class="principle-number">4</span> Consent Lifecycle Enforcement</h3>
+                <p>Active consent is tracked, enforced, and timestamped for every interaction.</p>
             </div>
 
-            <div class="artifact">
-                <h3>Audit Construct</h3>
-                <p>Defines how system behavior is reconstructed and reviewed.</p>
-                <p>Audit artifacts are:</p>
-                <ul>
-                    <li>Immutable</li>
-                    <li>Time-stamped</li>
-                    <li>Attributable</li>
-                    <li>Institution-owned</li>
-                </ul>
-                <p>They support regulatory review, quality management, and post-market surveillance where applicable.</p>
+            <div class="principle-card">
+                <h3><span class="principle-number">5</span> Immutable Auditability</h3>
+                <p>All interactions, decisions, and escalations are logged in an audit-ready form.</p>
             </div>
         </section>
 
-        <!-- TERMINOLOGY -->
+        <!-- Control Plane vs. Embodied Agents -->
         <section>
-            <h2>Terminology (Normative)</h2>
+            <h2>Control Plane vs. Embodied Agents</h2>
+            <div class="control-plane-box">
+                <h3>Safety OS is a control plane &mdash; not an interface.</h3>
+                <p>Embodiments (voice agent, app UI, humanoid robot, wearable) are <em>execution nodes</em> that rely on the control plane for authority decisions, escalation gating, and audit propagation.</p>
+            </div>
+            <p>The Safety OS Control Plane is the source of truth for:</p>
             <ul>
-                <li><strong>Authority Holder:</strong> A named human (user, caregiver, clinician) with explicit decision rights</li>
-                <li><strong>Boundary:</strong> A constraint that cannot be exceeded without revocable human authorization</li>
-                <li><strong>Hard Refusal:</strong> Deterministic rejection of a request outside permitted authority</li>
-                <li><strong>Escalation:</strong> Structured handoff to a designated human authority</li>
-                <li><strong>Audit Artifact:</strong> Immutable log record with actor, event, timestamp, and outcome</li>
-                <li><strong>SaMD:</strong> AI-enabled medical device regulated under FDA / EU MDR definitions; references here are contextual only and do not imply approval or clearance</li>
+                <li>Identity &amp; consent context</li>
+                <li>Role-based capability activation</li>
+                <li>Escalation gating policies</li>
+                <li>Runtime enforcement</li>
+                <li>Audit trace generation</li>
             </ul>
+            <p class="thesis-statement">Agents are execution enforcers &mdash; the Control Plane is the governance engine.</p>
         </section>
 
-        <!-- GOVERNANCE BUILT-INS TABLE -->
+        <!-- Safety OS Architecture Diagram -->
+        <section class="hero-visual">
+            <img src="/images/before-after-hybrid-model.png" alt="Safety OS Architecture — Control Plane and Governance Layers">
+            <p style="font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.75rem;">Illustrative governance architecture: maps authority, enforcement, and escalation across deployment contexts. Does not imply commercial readiness, autonomous clinical action, or regulatory approval.</p>
+        </section>
+
+        <!-- Three Governance Layers -->
         <section>
-            <h2>Governance Built-Ins (Reference Table)</h2>
-            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+            <h2>Three Governance Layers</h2>
+
+            <div class="layer-card layer-public">
+                <h3>1. Public Doctrine Layer</h3>
+                <p>Core governance principles, rationale, and definitions. Published openly for citation, research, and standard-building.</p>
+            </div>
+
+            <div class="layer-card layer-reference">
+                <h3>2. Reference Architecture Layer</h3>
+                <p>Safe, high-level governance patterns and role maps. Published as narrative and diagrams for implementation guidance.</p>
+            </div>
+
+            <div class="layer-card layer-proprietary">
+                <h3>3. Safety OS Core (Proprietary)</h3>
+                <p>Runtime enforcement engine, deterministic logic, escalation mechanisms, and audit engine. This is the executable control plane &mdash; the defendable IP.</p>
+            </div>
+        </section>
+
+        <!-- The Four Safety OS Artifacts -->
+        <section>
+            <h2>The Four Safety OS Artifacts</h2>
+
+            <div class="artifact">
+                <h3>1. Decision Inventory</h3>
+                <p>What decisions exist and who owns them.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>2. Autonomy Allocation Matrix</h3>
+                <p>Which agent or human executes each decision.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>3. Accountability &amp; Escalation Framework</h3>
+                <p>Defines chains of authority, rollback conditions, and fatigue-resilient gating.</p>
+            </div>
+
+            <div class="artifact">
+                <h3>4. Governance as Infrastructure</h3>
+                <p>Encoded, runtime policies, trap-doors, kill switches, non-ambiguous interventions.</p>
+            </div>
+        </section>
+
+        <!-- Safety OS Progression Model -->
+        <section>
+            <h2>Safety OS Progression Model</h2>
+            <p>Safety OS supports staged adoption for regulated deployment:</p>
+
+            <div class="phase-card phase-i">
+                <h3>Phase I &mdash; Caregiver-in-the-Loop</h3>
+                <ul>
+                    <li>Non-clinical workflows</li>
+                    <li>Caregiver escalation validated</li>
+                    <li>Identity, consent, escalation gating tested</li>
+                </ul>
+            </div>
+
+            <div class="phase-card phase-ii">
+                <h3>Phase II &mdash; Physician-as-Pilot</h3>
+                <ul>
+                    <li>Clinical workflows</li>
+                    <li>Humans retain final authority</li>
+                    <li>Agent execution scoped and reversible</li>
+                </ul>
+            </div>
+
+            <div class="phase-card phase-iii">
+                <h3>Phase III &mdash; AIaMD / SaMD-Aligned</h3>
+                <ul>
+                    <li>High-risk clinical modules</li>
+                    <li>MDR / FDA / EU AI Act alignment</li>
+                    <li>Physician authority remains upstream</li>
+                    <li>Safety OS ensures regulatory continuity</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phase Progression Diagram -->
+        <section class="hero-visual">
+            <img src="/images/3PhaseGovernance.png" alt="Safety OS Three-Phase Governance Progression Model">
+        </section>
+
+        <!-- Compatibility With Governance Norms -->
+        <section>
+            <h2>Compatibility With Governance Norms</h2>
+            <p>Safety OS complements &mdash; not replaces &mdash; existing governance frameworks:</p>
+            <table class="compat-table">
                 <thead>
-                    <tr style="background: #f1f5f9;">
-                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Construct</th>
-                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Purpose</th>
-                        <th style="text-align: left; padding: 0.75rem; border-bottom: 2px solid #e2e8f0;">Enforcement</th>
+                    <tr>
+                        <th>Framework</th>
+                        <th>Alignment</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Authority Inventory</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defines who may act</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Explicit assignment &amp; revocation</td></tr>
-                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Permission Envelope</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defines allowed actions</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Runtime constraint</td></tr>
-                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Hard Refusals</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Blocks prohibited actions</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">System-level enforcement</td></tr>
-                    <tr><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Escalation Protocols</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Engages human authority</td><td style="padding: 0.6rem; border-bottom: 1px solid #e2e8f0;">Defined handoff only</td></tr>
-                    <tr><td style="padding: 0.6rem;">Audit Trails</td><td style="padding: 0.6rem;">Enables reconstruction</td><td style="padding: 0.6rem;">Immutable logging</td></tr>
+                    <tr>
+                        <td><a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer" style="color: #0f4c5c;">EU AI Act</a></td>
+                        <td>High-Risk AI requirements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer" style="color: #0f4c5c;">NIST AI RMF</a></td>
+                        <td>AI Risk Management Framework</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener noreferrer" style="color: #0f4c5c;">OECD AI Principles</a></td>
+                        <td>Trustworthy AI principles</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener noreferrer" style="color: #0f4c5c;">ISO/IEC 42001</a></td>
+                        <td>AI Management System</td>
+                    </tr>
                 </tbody>
             </table>
+            <p style="font-size: 0.85rem; color: #64748b; font-style: italic;">This section provides alignment context without implying regulatory clearance.</p>
         </section>
 
-        <!-- Before/After Diagram (VISUAL 2 - KEPT) -->
-        <section class="hero-visual">
-            <img src="/images/before-after-hybrid-model.png" alt="Before and After: Human-Only Model vs Hybrid Human-Agent Model (AIITL)">
-            <p style="font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 0.75rem;">Illustrative Governance Matrix: maps permitted and prohibited behaviors under governance constraints across deployment contexts. Does not imply commercial readiness, autonomous clinical action, or regulatory approval.</p>
-        </section>
-
-        <!-- DETERMINISTIC SYSTEM BEHAVIOR -->
+        <!-- WHO & Global Safety Context -->
         <section>
-            <h2>Deterministic System Behavior</h2>
-            <p>Systems conforming to this standard must exhibit:</p>
-            <ul>
-                <li>Rule-defined routing only</li>
-                <li>No probabilistic clinical output</li>
-                <li>No hidden decision layers</li>
-                <li>No emergent clinical intent</li>
-            </ul>
-            <p><strong>AI executes within governance constraints; it does not generate intent.</strong></p>
+            <h2>WHO &amp; Global Safety Context</h2>
+            <div class="who-context">
+                <p>Safety OS embodies principles of meaningful human control as recommended by leading governance research &mdash; preserving human agency, accountability, and clear oversight even with advanced agentic AI.</p>
+            </div>
         </section>
 
-        <!-- REGULATORY CONTEXT -->
+        <!-- Who This Standard Is For -->
         <section>
-            <h2>Regulatory Context (Non-Claim)</h2>
-            <p>The governance constructs defined in this standard align with expectations commonly associated with regulated software as a medical device (SaMD), including:</p>
-            <ul>
-                <li>Traceability</li>
-                <li>Boundary enforcement</li>
-                <li>Human authorization</li>
-                <li>Audit readiness</li>
+            <h2>Who This Standard Is For</h2>
+            <ul class="audience-list">
+                <li>Platform and product architects</li>
+                <li>AI governance and risk leaders</li>
+                <li>Regulatory and compliance teams</li>
+                <li>Clinical operations leaders</li>
+                <li>Enterprise Trust &amp; Safety teams</li>
             </ul>
-            <p><em>References to FDA, EU MDR, or international standards are contextual only and do not imply approval, clearance, certification, or endorsement of any system.</em></p>
         </section>
 
-        <!-- INVARIANT -->
+        <!-- Downloads -->
         <section>
-            <h2>Invariant Across All Deployments</h2>
-            <p class="thesis-statement">Clinical authority is never delegated to AI.</p>
-            <p>This invariant applies regardless of:</p>
-            <ul>
-                <li>Form factor</li>
-                <li>Deployment environment</li>
-                <li>Level of automation</li>
-                <li>Market context</li>
-            </ul>
-            <p><strong>Governance must be designed before autonomy, not layered on afterward.</strong></p>
+            <h2>Downloads &amp; Governance Artifacts</h2>
+            <p>For illustrated governance artifacts &mdash; audit logs, boundary specifications, enforcement schemas, escalation workflows, and implementation references:</p>
+            <div style="margin: 1rem 0;">
+                <a href="/standards/SafetyOS-AGovernedAIExecutionModel.pdf" class="download-link">Safety OS Public Doctrine (PDF)</a>
+                <a href="/standards/Decision_Inventory_v1.pdf" class="download-link">Decision Inventory Template</a>
+                <a href="/standards/Autonomy_Allocation_Matrix_v1.pdf" class="download-link">Autonomy Allocation Template</a>
+                <a href="/standards/Accountability_and_Escalation_Framework_v1.pdf" class="download-link">Accountability &amp; Escalation Template</a>
+                <a href="/standards/Governance_as_Infrastructure_v1.pdf" class="download-link">Governance as Infrastructure Pattern Library</a>
+            </div>
+            <p style="margin-top: 0.75rem;"><a href="/standards/evidence" style="color: #0f4c5c; font-weight: 600; font-size: 1.05rem;">Evidence &amp; Implementation Library &rarr;</a></p>
         </section>
 
-        <!-- RELATED FRAMEWORKS -->
+        <!-- Related Frameworks -->
         <section>
             <h2>Related Frameworks</h2>
             <ul>
@@ -1141,28 +1003,21 @@
             </ul>
         </section>
 
-        <!-- Evidence & Implementation Library Link -->
-        <section>
-            <h2>Governance Artifacts</h2>
-            <p>For illustrated governance artifacts &mdash; audit logs, boundary specifications, enforcement schemas, escalation workflows, and implementation references &mdash; see the dedicated:</p>
-            <p style="margin-top: 0.75rem;"><a href="/standards/evidence" style="color: #0f4c5c; font-weight: 600; font-size: 1.05rem;">Evidence &amp; Implementation Library &rarr;</a></p>
-        </section>
-
         <!-- Reference Section -->
         <section class="reference-section">
-            <h3>Reference & License</h3>
-            <p><span class="version-note">v1.0 - stable</span></p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Published by PatientCentricCare.AI as a public good. Open license permitting use, citation, and reference with attribution. <a href="/standards/license-v1.pdf">View license</a>.</p>
+            <h3>Reference &amp; License</h3>
+            <p><span class="version-note">v2.0 - stable</span></p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Published by PatientCentricCare.AI. Safety OS reference model and control plane implementation are proprietary. Public doctrine and reference models are provided for citation, research, and standard-building with attribution. <a href="/standards/license-v1.pdf">View license</a>.</p>
             
             <div class="cite-box">
                 <h4>How to cite</h4>
-                <p class="citation">Squire, A. (2026). Hybrid Human-Agent Operating Standard (v1.0). PatientCentricCare.AI. https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard</p>
+                <p class="citation">Squire, A. (2026). Safety OS&trade; &mdash; A Human-Agent Teaming Control Architecture (v2.0). PatientCentricCare.AI. https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard</p>
             </div>
         </section>
 
         <!-- Related Standards -->
         <section id="related-standards" class="related-standards">
-            <h2>Related Standards & Regulatory Context</h2>
+            <h2>Related Standards &amp; Regulatory Context</h2>
             <ul>
                 <li><a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener noreferrer">EU AI Act</a></li>
                 <li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI Risk Management Framework</a></li>
@@ -1179,8 +1034,13 @@
         <p class="footer-brand">PatientCentricCare.AI</p>
         <p>Translating lived cancer experience into AI-enabled healthcare innovation</p>
         <p style="margin-top: 0.75rem;"><a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
-        <p style="margin-top: 0.75rem; font-size: 0.75rem;">© 2026 PatientCentricCare.AI. All rights reserved.</p>
+        <p style="margin-top: 0.75rem; font-size: 0.75rem;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
     </footer>
+
+    <!-- IP Notice -->
+    <div class="ip-notice">
+        Safety OS&trade; reference model and control plane implementation are proprietary. Public doctrine and reference models are provided for citation, research, and standard-building with attribution.
+    </div>
 
     <script>
         function toggleMenu() {
