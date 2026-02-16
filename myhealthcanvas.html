@@ -38,10 +38,9 @@
       gtag('config', 'G-6CNLJJJ8WQ');
       
       // Google Ads Account 1
-      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-17939692705');
       
       // Google Ads Account 2
-      gtag('config', 'AW-290924137');
     </script>
 
     <!-- Conversion Tracking Functions -->
@@ -49,7 +48,7 @@
       // MyHealthCanvas Current Plan (£9) Purchase Tracking
       function trackMyHealthCanvasCurrentPurchase() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/DBeJCJPqvqQbENHyrZBA',  // Correct conversion ID for starter kit
+          'send_to': 'AW-17939692705/DBeJCJPqvqQbENHyrZBA',  // Correct conversion ID for starter kit
           'value': 9.00,
           'currency': 'GBP',
           'transaction_id': 'MHC_CURRENT_' + Date.now()
@@ -60,7 +59,7 @@
       // MyHealthCanvas Complete Plan (£12) Purchase Tracking
       function trackMyHealthCanvasCompletePurchase() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/86auCO79yKQbENHyrZBA',  // Correct conversion ID for complete plan
+          'send_to': 'AW-17939692705/86auCO79yKQbENHyrZBA',  // Correct conversion ID for complete plan
           'value': 12.00,
           'currency': 'GBP',
           'transaction_id': 'MHC_COMPLETE_' + Date.now()
@@ -71,7 +70,7 @@
       // Generic MyHealthCanvas Purchase Tracking (fallback)
       function trackMyHealthCanvasPurchase() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
           'value': 10.50,
           'currency': 'GBP',
           'transaction_id': 'MHC_GENERIC_' + Date.now()
@@ -82,7 +81,7 @@
       // Enhanced MyHealthCanvas Current Plan Tracking
       function trackEnhancedMyHealthCanvasCurrentPurchase() {
         gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHC_ENH_CURRENT_' + Date.now(),
           'value': 9.00,
           'currency': 'GBP',
@@ -100,7 +99,7 @@
       // Enhanced MyHealthCanvas Complete Plan Tracking
       function trackEnhancedMyHealthCanvasCompletePurchase() {
         gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHC_ENH_COMPLETE_' + Date.now(),
           'value': 12.00,
           'currency': 'GBP',

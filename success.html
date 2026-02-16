@@ -19,10 +19,9 @@
       gtag('config', 'G-6CNLJJJ8WQ');
       
       // Google Ads Account 1
-      gtag('config', 'AW-17214175569');
+      gtag('config', 'AW-17939692705');
       
       // Google Ads Account 2
-      gtag('config', 'AW-290924137');
 
       // Dynamic conversion tracking based on plan
       const urlParams = new URLSearchParams(window.location.search);
@@ -31,14 +30,14 @@
       if (plan === 'current') {
         // Current Plan (£9) conversion tracking
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/DBeJCJPqvqQbENHyrZBA',
+          'send_to': 'AW-17939692705/DBeJCJPqvqQbENHyrZBA',
           'value': 9.00,
           'currency': 'GBP',
           'transaction_id': 'MHC_CURRENT_SUCCESS_' + Date.now()
         });
         
         gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHC_ENH_CURRENT_SUCCESS_' + Date.now(),
           'value': 9.00,
           'currency': 'GBP',
@@ -53,14 +52,14 @@
       } else if (plan === 'complete') {
         // Complete Plan (£12) conversion tracking
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/86auCO79yKQbENHyrZBA',
+          'send_to': 'AW-17939692705/86auCO79yKQbENHyrZBA',
           'value': 12.00,
           'currency': 'GBP',
           'transaction_id': 'MHC_COMPLETE_SUCCESS_' + Date.now()
         });
         
         gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHC_ENH_COMPLETE_SUCCESS_' + Date.now(),
           'value': 12.00,
           'currency': 'GBP',
@@ -75,14 +74,14 @@
       } else {
         // Fallback generic tracking
         gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
           'value': 10.50,
           'currency': 'GBP',
           'transaction_id': 'MHC_GENERIC_SUCCESS_' + Date.now()
         });
         
         gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHC_ENH_GENERIC_SUCCESS_' + Date.now(),
           'value': 10.50,
           'currency': 'GBP',
@@ -483,14 +482,14 @@
     <script>
       // Track the successful purchase
       gtag('event', 'conversion', {
-          'send_to': 'AW-17214175569/sEzbCKPf2e0aENHyrZBA',
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
           'value': 1.0,
           'currency': 'GBP'
       });
       
       // Enhanced ecommerce tracking
       gtag('event', 'purchase', {
-          'send_to': 'AW-290924137',
+          'send_to': 'AW-17939692705',
           'transaction_id': 'MHS_' + Date.now(),
           'value': 1.0,
           'currency': 'GBP',

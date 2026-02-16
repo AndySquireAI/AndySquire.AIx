@@ -181,6 +181,18 @@
   pretty_urls = true
 
 
+# Thank You page
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/thank-you"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
 # Home Companion page
 [[redirects]]
   from = "/home-companion"
