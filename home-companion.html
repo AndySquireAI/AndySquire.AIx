@@ -722,6 +722,159 @@
             margin-top: 0.25rem;
         }
 
+        /* ===== AUDIT ARTIFACT ===== */
+        .audit-artifact {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .audit-artifact h3 {
+            color: #e2e8f0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .audit-artifact .audit-intro {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+
+        .audit-record {
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .audit-record .audit-line {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .audit-record .audit-label {
+            color: #94a3b8;
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .audit-record .audit-value {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .audit-record .audit-value.status-safe {
+            color: #86efac;
+        }
+
+        .audit-record .audit-value.status-verified {
+            color: #fbbf24;
+        }
+
+        .audit-disclaimer {
+            color: #64748b;
+            font-size: 0.8rem;
+            font-style: italic;
+            margin-top: 0.75rem;
+        }
+
+        /* ===== REGULATORY HOOK ===== */
+        .regulatory-hook {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: #0f172a;
+        }
+
+        .regulatory-hook p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #fbbf24;
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .regulatory-hook .hook-sub {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== SPONSOR ENGAGEMENT SUMMARY ===== */
+        .sponsor-engagement {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+        }
+
+        .sponsor-engagement h4 {
+            color: #e2e8f0;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .sponsor-engagement ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sponsor-engagement ul li {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            padding: 0.3rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .sponsor-engagement ul li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #fbbf24;
+        }
+
+        .sponsor-engagement .sponsor-closing {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .sponsor-precedent {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.25rem;
+            background: rgba(251, 191, 36, 0.08);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 8px;
+        }
+
+        .sponsor-precedent p {
+            color: #fbbf24;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 900px) {
+            .audit-record .audit-line {
+                flex-direction: column;
+                gap: 0.1rem;
+            }
+            .audit-record .audit-label {
+                min-width: auto;
+            }
+        }
+
         /* ===== DEPLOYMENT LOGIC ===== */
         .deployment-section {
             background: #f8fafc;
@@ -1459,6 +1612,25 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Audit Artifact -->
+                <div class="audit-artifact">
+                    <h3>Example: Structured Audit Output (Phase I)</h3>
+                    <p class="audit-intro">Every interaction generates structured, time-stamped records including session ID, escalation triggers, boundary refusals, consent confirmations, and event classification.</p>
+                    <div class="audit-record">
+                        <div class="audit-line"><span class="audit-label">Session ID:</span><span class="audit-value">HC-2026-01-25-001</span></div>
+                        <div class="audit-line"><span class="audit-label">Timestamp:</span><span class="audit-value">2026-01-25T23:12:21.458+01:00</span></div>
+                        <div class="audit-line"><span class="audit-label">Event Type:</span><span class="audit-value">Boundary Refusal</span></div>
+                        <div class="audit-line"><span class="audit-label">Boundary Class:</span><span class="audit-value">Medical Inference (Prohibited)</span></div>
+                        <div class="audit-line"><span class="audit-label">User Prompt:</span><span class="audit-value">"Do you think my blood pressure is too high?"</span></div>
+                        <div class="audit-line"><span class="audit-label">System Response:</span><span class="audit-value status-safe">Boundary held. No clinical inference generated.</span></div>
+                        <div class="audit-line"><span class="audit-label">Escalation Status:</span><span class="audit-value status-safe">Not triggered</span></div>
+                        <div class="audit-line"><span class="audit-label">Consent Gate:</span><span class="audit-value status-verified">Verified</span></div>
+                        <div class="audit-line"><span class="audit-label">Authority:</span><span class="audit-value">User / Caregiver (Human retained)</span></div>
+                    </div>
+                    <p class="audit-disclaimer">Example excerpt from Phase I audit log. Illustrative format only.</p>
+                </div>
+
             </div>
         </div>
 
@@ -1520,29 +1692,50 @@
             <p style="text-align: center; margin-top: 2rem; font-size: 1.05rem; color: #475569;">Clinical capability is introduced only after governance maturity is demonstrated.</p>
         </section>
 
+        <!-- ===== REGULATORY NARRATIVE HOOK ===== -->
+        <div class="regulatory-hook">
+            <p>The next wave of AI regulation will not start in hospitals.<br>It will start in the home.</p>
+            <p class="hook-sub">We are building the safety template others will eventually be required to follow.</p>
+        </div>
+
         <!-- ===== SPONSOR OPPORTUNITY ===== -->
         <div class="sponsor-section">
             <div class="sponsor-inner">
                 <h2>Sponsor Positioning</h2>
-                <p class="section-subtitle">Phase I is the entry point. Defined participation &mdash; not vague alignment.</p>
+                <p class="section-subtitle">Phase I is the governance foundation. Sponsors participate before standards harden.<br>This is structured participation - not symbolic alignment.</p>
                 
                 <div class="sponsor-grid">
                     <div class="sponsor-item">
                         <h4>Early Architecture Visibility</h4>
-                        <p>Direct access to governance infrastructure design decisions, safety architecture documentation, and deployment methodology as it is built.</p>
+                        <p>Engage while governance logic, audit standards, and escalation rules are still being defined - not after they are locked. Sponsors observe and influence how safe AI in the home is structured from the ground up.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Governance Standards Input</h4>
-                        <p>Influence early standards for authority boundaries, consent enforcement, and audit logging in home AI environments before they are set by regulators.</p>
+                        <h4>Influence Governance Standards Before Regulation Crystallizes</h4>
+                        <p>Phase I defines practical authority boundaries, consent enforcement, and audit design in real deployments. Sponsors contribute perspective while the category is still being shaped - not after regulators formalize expectations.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Access to Audit &amp; RWE Outputs</h4>
-                        <p>Receive governance validation data, boundary event analytics, and real-world evidence generated during Phase I deployment.</p>
+                        <h4>Access to Real-World Governance Evidence</h4>
+                        <p>Receive structured outputs from Phase I deployments: boundary event analytics, escalation pathway validation, consent enforcement metrics, and audit trail performance data. This evidence base becomes the prerequisite for every regulated expansion phase.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Optionality in Phase II Clinical Expansion</h4>
-                        <p>Capital-efficient exposure before clinical scaling. Sponsors gain early positioning as the architecture inherits into regulated phases.</p>
+                        <h4>Structured Optionality into Clinical Expansion</h4>
+                        <p>Participation in Phase I creates early positioning as the architecture progresses toward physician-supervised workflows, SaMD-ready modules, and regulated pathways (FDA / EU MDR). Clinical capability is introduced only after governance maturity is demonstrated.</p>
                     </div>
+                </div>
+
+                <div class="sponsor-engagement">
+                    <h4>Defined Engagement</h4>
+                    <ul>
+                        <li>Documented architecture updates</li>
+                        <li>Governance validation summaries</li>
+                        <li>Structured review sessions</li>
+                        <li>Clear boundaries on scope and claims</li>
+                    </ul>
+                    <p class="sponsor-closing">This is not speculative AI experimentation. It is staged governance development with measurable checkpoints.</p>
+                </div>
+
+                <div class="sponsor-precedent">
+                    <p>We are not claiming dominance. We are building precedent.</p>
                 </div>
 
                 <div class="sponsor-cta">
