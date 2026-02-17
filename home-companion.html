@@ -729,6 +729,60 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
 
+        .audit-container {
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .audit-container-header {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .audit-container-header h4 {
+            color: #fbbf24;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.03em;
+        }
+
+        .audit-container-header .audit-orient {
+            color: #64748b;
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+
+        .audit-event-label {
+            background: rgba(134, 239, 172, 0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 0.6rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .audit-event-label .event-dot {
+            width: 8px;
+            height: 8px;
+            background: #86efac;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .audit-event-label span {
+            color: #86efac;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
         .audit-artifact h3 {
             color: #e2e8f0;
             font-size: 1.05rem;
@@ -740,13 +794,11 @@
             color: #94a3b8;
             font-size: 0.9rem;
             line-height: 1.5;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
         }
 
         .audit-record {
             background: rgba(0,0,0,0.35);
-            border: 1px solid rgba(251, 191, 36, 0.25);
-            border-radius: 8px;
             padding: 1.25rem 1.5rem;
             font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
             font-size: 0.85rem;
@@ -775,13 +827,6 @@
 
         .audit-record .audit-value.status-verified {
             color: #fbbf24;
-        }
-
-        .audit-disclaimer {
-            color: #64748b;
-            font-size: 0.8rem;
-            font-style: italic;
-            margin-top: 0.75rem;
         }
 
         /* ===== REGULATORY HOOK ===== */
@@ -1615,20 +1660,29 @@
 
                 <!-- Audit Artifact -->
                 <div class="audit-artifact">
-                    <h3>Example: Structured Audit Output (Phase I)</h3>
+                    <h3>Structured Audit Output</h3>
                     <p class="audit-intro">Every interaction generates structured, time-stamped records including session ID, escalation triggers, boundary refusals, consent confirmations, and event classification.</p>
-                    <div class="audit-record">
-                        <div class="audit-line"><span class="audit-label">Session ID:</span><span class="audit-value">HC-2026-01-25-001</span></div>
-                        <div class="audit-line"><span class="audit-label">Timestamp:</span><span class="audit-value">2026-01-25T23:12:21.458+01:00</span></div>
-                        <div class="audit-line"><span class="audit-label">Event Type:</span><span class="audit-value">Boundary Refusal</span></div>
-                        <div class="audit-line"><span class="audit-label">Boundary Class:</span><span class="audit-value">Medical Inference (Prohibited)</span></div>
-                        <div class="audit-line"><span class="audit-label">User Prompt:</span><span class="audit-value">"Do you think my blood pressure is too high?"</span></div>
-                        <div class="audit-line"><span class="audit-label">System Response:</span><span class="audit-value status-safe">Boundary held. No clinical inference generated.</span></div>
-                        <div class="audit-line"><span class="audit-label">Escalation Status:</span><span class="audit-value status-safe">Not triggered</span></div>
-                        <div class="audit-line"><span class="audit-label">Consent Gate:</span><span class="audit-value status-verified">Verified</span></div>
-                        <div class="audit-line"><span class="audit-label">Authority:</span><span class="audit-value">User / Caregiver (Human retained)</span></div>
+                    <div class="audit-container">
+                        <div class="audit-container-header">
+                            <h4>Safety OS - Phase I Audit Record (Example)</h4>
+                            <span class="audit-orient">Illustrative example of Phase I audit output (format representative)</span>
+                        </div>
+                        <div class="audit-event-label">
+                            <span class="event-dot"></span>
+                            <span>Boundary Event - Medical Inference Refused</span>
+                        </div>
+                        <div class="audit-record">
+                            <div class="audit-line"><span class="audit-label">Session ID:</span><span class="audit-value">HC-2026-01-25-001</span></div>
+                            <div class="audit-line"><span class="audit-label">Timestamp:</span><span class="audit-value">2026-01-25T23:12:21.458+01:00</span></div>
+                            <div class="audit-line"><span class="audit-label">Event Type:</span><span class="audit-value">Boundary Refusal</span></div>
+                            <div class="audit-line"><span class="audit-label">Boundary Class:</span><span class="audit-value">Medical Inference (Prohibited)</span></div>
+                            <div class="audit-line"><span class="audit-label">User Prompt:</span><span class="audit-value">"Do you think my blood pressure is too high?"</span></div>
+                            <div class="audit-line"><span class="audit-label">System Response:</span><span class="audit-value status-safe">Boundary held. No clinical inference generated.</span></div>
+                            <div class="audit-line"><span class="audit-label">Escalation Status:</span><span class="audit-value status-safe">Not triggered</span></div>
+                            <div class="audit-line"><span class="audit-label">Consent Gate:</span><span class="audit-value status-verified">Verified</span></div>
+                            <div class="audit-line"><span class="audit-label">Authority:</span><span class="audit-value">User / Caregiver (Human retained)</span></div>
+                        </div>
                     </div>
-                    <p class="audit-disclaimer">Example excerpt from Phase I audit log. Illustrative format only.</p>
                 </div>
 
             </div>
