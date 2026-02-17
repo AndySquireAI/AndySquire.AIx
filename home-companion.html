@@ -305,16 +305,17 @@
         }
 
         .hero .phase-label {
-            display: inline-block;
-            background: rgba(90, 143, 90, 0.25);
-            border: 1px solid rgba(90, 143, 90, 0.5);
+            display: block;
+            background: none;
+            border: none;
             color: #86efac;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            padding: 0.4rem 1.2rem;
-            border-radius: 20px;
+            padding: 0;
+            border-radius: 0;
             margin-bottom: 2rem;
             letter-spacing: 0.5px;
+            line-height: 1.6;
         }
         
         .hero-ctas {
@@ -1254,10 +1255,12 @@
         }
 
         .closing-section .closing-emphasis {
-            color: #86efac;
+            color: #d4a04a;
             font-weight: 600;
             font-size: 1.2rem;
+            font-style: italic;
             margin-top: 1.5rem;
+            line-height: 1.8;
         }
 
         /* ===== FOUNDING TEAM ===== */
@@ -1430,7 +1433,7 @@
             <img src="/images/logo_full_with_taglines.png" alt="Home Companion - Independence, dignity, and peace of mind" class="hero-logo">
             <h1>Governance-First AI Infrastructure for the Home</h1>
             <p class="subtitle">AI will enter sensitive home environments at scale. Most deployments today are governance-naive. We are building the safety, authority, consent, and audit architecture first.</p>
-            <div class="phase-label">Phase I Implementation: Home Companion</div>
+            <div class="phase-label">Phase I Implementation:<br>Home Companion</div>
             
             <div class="hero-ctas">
                 <a href="#downloads" class="cta-primary">Download Executive Overview</a>
@@ -1832,7 +1835,7 @@
                             Download PDF
                         </span>
                     </a>
-                    <a href="/downloads/3-phase-roadmap.png" class="download-card" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: '3-Phase Roadmap', document_type: 'roadmap', document_name: '3-Phase Roadmap', value: 10});" download>
+                    <a href="/downloads/3PhaseGovernance.png" class="download-card" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: '3-Phase Roadmap', document_type: 'roadmap', document_name: '3-Phase Roadmap', value: 10});" download>
                         <div class="download-card-icon">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
                         </div>
@@ -1868,7 +1871,7 @@
         <div class="closing-inner">
             <h2>Governance-first AI infrastructure for the home.</h2>
             <p>Built deliberately. Scaled only when earned.</p>
-            <p class="closing-emphasis">Confidence + discipline.</p>
+            <p class="closing-emphasis">Empowering independence.<br>Preserving dignity.</p>
         </div>
     </div>
 
