@@ -529,8 +529,8 @@
             <p class="section-purpose">Purpose: To demonstrate that governance constraints are enforced deterministically at execution time.</p>
 
             <div class="artifact-card">
-                <h4>Deterministic Refusal Logic Example</h4>
-                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates hard refusal of requests outside permitted authority boundaries.</p>
+                <h4>Halt and Redirect Protocol</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates deterministic halt-and-redirect of requests outside permitted authority boundaries.</p>
                 <p class="artifact-meta"><strong>Context:</strong> Non-medical deployment.</p>
                 <p class="artifact-meta"><strong>Applicable to:</strong> Phase I (non-clinical)</p>
                 <p class="artifact-meta"><strong>Notes:</strong> Refusals are enforced at runtime and cannot be overridden by model outputs.</p>
@@ -579,9 +579,10 @@
 
             <div class="artifact-card">
                 <h4>Sample Audit Log (Redacted)</h4>
-                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates immutable recording of refusals, escalations, and system actions.</p>
+                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates immutable recording of halt-and-redirect events, escalations, and system actions.</p>
                 <p class="artifact-meta"><strong>Context:</strong> Illustrative governance evidence.</p>
                 <p class="artifact-meta"><strong>Notes:</strong> Redacted to remove all personal and identifiable information.</p>
+                <p class="artifact-meta"><strong>Fields include:</strong> Session ID, Timestamp, Event Type, Boundary Class, User Prompt (redacted), System Response, Escalation Status, Consent Gate, Authority State, <strong style="color: #d4a04a;">Kill-Switch Verified: Active</strong></p>
             </div>
 
             <div class="artifact-card">
@@ -667,7 +668,7 @@
     <!-- Footer -->
     <footer role="contentinfo">
         <p class="footer-brand">PatientCentricCare.AI</p>
-        <p>Translating lived cancer experience into AI-enabled healthcare innovation</p>
+        <p>Safety OS™ — Governance infrastructure for AI in the home.</p>
         <p style="margin-top: 0.75rem;"><a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
         <p style="margin-top: 0.75rem; font-size: 0.75rem;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
     </footer>
