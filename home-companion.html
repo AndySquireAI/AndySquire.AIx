@@ -645,6 +645,53 @@
             margin-top: 0.75rem;
         }
 
+        /* ===== ACOUSTIC PRIVACY SECTION ===== */
+        .acoustic-privacy-section {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .acoustic-privacy-inner {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .acoustic-privacy-inner h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: #d4a04a;
+        }
+
+        .acoustic-privacy-inner p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #94a3b8;
+        }
+
+        .acoustic-privacy-inner ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+
+        .acoustic-privacy-inner li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .acoustic-privacy-inner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #86efac;
+            font-weight: 700;
+        }
+
         /* ===== FLIGHT RECORDER SECTION ===== */
         .flight-recorder-section {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
@@ -1431,9 +1478,9 @@
     <header class="hero">
         <div class="hero-content">
             <img src="/images/logo_full_with_taglines.png" alt="Home Companion - Independence, dignity, and peace of mind" class="hero-logo">
-            <h1>Governance-First AI Infrastructure for the Home</h1>
-            <p class="subtitle">AI will enter sensitive home environments at scale. Most deployments today are governance-naive. We are building the safety, authority, consent, and audit architecture first.</p>
-            <div class="phase-label">Phase I Implementation:<br>Home Companion</div>
+            <h1>Safety OS™ — Governance Infrastructure for AI in the Home</h1>
+            <p class="subtitle">Home Companion is the Phase I deployment environment for Safety OS™ — a governance validation domain designed to stress-test authority boundaries in real-world home settings.</p>
+            <div class="phase-label">Phase I Deployment Environment:<br>Home Companion</div>
             
             <div class="hero-ctas">
                 <a href="#downloads" class="cta-primary">Download Executive Overview</a>
@@ -1628,6 +1675,18 @@
                         <p class="product-caption">A familiar photo frame with voice-first AI companionship</p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- ===== ACOUSTIC PRIVACY ===== -->
+        <div class="acoustic-privacy-section">
+            <div class="acoustic-privacy-inner">
+                <h2>Tier 0 Acoustic Privacy</h2>
+                <ul>
+                    <li>Edge-level processing captures non-semantic interaction metadata (e.g., noise level, cadence)</li>
+                    <li>Raw audio is not persistently stored</li>
+                    <li>Audit logs capture event classification — not private speech content</li>
+                </ul>
             </div>
         </div>
 
