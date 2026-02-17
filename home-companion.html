@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Companion | Safe AI Companionship for Seniors | PatientCentricCare.AI</title>
-    <meta name="description" content="Home Companion helps seniors live independently with AI-augmented companionship that reduces isolation risk and provides reliable, human-verified escalation.">
-    <meta name="keywords" content="Home Companion, AI companionship, seniors, aging in place, voice AI, non-medical AI, caregiver support, PatientCentricCare, Andy Squire">
+    <title>Home Companion | Governance-First AI Infrastructure for the Home | PatientCentricCare.AI</title>
+    <meta name="description" content="Home Companion is Phase I of a governance-first AI infrastructure for sensitive home environments. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
+    <meta name="keywords" content="Home Companion, AI governance, Safety OS, seniors, aging in place, voice AI, non-medical AI, governance architecture, PatientCentricCare, Andy Squire">
     <meta name="author" content="Andy Squire, PatientCentricCare.AI">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.patientcentriccare.ai/home-companion">
@@ -13,8 +13,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.patientcentriccare.ai/home-companion">
-    <meta property="og:title" content="Home Companion | Safe AI Companionship for Seniors">
-    <meta property="og:description" content="Helping seniors live independently with AI-augmented companionship that reduces isolation risk and provides reliable, human-verified escalation.">
+    <meta property="og:title" content="Home Companion | Governance-First AI Infrastructure for the Home">
+    <meta property="og:description" content="Phase I of a governance-first AI deployment model. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
     <meta property="og:image" content="https://www.patientcentriccare.ai/images/logo_full_with_taglines.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -29,8 +29,8 @@
     <meta name="twitter:site" content="@AndySquireAI">
     <meta name="twitter:creator" content="@AndySquireAI">
     <meta name="twitter:url" content="https://www.patientcentriccare.ai/home-companion">
-    <meta name="twitter:title" content="Home Companion | Safe AI Companionship for Seniors">
-    <meta name="twitter:description" content="Helping seniors live independently with AI-augmented companionship that reduces isolation risk and provides reliable, human-verified escalation.">
+    <meta name="twitter:title" content="Home Companion | Governance-First AI Infrastructure for the Home">
+    <meta name="twitter:description" content="Phase I of a governance-first AI deployment model. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
     <meta name="twitter:image" content="https://www.patientcentriccare.ai/images/logo_full_with_taglines.png">
 
     <!-- Favicon -->
@@ -91,7 +91,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Home Companion",
-      "description": "A voice-first AI companion helping seniors live independently with safe, human-verified escalation and governance-backed trust.",
+      "description": "Phase I of a governance-first AI infrastructure for the home. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.",
       "brand": {
         "@type": "Organization",
         "name": "PatientCentricCare.AI"
@@ -297,11 +297,24 @@
         .hero .subtitle {
             font-size: 1.25rem;
             color: #cbd5e1;
-            margin-bottom: 2rem;
+            margin-bottom: 0.8rem;
             line-height: 1.6;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .hero .phase-label {
+            display: inline-block;
+            background: rgba(90, 143, 90, 0.25);
+            border: 1px solid rgba(90, 143, 90, 0.5);
+            color: #86efac;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
         }
         
         .hero-ctas {
@@ -309,74 +322,44 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2.5rem;
         }
         
         .cta-primary {
             background: #5a8f5a;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.85rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
         
         .cta-primary:hover {
-            background: #4a7f4a;
+            background: #4a7a4a;
+            transform: translateY(-2px);
         }
         
         .cta-secondary {
-            background: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.85rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            border: 2px solid rgba(90, 143, 90, 0.6);
             transition: all 0.3s;
         }
         
         .cta-secondary:hover {
-            background: rgba(90, 143, 90, 0.2);
-        }
-
-        /* ===== SECTION DEFAULTS ===== */
-        section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        h2 {
-            font-size: 2.2rem;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-bottom: 2.5rem;
-        }
-        
-        h3 {
-            font-size: 1.3rem;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
+            border-color: white;
+            background: rgba(255,255,255,0.1);
         }
 
         /* ===== STAT STRIP ===== */
         .stat-strip {
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 2.5rem 2rem;
+            background: #f0f7f0;
+            padding: 2rem;
         }
-
+        
         .stat-strip-inner {
             max-width: 1000px;
             margin: 0 auto;
@@ -385,36 +368,111 @@
             gap: 2rem;
             text-align: center;
         }
-
-        .stat-item .stat-number {
-            font-size: 2.8rem;
+        
+        .stat-number {
+            font-size: 2.2rem;
             font-weight: 800;
             color: #5a8f5a;
-            line-height: 1;
-            margin-bottom: 0.5rem;
         }
-
-        .stat-item .stat-label {
+        
+        .stat-label {
             font-size: 0.95rem;
             color: #475569;
-            line-height: 1.4;
+            margin-top: 0.25rem;
         }
-
-        .stat-item .stat-source {
+        
+        .stat-source {
             font-size: 0.75rem;
             color: #94a3b8;
-            margin-top: 0.3rem;
+            margin-top: 0.25rem;
         }
 
-        /* ===== THE PROBLEM SECTION ===== */
+        /* ===== GENERAL SECTIONS ===== */
+        section, .section-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        /* ===== WHY NOW SECTION ===== */
+        .why-now-section {
+            background: #fefce8;
+            border-top: 3px solid #eab308;
+            padding: 3.5rem 2rem;
+        }
+
+        .why-now-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .why-now-section h2 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .why-now-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .why-now-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .why-now-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #fef3c7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .why-now-item h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+
+        .why-now-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* ===== PROBLEM SECTION ===== */
         .problem-section {
-            background: #ffffff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
         .problem-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
@@ -422,14 +480,18 @@
             display: flex;
             gap: 1rem;
             align-items: flex-start;
+            padding: 1.25rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 3px solid #5a8f5a;
         }
 
         .problem-icon {
+            flex-shrink: 0;
             width: 44px;
             height: 44px;
-            min-width: 44px;
-            background: #fef2f2;
-            border-radius: 10px;
+            background: #f0f7f0;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -438,7 +500,7 @@
         .problem-icon svg {
             width: 22px;
             height: 22px;
-            fill: #dc2626;
+            fill: #5a8f5a;
         }
 
         .problem-item h4 {
@@ -448,14 +510,87 @@
         }
 
         .problem-item p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #64748b;
             line-height: 1.5;
         }
 
-        /* ===== WHAT HC DOES ===== */
+        /* ===== DIFFERENTIATION SECTION ===== */
+        .diff-section {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .diff-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .diff-section h2 {
+            color: white;
+        }
+
+        .diff-section .section-subtitle {
+            color: #94a3b8;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .diff-moat {
+            background: rgba(90, 143, 90, 0.15);
+            border: 1px solid rgba(90, 143, 90, 0.4);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .diff-moat p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #86efac;
+            line-height: 1.5;
+        }
+
+        .diff-moat p span {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .diff-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .diff-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+        }
+
+        .diff-feature svg {
+            width: 20px;
+            height: 20px;
+            fill: #5a8f5a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .diff-feature span {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ===== PRODUCT SECTION ===== */
         .solution-section {
-            background: #f8faf8;
             padding: 4rem 2rem;
         }
 
@@ -477,24 +612,20 @@
         }
 
         .solution-features li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e2e8f0;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.75rem;
-            font-size: 1.05rem;
+            padding: 0.6rem 0;
+            font-size: 1rem;
             color: #334155;
         }
 
-        .solution-features li:last-child {
-            border-bottom: none;
-        }
-
         .solution-features li svg {
-            width: 20px;
-            height: 20px;
-            min-width: 20px;
+            width: 22px;
+            height: 22px;
             fill: #5a8f5a;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .product-image-container {
@@ -513,49 +644,82 @@
             margin-top: 0.75rem;
         }
 
-        /* ===== WHY DIFFERENT / GOVERNANCE AS TRUST ===== */
-        .trust-grid {
+        /* ===== FLIGHT RECORDER SECTION ===== */
+        .flight-recorder-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .flight-recorder-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .flight-recorder-section h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .flight-recorder-section .section-subtitle {
+            color: #94a3b8;
+        }
+
+        .flight-recorder-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
             margin-top: 2rem;
         }
 
-        .trust-item {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            background: #f8fafc;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
+        .flight-recorder-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.1);
         }
 
-        .trust-item-icon {
-            width: 48px;
-            height: 48px;
-            margin: 0 auto 1rem auto;
-            background: #f0f7f0;
-            border-radius: 50%;
+        .fr-points {
+            list-style: none;
+        }
+
+        .fr-points li {
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .trust-item-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: #5a8f5a;
-        }
-
-        .trust-item h4 {
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            color: #e2e8f0;
             font-size: 0.95rem;
-            color: #0f172a;
-            margin-bottom: 0.4rem;
+            line-height: 1.5;
         }
 
-        .trust-item p {
-            font-size: 0.85rem;
-            color: #64748b;
-            line-height: 1.4;
+        .fr-points li svg {
+            width: 20px;
+            height: 20px;
+            fill: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .fr-callout {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 3px solid #fbbf24;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .fr-callout p {
+            color: #fbbf24;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .fr-callout p span {
+            color: #94a3b8;
+            font-weight: 400;
+            display: block;
+            margin-top: 0.25rem;
         }
 
         /* ===== DEPLOYMENT LOGIC ===== */
@@ -644,67 +808,47 @@
         }
 
         .deployment-bullets li::before {
-            content: "→";
+            content: "\2192";
             position: absolute;
             left: 0;
             color: #5a8f5a;
             font-weight: 700;
         }
 
-        /* ===== WHO IT'S FOR ===== */
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
+        /* ===== WHY NON-MEDICAL FIRST ===== */
+        .strategic-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
-        .audience-item {
+        .strategic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .strategic-item {
+            padding: 1.5rem;
             background: #f8fafc;
             border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
+            border-top: 3px solid #5a8f5a;
         }
 
-        .audience-icon {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 1rem auto;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .audience-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: #5a8f5a;
-        }
-
-        .audience-item h4 {
+        .strategic-item h4 {
             font-size: 1rem;
             color: #0f172a;
-            margin-bottom: 0.25rem;
-        }
-
-        .audience-item .audience-tagline {
-            font-size: 0.9rem;
-            color: #5a8f5a;
-            font-weight: 600;
             margin-bottom: 0.4rem;
         }
 
-        .audience-item p {
-            font-size: 0.85rem;
+        .strategic-item p {
+            font-size: 0.9rem;
             color: #64748b;
-            margin: 0;
             line-height: 1.5;
         }
 
-        /* ===== WHY SPONSOR ===== */
+        /* ===== SPONSOR SECTION ===== */
         .sponsor-section {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
             color: white;
@@ -750,27 +894,26 @@
             line-height: 1.5;
         }
 
-        /* ===== RESTRAINT SECTION ===== */
-        .restraint-section {
+        .sponsor-cta {
             text-align: center;
-            padding: 3.5rem 2rem;
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
+            margin-top: 2.5rem;
         }
 
-        .restraint-inner {
-            max-width: 700px;
-            margin: 0 auto;
+        .sponsor-cta a {
+            display: inline-block;
+            background: #5a8f5a;
+            color: white;
+            padding: 0.85rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
         }
 
-        .restraint-section h2 {
-            margin-bottom: 1rem;
-        }
-
-        .restraint-section p {
-            font-size: 1.1rem;
-            color: #475569;
-            line-height: 1.7;
+        .sponsor-cta a:hover {
+            background: #4a7a4a;
+            transform: translateY(-2px);
         }
 
         /* ===== DOWNLOADS ===== */
@@ -865,6 +1008,60 @@
             fill: #5a8f5a;
         }
 
+        /* ===== NOTICE SECTION ===== */
+        .notice-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .notice-box {
+            padding: 1.5rem 2rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .notice-box p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== CLOSING STATEMENT ===== */
+        .closing-section {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: #0f172a;
+            color: white;
+        }
+
+        .closing-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .closing-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .closing-section p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .closing-section .closing-emphasis {
+            color: #86efac;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
         /* ===== FOUNDING TEAM ===== */
         .founding-team {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -887,22 +1084,6 @@
         }
 
         /* ===== FOOTER ===== */
-        .footer-legal-box {
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            padding: 1.5rem 2rem;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 8px;
-        }
-        
-        .footer-legal-box p {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin: 0;
-            line-height: 1.7;
-        }
-
         footer {
             background: #0f172a;
             color: white;
@@ -922,8 +1103,14 @@
             .solution-grid {
                 grid-template-columns: 1fr;
             }
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .why-now-grid {
+                grid-template-columns: 1fr;
+            }
+            .diff-features {
+                grid-template-columns: 1fr;
+            }
+            .flight-recorder-content {
+                grid-template-columns: 1fr;
             }
             .phase-visual {
                 grid-template-columns: 1fr;
@@ -932,8 +1119,8 @@
             .phase-arrow {
                 transform: rotate(90deg);
             }
-            .audience-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .strategic-grid {
+                grid-template-columns: 1fr;
             }
             .sponsor-grid {
                 grid-template-columns: 1fr;
@@ -999,14 +1186,6 @@
             h2 {
                 font-size: 1.8rem;
             }
-
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .audience-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -1047,15 +1226,16 @@
         </div>
     </nav>
 
-    <!-- ===== HERO: Impact First ===== -->
+    <!-- ===== HERO: Infrastructure Positioning ===== -->
     <header class="hero">
         <div class="hero-content">
             <img src="/images/logo_full_with_taglines.png" alt="Home Companion - Independence, dignity, and peace of mind" class="hero-logo">
-            <h1>Helping Seniors Live Independently with Safe, Human-Escalated AI Companionship</h1>
-            <p class="subtitle">A voice-first home companion designed to reduce isolation, support families, and deploy safely within clear human authority boundaries.</p>
+            <h1>Governance-First AI Infrastructure for the Home</h1>
+            <p class="subtitle">AI will enter sensitive home environments at scale. Most deployments today are governance-naive. We are building the safety, authority, consent, and audit architecture first.</p>
+            <div class="phase-label">Phase I Implementation: Home Companion</div>
             
             <div class="hero-ctas">
-                <a href="#downloads" class="cta-primary">View Sponsor Overview</a>
+                <a href="#downloads" class="cta-primary">Download Executive Overview</a>
                 <a href="mailto:andy@patientcentriccare.ai?subject=Data%20Room%20Access%20Request&body=Hello%20Andy%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Home%20Companion%20data%20room.%0A%0A" class="cta-secondary">Access Data Room</a>
             </div>
         </div>
@@ -1084,19 +1264,66 @@
 
     <main id="main-content">
 
-        <!-- ===== SECTION 1: THE PROBLEM ===== -->
+        <!-- ===== WHY NOW ===== -->
+        <div class="why-now-section">
+            <div class="why-now-inner">
+                <h2>Why This Matters Now</h2>
+                <p style="font-size: 1.05rem; color: #78350f; margin-bottom: 0.5rem;">Sponsors fund timing windows. This one is closing.</p>
+                <div class="why-now-grid">
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9888;</div>
+                        <div>
+                            <h4>AI entering homes is inevitable</h4>
+                            <p>Voice agents and AI companions are rapidly scaling into private living environments &mdash; whether governed or not.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9881;</div>
+                        <div>
+                            <h4>Governance standards are undefined</h4>
+                            <p>No established framework exists for authority boundaries, consent enforcement, or audit logging in home AI.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9878;</div>
+                        <div>
+                            <h4>Regulatory scrutiny is increasing</h4>
+                            <p>EU AI Act, FDA SaMD acceleration, and payer pressure are converging. Retrofitting governance after scale is expensive and legally risky.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#128200;</div>
+                        <div>
+                            <h4>Early architecture decisions determine compliance</h4>
+                            <p>The organizations that define governance infrastructure now will set the standard for regulated AI in the home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== THE PROBLEM ===== -->
         <section class="problem-section">
-            <h2>The Independence Gap</h2>
-            <p class="section-subtitle">Millions of seniors face a growing crisis that existing systems are not designed to address.</p>
+            <h2>AI in the Home Is Scaling Faster Than Governance</h2>
+            <p class="section-subtitle">Voice agents and AI companions are entering private living environments. What is missing:</p>
             
             <div class="problem-grid">
                 <div class="problem-item">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
                     </div>
                     <div>
-                        <h4>Seniors aging alone at scale</h4>
-                        <p>14.7 million older adults live alone, many without daily human contact or reliable check-in systems.</p>
+                        <h4>No clear authority boundaries</h4>
+                        <p>Most home AI systems operate without defined limits on what the AI can and cannot do in sensitive contexts.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <div>
+                        <h4>No explicit consent enforcement</h4>
+                        <p>Escalation and data sharing happen without structured user consent or governance-gated pathways.</p>
                     </div>
                 </div>
                 <div class="problem-item">
@@ -1104,36 +1331,68 @@
                         <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 1.62-.49 3.12-1.32 4.38l1.47 1.47C21.32 16.12 22 14.15 22 12c0-5.18-3.95-9.45-9-9.95zM12 20c-4.42 0-8-3.58-8-8 0-3.49 2.24-6.45 5.35-7.52l.65 1.9C7.67 7.37 6 9.49 6 12c0 3.31 2.69 6 6 6 1.52 0 2.9-.57 3.96-1.5l1.47 1.47C15.86 19.26 14.02 20 12 20z"/></svg>
                     </div>
                     <div>
-                        <h4>Isolation increases health risk</h4>
-                        <p>Social isolation raises all-cause mortality risk by 35% and drives avoidable emergency department visits.</p>
+                        <h4>No deterministic escalation logic</h4>
+                        <p>When something goes wrong, there is no structured, auditable handoff to human authority.</p>
                     </div>
                 </div>
                 <div class="problem-item">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
                     </div>
                     <div>
-                        <h4>Families carry chronic uncertainty</h4>
-                        <p>Caregivers lack reliable daily signals about their loved one's wellbeing, creating anxiety and reactive care patterns.</p>
-                    </div>
-                </div>
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                    </div>
-                    <div>
-                        <h4>Avoidable escalation costs</h4>
-                        <p>Isolated seniors visit emergency departments more often. Early engagement reduces unplanned care costs.</p>
+                        <h4>No immutable audit logging</h4>
+                        <p>Without timestamped, boundary-classified records, there is no defensible deployment posture and no regulatory inheritance.</p>
                     </div>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: #475569; font-weight: 600;">Retrofitting governance after scale is expensive, legally risky, and often impossible without architectural redesign.</p>
         </section>
 
-        <!-- ===== SECTION 2: WHAT HOME COMPANION DOES ===== -->
+        <!-- ===== DIFFERENTIATION ===== -->
+        <div class="diff-section">
+            <div class="diff-inner">
+                <h2>Anyone Can Deploy Conversational AI</h2>
+                <p class="section-subtitle">Very few are building auditable authority systems from day one.</p>
+
+                <div class="diff-moat">
+                    <p>Our moat is not companionship.<br>Our moat is governance architecture.<p>
+                    <p><span>This architecture is reusable across future regulated modules.</span></p>
+                </div>
+
+                <div class="diff-features">
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Consent-gated escalation pathways</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Human authority retention at runtime</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Boundary refusal logic (no diagnosis, no inference)</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Immutable audit logging ("Flight Recorder")</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Risk-tiered capability expansion model</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Structured regulatory inheritance framework</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCT: WHAT HOME COMPANION DOES ===== -->
         <div class="solution-section">
             <div class="solution-inner">
-                <h2>A Safe, Voice-First Companion Designed for Daily Life</h2>
-                <p class="section-subtitle">Home Companion provides gentle, daily engagement that keeps seniors connected and families informed.</p>
+                <h2>Phase I: Home Companion</h2>
+                <p class="section-subtitle">A deliberately non-medical AI companion used to validate governance maturity before clinical expansion.</p>
                 
                 <div class="solution-grid">
                     <ul class="solution-features">
@@ -1166,53 +1425,53 @@
             </div>
         </div>
 
-        <!-- ===== SECTION 3: WHY THIS IS DIFFERENT ===== -->
-        <section>
-            <h2>Built for Safe Deployment from Day One</h2>
-            <p class="section-subtitle">Because this operates in a sensitive domain, governance is embedded as infrastructure — not added as an afterthought.</p>
-            
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-item-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        <!-- ===== FLIGHT RECORDER ===== -->
+        <div class="flight-recorder-section">
+            <div class="flight-recorder-inner">
+                <h2>The Safety OS "Flight Recorder"</h2>
+                <p class="section-subtitle">Governance is enforced at runtime. Not documented in a PDF. Enforced in the system.</p>
+
+                <div class="flight-recorder-content">
+                    <div class="flight-recorder-image">
+                        <img src="/images/flight-recorder-governance.png" alt="Safety OS Flight Recorder - Always On. Consent, Authority, Escalation, Immutable Audit Log.">
                     </div>
-                    <h4>Human authority preserved</h4>
-                    <p>Authority is never delegated to AI at any stage</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-item-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    <div>
+                        <ul class="fr-points">
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every interaction is time-stamped
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every boundary event is classified
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every escalation is consent-logged
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every record is reviewable post-incident
+                            </li>
+                        </ul>
+                        <div class="fr-callout">
+                            <p>This is not a policy document.<span>It is an operational control plane.</span></p>
+                        </div>
                     </div>
-                    <h4>Every interaction auditable</h4>
-                    <p>Logged for transparency and post-incident review</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-item-icon">
-                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    </div>
-                    <h4>Escalation requires consent</h4>
-                    <p>No action without explicit user confirmation</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-item-icon">
-                        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                    </div>
-                    <h4>Outside clinical claims</h4>
-                    <p>Designed to remain non-SaMD in Phase I</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- ===== SECTION 4: DEPLOYMENT LOGIC ===== -->
+        <!-- ===== PHASED DEPLOYMENT ===== -->
         <div class="deployment-section">
             <div class="deployment-inner">
-                <h2>Phase I: Audit-First, Non-Medical Deployment</h2>
-                <p class="section-subtitle">A disciplined, staged approach where capabilities expand only after governance maturity is demonstrated.</p>
+                <h2>Designed to Scale &mdash; Only When Earned</h2>
+                <p class="section-subtitle">Capabilities expand only after governance maturity and real-world validation. We do not rush deployment. We do not skip phases.</p>
                 
                 <div class="phase-visual">
                     <div class="phase-box active">
                         <h4>Phase I</h4>
-                        <p>Caregiver-in-the-Loop</p>
+                        <p>Non-Medical, Audit-First</p>
                     </div>
                     <div class="phase-arrow">
                         <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
@@ -1231,85 +1490,64 @@
                 </div>
 
                 <ul class="deployment-bullets">
-                    <li>Phase I operates as a non-SaMD AI companion with caregiver-in-the-loop architecture</li>
-                    <li>Designed for pilot validation before clinical expansion</li>
-                    <li>Governance infrastructure scales into regulated phases without re-architecture</li>
-                    <li>Each phase requires demonstrated safety maturity before progression</li>
+                    <li>Phase I validates consent enforcement, escalation gating, and boundary events</li>
+                    <li>Phase II inherits validated governance controls for physician-in-the-loop supervision</li>
+                    <li>Phase III requires formal regulatory authorization (FDA / EU MDR)</li>
+                    <li>Every phase inherits validated governance controls from the prior phase</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ===== SECTION 5: WHO IT'S FOR ===== -->
-        <section>
-            <h2>Who It's For</h2>
-            <div class="audience-grid">
-                <div class="audience-item">
-                    <div class="audience-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                    </div>
-                    <h4>Seniors</h4>
-                    <p class="audience-tagline">Independence without complexity</p>
-                    <p>Daily companionship that reduces isolation without requiring technical skills or lifestyle changes.</p>
+        <!-- ===== WHY NON-MEDICAL FIRST ===== -->
+        <section class="strategic-section">
+            <h2>Why Non-Medical First Is Strategic</h2>
+            <p class="section-subtitle">Home Companion is intentionally non-medical. Not as a limitation &mdash; but as discipline.</p>
+
+            <div class="strategic-grid">
+                <div class="strategic-item">
+                    <h4>Real-World Governance Validation</h4>
+                    <p>Generate actual boundary events, escalation data, and consent records in live home environments before clinical expansion.</p>
                 </div>
-                <div class="audience-item">
-                    <div class="audience-icon">
-                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                    </div>
-                    <h4>Families &amp; Caregivers</h4>
-                    <p class="audience-tagline">Transparent escalation + peace of mind</p>
-                    <p>Reliable daily signals and human-confirmed escalation that replaces chronic uncertainty with trust.</p>
+                <div class="strategic-item">
+                    <h4>Lower Regulatory Overhead</h4>
+                    <p>Non-medical Phase I enables faster iteration cycles and capital-efficient scaling without SaMD classification burden.</p>
                 </div>
-                <div class="audience-item">
-                    <div class="audience-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
-                    </div>
-                    <h4>Health Systems</h4>
-                    <p class="audience-tagline">Safe AI entry into the home</p>
-                    <p>Validated governance architecture that reduces liability risk while extending care reach.</p>
-                </div>
-                <div class="audience-item">
-                    <div class="audience-icon">
-                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                    </div>
-                    <h4>Policymakers</h4>
-                    <p class="audience-tagline">Verifiable governance architecture</p>
-                    <p>A reference implementation for responsible AI deployment with inspectable safety boundaries.</p>
+                <div class="strategic-item">
+                    <h4>Demonstrable Audit Evidence</h4>
+                    <p>Build the audit trail that proves governance maturity &mdash; the prerequisite for every subsequent regulated phase.</p>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.05rem; color: #475569;">Clinical capability is introduced only after governance maturity is demonstrated.</p>
         </section>
 
-        <!-- ===== WHY SPONSOR PHASE I ===== -->
+        <!-- ===== SPONSOR OPPORTUNITY ===== -->
         <div class="sponsor-section">
             <div class="sponsor-inner">
-                <h2>Why Sponsor Phase I?</h2>
-                <p class="section-subtitle">An opportunity to shape responsible AI in the home before clinical expansion.</p>
+                <h2>Sponsor Positioning</h2>
+                <p class="section-subtitle">Phase I is the entry point. Defined participation &mdash; not vague alignment.</p>
                 
                 <div class="sponsor-grid">
                     <div class="sponsor-item">
-                        <h4>Validate Responsible AI in the Home</h4>
-                        <p>Support the first governance-backed AI companion designed specifically for seniors aging independently, with built-in safety boundaries.</p>
+                        <h4>Early Architecture Visibility</h4>
+                        <p>Direct access to governance infrastructure design decisions, safety architecture documentation, and deployment methodology as it is built.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Shape Early Governance Standards</h4>
-                        <p>Participate in defining how AI companionship should be governed, audited, and escalated in sensitive home environments.</p>
+                        <h4>Governance Standards Input</h4>
+                        <p>Influence early standards for authority boundaries, consent enforcement, and audit logging in home AI environments before they are set by regulators.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Participate Before Clinical Expansion</h4>
-                        <p>Phase I is the entry point. Sponsors gain early positioning before the architecture scales into regulated clinical phases.</p>
+                        <h4>Access to Audit &amp; RWE Outputs</h4>
+                        <p>Receive governance validation data, boundary event analytics, and real-world evidence generated during Phase I deployment.</p>
                     </div>
                     <div class="sponsor-item">
-                        <h4>Controlled, Capital-Efficient Rollout</h4>
-                        <p>Non-medical Phase I requires lower regulatory overhead, enabling faster validation cycles and measurable outcomes.</p>
+                        <h4>Optionality in Phase II Clinical Expansion</h4>
+                        <p>Capital-efficient exposure before clinical scaling. Sponsors gain early positioning as the architecture inherits into regulated phases.</p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- ===== DESIGNED TO SCALE — ONLY WHEN EARNED ===== -->
-        <div class="restraint-section">
-            <div class="restraint-inner">
-                <h2>Designed to Scale — Only When Earned</h2>
-                <p>Capabilities expand only after governance maturity and real-world validation. We do not rush deployment. We do not skip phases. Every expansion is earned through demonstrated safety, auditable evidence, and stakeholder trust.</p>
+                <div class="sponsor-cta">
+                    <a href="mailto:andy@patientcentriccare.ai?subject=Phase%20I%20Sponsor%20Inquiry&body=Hello%20Andy%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20Phase%20I%20sponsor%20positioning.%0A%0A">Request Sponsor Documentation</a>
+                </div>
             </div>
         </div>
 
@@ -1355,6 +1593,14 @@
                 </div>
             </div>
         </section>
+
+        <!-- ===== IMPORTANT NOTICE (moved up) ===== -->
+        <div class="notice-section">
+            <div class="notice-box">
+                <p><strong>Important Notice:</strong> Home Companion is a non-medical system. It does not provide diagnosis, treatment, or clinical decision-making. Escalation is permitted only with user consent and subject to governance controls. Future phases are subject to regulatory review and formal authorization.</p>
+            </div>
+        </div>
+
     </main>
 
     <!-- Founding Team Section -->
@@ -1364,13 +1610,18 @@
         </div>
     </section>
 
-    <!-- Footer with Legal Note Box -->
-    <footer>
-        <div class="footer-legal-box">
-            <p><strong>Important Notice:</strong> Home Companion is a non-medical system. It does not provide diagnosis, treatment, or clinical decision-making. Escalation is permitted only with user consent and subject to governance controls. Future phases are subject to regulatory review.</p>
+    <!-- ===== CLOSING: Strategic Ambition ===== -->
+    <div class="closing-section">
+        <div class="closing-inner">
+            <h2>Governance-first AI infrastructure for the home.</h2>
+            <p>Built deliberately. Scaled only when earned.</p>
+            <p class="closing-emphasis">Confidence + discipline.</p>
         </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
         <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Join us in shaping the future of dignified, safe AI support for independent living at home.</p>
         <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
         <p style="margin-bottom: 1rem;"><a href="/impressum" style="color: #60a5fa; text-decoration: underline;">Impressum</a> &nbsp;|&nbsp; <a href="/privacy" style="color: #60a5fa; text-decoration: underline;">Privacy Policy</a></p>
         <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
