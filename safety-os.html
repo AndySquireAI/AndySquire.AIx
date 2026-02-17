@@ -590,15 +590,15 @@
 
     <!-- Page Header -->
     <div class="page-header">
-        <h1>Safety OS™: Governance Infrastructure for AI in the Home</h1>
-        <p class="tagline">Empowering Independence. Preserving Dignity.</p>
+        <h1>Safety OS™: The Reference Architecture for Authority-Bound AI in Private Environments</h1>
+        <p class="tagline">Defining how AI must behave when it enters the home.</p>
     </div>
 
     <!-- Definition -->
     <section>
         <div class="definition-box">
             <p>
-                <strong>Safety OS</strong> is the regulatory-grade governance and behavioral control framework that ensures supervised AI assistance can operate safely, predictably, and ethically in real-world home care environments. It anchors every action with clear clinical boundaries, human oversight, and transparent accountability — making it possible to extend care capacity without compromising patient safety.
+                <strong>Safety OS™</strong> is a runtime governance kernel that enforces authority constraints, consent gates, escalation logic, and immutable audit logging below the LLM layer. It is not a policy overlay. It is the execution environment in which AI operates — or does not operate — in private human environments.
             </p>
         </div>
         <p style="font-size: 1.1rem; color: #475569; margin-top: 1.5rem; font-style: italic;">
@@ -610,7 +610,7 @@
     <section>
         <h2>Why Safety OS Matters</h2>
         <p style="font-size: 1.2rem;">
-            The governance layer that makes supervised AI support trustworthy for patients, families, and clinicians.
+            We are defining the reference architecture for authority-bound AI in private environments. The operational template future regulation will formalize.
         </p>
     </section>
 
@@ -661,6 +661,18 @@
     <section>
         <h2 style="color: #d4a04a;">Authority Is a System Variable — Not a Policy Statement</h2>
         <p style="font-size: 1.15rem; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem auto;">In Safety OS™, authority state is tracked at runtime. Every interaction records who holds decision authority, whether consent gates are active, and what escalation pathways are available. This is not documented in a PDF. It is enforced in the system.</p>
+        <div style="max-width: 900px; margin: 2rem auto; padding: 2rem; background: #0f172a; border-radius: 8px; border-left: 4px solid #d4a04a;">
+            <p style="font-size: 1.3rem; font-weight: 700; color: #d4a04a; margin-bottom: 1rem;">The Irreversibility Mechanism</p>
+            <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8; margin-bottom: 1.5rem;">Investors ask: <em>"Why can't OpenAI or Apple just add logging and copy this?"</em></p>
+            <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8; margin-bottom: 1.5rem;">The answer is structural, not narrative. Safety OS enforces four mechanisms that cannot be retrofitted onto an LLM:</p>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="font-size: 1.05rem; color: #e2e8f0; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #d4a04a; font-weight: 700;">1.</span> <strong style="color: #fbbf24;">Authority as a state variable</strong> — tracked at runtime, not declared in documentation</li>
+                <li style="font-size: 1.05rem; color: #e2e8f0; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #d4a04a; font-weight: 700;">2.</span> <strong style="color: #fbbf24;">Deterministic boundary enforcement at runtime</strong> — not probabilistic, not prompt-based</li>
+                <li style="font-size: 1.05rem; color: #e2e8f0; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><span style="color: #d4a04a; font-weight: 700;">3.</span> <strong style="color: #fbbf24;">Escalation-gated execution</strong> — no action proceeds without verified authority chain</li>
+                <li style="font-size: 1.05rem; color: #e2e8f0; padding: 0.75rem 0;"><span style="color: #d4a04a; font-weight: 700;">4.</span> <strong style="color: #fbbf24;">Non-delegable human authority model</strong> — the system cannot grant itself permission</li>
+            </ul>
+            <p style="font-size: 1.15rem; color: #fbbf24; font-weight: 700; margin-top: 1.5rem; text-align: center;">The moat is not audit logs. It is authority-constrained execution enforced below the LLM layer.</p>
+        </div>
     </section>
 
     <!-- Chain of Custody -->
@@ -674,6 +686,61 @@
                 <li>Exportable for regulatory review</li>
             </ul>
         </div>
+    </section>
+
+    <!-- What Makes This Impossible to Fake -->
+    <section>
+        <h2 style="color: #d4a04a;">What Makes This Impossible to Fake</h2>
+        <p style="font-size: 1.15rem; max-width: 900px; margin: 0 auto 2rem auto;">Most AI companies add safety as a policy layer after deployment. Safety OS enforces it as an execution constraint before any output is generated.</p>
+        <div style="max-width: 900px; margin: 0 auto; overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+                <thead>
+                    <tr style="background: #0f172a; color: white;">
+                        <th style="padding: 1rem; text-align: left; border: 1px solid #334155; width: 35%;">Capability</th>
+                        <th style="padding: 1rem; text-align: center; border: 1px solid #334155; width: 32.5%;">LLM-Only System<br><span style="font-size: 0.85rem; font-weight: 400; opacity: 0.7;">(ChatGPT + logging)</span></th>
+                        <th style="padding: 1rem; text-align: center; border: 1px solid #334155; width: 32.5%; color: #fbbf24;">Safety OS™<br><span style="font-size: 0.85rem; font-weight: 400;">Kernel-Level Authority</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f8fafc;">
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Boundary enforcement</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Probabilistic (prompt-based)</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">Deterministic (runtime-enforced)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Authority tracking</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Not tracked</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">State variable per interaction</td>
+                    </tr>
+                    <tr style="background: #f8fafc;">
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Consent enforcement</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Terms of service (static)</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">Gated per session (dynamic)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Escalation logic</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">"Contact support"</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">Structured handoff with authority transfer</td>
+                    </tr>
+                    <tr style="background: #f8fafc;">
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Audit trail</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Application-level logs</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">WORM-compliant, hash-chained, exportable</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Self-permission</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Model can override own constraints</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">Architecturally impossible</td>
+                    </tr>
+                    <tr style="background: #f8fafc;">
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; font-weight: 600;">Kill switch</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #dc2626;">Manual shutdown</td>
+                        <td style="padding: 0.85rem 1rem; border: 1px solid #e2e8f0; text-align: center; color: #16a34a; font-weight: 600;">Verified active per session</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="font-size: 1.1rem; max-width: 900px; margin: 2rem auto 0 auto; color: #475569; font-style: italic; text-align: center;">Post-hoc policy overlays are insufficient. Governance must be enforced at the execution layer — before any output is generated.</p>
     </section>
 
     <!-- Benefits -->
