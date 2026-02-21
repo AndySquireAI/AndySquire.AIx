@@ -8,28 +8,15 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.patientcentriccare.ai/</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Clinical AI Governance - NEW -->
-  <url>
-    <loc>https://www.patientcentriccare.ai/clinical-ai-governance</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://www.patientcentriccare.ai/clinical-ai-governance-ecosystem.png</image:loc>
-      <image:title>Clinical AI Governance Ecosystem for Patient-Facing AI</image:title>
-      <image:caption>Governance progression from non-clinical to SaMD-ready clinical authority model</image:caption>
-    </image:image>
   </url>
 
   <!-- Physician-as-Pilot Governance Framework -->
   <url>
     <loc>https://www.patientcentriccare.ai/physician-as-pilot</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -39,12 +26,49 @@
     </image:image>
   </url>
 
+  <!-- Hybrid Human-Agent Operating Standard (Safety OS Standard) -->
+  <url>
+    <loc>https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- Safety OS Implementation -->
   <url>
     <loc>https://www.patientcentriccare.ai/safety-os</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
+  </url>
+
+  <!-- Home Companion - Phase I Deployment Environment -->
+  <url>
+    <loc>https://www.patientcentriccare.ai/home-companion</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Clinical AI Governance -->
+  <url>
+    <loc>https://www.patientcentriccare.ai/clinical-ai-governance</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.patientcentriccare.ai/clinical-ai-governance-ecosystem.png</image:loc>
+      <image:title>Clinical AI Governance Ecosystem for Patient-Facing AI</image:title>
+      <image:caption>Governance progression from non-clinical to SaMD-ready clinical authority model</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Evidence & Implementation Library -->
+  <url>
+    <loc>https://www.patientcentriccare.ai/standards/evidence</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- MyHealthCanvas -->
@@ -58,7 +82,7 @@
   <!-- Mission & Vision -->
   <url>
     <loc>https://www.patientcentriccare.ai/mission</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -66,7 +90,7 @@
   <!-- Traction & Progress -->
   <url>
     <loc>https://www.patientcentriccare.ai/traction</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -74,7 +98,7 @@
   <!-- Investment Opportunity -->
   <url>
     <loc>https://www.patientcentriccare.ai/investment</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -82,7 +106,7 @@
   <!-- Team -->
   <url>
     <loc>https://www.patientcentriccare.ai/team</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -90,7 +114,7 @@
   <!-- eLibrary Index -->
   <url>
     <loc>https://www.patientcentriccare.ai/blog/</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -120,7 +144,7 @@
   <!-- Investor Resources -->
   <url>
     <loc>https://www.patientcentriccare.ai/investors/</loc>
-    <lastmod>2026-01-18</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
