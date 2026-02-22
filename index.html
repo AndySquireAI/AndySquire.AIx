@@ -626,6 +626,341 @@
             font-size: 1.5rem;
             color: #0f172a;
         }
+
+        /* Clickable card styles */
+        .credibility-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .credibility-card-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-left-color: #E6A23C;
+        }
+
+        .credibility-card-link:hover h3 {
+            color: #0d9488;
+        }
+
+        .card-explore {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0d9488;
+            letter-spacing: 0.02em;
+        }
+
+        .credibility-card-link:hover .card-explore {
+            color: #E6A23C;
+        }
+
+        /* Governance Artifacts Section */
+        .governance-artifacts {
+            background: #f0fdfa;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .governance-artifacts h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .governance-artifacts p.artifacts-subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .artifacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .artifact-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .artifact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #0d9488;
+        }
+
+        .artifact-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .artifact-card h4 {
+            font-size: 0.95rem;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .artifact-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Email Capture Section */
+        .email-capture {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .email-capture h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .email-capture p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .email-capture-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .email-capture-form input[type="email"] {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            background: #1e293b;
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        .email-capture-form input[type="email"]::placeholder {
+            color: #64748b;
+        }
+
+        .email-capture-form input[type="email"]:focus {
+            outline: none;
+            border-color: #0d9488;
+        }
+
+        .email-capture-form button {
+            padding: 0.75rem 1.5rem;
+            background: #E6A23C;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .email-capture-form button:hover {
+            background: #d4911f;
+        }
+
+        .email-capture .privacy-note {
+            font-size: 0.8rem;
+            color: #475569;
+            margin-top: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .email-capture-form {
+                flex-direction: column;
+            }
+            .artifacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Enhanced Footer */
+        .site-footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #0d9488;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .footer-bottom a {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .footer-email-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .footer-email-form input[type="email"] {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            background: #1e293b;
+            color: white;
+            font-size: 0.85rem;
+            width: 200px;
+        }
+
+        .footer-email-form input[type="email"]::placeholder {
+            color: #64748b;
+        }
+
+        .footer-email-form button {
+            padding: 0.5rem 1rem;
+            background: #0d9488;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .footer-email-form button:hover {
+            background: #0f766e;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-email-form {
+                flex-direction: column;
+                width: 100%;
+            }
+            .footer-email-form input[type="email"] {
+                width: 100%;
+            }
+        }
+
+        /* Continue Reading Section */
+        .continue-reading {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .continue-reading h3 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+
+        .continue-reading-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .continue-reading-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            color: #0f172a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .continue-reading-links a:hover {
+            border-color: #0d9488;
+            color: #0d9488;
+            transform: translateY(-1px);
+        }
         
         .feature-card ul {
             list-style: none;
@@ -874,22 +1209,26 @@
         <h2>What Makes This Different</h2>
         <p style="font-size: 1.1rem; line-height: 1.8; color: #334155; max-width: 900px; margin-bottom: 2rem;">Unlike most AI approaches that optimize capability first and add governance later, Safety OS™ treats authority, enforcement, and auditability as infrastructure.<br><br>Governance is enforced at runtime, refusals are logged, escalations are attributable, and evidence is generated continuously — not retroactively.</p>
         <div class="credibility-grid">
-            <div class="credibility-card">
+            <a href="/physician-as-pilot" class="credibility-card credibility-card-link">
                 <h3>Physician-as-Pilot</h3>
                 <p>A regulatory-grade framework that ensures clinicians retain control over AI-enabled care, preventing unintended automation and preserving human authority.</p>
-            </div>
-            <div class="credibility-card">
+                <span class="card-explore">Explore framework &rarr;</span>
+            </a>
+            <a href="/safety-os" class="credibility-card credibility-card-link">
                 <h3>Safety OS</h3>
                 <p>The core governance layer that enforces clinical boundaries, manages escalation pathways, and provides an immutable audit trail for all AI-assisted actions.</p>
-            </div>
-            <div class="credibility-card">
+                <span class="card-explore">View architecture &rarr;</span>
+            </a>
+            <a href="/home-companion" class="credibility-card credibility-card-link">
                 <h3>Use Case: Post-Acute Rehabilitation</h3>
                 <p>Supporting patients at home with protocol-driven exercise reminders and progress monitoring, without providing clinical feedback or diagnosis.</p>
-            </div>
-            <div class="credibility-card">
+                <span class="card-explore">See Phase 1 deployment &rarr;</span>
+            </a>
+            <a href="/standards/hybrid-human-agent-operating-standard" class="credibility-card credibility-card-link">
                 <h3>Prohibited Functions</h3>
                 <p>Our systems are architecturally prohibited from performing diagnosis, prognosis, treatment recommendations, or any form of autonomous clinical decision-making.</p>
-            </div>
+                <span class="card-explore">Read the governance standard &rarr;</span>
+            </a>
         </div>
 
         <!-- CTA SECTION -->
@@ -900,13 +1239,104 @@
     </section>
 
 
-    <footer style="background: #0f172a; color: white; text-align: center; padding: 3rem 2rem;">
-        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Safety OS™ — Governance infrastructure for AI in the home.</p>
-        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
-        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
-        <p style="margin-bottom: 1.5rem;"><a href="/impressum" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
-        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2025 PatientCentricCare.AI. All rights reserved.</p>
+    <!-- GOVERNANCE ARTIFACTS - Surface key downloads on homepage -->
+    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0 2rem;">
+        <div class="governance-artifacts">
+            <h3>Governance Artifacts &amp; Documentation</h3>
+            <p class="artifacts-subtitle">Download the frameworks, templates, and reference architectures behind Safety OS.</p>
+            <div class="artifacts-grid">
+                <a href="/home-companion" class="artifact-card">
+                    <span class="artifact-icon">&#128196;</span>
+                    <div>
+                        <h4>Executive Overview</h4>
+                        <p>Product, impact thesis, and deployment model</p>
+                    </div>
+                </a>
+                <a href="/standards/hybrid-human-agent-operating-standard" class="artifact-card">
+                    <span class="artifact-icon">&#128220;</span>
+                    <div>
+                        <h4>Human-Agent Teaming Standard</h4>
+                        <p>Full governance standard with templates</p>
+                    </div>
+                </a>
+                <a href="/traction" class="artifact-card">
+                    <span class="artifact-icon">&#128200;</span>
+                    <div>
+                        <h4>Evidence &amp; Milestones</h4>
+                        <p>Governance maturity progression and traction</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL CAPTURE -->
+    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0 2rem;">
+        <div class="email-capture">
+            <h3>Stay Informed on Clinical AI Governance</h3>
+            <p>Governance frameworks, regulatory updates, and Safety OS development - delivered to decision-makers who shape how AI enters healthcare.</p>
+            <form class="email-capture-form" name="newsletter" method="POST" data-netlify="true" action="/thank-you">
+                <input type="hidden" name="form-name" value="newsletter">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="privacy-note">No spam. Governance-only updates. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- CONTINUE READING -->
+    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 2rem 2rem;">
+        <div class="continue-reading">
+            <h3>Continue Reading</h3>
+            <div class="continue-reading-links">
+                <a href="/physician-as-pilot">&rarr; Physician-as-Pilot</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">&rarr; Governance Standard</a>
+                <a href="/safety-os">&rarr; Safety OS Architecture</a>
+                <a href="/home-companion">&rarr; Phase 1 Deployment</a>
+                <a href="/traction">&rarr; Evidence &amp; Milestones</a>
+                <a href="/team">&rarr; Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENHANCED FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PatientCentricCare.AI</h4>
+                <p>Safety OS&trade; - Governance infrastructure for AI in the home.</p>
+                <p style="font-size: 1.1rem; color: #fbbf24; font-style: italic; margin-top: 0.75rem;">Empowering Independence. Preserving Dignity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Frameworks</h4>
+                <a href="/physician-as-pilot">Physician-as-Pilot</a>
+                <a href="/safety-os">Safety OS</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">Governance Standard</a>
+                <a href="/clinical-ai-governance">Phased Permissioning</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/home-companion">Phase 1 Deployment</a>
+                <a href="/traction">Evidence &amp; Milestones</a>
+                <a href="/team">Team</a>
+                <a href="/mission">Mission</a>
+                <a href="/investment">Investment</a>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <form class="footer-email-form" name="footer-newsletter" method="POST" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="form-name" value="footer-newsletter">
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" style="margin-top: 0.75rem;">andy@patientcentriccare.ai</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+            <p><a href="/impressum">Impressum</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+            <p style="font-size: 0.8rem;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        </div>
     </footer>
 
     <script>
