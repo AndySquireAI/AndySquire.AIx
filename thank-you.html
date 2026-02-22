@@ -19,6 +19,13 @@
       gtag('js', new Date());
       gtag('config', 'G-8XGFG9VW9Z');
       gtag('config', 'AW-17939692705');
+      // GA4 key event — fires on page load so GA4 records the lead
+      gtag('event', 'generate_lead', {
+        'event_category': 'form',
+        'event_label': 'newsletter_signup',
+        'value': 50,
+        'currency': 'USD'
+      });
       // Google Ads conversion tracking — fires on page load
       gtag('event', 'conversion', {
         'send_to': 'AW-17939692705/urXbCI3ll_kbEKH5p-pC'
