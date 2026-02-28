@@ -89,12 +89,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
+      "@type": "SoftwareApplication",
       "name": "Home Companion",
       "description": "Phase I of a governance-first AI infrastructure for the home. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.",
-      "brand": {
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Cloud-based",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "creator": {
         "@type": "Organization",
-        "name": "PatientCentricCare.AI"
+        "name": "PatientCentricCare.AI",
+        "url": "https://www.patientcentriccare.ai"
       },
       "image": "https://www.patientcentriccare.ai/images/logo_full_with_taglines.png"
     }
