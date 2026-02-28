@@ -97,7 +97,7 @@ function updateMyHealthStorySection() {
           </div>
           
           <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Current Plan&amount=9.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
+          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Current Plan&amount=9.00&currency_code=GBP&return=https://patientcentriccare.ai/success&cancel_return=https://patientcentriccare.ai','_blank')" 
                   class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
             Buy Current Plan Now
           </button>
@@ -168,7 +168,7 @@ function updateMyHealthStorySection() {
           </div>
           
           <!-- Purchase Button -->
-          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Complete Plan&amount=12.00&currency_code=GBP&return=https://andysquire.ai/success&cancel_return=https://andysquire.ai','_blank')" 
+          <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=squiza33@gmail.com&item_name=MyHealthStory Complete Plan&amount=12.00&currency_code=GBP&return=https://patientcentriccare.ai/success&cancel_return=https://patientcentriccare.ai','_blank')" 
                   class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
             Buy Complete Plan Now
           </button>

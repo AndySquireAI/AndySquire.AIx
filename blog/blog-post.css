@@ -1,0 +1,522 @@
+/* Premium Blog Post Styles */
+
+:root {
+    --primary-color: #2563eb;
+    --text-dark: #1a1a1a;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --bg-light: #f7fafc;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Base Typography */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-light);
+}
+
+/* Blog Post Container */
+.blog-post-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Premium Article Card */
+.blog-post-article {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .blog-post-article {
+        padding: 2rem 1.5rem;
+        border-radius: 8px;
+    }
+    
+    .blog-post-container {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+}
+
+/* Article Header */
+.article-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.75rem;
+    }
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+.article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.article-meta-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Article Content */
+.article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.article-content h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.3;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.article-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.article-content strong {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.article-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.article-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary-color);
+    transition: all 0.2s;
+}
+
+.article-content a:hover {
+    color: #1d4ed8;
+    border-bottom-color: #1d4ed8;
+}
+
+/* Blockquotes */
+.article-content blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    color: var(--text-medium);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Code blocks */
+.article-content code {
+    background: var(--bg-light);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.article-content pre {
+    background: var(--text-dark);
+    color: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.article-content pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* Horizontal rules */
+.article-content hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 2.5rem 0;
+}
+
+/* Images */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+/* Video embeds */
+.article-content iframe {
+    max-width: 100%;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Tables */
+.article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-content th,
+.article-content td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.article-content th {
+    background: var(--bg-light);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.article-content tr:last-child td {
+    border-bottom: none;
+}
+
+/* References Section */
+.references-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.references-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.references-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-medium);
+}
+
+.references-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-medium);
+}
+
+/* Author Bio */
+.author-bio {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.author-bio h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.author-bio p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+.author-contact {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+.author-contact strong {
+    color: var(--text-dark);
+}
+
+/* Back to Blog Link */
+.back-to-blog {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-bottom: 2rem;
+}
+
+.back-to-blog:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Disclosure Box */
+.disclosure-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    color: #78350f;
+    line-height: 1.6;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #60a5fa);
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+/* Print styles */
+@media print {
+    .blog-post-article {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .back-to-blog,
+    .header,
+    .footer {
+        display: none;
+    }
+}
+
+
+
+/* Social Sharing Section */
+.social-share {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.share-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+    color: var(--text-light);
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.share-btn:active {
+    transform: translateY(-1px);
+}
+
+.share-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+/* Tooltip on hover */
+.share-btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.share-btn:hover::after {
+    opacity: 1;
+}
+
+/* Brand Colors */
+.share-btn.whatsapp {
+    background: #25D366;
+}
+
+.share-btn.whatsapp:hover {
+    background: #1da851;
+}
+
+.share-btn.linkedin {
+    background: #0077B5;
+}
+
+.share-btn.linkedin:hover {
+    background: #005885;
+}
+
+.share-btn.twitter {
+    background: #000000;
+}
+
+.share-btn.twitter:hover {
+    background: #1a1a1a;
+}
+
+.share-btn.facebook {
+    background: #1877F2;
+}
+
+.share-btn.facebook:hover {
+    background: #0c5dbe;
+}
+
+.share-btn.email {
+    background: #6B7280;
+}
+
+.share-btn.email:hover {
+    background: #4B5563;
+}
+
+.share-btn.copy-link {
+    background: var(--primary-color);
+}
+
+.share-btn.copy-link:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+    .share-buttons {
+        gap: 0.875rem;
+    }
+    
+    .share-btn {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .share-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+

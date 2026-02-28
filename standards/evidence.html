@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence & Implementation Library - PatientCentricCare.AI</title>
+    <meta name="description" content="Illustrative governance artifacts demonstrating how authority, boundaries, enforcement, escalation, and auditability are operationalized within a hybrid human-AI system.">
+    <meta name="keywords" content="governance artifacts, audit logs, boundary specification, escalation workflow, Safety OS, AI governance evidence">
+    <meta name="author" content="PatientCentricCare.AI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.patientcentriccare.ai/standards/evidence">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/standards/evidence">
+    <meta property="og:title" content="Evidence & Implementation Library - PatientCentricCare.AI">
+    <meta property="og:description" content="Illustrative governance artifacts demonstrating how authority, boundaries, enforcement, escalation, and auditability are operationalized.">
+    <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AndySquireAI">
+    <meta name="twitter:title" content="Evidence & Implementation Library - PatientCentricCare.AI">
+    <meta name="twitter:description" content="Illustrative governance artifacts for hybrid human-AI governance.">
+    <meta name="twitter:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8XGFG9VW9Z');
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Evidence & Implementation Library",
+      "description": "Illustrative governance artifacts demonstrating how authority, boundaries, enforcement, escalation, and auditability are operationalized within a hybrid human-AI system.",
+      "url": "https://www.patientcentriccare.ai/standards/evidence",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PatientCentricCare.AI",
+        "url": "https://www.patientcentriccare.ai"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.patientcentriccare.ai/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standards",
+          "item": "https://www.patientcentriccare.ai/standards/hybrid-human-agent-operating-standard"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Evidence & Implementation Library",
+          "item": "https://www.patientcentriccare.ai/standards/evidence"
+        }]
+      }
+    }
+    </script>
+
+    <style>
+        /* Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0f4c5c;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #0f4c5c 0%, #1a6b7c 100%);
+            padding: 0.75rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #fbbf24;
+        }
+
+        .nav-contact {
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        /* Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: rgba(255,255,255,0.9);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            min-width: 160px;
+            padding: 0.5rem 0;
+            list-style: none;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: block;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #1e293b !important;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: #f1f5f9;
+            color: #0f4c5c !important;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header .lead {
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: #0f172a;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        section h3 {
+            color: #0f4c5c;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        section p {
+            color: #475569;
+            margin-bottom: 0.75rem;
+        }
+
+        section ul {
+            margin: 0.5rem 0 0.75rem 1.5rem;
+        }
+
+        section li {
+            margin-bottom: 0.3rem;
+            color: #475569;
+        }
+
+        /* Artifact Card */
+        .artifact-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .artifact-card h4 {
+            color: #0f172a;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-meta {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-meta strong {
+            color: #475569;
+        }
+
+        .artifact-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: #E6A23C;
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .artifact-link:hover {
+            background: #d4911f;
+            text-decoration: none;
+        }
+
+        /* Section Group */
+        .section-group {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-group h3 {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-group p.section-purpose {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        /* Thesis / Invariant */
+        .thesis-statement {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            padding: 1rem;
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            margin: 1rem 0;
+        }
+
+        /* Navigation Links */
+        .page-nav {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .page-nav a {
+            display: block;
+            color: #0f4c5c;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f4c5c 0%, #1a6b7c 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #fbbf24;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #0f4c5c;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="logo-container" aria-label="PatientCentricCare.AI Home">
+                <img src="/MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion">Phase 1</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company &#9662;</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Evidence &amp; Implementation Library</h1>
+            <p class="lead">Governance Artifacts and Illustrative References</p>
+        </header>
+
+        <!-- PURPOSE AND SCOPE -->
+        <section>
+            <h2>Purpose and Scope</h2>
+            <p>This Evidence &amp; Implementation Library provides illustrative governance artifacts demonstrating how authority, boundaries, enforcement, escalation, and auditability are operationalized within a hybrid human&ndash;AI system.</p>
+            <p>The materials on this page are reference examples only. They are intended to clarify how governance constructs defined in the <a href="/standards/hybrid-human-agent-operating-standard" style="color: #0f4c5c;">Hybrid Human&ndash;Agent Operating Standard</a> can be implemented and reviewed in practice.</p>
+            <div class="disclaimer">
+                These artifacts do not represent: regulatory submissions, approved or cleared medical devices, validated clinical systems, or commercial product claims.
+            </div>
+        </section>
+
+        <!-- HOW TO READ THIS PAGE -->
+        <section>
+            <h2>How to Read This Page</h2>
+            <p>Artifacts are grouped by governance function, not by product, phase, or market use case. Each artifact illustrates one governance control, such as:</p>
+            <ul>
+                <li>How authority is defined</li>
+                <li>How boundaries are enforced</li>
+                <li>How refusals occur</li>
+                <li>How escalation is triggered</li>
+                <li>How audit evidence is preserved</li>
+            </ul>
+            <p>All examples are: <strong>redacted</strong>, <strong>non-clinical by default</strong>, and <strong>phase-agnostic unless explicitly stated</strong>.</p>
+        </section>
+
+        <!-- SECTION 1: AUTHORITY & BOUNDARY DEFINITIONS -->
+        <div class="section-group">
+            <h3>1. Authority &amp; Boundary Definitions</h3>
+            <p class="section-purpose">Purpose: To demonstrate that authority is explicitly defined and bounded before AI execution is permitted.</p>
+
+            <div class="artifact-card">
+                <h4>Boundary Specification Protocol (Illustrative)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Defines actions explicitly prohibited under governance constraints, including medical advice, diagnosis, and treatment.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Non-clinical, illustrative.</p>
+                <p class="artifact-meta"><strong>Applicable to:</strong> Phase I (non-clinical) | Phase II (clinician-supervised)</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Redacted. Provided as a reference example only; does not imply regulatory submission or approval.</p>
+                <a href="/standards/Decision_Inventory_v1.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Boundary Specification Protocol'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <div class="artifact-card">
+                <h4>Scope-of-Action Definition Table</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Illustrates how permitted and prohibited actions are explicitly defined before system execution.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Phase-agnostic governance reference.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Demonstrates authority scoping; not a product specification.</p>
+                <a href="/standards/Autonomy_Allocation_Matrix_v1.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Scope of Action Definition'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #64748b;">What these artifacts show: That no decision rights are implicit, inferred, or assumed by the system.</p>
+        </div>
+
+        <!-- SECTION 2: RUNTIME ENFORCEMENT & REFUSAL CONTROLS -->
+        <div class="section-group">
+            <h3>2. Runtime Enforcement &amp; Refusal Controls</h3>
+            <p class="section-purpose">Purpose: To demonstrate that governance constraints are enforced deterministically at execution time.</p>
+
+            <div class="artifact-card">
+                <h4>Halt and Redirect Protocol</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates deterministic halt-and-redirect of requests outside permitted authority boundaries.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Non-medical deployment.</p>
+                <p class="artifact-meta"><strong>Applicable to:</strong> Phase I (non-clinical)</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Refusals are enforced at runtime and cannot be overridden by model outputs.</p>
+                <a href="/standards/Governance_as_Infrastructure_v1.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Deterministic Refusal Logic'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <div class="artifact-card">
+                <h4>Policy Enforcement Schema (Safety OS)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Illustrates how governance rules constrain execution independently of AI model behavior.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Architecture reference.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Diagram is illustrative; not a claim of product completeness or certification.</p>
+                <a href="/assets/SafetyOS-SUMMARYAGovernedAIExecutionModel-3.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Policy Enforcement Schema'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #64748b;">What these artifacts show: That prohibited actions are blocked by architecture, not discouraged by recommendations or monitoring.</p>
+        </div>
+
+        <!-- SECTION 3: ESCALATION & HUMAN OVERSIGHT WORKFLOWS -->
+        <div class="section-group">
+            <h3>3. Escalation &amp; Human Oversight Workflows</h3>
+            <p class="section-purpose">Purpose: To demonstrate how human authority is re-engaged when predefined thresholds are met.</p>
+
+            <div class="artifact-card">
+                <h4>Escalation &amp; Human Oversight Flow</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Shows how AI systems hand off to human authority when escalation thresholds are met.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Non-clinical, governance reference.</p>
+                <p class="artifact-meta"><strong>Applicable to:</strong> Phase I (non-clinical) | Phase II (clinician-supervised)</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Escalation does not include recommendations or autonomous decisions.</p>
+                <a href="/standards/Accountability_and_Escalation_Framework_v1.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Escalation Flow'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <div class="artifact-card">
+                <h4>Escalation Threshold Definition (Illustrative)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Defines conditions under which human authority is engaged.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Phase-agnostic governance construct.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Thresholds are conservative and do not rely on clinical inference.</p>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #64748b;">What these artifacts show: That AI does not decide what to do next &mdash; it only hands off to a human authority.</p>
+        </div>
+
+        <!-- SECTION 4: AUDIT & TRACEABILITY ARTIFACTS -->
+        <div class="section-group">
+            <h3>4. Audit &amp; Traceability Artifacts</h3>
+            <p class="section-purpose">Purpose: To demonstrate that system behavior can be reconstructed, reviewed, and attributed.</p>
+
+            <div class="artifact-card">
+                <h4>Sample Audit Log (Redacted)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Demonstrates immutable recording of halt-and-redirect events, escalations, and system actions.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Illustrative governance evidence.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Redacted to remove all personal and identifiable information.</p>
+                <p class="artifact-meta"><strong>Fields include:</strong> Session ID, Timestamp, Event Type, Boundary Class, User Prompt (redacted), System Response, Escalation Status, Consent Gate, Authority State, <strong style="color: #d4a04a;">Kill-Switch Verified: Active</strong></p>
+            </div>
+
+            <div class="artifact-card">
+                <h4>Governance Event Timeline Example</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Shows traceability from user request through refusal or escalation to human action.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Audit and accountability reference.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Illustrative only; not a regulatory artifact.</p>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #64748b;">What these artifacts show: That accountability is provable after the fact, supporting quality management and regulatory review where applicable.</p>
+        </div>
+
+        <!-- SECTION 5: IMPLEMENTATION REFERENCE -->
+        <div class="section-group">
+            <h3>5. Implementation Reference (Non-Product)</h3>
+            <p class="section-purpose">Purpose: To show that governance constructs are technically implementable without implying a specific product or commercial offering.</p>
+
+            <div class="artifact-card">
+                <h4>Safety OS Governance Architecture (Detailed)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Illustrates how authority, enforcement, and auditability are implemented as system infrastructure.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Non-product architecture reference.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Does not imply autonomous clinical decision-making or regulatory clearance.</p>
+                <a href="/assets/SafetyOS-EXTENDEDAGovernedAIExecutionModel-2.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Safety OS Architecture Detailed'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <div class="artifact-card">
+                <h4>Safety OS Authority Flow (Conceptual)</h4>
+                <p class="artifact-meta"><strong>Purpose:</strong> Shows separation of human authority from AI execution.</p>
+                <p class="artifact-meta"><strong>Context:</strong> Conceptual governance model.</p>
+                <p class="artifact-meta"><strong>Notes:</strong> Diagram is illustrative and phase-independent.</p>
+                <a href="/assets/FromDesignThinkingtoGovernedAIExecution-v3.pdf" class="artifact-link" onclick="gtag('event', 'pdf_download', {'event_category': 'Evidence', 'event_label': 'Safety OS Authority Flow'});">&#8595; View Artifact (PDF)</a>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #64748b;">What these artifacts show: That governance is enforced by system design, not policy documents or post-hoc review.</p>
+        </div>
+
+        <!-- ARTIFACT PRESENTATION TEMPLATE -->
+        <section>
+            <h2>Artifact Presentation Template (Normative)</h2>
+            <p>Each artifact in this library follows the same structure:</p>
+            <ul>
+                <li><strong>Title</strong> &mdash; Concise, descriptive, non-promotional</li>
+                <li><strong>Purpose</strong> &mdash; What governance control this artifact illustrates</li>
+                <li><strong>Context</strong> &mdash; Deployment context (non-clinical / illustrative / phase-agnostic)</li>
+                <li><strong>Notes</strong> &mdash; Redaction status, limitations, and non-claim statement</li>
+            </ul>
+        </section>
+
+        <!-- RELATIONSHIP TO OTHER FRAMEWORKS -->
+        <section>
+            <h2>Relationship to Other Frameworks</h2>
+            <ul>
+                <li><a href="/standards/hybrid-human-agent-operating-standard" style="color: #0f4c5c;"><strong>Hybrid Human&ndash;Agent Operating Standard</strong></a> &mdash; Defines the governance constructs and terminology</li>
+                <li><a href="/clinical-ai-governance" style="color: #0f4c5c;"><strong>Clinical AI Governance Framework</strong></a> &mdash; Explains why governance must precede autonomy</li>
+                <li><a href="/physician-as-pilot" style="color: #0f4c5c;"><strong>Physician-as-Pilot Model</strong></a> &mdash; Describes how clinical authority is retained while AI executes</li>
+            </ul>
+            <p>This Evidence Library provides illustrative support, not definitions or claims.</p>
+        </section>
+
+        <!-- REGULATORY CONTEXT -->
+        <section>
+            <h2>Regulatory Context (Non-Claim)</h2>
+            <div class="disclaimer">
+                The artifacts on this page are aligned with governance expectations commonly associated with regulated software as a medical device (SaMD), such as traceability, human authorization, and auditability. References to FDA, EU MDR, ISO, or other regulatory frameworks are contextual only and do not imply approval, clearance, certification, or endorsement of any system.
+            </div>
+        </section>
+
+        <!-- INVARIANT -->
+        <section>
+            <p class="thesis-statement">Invariant: Clinical authority is never delegated to AI.</p>
+            <p>All artifacts on this page reflect that invariant, regardless of deployment context or future capability expansion.</p>
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="page-nav">
+            <a href="/standards/hybrid-human-agent-operating-standard">&larr; Back to Hybrid Human&ndash;Agent Operating Standard</a>
+            <a href="/clinical-ai-governance">Explore Clinical AI Governance &rarr;</a>
+            <a href="/physician-as-pilot">See Physician-as-Pilot Operating Model &rarr;</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p class="footer-brand">PatientCentricCare.AI</p>
+        <p>Safety OS™ — Governance infrastructure for AI in the home.</p>
+        <p style="margin-top: 0.75rem;"><a href="mailto:andy@patientcentriccare.ai">andy@patientcentriccare.ai</a></p>
+        <p style="margin-top: 0.75rem; font-size: 0.75rem;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

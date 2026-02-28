@@ -1,0 +1,322 @@
+/* Audience-Specific CTAs - Original Design Recreation */
+/* Professional, modern design with color gradients and hover effects */
+
+.audience-ctas-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.audience-ctas-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e9ecef" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.audience-ctas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.ctas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.cta-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transition: all 0.4s ease;
+}
+
+.cta-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Card-specific gradients and colors */
+.robotics-card::before {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.robotics-card:hover {
+    border-color: #667eea;
+}
+
+.healthcare-card::before {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.healthcare-card:hover {
+    border-color: #f5576c;
+}
+
+.investors-card::before {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.investors-card:hover {
+    border-color: #4facfe;
+}
+
+.patients-card::before {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.patients-card:hover {
+    border-color: #43e97b;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    filter: grayscale(0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-card:hover .card-icon {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+.cta-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cta-card p {
+    color: #6c757d;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.benefits-list li {
+    padding: 8px 0;
+    color: #495057;
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.95rem;
+}
+
+.benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.robotics-card .cta-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.healthcare-card .cta-button {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.investors-card .cta-button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.patients-card .cta-button {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .audience-ctas-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .ctas-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+    
+    .cta-card {
+        padding: 30px 25px;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .audience-ctas-container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-card {
+        padding: 25px 20px;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.cta-card:nth-child(1) { animation-delay: 0.1s; }
+.cta-card:nth-child(2) { animation-delay: 0.2s; }
+.cta-card:nth-child(3) { animation-delay: 0.3s; }
+.cta-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Accessibility improvements */
+.cta-button:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.5);
+    outline-offset: 2px;
+}
+
+.cta-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .cta-card {
+        border: 2px solid #000;
+    }
+    
+    .section-title {
+        -webkit-text-fill-color: #000;
+        color: #000;
+    }
+}
+

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Purchase Successful — MyHealthCanvas</title>
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Google Analytics
+      gtag('config', 'G-8XGFG9VW9Z');
+      
+      // Google Ads Account 1
+      gtag('config', 'AW-17939692705');
+      
+      // Google Ads Account 2
+
+      // Dynamic conversion tracking based on plan
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan');
+      
+      if (plan === 'current') {
+        // Current Plan (£9) conversion tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/DBeJCJPqvqQbENHyrZBA',
+          'value': 9.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_CURRENT_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHC_ENH_CURRENT_SUCCESS_' + Date.now(),
+          'value': 9.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_CURRENT',
+            'item_name': 'MyHealthCanvas Current Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 9.00
+          }]
+        });
+      } else if (plan === 'complete') {
+        // Complete Plan (£12) conversion tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/86auCO79yKQbENHyrZBA',
+          'value': 12.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_COMPLETE_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHC_ENH_COMPLETE_SUCCESS_' + Date.now(),
+          'value': 12.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_COMPLETE',
+            'item_name': 'MyHealthCanvas Complete Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 12.00
+          }]
+        });
+      } else {
+        // Fallback generic tracking
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
+          'value': 10.50,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_GENERIC_SUCCESS_' + Date.now()
+        });
+        
+        gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHC_ENH_GENERIC_SUCCESS_' + Date.now(),
+          'value': 10.50,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_FORMS',
+            'item_name': 'MyHealthCanvas Forms',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 10.50
+          }]
+        });
+      }
+    </script>
+
+    <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #155e75 100%);
+        min-height: 100vh;
+        padding-top: 100px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .success-card {
+        background: white;
+        border-radius: 16px;
+        padding: 60px 40px;
+        margin: 60px 0;
+        text-align: center;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      }
+
+      .success-icon {
+        font-size: 4rem;
+        color: #10b981;
+        margin-bottom: 24px;
+      }
+
+      .success-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .success-subtitle {
+        font-size: 1.2rem;
+        color: #6b7280;
+        margin-bottom: 40px;
+      }
+
+      .download-section {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 32px;
+        margin: 32px 0;
+      }
+
+      .download-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .download-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 16px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+
+      .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      }
+
+      .next-steps {
+        text-align: left;
+        margin: 32px 0;
+      }
+
+      .next-steps h3 {
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .step-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        padding: 12px;
+        background: #f9fafb;
+        border-radius: 8px;
+      }
+
+      .step-number {
+        background: #10b981;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      .charity-info {
+        background: #1f2937;
+        color: white;
+        padding: 24px;
+        border-radius: 12px;
+        margin: 32px 0;
+      }
+
+      .charity-info h3 {
+        color: #34d399;
+        margin-bottom: 12px;
+      }
+
+      .home-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .home-button:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #0e7490 0%, #155e75 100%);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding-top: 120px;
+        }
+
+        .success-card {
+          padding: 40px 24px;
+          margin: 40px 0;
+        }
+
+        .success-title {
+          font-size: 2rem;
+        }
+
+        .download-section {
+          padding: 24px;
+        }
+      }
+
+      /* Professional Footer */
+      .professional-footer {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 60px 0 30px 0;
+        margin-top: 80px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        flex: 0 0 200px;
+      }
+
+      .footer-logo-box {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .footer-logo-text {
+        color: #0891b2;
+        font-weight: bold;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .footer-contact {
+        display: flex;
+        gap: 60px;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .contact-icon.email {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      }
+
+      .contact-icon.location {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+
+      .contact-info h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 4px;
+        color: white;
+      }
+
+      .contact-info p {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin: 0;
+      }
+
+      .contact-info a {
+        color: #60a5fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #93c5fd;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Mobile Responsive Footer */
+      @media (max-width: 768px) {
+        .professional-footer {
+          padding: 40px 0 20px 0;
+          margin-top: 60px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        .footer-logo {
+          flex: none;
+        }
+
+        .footer-contact {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .contact-item {
+          justify-content: center;
+        }
+
+        .footer-copyright {
+          font-size: 0.9rem;
+          padding-top: 20px;
+        }
+      }
+    </style>
+  </head>
+	
+  <body>
+    <!-- Phase 2: Patient-Centric Header & Navigation -->
+    <header class="patient-centric-header">
+      <div class="header-container">
+        <a href="index.html" class="patient-centric-logo">
+          ❤️ PATIENT-CENTRIC CARE
+          <div class="patient-centric-tagline">AndySquire.AI</div>
+        </a>
+        
+        <nav class="patient-nav" id="patientNav">
+          <a href="index.html#home" class="nav-item">Home</a>
+          <a href="myhealthcanvas.html" class="nav-item priority">🎯 Forms</a>
+          <a href="index.html#consulting" class="nav-item">Consulting</a>
+          <a href="index.html#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
+          <a href="index.html#collaboration" class="nav-item">Collaboration</a>
+        </nav>
+        
+        <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="success-card">
+        <div class="success-icon">✅</div>
+        <h1 class="success-title">Payment Successful!</h1>
+        <p class="success-subtitle">Thank you for your purchase. Your MyHealthCanvas forms are ready for download.</p>
+
+        <div class="download-section">
+          <h2 class="download-title">Download Your Forms</h2>
+          <div id="download-links">
+            <!-- Download links will be populated by JavaScript based on plan -->
+          </div>
+        </div>
+
+        <div class="next-steps">
+          <h3>Next Steps:</h3>
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div>
+              <strong>Download your PDF forms</strong> using the buttons above. Save them to a secure location on your device.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div>
+              <strong>Open with Adobe Acrobat Reader</strong> (free) and use the "Fill & Sign" feature to complete your forms.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div>
+              <strong>Share with your healthcare team</strong> to improve communication and ensure everyone is on the same page.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div>
+              <strong>Update regularly</strong> to keep your health information current and relevant.
+            </div>
+          </div>
+        </div>
+
+        <div class="charity-info">
+          <h3>🎗️ Supporting Cancer Research</h3>
+          <p>50% of your purchase has been allocated to Cancer Research UK (or ACS for US purchases), directly funding world-class cancer research and patient support programs. Thank you for supporting this vital cause!</p>
+        </div>
+
+        <a href="index.html" class="home-button">Return to Home</a>
+      </div>
+    </main>
+
+    <script>
+      // Track the successful purchase
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
+          'value': 1.0,
+          'currency': 'GBP'
+      });
+      
+      // Enhanced ecommerce tracking
+      gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHS_' + Date.now(),
+          'value': 1.0,
+          'currency': 'GBP',
+          'items': [{
+              'item_id': 'myhealthcanvas_form',
+              'item_name': 'MyHealthCanvas PDF Form',
+              'category': 'Healthcare Tools',
+              'quantity': 1,
+              'price': 1.0
+          }]
+      });
+
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const plan = urlParams.get('plan');
+      const customerName = urlParams.get('name');
+
+      // Update page content based on plan
+      document.addEventListener('DOMContentLoaded', function() {
+        const downloadLinksContainer = document.getElementById('download-links');
+        
+        if (plan === 'current') {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your <strong>MyHealthCanvas Current Plan</strong> is ready:</p>
+            <a href="upload/MyHealthCanvasCURRENTx.pdf" class="download-button" download="MyHealthCanvas-Current-Plan.pdf">
+              📄 Download Current Plan PDF
+            </a>
+          `;
+        } else if (plan === 'complete') {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your <strong>MyHealthCanvas Complete Plan</strong> is ready:</p>
+            <a href="upload/MyHealthCanvasCOMPLETEx.pdf" class="download-button" download="MyHealthCanvas-Complete-Plan.pdf">
+              📄 Download Complete Plan PDF
+            </a>
+          `;
+        } else {
+          downloadLinksContainer.innerHTML = `
+            <p style="margin-bottom: 16px;">Your MyHealthCanvas forms are ready:</p>
+            <a href="upload/MyHealthCanvasCURRENTx.pdf" class="download-button" download="MyHealthCanvas-Current-Plan.pdf">
+              📄 Download Current Plan PDF
+            </a>
+            <a href="upload/MyHealthCanvasCOMPLETEx.pdf" class="download-button" download="MyHealthCanvas-Complete-Plan.pdf">
+              📄 Download Complete Plan PDF
+            </a>
+          `;
+        }
+
+        // Personalize greeting if name is available
+        if (customerName) {
+          const subtitle = document.querySelector('.success-subtitle');
+          subtitle.textContent = `Thank you ${customerName} for your purchase. Your MyHealthCanvas forms are ready for download.`;
+        }
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileNavToggle');
+        const patientNav = document.getElementById('patientNav');
+        
+        if (mobileToggle && patientNav) {
+          mobileToggle.addEventListener('click', function() {
+            patientNav.classList.toggle('active');
+            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
+          });
+        }
+
+        console.log('✅ Success page loaded for plan:', plan);
+      });
+    </script>
+
+    <!-- Professional Footer -->
+    <footer class="professional-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Logo Section -->
+          <div class="footer-logo">
+            <div class="footer-logo-box">
+              <div class="footer-logo-text">
+                <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 20px; height: 20px;">
+                AndySquire.AI
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="footer-contact">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon email">
+                ✉
+              </div>
+              <div class="contact-info">
+                <h3>Email</h3>
+                <p><a href="mailto:Andy@PatientCentricCare.AI">Andy@PatientCentricCare.AI</a></p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon location">
+                📍
+              </div>
+              <div class="contact-info">
+                <h3>Location</h3>
+                <p>Basel, Switzerland</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
+          <br><br>
+          <a href="impressum.html" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Impressum</a> | 
+          <a href="mailto:Andy@PatientCentricCare.AI" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+    _linkedin_partner_id = "8747153";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8747153&fmt=gif" />
+    </noscript>
+    <!-- End LinkedIn Insight Tag -->
+
+  </body>
+</html>
+
