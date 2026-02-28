@@ -110,6 +110,176 @@
   status = 301
   force = true
 
+# Blog redirects - all blog content moved to myhealthcanvas.com/elibrary
+[[redirects]]
+  from = "/blog/"
+  to = "https://myhealthcanvas.com/elibrary"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/index.html"
+  to = "https://myhealthcanvas.com/elibrary"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-small-businesses-save-50k-with-ai-agents"
+  to = "https://myhealthcanvas.com/elibrary/how-small-businesses-save-50k-with-ai-agents"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-small-businesses-save-50k-with-ai-agents.html"
+  to = "https://myhealthcanvas.com/elibrary/how-small-businesses-save-50k-with-ai-agents"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-ai_agent_700_jobs.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-agent-700-jobs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-ai_tools_small_business.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-tools-small-business"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_ai_automation_mistakes.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-automation-mistakes"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_ai_for_restaurants.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-for-restaurants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_ai_ecommerce_automation.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-ecommerce-automation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-humanoid_healthcare_robots.html"
+  to = "https://myhealthcanvas.com/elibrary/humanoid-healthcare-robots"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-ai_clinical_assistants.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-clinical-assistants"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-ai_alzheimers_digital_therapeutics.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-alzheimers-digital-therapeutics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_ai_mental_health_apps.html"
+  to = "https://myhealthcanvas.com/elibrary/ai-mental-health-apps"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_medical_robots.html"
+  to = "https://myhealthcanvas.com/elibrary/medical-robots"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_second_medical_opinion.html"
+  to = "https://myhealthcanvas.com/elibrary/second-medical-opinion"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-curated_wearable_health_tech.html"
+  to = "https://myhealthcanvas.com/elibrary/wearable-health-tech"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-robotic_exoskeletons.html"
+  to = "https://myhealthcanvas.com/elibrary/robotic-exoskeletons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-85-percent-cliff.html"
+  to = "https://myhealthcanvas.com/elibrary/85-percent-cliff"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-deepfake-dilemma.html"
+  to = "https://myhealthcanvas.com/elibrary/deepfake-dilemma"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-frontier-firms.html"
+  to = "https://myhealthcanvas.com/elibrary/frontier-firms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-new-governance-aiitl-vs-hitl"
+  to = "https://myhealthcanvas.com/elibrary/new-governance-aiitl-vs-hitl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-openai-ai-companion.html"
+  to = "https://myhealthcanvas.com/elibrary/openai-ai-companion"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-pharma_digital_revolution.html"
+  to = "https://myhealthcanvas.com/elibrary/pharma-digital-revolution"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-robot_workforce_revolution.html"
+  to = "https://myhealthcanvas.com/elibrary/robot-workforce-revolution"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-robotic_exoskeletons.html"
+  to = "https://myhealthcanvas.com/elibrary/robotic-exoskeletons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/blog-post-trust-algorithm.html"
+  to = "https://myhealthcanvas.com/elibrary/trust-algorithm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the-complete-guide-to-ai-seo"
+  to = "https://myhealthcanvas.com/elibrary"
+  status = 301
+  force = true
+
+# Catch-all for any other /blog/ paths
+[[redirects]]
+  from = "/blog/*"
+  to = "https://myhealthcanvas.com/elibrary"
+  status = 301
+  force = true
+
 # Clean URL rewrites - serve .html files without extension
 [[redirects]]
   from = "/physician-as-pilot"
