@@ -92,8 +92,9 @@
   force = true
 
 [[redirects]]
+  # Redirect old myhealthcanvas page to new dedicated site
   from = "/myhealthcanvas.html"
-  to = "/myhealthcanvas"
+  to = "https://myhealthcanvas.com"
   status = 301
   force = true
 
@@ -152,8 +153,9 @@
 
 [[redirects]]
   from = "/myhealthcanvas"
-  to = "/myhealthcanvas.html"
-  status = 200
+  to = "https://myhealthcanvas.com"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/standards/hybrid-human-agent-operating-standard"
