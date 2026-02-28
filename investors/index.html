@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investor Access | PatientCentricCare.AI</title>
+    <title>Investor Data Room | PatientCentricCare.AI</title>
     <meta name="robots" content="noindex, nofollow">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5&t=1729182000">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=5&t=1729182000">
     
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CNLJJJ8WQ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-6CNLJJJ8WQ');
+      gtag('config', 'G-8XGFG9VW9Z');
       
-      // Track investor portal access
       function trackInvestorLogin() {
         gtag('event', 'investor_portal_login', {
           'event_category': 'Investor',
@@ -31,6 +30,13 @@
           'event_label': action
         });
       }
+      
+      function trackDownload(filename) {
+        gtag('event', 'file_download', {
+          'event_category': 'Investor',
+          'event_label': filename
+        });
+      }
     </script>
     
     <style>
@@ -42,7 +48,7 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -50,12 +56,23 @@
             padding: 20px;
         }
         
+        body.dashboard {
+            background: #f8fafc;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+        
         .container {
             width: 100%;
             max-width: 500px;
         }
         
-        .login-card, .dashboard-card {
+        .hidden {
+            display: none !important;
+        }
+        
+        /* LOGIN SCREEN */
+        .login-card {
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -85,7 +102,7 @@
         }
         
         h1 {
-            color: #1e3a8a;
+            color: #E67E22;
             font-size: 28px;
             font-weight: 700;
             text-align: center;
@@ -93,15 +110,14 @@
         }
         
         .subtitle {
-            color: #64748b;
-            font-size: 16px;
             text-align: center;
-            margin-bottom: 40px;
-            line-height: 1.5;
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 15px;
         }
         
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         label {
@@ -112,32 +128,25 @@
             font-size: 14px;
         }
         
-        input[type="password"],
-        input[type="email"],
-        input[type="text"] {
+        input[type="password"] {
             width: 100%;
-            padding: 14px 18px;
+            padding: 14px 16px;
             border: 2px solid #e2e8f0;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 15px;
             transition: all 0.3s ease;
-            background: #f8fafc;
-            box-sizing: border-box;
         }
         
-        input[type="password"]:focus,
-        input[type="email"]:focus,
-        input[type="text"]:focus {
+        input[type="password"]:focus {
             outline: none;
-            border-color: #1e3a8a;
-            background: white;
-            box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+            border-color: #E67E22;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
         }
         
         .btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
             color: white;
             border: none;
             border-radius: 10px;
@@ -145,27 +154,21 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
         }
         
         .error-message {
             background: #fee2e2;
-            color: #991b1b;
+            color: #dc2626;
             padding: 12px 16px;
             border-radius: 8px;
             margin-bottom: 20px;
             font-size: 14px;
             display: none;
-            border-left: 4px solid #dc2626;
         }
         
         .error-message.show {
@@ -179,292 +182,301 @@
             75% { transform: translateX(10px); }
         }
         
-        .hidden {
-            display: none !important;
-        }
-        
-        /* Dashboard Styles */
-        body.dashboard {
-            background: #f1f5f9;
-        }
-        
+        /* DASHBOARD SCREEN */
         .dashboard-container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 20px;
         }
         
         .dashboard-header {
             background: white;
-            border-radius: 20px;
-            padding: 30px 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 32px 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
+            border-left: 4px solid #E67E22;
         }
         
         .dashboard-header h1 {
             text-align: left;
             margin: 0;
             font-size: 32px;
+            font-weight: 800;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .header-icon {
+            font-size: 28px;
+        }
+        
+        .header-subtitle {
+            color: #64748b;
+            font-size: 15px;
+            margin-top: 6px;
+            font-weight: 400;
         }
         
         .logout-btn {
-            padding: 12px 24px;
+            padding: 12px 28px;
             background: #ef4444;
             color: white;
             border: none;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-size: 14px;
         }
         
         .logout-btn:hover {
             background: #dc2626;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
         }
         
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
         }
         
+        /* PREMIUM CARD DESIGN */
         .dashboard-card {
             background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            animation: none;
+            border: 1px solid #E2E8F0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #369994 0%, #007699 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .dashboard-card:hover::before {
+            transform: scaleX(1);
         }
         
         .dashboard-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #fea821;
         }
         
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            border-radius: 15px;
+        /* CARD HEADER GRADIENT */
+        .card-header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: linear-gradient(180deg, rgba(54, 153, 148, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 16px 16px 0 0;
+            pointer-events: none;
+        }
+        
+        /* CARD NUMBER BADGE */
+        .card-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #64748b;
+        }
+        
+        /* PREMIUM DUOTONE ICONS */
+        .card-icon-wrapper {
+            width: 72px;
+            height: 72px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-icon-wrapper svg {
+            width: 100%;
+            height: 100%;
         }
         
         .dashboard-card h2 {
-            color: #1e3a8a;
-            font-size: 24px;
-            margin-bottom: 15px;
+            color: #1e293b;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        
+        .dashboard-card h3 {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.4;
         }
         
         .dashboard-card p {
             color: #64748b;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
+            font-size: 14px;
         }
         
-        .card-link {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #1e3a8a;
+        /* FILE LIST STYLING */
+        .download-list {
+            list-style: none;
+            margin-bottom: 0;
+        }
+        
+        .download-list li {
+            margin-bottom: 10px;
+        }
+        
+        .download-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .download-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #E0F2F1 0%, #CFD8DC 100%);
+            border: 1px solid #B2DFDB;
+        }
+        
+        .download-link:hover {
+            background: linear-gradient(135deg, #B2DFDB 0%, #90A4AE 100%);
+            border-color: #369994;
+            color: #1e293b;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(54, 153, 148, 0.15);
+        }
+        
+        .file-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .download-arrow {
+            margin-left: auto;
+            color: #94a3b8;
+            font-size: 16px;
+        }
+        
+        .download-link:hover .download-arrow {
+            color: #369994;
+        }
+        
+        /* CARD ACTION BUTTON */
+        .card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #E67E22 0%, #D35400 100%);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-size: 14px;
+            border: none;
+            cursor: pointer;
         }
         
-        .card-link:hover {
-            background: #3b82f6;
-            transform: translateX(5px);
+        .card-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(230, 126, 34, 0.3);
         }
         
-        .card-link.disabled {
-            background: #cbd5e1;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-        
-        .coming-soon {
-            display: inline-block;
-            background: #fbbf24;
-            color: #78350f;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-        
+        /* FOOTER */
         .footer {
             text-align: center;
             color: #64748b;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-        
-        /* Modal Styles */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            padding: 20px;
-            backdrop-filter: blur(5px);
-        }
-        
-        .modal.hidden {
-            display: none;
-        }
-        
-        .modal-content {
+            margin-top: 60px;
+            font-size: 13px;
             background: white;
-            border-radius: 20px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.3s ease-out;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
-        .modal-header {
-            padding: 30px 30px 20px;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .footer p {
+            margin: 6px 0;
         }
         
-        .modal-header h2 {
-            color: #1e3a8a;
-            font-size: 24px;
-            margin: 0;
-        }
-        
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 32px;
-            color: #64748b;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .modal-close:hover {
-            background: #f1f5f9;
-            color: #1e3a8a;
-        }
-        
-        .modal-body {
-            padding: 30px;
-        }
-        
-        .modal-body p {
-            color: #64748b;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        
-        .modal-submit {
-            width: 100%;
-            padding: 14px;
-            background: #1e3a8a;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
+        .footer a {
+            color: #E67E22;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
         
-        .modal-submit:hover {
-            background: #3b82f6;
-            transform: translateY(-2px);
-        }
-        
-        .success-message {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .success-message.hidden {
-            display: none;
-        }
-        
-        .success-icon {
-            width: 60px;
-            height: 60px;
-            background: #10b981;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            margin: 0 auto 20px;
-            font-weight: bold;
-        }
-        
-        .success-message p {
-            color: #10b981;
-            font-weight: 600;
-            margin: 0;
+        .footer a:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
-            .login-card, .dashboard-card {
-                padding: 30px 25px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            .dashboard-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .dashboard-header h1 {
-                text-align: center;
-            }
-            
             .dashboard-grid {
                 grid-template-columns: 1fr;
             }
             
-            .modal-content {
-                margin: 20px;
+            .dashboard-header {
+                text-align: center;
+                padding: 24px;
             }
             
-            .modal-header, .modal-body {
-                padding: 20px;
+            .dashboard-header h1 {
+                text-align: center;
+                font-size: 24px;
+                justify-content: center;
+            }
+            
+            .card-number {
+                top: 16px;
+                right: 16px;
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+            
+            .dashboard-card {
+                padding: 28px;
+                border-left: 4px solid #fea821;
             }
         }
     </style>
@@ -477,25 +489,24 @@
                 <img src="PatientCentricCareLogo.png" alt="PatientCentricCare.AI">
             </div>
             
-            <h1>Investor Access</h1>
-            <p class="subtitle">Email <a href="mailto:Andy@PatientCentricCare.AI" style="color: #E67E22; text-decoration: none; font-weight: 600;">Andy@PatientCentricCare.AI</a> for the Access Code</p>
+            <h1>🔒 Investor Data Room</h1>
+            <p class="subtitle">Enter password to access confidential investor materials</p>
             
             <div id="errorMessage" class="error-message">
-                Invalid Access Code. Please check your email and try again.
+                Incorrect password. Please try again.
             </div>
             
-            <form id="loginForm">
+            <form id="loginForm" onsubmit="handleLogin(event)">
                 <div class="form-group">
-                    <label for="email">Email Address (Optional)</label>
-                    <input type="email" id="email" placeholder="investor@example.com">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required autofocus>
                 </div>
                 
-                <div class="form-group">
-                    <label for="password">Access Code</label>
-                    <input type="password" id="password" placeholder="Enter your access code" required>
-                </div>
+                <p style="text-align: center; margin: 1rem 0; font-size: 0.9rem; color: #666;">
+                    Contact Founder at <a href="mailto:Andy@PatientCentricCare.AI" style="color: #E67E22; text-decoration: none;">Andy@PatientCentricCare.AI</a> for the Password
+                </p>
                 
-                <button type="submit" class="btn">Access Portal</button>
+                <button type="submit" class="btn">Access Data Room</button>
             </form>
         </div>
     </div>
@@ -504,86 +515,248 @@
     <div id="dashboardScreen" class="hidden">
         <div class="dashboard-container">
             <div class="dashboard-header">
-                <h1>Investor Data Room</h1>
+                <div>
+                    <h1><span class="header-icon">📁</span> Investor Data Room</h1>
+                    <p class="header-subtitle">Complete due diligence materials for PatientCentricCare.AI</p>
+                </div>
                 <button onclick="logout()" class="logout-btn">Logout</button>
             </div>
             
             <div class="dashboard-grid">
-                <!-- Card 1: The $1 Trillion Thesis -->
+                <!-- Card 01: THE STRATEGY -->
                 <div class="dashboard-card">
-                    <div class="card-icon">📊</div>
-                    <h2>The $1 Trillion Thesis</h2>
-                    <p>Our comprehensive investment thesis covering market opportunity, competitive landscape, and growth strategy in the humanoid healthcare robotics space.</p>
-                    <a href="investors/The-1-Trillion-Thesis.pdf" target="_blank" onclick="trackDownload('thesis')" class="card-link">
-                        View Thesis
-                    </a>
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">01</div>
+                    <div class="card-icon-wrapper">
+                        <!-- Compass Icon (Duotone: Teal + Slate) -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer compass ring -->
+                            <circle cx="32" cy="32" r="26" stroke="#369994" stroke-width="2" fill="none"/>
+                            <circle cx="32" cy="32" r="22" stroke="#369994" stroke-width="1" fill="none" opacity="0.4"/>
+                            <!-- Cardinal directions -->
+                            <text x="32" y="12" text-anchor="middle" fill="#369994" font-size="8" font-weight="bold">N</text>
+                            <text x="52" y="35" text-anchor="middle" fill="#369994" font-size="8" font-weight="bold">E</text>
+                            <text x="32" y="56" text-anchor="middle" fill="#369994" font-size="8" font-weight="bold">S</text>
+                            <text x="12" y="35" text-anchor="middle" fill="#369994" font-size="8" font-weight="bold">W</text>
+                            <!-- Compass needle (pointing NE for strategy/direction) -->
+                            <path d="M32 32 L32 16 L36 28 Z" fill="#007699"/>
+                            <path d="M32 32 L32 48 L28 36 Z" fill="#369994" opacity="0.6"/>
+                            <!-- Center point -->
+                            <circle cx="32" cy="32" r="3" fill="#007699"/>
+                            <circle cx="32" cy="32" r="1.5" fill="white"/>
+                        </svg>
+                    </div>
+                    <h2>The Strategy</h2>
+                    <h3>$1 Trillion Thesis & US-First Advantage</h3>
+                    <p>Comprehensive investment thesis, market analysis, and strategic vision for humanoid healthcare robotics.</p>
+                    
+                    <!-- Video Links -->
+                    <div style="margin: 1.5rem 0;">
+                        <a href="https://www.youtube.com/watch?v=RkQcJDRVj-o" target="_blank" onclick="trackDownload('Full-Investment-Thesis-Video')" class="download-link" style="background: linear-gradient(135deg, #E67E22 0%, #D35400 100%); color: white; margin-bottom: 0.75rem;">
+                            <span class="file-icon">📹</span>
+                            <span>Watch: Full Investment Thesis (14 min)</span>
+                            <span class="download-arrow">→</span>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7384621233084035072?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAGo68wBF2bxElYsx-pmIr6uwxY1jU-u4I0" target="_blank" onclick="trackDownload('Market-Overview-Video')" class="download-link" style="background: linear-gradient(135deg, #0077B5 0%, #005582 100%); color: white;">
+                            <span class="file-icon">📹</span>
+                            <span>Watch: Market Overview (1 min)</span>
+                            <span class="download-arrow">→</span>
+                        </a>
+                    </div>
+                    
+                    <ul class="download-list">
+                        <li>
+                            <a href="The-1-Trillion-Thesis.pdf" target="_blank" onclick="trackDownload('Trillion-Thesis')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>Investor Memorandum (Confidential).pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="InvestorDeck3.1_USAdvantage.pdf" target="_blank" onclick="trackDownload('Investor-Deck')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>Investor Deck v3.1 (US Advantage + HMS).pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Card 2: Regulatory Roadmap -->
+                <!-- Card 02: THE FINANCIALS -->
                 <div class="dashboard-card">
-                    <div class="card-icon">🗺️</div>
-                    <h2>Regulatory Roadmap (US-First)</h2>
-                    <p>Detailed timeline and milestones for FDA Q-Submission and Class II SaMD certification. Our path to market compliance and commercialization.</p>
-                    <a href="investors/US-First-Regulatory-Roadmap.pdf" target="_blank" onclick="trackInvestorAction('download_roadmap');" class="card-link">
-                        View Roadmap
-                    </a>
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">02</div>
+                    <div class="card-icon-wrapper">
+                        <!-- Bar Chart Icon (Duotone: Teal + Slate) -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="36" width="10" height="20" rx="2" fill="#369994"/>
+                            <rect x="27" y="24" width="10" height="32" rx="2" fill="#007699"/>
+                            <rect x="42" y="12" width="10" height="44" rx="2" fill="#369994"/>
+                            <path d="M8 58H56" stroke="#007699" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2>The Financials</h2>
+                    <h3>Forecasts, Unit Economics & 2041 Upside</h3>
+                    <p>Detailed financial models, revenue projections, and unit economics for basecase and upside scenarios.</p>
+                    <ul class="download-list">
+                        <li>
+                            <a href="https://docs.google.com/spreadsheets/d/1_yOAgBTXStmpt6FSmDnbeS82nZJHuj2iWzSdpZH212s/edit?gid=578188945#gid=578188945" target="_blank" onclick="trackDownload('Financial-Model')" class="download-link">
+                                <span class="file-icon">📊</span>
+                                <span>HHC Financial Model 3.0 (G Sheet)</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="HHCFinancialNarrativeSummary.pdf" target="_blank" onclick="trackDownload('Financial-Narrative')" class="download-link">
+                                <span class="file-icon">📈</span>
+                                <span>HHC Financial Narrative Summary.pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Card 3: Data Room -->
+                <!-- Card 03: THE TECHNOLOGY -->
                 <div class="dashboard-card">
-                    <div class="card-icon">📁</div>
-                    <h2>Data Room</h2>
-                    <p>Access pitch deck, financial projections, technical specifications, team bios, and all due diligence materials.</p>
-                    <a href="#" onclick="showNotifyModal('dataroom', 'Data Room'); return false;" class="card-link">
-                        Open Data Room <span class="coming-soon">Coming Soon</span>
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">03</div>
+                    <div class="card-icon-wrapper">
+                        <!-- Cloud Shield Icon (Duotone: Teal + Slate) -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M48 32C48 28.6863 45.3137 26 42 26C41.3938 26 40.8089 26.0922 40.2605 26.2646C39.0978 21.4958 34.9356 18 30 18C24.4772 18 20 22.4772 20 28C20 28.3407 20.0158 28.6776 20.0467 29.0098C17.2514 29.5566 15 31.9929 15 35C15 38.3137 17.6863 41 21 41H43C46.3137 41 49 38.3137 49 35C49 33.3431 48.3284 31.8439 47.2426 30.7574" fill="#369994"/>
+                            <path d="M32 28L32 48M32 28L28 32M32 28L36 32" stroke="#007699" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26 48H38C39.1046 48 40 48.8954 40 50V54C40 55.1046 39.1046 56 38 56H26C24.8954 56 24 55.1046 24 54V50C24 48.8954 24.8954 48 26 48Z" fill="#007699"/>
+                        </svg>
+                    </div>
+                    <h2>The Technology</h2>
+                    <h3>EHR-Native Architecture & Safety OS Specs</h3>
+                    <p>Technical architecture, Safety OS™ specifications, and EHR integration strategy.</p>
+                    <ul class="download-list">
+                        <li>
+                            <a href="../HumanoidHealthcareEcosystemBlueprint.pdf" target="_blank" onclick="trackDownload('Architecture-Blueprint')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>EHR Architecture Blueprint (Epic Integration).pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="HHCTechnicalSpec&SaMD-ISOCompliance.pdf" target="_blank" onclick="trackDownload('Technical-Spec')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>HHC Technical Spec & SaMD-ISO Compliance.pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card 04: THE REGULATORY MAP -->
+                <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">04</div>
+                    <div class="card-icon-wrapper">
+                        <!-- Government Building Icon (Duotone: Teal + Slate) -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 8L8 20V26H56V20L32 8Z" fill="#369994"/>
+                            <rect x="12" y="26" width="8" height="24" fill="#007699"/>
+                            <rect x="24" y="26" width="8" height="24" fill="#369994"/>
+                            <rect x="36" y="26" width="8" height="24" fill="#007699"/>
+                            <rect x="48" y="26" width="8" height="24" fill="#369994"/>
+                            <rect x="6" y="50" width="52" height="6" rx="1" fill="#007699"/>
+                        </svg>
+                    </div>
+                    <h2>The Regulatory Map</h2>
+                    <h3>FDA 510(k) Pathway & Risk Mitigation</h3>
+                    <p>FDA SaMD certification strategy, timeline, and detailed Gantt chart for market entry.</p>
+                    <ul class="download-list">
+                        <li>
+                            <a href="US-First-Regulatory-Roadmap.pdf" target="_blank" onclick="trackDownload('Regulatory-Roadmap')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>Regulatory Strategy Brief (US-First).pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="HHC_Detailed_Regulatory_Path_Gantt_Chart.pdf" target="_blank" onclick="trackDownload('Gantt-Chart')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>HHC Detailed Regulatory Path & Gantt Chart.pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card 05: THE TEAM -->
+                <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">05</div>
+                    <div class="card-icon-wrapper">
+                        <!-- User Badge Icon (Duotone: Teal + Slate) -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="22" r="10" fill="#369994"/>
+                            <path d="M16 52C16 42.0589 24.0589 34 34 34H30C20.0589 34 12 42.0589 12 52V56H52V52C52 42.0589 43.9411 34 34 34H30C39.9411 34 48 42.0589 48 52V56" fill="#007699"/>
+                            <path d="M44 18L48 22L56 14" stroke="#369994" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2>The Team</h2>
+                    <h3>35-Year Architect & Operational Governance</h3>
+                    
+                    <!-- Harvard Medical School Partnership Badge -->
+                    <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #E67E22; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <p style="font-size: 1rem; color: #2C3E50; margin-bottom: 1rem; line-height: 1.5; font-weight: 600;">
+                            🎓 Partnering with Harvard Medical School on 'AI in Healthcare' program
+                        </p>
+                        <div style="text-align: center;">
+                            <img src="harvard-medical-school-logo.png" alt="Harvard Medical School Partnership" style="max-width: 300px; width: 90%; height: auto;">
+                        </div>
+                    </div>
+                    
+                    <p>Background, credentials, and expertise of Andy Squire — 35-year healthcare veteran and AI architect.</p>
+                    <ul class="download-list">
+                        <li>
+                            <a href="FounderProfile-AndySquire.pdf" target="_blank" onclick="trackDownload('Founder-Profile')" class="download-link">
+                                <span class="file-icon">📄</span>
+                                <span>Founder Profile: Andy Squire.pdf</span>
+                                <span class="download-arrow">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Card 06: NEXT STEPS -->
+                <div class="dashboard-card">
+                    <div class="card-header-bg"></div>
+                    <div class="card-number">06</div>
+                    <div class="card-icon-wrapper">
+                        <!-- Stairs Icon (Duotone: Teal + Slate) - Upward Progress -->
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Stairs going upward (5 steps) -->
+                            <rect x="10" y="48" width="16" height="6" rx="1" fill="#369994"/>
+                            <rect x="18" y="38" width="16" height="6" rx="1" fill="#369994" opacity="0.9"/>
+                            <rect x="26" y="28" width="16" height="6" rx="1" fill="#007699" opacity="0.8"/>
+                            <rect x="34" y="18" width="16" height="6" rx="1" fill="#007699" opacity="0.9"/>
+                            <rect x="42" y="8" width="16" height="6" rx="1" fill="#007699"/>
+                        </svg>
+                    </div>
+                    <h2>Next Steps</h2>
+                    <h3>Partnering for the Future</h3>
+                    <p>Ready to discuss the opportunity? Book a call with Andy Squire to explore partnership and investment details.</p>
+                    <a href="mailto:Andy@PatientCentricCare.AI?subject=Investor%20Call%20Request" onclick="trackInvestorAction('contact_founder')" class="card-action">
+                        📅 Email Andy Squire
                     </a>
                 </div>
             </div>
             
             <div class="footer">
-                <p><strong>Confidential Information</strong> — For Authorized Investors Only</p>
-                <p>© 2025 PatientCentricCare.AI. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Notify Me Modal -->
-    <div id="notifyModal" class="modal hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Get Notified</h2>
-                <button onclick="closeNotifyModal()" class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p id="modalMessage">We're finalizing this document. Enter your email to be notified when it's ready.</p>
-                <form id="notifyForm" name="investor-notify" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="investor-notify">
-                    <input type="hidden" name="bot-field">
-                    <input type="hidden" id="documentType" name="document" value="">
-                    
-                    <div class="form-group">
-                        <label for="notifyEmail">Email Address</label>
-                        <input type="email" id="notifyEmail" name="email" placeholder="investor@example.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="notifyName">Name (Optional)</label>
-                        <input type="text" id="notifyName" name="name" placeholder="Your name">
-                    </div>
-                    
-                    <button type="submit" class="modal-submit">Notify Me When Ready</button>
-                </form>
-                <div id="notifySuccess" class="success-message hidden">
-                    <div class="success-icon">✓</div>
-                    <p>Thank you! We'll notify you when this document is ready.</p>
-                </div>
+                <p><strong>⚠️ Confidential Information</strong> — For Authorized Investors Only</p>
+                <p>© 2026 PatientCentricCare.AI. All rights reserved.</p>
+                <p style="margin-top: 15px; font-size: 12px;">Questions? Contact <a href="mailto:Andy@PatientCentricCare.AI">Andy@PatientCentricCare.AI</a></p>
             </div>
         </div>
     </div>
     
     <script>
-        // Password validation (server-side via Netlify Edge Function)
-        // Password is stored securely in Netlify environment variable
+        // Password validation
+        const CORRECT_PASSWORD = 'HumanoidHealthcare2025';
         
         // Session management
         const SESSION_KEY = 'investor_auth';
@@ -600,18 +773,34 @@
                 const sessionData = JSON.parse(session);
                 const now = new Date().getTime();
                 
-                if (now < sessionData.expiry) {
+                if (now - sessionData.timestamp < SESSION_DURATION) {
                     showDashboard();
                     return;
+                } else {
+                    localStorage.removeItem(SESSION_KEY);
                 }
             }
-            showLogin();
         }
         
-        function showLogin() {
-            document.getElementById('loginScreen').classList.remove('hidden');
-            document.getElementById('dashboardScreen').classList.add('hidden');
-            document.body.classList.remove('dashboard');
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (password === CORRECT_PASSWORD) {
+                const sessionData = {
+                    timestamp: new Date().getTime()
+                };
+                localStorage.setItem(SESSION_KEY, JSON.stringify(sessionData));
+                trackInvestorLogin();
+                showDashboard();
+            } else {
+                errorMessage.classList.add('show');
+                setTimeout(() => {
+                    errorMessage.classList.remove('show');
+                }, 3000);
+            }
         }
         
         function showDashboard() {
@@ -620,146 +809,14 @@
             document.body.classList.add('dashboard');
         }
         
-        // Login form handler
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const password = document.getElementById('password').value;
-            const email = document.getElementById('email').value;
-            const errorMessage = document.getElementById('errorMessage');
-            
-            // Validate password via server-side API
-            const response = await fetch('/api/validate-password', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ password: password })
-            });
-            
-            const result = await response.json();
-            
-            if (result.valid) {
-                // Create session
-                const expiry = new Date().getTime() + SESSION_DURATION;
-                const sessionData = {
-                    email: email,
-                    loginTime: new Date().toISOString(),
-                    expiry: expiry
-                };
-                localStorage.setItem(SESSION_KEY, JSON.stringify(sessionData));
-                
-                // Track login
-                trackInvestorLogin();
-                
-                // Log to tracking sheet (if email provided)
-                if (email) {
-                    logInvestorAccess(email);
-                }
-                
-                // Show dashboard
-                showDashboard();
-                
-                // Clear form
-                document.getElementById('password').value = '';
-                errorMessage.classList.remove('show');
-            } else {
-                // Show error
-                errorMessage.classList.add('show');
-                document.getElementById('password').value = '';
-                document.getElementById('password').focus();
-            }
-        });
-        
         function logout() {
             localStorage.removeItem(SESSION_KEY);
-            showLogin();
+            document.getElementById('dashboardScreen').classList.add('hidden');
+            document.getElementById('loginScreen').classList.remove('hidden');
+            document.body.classList.remove('dashboard');
+            document.getElementById('password').value = '';
+            trackInvestorAction('logout');
         }
-        
-        function trackAndOpen(section) {
-            trackInvestorAction(section);
-            // Open link logic here
-        }
-        
-        function logInvestorAccess(email) {
-            // This will be connected to Google Sheets via Netlify Function
-            // For now, just log to console
-            console.log('Investor access logged:', {
-                email: email,
-                timestamp: new Date().toISOString(),
-                userAgent: navigator.userAgent
-            });
-            
-            // TODO: Send to Google Sheets API or Netlify Function
-        }
-        
-        // Notify Me Modal Functions
-        function showNotifyModal(documentType, documentName) {
-            document.getElementById('documentType').value = documentType;
-            document.getElementById('modalMessage').textContent = `We're finalizing "${documentName}". Enter your email to be notified when it's ready.`;
-            document.getElementById('notifyModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            
-            // Track interest
-            trackInvestorAction(`interest_${documentType}`);
-        }
-        
-        function closeNotifyModal() {
-            document.getElementById('notifyModal').classList.add('hidden');
-            document.body.style.overflow = '';
-            
-            // Reset form
-            document.getElementById('notifyForm').reset();
-            document.getElementById('notifySuccess').classList.add('hidden');
-            document.getElementById('notifyForm').classList.remove('hidden');
-        }
-        
-        // Handle notify form submission
-        document.getElementById('notifyForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            
-            // Ensure form-name is included (required by Netlify)
-            if (!formData.has('form-name')) {
-                formData.append('form-name', 'investor-notify');
-            }
-            
-            try {
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
-                });
-                
-                // Netlify returns 200 for successful form submission
-                if (response.ok || response.status === 200) {
-                    // Show success message
-                    document.getElementById('notifyForm').classList.add('hidden');
-                    document.getElementById('notifySuccess').classList.remove('hidden');
-                    
-                    // Track notification signup
-                    trackInvestorAction(`notify_signup_${formData.get('document')}`);
-                    
-                    // Close modal after 2 seconds
-                    setTimeout(closeNotifyModal, 2000);
-                } else {
-                    console.error('Form submission failed:', response.status, response.statusText);
-                    alert('There was an error. Please try again.');
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                alert('There was an error. Please try again.');
-            }
-        });
-        
-        // Close modal when clicking outside
-        document.getElementById('notifyModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeNotifyModal();
-            }
-        });
     </script>
 </body>
 </html>
-

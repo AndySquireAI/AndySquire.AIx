@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traction & Momentum | PatientCentricCare.AI</title>
+    <meta name="description" content="Building PatientCentricCare.AI through disciplined, evidence-driven approach with clinical collaborators and research partners.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/traction.html">
+    <meta property="og:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="og:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
+    <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.patientcentriccare.ai/traction.html">
+    <meta property="twitter:title" content="Traction & Momentum | PatientCentricCare.AI">
+    <meta property="twitter:description" content="Evidence-driven progress across governance, clinical alignment, and strategic partnerships.">
+    <meta property="twitter:image" content="https://www.patientcentriccare.ai/og-image-optimized.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #0d9488;
+        }
+
+        .nav-links .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: #d4911f;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0d9488;
+        }
+
+        .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white !important;
+        }
+
+        .nav-contact:hover {
+            background: #d4911f;
+            color: white !important;
+        }
+
+        /* Company Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: #0d9488;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s;
+            list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .nav-dropdown-menu li {
+            padding: 0;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0d9488;
+        }
+
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+
+            /* Mobile dropdown */
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                box-shadow: none;
+                background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem;
+                display: none;
+            }
+
+            .nav-dropdown.active .nav-dropdown-menu {
+                display: block;
+            }
+
+            .nav-dropdown-toggle {
+                display: block;
+                padding: 0.5rem 0;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #e2e8f0;
+        }
+
+        .hero-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            margin-top: 1.5rem;
+        }
+
+        /* Main Content */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            border-left: 6px solid #0d9488;
+            padding-left: 1.5rem;
+            padding-bottom: 0.5rem;
+            background: linear-gradient(90deg, rgba(13,148,136,0.05) 0%, rgba(255,255,255,0) 100%);
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 8px;
+        }
+
+        section h2::before {
+            content: attr(data-section-number);
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #1e3a5f;
+        }
+
+        section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .bullets {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .bullets li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .bullets li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+            border-left: 6px solid #0d9488;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #0d9488 50%, transparent 100%);
+            margin: 4rem 0;
+            opacity: 0.3;
+        }*/
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        .pillar-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .pillar-card h4 {
+            color: #0d9488;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #0d9488;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            background: #0f766e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .footer-tagline {
+            color: #E6A23C;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background-color: #0f172a;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                padding: 1rem 0;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+    <link rel="canonical" href="https://www.patientcentriccare.ai/traction">
+
+<style>
+/* Continue Reading Section */
+.continue-reading {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+.continue-reading h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.continue-reading-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.continue-reading-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.continue-reading-links a:hover {
+    border-color: #0d9488;
+    color: #0d9488;
+    transform: translateY(-1px);
+}
+/* Enhanced Footer */
+.site-footer {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-col h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+.footer-col p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+.footer-col a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: #0d9488;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.footer-bottom a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+.footer-email-form {
+    display: flex;
+    gap: 0.5rem;
+}
+.footer-email-form input[type="email"] {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    background: #1e293b;
+    color: white;
+    font-size: 0.85rem;
+    width: 200px;
+}
+.footer-email-form input[type="email"]::placeholder {
+    color: #64748b;
+}
+.footer-email-form button {
+    padding: 0.5rem 1rem;
+    background: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.footer-email-form button:hover {
+    background: #0f766e;
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-email-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-email-form input[type="email"] {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+<body>
+    <!-- NAVIGATION -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
+    
+    <!-- Canonical navigation – do not modify without architectural review -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion">Phase 1</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Canonical navigation -->
+
+    <!-- End Canonical navigation -->
+ 
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Governance Maturity Milestones</h1>
+        <p>
+            Safety OS™ is built through disciplined, evidence-driven governance maturation. Each milestone demonstrates measurable progress toward the infrastructure required for phased regulatory inheritance.
+        </p>
+    </div>
+
+    <!-- Four Pillars Overview -->
+    <section>
+        <h2>Four Pillars of Governance Maturity</h2>
+        
+        <!-- Greek Temple Diagram -->
+        <div style="margin: 3rem 0; text-align: center;">
+            <img src="traction-pillars-diagram.png" alt="Four Pillars of Progress: Evidence-Driven Development Framework" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </section>
+
+    <!-- Clinical Collaboration -->
+    <section>
+        <h2 data-section-number="1">✓ Clinical Advisors Engaged</h2>
+        <p style="font-size: 1.15rem;">Collaborating with clinicians across aging, rehabilitation, and chronic care.</p>
+    </section>
+
+    <!-- Governance Architecture -->
+    <section>
+        <h2 data-section-number="2">✓ Governance Architecture Defined</h2>
+        <p style="font-size: 1.15rem;">Safety OS governance layer established with regulatory-grade foundations.</p>
+    </section>
+
+    <!-- Evidence Framework -->
+    <section>
+        <h2 data-section-number="3">✓ Evidence Framework Established</h2>
+        <p style="font-size: 1.15rem;">Ethical, consent-based environment for gathering geriatric and chronic-care insights.</p>
+    </section>
+
+    <!-- Strategic Partnerships -->
+    <section>
+        <h2 data-section-number="4">✓ Strategic Partnerships Active</h2>
+        <p style="font-size: 1.15rem;">Discussions with health systems, research institutions, and strategic sponsors.</p>
+    </section>
+
+    <!-- Platform Development -->
+    <section>
+        <h2 data-section-number="5">✓ Platform Architecture In Progress</h2>
+        <p style="font-size: 1.15rem;">Safety OS behavior-governance engine and supervision controls under development.</p>
+    </section>
+
+    <!-- Advisory Network -->
+    <section>
+        <h2 data-section-number="6">✓ Advisory Network Assembled</h2>
+        <p style="font-size: 1.15rem;">Clinical leaders, AI governance experts, and regulatory specialists engaged.</p>
+    </section>
+
+    <!-- Thought Leadership -->
+    <section>
+        <h2 data-section-number="7">✓ Thought Leadership Established</h2>
+        <p style="font-size: 1.15rem;">Recognized for responsible AI governance and ethical design principles.</p>
+    </section>
+
+    <!-- What's Next -->
+    <section>
+        <h2 data-section-number="8">What's Next</h2>
+        
+        <div class="highlight-box">
+            <h3>Scope & Limitations</h3>
+            <p><strong>Claims:</strong> The system is designed to provide protocol-driven support for post-acute rehabilitation and home monitoring, focusing on patient safety and compliance.</p>
+            <p><strong>Boundaries:</strong> The system is architecturally prohibited from performing diagnosis, prognosis, treatment recommendations, or any form of autonomous clinical decision-making. All actions are constrained by the Physician-as-Pilot framework.</p>
+            <p><strong>What is Explicitly Not Proven Yet:</strong> Long-term impact on hospital readmission rates and cost-effectiveness in diverse patient populations are areas for future study and validation.</p>
+        </div>
+        <ul class="bullets">
+            <li>Supervised support pilot frameworks</li>
+            <li>Safety OS supervision modules</li>
+            <li>Clinical research expansion</li>
+            <li>Regulatory documentation</li>
+        </ul>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align: center;">
+        <p class="hero-tagline" style="font-size: 1.5rem; margin-bottom: 2rem;">
+            Empowering Independence. Preserving Dignity.
+        </p>
+        <a href="/investment" class="cta-button">PARTNERSHIP OPPORTUNITIES →</a>
+    </section>
+    <!-- CONTINUE READING -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <div class="continue-reading">
+            <h3>Continue Reading</h3>
+            <div class="continue-reading-links">
+                <a href="/physician-as-pilot">&rarr; Physician-as-Pilot</a>
+                <a href="/safety-os">&rarr; Safety OS Architecture</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">&rarr; Governance Standard</a>
+                <a href="/home-companion">&rarr; Phase 1 Deployment</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENHANCED FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PatientCentricCare.AI</h4>
+                <p>Safety OS&trade; - Governance infrastructure for AI in the home.</p>
+                <p style="font-size: 1.1rem; color: #fbbf24; font-style: italic; margin-top: 0.75rem;">Empowering Independence. Preserving Dignity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Frameworks</h4>
+                <a href="/physician-as-pilot">Physician-as-Pilot</a>
+                <a href="/safety-os">Safety OS</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">Governance Standard</a>
+                <a href="/clinical-ai-governance">Phased Permissioning</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/home-companion">Phase 1 Deployment</a>
+                <a href="/traction">Evidence &amp; Milestones</a>
+                <a href="/team">Team</a>
+                <a href="/mission">Mission</a>
+                <a href="/investment">Investment</a>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <form class="footer-email-form" name="footer-newsletter" method="POST" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="form-name" value="footer-newsletter">
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <a href="mailto:andy@patientcentriccare.ai" style="margin-top: 0.75rem;">andy@patientcentriccare.ai</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+            <p><a href="/impressum">Impressum</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+            <p style="font-size: 0.8rem;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        </div>
+    </footer>
+
+    
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+
+            // Close menu when a link is clicked (mobile only)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        // Also close dropdown if open
+                        const dropdown = document.querySelector('.nav-dropdown');
+                        if (dropdown) {
+                            dropdown.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    
+    // --- GA4 Event Hygiene (Point 3) ---
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        } else if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+                'event': eventName,
+                ...eventParams
+            });
+        }
+    };
+
+    // 3.1 Navigation Clicks (PaP, Safety OS, Evidence)
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                if (href && (linkText.includes('Physician-as-Pilot') || linkText.includes('Safety OS') || linkText.includes('Evidence'))) {
+                    sendGa4Event('navigation_click', {
+                        link_url: href,
+                        link_text: linkText,
+                        link_location: 'main_nav'
+                    });
+                }
+            });
+        });
+
+        // 3.3 Contact button clicks (assuming class 'nav-contact' or similar)
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // 3.2 Diagram lightbox opens (Hook into existing openLightbox function)
+    const originalOpenLightbox = window.openLightbox;
+    window.openLightbox = function() {
+        originalOpenLightbox.apply(this, arguments);
+        sendGa4Event('lightbox_open', {
+            diagram_name: 'physician_as_pilot_framework'
+        });
+    };
+
+    // 3.4 Scroll depth (25/50/75%)
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold
+                });
+            }
+        });
+    });
+
+    </script>
+
+
+</body>
+</html>

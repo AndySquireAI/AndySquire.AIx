@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Companion | Governance-First AI Infrastructure for the Home | PatientCentricCare.AI</title>
+    <meta name="description" content="Home Companion is Phase I of a governance-first AI infrastructure for sensitive home environments. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
+    <meta name="keywords" content="Home Companion, AI governance, Safety OS, seniors, aging in place, voice AI, non-medical AI, governance architecture, PatientCentricCare, Andy Squire">
+    <meta name="author" content="Andy Squire, PatientCentricCare.AI">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.patientcentriccare.ai/home-companion">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/home-companion">
+    <meta property="og:title" content="Home Companion | Governance-First AI Infrastructure for the Home">
+    <meta property="og:description" content="Phase I of a governance-first AI deployment model. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
+    <meta property="og:image" content="https://www.patientcentriccare.ai/images/logo_full_with_taglines.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="Andy Squire">
+    <meta property="article:published_time" content="2026-01-25T00:00:00Z">
+    <meta property="article:section" content="Healthcare AI Products">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AndySquireAI">
+    <meta name="twitter:creator" content="@AndySquireAI">
+    <meta name="twitter:url" content="https://www.patientcentriccare.ai/home-companion">
+    <meta name="twitter:title" content="Home Companion | Governance-First AI Infrastructure for the Home">
+    <meta name="twitter:description" content="Phase I of a governance-first AI deployment model. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.">
+    <meta name="twitter:image" content="https://www.patientcentriccare.ai/images/logo_full_with_taglines.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=4">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8XGFG9VW9Z');
+    </script>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        const dropdown = document.querySelector('.nav-dropdown');
+                        if (dropdown) {
+                            dropdown.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Home Companion",
+      "description": "Phase I of a governance-first AI infrastructure for the home. Built on Safety OS with auditable authority, consent enforcement, and regulatory inheritance.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Cloud-based",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "url": "https://www.patientcentriccare.ai"
+      },
+      "image": "https://www.patientcentriccare.ai/images/logo_full_with_taglines.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.patientcentriccare.ai/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Home Companion",
+        "item": "https://www.patientcentriccare.ai/home-companion"
+      }]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links .nav-contact {
+            background: #E6A23C;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: #d4911f;
+            color: white;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-toggle {
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-dropdown-toggle:hover {
+            color: #0d9488;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            min-width: 160px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s;
+            list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .nav-dropdown-menu li {
+            padding: 0;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #0d9488;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Validation Strip */
+        .validation-strip {
+            background: #F7F8FA;
+            text-align: center;
+            padding: 18px 20px;
+            line-height: 1.3;
+            border-bottom: 1px solid #E2E6EA;
+        }
+        
+        .validation-strip .validation-line1 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0A1F44;
+            margin: 0;
+        }
+        
+        .validation-strip .validation-line2 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #0A1F44;
+            margin: 4px 0 0 0;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        .hero-logo {
+            max-width: 300px;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .phase-label {
+            display: block;
+            background: none;
+            border: none;
+            color: #86efac;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background: #5a8f5a;
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-primary:hover {
+            background: #4a7a4a;
+            transform: translateY(-2px);
+        }
+        
+        .cta-secondary {
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* ===== STAT STRIP ===== */
+        .stat-strip {
+            background: #f0f7f0;
+            padding: 2rem;
+        }
+        
+        .stat-strip-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #5a8f5a;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 0.25rem;
+        }
+        
+        .stat-source {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== GENERAL SECTIONS ===== */
+        section, .section-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        /* ===== WHY NOW SECTION ===== */
+        .why-now-section {
+            background: #fefce8;
+            border-top: 3px solid #eab308;
+            padding: 3.5rem 2rem;
+        }
+
+        .why-now-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .why-now-section h2 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .why-now-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .why-now-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .why-now-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #fef3c7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .why-now-item h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+
+        .why-now-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* ===== PROBLEM SECTION ===== */
+        .problem-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .problem-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.25rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 3px solid #5a8f5a;
+        }
+
+        .problem-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: #f0f7f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .problem-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #5a8f5a;
+        }
+
+        .problem-item h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .problem-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* ===== DIFFERENTIATION SECTION ===== */
+        .diff-section {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .diff-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .diff-section h2 {
+            color: white;
+        }
+
+        .diff-section .section-subtitle {
+            color: #94a3b8;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .diff-moat {
+            background: rgba(90, 143, 90, 0.15);
+            border: 1px solid rgba(90, 143, 90, 0.4);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .diff-moat p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #86efac;
+            line-height: 1.5;
+        }
+
+        .diff-moat p span {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .diff-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .diff-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+        }
+
+        .diff-feature svg {
+            width: 20px;
+            height: 20px;
+            fill: #5a8f5a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .diff-feature span {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ===== PRODUCT SECTION ===== */
+        .solution-section {
+            padding: 4rem 2rem;
+        }
+
+        .solution-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .solution-features {
+            list-style: none;
+        }
+
+        .solution-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .solution-features li svg {
+            width: 22px;
+            height: 22px;
+            fill: #5a8f5a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .product-image-container {
+            text-align: center;
+        }
+
+        .product-image-container img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .product-caption {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 0.75rem;
+        }
+
+        /* ===== ACOUSTIC PRIVACY SECTION ===== */
+        .acoustic-privacy-section {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .acoustic-privacy-inner {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .acoustic-privacy-inner h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: #d4a04a;
+        }
+
+        .acoustic-privacy-inner p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #94a3b8;
+        }
+
+        .acoustic-privacy-inner ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+
+        .acoustic-privacy-inner li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .acoustic-privacy-inner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #86efac;
+            font-weight: 700;
+        }
+
+        /* ===== FLIGHT RECORDER SECTION ===== */
+        .flight-recorder-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .flight-recorder-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .flight-recorder-section h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .flight-recorder-section .section-subtitle {
+            color: #94a3b8;
+        }
+
+        .flight-recorder-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .flight-recorder-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .fr-points {
+            list-style: none;
+        }
+
+        .fr-points li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .fr-points li svg {
+            width: 20px;
+            height: 20px;
+            fill: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .fr-callout {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 3px solid #fbbf24;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .fr-callout p {
+            color: #fbbf24;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .fr-callout p span {
+            color: #94a3b8;
+            font-weight: 400;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== AUDIT ARTIFACT ===== */
+        .audit-artifact {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .audit-container {
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .audit-container-header {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .audit-container-header h4 {
+            color: #fbbf24;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.03em;
+        }
+
+        .audit-container-header .audit-orient {
+            color: #64748b;
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+
+        .audit-event-label {
+            background: rgba(134, 239, 172, 0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 0.6rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .audit-event-label .event-dot {
+            width: 8px;
+            height: 8px;
+            background: #86efac;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .audit-event-label span {
+            color: #86efac;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .audit-artifact h3 {
+            color: #e2e8f0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .audit-artifact .audit-intro {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .audit-record {
+            background: rgba(0,0,0,0.35);
+            padding: 1.25rem 1.5rem;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .audit-record .audit-line {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .audit-record .audit-label {
+            color: #94a3b8;
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .audit-record .audit-value {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .audit-record .audit-value.status-safe {
+            color: #86efac;
+        }
+
+        .audit-record .audit-value.status-verified {
+            color: #fbbf24;
+        }
+
+        /* ===== REGULATORY HOOK ===== */
+        .regulatory-hook {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: #0f172a;
+        }
+
+        .regulatory-hook p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #fbbf24;
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .regulatory-hook .hook-sub {
+            color: #94a3b8;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== SPONSOR ENGAGEMENT SUMMARY ===== */
+        .sponsor-engagement {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+        }
+
+        .sponsor-engagement h4 {
+            color: #e2e8f0;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .sponsor-engagement ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sponsor-engagement ul li {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            padding: 0.3rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .sponsor-engagement ul li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: #fbbf24;
+        }
+
+        .sponsor-engagement .sponsor-closing {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .sponsor-precedent {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.25rem;
+            background: rgba(251, 191, 36, 0.08);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 8px;
+        }
+
+        .sponsor-precedent p {
+            color: #fbbf24;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 900px) {
+            .audit-record .audit-line {
+                flex-direction: column;
+                gap: 0.1rem;
+            }
+            .audit-record .audit-label {
+                min-width: auto;
+            }
+        }
+
+        /* ===== DEPLOYMENT LOGIC ===== */
+        .deployment-section {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+        }
+
+        .deployment-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .phase-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            align-items: center;
+            margin: 2.5rem 0;
+        }
+
+        .phase-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .phase-box.active {
+            background: #5a8f5a;
+            color: white;
+        }
+
+        .phase-box.active h4 {
+            color: white;
+        }
+
+        .phase-box.active p {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .phase-box.future {
+            background: #e2e8f0;
+            color: #64748b;
+        }
+
+        .phase-box.future h4 {
+            color: #475569;
+        }
+
+        .phase-box.future p {
+            color: #94a3b8;
+        }
+
+        .phase-box h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .phase-box p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .phase-arrow {
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+
+        .phase-arrow svg {
+            width: 28px;
+            height: 28px;
+            fill: #94a3b8;
+        }
+
+        .deployment-bullets {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .deployment-bullets li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1rem;
+            color: #475569;
+        }
+
+        .deployment-bullets li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #5a8f5a;
+            font-weight: 700;
+        }
+
+        /* ===== WHY NON-MEDICAL FIRST ===== */
+        .strategic-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .strategic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .strategic-item {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-top: 3px solid #5a8f5a;
+        }
+
+        .strategic-item h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+        }
+
+        .strategic-item p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* ===== SPONSOR SECTION ===== */
+        .sponsor-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .sponsor-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sponsor-section h2 {
+            color: white;
+        }
+
+        .sponsor-section .section-subtitle {
+            color: #94a3b8;
+        }
+
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .sponsor-item {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .sponsor-item h4 {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sponsor-item p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .sponsor-cta {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .sponsor-cta a {
+            display: inline-block;
+            background: #5a8f5a;
+            color: white;
+            padding: 0.85rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+        }
+
+        .sponsor-cta a:hover {
+            background: #4a7a4a;
+            transform: translateY(-2px);
+        }
+
+        /* ===== DOWNLOADS ===== */
+        .downloads-section {
+            background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e8 100%);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+        
+        .downloads-section h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .downloads-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .download-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .download-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .download-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(90, 143, 90, 0.2);
+            border-color: #5a8f5a;
+        }
+        
+        .download-card-icon {
+            width: 56px;
+            height: 56px;
+            background: #f0f7f0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .download-card-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: #5a8f5a;
+        }
+        
+        .download-card h4 {
+            font-size: 1.05rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .download-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .download-card .download-cta {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #5a8f5a;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .download-card .download-cta svg {
+            width: 16px;
+            height: 16px;
+            fill: #5a8f5a;
+        }
+
+        /* ===== NOTICE SECTION ===== */
+        .notice-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .notice-box {
+            padding: 1.5rem 2rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .notice-box p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ===== CLOSING STATEMENT ===== */
+        .closing-section {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: #0f172a;
+            color: white;
+        }
+
+        .closing-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .closing-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .closing-section p {
+            font-size: 1.15rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .closing-section .closing-emphasis {
+            color: #d4a04a;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* ===== FOUNDING TEAM ===== */
+        .founding-team {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .founding-team-image {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .founding-team-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .stat-strip-inner {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-now-grid {
+                grid-template-columns: 1fr;
+            }
+            .diff-features {
+                grid-template-columns: 1fr;
+            }
+            .flight-recorder-content {
+                grid-template-columns: 1fr;
+            }
+            .phase-visual {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .phase-arrow {
+                transform: rotate(90deg);
+            }
+            .strategic-grid {
+                grid-template-columns: 1fr;
+            }
+            .sponsor-grid {
+                grid-template-columns: 1fr;
+            }
+            .download-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0f172a;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem;
+            }
+            
+            .nav-dropdown.active .nav-dropdown-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.05rem;
+            }
+            
+            .hero-logo {
+                max-width: 220px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+
+<style>
+/* Continue Reading Section */
+.continue-reading {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+.continue-reading h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.continue-reading-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.continue-reading-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.continue-reading-links a:hover {
+    border-color: #0d9488;
+    color: #0d9488;
+    transform: translateY(-1px);
+}
+/* Enhanced Footer */
+.site-footer {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-col h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+.footer-col p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+.footer-col a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: #0d9488;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.footer-bottom a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+.footer-email-form {
+    display: flex;
+    gap: 0.5rem;
+}
+.footer-email-form input[type="email"] {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    background: #1e293b;
+    color: white;
+    font-size: 0.85rem;
+    width: 200px;
+}
+.footer-email-form input[type="email"]::placeholder {
+    color: #64748b;
+}
+.footer-email-form button {
+    padding: 0.5rem 1rem;
+    background: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.footer-email-form button:hover {
+    background: #0f766e;
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-email-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-email-form input[type="email"] {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -40px; left: 0; background: #0f172a; color: white; padding: 8px; z-index: 100;">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo-container">
+                <img src="/favicon-32x32.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion" style="color: #5a8f5a;">Phase 1</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company &#9662;</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+     </nav>
+
+    <!-- Validation Strip -->
+    <div class="validation-strip">
+        <p class="validation-line1">Selected as Best Overall Capstone</p>
+        <p class="validation-line2">Harvard Medical School Executive Education, "AI in Healthcare," February 2026</p>
+    </div>
+
+    <!-- ===== HERO: Infrastructure Positioning ===== -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="/images/logo_full_with_taglines.png" alt="Home Companion - Independence, dignity, and peace of mind" class="hero-logo">
+            <h1>Safety OS™ — Governance Infrastructure for AI in the Home</h1>
+            <p class="subtitle">Home Companion is the Phase I deployment environment for Safety OS™ — a governance validation domain designed to stress-test authority boundaries in real-world home settings.</p>
+            <div class="phase-label">Phase I Deployment Environment:<br>Home Companion</div>
+            
+            <div class="hero-ctas">
+                <a href="#downloads" class="cta-primary">Download Executive Overview</a>
+                <a href="mailto:andy@patientcentriccare.ai?subject=Data%20Room%20Access%20Request&body=Hello%20Andy%2C%0A%0AI%20would%20like%20to%20request%20access%20to%20the%20Home%20Companion%20data%20room.%0A%0A" class="cta-secondary">Access Data Room</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== STAT STRIP ===== -->
+    <div class="stat-strip">
+        <div class="stat-strip-inner">
+            <div class="stat-item">
+                <div class="stat-number">14.7M</div>
+                <div class="stat-label">Seniors living alone in the US</div>
+                <div class="stat-source">US Census Bureau</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">35%</div>
+                <div class="stat-label">Increased mortality risk from social isolation</div>
+                <div class="stat-source">Nakou et al., Aging Clinical &amp; Experimental Research, 2025</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4 in 10</div>
+                <div class="stat-label">Adults 45+ report feeling lonely</div>
+                <div class="stat-source">AARP Loneliness Study, 2025</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$390B</div>
+                <div class="stat-label">Global senior living market by 2032</div>
+                <div class="stat-source">Coherent Market Insights, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- ===== WHY NOW ===== -->
+        <div class="why-now-section">
+            <div class="why-now-inner">
+                <h2>Why This Matters Now</h2>
+                <p style="font-size: 1.05rem; color: #78350f; margin-bottom: 0.5rem;">Sponsors fund timing windows. This one is closing.</p>
+                <div class="why-now-grid">
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9888;</div>
+                        <div>
+                            <h4>AI entering homes is inevitable</h4>
+                            <p>Voice agents and AI systems are rapidly scaling into private living environments &mdash; whether governed or not.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9881;</div>
+                        <div>
+                            <h4>Governance standards are undefined</h4>
+                            <p>No established framework exists for authority boundaries, consent enforcement, or audit logging in home AI.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#9878;</div>
+                        <div>
+                            <h4>Regulatory scrutiny is increasing</h4>
+                            <p>EU AI Act, FDA SaMD acceleration, and payer pressure are converging. Retrofitting governance after scale is expensive and legally risky.</p>
+                        </div>
+                    </div>
+                    <div class="why-now-item">
+                        <div class="why-now-icon">&#128200;</div>
+                        <div>
+                            <h4>Early architecture decisions determine compliance</h4>
+                            <p>The organizations that define governance infrastructure now will set the standard for regulated AI in the home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== THE PROBLEM ===== -->
+        <section class="problem-section">
+            <h2>AI in the Home Is Scaling Faster Than Governance</h2>
+             <p class="section-subtitle">AI systems are entering private living environments without authority constraints. What is missing:</p>
+            
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                    </div>
+                    <div>
+                        <h4>No clear authority boundaries</h4>
+                        <p>Most home AI systems operate without defined limits on what the AI can and cannot do in sensitive contexts.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <div>
+                        <h4>No explicit consent enforcement</h4>
+                        <p>Escalation and data sharing happen without structured user consent or governance-gated pathways.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 1.62-.49 3.12-1.32 4.38l1.47 1.47C21.32 16.12 22 14.15 22 12c0-5.18-3.95-9.45-9-9.95zM12 20c-4.42 0-8-3.58-8-8 0-3.49 2.24-6.45 5.35-7.52l.65 1.9C7.67 7.37 6 9.49 6 12c0 3.31 2.69 6 6 6 1.52 0 2.9-.57 3.96-1.5l1.47 1.47C15.86 19.26 14.02 20 12 20z"/></svg>
+                    </div>
+                    <div>
+                        <h4>No deterministic escalation logic</h4>
+                        <p>When something goes wrong, there is no structured, auditable handoff to human authority.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <div>
+                        <h4>No immutable audit logging</h4>
+                        <p>Without timestamped, boundary-classified records, there is no defensible deployment posture and no regulatory inheritance.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: #475569; font-weight: 600;">Retrofitting governance after scale is expensive, legally risky, and often impossible without architectural redesign.</p>
+        </section>
+
+        <!-- ===== DIFFERENTIATION ===== -->
+        <div class="diff-section">
+            <div class="diff-inner">
+                <h2>Anyone Can Deploy Conversational AI</h2>
+                <p class="section-subtitle">Very few are building auditable authority systems from day one.</p>
+
+                <div class="diff-moat">
+                     <p>Our moat is not companionship.<br>Our moat is governance architecture deliberately designed for phased regulatory inheritance.<p>
+                     <p><span>Big Tech will deploy AI in the home. They will not design for regulated expansion from day one.</span></p>
+                </div>
+
+                <div class="diff-features">
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Consent-gated escalation pathways</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Human authority retention at runtime</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Boundary refusal logic (no diagnosis, no inference)</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Immutable audit logging ("Flight Recorder")</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Risk-tiered capability expansion model</span>
+                    </div>
+                    <div class="diff-feature">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <span>Structured regulatory inheritance framework</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCT: WHAT HOME COMPANION DOES ===== -->
+        <div class="solution-section">
+            <div class="solution-inner">
+                <h2>Phase I: Home Companion</h2>
+                <p class="section-subtitle">A deliberately non-medical deployment environment used to validate governance maturity before clinical expansion.</p>
+                
+                <div class="solution-grid">
+                    <ul class="solution-features">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Structured conversational interaction within governance boundaries
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Scheduled interaction cycles with boundary enforcement
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Human-confirmed escalation only
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            No diagnosis, no medical advice
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Designed explicitly outside clinical claims
+                        </li>
+                    </ul>
+                    <div class="product-image-container">
+                        <img src="/images/home-companion-device.png" alt="Home Companion device - a familiar photo frame with integrated smart speaker">
+                        <p class="product-caption">Phase I hardware: familiar form factor with embedded governance kernel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ACOUSTIC PRIVACY ===== -->
+        <div class="acoustic-privacy-section">
+            <div class="acoustic-privacy-inner">
+                <h2>Tier 0 Acoustic Privacy</h2>
+                <ul>
+                    <li>Edge-level processing captures non-semantic interaction metadata (e.g., noise level, cadence)</li>
+                    <li>Raw audio is not persistently stored</li>
+                    <li>Audit logs capture event classification — not private speech content</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== FLIGHT RECORDER ===== -->
+        <div class="flight-recorder-section">
+            <div class="flight-recorder-inner">
+                <h2>The Safety OS "Flight Recorder"</h2>
+                <p class="section-subtitle">Governance is enforced at runtime. Not documented in a PDF. Enforced in the system.</p>
+
+                <div class="flight-recorder-content">
+                    <div class="flight-recorder-image">
+                        <img src="/images/flight-recorder-hero.png" alt="Safety OS Flight Recorder - Always On. Consent, Authority, Escalation, Immutable Audit Log.">
+                    </div>
+                    <div>
+                        <ul class="fr-points">
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every interaction is time-stamped
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every boundary event is classified
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every escalation is consent-logged
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                Every record is reviewable post-incident
+                            </li>
+                        </ul>
+                        <div class="fr-callout">
+                            <p>This is not a policy document.<span>It is an operational control plane.</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audit Artifact -->
+                <div class="audit-artifact">
+                    <h3>Structured Audit Output</h3>
+                    <p class="audit-intro">Every interaction generates structured, time-stamped records including session ID, escalation triggers, boundary refusals, consent confirmations, and event classification.</p>
+                    <div class="audit-container">
+                        <div class="audit-container-header">
+                            <h4>Safety OS - Phase I Audit Record (Example)</h4>
+                            <span class="audit-orient">Illustrative example of Phase I audit output (format representative)</span>
+                        </div>
+                        <div class="audit-event-label">
+                            <span class="event-dot"></span>
+                            <span>Boundary Event - Medical Inference Refused</span>
+                        </div>
+                        <div class="audit-record">
+                            <div class="audit-line"><span class="audit-label">Session ID:</span><span class="audit-value">HC-2026-01-25-001</span></div>
+                            <div class="audit-line"><span class="audit-label">Timestamp:</span><span class="audit-value">2026-01-25T23:12:21.458+01:00</span></div>
+                            <div class="audit-line"><span class="audit-label">Event Type:</span><span class="audit-value">Boundary Refusal</span></div>
+                            <div class="audit-line"><span class="audit-label">Boundary Class:</span><span class="audit-value">Medical Inference (Prohibited)</span></div>
+                            <div class="audit-line"><span class="audit-label">User Prompt:</span><span class="audit-value">"Do you think my blood pressure is too high?"</span></div>
+                            <div class="audit-line"><span class="audit-label">System Response:</span><span class="audit-value status-safe">Boundary held. No clinical inference generated.</span></div>
+                            <div class="audit-line"><span class="audit-label">Escalation Status:</span><span class="audit-value status-safe">Not triggered</span></div>
+                            <div class="audit-line"><span class="audit-label">Consent Gate:</span><span class="audit-value status-verified">Verified</span></div>
+                            <div class="audit-line"><span class="audit-label">Authority:</span><span class="audit-value">User / Caregiver (Human retained)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== PHASED DEPLOYMENT ===== -->
+        <div class="deployment-section">
+            <div class="deployment-inner">
+                <h2>Designed to Scale &mdash; Only When Earned</h2>
+                <p class="section-subtitle">Capabilities expand only after governance maturity and real-world validation. We do not rush deployment. We do not skip phases.</p>
+                
+                <div class="phase-visual">
+                    <div class="phase-box active">
+                        <h4>Phase I</h4>
+                        <p>Non-Medical, Audit-First</p>
+                    </div>
+                    <div class="phase-arrow">
+                        <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </div>
+                    <div class="phase-box future">
+                        <h4>Phase II</h4>
+                        <p>SaMD-Ready</p>
+                    </div>
+                    <div class="phase-arrow">
+                        <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </div>
+                    <div class="phase-box future">
+                        <h4>Phase III</h4>
+                        <p>Regulated Clinical AI</p>
+                    </div>
+                </div>
+
+                <ul class="deployment-bullets">
+                    <li>Phase I validates consent enforcement, escalation gating, and boundary events</li>
+                    <li>Phase II inherits validated governance controls for physician-in-the-loop supervision</li>
+                    <li>Phase III requires formal regulatory authorization (FDA / EU MDR)</li>
+                    <li>Every phase inherits validated governance controls from the prior phase</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== WHY NON-MEDICAL FIRST ===== -->
+        <section class="strategic-section">
+            <h2>Why Non-Medical First Is Strategic</h2>
+            <p class="section-subtitle">Home Companion is intentionally non-medical. Not as a limitation &mdash; but as discipline.</p>
+
+            <div class="strategic-grid">
+                <div class="strategic-item">
+                    <h4>Real-World Governance Validation</h4>
+                    <p>Generate actual boundary events, escalation data, and consent records in live home environments before clinical expansion.</p>
+                </div>
+                <div class="strategic-item">
+                    <h4>Lower Regulatory Overhead</h4>
+                    <p>Non-medical Phase I enables faster iteration cycles and capital-efficient scaling without SaMD classification burden.</p>
+                </div>
+                <div class="strategic-item">
+                    <h4>Demonstrable Audit Evidence</h4>
+                    <p>Build the audit trail that proves governance maturity &mdash; the prerequisite for every subsequent regulated phase.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.05rem; color: #475569;">Clinical capability is introduced only after governance maturity is demonstrated.</p>
+            <p style="text-align: center; margin-top: 1rem; font-size: 1.05rem; color: #0d9488; font-weight: 500;">Phase I pilots are structured to generate live boundary event data across real home environments.</p>
+        </section>
+
+        <!-- ===== REGULATORY NARRATIVE HOOK ===== -->
+        <div class="regulatory-hook">
+            <p>The next wave of AI regulation will not start in hospitals.<br>It will start in the home.</p>
+            <p class="hook-sub">We are building the safety template others will eventually be required to follow.</p>
+        </div>
+
+        <!-- ===== SPONSOR OPPORTUNITY ===== -->
+        <div class="sponsor-section">
+            <div class="sponsor-inner">
+                <h2>Sponsor Positioning</h2>
+                <p class="section-subtitle">Phase I is the governance foundation. Sponsors participate before audit and consent standards become industry defaults.<br>This is structured participation &mdash; not symbolic alignment.</p>
+                
+                <div class="sponsor-grid">
+                    <div class="sponsor-item">
+                        <h4>Early Architecture Visibility</h4>
+                        <p>Engage while governance logic, audit standards, and escalation rules are still being defined - not after they are locked. Sponsors observe and influence how safe AI in the home is structured from the ground up.</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>Influence Governance Standards Before They Become Industry Defaults</h4>
+                        <p>Phase I defines practical authority boundaries, consent enforcement, and audit design in real deployments. Sponsors contribute perspective while the category is still being shaped - not after regulators formalize expectations.</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>Access to Real-World Governance Evidence</h4>
+                        <p>Receive structured outputs from Phase I deployments: boundary event analytics, escalation pathway validation, consent enforcement metrics, and audit trail performance data. This evidence base becomes the prerequisite for every regulated expansion phase.</p>
+                    </div>
+                    <div class="sponsor-item">
+                        <h4>Structured Optionality into Clinical Expansion</h4>
+                        <p>Participation in Phase I creates early positioning as the architecture progresses toward physician-supervised workflows, SaMD-ready modules, and regulated pathways (FDA / EU MDR). Clinical capability is introduced only after governance maturity is demonstrated.</p>
+                    </div>
+                </div>
+
+                <div class="sponsor-engagement">
+                    <h4>Defined Engagement</h4>
+                    <ul>
+                        <li>Documented architecture updates</li>
+                        <li>Governance validation summaries</li>
+                        <li>Structured review sessions</li>
+                        <li>Clear boundaries on scope and claims</li>
+                    </ul>
+                    <p class="sponsor-closing">This is not speculative AI experimentation. It is staged governance development with measurable checkpoints.</p>
+                </div>
+
+                <div class="sponsor-precedent">
+                    <p>We are establishing the governance template for AI in the home.</p>
+                </div>
+
+                <div class="sponsor-cta">
+                    <a href="mailto:andy@patientcentriccare.ai?subject=Phase%20I%20Sponsor%20Inquiry&body=Hello%20Andy%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20Phase%20I%20sponsor%20positioning.%0A%0A">Request Sponsor Documentation</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== DOWNLOADS ===== -->
+        <section id="downloads">
+            <div class="downloads-section">
+                <h2>Resources &amp; Downloads</h2>
+                <p class="downloads-subtitle">Access detailed documentation on Home Companion</p>
+                <div class="download-cards">
+                    <a href="/downloads/home-companion-pitch.pdf" class="download-card" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Pitch PDF', document_type: 'pitch', document_name: 'Home Companion Pitch', value: 15});">
+                        <div class="download-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                        </div>
+                        <h4>Home Companion Overview</h4>
+                        <p>Executive summary of the product, impact thesis, and deployment model</p>
+                        <span class="download-cta">
+                            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            Download PDF
+                        </span>
+                    </a>
+                    <a href="/downloads/governance-safety-os-overview.pdf" class="download-card" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: 'Governance Overview', document_type: 'governance', document_name: 'Safety OS Overview', value: 10});">
+                        <div class="download-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        <h4>Governance &amp; Safety OS</h4>
+                        <p>Visual overview of the Safety OS architecture and governance logic</p>
+                        <span class="download-cta">
+                            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            Download PDF
+                        </span>
+                    </a>
+                    <a href="/downloads/3PhaseGovernance.png" class="download-card" onclick="gtag('event', 'pdf_download', {event_category: 'Home Companion', event_label: '3-Phase Roadmap', document_type: 'roadmap', document_name: '3-Phase Roadmap', value: 10});" download>
+                        <div class="download-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                        </div>
+                        <h4>3-Phase Roadmap</h4>
+                        <p>Visual representation of the governance maturity progression</p>
+                        <span class="download-cta">
+                            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                            Download PNG
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== IMPORTANT NOTICE (moved up) ===== -->
+        <div class="notice-section">
+            <div class="notice-box">
+                <p><strong>Important Notice:</strong> Home Companion is a non-medical system. It does not provide diagnosis, treatment, or clinical decision-making. Escalation is permitted only with user consent and subject to governance controls. Future phases are subject to regulatory review and formal authorization.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Founding Team Section -->
+    <section class="founding-team">
+        <div class="founding-team-image">
+            <img src="/images/founding-team.png" alt="Founding Team - Andy Squire (Safety Architecture & Regulatory Pathways), Dr. Cristina Crisan Tran (Commercial & Partnerships), Carla Maldonado PhD (Compliance & Operating Governance)">
+        </div>
+    </section>
+
+    <!-- ===== CLOSING: Strategic Ambition ===== -->
+    <div class="closing-section">
+        <div class="closing-inner">
+            <h2>Governance-first AI infrastructure for the home.</h2>
+            <p>Built deliberately. Scaled only when earned.</p>
+            <p class="closing-emphasis">Empowering independence.<br>Preserving dignity.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- CONTINUE READING -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <div class="continue-reading">
+            <h3>Continue Reading</h3>
+            <div class="continue-reading-links">
+                <a href="/physician-as-pilot">&rarr; Physician-as-Pilot</a>
+                <a href="/safety-os">&rarr; Safety OS Architecture</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">&rarr; Governance Standard</a>
+                <a href="/traction">&rarr; Evidence & Milestones</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENHANCED FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PatientCentricCare.AI</h4>
+                <p>Safety OS&trade; - Governance infrastructure for AI in the home.</p>
+                <p style="font-size: 1.1rem; color: #fbbf24; font-style: italic; margin-top: 0.75rem;">Empowering Independence. Preserving Dignity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Frameworks</h4>
+                <a href="/physician-as-pilot">Physician-as-Pilot</a>
+                <a href="/safety-os">Safety OS</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">Governance Standard</a>
+                <a href="/clinical-ai-governance">Phased Permissioning</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/home-companion">Phase 1 Deployment</a>
+                <a href="/traction">Evidence &amp; Milestones</a>
+                <a href="/team">Team</a>
+                <a href="/mission">Mission</a>
+                <a href="/investment">Investment</a>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <form class="footer-email-form" name="footer-newsletter" method="POST" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="form-name" value="footer-newsletter">
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <a href="mailto:andy@patientcentriccare.ai" style="margin-top: 0.75rem;">andy@patientcentriccare.ai</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+            <p><a href="/impressum">Impressum</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+            <p style="font-size: 0.8rem;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        </div>
+    </footer>
+
+    
+    <!-- GA4 Event Tracking -->
+    <script>
+    const sendGa4Event = (eventName, eventParams = {}) => {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, eventParams);
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Navigation clicks
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                const linkText = link.textContent.trim();
+                sendGa4Event('navigation_click', {
+                    link_url: href,
+                    link_text: linkText,
+                    link_location: 'main_nav'
+                });
+            });
+        });
+
+        // Contact button clicks
+        const contactLinks = document.querySelectorAll('.nav-contact');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sendGa4Event('contact_click', {
+                    contact_type: 'email_link',
+                    location: 'main_nav'
+                });
+            });
+        });
+    });
+
+    // Scroll depth tracking
+    const scrollThresholds = [25, 50, 75];
+    const scrollTracked = {};
+
+    window.addEventListener('scroll', () => {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+
+        scrollThresholds.forEach(threshold => {
+            if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                scrollTracked[threshold] = true;
+                sendGa4Event('scroll_depth', {
+                    percent: threshold,
+                    page: 'home_companion'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
