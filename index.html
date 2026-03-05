@@ -266,129 +266,8 @@
                 padding: 0.5rem 0;
             }
         }
-        
-        /* Governance Diagram Section */
-        .governance-diagram-section {
-            background: #f8fafc;
-            padding: 48px 2rem;
-            text-align: center;
-        }
 
-        .governance-diagram-container {
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .governance-diagram-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .governance-diagram-container:hover img {
-            transform: scale(1.01);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .governance-diagram-container .tap-hint {
-            display: none;
-            position: absolute;
-            bottom: 16px;
-            right: 16px;
-            background: rgba(15, 23, 42, 0.85);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .governance-diagram-caption {
-            margin-top: 16px;
-            font-size: 0.9rem;
-            color: #64748b;
-            font-style: italic;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Lightbox Modal */
-        .lightbox-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .lightbox-overlay.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            max-width: 95%;
-            max-height: 95%;
-            position: relative;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 8px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 8px;
-            line-height: 1;
-        }
-
-        .lightbox-close:hover {
-            color: #E6A23C;
-        }
-
-        @media (max-width: 768px) {
-            .governance-diagram-section {
-                padding: 32px 1rem;
-            }
-
-            .governance-diagram-container .tap-hint {
-                display: block;
-            }
-
-            .governance-diagram-caption {
-                font-size: 0.85rem;
-                padding: 0 0.5rem;
-            }
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
+        /* Validation Strip */
         .validation-strip {
             background: #F7F8FA;
             text-align: center;
@@ -410,145 +289,49 @@
             color: #0A1F44;
             margin: 4px 0 0 0;
         }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
         
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            line-height: 1.3;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* 3-COLUMN STAKEHOLDER ROUTING GRID */
-        .routing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 2rem auto 0 auto;
-            padding: 0 1rem;
-        }
-
-        .routing-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-
-        /* Primary card - most prominent */
-        .routing-primary {
-            border: 2px solid #E6A23C;
-            background: rgba(230, 162, 60, 0.1);
-        }
-
-        /* Secondary card */
-        .routing-secondary {
-            border: 1px solid rgba(230, 162, 60, 0.5);
-        }
-
-        /* Tertiary card - least prominent */
-        .routing-tertiary {
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .routing-who {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #E6A23C;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .routing-purpose {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.5;
+            font-size: 2.8rem;
             margin-bottom: 1.25rem;
-            flex-grow: 1;
-        }
-
-        /* CTA Buttons with clear hierarchy */
-        .routing-cta {
-            display: block;
-            text-align: center;
-            padding: 0.875rem 1.25rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        /* PRIMARY CTA - Solid orange, most prominent */
-        .routing-cta-primary {
-            background: #E6A23C;
-            color: #0f172a;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(230, 162, 60, 0.3);
-        }
-
-        .routing-cta-primary:hover {
-            background: #d4911f;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(230, 162, 60, 0.4);
-        }
-
-        /* SECONDARY CTA - Outline orange */
-        .routing-cta-secondary {
-            background: transparent;
-            color: #E6A23C;
-            border: 2px solid #E6A23C;
-            font-size: 0.95rem;
-        }
-
-        .routing-cta-secondary:hover {
-            background: rgba(230, 162, 60, 0.15);
-            transform: translateY(-2px);
-        }
-
-        /* TERTIARY CTA - Muted outline */
-        .routing-cta-tertiary {
-            background: transparent;
-            color: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            font-size: 0.9rem;
-        }
-
-        .routing-cta-tertiary:hover {
-            color: white;
-            border-color: rgba(255, 255, 255, 0.5);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        /* Mobile: Stack vertically */
-        @media (max-width: 768px) {
-            .routing-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-        
-        .hero-subhead {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
+            line-height: 1.2;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+        }
+        
+        .hero-subhead {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-supporting {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
             line-height: 1.6;
         }
-        
-        .hero-tagline {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 2.5rem;
-            color: #E6A23C;
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        
+
         .cta-button {
             display: inline-block;
             background: #E6A23C;
@@ -567,162 +350,470 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
         }
-        
-        /* Sections */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #0f172a;
-        }
-        
-        section h3 {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #0d9488;
-        }
-        
-        /* 3-Column Feature Grid */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.2rem;
-            margin-top: 2rem;
-        }
-        
-        .feature-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #0d9488;
-        }
-        
-        .feature-card h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            color: #0f172a;
+
+        .cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.5);
+            box-shadow: none;
         }
 
-        .credibility-grid {
+        .cta-button-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            box-shadow: none;
+        }
+
+        /* Self-Select Question Block */
+        .self-select {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .self-select h2 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 2rem;
+        }
+
+        .self-select-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .self-select-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #0f172a;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .self-select-btn:hover {
+            border-color: #0d9488;
+            background: #f0fdfa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .self-select-icon {
+            font-size: 1.6rem;
+            flex-shrink: 0;
+        }
+
+        /* Video Section */
+        .video-section {
+            background: #0f172a;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .video-section p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-placeholder {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            border: 1px solid #334155;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .video-placeholder:hover {
+            border-color: #0d9488;
+            background: #1a2332;
+        }
+
+        .video-play-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-placeholder p {
+            color: #cbd5e1;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Not a Chatbot Section */
+        .not-chatbot {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        .not-chatbot h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .not-chatbot > p {
+            font-size: 1.15rem;
+            color: #334155;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .governance-enforces {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.2rem;
-            margin-top: 2rem;
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .credibility-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #0d9488;
-        }
-
-        .credibility-card h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
+        .governance-enforces-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: #f0fdfa;
+            border-radius: 8px;
+            border-left: 3px solid #0d9488;
+            font-size: 1.05rem;
+            font-weight: 600;
             color: #0f172a;
         }
 
-        /* Clickable card styles */
-        .credibility-card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
-        }
-
-        .credibility-card-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            border-left-color: #E6A23C;
-        }
-
-        .credibility-card-link:hover h3 {
+        .governance-enforces-item span {
             color: #0d9488;
+            font-size: 1.2rem;
         }
 
-        .card-explore {
-            display: block;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #0d9488;
-            letter-spacing: 0.02em;
+        /* Interactive Architecture */
+        .architecture-section {
+            background: #f8fafc;
+            padding: 3.5rem 2rem;
         }
 
-        .credibility-card-link:hover .card-explore {
-            color: #E6A23C;
-        }
-
-        /* Governance Artifacts Section */
-        .governance-artifacts {
-            background: #f0fdfa;
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            margin-top: 2rem;
-        }
-
-        .governance-artifacts h3 {
-            font-size: 1.5rem;
+        .architecture-section h2 {
+            text-align: center;
+            font-size: 2rem;
             color: #0f172a;
             margin-bottom: 0.5rem;
-            margin-top: 0;
         }
 
-        .governance-artifacts p.artifacts-subtitle {
-            font-size: 1rem;
+        .architecture-subtitle {
+            text-align: center;
             color: #64748b;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .architecture-stack {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .arch-layer {
+            padding: 1.5rem 2rem;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .arch-layer:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .arch-layer:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+
+        .arch-layer-top {
+            background: #e2e8f0;
+            border: 2px solid #cbd5e1;
+        }
+
+        .arch-layer-mid {
+            background: #0f172a;
+            border: 2px solid #0d9488;
+        }
+
+        .arch-layer-bot {
+            background: #f1f5f9;
+            border: 2px solid #cbd5e1;
+        }
+
+        .arch-layer:hover {
+            transform: scale(1.02);
+            z-index: 1;
+        }
+
+        .arch-layer h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.2rem;
+        }
+
+        .arch-layer-top h3 { color: #0f172a; }
+        .arch-layer-mid h3 { color: #0d9488; }
+        .arch-layer-bot h3 { color: #0f172a; }
+
+        .arch-layer p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .arch-layer-top p { color: #475569; }
+        .arch-layer-mid p { color: #94a3b8; }
+        .arch-layer-bot p { color: #475569; }
+
+        .arch-detail {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .arch-layer-top .arch-detail { background: #f8fafc; color: #334155; }
+        .arch-layer-mid .arch-detail { background: #1e293b; color: #cbd5e1; }
+        .arch-layer-bot .arch-detail { background: #f8fafc; color: #334155; }
+
+        .arch-detail.active {
+            display: block;
+        }
+
+        .arch-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #94a3b8;
+            padding: 0.25rem 0;
+        }
+
+        /* Permissioning Model */
+        .permissioning {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem;
+        }
+
+        .permissioning h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .phase-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .phase-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0d9488;
+            background: #f0fdfa;
+        }
+
+        .phase-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0d9488;
+            font-size: 1.2rem;
+        }
+
+        .phase-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+
+        .invariant-statement {
+            margin-top: 2rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            padding: 1rem;
+            background: #fef3c7;
+            border-radius: 8px;
+        }
+
+        /* Governance Sequencing Diagram */
+        .governance-diagram-section {
+            background: #f8fafc;
+            padding: 48px 2rem;
+            text-align: center;
+        }
+
+        .governance-diagram-container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .governance-diagram-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Real-World Use Case */
+        .use-case {
+            background: #0f172a;
+            padding: 3.5rem 2rem;
+        }
+
+        .use-case-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .use-case h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .use-case-label {
+            color: #E6A23C;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             margin-bottom: 1.5rem;
         }
 
-        .artifacts-grid {
+        .use-case-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        .artifact-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1.25rem;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .use-case-col h3 {
+            color: #0d9488;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
         }
 
-        .artifact-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-color: #0d9488;
+        .use-case-col ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .artifact-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            margin-top: 2px;
+        .use-case-col li {
+            color: #cbd5e1;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.05rem;
         }
 
-        .artifact-card h4 {
-            font-size: 0.95rem;
+        .use-case-col li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+
+        /* Why Now Section */
+        .why-now {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem;
+        }
+
+        .why-now h2 {
+            font-size: 2rem;
             color: #0f172a;
-            margin-bottom: 0.25rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .artifact-card p {
-            font-size: 0.85rem;
-            color: #64748b;
-            margin: 0;
+        .why-now-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .why-now-card {
+            padding: 2rem 1.5rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-top: 4px solid #0d9488;
+            text-align: center;
+        }
+
+        .why-now-card h3 {
+            color: #0f172a;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-now-card p {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Simplified CTAs */
+        .triple-cta {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-radius: 0;
+        }
+
+        .triple-cta h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .triple-cta-grid {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .triple-cta-grid a {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
         }
 
         /* Email Capture Section */
@@ -731,14 +822,12 @@
             border-radius: 12px;
             padding: 2.5rem 2rem;
             text-align: center;
-            margin-top: 2rem;
         }
 
         .email-capture h3 {
             color: white;
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
-            margin-top: 0;
         }
 
         .email-capture p {
@@ -796,13 +885,25 @@
             margin-top: 0.75rem;
         }
 
-        @media (max-width: 768px) {
-            .email-capture-form {
-                flex-direction: column;
-            }
-            .artifacts-grid {
-                grid-template-columns: 1fr;
-            }
+        .email-topics {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .email-topics li {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .email-topics li:before {
+            content: "✓ ";
+            color: #0d9488;
+            font-weight: bold;
         }
 
         /* Enhanced Footer */
@@ -904,121 +1005,6 @@
             background: #0f766e;
         }
 
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-email-form {
-                flex-direction: column;
-                width: 100%;
-            }
-            .footer-email-form input[type="email"] {
-                width: 100%;
-            }
-        }
-
-        /* Continue Reading Section */
-        .continue-reading {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .continue-reading h3 {
-            font-size: 1.2rem;
-            color: #0f172a;
-            margin-bottom: 1rem;
-            margin-top: 0;
-        }
-
-        .continue-reading-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .continue-reading-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.5rem 1rem;
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            color: #0f172a;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .continue-reading-links a:hover {
-            border-color: #0d9488;
-            color: #0d9488;
-            transform: translateY(-1px);
-        }
-        
-        .feature-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .feature-card li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .feature-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #0d9488;
-            font-weight: bold;
-        }
-        
-        /* Bullets */
-        .bullets {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .bullets li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.1rem;
-        }
-        
-        .bullets li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #0d9488;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
-            color: white;
-            text-align: center;
-            border-radius: 16px;
-            padding: 4rem 2rem;
-        }
-        
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .validation-strip {
@@ -1034,42 +1020,66 @@
             }
 
             .hero h1 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
             
             .hero-subhead {
                 font-size: 1.1rem;
             }
-            
-            section h2 {
-                font-size: 1.8rem;
+
+            .hero-supporting {
+                font-size: 1rem;
             }
-            
-            .feature-grid {
+
+            .self-select-grid {
                 grid-template-columns: 1fr;
             }
 
-            .audience-qualifier ul {
+            .governance-enforces {
+                grid-template-columns: 1fr;
+            }
+
+            .use-case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-now-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-email-form {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .footer-email-form input[type="email"] {
+                width: 100%;
+            }
+
+            .email-capture-form {
+                flex-direction: column;
+            }
+
+            .email-topics {
                 flex-direction: column;
                 gap: 0.5rem;
-                text-align: left;
-            }
-
-            .pathway-ctas {
-                grid-template-columns: 1fr;
-            }
-
-            .credibility-grid {
-                grid-template-columns: 1fr;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <!-- NAVIGATION -->
-    
-    <!-- Canonical navigation – do not modify without architectural review -->
-    
     <!-- Canonical navigation – do not modify without architectural review -->
     <nav>
         <div class="nav-container">
@@ -1091,7 +1101,7 @@
                 <li><a href="/traction">Evidence</a></li>
                 <li><a href="/team">Team</a></li>
                 <li class="nav-dropdown">
-                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <span class="nav-dropdown-toggle">Company &#9662;</span>
                     <ul class="nav-dropdown-menu">
                         <li><a href="/mission">Mission</a></li>
                         <li><a href="/investment">Investment</a></li>
@@ -1104,198 +1114,225 @@
     </nav>
     <!-- End Canonical navigation -->
 
-    <!-- End Canonical navigation -->
-
-
-    <!-- Validation Strip -->
+    <!-- HARVARD VALIDATION STRIP — STAYS AT TOP -->
     <div class="validation-strip">
         <p class="validation-line1">Selected as Best Overall Capstone</p>
         <p class="validation-line2">Harvard Medical School Executive Education, "AI in Healthcare," February 2026</p>
     </div>
 
-    <!-- HERO -->
+    <!-- ============================================ -->
+    <!-- 1. NEW HERO -->
+    <!-- ============================================ -->
     <section class="hero">
-
-        
-        <h1>Safety OS™ — Governance Infrastructure for AI in the Home</h1>
-        <p class="hero-subhead">Built to preserve human authority. Scaled only when governance maturity is demonstrated.</p>
-        
-        <!-- 3-COLUMN STAKEHOLDER ROUTING GRID -->
-        <div class="routing-grid">
-            <!-- COLUMN 1: Clinical & Governance Leaders -->
-            <div class="routing-card routing-primary">
-                <p class="routing-who">AI Governance Leaders, CMIOs, Clinical Safety Officers</p>
-                <p class="routing-purpose">Establish clear clinical authority, accountability, and safety boundaries for AI used in care delivery.</p>
-                <a href="/physician-as-pilot" class="routing-cta routing-cta-primary">Explore the Physician-as-Pilot Model</a>
-            </div>
-            
-            <!-- COLUMN 2: Risk, Compliance & Architecture -->
-            <div class="routing-card routing-secondary">
-                <p class="routing-who">Risk, Compliance, and AI Oversight Teams</p>
-                <p class="routing-purpose">Understand the governance architecture, constraints, and controls required for responsible AI deployment.</p>
-                <a href="/safety-os" class="routing-cta routing-cta-secondary">View Safety OS (Governance Framework)</a>
-            </div>
-            
-            <!-- COLUMN 3: Partners, Sponsors & Strategic Collaborators -->
-            <div class="routing-card routing-tertiary">
-                <p class="routing-who">Health Systems, Research Partners, Strategic Sponsors</p>
-                <p class="routing-purpose">Collaborate on governed pilots, clinical research, and evidence-driven AI programs.</p>
-                <a href="mailto:andy@patientcentriccare.ai?subject=Governance%20Alignment%20Discussion%20Request" class="routing-cta routing-cta-tertiary">Discuss Governance Alignment & Pilots</a>
-            </div>
+        <h1>The Safety Layer for AI in Healthcare</h1>
+        <p class="hero-subhead">Safety OS&trade; ensures AI systems operate within enforceable human authority.</p>
+        <p class="hero-supporting">AI is entering homes, hospitals, and care systems.<br>No infrastructure exists to control it.</p>
+        <div class="hero-ctas">
+            <a href="/safety-os" class="cta-button">See How Safety OS Works</a>
+            <a href="#explainer-video" class="cta-button cta-button-secondary">Watch 2-Minute Explanation</a>
         </div>
     </section>
 
-    <!-- WHAT WE ACTUALLY BUILD -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem 0 2rem; text-align: center;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #0f172a;">This Is Not a Chatbot Company.</h2>
-        <p style="font-size: 1.15rem; line-height: 1.8; color: #334155;">We build runtime governance infrastructure &mdash; consent enforcement, authority boundaries, escalation control, and immutable audit logging &mdash; for AI systems deployed in private home environments.</p>
-        <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: #0f172a; border-radius: 8px; border-left: 4px solid #d4a04a;">
+    <!-- ============================================ -->
+    <!-- 2. SELF-SELECT QUESTION BLOCK -->
+    <!-- ============================================ -->
+    <div class="self-select">
+        <h2>What Are You Looking For?</h2>
+        <div class="self-select-grid">
+            <a href="/physician-as-pilot" class="self-select-btn">
+                <span class="self-select-icon">&#129658;</span>
+                <span>Deploy AI Safely in Healthcare</span>
+            </a>
+            <a href="/safety-os" class="self-select-btn">
+                <span class="self-select-icon">&#128737;</span>
+                <span>Understand AI Governance Infrastructure</span>
+            </a>
+            <a href="/home-companion" class="self-select-btn">
+                <span class="self-select-icon">&#128640;</span>
+                <span>Explore the Safety OS Platform</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 3. EXPLAINER VIDEO -->
+    <!-- ============================================ -->
+    <div class="video-section" id="explainer-video">
+        <h2>Why AI Needs Governance Infrastructure</h2>
+        <p>90 seconds. Four ideas that change how you think about AI in healthcare.</p>
+        <div class="video-placeholder" onclick="window.open('https://www.youtube.com/watch?v=PLACEHOLDER','_blank')">
+            <div class="video-play-icon">&#9654;&#65039;</div>
+            <p><strong>Coming Soon:</strong> AI Governance Explained in 90 Seconds</p>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">AI is moving from advisory to operational. Healthcare has no runtime governance. Safety OS enforces authority constraints. Home Companion proves the model.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 4. THIS IS NOT A CHATBOT -->
+    <!-- ============================================ -->
+    <div class="not-chatbot">
+        <h2>This Is Not a Chatbot</h2>
+        <p>We build runtime governance infrastructure for AI systems operating in regulated care environments.</p>
+        <div style="margin-bottom: 2rem; padding: 1.5rem 2rem; background: #0f172a; border-radius: 8px; border-left: 4px solid #d4a04a; text-align: left;">
             <p style="font-size: 0.9rem; color: #d4a04a; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.5rem;">THE 30-SECOND ANSWER</p>
-            <p style="font-size: 1.15rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">What we build:</strong> Safety OS&trade; &mdash; a runtime governance kernel that enforces authority constraints below the LLM layer.</p>
-            <p style="font-size: 1.15rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">Why it matters:</strong> AI is entering homes. No one has built the governance infrastructure to control it.</p>
-            <p style="font-size: 1.15rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">Why us:</strong> We are building the reference architecture that regulators will formalize.</p>
+            <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">What we build:</strong> Safety OS&trade; &mdash; a runtime governance kernel that enforces authority constraints below the LLM layer.</p>
+            <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">Why it matters:</strong> AI is entering homes. No one has built the governance infrastructure to control it.</p>
+            <p style="font-size: 1.1rem; color: #e2e8f0; line-height: 1.8;"><strong style="color: #fbbf24;">Why us:</strong> We are building the reference architecture that regulators will formalize.</p>
         </div>
-    </section>
+        <p style="font-size: 1rem; color: #64748b; margin-bottom: 1.5rem;">Safety OS enforces:</p>
+        <div class="governance-enforces">
+            <div class="governance-enforces-item"><span>&#10003;</span> Authority boundaries</div>
+            <div class="governance-enforces-item"><span>&#10003;</span> Escalation control</div>
+            <div class="governance-enforces-item"><span>&#10003;</span> Consent enforcement</div>
+            <div class="governance-enforces-item"><span>&#10003;</span> Immutable audit logs</div>
+        </div>
+    </div>
 
-    <!-- CLARIFIER -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0 2rem;">
-        <p style="font-size: 1.05rem; line-height: 1.8; color: #334155;">PatientCentricCare defines how AI systems safely mature in healthcare: starting non-medical, proving governance, and only expanding permissions once authority is controlled and traceable.</p>
-    </section>
+    <!-- ============================================ -->
+    <!-- 5. INTERACTIVE ARCHITECTURE -->
+    <!-- ============================================ -->
+    <div class="architecture-section">
+        <h2>How Safety OS Works</h2>
+        <p class="architecture-subtitle">Click each layer to learn more.</p>
+        <div class="architecture-stack">
+            <div class="arch-layer arch-layer-top" onclick="toggleDetail(this)">
+                <h3>Layer 1: Applications</h3>
+                <p>Home Companion &mdash; the user-facing product</p>
+                <div class="arch-detail">
+                    Home Companion is the first deployment of Safety OS. It provides conversation, medication reminders, cognitive engagement, and voice communication for seniors aging at home. It is the interface &mdash; not the product. The product is the governance underneath.
+                </div>
+            </div>
+            <div class="arch-arrow">&darr;</div>
+            <div class="arch-layer arch-layer-mid" onclick="toggleDetail(this)">
+                <h3>Layer 2: Safety OS</h3>
+                <p>The governance kernel &mdash; authority enforcement at runtime</p>
+                <div class="arch-detail">
+                    Safety OS enforces authority boundaries, escalation logic, consent constraints, and immutable audit logging for every AI interaction. It sits below the application layer and above the AI engines. No AI action executes without passing through Safety OS.
+                </div>
+            </div>
+            <div class="arch-arrow">&darr;</div>
+            <div class="arch-layer arch-layer-bot" onclick="toggleDetail(this)">
+                <h3>Layer 3: AI Engines</h3>
+                <p>LLMs and predictive models &mdash; constrained by governance</p>
+                <div class="arch-detail">
+                    The AI layer handles natural language processing, intent recognition, and predictive analytics. But every output is filtered through Safety OS before reaching the user. The AI never acts autonomously &mdash; it operates within boundaries defined by clinicians and caregivers.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 6. PERMISSIONING MODEL -->
+    <!-- ============================================ -->
+    <div class="permissioning">
+        <h2>How AI Earns Permission to Act in Healthcare</h2>
+        <div class="phase-cards">
+            <div class="phase-card">
+                <h3>Phase I &mdash; Non-Medical AI</h3>
+                <p>Human-in-the-loop systems with no clinical inference. Companionship, reminders, and structured engagement only.</p>
+            </div>
+            <div class="phase-card">
+                <h3>Phase II &mdash; SaMD-Ready, Physician Supervised</h3>
+                <p>Escalation-only execution within clinician-defined boundaries. Physician-as-Pilot governance model.</p>
+            </div>
+            <div class="phase-card">
+                <h3>Phase III &mdash; Regulated Clinical AI (SaMD)</h3>
+                <p>Licensed clinical authority with controlled inference. Full regulatory compliance and audit trail.</p>
+            </div>
+        </div>
+        <p class="invariant-statement">Invariant: Clinical authority is never delegated to AI.</p>
+    </div>
 
     <!-- GOVERNANCE SEQUENCING DIAGRAM -->
-    <section style="max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 0 2rem; text-align: center;">
-        <img src="governance-sequencing.jpeg" 
-             alt="Governance Sequencing: How Safety OS Enables SaMD Without Clinical Delegation — showing Phase I Non-Medical AI, Phase II Physician-as-Pilot, Phase III Regulated Clinical AI (SaMD), with authority maturity progression and cross-phase invariant."
-             style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-    </section>
+    <div class="governance-diagram-section">
+        <div class="governance-diagram-container">
+            <img src="governance-sequencing.jpeg" 
+                 alt="Governance Sequencing: How Safety OS Enables SaMD Without Clinical Delegation"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
 
-    <!-- THREE-PHASE ROADMAP -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem 1rem 2rem;">
-        <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0f172a;">How AI Gets Permission to Act in Healthcare</h2>
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="padding: 1.5rem; background: #f0fdfa; border-left: 4px solid #0d9488; border-radius: 8px;">
-                <h3 style="margin: 0 0 0.5rem 0; color: #0d9488; font-size: 1.2rem;">Phase I — Non-Medical AI</h3>
-                <p style="margin: 0; color: #334155;">Human-in-the-loop systems with no clinical inference.</p>
-            </div>
-            <div style="padding: 1.5rem; background: #f0fdfa; border-left: 4px solid #0d9488; border-radius: 8px;">
-                <h3 style="margin: 0 0 0.5rem 0; color: #0d9488; font-size: 1.2rem;">Phase II — SaMD-Ready, Physician Supervised</h3>
-                <p style="margin: 0; color: #334155;">Escalation-only execution within clinician-defined boundaries.</p>
-            </div>
-            <div style="padding: 1.5rem; background: #f0fdfa; border-left: 4px solid #0d9488; border-radius: 8px;">
-                <h3 style="margin: 0 0 0.5rem 0; color: #0d9488; font-size: 1.2rem;">Phase III — Regulated Clinical AI (SaMD)</h3>
-                <p style="margin: 0; color: #334155;">Licensed clinical authority with controlled inference.</p>
+    <!-- ============================================ -->
+    <!-- 7. REAL-WORLD USE CASE -->
+    <!-- ============================================ -->
+    <div class="use-case">
+        <div class="use-case-inner">
+            <p class="use-case-label">Example Deployment</p>
+            <h2>Home Companion: Aging-in-Place Support</h2>
+            <div class="use-case-grid">
+                <div class="use-case-col">
+                    <h3>Seniors Receive</h3>
+                    <ul>
+                        <li>Conversational companionship</li>
+                        <li>Medication reminders</li>
+                        <li>Cognitive engagement activities</li>
+                        <li>Voice communication with family</li>
+                    </ul>
+                </div>
+                <div class="use-case-col">
+                    <h3>Safety OS Ensures</h3>
+                    <ul>
+                        <li>No diagnosis or clinical advice</li>
+                        <li>No autonomous clinical decisions</li>
+                        <li>Clinician authority preserved</li>
+                        <li>Immutable audit trail for every interaction</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <!-- INVARIANT STATEMENT -->
-        <p style="margin-top: 2rem; font-size: 1.15rem; font-weight: 700; color: #0f172a; text-align: center; padding: 1rem; background: #fef3c7; border-radius: 8px;">Invariant: Clinical authority is never delegated to AI.</p>
+    </div>
 
-        <!-- BELOW-FOLD DUAL CTAs -->
-        <div style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <div style="text-align: center;">
-                <p style="font-size: 1rem; color: #334155; margin-bottom: 0.5rem;">Explore how governance sequences decision authority:</p>
-                <a href="/clinical-ai-governance" style="color: #0d9488; font-weight: 600; font-size: 1.05rem; text-decoration: none;">&rarr; Learn About Phased Permissioning</a>
+    <!-- ============================================ -->
+    <!-- 8. WHY NOW -->
+    <!-- ============================================ -->
+    <div class="why-now">
+        <h2>Why AI Governance Infrastructure Must Exist Now</h2>
+        <div class="why-now-grid">
+            <div class="why-now-card">
+                <h3>AI Adoption</h3>
+                <p>AI is entering clinical workflows, home care, and patient-facing systems at unprecedented speed.</p>
             </div>
-            <div style="text-align: center;">
-                <p style="font-size: 1rem; color: #334155; margin-bottom: 0.5rem;">See how execution remains clinician-governed:</p>
-                <a href="/physician-as-pilot" style="color: #0d9488; font-weight: 600; font-size: 1.05rem; text-decoration: none;">&rarr; See Physician-as-Pilot in Action</a>
+            <div class="why-now-card">
+                <h3>Regulation</h3>
+                <p>EU AI Act, FDA SaMD oversight, and UK MHRA frameworks are creating mandatory governance requirements.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Physician-as-Pilot diagram removed — lives on /physician-as-pilot and /clinical-ai-governance -->
-
-    <!-- CREDIBILITY SIGNALS -->
-    <section>
-        <h2>What Makes This Different</h2>
-        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155; max-width: 900px; margin-bottom: 2rem;">Unlike most AI approaches that optimize capability first and add governance later, Safety OS™ treats authority, enforcement, and auditability as infrastructure.<br><br>Governance is enforced at runtime, refusals are logged, escalations are attributable, and evidence is generated continuously — not retroactively.</p>
-        <div class="credibility-grid">
-            <a href="/physician-as-pilot" class="credibility-card credibility-card-link">
-                <h3>Physician-as-Pilot</h3>
-                <p>A regulatory-grade framework that ensures clinicians retain control over AI-enabled care, preventing unintended automation and preserving human authority.</p>
-                <span class="card-explore">Explore framework &rarr;</span>
-            </a>
-            <a href="/safety-os" class="credibility-card credibility-card-link">
-                <h3>Safety OS</h3>
-                <p>The core governance layer that enforces clinical boundaries, manages escalation pathways, and provides an immutable audit trail for all AI-assisted actions.</p>
-                <span class="card-explore">View architecture &rarr;</span>
-            </a>
-            <a href="/home-companion" class="credibility-card credibility-card-link">
-                <h3>Use Case: Post-Acute Rehabilitation</h3>
-                <p>Supporting patients at home with protocol-driven exercise reminders and progress monitoring, without providing clinical feedback or diagnosis.</p>
-                <span class="card-explore">See Phase 1 deployment &rarr;</span>
-            </a>
-            <a href="/standards/hybrid-human-agent-operating-standard" class="credibility-card credibility-card-link">
-                <h3>Prohibited Functions</h3>
-                <p>Our systems are architecturally prohibited from performing diagnosis, prognosis, treatment recommendations, or any form of autonomous clinical decision-making.</p>
-                <span class="card-explore">Read the governance standard &rarr;</span>
-            </a>
-        </div>
-
-        <!-- CTA SECTION -->
-        <div style="text-align: center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="/clinical-ai-governance" class="cta-button" style="display: inline-block;">Learn About Phased Permissioning</a>
-            <a href="/physician-as-pilot" class="cta-button" style="display: inline-block; background: transparent; color: #0f172a; border: 2px solid #0f172a; box-shadow: none;">See Physician-as-Pilot in Action</a>
-        </div>
-    </section>
-
-
-    <!-- GOVERNANCE ARTIFACTS - Surface key downloads on homepage -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0 2rem;">
-        <div class="governance-artifacts">
-            <h3>Governance Artifacts &amp; Documentation</h3>
-            <p class="artifacts-subtitle">Download the frameworks, templates, and reference architectures behind Safety OS.</p>
-            <div class="artifacts-grid">
-                <a href="/home-companion" class="artifact-card">
-                    <span class="artifact-icon">&#128196;</span>
-                    <div>
-                        <h4>Executive Overview</h4>
-                        <p>Product, impact thesis, and deployment model</p>
-                    </div>
-                </a>
-                <a href="/standards/hybrid-human-agent-operating-standard" class="artifact-card">
-                    <span class="artifact-icon">&#128220;</span>
-                    <div>
-                        <h4>Human-Agent Teaming Standard</h4>
-                        <p>Full governance standard with templates</p>
-                    </div>
-                </a>
-                <a href="/traction" class="artifact-card">
-                    <span class="artifact-icon">&#128200;</span>
-                    <div>
-                        <h4>Evidence &amp; Milestones</h4>
-                        <p>Governance maturity progression and traction</p>
-                    </div>
-                </a>
+            <div class="why-now-card">
+                <h3>Liability</h3>
+                <p>Organizations deploying AI need enforceable control, audit trails, and clear authority boundaries to manage risk.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- EMAIL CAPTURE -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0 2rem;">
+    <!-- ============================================ -->
+    <!-- 9. SIMPLIFIED TRIPLE CTA -->
+    <!-- ============================================ -->
+    <div class="triple-cta">
+        <h2>Explore the Governance Architecture</h2>
+        <div class="triple-cta-grid">
+            <a href="/safety-os" style="background: #E6A23C; color: #0f172a;">Explore Safety OS</a>
+            <a href="#explainer-video" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5);">Watch Explainer</a>
+            <a href="/traction" style="background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5);">Download Governance Brief</a>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 10. EMAIL CAPTURE (REWRITTEN) -->
+    <!-- ============================================ -->
+    <section style="max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem;">
         <div class="email-capture">
-            <h3>Stay Informed on Clinical AI Governance</h3>
-            <p>Governance frameworks, regulatory updates, and Safety OS development - delivered to decision-makers who shape how AI enters healthcare.</p>
+            <h3>Stay Ahead of Clinical AI Governance</h3>
+            <p>Monthly briefing for healthcare leaders on:</p>
+            <ul class="email-topics">
+                <li>AI regulation</li>
+                <li>Governance frameworks</li>
+                <li>Safety infrastructure</li>
+            </ul>
             <form class="email-capture-form" name="newsletter" method="POST" data-netlify="true" action="/thank-you">
                 <input type="hidden" name="form-name" value="newsletter">
                 <input type="email" name="email" placeholder="your@email.com" required>
                 <button type="submit">Subscribe</button>
             </form>
             <p class="privacy-note">No spam. Governance-only updates. Unsubscribe anytime.</p>
-        </div>
-    </section>
-
-    <!-- CONTINUE READING -->
-    <section style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 2rem 2rem;">
-        <div class="continue-reading">
-            <h3>Continue Reading</h3>
-            <div class="continue-reading-links">
-                <a href="/physician-as-pilot">&rarr; Physician-as-Pilot</a>
-                <a href="/standards/hybrid-human-agent-operating-standard">&rarr; Governance Standard</a>
-                <a href="/safety-os">&rarr; Safety OS Architecture</a>
-                <a href="/home-companion">&rarr; Phase 1 Deployment</a>
-                <a href="/traction">&rarr; Evidence &amp; Milestones</a>
-                <a href="/team">&rarr; Team</a>
-            </div>
         </div>
     </section>
 
@@ -1344,9 +1381,6 @@
             const navLinks = document.getElementById('navLinks');
             if (navLinks) {
                 navLinks.classList.toggle('active');
-                console.log('Mobile menu toggled. Active:', navLinks.classList.contains('active'));
-            } else {
-                console.error('navLinks element not found');
             }
         }
 
@@ -1364,31 +1398,17 @@
             }
         });
 
-        // Lightbox functions
-        function openLightbox() {
-            document.getElementById('lightboxOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(event) {
-            if (event.target === document.getElementById('lightboxOverlay') || 
-                event.target.classList.contains('lightbox-close')) {
-                document.getElementById('lightboxOverlay').classList.remove('active');
-                document.body.style.overflow = '';
+        // Interactive architecture layers
+        function toggleDetail(layer) {
+            const detail = layer.querySelector('.arch-detail');
+            if (detail) {
+                // Close all other details
+                document.querySelectorAll('.arch-detail.active').forEach(function(d) {
+                    if (d !== detail) d.classList.remove('active');
+                });
+                detail.classList.toggle('active');
             }
         }
-
-        // Close lightbox on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.getElementById('lightboxOverlay').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-
-
-
     </script>
 </body>
 </html>
