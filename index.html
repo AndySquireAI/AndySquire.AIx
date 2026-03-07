@@ -297,6 +297,196 @@
             padding: 4rem 2rem;
             text-align: center;
         }
+
+        /* Stakeholder Videos Section */
+        .stakeholder-videos {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+        }
+
+        .stakeholder-videos h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .stakeholder-videos-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        .stakeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stakeholder-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stakeholder-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .stakeholder-video-slot {
+            background: #0f172a;
+            aspect-ratio: 16/9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .stakeholder-video-slot .play-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(13, 148, 136, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .stakeholder-card:hover .play-btn {
+            background: #0d9488;
+        }
+
+        .stakeholder-video-slot .play-btn span {
+            color: white;
+            font-size: 1.2rem;
+            margin-left: 3px;
+        }
+
+        .stakeholder-video-slot .coming-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .stakeholder-card-body {
+            padding: 1.25rem;
+        }
+
+        .stakeholder-audience {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #0d9488;
+            margin-bottom: 0.5rem;
+        }
+
+        .stakeholder-card-body h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .stakeholder-card-body p {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+        .stakeholder-keyline {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #0f172a;
+            font-weight: 600;
+            border-left: 3px solid #0d9488;
+            padding-left: 0.75rem;
+        }
+
+        /* Animated 3-Layer Diagram */
+        .animated-stack {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: #0f172a;
+        }
+
+        .animated-stack-inner {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .stack-block {
+            padding: 1.25rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: stackFadeIn 0.6s ease forwards;
+        }
+
+        .stack-block-top {
+            background: #e2e8f0;
+            color: #0f172a;
+            animation-delay: 0.3s;
+        }
+
+        .stack-block-mid {
+            background: #0d9488;
+            color: white;
+            animation-delay: 0.9s;
+        }
+
+        .stack-block-bot {
+            background: #fef3c7;
+            color: #0f172a;
+            animation-delay: 1.5s;
+        }
+
+        .stack-arrow {
+            font-size: 1.5rem;
+            color: #64748b;
+            padding: 0.5rem 0;
+            opacity: 0;
+            animation: stackFadeIn 0.4s ease forwards;
+        }
+
+        .stack-arrow-1 { animation-delay: 0.6s; }
+        .stack-arrow-2 { animation-delay: 1.2s; }
+
+        .stack-caption {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            color: #94a3b8;
+            opacity: 0;
+            animation: stackFadeIn 0.6s ease forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes stackFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stakeholder-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         
         .hero h1 {
             font-size: 2.8rem;
@@ -1121,20 +1311,46 @@
     </div>
 
     <!-- ============================================ -->
-    <!-- 1. NEW HERO -->
+    <!-- 1. SHARPENED HERO -->
     <!-- ============================================ -->
     <section class="hero">
-        <h1>The Safety Layer for AI in Healthcare</h1>
-        <p class="hero-subhead">Safety OS&trade; ensures AI systems operate within enforceable human authority.</p>
-        <p class="hero-supporting">AI is entering homes, hospitals, and care systems.<br>No infrastructure exists to control it.</p>
+        <h1>AI is entering healthcare.<br>Safety OS ensures it operates within human authority.</h1>
+        <p class="hero-subhead">Governance infrastructure for AI systems operating in homes, hospitals, and care environments.</p>
+        <p class="hero-supporting">No runtime governance layer exists today. We are building it.</p>
         <div class="hero-ctas">
             <a href="/safety-os" class="cta-button">See How Safety OS Works</a>
-            <a href="#explainer-video" class="cta-button cta-button-secondary">Watch 2-Minute Explanation</a>
+            <a href="#explainer-video" class="cta-button cta-button-secondary">Watch 90-Second Explanation</a>
         </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- 2. SELF-SELECT QUESTION BLOCK -->
+    <!-- 2. HOMEPAGE VIDEO — IMMEDIATELY AFTER HERO -->
+    <!-- ============================================ -->
+    <div class="video-section" id="explainer-video">
+        <h2>Why AI Needs Governance Infrastructure</h2>
+        <p>90 seconds. The problem, the risk, and the architecture that solves it.</p>
+        <div class="video-placeholder" id="mainVideoSlot">
+            <div class="video-play-icon">&#9654;&#65039;</div>
+            <p><strong>Video: AI Governance Explained in 90 Seconds</strong></p>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">AI is moving from advisory to operational. Healthcare has no runtime governance. Safety OS enforces authority constraints. Home Companion proves the model.</p>
+            <p style="font-size: 0.8rem; color: #475569; margin-top: 0.75rem;"><em>Synthesia video placeholder &mdash; embed URL here when ready</em></p>
+        </div>
+    </div>
+
+    <!-- ANIMATED 3-LAYER STACK DIAGRAM -->
+    <div class="animated-stack">
+        <div class="animated-stack-inner">
+            <div class="stack-block stack-block-top">AI Systems</div>
+            <div class="stack-arrow stack-arrow-1">&darr;</div>
+            <div class="stack-block stack-block-mid">Safety OS&trade;</div>
+            <div class="stack-arrow stack-arrow-2">&darr;</div>
+            <div class="stack-block stack-block-bot">Human Authority</div>
+        </div>
+        <p class="stack-caption">The governance layer that doesn&rsquo;t exist yet. We are building it.</p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 3. SELF-SELECT QUESTION BLOCK -->
     <!-- ============================================ -->
     <div class="self-select">
         <h2>What Are You Looking For?</h2>
@@ -1155,15 +1371,51 @@
     </div>
 
     <!-- ============================================ -->
-    <!-- 3. EXPLAINER VIDEO -->
+    <!-- STAKEHOLDER-SPECIFIC VIDEOS -->
     <!-- ============================================ -->
-    <div class="video-section" id="explainer-video">
-        <h2>Why AI Needs Governance Infrastructure</h2>
-        <p>90 seconds. Four ideas that change how you think about AI in healthcare.</p>
-        <div class="video-placeholder" onclick="window.open('https://www.youtube.com/watch?v=PLACEHOLDER','_blank')">
-            <div class="video-play-icon">&#9654;&#65039;</div>
-            <p><strong>Coming Soon:</strong> AI Governance Explained in 90 Seconds</p>
-            <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">AI is moving from advisory to operational. Healthcare has no runtime governance. Safety OS enforces authority constraints. Home Companion proves the model.</p>
+    <div class="stakeholder-videos">
+        <h2>See How Safety OS Applies to Your Role</h2>
+        <p class="stakeholder-videos-subtitle">60-second briefings for the audiences that matter most.</p>
+        <div class="stakeholder-grid">
+            <!-- Video 2: Regulators -->
+            <div class="stakeholder-card">
+                <div class="stakeholder-video-slot" id="videoRegulators">
+                    <div class="play-btn"><span>&#9654;</span></div>
+                    <span class="coming-label">Coming Soon</span>
+                </div>
+                <div class="stakeholder-card-body">
+                    <p class="stakeholder-audience">Regulators &amp; Governance Leaders</p>
+                    <h3>How AI Becomes Governable</h3>
+                    <p>Accountability, audit trails, and enforceable human authority at runtime.</p>
+                    <p class="stakeholder-keyline">&ldquo;Safety OS makes AI systems auditable, accountable, and governable at scale.&rdquo;</p>
+                </div>
+            </div>
+            <!-- Video 3: Pharma -->
+            <div class="stakeholder-card">
+                <div class="stakeholder-video-slot" id="videoPharma">
+                    <div class="play-btn"><span>&#9654;</span></div>
+                    <span class="coming-label">Coming Soon</span>
+                </div>
+                <div class="stakeholder-card-body">
+                    <p class="stakeholder-audience">Pharma &amp; Patient Advocacy</p>
+                    <h3>Safe AI for Patient Support Programs</h3>
+                    <p>Alzheimer&rsquo;s support, adherence monitoring, and governed patient engagement at home.</p>
+                    <p class="stakeholder-keyline">&ldquo;Home Companion allows pharma patient programs to support patients at home while ensuring safety and accountability.&rdquo;</p>
+                </div>
+            </div>
+            <!-- Video 4: Hospitals -->
+            <div class="stakeholder-card">
+                <div class="stakeholder-video-slot" id="videoHospitals">
+                    <div class="play-btn"><span>&#9654;</span></div>
+                    <span class="coming-label">Coming Soon</span>
+                </div>
+                <div class="stakeholder-card-body">
+                    <p class="stakeholder-audience">Hospitals &amp; Clinicians</p>
+                    <h3>AI That Assists Without Replacing Clinical Authority</h3>
+                    <p>Clinician authority preserved. Escalation rules enforced. Decision boundaries defined.</p>
+                    <p class="stakeholder-keyline">&ldquo;Safety OS ensures AI assists clinicians without replacing clinical authority.&rdquo;</p>
+                </div>
+            </div>
         </div>
     </div>
 
