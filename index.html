@@ -1341,10 +1341,185 @@
         </div>
     </div>
 
-    <!-- THREE-LAYER PLATFORM VISUAL -->
-    <div style="background: #0f1729; padding: 3rem 2rem; text-align: center;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            <img src="SafetyOS-ThreeLayer-Stack.png" alt="Safety OS three-layer platform: Applications, AI Systems, and Safety OS governance stack" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.4);">
+    <!-- INTERACTIVE SAFETY OS TOGGLE DIAGRAM -->
+    <div id="governance-toggle" style="background: #0f1729; padding: 3rem 1rem;">
+        <div style="max-width: 520px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <p style="color: #94a3b8; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.5rem 0;">PATIENTCENTRICCARE.AI &middot; SAFETY OS&trade;</p>
+                <h2 style="color: white; font-size: 1.6rem; margin: 0 0 0.25rem 0; font-weight: 700;">AI Runtime <span style="color: #E87722;">Governance</span> Architecture</h2>
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tap to compare &mdash; Without vs. With Safety OS&trade;</p>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div style="display: flex; justify-content: center; gap: 0; margin-bottom: 0.5rem;">
+                <button id="btn-without" onclick="showView('without')" style="flex: 1; max-width: 200px; padding: 0.7rem 1rem; font-size: 0.9rem; font-weight: 700; border: none; cursor: pointer; border-radius: 8px 0 0 8px; background: #E87722; color: white; transition: all 0.3s;">&times; Without Safety OS&trade;</button>
+                <button id="btn-with" onclick="showView('with')" style="flex: 1; max-width: 200px; padding: 0.7rem 1rem; font-size: 0.9rem; font-weight: 700; border: none; cursor: pointer; border-radius: 0 8px 8px 0; background: #1e293b; color: #94a3b8; transition: all 0.3s;">&check; With Safety OS&trade;</button>
+            </div>
+            <p style="text-align: center; color: #64748b; font-size: 0.75rem; margin: 0 0 1.5rem 0;">&mdash; swipe or tap to toggle &mdash;</p>
+
+            <!-- WITHOUT Safety OS View -->
+            <div id="view-without" style="display: block;">
+                <div style="border: 2px dashed #E87722; border-radius: 12px; padding: 1.5rem; background: #111827;">
+                    <!-- Sub-header -->
+                    <p style="color: #94a3b8; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin: 0 0 0.25rem 0;">PATIENTCENTRICCARE.AI &middot; PHYSICIAN-AS-PILOT&trade;</p>
+                    <h3 style="color: white; font-size: 1.3rem; text-align: center; margin: 0 0 0.15rem 0;">AI Executes. <span style="color: #E87722;">Humans Define Authority.</span></h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; text-align: center; margin: 0 0 1.25rem 0;">Without Safety OS&trade; &mdash; The Governance Gap</p>
+
+                    <!-- Human Layer -->
+                    <div style="background: white; border: 2px solid #d1d5db; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
+                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.15rem 0;">HUMAN LAYER</p>
+                        <p style="color: #6b7280; font-size: 0.7rem; margin: 0 0 0.75rem 0;">Traditional HITL Oversight Model</p>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                            <div style="text-align: center;">
+                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#129658;</div>
+                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Physician</p>
+                            </div>
+                            <div style="text-align: center; max-width: 160px;">
+                                <p style="color: #1a1a2e; font-size: 0.8rem; margin: 0 0 0.15rem 0;">Human authority defines boundaries.</p>
+                                <p style="color: #dc2626; font-size: 0.8rem; font-weight: 700; margin: 0;">Nothing enforces them.</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#128100;</div>
+                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Patient</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Authority Boundary -->
+                    <div style="text-align: center; padding: 0.15rem 0;">
+                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- AUTHORITY BOUNDARY ---</p>
+                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
+                    </div>
+
+                    <!-- GAP - Missing Governance -->
+                    <div style="background: #1a1a2e; border: 3px dashed #E87722; border-radius: 8px; padding: 1rem; text-align: center; margin-bottom: 0.25rem; position: relative;">
+                        <span style="position: absolute; top: 6px; right: 8px; background: #E87722; color: white; font-size: 0.55rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">GAP</span>
+                        <p style="color: #ef4444; font-size: 1.3rem; margin: 0 0 0.25rem 0;">&times;</p>
+                        <p style="color: white; font-size: 1rem; font-weight: 700; margin: 0 0 0.25rem 0;">No Enforceable Governance Layer</p>
+                        <p style="color: #E87722; font-size: 0.75rem; margin: 0;">Human intent cannot be enforced at runtime &middot; Missing runtime governance</p>
+                    </div>
+
+                    <!-- Control Boundary -->
+                    <div style="text-align: center; padding: 0.15rem 0;">
+                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- CONTROL BOUNDARY ---</p>
+                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
+                    </div>
+
+                    <!-- AI System -->
+                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem;">
+                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">AI SYSTEM</p>
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <div style="width: 36px; height: 36px; background: #e5e7eb; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#129302;</div>
+                            <div>
+                                <p style="color: #dc2626; font-size: 0.85rem; font-weight: 700; margin: 0 0 0.25rem 0;">AI operates without enforceable authority</p>
+                                <p style="color: #6b7280; font-size: 0.75rem; margin: 0;">&#9888; No runtime governance<br>&#9888; No escalation path<br>&#9888; No audit trail</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div style="background: #0d6b6b; padding: 0.6rem; border-radius: 0 0 8px 8px; text-align: center; margin-top: -2px;">
+                    <p style="color: white; font-size: 0.8rem; font-weight: 700; margin: 0;">Clinical authority is never delegated to AI.</p>
+                </div>
+                <p style="color: #64748b; font-size: 0.6rem; text-align: center; margin: 0.5rem 0 0 0;">&copy; 2026 PatientCentricCare.AI. Safety OS&trade; and Physician-as-Pilot&trade; are trademarks.</p>
+            </div>
+
+            <!-- WITH Safety OS View -->
+            <div id="view-with" style="display: none;">
+                <div style="border: 2px solid #0d6b6b; border-radius: 12px; padding: 1.5rem; background: #111827;">
+                    <!-- Sub-header -->
+                    <p style="color: #94a3b8; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin: 0 0 0.25rem 0;">PATIENTCENTRICCARE.AI &middot; PHYSICIAN-AS-PILOT&trade;</p>
+                    <h3 style="color: white; font-size: 1.3rem; text-align: center; margin: 0 0 0.15rem 0;">AI Executes. <span style="color: #E87722;">Humans Govern.</span></h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; text-align: center; margin: 0 0 1.25rem 0;">With Safety OS&trade; &mdash; Governance Middleware Active</p>
+
+                    <!-- Human Layer -->
+                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
+                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.15rem 0;">HUMAN LAYER</p>
+                        <p style="color: #6b7280; font-size: 0.7rem; margin: 0 0 0.75rem 0;">AIITL &middot; Physician-as-Pilot&trade;</p>
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                            <div style="text-align: center;">
+                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#129658;</div>
+                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Physician</p>
+                            </div>
+                            <div style="text-align: center; max-width: 180px;">
+                                <p style="color: #1a1a2e; font-size: 0.8rem; margin: 0 0 0.25rem 0;">Humans set boundaries. AI operates within them.</p>
+                                <div style="display: flex; gap: 0.25rem; justify-content: center; flex-wrap: wrap;">
+                                    <span style="background: #e0f2fe; color: #0369a1; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Clinical Authority</span>
+                                    <span style="background: #e0f2fe; color: #0369a1; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Patient Consent</span>
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#127975;</div>
+                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Institution</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Authority Boundary -->
+                    <div style="text-align: center; padding: 0.15rem 0;">
+                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- AUTHORITY BOUNDARY ---</p>
+                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
+                    </div>
+
+                    <!-- Safety OS - Active -->
+                    <div style="background: #1a1a2e; border: 3px solid #E87722; border-radius: 8px; padding: 1rem; text-align: center; margin-bottom: 0.25rem; position: relative;">
+                        <span style="position: absolute; top: 6px; right: 8px; background: #16a34a; color: white; font-size: 0.55rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">&#10003; ACTIVE</span>
+                        <p style="color: #94a3b8; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 0.25rem 0;">RUNTIME GOVERNANCE INFRASTRUCTURE</p>
+                        <p style="color: #E87722; font-size: 1.2rem; font-weight: 800; margin: 0 0 0.5rem 0;">Safety OS&trade;</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: center; margin-bottom: 0.5rem;">
+                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#128274; Consent Scope</span>
+                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#8593; Escalation Pathways</span>
+                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#128203; Immutable Audit Log</span>
+                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#10084; Runtime Guardrails</span>
+                        </div>
+                        <p style="color: #94a3b8; font-size: 0.7rem; margin: 0;">Enforces consent scope, escalation, and audit at runtime.</p>
+                    </div>
+
+                    <!-- Control Boundary -->
+                    <div style="text-align: center; padding: 0.15rem 0;">
+                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- CONTROL BOUNDARY ---</p>
+                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
+                    </div>
+
+                    <!-- AI System -->
+                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
+                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">AI SYSTEM</p>
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <div style="width: 36px; height: 36px; background: #e5e7eb; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#129302;</div>
+                            <div>
+                                <p style="color: #0d6b6b; font-size: 0.85rem; font-weight: 700; margin: 0 0 0.15rem 0;">Executes within enforceable authority boundaries</p>
+                                <p style="color: #16a34a; font-size: 0.7rem; font-weight: 600; margin: 0 0 0.25rem 0;">&#10003; GOVERNED &middot; AUDITABLE &middot; BOUNDED</p>
+                            </div>
+                            <span style="background: #0d6b6b; color: white; font-size: 0.55rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; white-space: nowrap;">Governed Runtime</span>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div style="text-align: center; padding: 0.15rem 0;">
+                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
+                    </div>
+
+                    <!-- Patient -->
+                    <div style="background: #fff7ed; border: 2px solid #E87722; border-radius: 8px; padding: 1rem;">
+                        <p style="color: #E87722; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">PATIENT</p>
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <div style="width: 36px; height: 36px; background: #fed7aa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#128100;</div>
+                            <div>
+                                <p style="color: #1a1a2e; font-size: 0.8rem; font-weight: 600; margin: 0 0 0.15rem 0;">AI cannot interact with patients without passing through the governance layer.</p>
+                                <p style="color: #E87722; font-size: 0.7rem; font-weight: 600; margin: 0;">Every interaction: consented, governed &amp; logged.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div style="background: #0d6b6b; padding: 0.6rem; border-radius: 0 0 8px 8px; text-align: center; margin-top: -2px;">
+                    <p style="color: white; font-size: 0.8rem; font-weight: 700; margin: 0;">Clinical authority is never delegated to AI.</p>
+                </div>
+                <p style="color: #64748b; font-size: 0.6rem; text-align: center; margin: 0.5rem 0 0 0;">&copy; 2026 PatientCentricCare.AI. Safety OS&trade; and Physician-as-Pilot&trade; are trademarks.</p>
+            </div>
         </div>
     </div>
 
@@ -1439,69 +1614,7 @@
         </div>
     </div>
 
-    <!-- ============================================ -->
-    <!-- 5. INTERACTIVE ARCHITECTURE -->
-    <!-- ============================================ -->
-    <div class="architecture-section">
-        <h2>How Safety OS Works</h2>
-        <p class="architecture-subtitle">Click each layer to learn more.</p>
-        <div class="architecture-stack">
-            <div class="arch-layer arch-layer-top" onclick="toggleDetail(this)">
-                <h3>Layer 1: Applications</h3>
-                <p>Home Companion &mdash; the user-facing product</p>
-                <div class="arch-detail">
-                    Home Companion is the first deployment of Safety OS. It provides conversation, medication reminders, cognitive engagement, and voice communication for seniors aging at home. It is the interface &mdash; not the product. The product is the governance underneath.
-                </div>
-            </div>
-            <div class="arch-arrow">&darr;</div>
-            <div class="arch-layer arch-layer-mid" onclick="toggleDetail(this)">
-                <h3>Layer 2: Safety OS</h3>
-                <p>The governance kernel &mdash; authority enforcement at runtime</p>
-                <div class="arch-detail">
-                    Safety OS enforces authority boundaries, escalation logic, consent constraints, and immutable audit logging for every AI interaction. It sits below the application layer and above the AI engines. No AI action executes without passing through Safety OS.
-                </div>
-            </div>
-            <div class="arch-arrow">&darr;</div>
-            <div class="arch-layer arch-layer-bot" onclick="toggleDetail(this)">
-                <h3>Layer 3: AI Engines</h3>
-                <p>LLMs and predictive models &mdash; constrained by governance</p>
-                <div class="arch-detail">
-                    The AI layer handles natural language processing, intent recognition, and predictive analytics. But every output is filtered through Safety OS before reaching the user. The AI never acts autonomously &mdash; it operates within boundaries defined by clinicians and caregivers.
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- ============================================ -->
-    <!-- 6. PERMISSIONING MODEL -->
-    <!-- ============================================ -->
-    <div class="permissioning">
-        <h2>How AI Earns Permission to Act in Healthcare</h2>
-        <div class="phase-cards">
-            <div class="phase-card">
-                <h3>Phase I &mdash; Non-Medical AI</h3>
-                <p>Human-in-the-loop systems with no clinical inference. Companionship, reminders, and structured engagement only.</p>
-            </div>
-            <div class="phase-card">
-                <h3>Phase II &mdash; SaMD-Ready, Physician Supervised</h3>
-                <p>Escalation-only execution within clinician-defined boundaries. Physician-as-Pilot governance model.</p>
-            </div>
-            <div class="phase-card">
-                <h3>Phase III &mdash; Regulated Clinical AI (SaMD)</h3>
-                <p>Licensed clinical authority with controlled inference. Full regulatory compliance and audit trail.</p>
-            </div>
-        </div>
-        <p class="invariant-statement">Invariant: Clinical authority is never delegated to AI.</p>
-    </div>
-
-    <!-- GOVERNANCE SEQUENCING DIAGRAM -->
-    <div class="governance-diagram-section">
-        <div class="governance-diagram-container">
-            <img src="governance-sequencing.jpeg" 
-                 alt="Governance Sequencing: How Safety OS Enables SaMD Without Clinical Delegation"
-                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-        </div>
-    </div>
 
     <!-- ============================================ -->
     <!-- 7. REAL-WORLD USE CASE -->
@@ -1649,17 +1762,46 @@
             }
         });
 
-        // Interactive architecture layers
-        function toggleDetail(layer) {
-            const detail = layer.querySelector('.arch-detail');
-            if (detail) {
-                // Close all other details
-                document.querySelectorAll('.arch-detail.active').forEach(function(d) {
-                    if (d !== detail) d.classList.remove('active');
-                });
-                detail.classList.toggle('active');
+        // Interactive governance toggle
+        function showView(view) {
+            var viewWithout = document.getElementById('view-without');
+            var viewWith = document.getElementById('view-with');
+            var btnWithout = document.getElementById('btn-without');
+            var btnWith = document.getElementById('btn-with');
+            if (view === 'without') {
+                viewWithout.style.display = 'block';
+                viewWith.style.display = 'none';
+                btnWithout.style.background = '#E87722';
+                btnWithout.style.color = 'white';
+                btnWith.style.background = '#1e293b';
+                btnWith.style.color = '#94a3b8';
+            } else {
+                viewWithout.style.display = 'none';
+                viewWith.style.display = 'block';
+                btnWith.style.background = '#0d6b6b';
+                btnWith.style.color = 'white';
+                btnWithout.style.background = '#1e293b';
+                btnWithout.style.color = '#94a3b8';
             }
         }
+
+        // Add swipe support for toggle
+        (function() {
+            var toggleEl = document.getElementById('governance-toggle');
+            if (!toggleEl) return;
+            var startX = 0;
+            toggleEl.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+            });
+            toggleEl.addEventListener('touchend', function(e) {
+                var endX = e.changedTouches[0].clientX;
+                var diff = endX - startX;
+                if (Math.abs(diff) > 50) {
+                    if (diff < 0) showView('with');
+                    else showView('without');
+                }
+            });
+        })();
     </script>
 </body>
 </html>
