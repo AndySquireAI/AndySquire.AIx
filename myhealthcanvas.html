@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>MyHealthCanvas PDF Forms — Andy Squire AI</title>
+    <meta name="title" content="MyHealthCanvas PDF Forms — Andy Squire AI" />
+    <meta name="description" content="Empowering patients with gentle, easy-to-use health forms that improve communication with medical teams. Updated with patient-friendly language. Choose between Current Plan (£9) and Complete Plan (£12)." />
+    <meta name="keywords" content="MyHealthCanvas, Patient Communication, Health Forms, PDF Forms, Healthcare, Patient Empowerment, Cancer Research" />
+    <meta name="author" content="Andy Squire" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://patientcentriccare.ai/myhealthcanvas" />
+    <meta property="og:title" content="MyHealthCanvas PDF Forms — Andy Squire AI" />
+    <meta property="og:description" content="Empowering patients with gentle, easy-to-use health forms. Updated with patient-friendly language. Current Plan £9, Complete Plan £12." />
+    <meta property="og:image" content="https://patientcentriccare.ai/MyHealthCanvas-Preview-Cream.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://patientcentriccare.ai/myhealthcanvas" />
+    <meta property="twitter:title" content="MyHealthCanvas PDF Forms — Andy Squire AI" />
+    <meta property="twitter:description" content="Empowering patients with gentle, easy-to-use health forms. Updated with patient-friendly language. Current Plan £9, Complete Plan £12." />
+    <meta property="twitter:image" content="https://patientcentriccare.ai/MyHealthCanvas-Preview-Cream.jpg" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Google Analytics
+      gtag('config', 'G-8XGFG9VW9Z');
+      
+      // Google Ads Account 1
+      gtag('config', 'AW-17939692705');
+      
+      // Google Ads Account 2
+    </script>
+
+    <!-- Conversion Tracking Functions -->
+    <script>
+      // MyHealthCanvas Current Plan (£9) Purchase Tracking
+      function trackMyHealthCanvasCurrentPurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/DBeJCJPqvqQbENHyrZBA',  // Correct conversion ID for starter kit
+          'value': 9.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_CURRENT_' + Date.now()
+        });
+        console.log('MyHealthCanvas Current Plan purchase tracked');
+      }
+
+      // MyHealthCanvas Complete Plan (£12) Purchase Tracking
+      function trackMyHealthCanvasCompletePurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/86auCO79yKQbENHyrZBA',  // Correct conversion ID for complete plan
+          'value': 12.00,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_COMPLETE_' + Date.now()
+        });
+        console.log('MyHealthCanvas Complete Plan purchase tracked');
+      }
+
+      // Generic MyHealthCanvas Purchase Tracking (fallback)
+      function trackMyHealthCanvasPurchase() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17939692705/sEzbCKPf2e0aENHyrZBA',
+          'value': 10.50,
+          'currency': 'GBP',
+          'transaction_id': 'MHC_GENERIC_' + Date.now()
+        });
+        console.log('MyHealthCanvas generic purchase tracked');
+      }
+
+      // Enhanced MyHealthCanvas Current Plan Tracking
+      function trackEnhancedMyHealthCanvasCurrentPurchase() {
+        gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHC_ENH_CURRENT_' + Date.now(),
+          'value': 9.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_CURRENT',
+            'item_name': 'MyHealthCanvas Current Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 9.00
+          }]
+        });
+        console.log('Enhanced MyHealthCanvas Current Plan purchase tracked');
+      }
+
+      // Enhanced MyHealthCanvas Complete Plan Tracking
+      function trackEnhancedMyHealthCanvasCompletePurchase() {
+        gtag('event', 'purchase', {
+          'send_to': 'AW-17939692705',
+          'transaction_id': 'MHC_ENH_COMPLETE_' + Date.now(),
+          'value': 12.00,
+          'currency': 'GBP',
+          'items': [{
+            'item_id': 'MHC_COMPLETE',
+            'item_name': 'MyHealthCanvas Complete Plan',
+            'category': 'Healthcare Forms',
+            'quantity': 1,
+            'price': 12.00
+          }]
+        });
+        console.log('Enhanced MyHealthCanvas Complete Plan purchase tracked');
+      }
+    </script>
+
+    <!-- PayPal Smart Payment Buttons SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AYp6m7r81oS6Tj-j6uxb3oCOp2nkd4SVgzc4Uoau9nrHTywPMy1uZ9sOmi6UHS1P12YY4wwPt3_YPmIj&currency=GBP&intent=capture&enable-funding=venmo,paylater,card&components=buttons"></script>
+
+    <link rel="stylesheet" href="phase2-header-navigation-fixed.css">
+
+    <style>
+      /* MyHealthCanvas Purchase Page Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background: #f8fafc;
+        min-height: 100vh;
+        padding-top: 100px; /* Account for fixed header */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Section */
+      .page-header {
+        text-align: center;
+        padding: 60px 0;
+        background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #155e75 100%);
+        color: white;
+        margin-bottom: 60px;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      .page-header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      /* Plan Cards */
+      .plans-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .plan-card {
+        background: white;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        border: 2px solid #e5e7eb;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .plan-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      }
+
+      .plan-card.featured {
+        border-color: #8b5cf6;
+        position: relative;
+      }
+
+      .plan-card.featured::before {
+        content: "MOST COMPREHENSIVE";
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        background: #8b5cf6;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+
+      .plan-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+
+      .plan-title.current {
+        color: #2563eb;
+      }
+
+      .plan-title.complete {
+        color: #8b5cf6;
+      }
+
+      .plan-description {
+        color: #6b7280;
+        margin-bottom: 24px;
+        font-size: 1rem;
+      }
+
+      .plan-feature {
+        background: #f3f4f6;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-weight: 500;
+      }
+
+      .plan-feature.current {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .plan-feature.complete {
+        background: #f3e8ff;
+        color: #7c3aed;
+      }
+
+      .features-list {
+        margin: 24px 0;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .feature-bullet {
+        color: #10b981;
+        margin-right: 8px;
+        font-weight: bold;
+      }
+
+      .plan-price {
+        text-align: center;
+        margin: 32px 0 24px 0;
+      }
+
+      .price-main {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .price-main.current {
+        color: #2563eb;
+      }
+
+      .price-main.complete {
+        color: #8b5cf6;
+      }
+
+      .price-sub {
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      .price-note {
+        color: #9ca3af;
+        font-size: 0.8rem;
+      }
+
+      /* PayPal Button Container */
+      .paypal-container {
+        margin-top: 24px;
+      }
+
+      /* Payment Logos */
+      .payment-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 40px 0;
+        flex-wrap: wrap;
+      }
+
+      .payment-logo {
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      .payment-logo.mastercard { background: #eb001b; }
+      .payment-logo.visa { background: #1a1f71; }
+      .payment-logo.amex { background: #006fcf; }
+      .payment-logo.paypal { background: #003087; }
+      .payment-logo.discover { background: #ff6000; }
+
+      /* Mission Section */
+      .mission-section {
+        background: #1f2937;
+        color: white;
+        padding: 60px 40px;
+        border-radius: 16px;
+        margin: 60px 0;
+        text-align: center;
+      }
+
+      .mission-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+        color: #60a5fa;
+      }
+
+      .mission-description {
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+        color: #d1d5db;
+      }
+
+      .charity-highlight {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #34d399;
+        margin-bottom: 32px;
+      }
+
+      .charity-breakdown {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        text-align: left;
+      }
+
+      .charity-item h4 {
+        color: #34d399;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .charity-item p {
+        color: #d1d5db;
+        font-size: 0.9rem;
+      }
+
+      /* Safety Section */
+      .safety-section {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        margin-bottom: 40px;
+      }
+
+      .safety-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 24px;
+        color: #1f2937;
+      }
+
+      .safety-warning {
+        font-weight: bold;
+        color: #dc2626;
+        margin: 16px 0;
+        font-size: 1.1rem;
+      }
+
+      .safety-item {
+        margin-bottom: 16px;
+      }
+
+      .safety-item strong {
+        color: #1f2937;
+      }
+
+      .refund-notice {
+        background: #f3f4f6;
+        padding: 16px;
+        border-radius: 8px;
+        margin-top: 24px;
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding-top: 120px;
+        }
+
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .page-header p {
+          font-size: 1rem;
+        }
+
+        .plans-container {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .plan-card {
+          padding: 24px;
+        }
+
+        .charity-breakdown {
+          grid-template-columns: 1fr;
+        }
+
+        .payment-logos {
+          gap: 8px;
+        }
+
+        .payment-logo {
+          padding: 6px 10px;
+          font-size: 0.7rem;
+        }
+      }
+
+      /* Back to Home Link */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        color: #0891b2;
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 40px;
+        transition: color 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: #0e7490;
+      }
+
+      .back-link::before {
+        content: "←";
+        margin-right: 8px;
+        font-size: 1.2rem;
+      }
+
+      /* Professional Footer */
+      .professional-footer {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: white;
+        padding: 60px 0 30px 0;
+        margin-top: 80px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        flex: 0 0 200px;
+      }
+
+      .footer-logo-box {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .footer-logo-text {
+        color: #0891b2;
+        font-weight: bold;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .footer-contact {
+        display: flex;
+        gap: 60px;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .contact-icon.email {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      }
+
+      .contact-icon.location {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+      }
+
+      .contact-info h3 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 4px;
+        color: white;
+      }
+
+      .contact-info p {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin: 0;
+      }
+
+      .contact-info a {
+        color: #60a5fa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #93c5fd;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Mobile Responsive Footer */
+      @media (max-width: 768px) {
+        .professional-footer {
+          padding: 40px 0 20px 0;
+          margin-top: 60px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        .footer-logo {
+          flex: none;
+        }
+
+        .footer-contact {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .contact-item {
+          justify-content: center;
+        }
+
+        .footer-copyright {
+          font-size: 0.9rem;
+          padding-top: 20px;
+        }
+      }
+    </style>
+  </head>
+	
+  <body>
+    <header class="patient-centric-header">
+      <div class="header-container">
+        <a href="index.html" class="patient-centric-logo">
+          <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;" /> PATIENT-CENTRIC CARE
+          <div class="patient-centric-tagline">AndySquire.AI</div>
+        </a>
+        
+        <nav class="patient-nav" id="patientNav">
+          <a href="index.html#home" class="nav-item">Home</a>
+          <a href="myhealthcanvas.html" class="nav-item priority active">Forms</a>
+          <a href="index.html#consulting" class="nav-item">Consulting</a>
+          <a href="index.html#humanoid-healthcare" class="nav-item">Humanoid Healthcare</a>
+          <a href="index.html#collaboration" class="nav-item">Collaboration</a>
+        </nav>
+        
+        <button class="mobile-nav-toggle" id="mobileNavToggle">☰</button>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Prepare Better Questions for your Doctors</h1>
+        <p>Professional PDF forms that help you organize symptoms, medications, and concerns so you never forget important health details during appointments. Choose the plan that's right for you.</p>
+        
+        <!-- Social Proof -->
+        <div style="text-align: center; margin: 20px 0; color: white; font-size: 0.95rem; font-weight: 500;">
+          🎯 <strong>Take back control of your health narrative & share it with confidence</strong><br><br>
+          ⭐ <strong>Recommended by healthcare professionals</strong> • 💬 <strong>Support Cancer Research Charities</strong>
+        </div>
+        
+        <!-- Form Preview Image -->
+        <div style="text-align: center; margin: 30px 0;">
+          <img src="MyHealthCanvasPreview3.jpg" alt="MyHealthCanvas Forms Preview - Current and Complete Plans" style="max-width: 100%; height: auto; max-height: 600px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" />
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <!-- Back Link -->
+      <a href="index.html" class="back-link">Back to Home</a>
+
+      <!-- Plan Cards -->
+      <div class="plans-container">
+        
+        <!-- Current Plan Card -->
+        <div class="plan-card">
+          <h2 class="plan-title current">Doctor Communication Starter Kit</h2>
+          <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 8px;">Perfect for Your Next Appointment</p>
+          <p class="plan-description">Never forget important symptoms or questions again. This professional PDF helps you organize your health information so you can communicate clearly with your medical team and get better care.</p>
+          
+          <div class="plan-feature current">✔ Use "Fill & Sign" in free Adobe Acrobat Reader</div>
+          
+          <div class="features-list">
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Organize symptoms and concerns</strong> before appointments</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Prepare meaningful questions</strong> for your doctor</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Professional format</strong> doctors appreciate</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Mobile-friendly</strong> - complete on your phone</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Instant download</strong> - ready in 2 minutes</div>
+            </div>
+          </div>
+          
+          <div class="plan-price">
+            <div class="price-main current">£9</div>
+            <div style="font-weight: bold; color: #2563eb; margin: 16px 0; font-size: 1.1rem;">Start Communicating Better Today</div>
+            <div style="font-size: 0.9rem; color: #374151; line-height: 1.4;">
+              • <strong>Instant Download</strong> - Ready to use in 2 Minutes<br>
+              • <strong>Works on Phone, Tablet, or Computer</strong><br>
+              &nbsp;&nbsp;(use free Adobe Acrobat Reader - Fill & Sign)<br>
+              • <strong>Professional Format Doctors Love</strong><br>
+              • <strong>One-Time Purchase</strong> - Yours Forever
+            </div>
+          </div>
+          
+          <div class="paypal-container" id="paypal-button-current-plan"></div>
+        </div>
+
+        <!-- Complete Plan Card -->
+        <div class="plan-card featured">
+          <h2 class="plan-title complete">Complete Health Story Communication Plan</h2>
+          <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 8px;">For Comprehensive Health Management</p>
+          <p class="plan-description">Everything you need for comprehensive health management. Includes all Doctor Communication Kit features PLUS advanced care planning and legacy documentation.</p>
+          
+          <div class="plan-feature complete">✔ Use "Fill & Sign" button for easy mobile completion</div>
+          
+          <div class="features-list">
+            <div style="color: #8b5cf6; font-weight: bold; margin-bottom: 12px;">Everything in Doctor Communication Kit, PLUS:</div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Advance care planning</strong> documentation</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Legacy and wisdom</strong> sharing sections</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Forward-looking health goals</strong> planning</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Comprehensive resource</strong> tracking</div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-bullet">✓</span>
+              <div><strong>Perfect for chronic conditions</strong> or complex health situations</div>
+            </div>
+          </div>
+          
+          <div class="plan-price">
+            <div class="price-main complete">£12</div>
+            <div style="font-weight: bold; color: #8b5cf6; margin: 16px 0; font-size: 1.1rem;">Start Communicating Better Today</div>
+            <div style="font-size: 0.9rem; color: #374151; line-height: 1.4;">
+              • <strong>Instant Download</strong> - Ready to use in 2 Minutes<br>
+              • <strong>Works on Phone, Tablet, or Computer</strong><br>
+              &nbsp;&nbsp;(use free Adobe Acrobat Reader - Fill & Sign)<br>
+              • <strong>Professional Format Doctors Love</strong><br>
+              • <strong>One-Time Purchase</strong> - Yours Forever
+            </div>
+          </div>
+          
+          <div class="paypal-container" id="paypal-button-complete-plan"></div>
+        </div>
+      </div>
+
+      <!-- Urgency & Trust Elements -->
+      <div style="text-align: center; margin: 40px 0; padding: 24px; background: #f8fafc; border-radius: 12px; border: 1px solid #e5e7eb;">
+        <div style="font-size: 1.1rem; color: #374151; margin-bottom: 16px;">
+          ⏰ <strong>Download instantly - ready to use for your appointment today</strong>
+        </div>
+        <div style="font-size: 0.95rem; color: #6b7280;">
+          🔥 Don't let another appointment go by unprepared • 💡 Join the growing community of Patients who can always access their key health information on their Phone
+        </div>
+      </div>
+
+      <!-- Payment Logos -->
+      <div class="payment-logos">
+        <div class="payment-logo mastercard">MasterCard</div>
+        <div class="payment-logo visa">Visa</div>
+        <div class="payment-logo amex">AMEX</div>
+        <div class="payment-logo paypal">PayPal</div>
+        <div class="payment-logo discover">Discover</div>
+      </div>
+
+      <!-- Mission Section -->
+      <div class="mission-section">
+        <h3 class="mission-title">MyHealthCanvas Mission: Patient Empowerment & Cancer Research Charities</h3>
+        <p class="mission-description">
+          MyHealthCanvas was born from a cancer survivor's journey to help patients take control of their medical information. Our mission is two-fold: empower patients and support vital research.
+        </p>
+        
+        <div class="charity-highlight">
+          Support Cancer Research Charities
+        </div>
+        
+        <div class="charity-breakdown">
+          <div class="charity-item">
+            <h4>Current Plan - £4.50 Donation to Cancer Research Charities:</h4>
+            <p>Directly funds world-class cancer research, patient support programs, and advanced treatment development.</p>
+          </div>
+          <div class="charity-item">
+            <h4>Current Plan - £4.50 for Platform & Advocacy:</h4>
+            <p>Ensures our tools remain secure, supports development of new features, and allows us to continue our patient advocacy work.</p>
+          </div>
+          <div class="charity-item">
+            <h4>Complete Plan - £6 Donation to Cancer Research Charities:</h4>
+            <p>Enhanced support for comprehensive cancer research and patient care programs.</p>
+          </div>
+          <div class="charity-item">
+            <h4>Complete Plan - £6 for Platform & Advocacy:</h4>
+            <p>Continued platform development and expanded patient advocacy initiatives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety Section -->
+      <div class="safety-section">
+        <h3 class="safety-title">For Your Safety & Understanding</h3>
+        <p>These templates are form fillable PDFs designed to help you organize your health information and empower communication with your healthcare team.</p>
+        <p class="safety-warning">They are not medical advice.</p>
+        
+        <div class="safety-item">
+          <p><strong>• Consult a Medical Professional:</strong> Always discuss your health and the information in this document with a qualified healthcare provider.</p>
+        </div>
+        <div class="safety-item">
+          <p><strong>• You Are in Control:</strong> You are responsible for the accuracy of the information you enter.</p>
+        </div>
+        <div class="safety-item">
+          <p><strong>• Your Privacy is Paramount:</strong> These are downloadable PDF Forms. You save them locally to your own device. We never see, store, or have access to your personal health data.</p>
+        </div>
+        
+        <div class="refund-notice">
+          Due to the instant-download nature of these digital products, we cannot offer refunds once a purchase is made. Thank you for your understanding.
+        </div>
+      </div>
+    </main>
+
+    <!-- Navigation Script -->
+    <script>
+      // Simple mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobileNavToggle');
+        const patientNav = document.getElementById('patientNav');
+        
+        if (mobileToggle && patientNav) {
+          mobileToggle.addEventListener('click', function() {
+            patientNav.classList.toggle('active');
+            this.textContent = patientNav.classList.contains('active') ? '✕' : '☰';
+          });
+        }
+
+        console.log('🎯 MyHealthCanvas Purchase Page: Ready!');
+      });
+    </script>
+  </body>
+</html>
+
+
+    <!-- PayPal Smart Payment Buttons Integration -->
+    <script>
+      // Function to render PayPal Smart Payment Buttons
+      function renderPayPalButtons() {
+        console.log('Rendering PayPal Smart Payment Buttons...');
+        
+        // Current Plan Button
+        if (document.getElementById('paypal-button-current-plan')) {
+          paypal.Buttons({
+            createOrder: function(data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: {
+                    value: '9.00',
+                    currency_code: 'GBP'
+                  },
+                  description: 'MyHealthCanvas Current Plan'
+                }],
+                application_context: {
+                  shipping_preference: 'NO_SHIPPING',
+                  user_action: 'PAY_NOW'
+                }
+              });
+            },
+            onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                console.log('✅ Payment captured successfully for Current Plan:', details);
+                
+                // Track conversion with longer delay to ensure gtag is ready
+                setTimeout(function() {
+                  console.log('🎯 Firing conversion tracking for Current Plan...');
+                  trackMyHealthCanvasCurrentPurchase();
+                  trackEnhancedMyHealthCanvasCurrentPurchase();
+                }, 500);
+                
+                // Redirect to success page after 2 seconds to ensure tracking completes
+                setTimeout(function() {
+                  console.log('✅ Redirecting to success page...');
+                  window.location.href = 'success.html?plan=current&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 2000);
+              });
+            },
+            onError: function(err) {
+              console.error('PayPal Current Plan Error:', err);
+              alert('Payment failed. Please try again.');
+            },
+            style: {
+              layout: 'vertical',
+              color: 'blue',
+              shape: 'rect',
+              label: 'paypal',
+              height: 45
+            }
+          }).render('#paypal-button-current-plan');
+        }
+        
+        // Complete Plan Button
+        if (document.getElementById('paypal-button-complete-plan')) {
+          paypal.Buttons({
+            createOrder: function(data, actions) {
+              return actions.order.create({
+                purchase_units: [{
+                  amount: {
+                    value: '12.00',
+                    currency_code: 'GBP'
+                  },
+                  description: 'MyHealthCanvas Complete Plan'
+                }],
+                application_context: {
+                  shipping_preference: 'NO_SHIPPING',
+                  user_action: 'PAY_NOW'
+                }
+              });
+            },
+            onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                console.log('✅ Payment captured successfully for Complete Plan:', details);
+                
+                // Track conversion with longer delay to ensure gtag is ready
+                setTimeout(function() {
+                  console.log('🎯 Firing conversion tracking for Complete Plan...');
+                  trackMyHealthCanvasCompletePurchase();
+                  trackEnhancedMyHealthCanvasCompletePurchase();
+                }, 500);
+                
+                // Redirect to success page after 2 seconds to ensure tracking completes
+                setTimeout(function() {
+                  console.log('✅ Redirecting to success page...');
+                  window.location.href = 'success.html?plan=complete&name=' + encodeURIComponent(details.payer.name.given_name);
+                }, 2000);
+              });
+            },
+            onError: function(err) {
+              console.error('PayPal Complete Plan Error:', err);
+              alert('Payment failed. Please try again.');
+            },
+            style: {
+              layout: 'vertical',
+              color: 'blue',
+              shape: 'rect',
+              label: 'paypal',
+              height: 45
+            }
+          }).render('#paypal-button-complete-plan');
+        }
+        
+        console.log('PayPal Smart Payment Buttons rendered successfully!');
+      }
+
+      // Render PayPal buttons when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        // Wait a moment for PayPal SDK to be ready
+        setTimeout(renderPayPalButtons, 500);
+      });
+    </script>
+
+
+
+    <!-- Professional Footer -->
+    <footer class="professional-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Logo Section -->
+          <div class="footer-logo">
+            <div class="footer-logo-box">
+              <div class="footer-logo-text">
+                <img src="patient-centric-care-logo-large.png" alt="Patient-Centric Care" style="width: 20px; height: 20px;">
+                AndySquire.AI
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="footer-contact">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon email">
+                ✉
+              </div>
+              <div class="contact-info">
+                <h3>Email</h3>
+                <p><a href="mailto:Andy@PatientCentricCare.AI">Andy@PatientCentricCare.AI</a></p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon location">
+                📍
+              </div>
+              <div class="contact-info">
+                <h3>Location</h3>
+                <p>Basel, Switzerland</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          © 2025 Andy Squire. Translating lived cancer experience into AI-enabled solutions for better healthcare.
+          <br><br>
+          <a href="impressum.html" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Impressum</a> | 
+          <a href="mailto:Andy@PatientCentricCare.AI" style="color: #60a5fa; text-decoration: none; font-size: 0.9rem;">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
