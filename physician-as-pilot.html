@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physician-as-Pilot — Governance-First AI Supervision Architecture | PatientCentricCare.AI</title>
+    <meta name="description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.patientcentriccare.ai/physician-as-pilot">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/physician-as-pilot">
+    <meta property="og:title" content="Physician-as-Pilot — Governance-First AI Supervision Architecture">
+    <meta property="og:description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
+    <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.patientcentriccare.ai/physician-as-pilot">
+    <meta name="twitter:title" content="Physician-as-Pilot — Governance-First AI Supervision Architecture">
+    <meta name="twitter:description" content="Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority — even as they scale toward regulated use.">
+    <meta name="twitter:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Physician-as-Pilot: Governance-First AI Supervision Architecture",
+      "description": "Physician-as-Pilot is the governance architecture that ensures AI systems never exceed human clinical authority, even as they scale toward regulated use.",
+      "url": "https://www.patientcentriccare.ai/physician-as-pilot",
+      "image": "https://www.patientcentriccare.ai/og-image-optimized.png?v=2",
+      "author": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "url": "https://www.patientcentriccare.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.patientcentriccare.ai/logo.png"
+        }
+      },
+      "datePublished": "2025-06-01",
+      "dateModified": "2026-02-21",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.patientcentriccare.ai/physician-as-pilot"
+      },
+      "keywords": ["physician-as-pilot", "clinical AI governance", "AI supervision architecture", "healthcare AI safety", "SaMD governance", "human-in-the-loop"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.patientcentriccare.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Physician-as-Pilot",
+          "item": "https://www.patientcentriccare.ai/physician-as-pilot"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8XGFG9VW9Z');
+      gtag('config', 'AW-17939692705');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 1rem; }
+        .logo-container img { height: 45px; width: auto; }
+        .logo-text { color: white; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
+
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #0d9488; }
+        .nav-links .nav-contact { background: #E6A23C; padding: 0.5rem 1rem; border-radius: 6px; color: white; }
+        .nav-links .nav-contact:hover { background: #d4911f; color: white; }
+
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-toggle { color: white; font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: color 0.3s; }
+        .nav-dropdown-toggle:hover { color: #0d9488; }
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; left: 0; background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;
+            padding: 0.5rem 0; min-width: 160px; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: all 0.2s; list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(5px); }
+        .nav-dropdown-menu li { padding: 0; }
+        .nav-dropdown-menu a { display: block; padding: 0.5rem 1rem; color: white; text-decoration: none; font-size: 0.9rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.1); color: #0d9488; }
+
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: white; transition: 0.3s; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed; right: -100%; top: 70px; flex-direction: column;
+                background: #0f172a; width: 100%; text-align: center;
+                transition: 0.3s; box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0; z-index: 999;
+            }
+            .nav-links.active { right: 0; }
+            .nav-dropdown-menu {
+                position: static; opacity: 1; visibility: visible; transform: none;
+                border: none; box-shadow: none; background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem; display: none;
+            }
+            .nav-dropdown.active .nav-dropdown-menu { display: block; }
+            .nav-dropdown-toggle { display: block; padding: 0.5rem 0; }
+        }
+
+        /* Validation Strip */
+        .validation-strip {
+            background: #F7F8FA;
+            text-align: center;
+            padding: 18px 20px;
+            line-height: 1.3;
+            border-bottom: 1px solid #E2E6EA;
+        }
+        
+        .validation-strip .validation-line1 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0A1F44;
+            margin: 0;
+        }
+        
+        .validation-strip .validation-line2 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #0A1F44;
+            margin: 4px 0 0 0;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-hero .subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Content */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+
+        .content-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+
+        /* Phase cards */
+        .phase-card {
+            padding: 1.5rem;
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0d9488;
+            font-size: 1.2rem;
+        }
+
+        .phase-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .phase-card.active {
+            border-left: 4px solid #E6A23C;
+            background: #fffbeb;
+        }
+
+        .phase-card.active h3 { color: #b45309; }
+
+        /* Invariant banner */
+        .invariant-banner {
+            margin-top: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            padding: 1rem;
+            background: #fef3c7;
+            border-radius: 8px;
+        }
+
+        /* Characteristic cards */
+        .characteristic-card {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-left: 4px solid #0d9488;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .characteristic-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0f172a;
+            font-size: 1.15rem;
+        }
+
+        .characteristic-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        /* Emphasis block */
+        .emphasis-block {
+            background: #f0fdfa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            color: #0f172a;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Diagram container */
+        .diagram-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .diagram-container img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Negative list */
+        .negative-list li:before {
+            content: "\2715";
+            color: #dc2626;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* CTA */
+        .cta-button {
+            display: inline-block;
+            background: #E6A23C;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #d4911f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
+        }
+
+        .cta-outline {
+            background: transparent;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+            box-shadow: none;
+        }
+
+        .cta-outline:hover {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .page-hero .subtitle { font-size: 1.05rem; }
+            .content-section h2 { font-size: 1.6rem; }
+            .content-section { padding: 2rem 1.25rem; }
+        }
+    </style>
+
+<style>
+/* Continue Reading Section */
+.continue-reading {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+.continue-reading h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.continue-reading-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.continue-reading-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.continue-reading-links a:hover {
+    border-color: #0d9488;
+    color: #0d9488;
+    transform: translateY(-1px);
+}
+/* Enhanced Footer */
+.site-footer {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-col h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+.footer-col p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+.footer-col a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: #0d9488;
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+.footer-bottom a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+.footer-email-form {
+    display: flex;
+    gap: 0.5rem;
+}
+.footer-email-form input[type="email"] {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    background: #1e293b;
+    color: white;
+    font-size: 0.85rem;
+    width: 200px;
+}
+.footer-email-form input[type="email"]::placeholder {
+    color: #64748b;
+}
+.footer-email-form button {
+    padding: 0.5rem 1rem;
+    background: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.footer-email-form button:hover {
+    background: #0f766e;
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-email-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-email-form input[type="email"] {
+        width: 100%;
+    }
+}
+</style>
+
+</head>
+<body>
+    <!-- Canonical navigation – do not modify without architectural review -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="/MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion">Phase 1</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+     <!-- End Canonical navigation -->
+
+    <!-- Validation Strip -->
+    <div class="validation-strip">
+        <p class="validation-line1">Selected as Best Overall Capstone</p>
+        <p class="validation-line2">Harvard Medical School Executive Education, "AI in Healthcare," February 2026</p>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <h1>Physician-as-Pilot</h1>
+        <p class="subtitle">Governance-First Supervision of SaMD-Ready AI</p>
+    </section>
+
+    <!-- WHY DELEGATION FAILS -->
+    <div class="content-section">
+        <p>Modern healthcare AI fails not because models are weak, but because authority is unclear.</p>
+        <p><strong>Physician-as-Pilot</strong> is the governance architecture that ensures AI systems never exceed human clinical authority - even as they scale toward regulated use.</p>
+        <p>Most AI governance relies on guidelines, training, and post-deployment monitoring. These approaches fail in regulated clinical contexts because they assume compliance rather than enforce it. Physician-as-Pilot enforces authority structurally - before execution, not after harm.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- SAFETY OS DIAGRAM -->
+    <div class="content-section">
+        <div class="diagram-container">
+            <img src="/safety-os-diagram.png" alt="From Human-in-the-Loop to AIITL Physician Governed Execution - showing Physician (Pilot) at top defining clinical intent and safety boundaries, Safety OS (SaMD Governance Layer) enforcing physician-defined boundaries deterministically, AI/Robotic System executing within constraints, and Patient at Home receiving safe supervised support">
+        </div>
+        <p style="font-size: 0.95rem; color: #64748b; font-style: italic; margin-top: 1rem; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">Physician-as-Pilot operating model. AI execution is governed by clinician authority through Safety OS constraints. Does not imply autonomous clinical decision-making.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- HOW IT WORKS -->
+    <div class="content-section">
+        <h2>How It Works</h2>
+        <ul>
+            <li>The <strong>Physician</strong> defines clinical intent, care protocols, and safety boundaries</li>
+            <li><strong>Safety OS</strong> enforces those boundaries deterministically at runtime - no exceptions, no overrides by AI</li>
+            <li>The <strong>AI system</strong> executes tasks strictly within Safety OS constraints - no independent strategy or autonomous intent</li>
+        </ul>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- EXPLICIT NEGATIVES -->
+    <div class="content-section">
+        <h2>What AI May Not Do Under This Model</h2>
+        <ul class="negative-list">
+            <li>No diagnosis</li>
+            <li>No treatment decisions</li>
+            <li>No autonomous clinical intent</li>
+        </ul>
+        <p class="emphasis-block">Clinical authority is never delegated to AI.</p>
+
+        <!-- CROSS-LINKS -->
+        <div style="margin-top: 2.5rem;">
+            <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 1rem; color: #334155; margin-bottom: 0.25rem;">For deeper explanation of governance constraints and runtime enforcement:</p>
+                <a href="/clinical-ai-governance" style="color: #0d9488; font-weight: 600; font-size: 1.05rem; text-decoration: none;">&rarr; Explore Clinical AI Governance framework</a>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <p style="font-size: 1rem; color: #334155; margin-bottom: 0.25rem;">See implementation examples:</p>
+                <a href="/standards/evidence" style="color: #0d9488; font-weight: 600; font-size: 1.05rem; text-decoration: none;">&rarr; Evidence &amp; Implementation Library</a>
+            </div>
+            <div>
+                <a href="/" style="color: #64748b; font-weight: 500; font-size: 1rem; text-decoration: none;">&larr; Back to PatientCentricCare overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIABILITY PROTECTION -->
+    <div class="content-section" style="background: #f8fafc; border-left: 4px solid #d4a04a; padding: 2rem; margin: 2rem auto; max-width: 900px; border-radius: 0 8px 8px 0;">
+        <h2 style="color: #0f172a; font-size: 1.5rem; margin-bottom: 1rem;">Liability Protection Through Reconstructible Authority</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155;">The Safety OS™ Flight Recorder provides a reconstructible record of authority state at the moment of any incident — including consent gate status, boundary class, escalation triggers, and human authority retention.</p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155; margin-top: 1rem;">This enables post-incident reconstruction of exactly who held authority, what constraints were active, and whether escalation pathways were followed — providing clinical shielding through infrastructure, not policy.</p>
+    </div>
+    <!-- CONTINUE READING -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <div class="continue-reading">
+            <h3>Continue Reading</h3>
+            <div class="continue-reading-links">
+                <a href="/standards/hybrid-human-agent-operating-standard">&rarr; Governance Standard</a>
+                <a href="/safety-os">&rarr; Safety OS Architecture</a>
+                <a href="/home-companion">&rarr; Phase 1 Deployment</a>
+                <a href="/traction">&rarr; Evidence & Milestones</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENHANCED FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PatientCentricCare.AI</h4>
+                <p>Safety OS&trade; - Governance infrastructure for AI in the home.</p>
+                <p style="font-size: 1.1rem; color: #fbbf24; font-style: italic; margin-top: 0.75rem;">Empowering Independence. Preserving Dignity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Frameworks</h4>
+                <a href="/physician-as-pilot">Physician-as-Pilot</a>
+                <a href="/safety-os">Safety OS</a>
+                <a href="/standards/hybrid-human-agent-operating-standard">Governance Standard</a>
+                <a href="/clinical-ai-governance">Phased Permissioning</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="/home-companion">Phase 1 Deployment</a>
+                <a href="/traction">Evidence &amp; Milestones</a>
+                <a href="/team">Team</a>
+                <a href="/mission">Mission</a>
+                <a href="/investment">Investment</a>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Updated</h4>
+                <form class="footer-email-form" name="footer-newsletter" method="POST" data-netlify="true" action="/thank-you">
+                    <input type="hidden" name="form-name" value="footer-newsletter">
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <a href="mailto:andy@patientcentriccare.ai" style="margin-top: 0.75rem;">andy@patientcentriccare.ai</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+            <p><a href="/impressum">Impressum</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+            <p style="font-size: 0.8rem;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) { navLinks.classList.toggle('active'); }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
