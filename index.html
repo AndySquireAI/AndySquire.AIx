@@ -1266,6 +1266,372 @@
                 align-items: center;
             }
         }
+        /* ===== SAFETY OS INTERACTIVE TOGGLE v2 ===== */
+        .sos-toggle-section {
+            background: #0a1628;
+            padding: 24px 16px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sos-page-header {
+            text-align: center;
+            margin-bottom: 24px;
+            max-width: 420px;
+        }
+        .sos-page-eyebrow {
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #2B9E9E;
+            margin-bottom: 8px;
+        }
+        .sos-page-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+        .sos-page-title span { color: #2B9E9E; }
+        .sos-page-sub {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            font-style: italic;
+        }
+        .sos-toggle-container {
+            width: 100%;
+            max-width: 420px;
+            margin-bottom: 20px;
+        }
+        .sos-toggle-track {
+            background: #0D3349;
+            border-radius: 50px;
+            padding: 4px;
+            display: flex;
+            position: relative;
+            border: 1.5px solid rgba(43,158,158,0.3);
+        }
+        .sos-toggle-btn {
+            flex: 1;
+            padding: 12px 10px;
+            border: none;
+            background: transparent;
+            border-radius: 46px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.2px;
+        }
+        .sos-toggle-btn.without { color: rgba(255,255,255,0.5); }
+        .sos-toggle-btn.without.active { color: #ffffff; background: #8B2010; }
+        .sos-toggle-btn.with { color: rgba(255,255,255,0.5); }
+        .sos-toggle-btn.with.active { color: #ffffff; background: #0e6b5e; }
+        .sos-toggle-hint {
+            text-align: center;
+            font-size: 10px;
+            color: rgba(255,255,255,0.3);
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+        .sos-card-viewport {
+            width: 100%;
+            max-width: 420px;
+            overflow: hidden;
+            position: relative;
+        }
+        .sos-card-slider {
+            display: flex;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 200%;
+        }
+        .sos-card-slider.show-with { transform: translateX(-50%); }
+        .sos-card-slot { width: 50%; }
+        .sos-card {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+        }
+        .sos-super-title {
+            background: #0a2236;
+            padding: 7px 22px;
+            text-align: center;
+            border-bottom: 1px solid rgba(43,158,158,0.25);
+        }
+        .sos-super-title span {
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(43,158,158,0.65);
+        }
+        .sos-top-header {
+            padding: 16px 22px 13px;
+            text-align: center;
+        }
+        .sos-top-header.danger { background: #1a0a08; }
+        .sos-top-header.safe { background: #0D3349; }
+        .sos-brand {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #2B9E9E;
+            margin-bottom: 4px;
+        }
+        .sos-main-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+            line-height: 1.25;
+        }
+        .sos-main-title.danger-accent span { color: #ff6b6b; }
+        .sos-main-title.safe-accent span { color: #2B9E9E; }
+        .sos-tagline {
+            font-size: 10.5px;
+            color: rgba(255,255,255,0.45);
+            margin-top: 4px;
+            font-style: italic;
+        }
+        .sos-content {
+            background: #eef1f5;
+            padding: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .sos-boundary-wrap {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin: 4px 0;
+        }
+        .sos-b-line {
+            flex: 1;
+            height: 1.5px;
+            background: repeating-linear-gradient(to right, #94a3b8 0, #94a3b8 7px, transparent 7px, transparent 13px);
+        }
+        .sos-b-label {
+            font-size: 7.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: #94a3b8;
+            white-space: nowrap;
+        }
+        .sos-human-layer {
+            background: #fff;
+            border: 2.5px solid #2B9E9E;
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+        .sos-lbl {
+            font-size: 9.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2B9E9E;
+            margin-bottom: 1px;
+        }
+        .sos-sublbl {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #7a9aaa;
+            margin-bottom: 9px;
+        }
+        .sos-people-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sos-person {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .sos-avatar {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            border: 3px solid #2B9E9E;
+            background: #e8f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+        }
+        .sos-pname { font-size: 13px; font-weight: 700; color: #0D3349; }
+        .sos-mid {
+            text-align: center;
+            flex: 1;
+            padding: 0 7px;
+        }
+        .sos-mid p { font-size: 12px; font-weight: 600; color: #3a5568; line-height: 1.5; }
+        .sos-no-enforce {
+            font-size: 12px;
+            color: #E87722;
+            font-weight: 800;
+            margin-top: 5px;
+            display: block;
+        }
+        .sos-auth-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+            margin-top: 5px;
+        }
+        .sos-atag {
+            font-size: 8px;
+            font-weight: 700;
+            color: #2B9E9E;
+            background: #e8f5f5;
+            border: 1px solid #2B9E9E;
+            border-radius: 10px;
+            padding: 2px 6px;
+        }
+        .sos-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px 0;
+        }
+        .sos-al { width: 2px; height: 11px; background: #94a3b8; }
+        .sos-at {
+            width: 0; height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 9px solid #94a3b8;
+        }
+        .sos-missing-layer {
+            background: #141d30;
+            border: 3px dashed #E87722;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+        }
+        .sos-dbadge {
+            position: absolute;
+            top: -1px; right: 12px;
+            background: #E87722;
+            color: #fff;
+            font-size: 7.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 9px;
+            border-radius: 0 0 6px 6px;
+        }
+        .sos-xmark { font-size: 28px; color: #E87722; font-weight: 900; line-height: 1; }
+        .sos-mtitle { font-size: 15px; font-weight: 800; color: #fff; text-align: center; line-height: 1.3; }
+        .sos-msub { font-size: 10.5px; color: #E87722; font-style: italic; text-align: center; font-weight: 600; line-height: 1.4; }
+        .sos-safety-layer {
+            background: #fff8f0;
+            border-top: 4px solid #E87722;
+            border-bottom: 4px solid #E87722;
+            border-left: 3px solid #E87722;
+            border-right: 3px solid #E87722;
+            border-radius: 10px;
+            padding: 12px 14px;
+            position: relative;
+        }
+        .sos-sbadge {
+            position: absolute;
+            top: -1px; right: 12px;
+            background: #E87722;
+            color: #fff;
+            font-size: 7.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 9px;
+            border-radius: 0 0 6px 6px;
+        }
+        .sos-infra-lbl { font-size: 7.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #c4601a; margin-bottom: 2px; }
+        .sos-stitle { font-size: 20px; font-weight: 900; color: #E87722; margin-bottom: 8px; }
+        .sos-pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 7px; }
+        .sos-pill {
+            background: #fff;
+            border: 2px solid #E87722;
+            border-radius: 20px;
+            padding: 6px 9px;
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #c4601a;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .sos-pi { font-size: 11px; }
+        .sos-ssub { font-size: 10.5px; color: #a06030; font-weight: 600; font-style: italic; line-height: 1.4; }
+        .sos-ai-layer {
+            background: #fff;
+            border: 2.5px solid #1a56c4;
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+        .sos-ai-lbl { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #1a56c4; margin-bottom: 7px; }
+        .sos-ai-row { display: flex; align-items: flex-start; gap: 10px; }
+        .sos-aie { font-size: 27px; margin-top: 2px; }
+        .sos-aitb { flex: 1; }
+        .sos-aim { font-size: 12.5px; font-weight: 700; color: #1a56c4; margin-bottom: 5px; line-height: 1.3; }
+        .sos-risk { font-size: 10.5px; font-weight: 600; color: #E87722; margin-bottom: 2px; }
+        .sos-aisafe { font-size: 9.5px; font-weight: 700; color: #2B9E9E; text-transform: uppercase; letter-spacing: 0.4px; }
+        .sos-gbadge {
+            background: #e8f5f5;
+            color: #2B9E9E;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 2px solid #2B9E9E;
+            text-align: center;
+            line-height: 1.4;
+            white-space: nowrap;
+            align-self: center;
+        }
+        .sos-patient-layer {
+            background: #f0faf9;
+            border: 2.5px solid #2B9E9E;
+            border-radius: 12px;
+            padding: 10px 13px;
+        }
+        .sos-plbl { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #2B9E9E; margin-bottom: 5px; }
+        .sos-prow { display: flex; align-items: center; gap: 9px; }
+        .sos-pavatar {
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            border: 2.5px solid #2B9E9E;
+            background: #d0eeec;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .sos-pgate { font-size: 11px; font-weight: 700; color: #0D3349; line-height: 1.4; margin-bottom: 2px; }
+        .sos-psub { font-size: 9.5px; font-weight: 600; color: #2B9E9E; font-style: italic; }
+        .sos-bottom-bar {
+            background: #0D3349;
+            padding: 12px 20px;
+            text-align: center;
+        }
+        .sos-bs { font-size: 13px; font-weight: 800; white-space: nowrap; }
+        .sos-bs.danger { color: #E87722; }
+        .sos-bs.safe { color: #2B9E9E; }
+        .sos-bc { font-size: 8px; color: rgba(255,255,255,0.3); margin-top: 3px; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -1341,186 +1707,184 @@
         </div>
     </div>
 
-    <!-- INTERACTIVE SAFETY OS TOGGLE DIAGRAM -->
-    <div id="governance-toggle" style="background: #0f1729; padding: 3rem 1rem;">
-        <div style="max-width: 520px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-            <!-- Header -->
-            <div style="text-align: center; margin-bottom: 1.5rem;">
-                <p style="color: #94a3b8; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.5rem 0;">PATIENTCENTRICCARE.AI &middot; SAFETY OS&trade;</p>
-                <h2 style="color: white; font-size: 1.6rem; margin: 0 0 0.25rem 0; font-weight: 700;">AI Runtime <span style="color: #E87722;">Governance</span> Architecture</h2>
-                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tap to compare &mdash; Without vs. With Safety OS&trade;</p>
+    <!-- INTERACTIVE SAFETY OS TOGGLE v2 -->
+    <div class="sos-toggle-section" id="governance-toggle">
+
+        <div class="sos-page-header">
+            <div class="sos-page-eyebrow">PatientCentricCare.AI &middot; Safety OS&trade;</div>
+            <div class="sos-page-title">AI Runtime <span>Governance</span> Architecture</div>
+            <div class="sos-page-sub">Tap to compare &mdash; Without vs. With Safety OS&trade;</div>
+        </div>
+
+        <!-- Toggle -->
+        <div class="sos-toggle-container">
+            <div class="sos-toggle-track">
+                <button class="sos-toggle-btn without active" onclick="showCard('without')">&times; Without Safety OS&trade;</button>
+                <button class="sos-toggle-btn with" onclick="showCard('with')">&check; With Safety OS&trade;</button>
             </div>
+            <div class="sos-toggle-hint">&larr; swipe or tap to toggle &rarr;</div>
+        </div>
 
-            <!-- Toggle Buttons -->
-            <div style="display: flex; justify-content: center; gap: 0; margin-bottom: 0.5rem;">
-                <button id="btn-without" onclick="showView('without')" style="flex: 1; max-width: 200px; padding: 0.7rem 1rem; font-size: 0.9rem; font-weight: 700; border: none; cursor: pointer; border-radius: 8px 0 0 8px; background: #E87722; color: white; transition: all 0.3s;">&times; Without Safety OS&trade;</button>
-                <button id="btn-with" onclick="showView('with')" style="flex: 1; max-width: 200px; padding: 0.7rem 1rem; font-size: 0.9rem; font-weight: 700; border: none; cursor: pointer; border-radius: 0 8px 8px 0; background: #1e293b; color: #94a3b8; transition: all 0.3s;">&check; With Safety OS&trade;</button>
-            </div>
-            <p style="text-align: center; color: #64748b; font-size: 0.75rem; margin: 0 0 1.5rem 0;">&mdash; swipe or tap to toggle &mdash;</p>
+        <!-- Card Slider -->
+        <div class="sos-card-viewport">
+            <div class="sos-card-slider" id="sos-slider">
 
-            <!-- WITHOUT Safety OS View -->
-            <div id="view-without" style="display: block;">
-                <div style="border: 2px dashed #E87722; border-radius: 12px; padding: 1.5rem; background: #111827;">
-                    <!-- Sub-header -->
-                    <p style="color: #94a3b8; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin: 0 0 0.25rem 0;">PATIENTCENTRICCARE.AI &middot; PHYSICIAN-AS-PILOT&trade;</p>
-                    <h3 style="color: white; font-size: 1.3rem; text-align: center; margin: 0 0 0.15rem 0;">AI Executes. <span style="color: #E87722;">Humans Define Authority.</span></h3>
-                    <p style="color: #94a3b8; font-size: 0.8rem; text-align: center; margin: 0 0 1.25rem 0;">Without Safety OS&trade; &mdash; The Governance Gap</p>
-
-                    <!-- Human Layer -->
-                    <div style="background: white; border: 2px solid #d1d5db; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
-                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.15rem 0;">HUMAN LAYER</p>
-                        <p style="color: #6b7280; font-size: 0.7rem; margin: 0 0 0.75rem 0;">Traditional HITL Oversight Model</p>
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                            <div style="text-align: center;">
-                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#129658;</div>
-                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Physician</p>
-                            </div>
-                            <div style="text-align: center; max-width: 160px;">
-                                <p style="color: #1a1a2e; font-size: 0.8rem; margin: 0 0 0.15rem 0;">Human authority defines boundaries.</p>
-                                <p style="color: #dc2626; font-size: 0.8rem; font-weight: 700; margin: 0;">Nothing enforces them.</p>
-                            </div>
-                            <div style="text-align: center;">
-                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#128100;</div>
-                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Patient</p>
-                            </div>
+                <!-- WITHOUT CARD -->
+                <div class="sos-card-slot">
+                    <div class="sos-card">
+                        <div class="sos-super-title"><span>AI Runtime Governance Architecture</span></div>
+                        <div class="sos-top-header danger">
+                            <div class="sos-brand">PatientCentricCare.AI &middot; Physician-as-Pilot&trade;</div>
+                            <div class="sos-main-title danger-accent">AI Executes. <span>Humans Define Authority.</span></div>
+                            <div class="sos-tagline">Without Safety OS&trade; &mdash; The Governance Gap</div>
                         </div>
-                    </div>
-
-                    <!-- Authority Boundary -->
-                    <div style="text-align: center; padding: 0.15rem 0;">
-                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- AUTHORITY BOUNDARY ---</p>
-                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
-                    </div>
-
-                    <!-- GAP - Missing Governance -->
-                    <div style="background: #1a1a2e; border: 3px dashed #E87722; border-radius: 8px; padding: 1rem; text-align: center; margin-bottom: 0.25rem; position: relative;">
-                        <span style="position: absolute; top: 6px; right: 8px; background: #E87722; color: white; font-size: 0.55rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">GAP</span>
-                        <p style="color: #ef4444; font-size: 1.3rem; margin: 0 0 0.25rem 0;">&times;</p>
-                        <p style="color: white; font-size: 1rem; font-weight: 700; margin: 0 0 0.25rem 0;">No Enforceable Governance Layer</p>
-                        <p style="color: #E87722; font-size: 0.75rem; margin: 0;">Human intent cannot be enforced at runtime &middot; Missing runtime governance</p>
-                    </div>
-
-                    <!-- Control Boundary -->
-                    <div style="text-align: center; padding: 0.15rem 0;">
-                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- CONTROL BOUNDARY ---</p>
-                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
-                    </div>
-
-                    <!-- AI System -->
-                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem;">
-                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">AI SYSTEM</p>
-                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <div style="width: 36px; height: 36px; background: #e5e7eb; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#129302;</div>
-                            <div>
-                                <p style="color: #dc2626; font-size: 0.85rem; font-weight: 700; margin: 0 0 0.25rem 0;">AI operates without enforceable authority</p>
-                                <p style="color: #6b7280; font-size: 0.75rem; margin: 0;">&#9888; No runtime governance<br>&#9888; No escalation path<br>&#9888; No audit trail</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div style="background: #0d6b6b; padding: 0.6rem; border-radius: 0 0 8px 8px; text-align: center; margin-top: -2px;">
-                    <p style="color: white; font-size: 0.8rem; font-weight: 700; margin: 0;">Clinical authority is never delegated to AI.</p>
-                </div>
-                <p style="color: #64748b; font-size: 0.6rem; text-align: center; margin: 0.5rem 0 0 0;">&copy; 2026 PatientCentricCare.AI. Safety OS&trade; and Physician-as-Pilot&trade; are trademarks.</p>
-            </div>
-
-            <!-- WITH Safety OS View -->
-            <div id="view-with" style="display: none;">
-                <div style="border: 2px solid #0d6b6b; border-radius: 12px; padding: 1.5rem; background: #111827;">
-                    <!-- Sub-header -->
-                    <p style="color: #94a3b8; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; margin: 0 0 0.25rem 0;">PATIENTCENTRICCARE.AI &middot; PHYSICIAN-AS-PILOT&trade;</p>
-                    <h3 style="color: white; font-size: 1.3rem; text-align: center; margin: 0 0 0.15rem 0;">AI Executes. <span style="color: #E87722;">Humans Govern.</span></h3>
-                    <p style="color: #94a3b8; font-size: 0.8rem; text-align: center; margin: 0 0 1.25rem 0;">With Safety OS&trade; &mdash; Governance Middleware Active</p>
-
-                    <!-- Human Layer -->
-                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
-                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.15rem 0;">HUMAN LAYER</p>
-                        <p style="color: #6b7280; font-size: 0.7rem; margin: 0 0 0.75rem 0;">AIITL &middot; Physician-as-Pilot&trade;</p>
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-                            <div style="text-align: center;">
-                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#129658;</div>
-                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Physician</p>
-                            </div>
-                            <div style="text-align: center; max-width: 180px;">
-                                <p style="color: #1a1a2e; font-size: 0.8rem; margin: 0 0 0.25rem 0;">Humans set boundaries. AI operates within them.</p>
-                                <div style="display: flex; gap: 0.25rem; justify-content: center; flex-wrap: wrap;">
-                                    <span style="background: #e0f2fe; color: #0369a1; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Clinical Authority</span>
-                                    <span style="background: #e0f2fe; color: #0369a1; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Patient Consent</span>
+                        <div class="sos-content">
+                            <div class="sos-human-layer">
+                                <div class="sos-lbl">Human Layer</div>
+                                <div class="sos-sublbl">Traditional HITL Oversight Model</div>
+                                <div class="sos-people-row">
+                                    <div class="sos-person">
+                                        <div class="sos-avatar">&#x1F469;&#x200D;&#x2695;&#xFE0F;</div>
+                                        <div class="sos-pname">Physician</div>
+                                    </div>
+                                    <div class="sos-mid">
+                                        <p>Human authority<br>defines boundaries.</p>
+                                        <strong class="sos-no-enforce">Nothing enforces them.</strong>
+                                    </div>
+                                    <div class="sos-person">
+                                        <div class="sos-avatar">&#x1F9D3;</div>
+                                        <div class="sos-pname">Patient</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div style="text-align: center;">
-                                <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; margin: 0 auto 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">&#127975;</div>
-                                <p style="color: #1a1a2e; font-size: 0.75rem; font-weight: 700; margin: 0;">Institution</p>
+
+                            <div class="sos-boundary-wrap">
+                                <div class="sos-b-line"></div><div class="sos-b-label">Authority Boundary</div><div class="sos-b-line"></div>
+                            </div>
+                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
+
+                            <div class="sos-missing-layer">
+                                <div class="sos-dbadge">&#9888; GAP</div>
+                                <div class="sos-xmark">&times;</div>
+                                <div class="sos-mtitle">No Enforceable Governance Layer</div>
+                                <div class="sos-msub">Human intent cannot be enforced at runtime &middot; Missing runtime governance</div>
+                            </div>
+
+                            <div class="sos-boundary-wrap" style="margin-top:5px;">
+                                <div class="sos-b-line"></div><div class="sos-b-label">Control Boundary</div><div class="sos-b-line"></div>
+                            </div>
+                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
+
+                            <div class="sos-ai-layer">
+                                <div class="sos-ai-lbl">AI System</div>
+                                <div class="sos-ai-row">
+                                    <div class="sos-aie">&#x1F916;</div>
+                                    <div class="sos-aitb">
+                                        <div class="sos-aim">AI operates without<br>enforceable authority</div>
+                                        <div class="sos-risk">&#9888; No runtime governance</div>
+                                        <div class="sos-risk">&#9888; No escalation path</div>
+                                        <div class="sos-risk">&#9888; No audit trail</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Authority Boundary -->
-                    <div style="text-align: center; padding: 0.15rem 0;">
-                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- AUTHORITY BOUNDARY ---</p>
-                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
-                    </div>
-
-                    <!-- Safety OS - Active -->
-                    <div style="background: #1a1a2e; border: 3px solid #E87722; border-radius: 8px; padding: 1rem; text-align: center; margin-bottom: 0.25rem; position: relative;">
-                        <span style="position: absolute; top: 6px; right: 8px; background: #16a34a; color: white; font-size: 0.55rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">&#10003; ACTIVE</span>
-                        <p style="color: #94a3b8; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 0.25rem 0;">RUNTIME GOVERNANCE INFRASTRUCTURE</p>
-                        <p style="color: #E87722; font-size: 1.2rem; font-weight: 800; margin: 0 0 0.5rem 0;">Safety OS&trade;</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: center; margin-bottom: 0.5rem;">
-                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#128274; Consent Scope</span>
-                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#8593; Escalation Pathways</span>
-                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#128203; Immutable Audit Log</span>
-                            <span style="background: #1e293b; border: 1px solid #334155; color: #e2e8f0; font-size: 0.65rem; padding: 4px 8px; border-radius: 6px;">&#10084; Runtime Guardrails</span>
-                        </div>
-                        <p style="color: #94a3b8; font-size: 0.7rem; margin: 0;">Enforces consent scope, escalation, and audit at runtime.</p>
-                    </div>
-
-                    <!-- Control Boundary -->
-                    <div style="text-align: center; padding: 0.15rem 0;">
-                        <p style="color: #64748b; font-size: 0.6rem; letter-spacing: 0.1em; margin: 0;">--- CONTROL BOUNDARY ---</p>
-                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
-                    </div>
-
-                    <!-- AI System -->
-                    <div style="background: white; border: 2px solid #0d6b6b; border-radius: 8px; padding: 1rem; margin-bottom: 0.25rem;">
-                        <p style="color: #0d6b6b; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">AI SYSTEM</p>
-                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <div style="width: 36px; height: 36px; background: #e5e7eb; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#129302;</div>
-                            <div>
-                                <p style="color: #0d6b6b; font-size: 0.85rem; font-weight: 700; margin: 0 0 0.15rem 0;">Executes within enforceable authority boundaries</p>
-                                <p style="color: #16a34a; font-size: 0.7rem; font-weight: 600; margin: 0 0 0.25rem 0;">&#10003; GOVERNED &middot; AUDITABLE &middot; BOUNDED</p>
-                            </div>
-                            <span style="background: #0d6b6b; color: white; font-size: 0.55rem; font-weight: 700; padding: 4px 8px; border-radius: 4px; white-space: nowrap;">Governed Runtime</span>
-                        </div>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div style="text-align: center; padding: 0.15rem 0;">
-                        <span style="color: #64748b; font-size: 1.2rem;">&darr;</span>
-                    </div>
-
-                    <!-- Patient -->
-                    <div style="background: #fff7ed; border: 2px solid #E87722; border-radius: 8px; padding: 1rem;">
-                        <p style="color: #E87722; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.5rem 0;">PATIENT</p>
-                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <div style="width: 36px; height: 36px; background: #fed7aa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">&#128100;</div>
-                            <div>
-                                <p style="color: #1a1a2e; font-size: 0.8rem; font-weight: 600; margin: 0 0 0.15rem 0;">AI cannot interact with patients without passing through the governance layer.</p>
-                                <p style="color: #E87722; font-size: 0.7rem; font-weight: 600; margin: 0;">Every interaction: consented, governed &amp; logged.</p>
-                            </div>
+                        <div class="sos-bottom-bar">
+                            <div class="sos-bs danger">Clinical authority is never delegated to AI.</div>
+                            <div class="sos-bc">&copy; 2026 PatientCentricCare.AI &middot; Safety OS&trade; and Physician-as-Pilot&trade; are trademarks</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Footer -->
-                <div style="background: #0d6b6b; padding: 0.6rem; border-radius: 0 0 8px 8px; text-align: center; margin-top: -2px;">
-                    <p style="color: white; font-size: 0.8rem; font-weight: 700; margin: 0;">Clinical authority is never delegated to AI.</p>
+                <!-- WITH CARD -->
+                <div class="sos-card-slot" style="padding-left:16px;">
+                    <div class="sos-card">
+                        <div class="sos-super-title"><span>AI Runtime Governance Architecture</span></div>
+                        <div class="sos-top-header safe">
+                            <div class="sos-brand">PatientCentricCare.AI &middot; Physician-as-Pilot&trade;</div>
+                            <div class="sos-main-title safe-accent">AI Executes. <span>Humans Govern.</span></div>
+                            <div class="sos-tagline">With Safety OS&trade; &mdash; Governance Middleware Active</div>
+                        </div>
+                        <div class="sos-content">
+                            <div class="sos-human-layer">
+                                <div class="sos-lbl">Human Layer</div>
+                                <div class="sos-sublbl">AIITL &middot; Physician-as-Pilot&trade;</div>
+                                <div class="sos-people-row">
+                                    <div class="sos-person">
+                                        <div class="sos-avatar">&#x1F469;&#x200D;&#x2695;&#xFE0F;</div>
+                                        <div class="sos-pname">Physician</div>
+                                    </div>
+                                    <div class="sos-mid">
+                                        <p>Humans set boundaries.<br>AI operates within them.</p>
+                                        <div class="sos-auth-tags">
+                                            <span class="sos-atag">Clinical Authority</span>
+                                            <span class="sos-atag">Patient Consent</span>
+                                            <span class="sos-atag">Institutional Policy</span>
+                                        </div>
+                                    </div>
+                                    <div class="sos-person">
+                                        <div class="sos-avatar">&#x1F3E5;</div>
+                                        <div class="sos-pname">Institution</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sos-boundary-wrap">
+                                <div class="sos-b-line"></div><div class="sos-b-label">Authority Boundary</div><div class="sos-b-line"></div>
+                            </div>
+                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
+
+                            <div class="sos-safety-layer">
+                                <div class="sos-sbadge">&check; Active</div>
+                                <div class="sos-infra-lbl">Runtime Governance Infrastructure</div>
+                                <div class="sos-stitle">Safety OS&trade;</div>
+                                <div class="sos-pgrid">
+                                    <div class="sos-pill"><span class="sos-pi">&#x1F512;</span> Consent Scope</div>
+                                    <div class="sos-pill"><span class="sos-pi">&#9889;</span> Escalation Pathways</div>
+                                    <div class="sos-pill"><span class="sos-pi">&#x1F4CB;</span> Immutable Audit Log</div>
+                                    <div class="sos-pill"><span class="sos-pi">&#x1F6E1;</span> Runtime Guardrails</div>
+                                </div>
+                                <div class="sos-ssub">Enforces consent scope, escalation, and audit at runtime.</div>
+                            </div>
+
+                            <div class="sos-boundary-wrap" style="margin-top:5px;">
+                                <div class="sos-b-line"></div><div class="sos-b-label">Control Boundary</div><div class="sos-b-line"></div>
+                            </div>
+                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
+
+                            <div class="sos-ai-layer">
+                                <div class="sos-ai-lbl">AI System</div>
+                                <div class="sos-ai-row">
+                                    <div class="sos-aie">&#x1F916;</div>
+                                    <div class="sos-aitb">
+                                        <div class="sos-aim">Executes within enforceable<br>authority boundaries</div>
+                                        <div class="sos-aisafe">&check; Governed &middot; Auditable &middot; Bounded</div>
+                                    </div>
+                                    <div class="sos-gbadge">Governed<br>Runtime</div>
+                                </div>
+                            </div>
+
+                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
+
+                            <div class="sos-patient-layer">
+                                <div class="sos-plbl">Patient</div>
+                                <div class="sos-prow">
+                                    <div class="sos-pavatar">&#x1F9D3;</div>
+                                    <div>
+                                        <div class="sos-pgate">AI cannot interact with patients without passing through the governance layer.</div>
+                                        <div class="sos-psub">Every interaction: consented, governed &amp; logged.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sos-bottom-bar">
+                            <div class="sos-bs safe">Clinical authority is never delegated to AI.</div>
+                            <div class="sos-bc">&copy; 2026 PatientCentricCare.AI &middot; Safety OS&trade; and Physician-as-Pilot&trade; are trademarks</div>
+                        </div>
+                    </div>
                 </div>
-                <p style="color: #64748b; font-size: 0.6rem; text-align: center; margin: 0.5rem 0 0 0;">&copy; 2026 PatientCentricCare.AI. Safety OS&trade; and Physician-as-Pilot&trade; are trademarks.</p>
-            </div>
-        </div>
+
+            </div><!-- end slider -->
+        </div><!-- end viewport -->
     </div>
 
     <!-- ============================================ -->
@@ -1762,43 +2126,35 @@
             }
         });
 
-        // Interactive governance toggle
-        function showView(view) {
-            var viewWithout = document.getElementById('view-without');
-            var viewWith = document.getElementById('view-with');
-            var btnWithout = document.getElementById('btn-without');
-            var btnWith = document.getElementById('btn-with');
-            if (view === 'without') {
-                viewWithout.style.display = 'block';
-                viewWith.style.display = 'none';
-                btnWithout.style.background = '#E87722';
-                btnWithout.style.color = 'white';
-                btnWith.style.background = '#1e293b';
-                btnWith.style.color = '#94a3b8';
+        // Interactive governance toggle v2 - card slider
+        function showCard(view) {
+            var slider = document.getElementById('sos-slider');
+            var btns = document.querySelectorAll('.sos-toggle-btn');
+            if (view === 'with') {
+                slider.classList.add('show-with');
+                btns[0].classList.remove('active');
+                btns[1].classList.add('active');
             } else {
-                viewWithout.style.display = 'none';
-                viewWith.style.display = 'block';
-                btnWith.style.background = '#0d6b6b';
-                btnWith.style.color = 'white';
-                btnWithout.style.background = '#1e293b';
-                btnWithout.style.color = '#94a3b8';
+                slider.classList.remove('show-with');
+                btns[0].classList.add('active');
+                btns[1].classList.remove('active');
             }
         }
 
-        // Add swipe support for toggle
+        // Add swipe support for card slider
         (function() {
-            var toggleEl = document.getElementById('governance-toggle');
-            if (!toggleEl) return;
+            var viewport = document.querySelector('.sos-card-viewport');
+            if (!viewport) return;
             var startX = 0;
-            toggleEl.addEventListener('touchstart', function(e) {
+            viewport.addEventListener('touchstart', function(e) {
                 startX = e.touches[0].clientX;
             });
-            toggleEl.addEventListener('touchend', function(e) {
+            viewport.addEventListener('touchend', function(e) {
                 var endX = e.changedTouches[0].clientX;
                 var diff = endX - startX;
                 if (Math.abs(diff) > 50) {
-                    if (diff < 0) showView('with');
-                    else showView('without');
+                    if (diff < 0) showCard('with');
+                    else showCard('without');
                 }
             });
         })();
