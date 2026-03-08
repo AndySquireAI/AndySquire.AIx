@@ -1,0 +1,61 @@
+name: Switch Domain to patientcentriccare.ai
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  switch-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update CNAME
+        run: echo "www.patientcentriccare.ai" > CNAME
+
+      - name: Replace domain references (preserving emails)
+        run: |
+          find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" -o -name "*.json" \) \
+            ! -path "./.git/*" \
+            -exec sed -i \
+              -e 's|andy@andysquire\.ai|andy@EMAILPLACEHOLDER|g' \
+              -e 's|www\.andysquire\.ai|www.patientcentriccare.ai|g' \
+              -e 's|https://andysquire\.ai|https://patientcentriccare.ai|g' \
+              -e 's|http://andysquire\.ai|http://patientcentriccare.ai|g' \
+              -e 's|//andysquire\.ai|//patientcentriccare.ai|g' \
+              -e 's|andy@EMAILPLACEHOLDER|andy@andysquire.ai|g' \
+              {} +
+          find . -type f \( -name "*.html" -o -name "*.js" \) \
+            ! -path "./.git/*" \
+            -exec sed -i \
+              -e 's|andysquire\.ai|patientcentriccare.ai|g' \
+              {} +
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Switch primary domain from andysquire.ai to patientcentriccare.ai"
+          title: "Switch domain: andysquire.ai to patientcentriccare.ai"
+          body: |
+            ## Domain Switch: andysquire.ai to patientcentriccare.ai
+            
+            This PR updates all references across the website.
+            
+            ### Changes:
+            - CNAME updated to www.patientcentriccare.ai
+            - All canonical URLs updated
+            - All Open Graph meta tags updated
+            - All structured data URLs updated
+            - All social share links updated
+            
+            ### Preserved (not changed):
+            - Email: andy@andysquire.ai
+            - LinkedIn profile links
+            - Affiliate ref tags
+          branch: switch-to-patientcentriccare
+          delete-branch: true

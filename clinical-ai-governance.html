@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical AI Governance — Authority, Boundaries, Enforcement, Auditability | PatientCentricCare.AI</title>
+    <meta name="description" content="Clinical AI governance is not about model intelligence. It is about who holds authority, how limits are enforced, and whether accountability is provable.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.patientcentriccare.ai/clinical-ai-governance">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.patientcentriccare.ai/clinical-ai-governance">
+    <meta property="og:title" content="Clinical AI Governance — Authority, Boundaries, Enforcement, Auditability">
+    <meta property="og:description" content="Clinical AI governance is not about model intelligence. It is about who holds authority, how limits are enforced, and whether accountability is provable.">
+    <meta property="og:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="PatientCentricCare.AI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.patientcentriccare.ai/clinical-ai-governance">
+    <meta name="twitter:title" content="Clinical AI Governance — Authority, Boundaries, Enforcement, Auditability">
+    <meta name="twitter:description" content="Clinical AI governance is not about model intelligence. It is about who holds authority, how limits are enforced, and whether accountability is provable.">
+    <meta name="twitter:image" content="https://www.patientcentriccare.ai/og-image-optimized.png?v=2">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Clinical AI Governance: Authority, Boundaries, Enforcement, Auditability",
+      "description": "Clinical AI governance is not about model intelligence. It is about who holds authority, how limits are enforced, and whether accountability is provable.",
+      "url": "https://www.patientcentriccare.ai/clinical-ai-governance",
+      "image": "https://www.patientcentriccare.ai/og-image-optimized.png?v=2",
+      "author": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "url": "https://www.patientcentriccare.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PatientCentricCare.AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.patientcentriccare.ai/logo.png"
+        }
+      },
+      "datePublished": "2025-06-01",
+      "dateModified": "2026-02-21",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.patientcentriccare.ai/clinical-ai-governance"
+      },
+      "keywords": ["clinical AI governance", "AI authority boundaries", "healthcare AI enforcement", "AI auditability", "SaMD governance", "runtime governance"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.patientcentriccare.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Clinical AI Governance",
+          "item": "https://www.patientcentriccare.ai/clinical-ai-governance"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XGFG9VW9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8XGFG9VW9Z');
+      gtag('config', 'AW-17939692705');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 1rem; }
+        .logo-container img { height: 45px; width: auto; }
+        .logo-text { color: white; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
+
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: #0d9488; }
+        .nav-links .nav-contact { background: #E6A23C; padding: 0.5rem 1rem; border-radius: 6px; color: white; }
+        .nav-links .nav-contact:hover { background: #d4911f; color: white; }
+
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-toggle { color: white; font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: color 0.3s; }
+        .nav-dropdown-toggle:hover { color: #0d9488; }
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; left: 0; background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;
+            padding: 0.5rem 0; min-width: 160px; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: all 0.2s; list-style: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(5px); }
+        .nav-dropdown-menu li { padding: 0; }
+        .nav-dropdown-menu a { display: block; padding: 0.5rem 1rem; color: white; text-decoration: none; font-size: 0.9rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.1); color: #0d9488; }
+
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 25px; height: 3px; background: white; transition: 0.3s; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed; right: -100%; top: 70px; flex-direction: column;
+                background: #0f172a; width: 100%; text-align: center;
+                transition: 0.3s; box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0; z-index: 999;
+            }
+            .nav-links.active { right: 0; }
+            .nav-dropdown-menu {
+                position: static; opacity: 1; visibility: visible; transform: none;
+                border: none; box-shadow: none; background: rgba(255,255,255,0.05);
+                margin-top: 0.5rem; display: none;
+            }
+            .nav-dropdown.active .nav-dropdown-menu { display: block; }
+            .nav-dropdown-toggle { display: block; padding: 0.5rem 0; }
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-hero .subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Content */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .content-section h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #0d9488;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+
+        .content-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+
+        /* Phase cards */
+        .phase-card {
+            padding: 1.5rem;
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .phase-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #0d9488;
+            font-size: 1.2rem;
+        }
+
+        .phase-card p {
+            margin: 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        /* Invariant banner */
+        .invariant-banner {
+            margin-top: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            padding: 1rem;
+            background: #fef3c7;
+            border-radius: 8px;
+        }
+
+        /* Pillar cards */
+        .pillar-card {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-left: 4px solid #0d9488;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 {
+            margin: 0 0 0.75rem 0;
+            color: #0f172a;
+            font-size: 1.2rem;
+        }
+
+        .pillar-card p {
+            margin: 0 0 0.5rem 0;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .pillar-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .pillar-card ul li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .pillar-card ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0d9488;
+            font-weight: bold;
+        }
+
+        .pillar-card .pillar-note {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 0.75rem;
+            margin-bottom: 0;
+        }
+
+        /* Not-list */
+        .not-list li:before {
+            content: "✕";
+            color: #dc2626;
+        }
+
+        .not-list-affirm li:before {
+            content: "✓";
+            color: #0d9488;
+        }
+
+        /* Emphasis block */
+        .emphasis-block {
+            background: #f0fdfa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            color: #0f172a;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Bottom line */
+        .bottom-line {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .bottom-line p {
+            color: white;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bottom-line p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Diagram container */
+        .diagram-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .diagram-container img {
+            max-width: 750px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .diagram-caption {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Regulatory table */
+        .reg-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .reg-table th {
+            background: #0f172a;
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .reg-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        .reg-table tr:last-child td { border-bottom: none; }
+        .reg-table tr:nth-child(even) { background: #f8fafc; }
+
+        /* Negative list */
+        .negative-list li:before {
+            content: "\2715";
+            color: #dc2626;
+        }
+
+        /* Affirm list */
+        .affirm-list li:before {
+            content: "\2713";
+            color: #0d9488;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Educational links */
+        .edu-links {
+            margin-top: 2.5rem;
+        }
+
+        .edu-links p {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-links a {
+            color: #0d9488;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .edu-links a:hover {
+            text-decoration: underline;
+        }
+
+        .edu-link-block {
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA
+        .cta-button {
+            display: inline-block;
+            background: #E6A23C;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 162, 60, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #d4911f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 162, 60, 0.4);
+        }
+
+        .cta-outline {
+            background: transparent;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+            box-shadow: none;
+        }
+
+        .cta-outline:hover {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.8rem; }
+            .page-hero .subtitle { font-size: 1.05rem; }
+            .content-section h2 { font-size: 1.6rem; }
+            .content-section { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Canonical navigation – do not modify without architectural review -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="/MAINLOGOPCC.png" alt="PatientCentricCare.AI Logo">
+                <span class="logo-text">PatientCentricCare.AI</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/physician-as-pilot">Physician-as-Pilot</a></li>
+                <li><a href="/standards/hybrid-human-agent-operating-standard">Standards</a></li>
+                <li><a href="/safety-os">Safety OS</a></li>
+                <li><a href="/home-companion">Phase 1</a></li>
+                <li><a href="/traction">Evidence</a></li>
+                <li><a href="/team">Team</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-dropdown-toggle">Company ▾</span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/mission">Mission</a></li>
+                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="/investors/">Investor Portal</a></li>
+                    </ul>
+                </li>
+                <li><a href="mailto:andy@patientcentriccare.ai?subject=Inquiry%20from%20PatientCentricCare.AI%20Website&body=Hello%20Andy%2C%0A%0AI%20am%20reaching%20out%20regarding%3A%0A%0A" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Canonical navigation -->
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <h1>Clinical AI Governance</h1>
+        <p class="subtitle">Authority, Boundaries, Enforcement, Auditability</p>
+    </section>
+
+    <!-- INTRO (Point 2) -->
+    <div class="content-section">
+        <p>Clinical AI governance is not about model intelligence - it's about who is authorized to act, when, and under what constraints.</p>
+        <p>This framework defines how execution is governed at runtime, how boundaries are enforced, and how accountability is provable before clinical claims are made.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- PHASE CONTEXT - Short and Referential (Point 3) -->
+    <div class="content-section">
+        <p>Governance applies across all phases of AI deployment - from non-medical to SaMD readiness and regulated clinical AI.</p>
+        <p>For a high-level view of how authority is phased and matured, see the <a href="/standards/hybrid-human-agent-operating-standard" style="color: #0d9488; font-weight: 600;">Governance Roadmap</a>.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- CORE PILLARS (Point 4A) -->
+    <div class="content-section">
+        <h2>Core Pillars of Governance</h2>
+
+        <div class="pillar-card">
+            <h3>Authority Inventory</h3>
+            <ul>
+                <li>All clinical decisions that may be influenced by AI are documented</li>
+                <li>Human authority holders are named and revocable</li>
+                <li>Authority is assigned before execution is permitted</li>
+            </ul>
+        </div>
+
+        <div class="pillar-card">
+            <h3>Boundaries &amp; Permissioning</h3>
+            <ul>
+                <li>Permitted actions are defined in advance</li>
+                <li>Anything outside scope is refused by default</li>
+                <li>Expansion requires human re-authorization</li>
+            </ul>
+        </div>
+
+        <div class="pillar-card">
+            <h3>Runtime Enforcement</h3>
+            <ul>
+                <li>Policy-constrained actions enforced through a governance control layer (Safety OS)</li>
+                <li>Mandatory refusal when boundaries are exceeded</li>
+                <li>Structured escalation to humans</li>
+            </ul>
+        </div>
+
+        <div class="pillar-card">
+            <h3>Auditability &amp; Traceability</h3>
+            <ul>
+                <li>Actions, refusals, escalations, and authority assignments are continuously logged</li>
+                <li>Logs are immutable, time-stamped, and attributable</li>
+                <li>Supports regulatory traceability, incident review, and post-market surveillance</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- GOVERNANCE SEQUENCING VISUAL (Point 5) -->
+    <div class="content-section">
+        <div class="diagram-container">
+            <img src="/governance-sequencing.jpeg" alt="Governance Sequencing: How Safety OS Enables SaMD Without Clinical Delegation - showing Phase I Non-Medical AI, Phase II Physician-as-Pilot, Phase III Regulated Clinical AI (SaMD), with authority maturity (not intelligence) arrow and invariant: clinical authority is never delegated to AI">
+        </div>
+        <p class="diagram-caption">Safety OS Governance Architecture. This conceptual diagram illustrates how a governance layer enforces boundaries, constrains actions, and generates immutable audit evidence under continuous human oversight. This is architecture - not a product or clinical claim.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- WHAT THIS IS NOT (Point 6) -->
+    <div class="content-section">
+        <h2>What This Governance Model Is Not</h2>
+        <ul class="negative-list">
+            <li>Not autonomous clinical decision-making</li>
+            <li>Not a claim of FDA or EU MDR approval</li>
+            <li>Not standalone software with clinical claims</li>
+            <li>Not diagnostic or therapeutic in any phase before regulated clearance</li>
+        </ul>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- REGULATORY ALIGNMENT TABLE (Point 7) -->
+    <div class="content-section">
+        <h2>Regulatory Alignment</h2>
+        <table class="reg-table">
+            <thead>
+                <tr>
+                    <th>Governance Capability</th>
+                    <th>Regulatory Relevance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Authority Inventory</td>
+                    <td>Clinical evaluation alignment</td>
+                </tr>
+                <tr>
+                    <td>Runtime Enforcement</td>
+                    <td>Supports QMS and traceability</td>
+                </tr>
+                <tr>
+                    <td>Auditability</td>
+                    <td>Post-market surveillance &amp; PMS</td>
+                </tr>
+                <tr>
+                    <td>Permission Constraints</td>
+                    <td>SaMD risk management expectations</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="disclaimer">References to FDA/MDR are descriptive; they do not imply clearance or endorsement.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- IN PRACTICE (Point 9) -->
+    <div class="content-section">
+        <h2>In Practice</h2>
+        <p>This governance model ensures:</p>
+        <ul>
+            <li>Named authority for every potential clinical action</li>
+            <li>Boundaries enforced deterministically at execution time</li>
+            <li>Escalation to human authority only</li>
+            <li>Immutable evidence suitable for regulatory review</li>
+        </ul>
+
+        <!-- CROSS-LINKS -->
+        <div class="edu-links">
+            <div class="edu-link-block">
+                <p>Understanding governance concepts leads naturally to how they work in practice.</p>
+                <a href="/physician-as-pilot">&rarr; See the Physician-as-Pilot operating model</a>
+            </div>
+            <div class="edu-link-block">
+                <p>For concrete examples of governance implementation:</p>
+                <a href="/standards/evidence">&rarr; Evidence &amp; Implementation Library</a>
+            </div>
+            <div class="edu-link-block">
+                <a href="/" style="color: #64748b; font-weight: 500;">&larr; Back to PatientCentricCare overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLINICAL BOUNDARY THRESHOLD -->
+    <div class="content-section" style="background: #fef3c7; border-left: 4px solid #d4a04a; padding: 2rem; margin: 2rem auto; max-width: 900px; border-radius: 0 8px 8px 0;">
+        <h2 style="color: #0f172a; font-size: 1.4rem; margin-bottom: 1rem;">The Clinical Boundary ("Hand-Off Threshold")</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155;">Clinical inference is not permitted in Phase I. The threshold for diagnostic or therapeutic output is gated behind regulatory authorization and physician-supervised workflows in subsequent phases.</p>
+    </div>
+
+    <!-- AI ACT MAPPING -->
+    <div class="content-section" style="background: #f0f9ff; border-left: 4px solid #0d9488; padding: 2rem; margin: 2rem auto; max-width: 900px; border-radius: 0 8px 8px 0;">
+        <h2 style="color: #0f172a; font-size: 1.4rem; margin-bottom: 1rem;">AI Act Alignment</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155;">Phase I logging architecture aligns with traceability principles under AI Act Article 12 (record-keeping and technical documentation).</p>
+        <p style="font-size: 0.95rem; color: #64748b; margin-top: 0.75rem; font-style: italic;">This does not constitute a compliance claim. "Aligned with" indicates architectural intent, not certified conformity.</p>
+    </div>
+
+    <!-- EU MDR SCOPE -->
+    <div class="content-section" style="background: #f8fafc; border-left: 4px solid #94a3b8; padding: 2rem; margin: 2rem auto; max-width: 900px; border-radius: 0 8px 8px 0;">
+        <h2 style="color: #0f172a; font-size: 1.4rem; margin-bottom: 1rem;">EU MDR Scope</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: #334155;">Phase I is designed to operate outside the scope of EU MDR (2017/745) by explicitly excluding medical intent, diagnosis, and therapeutic recommendation.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background: #0f172a; color: white; text-align: center; padding: 3rem 2rem;">
+        <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">PatientCentricCare.AI</p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Safety OS™ — Governance infrastructure for AI in the home.</p>
+        <p style="font-size: 1.4rem; color: #fbbf24; font-style: italic; margin-bottom: 1.5rem;">Empowering Independence. Preserving Dignity.</p>
+        <p style="font-size: 0.95rem; opacity: 0.9; max-width: 800px; margin: 0 auto 1.5rem auto;">No autonomous diagnosis, treatment, or clinical decision-making is performed by this system.</p>
+        <p style="margin-bottom: 1.5rem;"><a href="/impressum" style="color: #60a5fa; text-decoration: underline;">Impressum</a></p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 PatientCentricCare.AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) { navLinks.classList.toggle('active'); }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+            const dropdown = document.querySelector('.nav-dropdown');
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
