@@ -7,6 +7,7 @@
     <meta name="description" content="Safety OS™ is a governance-first AI control architecture for healthcare. Enforcing human authority, bounded autonomy, and runtime accountability across regulated AI deployments.">
     <meta name="keywords" content="AI governance, healthcare AI governance, Safety OS, AI compliance framework, EU AI Act, NIST AI RMF, ISO 42001, Physician-as-Pilot, bounded autonomy, AI accountability, PatientCentricCare">
     <link rel="canonical" href="https://www.patientcentriccare.ai/">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -1266,372 +1267,171 @@
                 align-items: center;
             }
         }
-        /* ===== SAFETY OS INTERACTIVE TOGGLE v2 ===== */
+        /* ===== SAFETY OS 3-WAY TOGGLE v3 ===== */
         .sos-toggle-section {
-            background: #0a1628;
-            padding: 24px 16px 40px;
+            position: relative;
+            overflow: hidden;
+            padding: 2.5rem 1.5rem 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .sos-toggle-section canvas.sos-starfield {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .sos-toggle-section .sos-content-wrap {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
         .sos-page-header {
             text-align: center;
-            margin-bottom: 24px;
-            max-width: 420px;
+            margin-bottom: 2rem;
+            max-width: 700px;
         }
-        .sos-page-eyebrow {
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #2B9E9E;
-            margin-bottom: 8px;
+        .sos-page-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -.02em;
+            margin-bottom: .5rem;
+            color: #fff;
         }
-        .sos-page-title {
-            font-size: 22px;
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 6px;
+        .sos-page-header .sos-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(.95rem, 1.8vw, 1.15rem);
+            color: #C0CDD8;
+            font-weight: 500;
         }
-        .sos-page-title span { color: #2B9E9E; }
-        .sos-page-sub {
-            font-size: 12px;
-            color: rgba(255,255,255,0.45);
-            font-style: italic;
-        }
-        .sos-toggle-container {
-            width: 100%;
-            max-width: 420px;
-            margin-bottom: 20px;
-        }
-        .sos-toggle-track {
-            background: #0D3349;
-            border-radius: 50px;
-            padding: 4px;
+        /* 3-way toggle bar */
+        .sos-toggle-bar {
             display: flex;
-            position: relative;
-            border: 1.5px solid rgba(43,158,158,0.3);
+            background: rgba(10,16,32,.7);
+            border: 1px solid rgba(43,138,143,.3);
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 2.5rem;
+            gap: 4px;
+            backdrop-filter: blur(6px);
         }
         .sos-toggle-btn {
-            flex: 1;
-            padding: 12px 10px;
-            border: none;
-            background: transparent;
-            border-radius: 46px;
-            font-family: inherit;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-            letter-spacing: 0.2px;
-        }
-        .sos-toggle-btn.without { color: rgba(255,255,255,0.5); }
-        .sos-toggle-btn.without.active { color: #ffffff; background: #8B2010; }
-        .sos-toggle-btn.with { color: rgba(255,255,255,0.5); }
-        .sos-toggle-btn.with.active { color: #ffffff; background: #0e6b5e; }
-        .sos-toggle-hint {
-            text-align: center;
-            font-size: 10px;
-            color: rgba(255,255,255,0.3);
-            margin-top: 8px;
-            letter-spacing: 0.5px;
-        }
-        .sos-card-viewport {
-            width: 100%;
-            max-width: 420px;
-            overflow: hidden;
-            position: relative;
-        }
-        .sos-card-slider {
-            display: flex;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            width: 200%;
-        }
-        .sos-card-slider.show-with { transform: translateX(-50%); }
-        .sos-card-slot { width: 50%; }
-        .sos-card {
-            width: 100%;
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 24px 64px rgba(0,0,0,0.55);
-        }
-        .sos-super-title {
-            background: #0a2236;
-            padding: 7px 22px;
-            text-align: center;
-            border-bottom: 1px solid rgba(43,158,158,0.25);
-        }
-        .sos-super-title span {
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: rgba(43,158,158,0.65);
-        }
-        .sos-top-header {
-            padding: 16px 22px 13px;
-            text-align: center;
-        }
-        .sos-top-header.danger { background: #1a0a08; }
-        .sos-top-header.safe { background: #0D3349; }
-        .sos-brand {
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #2B9E9E;
-            margin-bottom: 4px;
-        }
-        .sos-main-title {
-            font-size: 19px;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: -0.3px;
-            line-height: 1.25;
-        }
-        .sos-main-title.danger-accent span { color: #ff6b6b; }
-        .sos-main-title.safe-accent span { color: #2B9E9E; }
-        .sos-tagline {
-            font-size: 10.5px;
-            color: rgba(255,255,255,0.45);
-            margin-top: 4px;
-            font-style: italic;
-        }
-        .sos-content {
-            background: #eef1f5;
-            padding: 13px;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-        .sos-boundary-wrap {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            margin: 4px 0;
-        }
-        .sos-b-line {
-            flex: 1;
-            height: 1.5px;
-            background: repeating-linear-gradient(to right, #94a3b8 0, #94a3b8 7px, transparent 7px, transparent 13px);
-        }
-        .sos-b-label {
-            font-size: 7.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            color: #94a3b8;
-            white-space: nowrap;
-        }
-        .sos-human-layer {
-            background: #fff;
-            border: 2.5px solid #2B9E9E;
-            border-radius: 12px;
-            padding: 12px 14px;
-        }
-        .sos-lbl {
-            font-size: 9.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #2B9E9E;
-            margin-bottom: 1px;
-        }
-        .sos-sublbl {
-            font-size: 11.5px;
-            font-weight: 700;
-            color: #7a9aaa;
-            margin-bottom: 9px;
-        }
-        .sos-people-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .sos-person {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .sos-avatar {
-            width: 60px; height: 60px;
-            border-radius: 50%;
-            border: 3px solid #2B9E9E;
-            background: #e8f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-        }
-        .sos-pname { font-size: 13px; font-weight: 700; color: #0D3349; }
-        .sos-mid {
-            text-align: center;
-            flex: 1;
-            padding: 0 7px;
-        }
-        .sos-mid p { font-size: 12px; font-weight: 600; color: #3a5568; line-height: 1.5; }
-        .sos-no-enforce {
-            font-size: 12px;
-            color: #E87722;
-            font-weight: 800;
-            margin-top: 5px;
-            display: block;
-        }
-        .sos-auth-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3px;
-            margin-top: 5px;
-        }
-        .sos-atag {
-            font-size: 8px;
-            font-weight: 700;
-            color: #2B9E9E;
-            background: #e8f5f5;
-            border: 1px solid #2B9E9E;
-            border-radius: 10px;
-            padding: 2px 6px;
-        }
-        .sos-arrow {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 4px 0;
-        }
-        .sos-al { width: 2px; height: 11px; background: #94a3b8; }
-        .sos-at {
-            width: 0; height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 9px solid #94a3b8;
-        }
-        .sos-missing-layer {
-            background: #141d30;
-            border: 3px dashed #E87722;
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            position: relative;
-        }
-        .sos-dbadge {
-            position: absolute;
-            top: -1px; right: 12px;
-            background: #E87722;
-            color: #fff;
-            font-size: 7.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 3px 9px;
-            border-radius: 0 0 6px 6px;
-        }
-        .sos-xmark { font-size: 28px; color: #E87722; font-weight: 900; line-height: 1; }
-        .sos-mtitle { font-size: 15px; font-weight: 800; color: #fff; text-align: center; line-height: 1.3; }
-        .sos-msub { font-size: 10.5px; color: #E87722; font-style: italic; text-align: center; font-weight: 600; line-height: 1.4; }
-        .sos-safety-layer {
-            background: #fff8f0;
-            border-top: 4px solid #E87722;
-            border-bottom: 4px solid #E87722;
-            border-left: 3px solid #E87722;
-            border-right: 3px solid #E87722;
-            border-radius: 10px;
-            padding: 12px 14px;
-            position: relative;
-        }
-        .sos-sbadge {
-            position: absolute;
-            top: -1px; right: 12px;
-            background: #E87722;
-            color: #fff;
-            font-size: 7.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 3px 9px;
-            border-radius: 0 0 6px 6px;
-        }
-        .sos-infra-lbl { font-size: 7.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #c4601a; margin-bottom: 2px; }
-        .sos-stitle { font-size: 20px; font-weight: 900; color: #E87722; margin-bottom: 8px; }
-        .sos-pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 7px; }
-        .sos-pill {
-            background: #fff;
-            border: 2px solid #E87722;
-            border-radius: 20px;
-            padding: 6px 9px;
-            font-size: 10.5px;
-            font-weight: 700;
-            color: #c4601a;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        .sos-pi { font-size: 11px; }
-        .sos-ssub { font-size: 10.5px; color: #a06030; font-weight: 600; font-style: italic; line-height: 1.4; }
-        .sos-ai-layer {
-            background: #fff;
-            border: 2.5px solid #1a56c4;
-            border-radius: 12px;
-            padding: 12px 14px;
-        }
-        .sos-ai-lbl { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #1a56c4; margin-bottom: 7px; }
-        .sos-ai-row { display: flex; align-items: flex-start; gap: 10px; }
-        .sos-aie { font-size: 27px; margin-top: 2px; }
-        .sos-aitb { flex: 1; }
-        .sos-aim { font-size: 12.5px; font-weight: 700; color: #1a56c4; margin-bottom: 5px; line-height: 1.3; }
-        .sos-risk { font-size: 10.5px; font-weight: 600; color: #E87722; margin-bottom: 2px; }
-        .sos-aisafe { font-size: 9.5px; font-weight: 700; color: #2B9E9E; text-transform: uppercase; letter-spacing: 0.4px; }
-        .sos-gbadge {
-            background: #e8f5f5;
-            color: #2B9E9E;
-            font-size: 10px;
-            font-weight: 800;
-            padding: 4px 8px;
+            padding: .65rem 1.4rem;
             border-radius: 6px;
-            border: 2px solid #2B9E9E;
-            text-align: center;
-            line-height: 1.4;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(.78rem, 1.3vw, .92rem);
+            font-weight: 600;
+            color: #A0B0C0;
+            background: transparent;
+            transition: all .35s ease;
             white-space: nowrap;
-            align-self: center;
         }
-        .sos-patient-layer {
-            background: #f0faf9;
-            border: 2.5px solid #2B9E9E;
-            border-radius: 12px;
-            padding: 10px 13px;
+        .sos-toggle-btn:hover { color: #fff; }
+        .sos-toggle-btn.active-without { background: rgba(212,74,74,.15); color: #D44A4A; box-shadow: 0 0 0 1px rgba(212,74,74,.4); }
+        .sos-toggle-btn.active-with { background: rgba(43,138,143,.2); color: #3AAFB5; box-shadow: 0 0 0 1px rgba(43,138,143,.5); }
+        .sos-toggle-btn.active-wedge { background: rgba(232,138,58,.15); color: #E88A3A; box-shadow: 0 0 0 1px rgba(232,138,58,.4); }
+        /* View panels */
+        .sos-view-container { width: 100%; max-width: 720px; position: relative; }
+        .sos-view-panel {
+            display: none; opacity: 0; transform: translateY(12px);
+            transition: opacity .5s ease, transform .5s ease;
         }
-        .sos-plbl { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #2B9E9E; margin-bottom: 5px; }
-        .sos-prow { display: flex; align-items: center; gap: 9px; }
-        .sos-pavatar {
-            width: 46px; height: 46px;
-            border-radius: 50%;
-            border: 2.5px solid #2B9E9E;
-            background: #d0eeec;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
+        .sos-view-panel.active { display: block; }
+        .sos-view-panel.visible { opacity: 1; transform: translateY(0); }
+        .sos-card {
+            font-family: 'Montserrat', sans-serif;
+            background: rgba(10,16,32,0.55);
+            border-left: 3px solid #2B8A8F;
+            border-radius: 0 10px 10px 0;
+            padding: 2.2rem 2.5rem;
+            backdrop-filter: blur(6px);
+            color: #fff;
         }
-        .sos-pgate { font-size: 11px; font-weight: 700; color: #0D3349; line-height: 1.4; margin-bottom: 2px; }
-        .sos-psub { font-size: 9.5px; font-weight: 600; color: #2B9E9E; font-style: italic; }
-        .sos-bottom-bar {
-            background: #0D3349;
-            padding: 12px 20px;
-            text-align: center;
+        .sos-slide-tag { font-size: .72rem; font-weight: 600; color: #A0B0C0; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .8rem; }
+        .sos-headline { font-size: clamp(1.5rem, 3.2vw, 2rem); font-weight: 700; line-height: 1.15; margin-bottom: .5rem; letter-spacing: -.01em; color: #fff; }
+        .sos-subline { font-size: clamp(.9rem, 1.6vw, 1.05rem); margin-bottom: 1.6rem; font-weight: 500; }
+        .sos-subline.gold { color: #D4A843; font-style: italic; }
+        .sos-subline.muted { color: #C0CDD8; }
+        .sos-teal-line { width: 70px; height: 2px; background: #2B8A8F; margin: 1.5rem 0 1rem; }
+        .sos-punchline { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; color: #D4A843; line-height: 1.25; }
+        .sos-brand { font-size: .85rem; font-weight: 700; color: #2B8A8F; margin-top: .5rem; }
+        .sos-supporting { font-size: .9rem; font-weight: 600; color: #A0B0C0; margin-top: .4rem; }
+        /* Avatar thumbnails */
+        .sos-avatar-box { position: relative; display: flex; align-items: flex-start; }
+        .sos-av-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; z-index: 2; }
+        .sos-av-wrap.av-left { margin-right: -6px; }
+        .sos-av-wrap.av-right { margin-left: -6px; }
+        .sos-av-wrap .av-icon { width: 48px; height: 48px; border-radius: 5px; overflow: hidden; border: 2px solid #2B8A8F; background: #1A2845; }
+        .sos-av-wrap .av-label { font-size: .58rem; font-weight: 700; color: #3AAFB5; text-transform: uppercase; letter-spacing: .04em; margin-top: 3px; text-align: center; line-height: 1.1; white-space: nowrap; }
+        .sos-avatar-box .av-center { flex: 1; z-index: 1; align-self: center; }
+        /* Safety OS side label */
+        .sos-os-label-wrap { display: flex; align-items: center; gap: .8rem; }
+        .sos-os-label-wrap .os-side-label { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 800; color: #E88A3A; line-height: 1.15; white-space: nowrap; flex-shrink: 0; min-width: 65px; text-align: center; }
+        .sos-os-label-wrap .os-content { flex: 1; min-width: 0; }
+        /* Flight recorder */
+        .sos-flight-recorder { width: 42px; height: 36px; position: absolute; bottom: 10px; right: 12px; display: flex; align-items: center; justify-content: center; }
+        /* Bridge (view 1) */
+        .sos-bridge { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 1rem auto 0; max-width: 460px; }
+        .sos-bridge-box { width: 100%; text-align: center; padding: .75rem 1rem; border-radius: 6px; font-size: clamp(.95rem, 1.6vw, 1.1rem); font-weight: 700; }
+        .sos-bridge-box.auth { background: rgba(43,138,143,.18); border: 2px solid #2B8A8F; }
+        .sos-bridge-box.exec { background: rgba(43,138,143,.18); border: 2px solid #2B8A8F; }
+        .sos-bridge-gap { width: 100%; text-align: center; padding: .6rem 1rem; border: 2px dashed #E88A3A; border-radius: 6px; color: #E88A3A; font-weight: 700; font-size: clamp(.88rem, 1.4vw, 1rem); background: rgba(212,74,74,.06); position: relative; }
+        .sos-bridge-gap .x-mark { color: #D44A4A; font-size: 1.2rem; display: block; margin-top: .15rem; }
+        .sos-bridge-conn { color: #A0B0C0; font-size: .9rem; text-align: center; padding: .2rem 0; }
+        .sos-fail-list { max-width: 460px; margin: 1rem auto 0; text-align: left; }
+        .sos-fail-list .fl-title { font-size: clamp(.88rem, 1.4vw, .98rem); font-weight: 600; color: #C0CDD8; margin-bottom: .3rem; }
+        .sos-fail-list ul { list-style: none; padding: 0; }
+        .sos-fail-list li { font-size: clamp(.85rem, 1.3vw, .95rem); color: #C0CDD8; padding: .18rem 0 .18rem 1.4rem; position: relative; font-weight: 500; }
+        .sos-fail-list li::before { content: "\2022"; position: absolute; left: .3rem; color: #E88A3A; }
+        /* Arch (view 2) */
+        .sos-arch { display: flex; flex-direction: column; align-items: center; gap: 0; margin: .8rem auto 0; max-width: 500px; }
+        .sos-arch-layer { width: 100%; text-align: center; padding: .7rem 1rem; border-radius: 5px; font-size: clamp(.95rem, 1.6vw, 1.1rem); font-weight: 600; color: #fff; }
+        .sos-arch-layer.phys { background: rgba(43,138,143,.18); border: 2px solid #2B8A8F; }
+        .sos-arch-layer.ai { background: rgba(43,138,143,.18); border: 2px solid #2B8A8F; }
+        .sos-arch-layer.cp { background: #1A2845; border: 2.5px solid #E88A3A; box-shadow: 0 0 0 1px #C47030; text-align: left; padding: 1.1rem 1.3rem; position: relative; }
+        .sos-cp-title { font-size: clamp(.92rem, 1.5vw, 1.05rem); font-weight: 700; margin-bottom: .7rem; color: #fff; }
+        .sos-mod-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .45rem; }
+        .sos-mod-pill { border: 1.5px solid #E88A3A; border-radius: 5px; padding: .35rem .45rem; text-align: center; font-size: clamp(.72rem, 1.15vw, .82rem); font-weight: 600; color: #E88A3A; background: rgba(10,16,32,.5); }
+        .sos-arch-arrow { color: #2B8A8F; font-size: .85rem; text-align: center; padding: .25rem 0; }
+        .sos-arch-sub { text-align: center; margin-top: .6rem; font-size: clamp(.82rem, 1.3vw, .92rem); color: #A0B0C0; font-weight: 500; line-height: 1.6; }
+        .sos-tagline { font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 600; margin-bottom: 1.2rem; }
+        .sos-tagline .gold { color: #D4A843; }
+        .sos-tagline .tl { color: #3AAFB5; }
+        /* Flow (view 3) */
+        .sos-env-header { font-size: .75rem; font-weight: 600; color: #A0B0C0; letter-spacing: .1em; text-transform: uppercase; text-align: center; margin-bottom: .35rem; }
+        .sos-env-labels { font-size: .95rem; font-weight: 600; color: #C0CDD8; text-align: center; margin-bottom: .6rem; }
+        .sos-flow-stack { display: flex; flex-direction: column; align-items: center; gap: .2rem; margin: .3rem auto 0; max-width: 500px; }
+        .sos-flow-box { width: 100%; text-align: center; padding: .7rem 1rem; border-radius: 5px; font-size: clamp(.92rem, 1.5vw, 1.02rem); font-weight: 600; color: #fff; }
+        .sos-flow-box.teal-box { background: rgba(43,138,143,.18); border: 2px solid #2B8A8F; max-width: 400px; }
+        .sos-flow-box.gov-box { background: #1A2845; border: 2.5px solid #E88A3A; box-shadow: 0 0 0 1px #C47030; text-align: left; padding: 1.1rem 1.3rem; max-width: 500px; position: relative; }
+        .sos-flow-box.tel-box { background: #1A2845; border: 2px solid #E88A3A; max-width: 440px; }
+        .sos-flow-arrow { color: #2B8A8F; font-size: .9rem; padding: .25rem 0; text-align: center; }
+        .sos-hub-caps { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .55rem; }
+        .sos-hub-cap { border: 1.5px solid #E88A3A; border-radius: 5px; padding: .28rem .6rem; font-size: .82rem; font-weight: 600; color: #E88A3A; background: rgba(10,16,32,.5); }
+        .sos-tel-sub { font-size: .9rem; font-weight: 600; color: #D4A843; margin-top: .2rem; }
+        /* Footer */
+        .sos-site-footer { text-align: center; padding: 1.5rem; color: #505868; font-size: .72rem; }
+        @media(max-width:640px) {
+            .sos-card { padding: 1.5rem 1.2rem; }
+            .sos-toggle-bar { flex-direction: column; width: 100%; max-width: 320px; }
+            .sos-toggle-btn { text-align: center; }
+            .sos-mod-row { grid-template-columns: 1fr; }
+            .sos-toggle-section { padding: 1.5rem 1rem .5rem; }
+            .sos-os-label-wrap { flex-direction: column; }
+            .sos-os-label-wrap .os-side-label { text-align: left; }
+            .sos-av-wrap .av-icon { width: 38px; height: 38px; }
+            .sos-av-wrap .av-label { font-size: .5rem; }
         }
-        .sos-bs { font-size: 13px; font-weight: 800; white-space: nowrap; }
-        .sos-bs.danger { color: #E87722; }
-        .sos-bs.safe { color: #2B9E9E; }
-        .sos-bc { font-size: 8px; color: rgba(255,255,255,0.3); margin-top: 3px; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -1707,184 +1507,202 @@
         </div>
     </div>
 
-    <!-- INTERACTIVE SAFETY OS TOGGLE v2 -->
+    <!-- INTERACTIVE SAFETY OS 3-WAY TOGGLE v3 -->
     <div class="sos-toggle-section" id="governance-toggle">
+        <canvas class="sos-starfield" id="sos-starfield"></canvas>
 
-        <div class="sos-page-header">
-            <div class="sos-page-eyebrow">PatientCentricCare.AI &middot; Safety OS&trade;</div>
-            <div class="sos-page-title">AI Runtime <span>Governance</span> Architecture</div>
-            <div class="sos-page-sub">Tap to compare &mdash; Without vs. With Safety OS&trade;</div>
-        </div>
+        <!-- Inline SVG defs for avatar silhouettes -->
+        <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+          <defs>
+            <symbol id="avatar-patient" viewBox="0 0 48 48">
+              <rect width="48" height="48" rx="4" fill="#1e3a48"/>
+              <circle cx="24" cy="17" r="8" fill="#3a7080" opacity=".9"/>
+              <ellipse cx="24" cy="40" rx="14" ry="12" fill="#3a7080" opacity=".8"/>
+              <circle cx="24" cy="16" r="6" fill="#6aafb8" opacity=".6"/>
+              <ellipse cx="24" cy="38" rx="11" ry="10" fill="#6aafb8" opacity=".5"/>
+              <path d="M36 8 C34 5,30 5,30 8 C30 5,26 5,24 8 C24 12,30 16,30 16 C30 16,36 12,36 8Z" fill="#D44A4A" opacity=".5" transform="scale(.55) translate(30,2)"/>
+            </symbol>
+            <symbol id="avatar-doctor" viewBox="0 0 48 48">
+              <rect width="48" height="48" rx="4" fill="#1e3a2a"/>
+              <circle cx="24" cy="17" r="8" fill="#3a7050" opacity=".9"/>
+              <ellipse cx="24" cy="40" rx="14" ry="12" fill="#3a7050" opacity=".8"/>
+              <circle cx="24" cy="16" r="6" fill="#6ab87a" opacity=".6"/>
+              <ellipse cx="24" cy="38" rx="11" ry="10" fill="#6ab87a" opacity=".5"/>
+              <path d="M14 30 Q14 24 20 22" stroke="#6ab87a" stroke-width="2" fill="none" opacity=".6"/>
+              <circle cx="14" cy="31" r="2" fill="#6ab87a" opacity=".5"/>
+            </symbol>
+            <symbol id="avatar-caregiver" viewBox="0 0 48 48">
+              <rect width="48" height="48" rx="4" fill="#2a3548"/>
+              <circle cx="24" cy="17" r="8" fill="#5a6a80" opacity=".9"/>
+              <ellipse cx="24" cy="40" rx="14" ry="12" fill="#5a6a80" opacity=".8"/>
+              <circle cx="24" cy="16" r="6" fill="#8aa0b8" opacity=".6"/>
+              <ellipse cx="24" cy="38" rx="11" ry="10" fill="#8aa0b8" opacity=".5"/>
+              <path d="M34 10 C32 7,30 9,30 11 L28 13 C28 13,32 15,34 13 C36 11,36 10,34 10Z" fill="#E88A3A" opacity=".5"/>
+              <path d="M38 12 C36 9,34 11,34 13 L32 15 C32 15,36 17,38 15 C40 13,40 12,38 12Z" fill="#E88A3A" opacity=".4"/>
+            </symbol>
+            <symbol id="flight-recorder" viewBox="0 0 40 34">
+              <rect x="2" y="4" width="36" height="26" rx="4" fill="#1A2845" stroke="#E88A3A" stroke-width="2"/>
+              <rect x="10" y="8" width="20" height="3" rx="1.5" fill="#E88A3A" opacity=".9"/>
+              <rect x="8" y="14" width="10" height="2" rx="1" fill="#E88A3A" opacity=".6"/>
+              <rect x="8" y="19" width="10" height="2" rx="1" fill="#E88A3A" opacity=".6"/>
+              <rect x="22" y="14" width="12" height="10" rx="2" fill="none" stroke="#E88A3A" stroke-width="1.5" opacity=".7"/>
+              <rect x="24" y="16" width="8" height="6" rx="1" fill="#E88A3A" opacity=".2"/>
+              <path d="M14 4 L14 1 L26 1 L26 4" stroke="#E88A3A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </symbol>
+          </defs>
+        </svg>
 
-        <!-- Toggle -->
-        <div class="sos-toggle-container">
-            <div class="sos-toggle-track">
-                <button class="sos-toggle-btn without active" onclick="showCard('without')">&times; Without Safety OS&trade;</button>
-                <button class="sos-toggle-btn with" onclick="showCard('with')">&check; With Safety OS&trade;</button>
+        <div class="sos-content-wrap">
+            <div class="sos-page-header">
+                <h2>Clinical AI Governance Infrastructure</h2>
+                <p class="sos-sub">AI is already making clinical decisions. See what changes when governance becomes infrastructure.</p>
             </div>
-            <div class="sos-toggle-hint">&larr; swipe or tap to toggle &rarr;</div>
-        </div>
 
-        <!-- Card Slider -->
-        <div class="sos-card-viewport">
-            <div class="sos-card-slider" id="sos-slider">
+            <!-- 3-way toggle -->
+            <div class="sos-toggle-bar" id="sos-toggleBar">
+                <button class="sos-toggle-btn active-without" data-view="without" id="sos-btn-without">Without Safety OS</button>
+                <button class="sos-toggle-btn" data-view="with" id="sos-btn-with">With Safety OS</button>
+                <button class="sos-toggle-btn" data-view="wedge" id="sos-btn-wedge">Home Companion Wedge</button>
+            </div>
 
-                <!-- WITHOUT CARD -->
-                <div class="sos-card-slot">
-                    <div class="sos-card">
-                        <div class="sos-super-title"><span>AI Runtime Governance Architecture</span></div>
-                        <div class="sos-top-header danger">
-                            <div class="sos-brand">PatientCentricCare.AI &middot; Physician-as-Pilot&trade;</div>
-                            <div class="sos-main-title danger-accent">AI Executes. <span>Humans Define Authority.</span></div>
-                            <div class="sos-tagline">Without Safety OS&trade; &mdash; The Governance Gap</div>
-                        </div>
-                        <div class="sos-content">
-                            <div class="sos-human-layer">
-                                <div class="sos-lbl">Human Layer</div>
-                                <div class="sos-sublbl">Traditional HITL Oversight Model</div>
-                                <div class="sos-people-row">
-                                    <div class="sos-person">
-                                        <div class="sos-avatar">&#x1F469;&#x200D;&#x2695;&#xFE0F;</div>
-                                        <div class="sos-pname">Physician</div>
-                                    </div>
-                                    <div class="sos-mid">
-                                        <p>Human authority<br>defines boundaries.</p>
-                                        <strong class="sos-no-enforce">Nothing enforces them.</strong>
-                                    </div>
-                                    <div class="sos-person">
-                                        <div class="sos-avatar">&#x1F9D3;</div>
-                                        <div class="sos-pname">Patient</div>
-                                    </div>
+            <div class="sos-view-container">
+
+                <!-- VIEW 1: Without Safety OS -->
+                <div class="sos-view-panel active visible" id="sos-view-without">
+                    <div class="sos-card" style="border-left-color:#D44A4A">
+                        <div class="sos-slide-tag">The Structural Failure</div>
+                        <h2 class="sos-headline">Human oversight cannot<br>control AI systems.</h2>
+                        <p class="sos-subline gold">Human intent cannot be enforced at runtime.</p>
+                        <div class="sos-bridge">
+                            <div class="sos-avatar-box" style="width:100%">
+                                <div class="sos-av-wrap av-left">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-doctor"/></svg></div>
+                                    <span class="av-label">Doctor</span>
+                                </div>
+                                <div class="av-center sos-bridge-box auth" style="margin:0">Human Authority</div>
+                                <div class="sos-av-wrap av-right">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-patient"/></svg></div>
+                                    <span class="av-label">Patient</span>
                                 </div>
                             </div>
-
-                            <div class="sos-boundary-wrap">
-                                <div class="sos-b-line"></div><div class="sos-b-label">Authority Boundary</div><div class="sos-b-line"></div>
-                            </div>
-                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
-
-                            <div class="sos-missing-layer">
-                                <div class="sos-dbadge">&#9888; GAP</div>
-                                <div class="sos-xmark">&times;</div>
-                                <div class="sos-mtitle">No Enforceable Governance Layer</div>
-                                <div class="sos-msub">Human intent cannot be enforced at runtime &middot; Missing runtime governance</div>
-                            </div>
-
-                            <div class="sos-boundary-wrap" style="margin-top:5px;">
-                                <div class="sos-b-line"></div><div class="sos-b-label">Control Boundary</div><div class="sos-b-line"></div>
-                            </div>
-                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
-
-                            <div class="sos-ai-layer">
-                                <div class="sos-ai-lbl">AI System</div>
-                                <div class="sos-ai-row">
-                                    <div class="sos-aie">&#x1F916;</div>
-                                    <div class="sos-aitb">
-                                        <div class="sos-aim">AI operates without<br>enforceable authority</div>
-                                        <div class="sos-risk">&#9888; No runtime governance</div>
-                                        <div class="sos-risk">&#9888; No escalation path</div>
-                                        <div class="sos-risk">&#9888; No audit trail</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="sos-bridge-conn">|</div>
+                            <div class="sos-bridge-gap">No enforcement layer<span class="x-mark">&#x2716;</span></div>
+                            <div class="sos-bridge-conn">|</div>
+                            <div class="sos-bridge-box exec">AI Execution</div>
                         </div>
-                        <div class="sos-bottom-bar">
-                            <div class="sos-bs danger">Clinical authority is never delegated to AI.</div>
-                            <div class="sos-bc">&copy; 2026 PatientCentricCare.AI &middot; Safety OS&trade; and Physician-as-Pilot&trade; are trademarks</div>
+                        <div class="sos-fail-list">
+                            <div class="fl-title">AI executes without:</div>
+                            <ul>
+                                <li>enforceable authority</li>
+                                <li>escalation pathways</li>
+                                <li>audit logs</li>
+                            </ul>
                         </div>
+                        <div class="sos-teal-line" style="background:#D44A4A"></div>
+                        <div class="sos-punchline" style="color:#D44A4A">No governance control plane.</div>
                     </div>
                 </div>
 
-                <!-- WITH CARD -->
-                <div class="sos-card-slot" style="padding-left:16px;">
+                <!-- VIEW 2: With Safety OS -->
+                <div class="sos-view-panel" id="sos-view-with">
                     <div class="sos-card">
-                        <div class="sos-super-title"><span>AI Runtime Governance Architecture</span></div>
-                        <div class="sos-top-header safe">
-                            <div class="sos-brand">PatientCentricCare.AI &middot; Physician-as-Pilot&trade;</div>
-                            <div class="sos-main-title safe-accent">AI Executes. <span>Humans Govern.</span></div>
-                            <div class="sos-tagline">With Safety OS&trade; &mdash; Governance Middleware Active</div>
-                        </div>
-                        <div class="sos-content">
-                            <div class="sos-human-layer">
-                                <div class="sos-lbl">Human Layer</div>
-                                <div class="sos-sublbl">AIITL &middot; Physician-as-Pilot&trade;</div>
-                                <div class="sos-people-row">
-                                    <div class="sos-person">
-                                        <div class="sos-avatar">&#x1F469;&#x200D;&#x2695;&#xFE0F;</div>
-                                        <div class="sos-pname">Physician</div>
-                                    </div>
-                                    <div class="sos-mid">
-                                        <p>Humans set boundaries.<br>AI operates within them.</p>
-                                        <div class="sos-auth-tags">
-                                            <span class="sos-atag">Clinical Authority</span>
-                                            <span class="sos-atag">Patient Consent</span>
-                                            <span class="sos-atag">Institutional Policy</span>
+                        <div class="sos-slide-tag">The New Infrastructure Layer</div>
+                        <h2 class="sos-headline">Healthcare AI needs a<br>governance control plane.</h2>
+                        <div class="sos-tagline"><span class="gold">AI executes.</span> <span class="tl">Humans govern.</span></div>
+                        <div class="sos-arch">
+                            <div class="sos-avatar-box" style="width:100%">
+                                <div class="sos-av-wrap av-left">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-doctor"/></svg></div>
+                                    <span class="av-label">Doctor</span>
+                                </div>
+                                <div class="av-center sos-arch-layer phys" style="margin:0">Physician Authority</div>
+                                <div class="sos-av-wrap av-right">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-patient"/></svg></div>
+                                    <span class="av-label">Patient</span>
+                                </div>
+                            </div>
+                            <div class="sos-arch-arrow">&#x25BC; &#x25B2;</div>
+                            <div class="sos-os-label-wrap">
+                                <div class="os-side-label">Safety<br>OS</div>
+                                <div class="os-content">
+                                    <div class="sos-arch-layer cp">
+                                        <div class="sos-cp-title">AI Governance Control Plane</div>
+                                        <div class="sos-mod-row">
+                                            <div class="sos-mod-pill">Authority Boundaries</div>
+                                            <div class="sos-mod-pill">Escalation Pathways</div>
+                                            <div class="sos-mod-pill">Audit Logs</div>
+                                        </div>
+                                        <div class="sos-flight-recorder">
+                                            <svg width="40" height="34"><use href="#flight-recorder"/></svg>
                                         </div>
                                     </div>
-                                    <div class="sos-person">
-                                        <div class="sos-avatar">&#x1F3E5;</div>
-                                        <div class="sos-pname">Institution</div>
-                                    </div>
                                 </div>
                             </div>
-
-                            <div class="sos-boundary-wrap">
-                                <div class="sos-b-line"></div><div class="sos-b-label">Authority Boundary</div><div class="sos-b-line"></div>
-                            </div>
-                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
-
-                            <div class="sos-safety-layer">
-                                <div class="sos-sbadge">&check; Active</div>
-                                <div class="sos-infra-lbl">Runtime Governance Infrastructure</div>
-                                <div class="sos-stitle">Safety OS&trade;</div>
-                                <div class="sos-pgrid">
-                                    <div class="sos-pill"><span class="sos-pi">&#x1F512;</span> Consent Scope</div>
-                                    <div class="sos-pill"><span class="sos-pi">&#9889;</span> Escalation Pathways</div>
-                                    <div class="sos-pill"><span class="sos-pi">&#x1F4CB;</span> Immutable Audit Log</div>
-                                    <div class="sos-pill"><span class="sos-pi">&#x1F6E1;</span> Runtime Guardrails</div>
-                                </div>
-                                <div class="sos-ssub">Enforces consent scope, escalation, and audit at runtime.</div>
-                            </div>
-
-                            <div class="sos-boundary-wrap" style="margin-top:5px;">
-                                <div class="sos-b-line"></div><div class="sos-b-label">Control Boundary</div><div class="sos-b-line"></div>
-                            </div>
-                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
-
-                            <div class="sos-ai-layer">
-                                <div class="sos-ai-lbl">AI System</div>
-                                <div class="sos-ai-row">
-                                    <div class="sos-aie">&#x1F916;</div>
-                                    <div class="sos-aitb">
-                                        <div class="sos-aim">Executes within enforceable<br>authority boundaries</div>
-                                        <div class="sos-aisafe">&check; Governed &middot; Auditable &middot; Bounded</div>
-                                    </div>
-                                    <div class="sos-gbadge">Governed<br>Runtime</div>
-                                </div>
-                            </div>
-
-                            <div class="sos-arrow"><div class="sos-al"></div><div class="sos-at"></div></div>
-
-                            <div class="sos-patient-layer">
-                                <div class="sos-plbl">Patient</div>
-                                <div class="sos-prow">
-                                    <div class="sos-pavatar">&#x1F9D3;</div>
-                                    <div>
-                                        <div class="sos-pgate">AI cannot interact with patients without passing through the governance layer.</div>
-                                        <div class="sos-psub">Every interaction: consented, governed &amp; logged.</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="sos-arch-arrow">&#x25BC; &#x25B2;</div>
+                            <div class="sos-arch-layer ai">AI Systems</div>
                         </div>
-                        <div class="sos-bottom-bar">
-                            <div class="sos-bs safe">Clinical authority is never delegated to AI.</div>
-                            <div class="sos-bc">&copy; 2026 PatientCentricCare.AI &middot; Safety OS&trade; and Physician-as-Pilot&trade; are trademarks</div>
-                        </div>
+                        <div class="sos-arch-sub">Boundaries enforced &middot; Decisions logged &middot; Actions traceable</div>
+                        <div class="sos-teal-line"></div>
+                        <div class="sos-punchline">Clinical authority is never<br>delegated to AI.</div>
+                        <div class="sos-brand">PatientCentricCare.AI</div>
                     </div>
                 </div>
 
-            </div><!-- end slider -->
-        </div><!-- end viewport -->
+                <!-- VIEW 3: Home Companion Wedge -->
+                <div class="sos-view-panel" id="sos-view-wedge">
+                    <div class="sos-card" style="border-left-color:#E88A3A">
+                        <div class="sos-slide-tag">The Deployment Wedge</div>
+                        <h2 class="sos-headline">Deployment Wedge:<br>Home Companion</h2>
+                        <p class="sos-subline muted">Real-world deployments generate governance data.</p>
+                        <div class="sos-env-header">Deployment Environments</div>
+                        <div class="sos-env-labels">Senior Homes &middot; Care Agencies &middot; Family Households</div>
+                        <div style="text-align:center;padding:.2rem 0;display:flex;justify-content:center;gap:4rem">
+                            <span style="color:#2B8A8F;font-size:1rem">&#x25BC;</span>
+                            <span style="color:#2B8A8F;font-size:1rem">&#x25BC;</span>
+                            <span style="color:#2B8A8F;font-size:1rem">&#x25BC;</span>
+                        </div>
+                        <div class="sos-flow-stack">
+                            <div class="sos-avatar-box" style="width:100%;max-width:480px">
+                                <div class="sos-av-wrap av-left">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-caregiver"/></svg></div>
+                                    <span class="av-label">Caregiver</span>
+                                </div>
+                                <div class="av-center sos-flow-box teal-box" style="max-width:none;margin:0">Home Companion Deployments</div>
+                                <div class="sos-av-wrap av-right">
+                                    <div class="av-icon"><svg width="48" height="48"><use href="#avatar-patient"/></svg></div>
+                                    <span class="av-label">Patient</span>
+                                </div>
+                            </div>
+                            <div class="sos-flow-arrow">&#x25BC; &#x25B2;</div>
+                            <div class="sos-flow-box gov-box" style="max-width:480px">
+                                <strong style="font-size:1.02rem">Safety OS Governance Layer</strong>
+                                <div class="sos-hub-caps">
+                                    <span class="sos-hub-cap">Authority Boundaries</span>
+                                    <span class="sos-hub-cap">Escalation Enforcement</span>
+                                    <span class="sos-hub-cap">Audit Logging</span>
+                                    <span class="sos-hub-cap">Safety Policies</span>
+                                </div>
+                                <div class="sos-flight-recorder">
+                                    <svg width="40" height="34"><use href="#flight-recorder"/></svg>
+                                </div>
+                            </div>
+                            <div class="sos-flow-arrow">&#x25BC; &#x25B2;</div>
+                            <div class="sos-flow-box tel-box" style="max-width:480px">
+                                <strong>Governance Telemetry</strong>
+                                <div class="sos-tel-sub">Refusals &middot; Escalations &middot; Outcomes</div>
+                            </div>
+                        </div>
+                        <div class="sos-teal-line" style="background:#E88A3A"></div>
+                        <div class="sos-punchline">Every deployment trains<br>the governance network.</div>
+                        <div class="sos-supporting">Home Companion is the deployment engine for Safety OS.</div>
+                        <div class="sos-brand">PatientCentricCare.AI</div>
+                    </div>
+                </div>
+
+            </div><!-- /sos-view-container -->
+        </div><!-- /sos-content-wrap -->
+
+        <footer class="sos-site-footer">&copy; 2026 PatientCentricCare.AI. All rights reserved. Safety OS&trade; and Physician-as-Pilot&trade; are trademarks of PatientCentricCare.AI.</footer>
     </div>
 
     <!-- ============================================ -->
@@ -2126,37 +1944,106 @@
             }
         });
 
-        // Interactive governance toggle v2 - card slider
-        function showCard(view) {
-            var slider = document.getElementById('sos-slider');
-            var btns = document.querySelectorAll('.sos-toggle-btn');
-            if (view === 'with') {
-                slider.classList.add('show-with');
-                btns[0].classList.remove('active');
-                btns[1].classList.add('active');
-            } else {
-                slider.classList.remove('show-with');
-                btns[0].classList.add('active');
-                btns[1].classList.remove('active');
-            }
-        }
+        // Starfield animation for toggle section
+        (function(){
+          const c=document.getElementById('sos-starfield');
+          if(!c) return;
+          const x=c.getContext('2d');
+          let stars=[],bokeh=[];
+          function resize(){
+            const rect=c.parentElement.getBoundingClientRect();
+            c.width=rect.width;c.height=rect.height;
+          }
+          function init(){
+            stars=[];bokeh=[];
+            const a=c.width*c.height;
+            for(let i=0;i<a/4000;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2+.3,a:Math.random()*.5+.2,s:Math.random()*.003+.001});
+            for(let i=0;i<a/50000;i++)bokeh.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*35+10,a:Math.random()*.05+.02,s:Math.random()*.002+.0005,c:Math.random()>.5?'43,138,143':'160,176,200'});
+          }
+          let t=0;
+          function draw(){
+            t+=.016;
+            const g=x.createLinearGradient(0,0,c.width,c.height);
+            g.addColorStop(0,'#0B1225');g.addColorStop(.5,'#0D1530');g.addColorStop(1,'#0A0F1E');
+            x.fillStyle=g;x.fillRect(0,0,c.width,c.height);
+            bokeh.forEach(e=>{
+              const a=e.a*(.7+.3*Math.sin(t*e.s*100)),gr=x.createRadialGradient(e.x,e.y,0,e.x,e.y,e.r);
+              gr.addColorStop(0,'rgba('+e.c+','+a+')');gr.addColorStop(1,'rgba('+e.c+',0)');
+              x.fillStyle=gr;x.fillRect(e.x-e.r,e.y-e.r,e.r*2,e.r*2);
+            });
+            stars.forEach(e=>{
+              const a=e.a*(.5+.5*Math.sin(t*e.s*200+e.x));
+              x.beginPath();x.arc(e.x,e.y,e.r,0,Math.PI*2);
+              x.fillStyle='rgba(200,210,230,'+a+')';x.fill();
+            });
+            requestAnimationFrame(draw);
+          }
+          resize();init();draw();
+          addEventListener('resize',function(){resize();init()});
+        })();
 
-        // Add swipe support for card slider
-        (function() {
-            var viewport = document.querySelector('.sos-card-viewport');
-            if (!viewport) return;
-            var startX = 0;
-            viewport.addEventListener('touchstart', function(e) {
-                startX = e.touches[0].clientX;
+        // 3-way toggle logic
+        (function(){
+          var views=['without','with','wedge'];
+          var activeClasses={without:'active-without','with':'active-with',wedge:'active-wedge'};
+          var btns=views.map(function(v){return document.getElementById('sos-btn-'+v)});
+          var panels=views.map(function(v){return document.getElementById('sos-view-'+v)});
+
+          function switchTo(view){
+            var idx=views.indexOf(view);
+            btns.forEach(function(b,i){
+              b.className='sos-toggle-btn';
+              if(i===idx) b.classList.add(activeClasses[view]);
             });
-            viewport.addEventListener('touchend', function(e) {
-                var endX = e.changedTouches[0].clientX;
-                var diff = endX - startX;
-                if (Math.abs(diff) > 50) {
-                    if (diff < 0) showCard('with');
-                    else showCard('without');
-                }
+            panels.forEach(function(p,i){
+              if(i===idx){
+                p.style.display='block';
+                requestAnimationFrame(function(){
+                  requestAnimationFrame(function(){p.classList.add('active','visible')});
+                });
+              } else {
+                p.classList.remove('visible');
+                setTimeout(function(){
+                  if(!p.classList.contains('visible')){
+                    p.classList.remove('active');
+                    p.style.display='none';
+                  }
+                },500);
+              }
             });
+          }
+
+          btns.forEach(function(b){
+            b.addEventListener('click',function(){switchTo(b.dataset.view)});
+          });
+
+          // Swipe support
+          var container=document.querySelector('.sos-view-container');
+          if(container){
+            var startX=0;
+            container.addEventListener('touchstart',function(e){startX=e.touches[0].clientX});
+            container.addEventListener('touchend',function(e){
+              var endX=e.changedTouches[0].clientX;
+              var diff=endX-startX;
+              if(Math.abs(diff)>50){
+                var current=views.findIndex(function(v){return document.getElementById('sos-btn-'+v).className.includes('active-')});
+                if(diff<0) switchTo(views[Math.min(current+1,views.length-1)]);
+                else switchTo(views[Math.max(current-1,0)]);
+              }
+            });
+          }
+
+          // Keyboard nav
+          document.addEventListener('keydown',function(e){
+            var current=views.findIndex(function(v){return document.getElementById('sos-btn-'+v).className.includes('active-')});
+            if(e.key==='ArrowRight'||e.key==='ArrowDown'){
+              e.preventDefault();
+              switchTo(views[Math.min(current+1,views.length-1)]);
+            } else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){
+              e.preventDefault();
+              switchTo(views[Math.max(current-1,0)]);
+            }
+          });
         })();
     </script>
 </body>
